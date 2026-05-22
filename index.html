@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Knee Strong">
+<title>Knee Strong — Marathon Berlin</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+:root {
+  --bg:#f4f1ea; --ink:#1a1a1a; --ink-soft:#2a2a2a; --ink-faint:#555;
+  --paper:#fdfbf6; --line:#c8c3b4; --accent:#d63a17; --accent-soft:#ffe8e0;
+  --green:#3d6b2c; --amber:#9b7c2a; --blue:#1c4a6c; --teal:#2a7a8a;
+  --phase1:#3d6b2c; --phase2:#1c4a6c; --phase3:#7a3a8a;
+}
+html { -webkit-text-size-adjust:100%; }
+body { font-family:'Georgia','Times New Roman',serif; background:var(--bg); color:var(--ink); min-height:100dvh; line-height:1.5; overflow-x:hidden; padding-bottom:env(safe-area-inset-bottom); }
+.app { max-width:480px; margin:0 auto; padding-top:env(safe-area-inset-top); }
+
+/* HEADER */
+header { padding:18px 20px 0; background:var(--bg); }
+.header-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+.brand { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.countdown { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.title { font-size:26px; font-weight:700; font-style:italic; letter-spacing:-.02em; line-height:1; }
+.subtitle { font-size:14px; color:var(--ink-soft); font-style:italic; margin-top:3px; }
+
+/* PHASE BANNER */
+.phase-banner { margin:12px 20px 0; padding:10px 14px; border-radius:3px; display:flex; justify-content:space-between; align-items:center; }
+.phase-banner.phase1 { background:#edf4ea; border-left:4px solid var(--phase1); }
+.phase-banner.phase2 { background:#e8f0f8; border-left:4px solid var(--phase2); }
+.phase-banner.phase3 { background:#f3eaf8; border-left:4px solid var(--phase3); }
+.phase-name { font-size:13px; font-weight:700; font-family:'Helvetica Neue',Arial,sans-serif; letter-spacing:.1em; text-transform:uppercase; }
+.phase-banner.phase1 .phase-name { color:var(--phase1); }
+.phase-banner.phase2 .phase-name { color:var(--phase2); }
+.phase-banner.phase3 .phase-name { color:var(--phase3); }
+.phase-week { font-size:12px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:600; }
+.phase-hint { font-size:12px; color:var(--ink-soft); font-style:italic; margin-top:3px; }
+
+/* TABS */
+.tabs-wrapper { position:sticky; top:env(safe-area-inset-top); z-index:20; background:var(--bg); border-bottom:2px solid var(--ink); padding:0 20px; margin-top:14px; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+.tabs { display:flex; }
+.tab { flex:1; padding:13px 4px; background:none; border:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); cursor:pointer; position:relative; transition:color .2s; }
+.tab.active { color:var(--ink); }
+.tab.active::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:3px; background:var(--accent); }
+
+/* MAIN */
+main { padding:20px; padding-bottom:40px; }
+
+/* STREAK BAR */
+.streak-bar { background:var(--ink); color:var(--paper); padding:14px 16px; display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-radius:2px; }
+.streak-stat { display:flex; flex-direction:column; gap:2px; }
+.streak-num { font-size:26px; font-weight:700; line-height:1; }
+.streak-label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.streak-divider { width:1px; height:30px; background:#444; }
+
+/* OURA CHECK-IN */
+.checkin-box { background:var(--paper); border:1px solid var(--line); padding:14px; margin-bottom:20px; border-radius:2px; }
+.checkin-label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; color:var(--ink-soft); margin-bottom:10px; }
+.checkin-row { display:flex; gap:8px; }
+.checkin-btn { flex:1; padding:10px 6px; border:2px solid var(--line); background:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:700; cursor:pointer; border-radius:3px; text-align:center; transition:all .12s; color:var(--ink-soft); }
+.checkin-btn.selected-good { background:#edf4ea; border-color:var(--green); color:var(--green); }
+.checkin-btn.selected-okay { background:#fdf6e0; border-color:var(--amber); color:var(--amber); }
+.checkin-btn.selected-bad { background:var(--accent-soft); border-color:var(--accent); color:var(--accent); }
+.checkin-hint { font-size:13px; color:var(--ink-soft); font-style:italic; margin-top:8px; line-height:1.4; }
+
+/* MONDAY QUESTION */
+.monday-box { background:var(--paper); border:2px solid var(--ink); padding:14px; margin-bottom:20px; border-radius:2px; }
+.monday-q { font-size:16px; font-weight:700; margin-bottom:12px; }
+.monday-btns { display:flex; gap:8px; }
+.monday-btn { flex:1; padding:12px; border:1px solid var(--line); background:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:700; cursor:pointer; border-radius:2px; }
+.monday-btn.selected { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+/* REGEN DAY */
+.regen-header { text-align:center; padding:20px 0 10px; }
+.regen-icon { font-size:40px; margin-bottom:8px; }
+.regen-title { font-size:24px; font-weight:700; font-style:italic; }
+.regen-sub { font-size:15px; color:var(--ink-soft); font-style:italic; margin-top:4px; }
+
+/* TODAY HEADER */
+.today-header { margin-bottom:20px; }
+.today-date { font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.today-day { font-size:34px; font-weight:700; font-style:italic; letter-spacing:-.02em; line-height:1; margin-top:4px; }
+.progress-line { height:4px; background:var(--line); margin-top:14px; overflow:hidden; }
+.progress-fill { height:100%; background:var(--accent); transition:width .4s ease; }
+.progress-text { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; margin-top:6px; font-weight:700; }
+
+/* DAY SWITCHER */
+.day-switcher { background:var(--paper); border:2px solid var(--ink); padding:12px 14px; margin-bottom:20px; border-radius:2px; }
+.day-switcher-label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; margin-bottom:8px; }
+.day-switcher-row { display:flex; gap:5px; }
+.day-pill { flex:1; padding:8px 2px; background:none; border:1px solid var(--line); font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:700; color:var(--ink-soft); cursor:pointer; border-radius:2px; text-align:center; }
+.day-pill.selected { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+.day-pill.actual { border-color:var(--accent); border-width:2px; }
+.day-pill.selected.actual { background:var(--accent); border-color:var(--accent); }
+.override-note { margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); font-size:13px; color:var(--ink-soft); font-style:italic; line-height:1.4; }
+.reset-override { background:none; border:none; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; text-decoration:underline; cursor:pointer; padding:0; margin-left:6px; }
+
+/* SUGGESTIONS */
+.suggestions-box { background:var(--paper); border:2px solid var(--accent); border-radius:2px; padding:14px 16px; margin-bottom:20px; }
+.suggestions-title { font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.suggestion-item { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed var(--line); }
+.suggestion-item:last-child { border-bottom:none; padding-bottom:0; }
+.suggestion-name { font-size:15px; font-weight:700; line-height:1.3; }
+.suggestion-meta { font-size:12px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; margin-top:2px; }
+.suggestion-add-btn { background:var(--accent); color:var(--paper); border:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; padding:7px 12px; border-radius:2px; cursor:pointer; white-space:nowrap; flex-shrink:0; margin-left:10px; transition:background .15s; }
+.suggestion-added { background:var(--green) !important; cursor:default !important; }
+
+/* ADAPT NOTICE */
+.adapt-notice { background:#fdf6e0; border-left:4px solid var(--amber); padding:12px 14px; margin-bottom:20px; border-radius:0 2px 2px 0; }
+.adapt-notice-text { font-size:14px; color:var(--amber); font-weight:700; font-family:'Helvetica Neue',Arial,sans-serif; line-height:1.4; }
+.adapt-notice-sub { font-size:13px; color:var(--ink-soft); font-style:italic; margin-top:4px; }
+
+/* SECTION */
+.section { margin-bottom:28px; }
+.section-header { display:flex; align-items:baseline; gap:10px; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+.section-tag { font-size:11px; letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-family:'Helvetica Neue',Arial,sans-serif; padding:4px 10px; border-radius:2px; }
+.section-tag.pflicht { background:var(--ink); color:var(--paper); }
+.section-tag.standard { background:var(--green); color:var(--paper); }
+.section-tag.bonus { background:var(--amber); color:var(--paper); }
+.section-tag.activity { background:var(--blue); color:var(--paper); }
+.section-tag.regen { background:var(--teal); color:var(--paper); }
+.section-title { font-size:15px; color:var(--ink-soft); font-style:italic; flex:1; }
+
+/* TASK */
+.task { display:flex; gap:12px; padding:12px 0; border-bottom:1px dashed var(--line); cursor:pointer; align-items:flex-start; }
+.task:last-child { border-bottom:none; }
+.checkbox { width:26px; height:26px; border:2px solid var(--ink); flex-shrink:0; margin-top:1px; display:flex; align-items:center; justify-content:center; border-radius:2px; transition:all .15s; }
+.task.done .checkbox { background:var(--ink); border-color:var(--ink); }
+.task.done .checkbox::after { content:'✓'; color:var(--accent); font-size:16px; font-weight:700; line-height:1; }
+.task.skipped .checkbox { background:var(--line); border-color:var(--line); }
+.task.skipped .checkbox::after { content:'—'; color:var(--ink-soft); font-size:14px; font-weight:700; }
+.task-content { flex:1; min-width:0; }
+.task-name { font-size:17px; font-weight:700; line-height:1.3; margin-bottom:3px; }
+.task.done .task-name { text-decoration:line-through; color:var(--ink-faint); }
+.task.skipped .task-name { text-decoration:line-through; color:var(--ink-faint); }
+.task-meta { font-size:13px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; display:flex; gap:8px; flex-wrap:wrap; font-weight:500; }
+.task-why { font-size:13px; color:var(--ink-soft); margin-top:6px; font-style:italic; line-height:1.4; }
+.task-why-label { font-family:'Helvetica Neue',Arial,sans-serif; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); font-weight:700; font-style:normal; margin-right:5px; }
+.task-progress { font-size:12px; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; margin-top:5px; padding:3px 8px; border-radius:2px; display:inline-block; }
+.task-progress.phase1 { background:#edf4ea; color:var(--phase1); }
+.task-progress.phase2 { background:#e8f0f8; color:var(--phase2); }
+.task-progress.phase3 { background:#f3eaf8; color:var(--phase3); }
+.task-skip-btn { background:none; border:1px solid var(--line); color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:600; padding:4px 10px; border-radius:2px; cursor:pointer; margin-top:7px; letter-spacing:.05em; }
+.task-skipped-label { display:inline-block; font-family:'Helvetica Neue',Arial,sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); background:var(--line); padding:2px 8px; border-radius:2px; margin-top:5px; font-weight:700; }
+.task-unskip-btn { background:none; border:none; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; text-decoration:underline; cursor:pointer; padding:0; margin-left:8px; }
+.task-delete-btn { background:none; border:none; color:var(--ink-faint); font-size:20px; cursor:pointer; padding:2px 6px; border-radius:2px; flex-shrink:0; margin-top:2px; }
+.badge { display:inline-block; font-family:'Helvetica Neue',Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:2px 7px; border-radius:2px; margin-left:7px; vertical-align:middle; color:var(--paper); }
+.badge.extra { background:var(--green); }
+.badge.nachgeholt { background:var(--amber); }
+.badge.lauf { background:var(--blue); }
+.badge.schwimm { background:var(--teal); }
+.badge.rad { background:var(--green); }
+.badge.extra-rad { background:var(--amber); }
+
+/* WEEK VIEW */
+.week-grid { display:flex; flex-direction:column; gap:12px; }
+.week-day { background:var(--paper); border:1px solid var(--line); padding:14px 16px; border-radius:2px; }
+.week-day.today { border-color:var(--accent); border-width:2px; padding:13px 15px; position:relative; }
+.week-day.today::before { content:'HEUTE'; position:absolute; top:-10px; right:14px; background:var(--accent); color:var(--paper); font-size:10px; letter-spacing:.15em; padding:2px 8px; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.week-day.is-regen { border-color:var(--teal); background:#f0fafb; }
+.week-day-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+.week-day-name { font-size:18px; font-weight:700; font-style:italic; }
+.week-day-stats { font-size:12px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; letter-spacing:.05em; }
+.week-day-tasks { display:flex; flex-wrap:wrap; gap:5px; margin-top:6px; }
+.pill { font-size:11px; padding:3px 8px; border-radius:10px; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:600; color:var(--paper); }
+.pill.pflicht { background:var(--ink); }
+.pill.standard { background:var(--green); }
+.pill.bonus { background:var(--amber); }
+.pill.activity { background:var(--blue); }
+.pill.regen { background:var(--teal); }
+.pill.done { background:#a0a090; text-decoration:line-through; }
+.week-warning { margin-top:6px; padding:6px 10px; background:#fff0ee; border-left:3px solid var(--accent); border-radius:0 2px 2px 0; font-size:13px; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; line-height:1.3; }
+.week-day-override { font-size:11px; color:var(--accent); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-top:4px; display:inline-block; padding:2px 7px; background:var(--accent-soft); border-radius:2px; }
+.week-day-switcher { margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); }
+.week-day-switcher-label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; margin-bottom:6px; }
+.mini-day-pills { display:flex; gap:4px; }
+.mini-day-pill { flex:1; padding:6px 2px; background:none; border:1px solid var(--line); font-family:'Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); cursor:pointer; border-radius:2px; text-align:center; }
+.mini-day-pill.selected { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+/* BODY COVERAGE */
+.coverage-intro { font-size:14px; color:var(--ink-soft); font-style:italic; margin-bottom:18px; line-height:1.5; }
+.coverage-grid { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+.coverage-item { background:var(--paper); border:1px solid var(--line); padding:12px 14px; border-radius:2px; }
+.coverage-item.good { border-left:4px solid var(--green); }
+.coverage-item.warn { border-left:4px solid var(--amber); }
+.coverage-item.low { border-left:4px solid var(--accent); background:#fff8f7; }
+.coverage-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+.coverage-name { font-size:16px; font-weight:700; font-style:italic; }
+.coverage-count { font-size:13px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; }
+.coverage-bar-bg { height:5px; background:var(--bg); border-radius:3px; overflow:hidden; margin-bottom:5px; }
+.coverage-bar-fill { height:100%; transition:width .3s ease; }
+.coverage-bar-fill.good { background:var(--green); }
+.coverage-bar-fill.warn { background:var(--amber); }
+.coverage-bar-fill.low { background:var(--accent); }
+.coverage-status { font-size:13px; color:var(--ink-soft); font-family:'Helvetica Neue',Arial,sans-serif; font-weight:600; }
+
+/* SUB-TABS */
+.sub-tabs { display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:20px; }
+.sub-tab { flex:1; padding:11px 4px; background:none; border:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); cursor:pointer; position:relative; }
+.sub-tab.active { color:var(--ink); }
+.sub-tab.active::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--ink); }
+.sub-view.hidden { display:none; }
+
+/* EXERCISE GUIDE */
+.exercise-category-title { font-size:13px; letter-spacing:.15em; text-transform:uppercase; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; color:var(--ink-soft); margin-top:24px; margin-bottom:12px; padding-bottom:6px; border-bottom:2px solid var(--ink); }
+.exercise-category-title:first-child { margin-top:0; }
+.exercise-card { background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:14px 16px; margin-bottom:10px; }
+.exercise-card-name { font-size:17px; font-weight:700; font-style:italic; margin-bottom:10px; }
+.exercise-step { display:flex; gap:10px; margin-bottom:7px; align-items:flex-start; }
+.exercise-step-label { font-family:'Helvetica Neue',Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); padding:3px 8px; background:var(--accent-soft); border-radius:2px; flex-shrink:0; min-width:70px; text-align:center; line-height:1.2; }
+.exercise-step-text { font-size:14px; line-height:1.5; flex:1; color:var(--ink); }
+
+/* WHY VIEW */
+.why-intro { background:var(--paper); border-left:3px solid var(--accent); padding:14px 16px; margin-bottom:24px; font-style:italic; color:var(--ink); font-size:15px; line-height:1.5; }
+.problem-card { margin-bottom:26px; padding-bottom:20px; border-bottom:1px solid var(--line); }
+.problem-card:last-child { border-bottom:none; }
+.problem-name { font-size:20px; font-weight:700; font-style:italic; margin-bottom:4px; }
+.problem-desc { font-size:14px; color:var(--ink-soft); margin-bottom:12px; line-height:1.5; }
+.problem-exercise { font-size:14px; padding:8px 12px; background:var(--paper); border-left:3px solid var(--line); margin-bottom:5px; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:600; }
+
+/* ADD SESSION */
+.add-session-btn { display:flex; align-items:center; gap:8px; background:var(--ink); color:var(--paper); border:none; padding:13px 18px; font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; border-radius:2px; margin-bottom:24px; width:100%; justify-content:center; }
+
+/* SHEET */
+.sheet-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:100; display:flex; align-items:flex-end; justify-content:center; }
+.sheet-overlay.hidden { display:none; }
+.sheet { background:var(--bg); width:100%; max-width:480px; border-radius:14px 14px 0 0; padding:8px 20px calc(24px + env(safe-area-inset-bottom)); animation:slideUp .22s ease; }
+@keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
+.sheet-handle { width:36px; height:4px; background:var(--line); border-radius:2px; margin:10px auto 18px; }
+.sheet-title { font-size:20px; font-weight:700; font-style:italic; margin-bottom:4px; }
+.sheet-subtitle { font-size:14px; color:var(--ink-soft); margin-bottom:20px; font-style:italic; }
+.sheet-label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; color:var(--ink-soft); margin-bottom:8px; margin-top:16px; }
+.sheet-options { display:flex; gap:8px; flex-wrap:wrap; }
+.sheet-option { padding:11px 8px; background:var(--paper); border:2px solid var(--line); font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:700; color:var(--ink-soft); cursor:pointer; border-radius:4px; flex:1; min-width:calc(33% - 8px); text-align:center; line-height:1.3; }
+.sheet-option.selected { border-color:var(--ink); color:var(--ink); background:var(--accent-soft); }
+.sheet-actions { display:flex; gap:10px; margin-top:26px; }
+.sheet-cancel { flex:1; padding:14px; background:none; border:1px solid var(--line); font-family:'Helvetica Neue',Arial,sans-serif; font-size:14px; font-weight:700; color:var(--ink-soft); cursor:pointer; border-radius:4px; }
+.sheet-confirm { flex:2; padding:14px; background:var(--accent); border:none; font-family:'Helvetica Neue',Arial,sans-serif; font-size:15px; font-weight:700; color:var(--paper); cursor:pointer; border-radius:4px; }
+.sheet-confirm:disabled { background:var(--line); color:var(--ink-faint); cursor:default; }
+
+/* FOOTER */
+.footer-actions { margin-top:40px; padding-top:20px; border-top:1px solid var(--line); text-align:center; }
+.reset-btn { background:none; border:1px solid var(--ink-soft); color:var(--ink-soft); padding:10px 18px; font-family:'Helvetica Neue',Arial,sans-serif; font-size:13px; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; border-radius:2px; font-weight:600; }
+.quote { margin-top:28px; padding:16px; background:var(--paper); border:1px solid var(--line); font-style:italic; color:var(--ink); font-size:14px; line-height:1.6; text-align:center; }
+.empty { text-align:center; padding:40px 20px; color:var(--ink-soft); font-style:italic; font-size:16px; }
+.hidden { display:none !important; }
+
+/* BUTTONS FEEDBACK */
+button { transition:transform .08s, opacity .08s, background .12s; }
+button:active { transform:scale(.94); opacity:.75; }
+.checkbox:active { transform:scale(.85); }
+.tab:active { opacity:.6; }
+</style>
+</head>
+<body>
+<div class="app">
+
+<header>
+  <div class="header-top" style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 20px 0">
+    <div class="title">Marathon Plan</div>
+    <span class="countdown" id="countdown">— Tage</span>
+  </div>
+  <div class="subtitle" style="padding:0 20px 0;font-size:13px;color:var(--ink-soft);font-style:italic">Berlin · 27.09.2026</div>
+</header>
+
+<div id="phase-banner-container"></div>
+
+<div class="tabs-wrapper">
+  <nav class="tabs">
+    <button class="tab active" data-tab="today">Heute</button>
+    <button class="tab" data-tab="week">Woche</button>
+    <button class="tab" data-tab="body">Körper</button>
+    <button class="tab" data-tab="knowledge">Wissen</button>
+  </nav>
+</div>
+
+<main>
+  <section id="view-today" class="view">
+
+    <div class="streak-bar">
+      <div class="streak-stat">
+        <span class="streak-num" id="streak-count">0</span>
+        <span class="streak-label">Pflicht-Serie</span>
+      </div>
+      <div class="streak-divider"></div>
+      <div class="streak-stat">
+        <span class="streak-num" id="week-completed">0/0</span>
+        <span class="streak-label">Diese Woche</span>
+      </div>
+      <div class="streak-divider"></div>
+      <div class="streak-stat">
+        <span class="streak-num" id="phase-display">—</span>
+        <span class="streak-label">Phase</span>
+      </div>
+    </div>
+
+    <div id="oura-checkin"></div>
+    <div id="monday-question"></div>
+    <div id="adapt-notice"></div>
+
+    <div class="today-header">
+      <div class="today-date" id="today-date">—</div>
+      <div class="today-day" id="today-day">—</div>
+      <div class="progress-line"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="progress-text" id="progress-text">0 von 0 erledigt</div>
+    </div>
+
+    <div class="day-switcher">
+      <div class="day-switcher-label">Heute zeigt</div>
+      <div class="day-switcher-row" id="day-switcher-row"></div>
+      <div class="override-note hidden" id="override-note"></div>
+    </div>
+
+    <div id="suggestions-box"></div>
+    <div id="today-tasks"></div>
+
+    <button class="add-session-btn" onclick="openSessionSheet()">+ Training-Session hinzufügen</button>
+
+    <div class="quote" id="today-quote">Lieber Pflicht zu 100% als alles zu 60%.</div>
+
+    <div class="footer-actions">
+      <button class="reset-btn" onclick="resetWeek()">Woche zurücksetzen</button>
+    </div>
+  </section>
+
+  <section id="view-week" class="view hidden">
+    <div class="week-grid" id="week-grid"></div>
+    <div class="quote">Sonntag = Vorschau. Abend = Plan für morgen.</div>
+  </section>
+
+  <section id="view-body" class="view hidden">
+    <div class="coverage-intro">Diese Woche: welche Zonen abgedeckt, welche kommen zu kurz?</div>
+    <div class="coverage-grid" id="coverage-grid"></div>
+    <div class="quote">Konsistenz schlägt Perfektion.</div>
+  </section>
+
+  <section id="view-knowledge" class="view hidden">
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-subtab="exercises">Übungen</button>
+      <button class="sub-tab" data-subtab="why">Warum</button>
+    </div>
+    <div id="sub-exercises" class="sub-view">
+      <div class="why-intro">Kurze Anleitungen für jede Übung. Setup · Bewegung · Tipp.</div>
+      <div id="exercises-content"></div>
+    </div>
+    <div id="sub-why" class="sub-view hidden">
+      <div class="why-intro">Das Gesamtbild — welches Problem zahlt auf welche Übung ein.</div>
+      <div id="why-content"></div>
+    </div>
+  </section>
+</main>
+</div>
+
+<!-- SESSION SHEET -->
+<div class="sheet-overlay hidden" id="session-sheet" onclick="closeSessionSheet(event)">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">Session hinzufügen</div>
+    <div class="sheet-subtitle">Für welchen Tag und welche Art?</div>
+    <div class="sheet-label">Tag</div>
+    <div class="sheet-options" id="sheet-days"></div>
+    <div class="sheet-label">Art der Session</div>
+    <div class="sheet-options" id="sheet-types">
+      <button class="sheet-option" data-type="lauf" onclick="selectSheetType(this)">🏃 Lauf</button>
+      <button class="sheet-option" data-type="schwimm" onclick="selectSheetType(this)">🏊 Schwimm</button>
+      <button class="sheet-option" data-type="rad" onclick="selectSheetType(this)">🚴 Rad</button>
+      <button class="sheet-option" data-type="extra-rad" onclick="selectSheetType(this)">➕🚴 Extra Rad</button>
+    </div>
+    <div class="sheet-actions">
+      <button class="sheet-cancel" onclick="closeSessionSheetDirect()">Abbrechen</button>
+      <button class="sheet-confirm" id="sheet-confirm-btn" disabled onclick="confirmSession()">Hinzufügen ✓</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== CONSTANTS =====
+const MARATHON_DATE = new Date('2026-09-27T00:00:00');
+const DAYS = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+const DAYS_SHORT = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+
+// ===== PHASES =====
+// Week 1 = week containing today (May 22 2026) as starting point from training perspective
+// We calculate phase based on weeks until marathon
+function getPhase() {
+  const now = new Date();
+  const msLeft = MARATHON_DATE - now;
+  const weeksLeft = Math.ceil(msLeft / (7 * 24 * 60 * 60 * 1000));
+  if (weeksLeft > 11) return { id:'phase1', name:'Aufbau', label:'1', weeksLeft };
+  if (weeksLeft > 4)  return { id:'phase2', name:'Spezifik', label:'2', weeksLeft };
+  return { id:'phase3', name:'Taper', label:'3', weeksLeft };
+}
+
+function getWeekNumber() {
+  const start = new Date('2026-03-02'); // Marathon training start (27 weeks out)
+  const now = new Date();
+  return Math.max(1, Math.ceil((now - start) / (7*24*60*60*1000)));
+}
+
+// ===== PROGRESSION per exercise per phase =====
+const PROGRESSION = {
+  'mo-lunge':    { phase1:'Bodyweight · 2×45s', phase2:'2×5kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
+  'mo-bulgarian':{ phase1:'Bodyweight · 2×45s', phase2:'2×6kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
+  'mo-knee':     { phase1:'Theraband leicht · 3×15', phase2:'Theraband mittel · 3×20', phase3:'Theraband leicht · 2×15' },
+  'mi-sldl':     { phase1:'Bodyweight · 3×8', phase2:'1×8kg KH · 3×8', phase3:'1×6kg KH · 2×8' },
+  'fr-stepup':   { phase1:'Bodyweight · 3×8', phase2:'6–8kg KH · 3×8', phase3:'4kg KH · 2×8' },
+  'mo-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+  'mi-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+  'fr-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+};
+
+// ===== TASKS =====
+const TASKS = [
+  // MONTAG (Kraft oder Regen — flexibel)
+  { id:'mo-kraft', day:1, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Ganzkörper-Stabi mit Bein-Anteil. Bulgarian Split + Reverse Lunge stärken knieumgebende Muskulatur.', problems:['knie','po'] },
+  { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
+  { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose.', problems:['po','huefte'] },
+  { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
+  { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
+  { id:'mo-lunge', day:1, tier:'bonus', name:'Reverse Lunge (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat falls du es einzeln dazu machen willst.', problems:['huefte','knie'] },
+  { id:'mo-bulgarian', day:1, tier:'bonus', name:'Bulgarian Split Squat (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat als zusätzliche Dosis.', problems:['knie','po'] },
+
+  // DIENSTAG
+  { id:'di-aktivierung', day:2, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Clams + Glute Bridge + Monster Walks wecken Po auf. Schlafender Po = Kompensation.', problems:['po','huefte','knie'] },
+  { id:'di-intervall', day:2, tier:'activity', name:'Intervall-Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Reiz. Geschwindigkeit entwickeln.', problems:[] },
+  { id:'di-atem', day:2, tier:'pflicht', name:'Atemübung (Garmin)', duration:'5 min', trigger:'direkt nach Cool-Down', why:'Parasympathisches Runterfahren. HRV-Rebound nach Intervall.', problems:['recovery'] },
+  { id:'di-wade', day:2, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne im ermüdeten Zustand stärken — am wirksamsten.', problems:['achilles','shinSplints'] },
+
+  // MITTWOCH
+  { id:'mi-kraft', day:3, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens', why:'Zweite Kraft-Session. Volumen für muskuläre Adaption.', problems:['knie','po'] },
+  { id:'mi-sideplank', day:3, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'2. von 3× Woche. Vom Orthopäden verordnet.', problems:['patella','knie','stabilitaet'] },
+  { id:'mi-hipthrust', day:3, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'2. von 3× Woche. Po-Aufbau braucht Frequenz.', problems:['po','huefte'] },
+  { id:'mi-beckenboden', day:3, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'2. von 3× Woche. Stabilität von innen, schützt vor Stressinkontinenz bei Lauf-Impact.', problems:['stabilitaet'] },
+  { id:'mi-sldl', day:3, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'nach Kraft', why:'Exzentrisches Hamstring-Training. Schützt Sehnenansatz. 2×/Woche (Mi+Sa).', problems:['po','huefte'] },
+  { id:'mi-schwimmen', day:3, tier:'activity', name:'Schwimmen', duration:'~60 min', trigger:'abends', why:'Cross-Training, gelenkfreundlich. Recovery für die Beine.', problems:['recovery'] },
+
+  // DONNERSTAG
+  { id:'do-aktivierung', day:4, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Po-Aktivierung verhindert Hüftbeuger-/Hamstring-Kompensation.', problems:['po','huefte'] },
+  { id:'do-lauf', day:4, tier:'activity', name:'Flotter Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Dauerlauf. Aerobe Kapazität bei höherer Intensität.', problems:[] },
+  { id:'do-wade', day:4, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne nach Lauf stärken.', problems:['achilles','shinSplints'] },
+
+  // FREITAG
+  { id:'fr-kraft', day:5, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Dritte Kraft-Session. Schließt die Woche.', problems:['knie','po'] },
+  { id:'fr-sideplank', day:5, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'3. von 3× Woche. Schließt die Side-Plank-Routine.', problems:['patella','knie','stabilitaet'] },
+  { id:'fr-hipthrust', day:5, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'3. von 3× Woche. Po-Frequenz für echten Aufbau.', problems:['po','huefte'] },
+  { id:'fr-beckenboden', day:5, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'3. von 3× Woche.', problems:['stabilitaet'] },
+  { id:'fr-knee', day:5, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'nach Kraft', why:'2. von 2× Woche. VMO-Aufbau gegen Patella-Lateralisation.', problems:['knie','patella'] },
+  { id:'fr-stepup', day:5, tier:'bonus', name:'Kettlebell Step-Up', duration:'5 min · 3×8 pro Seite', trigger:'falls Zeit nach Kraft', why:'1×/Woche reicht — Coach-Plan deckt einbeinige Kraft schon ab. Hier als Zusatzdosis.', problems:['knie','po'] },
+
+  // SAMSTAG
+  { id:'sa-rad', day:6, tier:'activity', name:'Radfahren (alternativ)', duration:'45 min · 35 TSS', trigger:'lt. Coach-Plan', why:'Ausdauer ohne Lauf-Belastung.', problems:['recovery'] },
+  { id:'sa-sldl', day:6, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'morgens', why:'2. von 2× Woche. Hamstring + Glute.', problems:['po','huefte'] },
+  { id:'sa-copenhagen', day:6, tier:'bonus', name:'Copenhagen Plank', duration:'3 min · 2×20s pro Seite', trigger:'irgendwann', why:'Adduktoren — oft vergessene Lücke. 1×/Woche reicht für Reiz.', problems:['huefte','stabilitaet'] },
+  { id:'sa-soleus', day:6, tier:'bonus', name:'Bent-Knee Calf Raise', duration:'2 min · 3×15', trigger:'morgens', why:'Soleus (tiefe Wade). Ergänzt normale Wadenheber — 1×/Woche als Variation.', problems:['achilles','shinSplints'] },
+  { id:'sa-faszien', day:6, tier:'bonus', name:'Faszienrolle', duration:'5 min', trigger:'vor Netflix abends', why:'Quadrizeps + IT-Band + Wade. NICHT direkt unter Po.', problems:['patella','knie'] },
+  { id:'sa-huefte', day:6, tier:'bonus', name:'Hüftöffner 90/90', duration:'3 min', trigger:'irgendwann', why:'Steife Hüfte zwingt Knie zu kompensieren.', problems:['huefte'] },
+  { id:'sa-wade', day:6, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'morgens', why:'Achillessehne 4×/Woche. Samstag ist Tag 3.', problems:['achilles','shinSplints'] },
+
+  // SONNTAG
+  { id:'so-aktivierung', day:0, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'vor Long Run', why:'Beim Long Run am wichtigsten: Glute-Aktivierung verhindert Form-Verfall.', problems:['po','huefte','knie'] },
+  { id:'so-longrun', day:0, tier:'activity', name:'Long Run', duration:'lt. Coach', trigger:'wann es passt', why:'Wichtigster Lauf der Woche. Aerobe Basis.', problems:[] },
+  { id:'so-wade', day:0, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach Long Run', why:'Achillessehne nach längstem Lauf der Woche. Tag 4.', problems:['achilles','shinSplints'] },
+
+  // TÄGLICH
+  { id:'daily-meditation', day:'daily', tier:'pflicht', name:'Meditation', duration:'10 min', trigger:'morgens, vor allem anderen', why:'Nervensystem regulieren. Ganzheitlicher Ansatz der Coachin.', problems:['recovery'] },
+  { id:'daily-wallsit', day:'daily', tier:'pflicht', name:'Wall Sit', duration:'45 sek', trigger:'beim Kaffee', why:'Quadrizeps isometrisch — kniefreundlich, ohne Knorpel-Belastung.', problems:['knie','patella'] },
+  { id:'daily-balance', day:'daily', tier:'pflicht', name:'Einbeinstand', duration:'1 min', trigger:'Zähneputzen abends', why:'Stabilität. Links ist instabiler (HUBER-Test) — links extra üben.', problems:['stabilitaet','knie'] },
+  { id:'daily-ankle', day:'daily', tier:'standard', name:'Sprunggelenk-Mobi', duration:'1 min', trigger:'nach Wall Sit', why:'Schlechte Dorsalflexion = Shin Splints + Knie-Stress.', problems:['shinSplints','knie'] },
+  { id:'daily-birddog', day:'daily', tier:'bonus', name:'Bird Dog', duration:'2 min · 2×8 pro Seite', trigger:'irgendwann zwischendurch', why:'Rumpf + Hüft-Stabilität gleichzeitig. Lauf-spezifisch (diagonale Verbindung). Bessere Alternative zu langem Plank-Halten.', problems:['stabilitaet','po'] },
+];
+
+// REGENERATION TASKS (Montag nach Long Run)
+const REGEN_TASKS = [
+  { id:'regen-faszien', tier:'pflicht', name:'Faszienrolle', duration:'10 min', trigger:'morgens', why:'Quads, IT-Band, Wade ausrollen. Nach Long Run Pflicht.', problems:['knie','patella'] },
+  { id:'regen-spazieren', tier:'pflicht', name:'Spaziergang', duration:'20–30 min', trigger:'irgendwann', why:'Aktive Erholung fördert Durchblutung ohne Belastung.', problems:['recovery'] },
+  { id:'regen-beine', tier:'pflicht', name:'Beine hochlegen', duration:'10 min', trigger:'abends', why:'Venösen Rückfluss fördern. Schwellung reduzieren.', problems:['recovery'] },
+  { id:'regen-huefte', tier:'standard', name:'Hüftöffner + Psoas-Dehnung', duration:'5 min', trigger:'nach Spaziergang', why:'Nach Long Run verkürzt sich der Psoas. Jetzt dehnen.', problems:['huefte'] },
+];
+
+const PROBLEMS = [
+  { id:'knie', name:'Knie / Knorpel', desc:'Chondropathie Grad 2 lateral, Grad 3 retropatellar. Knorpel hinter der Kniescheibe. Beim Laufen schmerzfrei, Aufbau ist Pflicht.', exercises:['Kraft Coach-Plan','Knee Extension Theraband (Mo)','Kettlebell Step-Up (Fr)','Wall Sit täglich'] },
+  { id:'patella', name:'Patella-Führung (VMO)', desc:'Kniescheibe wird seitlich gezogen. Ursache: schwacher VMO + Glute med + verspanntes IT-Band.', exercises:['Knee Extension Theraband — wichtigste Übung','Faszienrolle IT-Band','Wall Sit','Clams (Pre-Run)'] },
+  { id:'po', name:'Po / Glute', desc:'Beinmuskulatur Durchschnitt. Schwacher Po → Hamstrings/Hüftbeuger kompensieren → Knie leiden.', exercises:['Pre-Run Aktivierung (3× vor Lauf)','Single Leg Deadlift (Mi)','Bulgarian Split Squat','Kettlebell Step-Up (Fr)'] },
+  { id:'huefte', name:'Hüftbeuger / Psoas', desc:'Verkürzt durch Sitzen + Laufen. Ermüdet auf langen Distanzen → Laufstil bricht ein.', exercises:['Psoas-Dehnung nach Kraft','Hüftöffner 90/90 (Sa + Regen-Mo)','Reverse Lunge (Mo)'] },
+  { id:'achilles', name:'Achillessehne', desc:'Marathon-Schwachstelle. 4×/Woche nach Läufen (Di/Do/Sa/So) — nicht täglich, Sehnen brauchen 48h.', exercises:['Wadenheber nach Läufen (Di/Do/Sa/So)','Sprunggelenk-Mobi täglich'] },
+  { id:'shinSplints', name:'Wade / Shin Splints', desc:'Schienbeinkanten-Reizung durch Unterschenkel-Dysbalance und schlechte Sprunggelenk-Mobi.', exercises:['Wadenheber 4×/Woche','Sprunggelenk-Mobi täglich'] },
+  { id:'stabilitaet', name:'Stabilität / Balance', desc:'Gesamtstabilität unter Normwert, links instabiler. Schlechte Stabilität → schlechte Knie-Position.', exercises:['Einbeinstand täglich (Augen zu)','Single Leg Deadlift','High Plank Toe Tap'] },
+  { id:'recovery', name:'Erholung / Recovery', desc:'Niedriggradige Entzündung + Knorpelschaden. Regeneration ist Training.', exercises:['Meditation täglich','Atemübung nach Intervall','Montag Regen nach Long Run','Beine hochlegen'] },
+];
+
+const COVERAGE_ZONES = [
+  { id:'knie', name:'Knie / Knorpel', target:12, low:5 },
+  { id:'patella', name:'Patella-Führung', target:8, low:3 },
+  { id:'po', name:'Po / Glute', target:6, low:3 },
+  { id:'huefte', name:'Hüftbeuger / Adduktoren', target:4, low:2 },
+  { id:'achilles', name:'Achillessehne', target:5, low:2 },
+  { id:'shinSplints', name:'Wade / Shin Splints', target:6, low:2 },
+  { id:'stabilitaet', name:'Stabilität', target:8, low:3 },
+  { id:'recovery', name:'Erholung', target:3, low:1 },
+];
+
+// ===== EXERCISE GUIDES =====
+const EXERCISE_GUIDES = [
+  {
+    category: 'Pre-Run Aktivierung',
+    items: [
+      { name: 'Clams (mit Miniband)',
+        setup: 'Auf der Seite liegen, Knie gebeugt 90°, Miniband oberhalb der Knie. Fersen zusammen.',
+        bewegung: 'Oberes Knie nach außen öffnen, ohne Becken zu drehen. Langsam runter. 2×15 pro Seite.',
+        tipp: 'Wenn Becken kippt: Bewegung kleiner machen. Du sollst es im Po-Außen spüren, nicht vorne.' },
+      { name: 'Glute Bridge einbeinig',
+        setup: 'Rückenlage, ein Fuß aufgestellt, anderes Bein gestreckt in die Luft.',
+        bewegung: 'Becken über das aufgestellte Bein heben, 2 Sek halten, langsam runter. 2×10 pro Seite.',
+        tipp: 'Po anspannen, nicht den unteren Rücken überstrecken. Hüfte gerade.' },
+      { name: 'Monster Walks',
+        setup: 'Miniband um Knöchel oder oberhalb Knie. Halbe Hocke (Knie leicht gebeugt).',
+        bewegung: 'Kleine Schritte seitwärts, dann vor und zurück. Band immer auf Spannung. 10 Schritte je Richtung.',
+        tipp: 'Hocke halten — nicht zwischen den Schritten hochkommen.' },
+    ]
+  },
+  {
+    category: 'Kraft Coach-Plan',
+    items: [
+      { name: 'Reverse Lunge',
+        setup: 'Aufrecht stehen, Füße hüftbreit, Bauchspannung.',
+        bewegung: 'Großen Schritt nach hinten, hinteres Knie sinkt Richtung Boden. Vorderes Knie über Knöchel. Hochdrücken über die vordere Ferse.',
+        tipp: 'Knieschonender als normaler Lunge. Oberkörper aufrecht, leicht nach vorne lehnen okay.' },
+      { name: 'Bulgarian Split Squat',
+        setup: 'Rückfuß auf Bank/Sofa, vorderer Fuß ca. 60-80cm davor. Hüfte gerade.',
+        bewegung: 'Vorderes Knie beugen, hinteres Knie sinkt Richtung Boden. Hochdrücken über die ganze Fußsohle.',
+        tipp: 'Knie nicht nach innen kippen lassen. Wenn Patella zwickt: Fuß weiter nach vorne stellen.' },
+      { name: 'High Plank Toe Tap',
+        setup: 'Liegestütz-Position, Hände unter Schultern, Körper eine Linie.',
+        bewegung: 'Ein Fuß seitlich ausstrecken (kleiner Tap), zurück. Im Wechsel.',
+        tipp: 'Hüfte nicht rotieren lassen. Rumpf bleibt stabil — das ist die eigentliche Übung.' },
+      { name: 'Reverse Crunch',
+        setup: 'Rückenlage, Knie 90° angezogen, Hände neben dem Körper.',
+        bewegung: 'Knie Richtung Brust ziehen, Becken hebt leicht ab. Langsam zurück.',
+        tipp: 'Kein Schwung. Bauchmuskeln machen die Arbeit, nicht die Hüftbeuger.' },
+      { name: 'Bridge Pose',
+        setup: 'Rückenlage, beide Füße aufgestellt, Arme neben dem Körper.',
+        bewegung: 'Becken hochheben, Po fest anspannen. Halten.',
+        tipp: 'Schultern bleiben am Boden. Po macht die Arbeit, nicht die Hamstrings.' },
+      { name: 'Butterfly Crunch',
+        setup: 'Rückenlage, Fußsohlen aneinander, Knie fallen seitlich auf.',
+        bewegung: 'Schulterblätter vom Boden heben, Brust Richtung Decke. Langsam zurück.',
+        tipp: 'Kein Zug am Nacken. Bauch zieht — nicht der Kopf.' },
+      { name: 'Ipsilateral Dead Bug',
+        setup: 'Rückenlage, Arme nach oben, Knie 90°.',
+        bewegung: 'Rechter Arm und rechtes Bein gleichzeitig ausstrecken (gleiche Seite!). Zurück. Dann links.',
+        tipp: 'Unterer Rücken bleibt am Boden — wenn er sich hebt: Bewegung kleiner.' },
+      { name: 'Superman',
+        setup: 'Bauchlage, Arme nach vorne ausgestreckt.',
+        bewegung: 'Arme, Brust und Beine gleichzeitig vom Boden heben. 2 Sek halten, langsam runter.',
+        tipp: 'Nicht überstrecken. Blick zum Boden, Nacken lang.' },
+    ]
+  },
+  {
+    category: 'Zusatz-Übungen (Mo/Mi/Fr)',
+    items: [
+      { name: 'Knee Extension Theraband',
+        setup: 'Sitzen, Theraband um Knöchel, anderes Ende fixiert (Tischbein, Türgriff). Knie 90°.',
+        bewegung: 'Bein langsam strecken, in den letzten 30° besonders kontrolliert. 2 Sek halten. Zurück. 3×15.',
+        tipp: 'Die letzten 30° sind das Wichtigste — da arbeitet der VMO. Nicht durchschnaufen.' },
+      { name: 'Single Leg Deadlift',
+        setup: 'Auf einem Bein stehen, Stand-Knie leicht gebeugt. (Optional Kurzhantel in einer Hand)',
+        bewegung: 'Oberkörper langsam nach vorne kippen, freies Bein streckt nach hinten. Wie eine Wippe. Zurück. 3×8 pro Seite.',
+        tipp: 'Rücken bleibt gerade. Hüfte parallel zum Boden — nicht zur Seite kippen. Langsam exzentrisch (3 Sek runter).' },
+      { name: 'Kettlebell Step-Up',
+        setup: 'Vor einer stabilen Bank/Stufe (kniehoch). KH oder KB in einer Hand.',
+        bewegung: 'Ein Fuß komplett auf die Bank, über die Ferse hochdrücken. Anderes Bein hochziehen ohne abzudrücken. Kontrolliert runter. 3×8 pro Seite.',
+        tipp: 'Nicht mit dem hinteren Bein abspringen. Die ganze Arbeit macht das vordere Bein.' },
+      { name: 'Hip Thrust',
+        setup: 'Mit Schulterblättern auf Sofa/Bank lehnen, Füße flach am Boden, schulterbreit. Knie 90°. (Optional KH auf Hüfte)',
+        bewegung: 'Hüfte hochdrücken bis Körper gerade Linie von Knie bis Schulter bildet. Po fest anspannen, 2 Sek halten. Langsam runter. 3×10.',
+        tipp: 'Die "echte" Glute-Übung — viel stärker als Bridge. Po anspannen, nicht den Rücken überstrecken. Kinn leicht zur Brust.' },
+      { name: 'Side Plank',
+        setup: 'Seitlich auf Unterarm gestützt, Ellbogen unter Schulter. Beine gestreckt, Füße übereinander.',
+        bewegung: 'Hüfte hochheben bis Körper eine gerade Linie ist. 30 Sek halten. 2 Sätze pro Seite.',
+        tipp: 'Vom Orthopäden für dein Knie verordnet. Hüfte nicht absinken lassen. Wenn zu schwer: unteres Knie aufstützen.' },
+      { name: 'Copenhagen Plank',
+        setup: 'Seitlich liegen, oberes Bein auf Sofa/Bank (Innenseite des Beins auf Kante). Unteres Bein hängt frei.',
+        bewegung: 'Hüfte hochdrücken — gestützt nur durch das obere Bein und den unteren Arm. 20 Sek halten. 2 Sätze pro Seite.',
+        tipp: 'Anstrengender als es aussieht. Wenn zu schwer: Knie statt ganzes Bein auf die Bank. Trainiert die oft vergessenen Adduktoren.' },
+      { name: 'Bent-Knee Calf Raise',
+        setup: 'Knie leicht gebeugt (ca. 20°), Fußballen auf einer Stufe oder am Boden, Fersen frei.',
+        bewegung: 'Fersen langsam hoch auf Zehenspitzen, kurz halten, langsam runter. 3×15.',
+        tipp: 'Unterschied zu normalen Wadenheber: gebeugtes Knie zielt auf den Soleus (tiefe Wade) — beim Laufen wichtiger als die oberflächliche Wade.' },
+      { name: 'Beckenboden-Training',
+        setup: 'Bequem sitzen oder liegen. Aufmerksamkeit auf den Beckenboden.',
+        bewegung: 'Wie Pipi-Anhalten-Bewegung: nach innen und oben ziehen, 5 Sek halten, langsam loslassen. 10 Wiederholungen. Dann 10× schnelle Kontraktionen.',
+        tipp: 'Nicht den Po anspannen, nicht den Bauch. Nur Beckenboden. Atmung läuft normal weiter. Anleitungs-Apps wie "Kegel Trainer" helfen am Anfang.' },
+    ]
+  },
+  {
+    category: 'Tägliche Snacks',
+    items: [
+      { name: 'Meditation',
+        setup: 'Bequeme Position, Augen geschlossen oder weicher Blick.',
+        bewegung: 'Atem beobachten, Gedanken kommen lassen und gehen. 10 Min.',
+        tipp: 'Morgens vor allem anderen. App egal — Stille ist auch eine Methode.' },
+      { name: 'Wadenheber',
+        setup: 'Auf einer Stufe stehen, Fußballen drauf, Fersen frei. Festhalten zur Balance.',
+        bewegung: 'Fersen tief absenken, langsam hoch auf Zehenspitzen, kurz halten, langsam runter. 20× beidbeinig, dann 10× einbeinig pro Seite.',
+        tipp: 'Langsam ist wichtiger als hoch. Der exzentrische (runter) Teil baut die Sehne auf.' },
+      { name: 'Wall Sit',
+        setup: 'Rücken an Wand, Füße schulterbreit, ca. 50 cm von Wand weg.',
+        bewegung: 'Tiefer rutschen bis Knie 90° (oder so tief wie schmerzfrei). 45 Sek halten.',
+        tipp: 'Knie nicht über die Zehen. Wenn Patella zwickt: weniger tief gehen.' },
+      { name: 'Einbeinstand',
+        setup: 'Aufrecht stehen, ein Bein leicht anheben.',
+        bewegung: '1 Minute halten. Steigerung: Augen schließen.',
+        tipp: 'Links extra üben (laut HUBER instabiler). Wackeln ist okay — die Muskeln lernen.' },
+      { name: 'Sprunggelenk-Mobilisation (Wall Ankle)',
+        setup: 'Vor einer Wand stehen, Fuß ca. 10 cm vor der Wand.',
+        bewegung: 'Knie zur Wand drücken (versuchen sie zu berühren) ohne dass die Ferse hochgeht. 10× pro Seite.',
+        tipp: 'Wenn Knie die Wand erreicht: Fuß einen Schritt zurück. Ferse muss am Boden bleiben.' },
+      { name: 'Bird Dog',
+        setup: 'Vierfüßlerstand, Hände unter Schultern, Knie unter Hüfte. Rücken neutral.',
+        bewegung: 'Rechten Arm und linkes Bein gleichzeitig ausstrecken (diagonal!). 2 Sek halten. Zurück. Dann andere Seite. 8 pro Seite, 2 Sätze.',
+        tipp: 'Hüfte gerade — nicht zur Seite kippen. Becken nicht rotieren. Diagonal = Bauch und Po arbeiten zusammen, genau wie beim Laufen.' },
+    ]
+  },
+  {
+    category: 'Regeneration (Montag nach Long Run)',
+    items: [
+      { name: 'Faszienrolle',
+        setup: 'Rolle auf den Boden, langsam mit Körpergewicht über den Muskel rollen.',
+        bewegung: 'Quadrizeps (vorne), IT-Band (außen am Oberschenkel), Wade. Je 1-2 Min pro Bereich.',
+        tipp: 'NICHT direkt unter der Pobacke (Sehnenansatz schonen). Schmerzhafte Stellen: aushalten, atmen, weiter.' },
+      { name: 'Spaziergang',
+        setup: 'Lockere Kleidung, bequeme Schuhe.',
+        bewegung: '20-30 Min in lockerem Tempo. Draußen ist besser.',
+        tipp: 'Kein Sport, keine Leistung. Bewegung fördert Durchblutung und Erholung.' },
+      { name: 'Beine hochlegen',
+        setup: 'Rückenlage, Beine senkrecht hoch an eine Wand oder auf ein Sofa.',
+        bewegung: '10 Min so liegen. Tief atmen.',
+        tipp: 'Hilft venösem Rückfluss. Schwellungen reduzieren sich messbar.' },
+      { name: 'Hüftöffner 90/90',
+        setup: 'Im Sitzen, vorderes Bein 90° gebeugt vor dem Körper, hinteres Bein 90° zur Seite.',
+        bewegung: 'Oberkörper nach vorne neigen über das vordere Bein. 60 Sek halten, atmen. Seite wechseln.',
+        tipp: 'Hüfte verkürzt sich nach Long Runs. Jetzt ist der Zeitpunkt zu dehnen.' },
+      { name: 'Psoas-Dehnung',
+        setup: 'Ausfallschritt-Position, hinteres Knie am Boden, vorderes Bein 90°.',
+        bewegung: 'Becken nach vorne schieben, Po anspannen. Spannung an der Vorderseite der hinteren Hüfte. 30 Sek pro Seite.',
+        tipp: 'Po anspannen ist wichtig — sonst dehnst du nur den Rücken.' },
+    ]
+  },
+];
+
+// ===== VIEWING STATE (nicht persistiert) =====
+let viewingDate = null; // null = heute. Sonst dateKey string
+
+function getViewingDate() {
+  return viewingDate || todayKey();
+}
+
+function setViewingDate(dk) {
+  const today = todayKey();
+  viewingDate = (dk === today) ? null : dk;
+  render();
+}
+
+function navigateToDay(dk) {
+  setViewingDate(dk);
+  // Switch to Heute tab
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector('.tab[data-tab="today"]').classList.add('active');
+  ['today','week','body','knowledge'].forEach(v => {
+    document.getElementById('view-'+v).classList.toggle('hidden', v!=='today');
+  });
+  // Scroll to top
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ===== STATE =====
+let state = {
+  completedTasks:{}, dayOverrides:{}, skippedTasks:{},
+  extraDays:{}, suggestedTasks:{}, customSessions:{},
+  ouraScores:{}, // { 'YYYY-MM-DD': 'good'|'okay'|'bad' }
+  mondayIsRegen:{}, // { 'YYYY-MM-DD': true|false }
+};
+
+async function loadState() {
+  try {
+    const s = localStorage.getItem('knee-strong-v2');
+    if (s) {
+      const p = JSON.parse(s);
+      Object.keys(state).forEach(k => { if(p[k]) state[k] = p[k]; });
+    }
+  } catch(e) {}
+}
+
+async function saveState() {
+  try { localStorage.setItem('knee-strong-v2', JSON.stringify(state)); } catch(e) {}
+}
+
+// ===== HELPERS =====
+function todayKey(d = new Date()) {
+  // Use local date, not UTC — avoids timezone bugs in Germany (UTC+2)
+  const year = d.getFullYear();
+  const month = String(d.getMonth()+1).padStart(2,'0');
+  const day = String(d.getDate()).padStart(2,'0');
+  return `${year}-${month}-${day}`;
+}
+
+function getWeekStart(date = new Date()) {
+  const d = new Date(date);
+  const day = d.getDay();
+  d.setDate(d.getDate() + (day === 0 ? -6 : 1 - day));
+  d.setHours(0,0,0,0);
+  return d;
+}
+
+function getEffectiveDayOfWeek(date = new Date()) {
+  const dk = todayKey(date);
+  return state.dayOverrides[dk] !== undefined ? state.dayOverrides[dk] : date.getDay();
+}
+
+function getTasksForDay(dayOfWeek, dateKey = null) {
+  return TASKS
+    .filter(t => t.day === dayOfWeek || t.day === 'daily')
+    .map(t => {
+      if (t.day === 'daily' && dateKey) return {...t, id:`${t.id}-${dateKey}`};
+      return t;
+    });
+}
+
+function getPflichtForDay(dayOfWeek, dateKey = null) {
+  return getTasksForDay(dayOfWeek, dateKey).filter(t => t.tier === 'pflicht');
+}
+
+function isTaskDone(id, dk) { return !!(state.completedTasks[dk] && state.completedTasks[dk][id]); }
+function isTaskSkipped(id, dk) { return !!(state.skippedTasks[dk] && state.skippedTasks[dk][id]); }
+
+function getOura(dk = todayKey()) { return state.ouraScores[dk] || null; }
+
+function isAdaptedDay(dk = todayKey()) {
+  const o = getOura(dk);
+  return o === 'bad';
+}
+
+function isRegenMonday(dk = todayKey()) {
+  return !!(state.mondayIsRegen[dk]);
+}
+
+// Adjust tier based on Oura score
+function adjustedTier(originalTier, dk) {
+  if (!isAdaptedDay(dk)) return originalTier;
+  // bad oura: pflicht→standard, standard→bonus, bonus→hidden (we just won't show it)
+  if (originalTier === 'pflicht') return 'standard';
+  if (originalTier === 'standard') return 'bonus';
+  return 'bonus';
+}
+
+function isPflichtComplete(date) {
+  const dk = todayKey(date);
+  const dow = state.dayOverrides[dk] !== undefined ? state.dayOverrides[dk] : date.getDay();
+  // If regen monday, check regen tasks
+  if (dow === 1 && isRegenMonday(dk)) {
+    return REGEN_TASKS.filter(t=>t.tier==='pflicht').every(t => isTaskDone(t.id,dk)||isTaskSkipped(t.id,dk));
+  }
+  const tasks = getPflichtForDay(dow, dk);
+  if (!tasks.length) return false;
+  return tasks.every(t => isTaskDone(t.id,dk)||isTaskSkipped(t.id,dk));
+}
+
+function calcStreak() {
+  let streak = 0;
+  const today = new Date(); today.setHours(0,0,0,0);
+  if (isPflichtComplete(today)) streak++;
+  const d = new Date(today);
+  d.setDate(d.getDate()-1);
+  while (isPflichtComplete(d)) {
+    streak++;
+    d.setDate(d.getDate()-1);
+    if (streak > 365) break;
+  }
+  return streak;
+}
+
+function calcWeekProgress() {
+  const ws = getWeekStart();
+  let completed=0, total=0;
+  for (let i=0;i<7;i++) {
+    const date = new Date(ws); date.setDate(date.getDate()+i);
+    const dk = todayKey(date);
+    const dow = state.dayOverrides[dk]!==undefined ? state.dayOverrides[dk] : date.getDay();
+    const tasks = (dow===1 && isRegenMonday(dk)) ? REGEN_TASKS.filter(t=>t.tier==='pflicht') : getPflichtForDay(dow,dk);
+    total += tasks.length;
+    tasks.forEach(t => { if(isTaskDone(t.id,dk)||isTaskSkipped(t.id,dk)) completed++; });
+  }
+  return {completed,total};
+}
+
+function daysUntilMarathon() {
+  return Math.ceil((MARATHON_DATE - new Date()) / (1000*60*60*24));
+}
+
+function toggleTask(id, dk) {
+  if (!dk) dk = getViewingDate();
+  if (isTaskSkipped(id,dk)) return;
+  if (!state.completedTasks[dk]) state.completedTasks[dk]={};
+  if (state.completedTasks[dk][id]) delete state.completedTasks[dk][id];
+  else state.completedTasks[dk][id] = true;
+  saveState(); render();
+}
+
+function toggleSkipTask(id, dk) {
+  if (!state.skippedTasks[dk]) state.skippedTasks[dk]={};
+  if (state.skippedTasks[dk][id]) {
+    delete state.skippedTasks[dk][id];
+  } else {
+    state.skippedTasks[dk][id]=true;
+    if (state.completedTasks[dk]) delete state.completedTasks[dk][id];
+  }
+  saveState(); render();
+}
+
+function setDayOverride(dow) {
+  const dk = todayKey();
+  if (dow === new Date().getDay()) delete state.dayOverrides[dk];
+  else state.dayOverrides[dk] = dow;
+  saveState(); render();
+}
+
+function setDayOverrideForDate(dk, dow, actualDow) {
+  if (dow === actualDow) delete state.dayOverrides[dk];
+  else state.dayOverrides[dk] = dow;
+  saveState(); render();
+}
+
+function resetDayOverride() {
+  delete state.dayOverrides[todayKey()];
+  saveState(); render();
+}
+
+function setOura(val) {
+  const dk = todayKey();
+  if (state.ouraScores[dk] === val) delete state.ouraScores[dk];
+  else state.ouraScores[dk] = val;
+  saveState(); render();
+}
+
+function setMondayRegen(val) {
+  const dk = todayKey();
+  state.mondayIsRegen[dk] = val;
+  saveState(); render();
+}
+
+function resetWeek() {
+  if (!confirm('Wirklich alle Häkchen dieser Woche zurücksetzen?')) return;
+  const ws = getWeekStart();
+  for (let i=0;i<7;i++) {
+    const d = new Date(ws); d.setDate(d.getDate()+i);
+    const dk = todayKey(d);
+    ['completedTasks','skippedTasks','extraDays','suggestedTasks','customSessions'].forEach(k => delete state[k][dk]);
+  }
+  saveState(); render();
+}
+
+function getCustomSessions(dk) { return (state.customSessions && state.customSessions[dk]) || []; }
+
+function deleteSession(id, dk) {
+  if (!state.customSessions[dk]) return;
+  state.customSessions[dk] = state.customSessions[dk].filter(s=>s.id!==id);
+  if (!state.customSessions[dk].length) delete state.customSessions[dk];
+  saveState(); render();
+}
+
+function deleteSuggestion(id, dk) {
+  if (!state.suggestedTasks[dk]) return;
+  state.suggestedTasks[dk] = state.suggestedTasks[dk].filter(s=>s.id!==id);
+  if (!state.suggestedTasks[dk].length) delete state.suggestedTasks[dk];
+  // Also remove any completion/skip marks
+  if (state.completedTasks[dk]) delete state.completedTasks[dk][id];
+  if (state.skippedTasks[dk]) delete state.skippedTasks[dk][id];
+  saveState(); render();
+}
+
+function addSuggestion(baseId, name, duration, tier) {
+  const dk = getViewingDate();
+  if (!state.suggestedTasks[dk]) state.suggestedTasks[dk]=[];
+  const alreadyAdded = state.suggestedTasks[dk].find(t=>t.id===`suggest-${baseId}`);
+  if (!alreadyAdded) {
+    state.suggestedTasks[dk].push({id:`suggest-${baseId}`,name,duration,tier,problems:[]});
+  }
+  saveState(); render();
+}
+
+function isSuggestionAdded(baseId) {
+  const dk = getViewingDate();
+  return !!(state.suggestedTasks[dk] && state.suggestedTasks[dk].find(t=>t.id===`suggest-${baseId}`));
+}
+
+function getMissedSuggestions() {
+  const ws = getWeekStart();
+  const wsKey = todayKey(ws);
+  const todayDk = todayKey();
+  const suggestions = [];
+
+  // IDs die nie als "verpasst" erscheinen sollen (täglich, Snacks)
+  const NEVER_SUGGEST = ['daily-meditation','daily-wallsit','daily-balance','daily-ankle'];
+
+  for (let i=0;i<7;i++) {
+    const date = new Date(ws); date.setDate(date.getDate()+i);
+    const dk = todayKey(date);
+    if (dk < wsKey || dk >= todayDk) continue;
+    const dow = state.dayOverrides[dk]!==undefined ? state.dayOverrides[dk] : date.getDay();
+    const tasks = getTasksForDay(dow, dk);
+    tasks.forEach(t => {
+      if (t.tier==='activity'||t.tier==='bonus') return;
+      // Täglich-Snacks nie vorschlagen
+      const baseId = t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'');
+      if (NEVER_SUGGEST.includes(baseId)) return;
+      if (isTaskDone(t.id,dk)||isTaskSkipped(t.id,dk)) return;
+      suggestions.push({...t, missedDay:DAYS[date.getDay()]});
+    });
+  }
+
+  const seen = new Set();
+  return suggestions.filter(s => {
+    const base = s.id.replace(/-\d{4}-\d{2}-\d{2}$/,'');
+    if (seen.has(base)) return false;
+    seen.add(base); return true;
+  });
+}
+
+function calculateCoverage() {
+  const counts = {};
+  COVERAGE_ZONES.forEach(z => counts[z.id]=0);
+  const ws = getWeekStart();
+  for (let i=0;i<7;i++) {
+    const date = new Date(ws); date.setDate(date.getDate()+i);
+    const dk = todayKey(date);
+    const dow = state.dayOverrides[dk]!==undefined ? state.dayOverrides[dk] : date.getDay();
+    const tasks = getTasksForDay(dow,dk);
+    tasks.forEach(t => {
+      if (!isTaskDone(t.id,dk)) return;
+      (t.problems||[]).forEach(p => { if(counts[p]!==undefined) counts[p]++; });
+    });
+  }
+  return counts;
+}
+
+// ===== SESSION SHEET =====
+let sheetState = { selectedDay:null, selectedType:null };
+
+function openSessionSheet() {
+  const ws = getWeekStart();
+  const todayDk = todayKey();
+  const defaultDk = getViewingDate();
+  sheetState = { selectedDay: defaultDk, selectedType: null };
+
+  let html='';
+  [1,2,3,4,5,6,0].forEach(dow => {
+    for (let i=0;i<7;i++) {
+      const d = new Date(ws); d.setDate(d.getDate()+i);
+      if (d.getDay()===dow) {
+        const dk = todayKey(d);
+        const isToday = dk===todayDk;
+        const isSelected = dk===defaultDk;
+        const dateStr = d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'});
+        html+=`<button class="sheet-option${isSelected?' selected':''}" data-datekey="${dk}" onclick="selectSheetDay(this)">${DAYS_SHORT[dow]}<br><span style="font-size:11px;font-weight:400">${dateStr}</span>${isToday?'<br><span style="font-size:10px;color:var(--accent);font-weight:700">Heute</span>':''}</button>`;
+        break;
+      }
+    }
+  });
+  document.getElementById('sheet-days').innerHTML = html;
+  document.querySelectorAll('#sheet-types .sheet-option').forEach(b=>b.classList.remove('selected'));
+  document.getElementById('sheet-confirm-btn').disabled = true;
+  document.getElementById('session-sheet').classList.remove('hidden');
+}
+
+function closeSessionSheet(e) { if(e.target.id==='session-sheet') closeSessionSheetDirect(); }
+function closeSessionSheetDirect() { document.getElementById('session-sheet').classList.add('hidden'); }
+
+function selectSheetDay(btn) {
+  document.querySelectorAll('#sheet-days .sheet-option').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  sheetState.selectedDay = btn.dataset.datekey;
+  updateSheetBtn();
+}
+
+function selectSheetType(btn) {
+  document.querySelectorAll('#sheet-types .sheet-option').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  sheetState.selectedType = btn.dataset.type;
+  updateSheetBtn();
+}
+
+function updateSheetBtn() {
+  document.getElementById('sheet-confirm-btn').disabled = !(sheetState.selectedDay && sheetState.selectedType);
+}
+
+function confirmSession() {
+  if (!sheetState.selectedDay||!sheetState.selectedType) return;
+  // Always save under the selected day (which defaults to today)
+  const dk = sheetState.selectedDay;
+  const type = sheetState.selectedType;
+  const labels = {lauf:'🏃 Lauf',schwimm:'🏊 Schwimmen',rad:'🚴 Rad','extra-rad':'🚴 Extra Rad'};
+  const tiers = {lauf:'activity',schwimm:'activity',rad:'activity','extra-rad':'bonus'};
+  if (!state.customSessions[dk]) state.customSessions[dk]=[];
+  if (!state.customSessions[dk].find(s=>s.type===type)) {
+    state.customSessions[dk].push({id:`session-${type}-${dk}`,type,label:labels[type],tier:tiers[type]});
+  }
+  saveState(); closeSessionSheetDirect(); render();
+}
+
+// ===== RENDER =====
+function renderPhaseBanner() {
+  // Phase info shown in streak bar only — no banner needed
+  document.getElementById('phase-banner-container').innerHTML = '';
+  const phase = getPhase();
+  document.getElementById('phase-display').textContent = phase.label;
+}
+
+function renderOuraCheckin() {
+  const dk = todayKey();
+  const current = getOura(dk);
+  document.getElementById('oura-checkin').innerHTML = `
+    <div class="checkin-box">
+      <div class="checkin-label">Oura Erholung heute</div>
+      <div class="checkin-row">
+        <button class="checkin-btn${current==='good'?' selected-good':''}" onclick="setOura('good')">🟢 Gut</button>
+        <button class="checkin-btn${current==='okay'?' selected-okay':''}" onclick="setOura('okay')">🟡 Okay</button>
+        <button class="checkin-btn${current==='bad'?' selected-bad':''}" onclick="setOura('bad')">🔴 Schlecht</button>
+      </div>
+      ${current==='bad'?'<div class="checkin-hint">Plan angepasst: Pflicht-Tasks heute als Standard. Hör auf deinen Körper.</div>':''}
+      ${current==='okay'?'<div class="checkin-hint">Moderat trainieren. Auf Signale achten.</div>':''}
+    </div>`;
+}
+
+function renderMondayQuestion(dk) {
+  const answered = state.mondayIsRegen[dk] !== undefined;
+  if (answered) { document.getElementById('monday-question').innerHTML=''; return; }
+  document.getElementById('monday-question').innerHTML = `
+    <div class="monday-box">
+      <div class="monday-q">Hattest du gestern einen Long Run?</div>
+      <div class="monday-btns">
+        <button class="monday-btn" onclick="setMondayRegen(true)">Ja → Regeneration heute</button>
+        <button class="monday-btn" onclick="setMondayRegen(false)">Nein → Kraft heute</button>
+      </div>
+    </div>`;
+}
+
+function renderAdaptNotice(dk) {
+  const o = getOura(dk);
+  if (o !== 'bad') { document.getElementById('adapt-notice').innerHTML=''; return; }
+  document.getElementById('adapt-notice').innerHTML = `
+    <div class="adapt-notice">
+      <div class="adapt-notice-text">⚡ Plan angepasst wegen Oura-Score</div>
+      <div class="adapt-notice-sub">Pflicht-Tasks sind heute Standard. Bewegung ja — aber sanft.</div>
+    </div>`;
+}
+
+function renderDaySwitcher(viewingDow, viewingDk) {
+  const todayDk = todayKey();
+  const today = new Date();
+  const todayDow = today.getDay();
+  const ws = getWeekStart();
+  let html='';
+
+  [1,2,3,4,5,6,0].forEach(dow => {
+    // Find the date for this dow in current week
+    let pillDk = '';
+    let dateStr = '';
+    for (let i=0;i<7;i++) {
+      const d = new Date(ws); d.setDate(d.getDate()+i);
+      if (d.getDay()===dow) {
+        pillDk = todayKey(d);
+        dateStr = d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'});
+        break;
+      }
+    }
+    const isSelected = pillDk === viewingDk;
+    const isToday = pillDk === todayDk;
+    let cls='day-pill';
+    if (isSelected) cls+=' selected';
+    if (isToday) cls+=' actual';
+    html+=`<button class="${cls}" onclick="setViewingDate('${pillDk}')" style="font-size:11px;line-height:1.3">
+      ${DAYS_SHORT[dow]}<br><span style="font-size:9px;font-weight:400">${dateStr}</span>
+    </button>`;
+  });
+
+  document.getElementById('day-switcher-row').innerHTML=html;
+  const note = document.getElementById('override-note');
+  const isToday = viewingDk === todayDk;
+  if (!isToday) {
+    note.classList.remove('hidden');
+    note.innerHTML=`Du schaust auf ${DAYS[viewingDow]}. <button class="reset-override" onclick="setViewingDate('${todayDk}')">Zurück zu Heute</button>`;
+  } else { note.classList.add('hidden'); }
+}
+
+function renderSuggestions() {
+  const sugg = getMissedSuggestions();
+  const el = document.getElementById('suggestions-box');
+  if (!sugg.length) { el.innerHTML=''; return; }
+  let html=`<div class="suggestions-box"><div class="suggestions-title">⚠ Diese Woche noch nicht gemacht — heute nachholen?</div>`;
+  sugg.forEach(s => {
+    const base = s.id.replace(/-\d{4}-\d{2}-\d{2}$/,'');
+    const added = isSuggestionAdded(base);
+    html+=`<div class="suggestion-item">
+      <div>
+        <div class="suggestion-name">${s.name}</div>
+        <div class="suggestion-meta">Verpasst: ${s.missedDay} · ${s.duration}</div>
+      </div>
+      <button class="suggestion-add-btn${added?' suggestion-added':''}"
+        onclick="addSuggestion('${base}','${s.name}','${s.duration}','${s.tier}')"
+        ${added?'disabled':''}>
+        ${added?'✓ Hinzugefügt':'+ Heute'}
+      </button>
+    </div>`;
+  });
+  html+=`</div>`;
+  el.innerHTML=html;
+}
+
+function renderTodayTasks(dayOfWeek, dk) {
+  const phase = getPhase();
+  const isRegen = dayOfWeek===1 && isRegenMonday(dk);
+  const tasks = isRegen ? REGEN_TASKS : getTasksForDay(dayOfWeek, dk);
+  const extras = (state.extraDays[dk]||[]).flatMap(d => TASKS.filter(t=>t.day===d&&t.tier!=='activity'&&t.day!=='daily').map(t=>({...t,isExtra:true,extraFrom:d})));
+  const suggested = (state.suggestedTasks[dk]||[]).map(t=>({...t,isSuggested:true}));
+  const sessions = getCustomSessions(dk);
+  const all = [...tasks.map(t=>({...t,isExtra:false,isSuggested:false})), ...extras, ...suggested];
+
+  const tierOrder = ['pflicht','activity','standard','bonus'];
+  const tierLabels = {pflicht:'Pflicht',activity:'Training',standard:'Standard',bonus:'Bonus',regen:'Erholung'};
+  const tierDescs = {pflicht:'Steht immer.',activity:'Vom Coach geplant.',standard:'Wenn die Woche normal läuft.',bonus:'Wenn Zeit und Energie da sind.',regen:'Aktive Erholung.'};
+
+  if (isRegen) {
+    let html='';
+    html+=`<div class="regen-header"><div class="regen-icon">🌿</div><div class="regen-title">Regenerationstag</div><div class="regen-sub">Nach dem Long Run. Dein Körper baut jetzt auf.</div></div>`;
+    html+=`<div class="section"><div class="section-header"><span class="section-tag regen">Erholung</span><span class="section-title">Aktive Regeneration.</span></div>`;
+    let total=0, done=0;
+    REGEN_TASKS.forEach(t => {
+      const isDone = isTaskDone(t.id,dk), isSkip = isTaskSkipped(t.id,dk);
+      total++; if(isDone||isSkip) done++;
+      html+=taskHtml(t, dk, isDone, isSkip, false, false, phase);
+    });
+    html+=`</div>`;
+    document.getElementById('today-tasks').innerHTML=html;
+    return {total,done};
+  }
+
+  const grouped={};
+  tierOrder.forEach(t=>grouped[t]=[]);
+  all.forEach(t => {
+    const tier = isAdaptedDay(dk) ? adjustedTier(t.tier,dk) : t.tier;
+    if (grouped[tier]) grouped[tier].push({...t,displayTier:tier});
+    else grouped.bonus.push({...t,displayTier:'bonus'});
+  });
+
+  let html='', total=0, done=0;
+  tierOrder.forEach(tier => {
+    if (!grouped[tier].length) return;
+    html+=`<div class="section"><div class="section-header"><span class="section-tag ${tier}">${tierLabels[tier]}</span><span class="section-title">${tierDescs[tier]}</span></div>`;
+    grouped[tier].forEach(t => {
+      const key = t.isExtra ? `extra-${t.extraFrom}-${t.id}` : t.id;
+      const isDone=isTaskDone(key,dk), isSkip=isTaskSkipped(key,dk);
+      total++; if(isDone||isSkip) done++;
+      html+=taskHtml({...t,id:key}, dk, isDone, isSkip, t.isExtra, t.isSuggested, phase, t.extraFrom);
+    });
+    html+=`</div>`;
+  });
+
+  // Custom sessions
+  if (sessions.length) {
+    html+=`<div class="section"><div class="section-header"><span class="section-tag activity">Meine Sessions</span><span class="section-title">Selbst geplant.</span></div>`;
+    sessions.forEach(s => {
+      const isDone=isTaskDone(s.id,dk); total++; if(isDone) done++;
+      html+=`<div class="task${isDone?' done':''}">
+        <div class="checkbox" onclick="toggleTask('${s.id}','${dk}')"></div>
+        <div class="task-content" onclick="toggleTask('${s.id}','${dk}')">
+          <div class="task-name">${s.label}</div>
+          <div class="task-meta"><span>selbst hinzugefügt</span></div>
+        </div>
+        <button class="task-delete-btn" onclick="event.stopPropagation();deleteSession('${s.id}','${dk}')">×</button>
+      </div>`;
+    });
+    html+=`</div>`;
+  }
+
+  if (!total) html='<div class="empty">Ruhetag. Erholung ist Training.</div>';
+  document.getElementById('today-tasks').innerHTML=html;
+  return {total,done};
+}
+
+function taskHtml(t, dk, isDone, isSkip, isExtra, isSugg, phase, extraFrom) {
+  const progKey = t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'');
+  const prog = PROGRESSION[progKey] ? PROGRESSION[progKey][phase.id] : null;
+  const showSkip = t.tier==='activity' && !isSkip && !isDone;
+  const extraBadge = isExtra ? `<span class="badge extra">Extra·${DAYS_SHORT[extraFrom]}</span>` : '';
+  const suggBadge = isSugg ? `<span class="badge nachgeholt">Nachgeholt</span>` : '';
+  // Lösch-Button für Suggested-Tasks (manuell hinzugefügt zum Nachholen)
+  const deleteBtn = isSugg ? `<button class="task-delete-btn" onclick="event.stopPropagation();deleteSuggestion('${t.id}','${dk}')" style="position:absolute;top:8px;right:8px">×</button>` : '';
+  return `<div class="task${isDone?' done':isSkip?' skipped':''}" style="position:relative">
+    <div class="checkbox" onclick="toggleTask('${t.id}','${dk}')"></div>
+    <div class="task-content" onclick="toggleTask('${t.id}','${dk}')">
+      <div class="task-name">${t.name}${extraBadge}${suggBadge}</div>
+      <div class="task-meta"><span>${t.duration}</span>${t.trigger?`<span>·</span><span style="font-style:italic">${t.trigger}</span>`:''}</div>
+      ${t.why?`<div class="task-why"><span class="task-why-label">Warum</span>${t.why}</div>`:''}
+      ${prog?`<div class="task-progress ${phase.id}">${phase.name}: ${prog}</div>`:''}
+      ${isSkip?`<span class="task-skipped-label">Ausgelassen</span><button class="task-unskip-btn" onclick="event.stopPropagation();toggleSkipTask('${t.id}','${dk}')">rückgängig</button>`:''}
+      ${showSkip?`<button class="task-skip-btn" onclick="event.stopPropagation();toggleSkipTask('${t.id}','${dk}')">Auslassen</button>`:''}
+    </div>
+    ${deleteBtn}
+  </div>`;
+}
+
+function renderToday() {
+  const now = new Date();
+  const actualDow = now.getDay();
+  const todayDk = todayKey();
+  const dk = getViewingDate();
+
+  // Date object for the viewing day
+  const viewingDateObj = parseLocalDate(dk);
+  const viewingDow = viewingDateObj.getDay();
+  const isToday = dk === todayDk;
+  const isPast = dk < todayDk;
+  const isFuture = dk > todayDk;
+
+  // Day-override only applies when viewing today
+  const effectiveDow = isToday && state.dayOverrides[todayDk] !== undefined
+    ? state.dayOverrides[todayDk]
+    : viewingDow;
+
+  // Header shows viewing date
+  document.getElementById('today-date').textContent = viewingDateObj.toLocaleDateString('de-DE',{day:'2-digit',month:'long',year:'numeric'});
+  document.getElementById('today-day').textContent = DAYS[viewingDow] + (isToday ? '' : isPast ? ' · Vergangenheit' : ' · Vorausgeplant');
+
+  document.getElementById('streak-count').textContent = calcStreak();
+  const wp = calcWeekProgress();
+  document.getElementById('week-completed').textContent = `${wp.completed}/${wp.total}`;
+  document.getElementById('countdown').textContent = `${daysUntilMarathon()} Tage`;
+
+  // Oura check-in only for today
+  if (isToday) renderOuraCheckin();
+  else document.getElementById('oura-checkin').innerHTML = '';
+
+  // Monday question only for today's Monday
+  if (isToday && actualDow===1) renderMondayQuestion(dk);
+  else document.getElementById('monday-question').innerHTML='';
+
+  if (isToday) renderAdaptNotice(dk);
+  else document.getElementById('adapt-notice').innerHTML='';
+
+  renderDaySwitcher(viewingDow, dk);
+
+  // Suggestions only for today
+  if (isToday) renderSuggestions();
+  else document.getElementById('suggestions-box').innerHTML='';
+
+  const {total,done} = renderTodayTasks(effectiveDow, dk);
+  const pct = total > 0 ? (done/total)*100 : 0;
+  document.getElementById('progress-fill').style.width = pct+'%';
+  document.getElementById('progress-text').textContent = `${done} von ${total} erledigt`;
+
+  const isRegen = effectiveDow===1 && isRegenMonday(dk);
+  document.getElementById('today-quote').textContent = isRegen
+    ? 'Regeneration ist kein Luxus. Sie ist Training.'
+    : isPast
+    ? 'Nachpflegen ist Teil der Reise.'
+    : 'Lieber Pflicht zu 100% als alles zu 60%.';
+}
+
+// Helper: parse YYYY-MM-DD as local date
+function parseLocalDate(dateStr) {
+  const [y,m,d] = dateStr.split('-').map(Number);
+  return new Date(y, m-1, d);
+}
+
+function renderWeek() {
+  const ws = getWeekStart();
+  const todayDk = todayKey();
+  const dayOrder = [1,2,3,4,5,6,0];
+  let html='';
+
+  for (let i=0;i<7;i++) {
+    const date = new Date(ws); date.setDate(date.getDate()+i);
+    const actualDow = date.getDay();
+    const dk = todayKey(date);
+    const isToday = dk===todayDk;
+    const isRegen = actualDow===1 && isRegenMonday(dk);
+    const effectiveDow = state.dayOverrides[dk]!==undefined ? state.dayOverrides[dk] : actualDow;
+    const tasks = isRegen ? REGEN_TASKS : getTasksForDay(effectiveDow,dk);
+    const sessions = getCustomSessions(dk);
+
+    let dayDone=0, dayTotal=tasks.length+sessions.length;
+    let pills='';
+    tasks.forEach(t => {
+      const done=isTaskDone(t.id,dk)||isTaskSkipped(t.id,dk);
+      if(done) dayDone++;
+      pills+=`<span class="pill ${done?'done':(isRegen?'regen':t.tier)}">${t.name}</span>`;
+    });
+    sessions.forEach(s => {
+      const done=isTaskDone(s.id,dk); if(done) dayDone++;
+      pills+=`<span class="pill ${done?'done':'activity'}">${s.label}</span>`;
+    });
+
+    const dateStr = date.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'});
+    const overrideTag = state.dayOverrides[dk]!==undefined
+      ? `<span class="week-day-override">Plan: ${DAYS[effectiveDow]}</span>` : '';
+
+    const isPast = dk < todayDk;
+    let warnHtml='';
+    if (isPast && !isRegen) {
+      const missed = tasks.filter(t=>(t.tier==='pflicht'||t.tier==='standard')&&!isTaskDone(t.id,dk)&&!isTaskSkipped(t.id,dk));
+      if (missed.length) warnHtml=`<div class="week-warning">⚠ ${missed.length} verpasst: ${missed.slice(0,2).map(t=>t.name).join(', ')}${missed.length>2?'…':''}</div>`;
+    }
+
+    let switcherHtml='';
+    dayOrder.forEach(d => {
+      const isSel=d===effectiveDow;
+      switcherHtml+=`<button class="mini-day-pill${isSel?' selected':''}" onclick="event.stopPropagation();setDayOverrideForDate('${dk}',${d},${actualDow})">${DAYS_SHORT[d]}</button>`;
+    });
+
+    html+=`<div class="week-day${isToday?' today':''}${isRegen?' is-regen':''}" onclick="navigateToDay('${dk}')" style="cursor:pointer">
+      <div class="week-day-header">
+        <div class="week-day-name">${DAYS[actualDow]}${isRegen?' 🌿':''}</div>
+        <div class="week-day-stats">${dateStr} · ${dayDone}/${dayTotal}</div>
+      </div>
+      ${overrideTag}${warnHtml}
+      <div class="week-day-tasks">${pills}</div>
+      <div style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);text-align:center;font-size:12px;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">→ Tag öffnen</div>
+    </div>`;
+  }
+  document.getElementById('week-grid').innerHTML=html;
+}
+
+function renderBodyCoverage() {
+  const counts = calculateCoverage();
+  let html='';
+  COVERAGE_ZONES.forEach(z => {
+    const done=counts[z.id]||0;
+    const pct=Math.min(100,(done/z.target)*100);
+    let status,text,cls;
+    if(done>=z.target){status='good';text='✓ Ziel erreicht';cls='good';}
+    else if(done>=z.low){status='warn';text=`Auf Kurs · noch ${z.target-done}`;cls='warn';}
+    else{status='low';text=done===0?'Diese Woche noch nichts':'Zu wenig — nachholen!';cls='low';}
+    html+=`<div class="coverage-item ${status}">
+      <div class="coverage-header"><div class="coverage-name">${z.name}</div><div class="coverage-count">${done}/${z.target}</div></div>
+      <div class="coverage-bar-bg"><div class="coverage-bar-fill ${cls}" style="width:${pct}%"></div></div>
+      <div class="coverage-status">${text}</div>
+    </div>`;
+  });
+  document.getElementById('coverage-grid').innerHTML=html;
+}
+
+function renderWhy() {
+  let html='';
+  PROBLEMS.forEach(p => {
+    html+=`<div class="problem-card">
+      <div class="problem-name">${p.name}</div>
+      <div class="problem-desc">${p.desc}</div>
+      ${p.exercises.map(e=>`<div class="problem-exercise">${e}</div>`).join('')}
+    </div>`;
+  });
+  document.getElementById('why-content').innerHTML=html;
+}
+
+function renderExercises() {
+  let html='';
+  EXERCISE_GUIDES.forEach(cat => {
+    html+=`<div class="exercise-category-title">${cat.category}</div>`;
+    cat.items.forEach(ex => {
+      html+=`<div class="exercise-card">
+        <div class="exercise-card-name">${ex.name}</div>
+        <div class="exercise-step"><span class="exercise-step-label">Setup</span><span class="exercise-step-text">${ex.setup}</span></div>
+        <div class="exercise-step"><span class="exercise-step-label">Bewegung</span><span class="exercise-step-text">${ex.bewegung}</span></div>
+        <div class="exercise-step"><span class="exercise-step-label">Tipp</span><span class="exercise-step-text">${ex.tipp}</span></div>
+      </div>`;
+    });
+  });
+  document.getElementById('exercises-content').innerHTML=html;
+}
+
+function render() {
+  renderPhaseBanner();
+  renderToday();
+  renderSuggestions();
+  renderWeek();
+  renderBodyCoverage();
+  renderExercises();
+  renderWhy();
+}
+
+// TABS
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const name = tab.dataset.tab;
+    ['today','week','body','knowledge'].forEach(v => {
+      document.getElementById('view-'+v).classList.toggle('hidden', v!==name);
+    });
+  });
+});
+
+// SUB-TABS
+document.querySelectorAll('.sub-tab').forEach(sub => {
+  sub.addEventListener('click', () => {
+    document.querySelectorAll('.sub-tab').forEach(s=>s.classList.remove('active'));
+    sub.classList.add('active');
+    const name = sub.dataset.subtab;
+    ['exercises','why'].forEach(v => {
+      document.getElementById('sub-'+v).classList.toggle('hidden', v!==name);
+    });
+  });
+});
+
+// INIT
+(async function init() {
+  await loadState();
+  render();
+})();
+</script>
+</body>
+</html>
