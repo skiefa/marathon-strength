@@ -652,18 +652,40 @@ function parseEntry(text){
   if(dauer==null){ m=t.match(/(\d+)\s*(?:min|minuten)/); if(m) dauer=parseInt(m[1]); }
   if(dauer==null){ m=t.match(/(\d+[.,]?\d*)\s*stunden?/); if(m) dauer=Math.round(parseFloat(m[1].replace(',','.'))*60); }
   const pain=(word)=>{ const mm=t.match(new RegExp(word+'\\D{0,14}?(\\d+)')); if(mm){const v=parseInt(mm[1]); if(v<=10) return v;} return null; };
-  let art='Lauf';
+  // Lauf-Indizien schlagen beiläufige Wort-Treffer ("hatte keine Kraft mehr")
+  const laufHit = /intervall|long ?run|langer lauf|tempolauf|zone ?2|gelaufen|gejoggt|laufen|\blauf\b/.test(t) || km!=null;
+  let art='Training';
   if(/intervall/.test(t)) art='Intervall';
   else if(/long ?run|langer lauf/.test(t)) art='Long Run';
-  else if(/kraft|hantel|gym|coach-plan/.test(t)) art='Kraft';
+  else if(laufHit) art='Lauf';
+  else if(/krafttraining|\bkraft\b|hantel|gym|coach-plan/.test(t)) art='Kraft';
   else if(/rad ?fahr|fahrrad|schwimm/.test(t)) art='Rad/Schwimmen';
   else if(/ruhetag|pausentag/.test(t)) art='Ruhetag';
-  else if(!/lauf|gelaufen|gejoggt|km|kilometer/.test(t)) art='Training';
   let rpe=null; m=t.match(/(?:anstrengung|rpe)\D{0,10}?(\d+)/); if(m && parseInt(m[1])<=10) rpe=parseInt(m[1]);
-  const d=new Date();
-  if(/vorgestern/.test(t)) d.setDate(d.getDate()-2);
-  else if(/gestern/.test(t)) d.setDate(d.getDate()-1);
-  return { datum:todayKey(d), art, km, dauer, rpe, knie:pain('knie'), achilles:pain('achill') };
+  // "gestern" nur am Anfang werten — "besser als gestern" mitten im Satz verschiebt das Datum nicht
+  let offset=0;
+  const vg = t.search(/vorgestern/);
+  const g = t.search(/(^|[^r])gestern/);
+  if(vg>-1 && vg<30) offset=2;
+  else if(g>-1 && g<30) offset=1;
+  const d=new Date(); d.setDate(d.getDate()-offset);
+  return { datum:todayKey(d), offset, art, km, dauer, rpe, knie:pain('knie'), achilles:pain('achill') };
+}
+let vLock = { tag:false, art:false };
+function vUpdate(){
+  const ta = document.getElementById('v-text');
+  if(!ta) return;
+  const p = parseEntry(ta.value);
+  const tagSel = document.getElementById('v-tag'), artSel = document.getElementById('v-art');
+  if(tagSel && !vLock.tag) tagSel.value = String(p.offset);
+  if(artSel && !vLock.art) artSel.value = p.art;
+  const er = document.getElementById('v-erkannt');
+  if(er){
+    const teile = [p.km!=null? p.km+' km':null, p.dauer!=null? p.dauer+' min':null,
+      p.rpe!=null? 'Anstrengung '+p.rpe:null, p.knie!=null? 'Knie '+p.knie+'/10':null,
+      p.achilles!=null? 'Achilles '+p.achilles+'/10':null].filter(Boolean);
+    er.textContent = ta.value.trim()? (teile.length? 'Außerdem erkannt: '+teile.join(' · ') : 'Tippe oder sprich weiter — Zahlen erkenne ich automatisch.') : '';
+  }
 }
 function saveVoice(){
   const ta = document.getElementById('v-text');
@@ -671,11 +693,26 @@ function saveVoice(){
   if(!text) return;
   if(recActive){ try{rec.stop();}catch(e){} }
   const p = parseEntry(text);
-  S.journal.unshift({ datum:p.datum, art:p.art, km:p.km, dauer_min:p.dauer,
+  const off = parseInt(document.getElementById('v-tag').value);
+  const d = new Date(); d.setDate(d.getDate()-off);
+  S.journal.unshift({ datum:todayKey(d), art:document.getElementById('v-art').value, km:p.km, dauer_min:p.dauer,
     anstrengung_1_10:p.rpe, knie_0_10:p.knie, achilles_0_10:p.achilles, stimmung_1_5:null,
     notizen:text, ts:new Date().toISOString() });
+  vLock = { tag:false, art:false };
   save(); render();
   if((p.knie||0)>=4 || (p.achilles||0)>=4) alert('Notiert — und gehört: Schmerz ab 4/10. Das beobachten wir. Taucht es beim nächsten Mal wieder auf: 2 Tage Pause-Regel.');
+}
+function editJournal(i){ S.journal[i]._edit = true; render(); }
+function cancelEdit(i){ delete S.journal[i]._edit; save(); render(); }
+function saveEdit(i){
+  const e = S.journal[i];
+  const g = id=>document.getElementById(id);
+  if(g('e-datum').value) e.datum = g('e-datum').value;
+  e.art = g('e-art').value;
+  e.km = g('e-km').value? parseFloat(g('e-km').value) : null;
+  e.dauer_min = g('e-dauer').value? parseInt(g('e-dauer').value) : null;
+  delete e._edit;
+  save(); render();
 }
 /* Diktat direkt in der App (wo der Browser es kann) */
 const MIC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1M12 18v4"/></svg>';
@@ -703,6 +740,7 @@ function toggleMic(){
         else interim += ev.results[i][0].transcript;
       }
       ta.value = (base+fin+interim).trim();
+      vUpdate();
     };
     rec.onstart = ()=>{ recActive=true; updateMicUI(); };
     rec.onend = ()=>{ recActive=false; updateMicUI(); };
@@ -746,24 +784,46 @@ ${e.notizen}
   else { navigator.clipboard.writeText(md).then(()=>alert('Alles kopiert — auf dem Mac bei Claude einfügen, der sortiert es ein.')); }
 }
 function renderBuch(){
+  const tagOpt = [0,1,2].map(o=>{
+    const d=new Date(); d.setDate(d.getDate()-o);
+    const lbl = (o===0?'Heute':o===1?'Gestern':'Vorgestern')+' · '+fmtDate(todayKey(d));
+    return `<option value="${o}">${lbl}</option>`;
+  }).join('');
+  const artOpt = ['Lauf','Long Run','Intervall','Kraft','Rad/Schwimmen','Ruhetag','Training'].map(a=>`<option>${a}</option>`).join('');
   let html = `<h2>Erzähl einfach</h2><div class="card">
-    <textarea id="v-text" style="min-height:110px" placeholder="z. B.: 14 km gelaufen in 1:20, Knie ruhig, ab km 10 schwer. Neues Gel probiert, Magen okay. — Kilometer, Dauer, Art und Schmerzen erkenne ich von selbst, auch ein Wort wie gestern."></textarea>
+    <textarea id="v-text" style="min-height:110px" oninput="vUpdate()" placeholder="z. B.: 14 km gelaufen in 1:20, Knie ruhig, ab km 10 schwer. Neues Gel probiert, Magen okay. — Kilometer, Dauer, Art und Schmerzen erkenne ich von selbst."></textarea>
     <div id="micwrap" style="display:${micSupported()?'block':'none'};text-align:center;margin-top:12px">
       <button id="micbtn" class="micbtn" onclick="toggleMic()">${MIC_SVG}</button>
       <div class="small" id="michint" style="margin-top:6px">Antippen und einfach erzählen</div>
     </div>
     ${micSupported()? '' : '<div class="small" style="margin-top:10px">Diktieren: einfach die Mikrofon-Taste auf der Tastatur drücken und reden.</div>'}
-    <button class="btn" onclick="saveVoice()">Sichern — den Rest verstehe ich selbst</button>
+    <div class="frow" style="margin-top:12px">
+      <div><label>Tag (prüf mich kurz)</label><select id="v-tag" onchange="vLock.tag=true">${tagOpt}</select></div>
+      <div><label>Art</label><select id="v-art" onchange="vLock.art=true">${artOpt}</select></div>
+    </div>
+    <div class="small" id="v-erkannt" style="margin-top:6px"></div>
+    <button class="btn" onclick="saveVoice()">Sichern</button>
   </div>`;
   html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
   if(S.journal.length){
     html += `<h2>Einträge (${S.journal.length})</h2>`;
     html += S.journal.map((e,i)=>{
+      if(e._edit){
+        const artEd = ['Lauf','Long Run','Intervall','Kraft','Rad/Schwimmen','Ruhetag','Training'].map(a=>`<option ${a===e.art?'selected':''}>${a}</option>`).join('');
+        return `<div class="jentry" style="border-color:var(--accent)">
+          <div class="frow"><div><label>Datum</label><input type="date" id="e-datum" value="${e.datum}"></div>
+          <div><label>Art</label><select id="e-art">${artEd}</select></div></div>
+          <div class="frow"><div><label>km</label><input type="number" id="e-km" inputmode="decimal" value="${e.km==null?'':e.km}"></div>
+          <div><label>Dauer (min)</label><input type="number" id="e-dauer" inputmode="numeric" value="${e.dauer_min==null?'':e.dauer_min}"></div></div>
+          <div class="frow"><button class="btn" style="margin:6px 0" onclick="saveEdit(${i})">Speichern</button>
+          <button class="btn ghost" style="margin:6px 0" onclick="cancelEdit(${i})">Abbrechen</button></div>
+        </div>`;
+      }
       const meta = [e.km!=null? e.km+' km':null, e.dauer_min!=null? e.dauer_min+' min':null,
         e.anstrengung_1_10!=null? 'RPE '+e.anstrengung_1_10:null,
         e.knie_0_10? 'Knie '+e.knie_0_10+'/10':null, e.achilles_0_10? 'Achilles '+e.achilles_0_10+'/10':null].filter(Boolean).join(' · ');
       return `<div class="jentry"><div class="jh"><b>${fmtDate(e.datum)} — ${esc(e.art)}</b>
-        <button class="del" onclick="delJournal(${i})">löschen</button></div>
+        <span><button class="del" onclick="editJournal(${i})">ändern</button> <button class="del" onclick="delJournal(${i})">löschen</button></span></div>
         <div class="jmeta">${esc(meta)}</div>${e.notizen? '<div>'+esc(e.notizen)+'</div>':''}</div>`;
     }).join('');
   } else {
