@@ -116,7 +116,8 @@ label{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--m
   background:var(--paper);border-top:1px solid var(--line);display:flex;
   padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
 .tab{flex:1;text-align:center;font-size:13px;color:var(--muted);padding:5px 0;cursor:pointer;border:none;background:none;font-family:inherit}
-.tab .ti{font-size:22px;display:block;margin-bottom:1px}
+.tab svg{width:23px;height:23px;display:block;margin:0 auto 2px}
+.micbtn svg{width:27px;height:27px;display:block;margin:0 auto}
 .tab.active{color:var(--accent);font-weight:600}
 .view{display:none} .view.active{display:block}
 ul.clean{list-style:none}
@@ -136,11 +137,11 @@ ul.clean li::before{content:"—";position:absolute;left:0;color:var(--accent)}
 <div id="view-wissen" class="view"></div>
 
 <nav class="tabbar">
-  <button class="tab active" data-v="heute"><span class="ti">☀︎</span>Heute</button>
-  <button class="tab" data-v="woche"><span class="ti">▦</span>Woche</button>
-  <button class="tab" data-v="buch"><span class="ti">✎</span>Buch</button>
-  <button class="tab" data-v="trends"><span class="ti">↗</span>Trends</button>
-  <button class="tab" data-v="wissen"><span class="ti">✳</span>Wissen</button>
+  <button class="tab active" data-v="heute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Heute</button>
+  <button class="tab" data-v="woche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg>Woche</button>
+  <button class="tab" data-v="buch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Buch</button>
+  <button class="tab" data-v="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 17 9 10 13.5 14.5 22 6"/><polyline points="16 6 22 6 22 12"/></svg>Trends</button>
+  <button class="tab" data-v="wissen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 4.9 11.9c-.6.6-.9 1.4-.9 2.1h-8c0-.7-.3-1.5-.9-2.1A7 7 0 0 1 12 2z"/><path d="M9 19h6M10 22h4"/></svg>Wissen</button>
 </nav>
 
 <script>
@@ -428,7 +429,7 @@ function renderBriefing(dk){
     <div class="block"><div class="blocklabel">Minimum — das zählt</div>${items(b.minimum,'min')}</div>
     ${b.bonus && b.bonus.length? `<div class="block"><div class="blocklabel">Bonus — wenn der Tag es hergibt</div>${items(b.bonus,'bon')}</div>`:''}
     <div class="block"><div class="blocklabel">Fueling</div><ul class="clean">${b.fueling.map(f=>'<li>'+esc(f)+'</li>').join('')}</ul></div>
-    <div class="block"><div class="blocklabel">⚠ Im Blick</div><div class="small" style="color:var(--ink)">${esc(b.warnung)}</div></div>
+    <div class="block"><div class="blocklabel" style="color:var(--accent)">Im Blick</div><div class="small" style="color:var(--ink)">${esc(b.warnung)}</div></div>
     <div class="coachsays">${esc(b.coachSays)}</div>
   </div>`;
 }
@@ -596,13 +597,15 @@ function saveVoice(){
   if((p.knie||0)>=4 || (p.achilles||0)>=4) alert('Notiert — und gehört: Schmerz ab 4/10. Das beobachten wir. Taucht es beim nächsten Mal wieder auf: 2 Tage Pause-Regel.');
 }
 /* Diktat direkt in der App (wo der Browser es kann) */
+const MIC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1M12 18v4"/></svg>';
+const STOP_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="7" y="7" width="10" height="10" rx="1.5"/></svg>';
 let rec=null, recActive=false;
 function micSupported(){ return ('webkitSpeechRecognition' in window) || ('SpeechRecognition' in window); }
 function updateMicUI(){
   const b=document.getElementById('micbtn'), h=document.getElementById('michint');
   if(!b) return;
   b.classList.toggle('rec', recActive);
-  b.textContent = recActive? '■' : '🎤';
+  b.innerHTML = recActive? STOP_SVG : MIC_SVG;
   if(h) h.textContent = recActive? 'Ich höre zu … antippen zum Stoppen' : 'Antippen und einfach erzählen';
 }
 function toggleMic(){
@@ -665,10 +668,10 @@ function renderBuch(){
   let html = `<h2>Erzähl einfach</h2><div class="card">
     <textarea id="v-text" style="min-height:110px" placeholder="z. B.: 14 km gelaufen in 1:20, Knie ruhig, ab km 10 schwer. Neues Gel probiert, Magen okay. — Kilometer, Dauer, Art und Schmerzen erkenne ich von selbst, auch ein Wort wie gestern."></textarea>
     <div id="micwrap" style="display:${micSupported()?'block':'none'};text-align:center;margin-top:12px">
-      <button id="micbtn" class="micbtn" onclick="toggleMic()">🎤</button>
+      <button id="micbtn" class="micbtn" onclick="toggleMic()">${MIC_SVG}</button>
       <div class="small" id="michint" style="margin-top:6px">Antippen und einfach erzählen</div>
     </div>
-    ${micSupported()? '' : '<div class="small" style="margin-top:10px">Diktieren: einfach die 🎤-Taste auf der Tastatur drücken und reden.</div>'}
+    ${micSupported()? '' : '<div class="small" style="margin-top:10px">Diktieren: einfach die Mikrofon-Taste auf der Tastatur drücken und reden.</div>'}
     <button class="btn" onclick="saveVoice()">Sichern — den Rest verstehe ich selbst</button>
   </div>`;
   html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
@@ -677,7 +680,7 @@ function renderBuch(){
     html += S.journal.map((e,i)=>{
       const meta = [e.km!=null? e.km+' km':null, e.dauer_min!=null? e.dauer_min+' min':null,
         e.anstrengung_1_10!=null? 'RPE '+e.anstrengung_1_10:null,
-        e.knie_0_10? '⚠ Knie '+e.knie_0_10:null, e.achilles_0_10? '⚠ Achilles '+e.achilles_0_10:null].filter(Boolean).join(' · ');
+        e.knie_0_10? 'Knie '+e.knie_0_10+'/10':null, e.achilles_0_10? 'Achilles '+e.achilles_0_10+'/10':null].filter(Boolean).join(' · ');
       return `<div class="jentry"><div class="jh"><b>${fmtDate(e.datum)} — ${esc(e.art)}</b>
         <button class="del" onclick="delJournal(${i})">löschen</button></div>
         <div class="jmeta">${esc(meta)}</div>${e.notizen? '<div>'+esc(e.notizen)+'</div>':''}</div>`;
