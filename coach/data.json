@@ -1,248 +1,125 @@
 {
-  "generated": "2026-06-11T22:45:00+02:00",
+  "generated": "2026-06-11T22:00:00+02:00",
   "datenstand": {
     "wearables": "2026-06-11",
-    "kommentar": "Daten sind taufrisch (Stand heute Abend). Genau so bleibt der Coach sehend — danke für den Import!"
+    "kommentar": "Wearables aktuell (Stand heute Abend, HRV 38 / Schlaf 7:59 h / RHR 53). TP-CSV liegt nur bis 24. April — für Trends nutze ich die importierten Wochendaten. Bitte nach dem Long Run am Sonntag exportieren."
   },
   "briefings": {
     "2026-06-12": {
-      "headline": "Voller Tag außer Haus — wir spielen das klug.",
-      "kalender": "Deine Nacht: HRV 38, Schlaf 7:59 h, Ruhepuls 53 — grünes Licht, der Tempolauf von heute ist gut verdaut. Und dann: 9–22 Uhr Builders Day am Tegernsee. Dein Kalender ist heute kein Trainingspartner, sondern ein Gegner. Akzeptiert.",
-      "einheit": "Kraft-Session #3 fällt heute offiziell aus — verschoben auf Samstag 14 Uhr. Kein schlechtes Gewissen: ein 13-Stunden-Tag ist auch Belastung, nur ohne Medaille.",
+      "headline": "Builders Day am Tegernsee — KI bauen, nicht trainieren.",
+      "kalender": "Builders Day 9–22 Uhr. Vibe Coding Tribe um 8 Uhr hast du klugerweise abgesagt. Auch im Kalender: 'Janick Fest' heute — falls du abends noch irgendwo auftauchst, früh genug essen und nicht erst um Mitternacht heimkommen.",
+      "einheit": "Kraft-Session heute offiziell verschoben auf Samstag. Ein 13-Stunden-Tag mit Kopfarbeit und Stehen ist auch Belastung — nur ohne Medaille. Kein schlechtes Gewissen.",
       "minimum": [
         "Beckenboden 3 min — morgens im Bett, merkt niemand",
         "Wall Sit 45 sek beim ersten Kaffee",
         "Einbeinstand 1 min beim Zähneputzen (links zuerst!)",
-        "In jeder Event-Pause: 30 sek aufstehen + Hüfte strecken"
+        "In jeder Event-Pause: aufstehen + 30 sek Hüftbeuger strecken"
       ],
       "bonus": [
-        "10-Minuten-Dosis vor der Abfahrt: Side Plank 2×30s pro Seite + Hip Thrust 3×10 (ohne Geräte, neben dem Koffer)"
+        "10-min-Dosis vor Abfahrt: Side Plank 2×30s pro Seite + Hip Thrust 3×10 — ohne Geräte, neben dem Koffer"
       ],
       "fueling": [
-        "Frühstück mit 25–30 g Protein (Skyr, Eier) — trägt dich durch den Vormittag",
+        "Frühstück: 25–30 g Protein (Skyr, Eier) — trägt dich durch den Vormittag",
         "Mittags beim Event: Proteinquelle zuerst auf den Teller, dann der Rest",
-        "Nachmittagstief: Nüsse statt zweitem Kuchen",
-        "Wasser: alle 2–3 h ein großes Glas — volle Tage = vergessenes Trinken"
+        "Nachmittag: Nüsse statt zweitem Kuchen",
+        "Wasser: alle 2–3 h ein großes Glas — volle Tage = vergessenes Trinken",
+        "Supplements nicht vergessen: D3+K2 + Omega-3 zum Frühstück (fetthaltiges Essen Pflicht!)"
       ],
-      "warnung": "Langes Sitzen + Stehen = beleidigter Hüftbeuger. Der rächt sich sonst beim Long Run am Sonntag. Pausen nutzen.",
-      "coachSays": "Heute zählt Beckenboden, nicht Bestzeit. Das Minimum reicht. Wirklich. Ich schaue trotzdem nach, ob du es abgehakt hast."
+      "warnung": "Langes Sitzen + Stehen = beleidigter Hüftbeuger. Der rächt sich sonst beim Long Run am Sonntag. Pausen wirklich nutzen, nicht nur planen.",
+      "coachSays": "Du baust heute KI-Projekte, ich plane Krafttraining um. Wir beide tun das Sinnvollere."
     },
     "2026-06-13": {
-      "headline": "Nachhol-Tag: Kraft #3, dann ist die Woche sauber.",
-      "kalender": "9:30–11:30 Friseur. Danach gehört der Tag dir.",
-      "einheit": "Kraft Coach-Plan 30 min + Side Plank + Hip Thrust + Beckenboden + Knee Extension Theraband. Bestes Fenster: 14–17 Uhr, nach Mittagessen und Verdauungspause.",
+      "headline": "Friseur, Kraft #3 — und zwei überfällige Anrufe.",
+      "kalender": "Friseur 9:30–11:30 Uhr. Danach gehört der Tag dir. Hinweis: Gyn-Termin war bis 31.05 fällig (jetzt 13 Tage über Zeit) und Knie-Recheck bei Dr. Haag bis 28.05 (16 Tage über Zeit). Bitte heute Nachmittag anrufen — beide Termine, DEXA-Scan-Deadline ist 30.06. (in 17 Tagen).",
+      "einheit": "Kraft Coach-Plan 30 min + Knie-Reha. Bestes Fenster: 14–17 Uhr, nach Mittagessen und Verdauungspause. Wadenheber läuft durch — Sehnen-Kontinuität schlägt Intensität.",
       "minimum": [
         "Kraft Coach-Plan 30 min (die verschobene Freitags-Session)",
         "Side Plank 2×30s pro Seite",
         "Hip Thrust 3×10",
-        "Beckenboden 3 min"
+        "Wadenheber 20× + 10× einbeinig — Achilles-Pflege vor dem Long Run"
       ],
       "bonus": [
         "Single Leg Deadlift 3×8 pro Seite",
-        "Wadenheber 20× + 10× einbeinig — Achilles-Pflege vor dem Long Run",
-        "Copenhagen Plank 2×20s — die vergessenen Adduktoren"
+        "Copenhagen Plank 2×20s — die vergessenen Adduktoren",
+        "Gyn-Termin buchen (Gamma-GT 73, DEXA-Scan, Progesteron — alle drei Punkte in CLAUDE.md)",
+        "Knie-Recheck Dr. Haag anrufen — 16 Tage über Zeit"
       ],
       "fueling": [
-        "60–90 min vor Kraft: kleine Mahlzeit mit Kohlenhydraten + Protein",
-        "Nach Kraft: 30 g Protein innerhalb von 30–40 min — dein Fenster ist kürzer als das, was in Männer-Studien steht",
-        "Abends kohlenhydratbetont essen: morgen ist Long Run, die Speicher wollen voll sein",
+        "60–90 min vor Kraft: kleine Mahlzeit mit KH + Protein (Banane + Skyr geht)",
+        "Nach Kraft: 30 g Protein innerhalb 30–40 min — dein Fenster ist kürzer als in Männer-Studien",
+        "Abends KH-betont: morgen ist Long Run, Glykogenspeicher wollen voll sein",
         "Früh ins Bett — der Long Run wird morgens gelaufen"
       ],
-      "warnung": "Wenn das Knie oder die Achillessehne nach der Kraft-Session mehr als ein 3/10-Ziehen melden: notier es im Tagebuch. Melden statt helden.",
-      "coachSays": "Frische Frisur, frische Glute-Aktivierung. Nur eins davon hält bis Berlin — und es ist nicht die Frisur."
+      "warnung": "HM in 22 Tagen, Taper startet in 16 Tagen (29.06.). Wenn Knie oder Achilles nach Kraft ≥3/10 melden: ins Tagebuch, nicht wegatmen.",
+      "coachSays": "Frische Frisur, zwei Arzt-Anrufe, eine Kraft-Session. In dieser Reihenfolge. Der Coach erwartet Bericht."
     },
     "2026-06-14": {
-      "headline": "Long Run 14 km — der Coach hat nachgerechnet und abgerüstet.",
-      "kalender": "Frei. Perfekt. Start vor 9 Uhr, bevor es warm wird.",
-      "einheit": "Long Run 14 km, locker in Zone 2. Dein längster Lauf seit Mai war 12,6 km — 14 ist der nächste ehrliche Schritt, 20 wäre Achilles-Roulette gewesen. Vorher: Pre-Run Aktivierung 3 min. Danach: Wadenheber.",
+      "headline": "Long Run 14 km + Gel-Test — München ist in 21 Tagen.",
+      "kalender": "Frei. Perfekt. Start vor 9 Uhr, bevor es warm wird. HM-Taper beginnt in 15 Tagen (29.06.).",
+      "einheit": "Long Run 14 km, Zone 2 locker. Das ist gleichzeitig der Gel-Test für München — die letzte passende Gelegenheit vor dem Rennen. Pre-Run Aktivierung 3 min vorher. Wadenheber danach.",
       "minimum": [
         "Pre-Run Aktivierung 3 min (nicht verhandelbar)",
-        "12 km, falls der Tag quer läuft",
-        "Wadenheber nach dem Lauf — Achilles-Tag 4 von 4",
-        "30–40 g Protein + Kohlenhydrate innerhalb von 30–40 min nach dem Lauf"
+        "12 km Minimum, falls der Tag quer läuft",
+        "Gel-Test: 1 Gel bei km 6 + 1 Gel bei km 10 — die Marke, die du in München nimmst",
+        "30–40 g Protein + KH innerhalb 30–40 min nach dem Lauf"
       ],
       "bonus": [
-        "Volle 14 km, bei richtig guten Beinen 15 — mehr nicht, auch wenn es sich leicht anfühlt"
+        "Volle 14 km — bei richtig guten Beinen 15, nicht mehr, auch wenn es leicht geht",
+        "Blasen-Check nach dem Lauf: Füße inspizieren, Reibestellen notieren"
       ],
       "fueling": [
-        "Das ist heute der eigentliche Trainingsinhalt: Gel-Test für München (in 3 Wochen!)",
-        "2–3 h vorher das Frühstück testen, das du am Renntag essen willst (z. B. Toast + Honig + Banane)",
-        "Bei ~85–90 min Laufzeit: 1 Gel bei km 6 und 1 bei km 10 — genau die Marke, die du in München nehmen willst",
-        "Trinken: alle 20 min ein paar Schlucke, nicht erst bei Durst",
-        "Danach: Shake oder Skyr + Banane. Fenster: 30–40 min"
+        "2–3 h vorher: Race-Day-Frühstück testen — was du in München essen willst (Toast + Honig + Banane)",
+        "Bei ~85–90 min Laufzeit: Gel bei km 6 + Gel bei km 10, genau die Marke für München",
+        "Alle 20 min trinken, nicht erst bei Durst",
+        "Danach: Skyr + Banane oder Shake — Fenster 30–40 min. Heute zählt das Timing.",
+        "Blasen-Prophylaxe: eingelaufene Socken (keine Baumwolle), bekannte Reibestellen vorher mit Hirschtalg"
       ],
-      "warnung": "Blasen-Protokoll nach dem Intervall-Vorfall: eingelaufene Socken (keine Baumwolle), bekannte Reibestellen vorher mit Hirschtalg/Vaseline, Schnürung prüfen. Nach dem Lauf: Füße inspizieren und ins Tagebuch. Achillessehne: Ziehen über 3/10 → eintragen, nicht wegatmen.",
-      "coachSays": "Ich habe 20 km versprochen und nehme es zurück — deine Daten haben mich überstimmt. Ein Coach, der nicht zuhört, ist nur ein Lautsprecher."
+      "warnung": "Achillessehne: Ziehen über 3/10 → ins Tagebuch eintragen, nicht wegatmen. In 15 Tagen beginnt der Taper — da ist kein Platz mehr für Experimente mit Verletzungen.",
+      "coachSays": "21 Tage bis München. Heute isst du, was du am Renntag frühstücken wirst, und läufst mit dem Gel, das du in München nimmst. Alles andere ist Rauschen."
     }
   },
   "woche": {
     "start": "2026-06-08",
-    "fokus": "Build Phase 1, Woche 4 von 6 — Schwellen-Arbeit + Long-Run-Aufbau (14 → 16 km bis zum HM). In 2,5 Wochen beginnt der HM-Taper.",
+    "fokus": "Build Phase 1, Woche 4 von 6 — Tempolauf heute ✓, Kraft Samstag, Long Run + Gel-Test Sonntag. HM-Taper in 18 Tagen (29.06.), HM in 24 Tagen (05.07.). Wochenziel: 30 km.",
     "luecken": [
-      "Plan-Anker vs. Realität: Die Phasen-Datei nennt 55–70 Wochen-km und Long Runs bis 24 km — real sind 25–34 km und max. 12,6 km. Der Coach plant ab jetzt nach deinen echten Daten; die Anker passen wir nach München an.",
-      "Long-Run-Aufbau bis HM: So 14.6. → 14 km, So 21.6. → 15–16 km, dann Taper. München läufst du locker im Zone-2-Modus — Generalprobe, kein Wettkampf gegen die Uhr.",
-      "Gel-Marke für München: Sonntag (14 km ≈ 85–90 min) ist der Test. Danach entscheiden."
+      "Long-Run-Aufbau bis HM: So 14.6. → 14 km, So 21.6. → 15–16 km, dann Taper ab 29.06. München als Zone-2-Generalprobe, kein Wettkampf gegen die Uhr.",
+      "Ärzte überfällig: Gyn-Termin (fällig 31.05., jetzt 13 Tage drüber) + Knie-Recheck Dr. Haag (fällig 28.05., 16 Tage drüber). Samstag oder Sonntag buchen — DEXA-Deadline ist 30.06.",
+      "Gel-Marke für München: Sonntag beim Long Run final testen. Danach entschieden."
     ]
   },
   "trends": {
-    "kommentar": "Die April-Delle ist Geschichte: HRV von 30 zurück auf 38,5, Schlaf wieder bei 8,4–8,5 h, Ruhepuls 52,8 — niedriger als je zuvor. Die Lauf-Kilometer bauen sauber auf: 11 → 26 → 34 km pro Woche. Eine Sache ist mir aufgefallen: Dein längster Lauf seit Mai ist 12,6 km — der alte Plan träumte von 22. Ich habe den Long Run angepasst. Realität schlägt Papier.",
+    "kommentar": "Die April-Delle ist Geschichte: HRV von 30 zurück auf 38,5, Schlaf wieder bei 8,4–8,5 h, Ruhepuls 52,8 — niedriger als je zuvor. Laufvolumen: 11 → 26 → 34 km pro Woche — verdreifacht in fünf Wochen, ohne Verletzung, bei stabiler HRV. Genau so sieht kluger Aufbau aus.",
     "wochen": [
-      {
-        "woche": "2026-01-05",
-        "hrv": 36.4,
-        "rhr": 55.1,
-        "schlaf": 8.5
-      },
-      {
-        "woche": "2026-01-12",
-        "hrv": 34.7,
-        "rhr": 55.4,
-        "schlaf": 8.3
-      },
-      {
-        "woche": "2026-01-19",
-        "hrv": 37.4,
-        "rhr": 55.4,
-        "schlaf": 8.1
-      },
-      {
-        "woche": "2026-01-26",
-        "hrv": 35.4,
-        "rhr": 55.0,
-        "schlaf": 7.7
-      },
-      {
-        "woche": "2026-02-02",
-        "hrv": 38.4,
-        "rhr": 55.6,
-        "schlaf": 8.1
-      },
-      {
-        "woche": "2026-02-09",
-        "hrv": 38.3,
-        "rhr": 53.9,
-        "schlaf": 7.8
-      },
-      {
-        "woche": "2026-02-16",
-        "hrv": 39.4,
-        "rhr": 54.7,
-        "schlaf": 8.4
-      },
-      {
-        "woche": "2026-02-23",
-        "hrv": 36.9,
-        "rhr": 56.1,
-        "schlaf": 7.8
-      },
-      {
-        "woche": "2026-03-02",
-        "hrv": 34.4,
-        "rhr": 58.3,
-        "schlaf": 7.5
-      },
-      {
-        "woche": "2026-03-09",
-        "hrv": 36.9,
-        "rhr": 54.9,
-        "schlaf": 8.1
-      },
-      {
-        "woche": "2026-03-16",
-        "hrv": 37.0,
-        "rhr": 55.1,
-        "schlaf": 8.3
-      },
-      {
-        "woche": "2026-03-23",
-        "hrv": 35.3,
-        "rhr": 54.6,
-        "schlaf": 7.6
-      },
-      {
-        "woche": "2026-03-30",
-        "hrv": 37.1,
-        "rhr": 53.6,
-        "schlaf": 8.5
-      },
-      {
-        "woche": "2026-04-06",
-        "hrv": 39.3,
-        "rhr": 52.9,
-        "schlaf": 8.4
-      },
-      {
-        "woche": "2026-04-13",
-        "hrv": 31.0,
-        "rhr": 54.2,
-        "schlaf": 6.2
-      },
-      {
-        "woche": "2026-04-20",
-        "hrv": 29.9,
-        "rhr": 52.7,
-        "schlaf": 6.8
-      },
-      {
-        "woche": "2026-05-11",
-        "hrv": 38.0,
-        "rhr": 53.0,
-        "schlaf": 7.7
-      },
-      {
-        "woche": "2026-05-18",
-        "hrv": 36.9,
-        "rhr": 53.9,
-        "schlaf": 8.1
-      },
-      {
-        "woche": "2026-05-25",
-        "hrv": 36.6,
-        "rhr": 52.6,
-        "schlaf": 8.4
-      },
-      {
-        "woche": "2026-06-01",
-        "hrv": 38.3,
-        "rhr": 52.9,
-        "schlaf": 8.5
-      },
-      {
-        "woche": "2026-06-08",
-        "hrv": 38.5,
-        "rhr": 52.8,
-        "schlaf": 7.7
-      }
+      {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
+      {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
+      {"woche": "2026-01-19", "hrv": 37.4, "rhr": 55.4, "schlaf": 8.1},
+      {"woche": "2026-01-26", "hrv": 35.4, "rhr": 55.0, "schlaf": 7.7},
+      {"woche": "2026-02-02", "hrv": 38.4, "rhr": 55.6, "schlaf": 8.1},
+      {"woche": "2026-02-09", "hrv": 38.3, "rhr": 53.9, "schlaf": 7.8},
+      {"woche": "2026-02-16", "hrv": 39.4, "rhr": 54.7, "schlaf": 8.4},
+      {"woche": "2026-02-23", "hrv": 36.9, "rhr": 56.1, "schlaf": 7.8},
+      {"woche": "2026-03-02", "hrv": 34.4, "rhr": 58.3, "schlaf": 7.5},
+      {"woche": "2026-03-09", "hrv": 36.9, "rhr": 54.9, "schlaf": 8.1},
+      {"woche": "2026-03-16", "hrv": 37.0, "rhr": 55.1, "schlaf": 8.3},
+      {"woche": "2026-03-23", "hrv": 35.3, "rhr": 54.6, "schlaf": 7.6},
+      {"woche": "2026-03-30", "hrv": 37.1, "rhr": 53.6, "schlaf": 8.5},
+      {"woche": "2026-04-06", "hrv": 39.3, "rhr": 52.9, "schlaf": 8.4},
+      {"woche": "2026-04-13", "hrv": 31.0, "rhr": 54.2, "schlaf": 6.2},
+      {"woche": "2026-04-20", "hrv": 29.9, "rhr": 52.7, "schlaf": 6.8},
+      {"woche": "2026-05-11", "hrv": 38.0, "rhr": 53.0, "schlaf": 7.7},
+      {"woche": "2026-05-18", "hrv": 36.9, "rhr": 53.9, "schlaf": 8.1},
+      {"woche": "2026-05-25", "hrv": 36.6, "rhr": 52.6, "schlaf": 8.4},
+      {"woche": "2026-06-01", "hrv": 38.3, "rhr": 52.9, "schlaf": 8.5},
+      {"woche": "2026-06-08", "hrv": 38.5, "rhr": 52.8, "schlaf": 7.7}
     ],
     "kmWochen": [
-      {
-        "woche": "2026-04-27",
-        "km": 11.3
-      },
-      {
-        "woche": "2026-05-04",
-        "km": 11.7
-      },
-      {
-        "woche": "2026-05-11",
-        "km": 13.9
-      },
-      {
-        "woche": "2026-05-18",
-        "km": 26.4
-      },
-      {
-        "woche": "2026-05-25",
-        "km": 24.9
-      },
-      {
-        "woche": "2026-06-01",
-        "km": 33.6
-      },
-      {
-        "woche": "2026-06-08",
-        "km": 16.4
-      }
+      {"woche": "2026-04-27", "km": 11.3},
+      {"woche": "2026-05-04", "km": 11.7},
+      {"woche": "2026-05-11", "km": 13.9},
+      {"woche": "2026-05-18", "km": 26.4},
+      {"woche": "2026-05-25", "km": 24.9},
+      {"woche": "2026-06-01", "km": 33.6},
+      {"woche": "2026-06-08", "km": 16.4}
     ]
   },
   "beweise": [
@@ -255,8 +132,8 @@
       "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,8 jetzt. Fast drei Schläge weniger pro Minute für denselben Job. Das ist Ausdauer-Anpassung, dokumentiert über fünf Monate."
     },
     {
-      "titel": "Dein Volumen wächst — kontrolliert",
-      "text": "11 km Wochenumfang Anfang Mai, 33,6 km Anfang Juni. Verdreifacht in fünf Wochen, ohne Verletzung, bei stabiler HRV. Genau so sieht kluger Aufbau aus. Weiter so, nicht schneller so."
+      "titel": "Laufvolumen verdreifacht — ohne Verletzung",
+      "text": "11 km Wochenumfang Anfang Mai, 33,6 km Anfang Juni. Verdreifacht in fünf Wochen, HRV stabil bei 38,5. In 21 Tagen läufst du den ersten Wettkampf dieses Blocks. Der Aufbau sitzt."
     }
   ]
 }
