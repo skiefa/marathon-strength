@@ -1,13 +1,13 @@
 {
-  "generated": "2026-06-11T17:30:00+02:00",
+  "generated": "2026-06-11T22:45:00+02:00",
   "datenstand": {
-    "wearables": "2026-04-24",
-    "kommentar": "Deine Wearable-Daten enden am 24. April. Ich fliege seitdem teilweise blind — richte Health Auto Export ein, dann sehe ich wieder, was dein Körper nachts erzählt."
+    "wearables": "2026-06-11",
+    "kommentar": "Daten sind taufrisch (Stand heute Abend). Genau so bleibt der Coach sehend — danke für den Import!"
   },
   "briefings": {
     "2026-06-12": {
       "headline": "Voller Tag außer Haus — wir spielen das klug.",
-      "kalender": "9–22 Uhr AI Builders Day am Tegernsee. Dein Kalender ist heute kein Trainingspartner, sondern ein Gegner. Akzeptiert.",
+      "kalender": "Deine Nacht: HRV 38, Schlaf 7:59 h, Ruhepuls 53 — grünes Licht, der Tempolauf von heute ist gut verdaut. Und dann: 9–22 Uhr Builders Day am Tegernsee. Dein Kalender ist heute kein Trainingspartner, sondern ein Gegner. Akzeptiert.",
       "einheit": "Kraft-Session #3 fällt heute offiziell aus — verschoben auf Samstag 14 Uhr. Kein schlechtes Gewissen: ein 13-Stunden-Tag ist auch Belastung, nur ohne Medaille.",
       "minimum": [
         "Beckenboden 3 min — morgens im Bett, merkt niemand",
@@ -52,72 +52,211 @@
       "coachSays": "Frische Frisur, frische Glute-Aktivierung. Nur eins davon hält bis Berlin — und es ist nicht die Frisur."
     },
     "2026-06-14": {
-      "headline": "Long Run — heute wird Rennverpflegung geübt, nicht nur gelaufen.",
+      "headline": "Long Run 14 km — der Coach hat nachgerechnet und abgerüstet.",
       "kalender": "Frei. Perfekt. Start vor 9 Uhr, bevor es warm wird.",
-      "einheit": "Long Run 20–22 km, locker (Build Phase 1). Vorher: Pre-Run Aktivierung 3 min — beim Long Run am wichtigsten. Danach: Wadenheber.",
+      "einheit": "Long Run 14 km, locker in Zone 2. Dein längster Lauf seit Mai war 12,6 km — 14 ist der nächste ehrliche Schritt, 20 wäre Achilles-Roulette gewesen. Vorher: Pre-Run Aktivierung 3 min. Danach: Wadenheber.",
       "minimum": [
         "Pre-Run Aktivierung 3 min (nicht verhandelbar)",
-        "16 km, falls der Tag quer läuft",
+        "12 km, falls der Tag quer läuft",
         "Wadenheber nach dem Lauf — Achilles-Tag 4 von 4",
         "30–40 g Protein + Kohlenhydrate innerhalb von 30–40 min nach dem Lauf"
       ],
       "bonus": [
-        "Volle 22 km",
-        "Letzte 2×3 min Richtung HM-Tempo — nur wenn die Beine von selbst wollen"
+        "Volle 14 km, bei richtig guten Beinen 15 — mehr nicht, auch wenn es sich leicht anfühlt"
       ],
       "fueling": [
-        "DAS ist heute der eigentliche Trainingsinhalt: Race-Day-Simulation für München (in 3 Wochen!)",
+        "Das ist heute der eigentliche Trainingsinhalt: Gel-Test für München (in 3 Wochen!)",
         "2–3 h vorher das Frühstück testen, das du am Renntag essen willst (z. B. Toast + Honig + Banane)",
-        "Ab km 8: alle 35–40 min ein Gel — genau die Marke, die du in München nehmen willst. Ziel: 30–60 g KH pro Stunde",
+        "Bei ~85–90 min Laufzeit: 1 Gel bei km 6 und 1 bei km 10 — genau die Marke, die du in München nehmen willst",
         "Trinken: alle 20 min ein paar Schlucke, nicht erst bei Durst",
         "Danach: Shake oder Skyr + Banane. Fenster: 30–40 min"
       ],
       "warnung": "Blasen-Protokoll nach dem Intervall-Vorfall: eingelaufene Socken (keine Baumwolle), bekannte Reibestellen vorher mit Hirschtalg/Vaseline, Schnürung prüfen. Nach dem Lauf: Füße inspizieren und ins Tagebuch. Achillessehne: Ziehen über 3/10 → eintragen, nicht wegatmen.",
-      "coachSays": "Ein Long Run ohne Fueling-Test ist nur Schaufensterbummel auf Beinen. Heute wird geprobt, was am 5. Juli zählt."
+      "coachSays": "Ich habe 20 km versprochen und nehme es zurück — deine Daten haben mich überstimmt. Ein Coach, der nicht zuhört, ist nur ein Lautsprecher."
     }
   },
   "woche": {
     "start": "2026-06-08",
-    "fokus": "Build Phase 1, Woche 4 von 6 — Schwellen-Arbeit + Long Runs bis 22–24 km. In 2,5 Wochen beginnt der HM-Taper.",
+    "fokus": "Build Phase 1, Woche 4 von 6 — Schwellen-Arbeit + Long-Run-Aufbau (14 → 16 km bis zum HM). In 2,5 Wochen beginnt der HM-Taper.",
     "luecken": [
-      "Kraft #3 von Freitag auf Samstag verschoben — damit bleibt die Woche bei 3× Kraft. Gut so.",
-      "Wearable-Daten enden am 24. April — Health Auto Export einrichten, damit ich HRV und Schlaf wieder sehe.",
-      "Gel-Marke für München noch nicht festgelegt — Sonntag ist der Test dafür. Nach dem Lauf entscheiden."
+      "Plan-Anker vs. Realität: Die Phasen-Datei nennt 55–70 Wochen-km und Long Runs bis 24 km — real sind 25–34 km und max. 12,6 km. Der Coach plant ab jetzt nach deinen echten Daten; die Anker passen wir nach München an.",
+      "Long-Run-Aufbau bis HM: So 14.6. → 14 km, So 21.6. → 15–16 km, dann Taper. München läufst du locker im Zone-2-Modus — Generalprobe, kein Wettkampf gegen die Uhr.",
+      "Gel-Marke für München: Sonntag (14 km ≈ 85–90 min) ist der Test. Danach entscheiden."
     ]
   },
   "trends": {
-    "kommentar": "Januar bis Anfang April: Lehrbuch. Ruhepuls runter, HRV stabil, Schlaf über 8 h. Mitte April: HRV auf 30 gefallen, Schlaf auf 6,2 h — da war zu viel Alltag im Training. Seitdem: Funkstille. Ich hätte gern wieder Daten.",
+    "kommentar": "Die April-Delle ist Geschichte: HRV von 30 zurück auf 38,5, Schlaf wieder bei 8,4–8,5 h, Ruhepuls 52,8 — niedriger als je zuvor. Die Lauf-Kilometer bauen sauber auf: 11 → 26 → 34 km pro Woche. Eine Sache ist mir aufgefallen: Dein längster Lauf seit Mai ist 12,6 km — der alte Plan träumte von 22. Ich habe den Long Run angepasst. Realität schlägt Papier.",
     "wochen": [
-      { "woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5 },
-      { "woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3 },
-      { "woche": "2026-01-19", "hrv": 37.4, "rhr": 55.4, "schlaf": 8.1 },
-      { "woche": "2026-01-26", "hrv": 35.4, "rhr": 55.0, "schlaf": 7.7 },
-      { "woche": "2026-02-02", "hrv": 38.4, "rhr": 55.6, "schlaf": 8.1 },
-      { "woche": "2026-02-09", "hrv": 38.3, "rhr": 53.9, "schlaf": 7.8 },
-      { "woche": "2026-02-16", "hrv": 39.4, "rhr": 54.7, "schlaf": 8.4 },
-      { "woche": "2026-02-23", "hrv": 36.9, "rhr": 56.1, "schlaf": 7.8 },
-      { "woche": "2026-03-02", "hrv": 34.4, "rhr": 58.3, "schlaf": 7.5 },
-      { "woche": "2026-03-09", "hrv": 36.9, "rhr": 54.9, "schlaf": 8.1 },
-      { "woche": "2026-03-16", "hrv": 37.0, "rhr": 55.1, "schlaf": 8.3 },
-      { "woche": "2026-03-23", "hrv": 35.3, "rhr": 54.6, "schlaf": 7.6 },
-      { "woche": "2026-03-30", "hrv": 37.1, "rhr": 53.6, "schlaf": 8.5 },
-      { "woche": "2026-04-06", "hrv": 39.3, "rhr": 52.9, "schlaf": 8.4 },
-      { "woche": "2026-04-13", "hrv": 31.0, "rhr": 54.2, "schlaf": 6.2 },
-      { "woche": "2026-04-20", "hrv": 29.9, "rhr": 52.7, "schlaf": 6.8 }
+      {
+        "woche": "2026-01-05",
+        "hrv": 36.4,
+        "rhr": 55.1,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-01-12",
+        "hrv": 34.7,
+        "rhr": 55.4,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-01-19",
+        "hrv": 37.4,
+        "rhr": 55.4,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-01-26",
+        "hrv": 35.4,
+        "rhr": 55.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-02-02",
+        "hrv": 38.4,
+        "rhr": 55.6,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-02-09",
+        "hrv": 38.3,
+        "rhr": 53.9,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-02-16",
+        "hrv": 39.4,
+        "rhr": 54.7,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-02-23",
+        "hrv": 36.9,
+        "rhr": 56.1,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-03-02",
+        "hrv": 34.4,
+        "rhr": 58.3,
+        "schlaf": 7.5
+      },
+      {
+        "woche": "2026-03-09",
+        "hrv": 36.9,
+        "rhr": 54.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-03-16",
+        "hrv": 37.0,
+        "rhr": 55.1,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-03-23",
+        "hrv": 35.3,
+        "rhr": 54.6,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-03-30",
+        "hrv": 37.1,
+        "rhr": 53.6,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-04-06",
+        "hrv": 39.3,
+        "rhr": 52.9,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-04-13",
+        "hrv": 31.0,
+        "rhr": 54.2,
+        "schlaf": 6.2
+      },
+      {
+        "woche": "2026-04-20",
+        "hrv": 29.9,
+        "rhr": 52.7,
+        "schlaf": 6.8
+      },
+      {
+        "woche": "2026-05-11",
+        "hrv": 38.0,
+        "rhr": 53.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-05-18",
+        "hrv": 36.9,
+        "rhr": 53.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-05-25",
+        "hrv": 36.6,
+        "rhr": 52.6,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-06-01",
+        "hrv": 38.3,
+        "rhr": 52.9,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-06-08",
+        "hrv": 38.5,
+        "rhr": 52.8,
+        "schlaf": 7.7
+      }
+    ],
+    "kmWochen": [
+      {
+        "woche": "2026-04-27",
+        "km": 11.3
+      },
+      {
+        "woche": "2026-05-04",
+        "km": 11.7
+      },
+      {
+        "woche": "2026-05-11",
+        "km": 13.9
+      },
+      {
+        "woche": "2026-05-18",
+        "km": 26.4
+      },
+      {
+        "woche": "2026-05-25",
+        "km": 24.9
+      },
+      {
+        "woche": "2026-06-01",
+        "km": 33.6
+      },
+      {
+        "woche": "2026-06-08",
+        "km": 16.4
+      }
     ]
   },
   "beweise": [
     {
-      "titel": "Dein Herz arbeitet effizienter",
-      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,7 Ende April. Dasselbe Herz, derselbe Job, drei Schläge weniger pro Minute. Das ist Ausdauer-Anpassung, schwarz auf weiß — auch wenn sie sich beim Laufen nicht so anfühlt."
+      "titel": "Die April-Krise? Komplett verdaut.",
+      "text": "Ende April: HRV 30, Schlaf 6,2 h. Heute: HRV 38,5, Schlaf wieder über 8 h, drei Excellent-Nächte allein diese Woche. Dein Körper hat sich nicht nur erholt — er ist belastbarer als vorher."
     },
     {
-      "titel": "Du schläfst wie eine Athletin",
-      "text": "Drei Monate lang im Schnitt 8,1 h Schlaf. Das schaffen die wenigsten Marathonläuferinnen — und es ist dein stärkster Recovery-Hebel in der Perimenopause."
+      "titel": "Dein Herz wird messbar ökonomischer",
+      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,8 jetzt. Fast drei Schläge weniger pro Minute für denselben Job. Das ist Ausdauer-Anpassung, dokumentiert über fünf Monate."
     },
     {
-      "titel": "Dein Körper kann Belastung wegstecken",
-      "text": "HRV-Spitzen von 39+ Mitte Februar und Anfang April — immer in Wochen mit gutem Schlaf. Die Formel ist sichtbar: Schlaf rein, Belastbarkeit raus. Sie funktioniert bei dir nachweislich."
+      "titel": "Dein Volumen wächst — kontrolliert",
+      "text": "11 km Wochenumfang Anfang Mai, 33,6 km Anfang Juni. Verdreifacht in fünf Wochen, ohne Verletzung, bei stabiler HRV. Genau so sieht kluger Aufbau aus. Weiter so, nicht schneller so."
     }
   ]
 }
