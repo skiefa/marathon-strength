@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Berlin 27.9.">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#f4f1ea">
 <link rel="apple-touch-icon" href="icon.png">
@@ -49,7 +50,7 @@ h3{font-size:18px}
 .tierlabel{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px}
 .tierlabel b{font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
 .tierlabel .ln{flex:1;border-top:1px solid var(--line)}
-.t-min b{color:var(--ink)} .t-std b{color:var(--green)} .t-bon b{color:var(--amber)} .t-act b{color:var(--blue)}
+.t-min b{color:var(--ink)} .t-std b{color:var(--green)} .t-bon b{color:var(--amber)} .t-act b{color:var(--blue)} .t-nach b{color:var(--teal)}
 .task{display:flex;align-items:flex-start;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:11px 12px;margin:7px 0;cursor:pointer}
 .task .box{width:26px;height:26px;border:2px solid var(--ink);border-radius:8px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:16.5px;color:var(--paper)}
 .task.done .box{background:var(--green);border-color:var(--green)}
@@ -343,12 +344,44 @@ const COACH_FALLBACK = [
   'Für diesen Tag habe ich kein Briefing geschrieben. Sag dem Abend-Coach auf dem Mac Bescheid — er arbeitet nur, wenn man ihn lässt.',
 ];
 
+const SPRUECHE = [
+  'Der Marathon ist im September. Gewonnen wird er an Tagen wie heute.',
+  'Du musst heute nicht großartig sein. Nur anwesend.',
+  'Disziplin heißt: Die Ausrede war schneller — gelaufen bist trotzdem du.',
+  'Knochen, die mit 52 Krafttraining machen, halten länger als jede Meinung dazu.',
+  'Langsam laufen ist Training. Nicht laufen ist nur langsam.',
+  'Dein zukünftiges Ich bei Kilometer 35 bedankt sich für genau diese Einheit.',
+  'Konstanz schlägt Intensität. Heute ist wieder so ein Beweis-Tag.',
+  'Müde Beine heute sind Demut. Frische Beine am 27. September sind Strategie.',
+  'Niemand bereut einen Lauf. Man bereut nur das Reden übers Laufen.',
+  'Die Berliner Strecke ist flach. Dein Wille muss es nicht sein.',
+  'Erholung ist keine Pause vom Training. Erholung IST Training.',
+  'Jeder Wadenheber ist ein Brief an deine Achillessehne: Ich denk an dich.',
+  'Wer dreimal die Woche den Po aktiviert, den trägt er im Herbst 42 Kilometer weit.',
+  'Heute zählt nicht das Tempo. Heute zählt: erschienen.',
+  'Frauen werden nicht trotz 52 stark — sondern weil sie es trainieren.',
+  'Ein Plan ist nur so gut wie sein Minimum. Und dein Minimum ist machbar.',
+  'Zweifel laufen nicht mit. Die bleiben an der Startlinie stehen.',
+  'Das Gel übst du heute, damit es dich in München nicht überrascht.',
+  'Schlaf ist dein bestes Doping. Und völlig legal.',
+  'Kleine Schritte, lange Strecke. So funktioniert das ganze Spiel.',
+  'Dein Ruhepuls ist seit Januar gesunken. Dein Herz trainiert heimlich mit.',
+  'Wall Sit beim Kaffee: 45 Sekunden, die sich im September verzinsen.',
+  'Berlin fragt nicht, wie schnell du heute warst. Nur, ob du dran warst.',
+  'Eine Einheit verpasst? Passiert. Zwei? Gewohnheit. Deshalb: heute.',
+];
+function spruchFuer(dk){
+  let h = 0;
+  for(const c of dk) h = (h*31 + c.charCodeAt(0)) % 9973;
+  return SPRUECHE[h % SPRUECHE.length];
+}
+
 /* ================= STATE ================= */
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); }
 
@@ -373,9 +406,32 @@ function tasksForDay(dk){
   let base;
   if (dow===1 && S.regenMo[dk]) base = REGEN_TASKS.map(t=>({...t, id:t.id}));
   else base = TASKS.filter(t=>t.day===dow);
+  const extra = (S.extra[dk]||[]).map((x,i)=>{
+    const t = TASKS.find(tt=>tt.id===x.id);
+    return t? {...t, id:'nh'+i+'-'+t.id+'-'+dk, tier:'nachgeholt', von:x.von, _nh:i} : null;
+  }).filter(Boolean);
   const daily = TASKS.filter(t=>t.day==='daily').map(t=>({...t, id:t.id+'-'+dk}));
-  return base.concat(daily);
+  return base.concat(extra, daily);
 }
+function getMissed(){
+  const today = todayKey();
+  const ws = getWeekStart(today);
+  const moved = new Set();
+  for(let i=0;i<7;i++){ const d=new Date(ws); d.setDate(ws.getDate()+i); (S.extra[todayKey(d)]||[]).forEach(x=>moved.add(x.id)); }
+  const out = [];
+  for(let i=0;i<7;i++){
+    const d=new Date(ws); d.setDate(ws.getDate()+i);
+    const dk = todayKey(d);
+    if(dk>=today) break;
+    const dow = parseLocal(dk).getDay();
+    TASKS.filter(t=>t.day===dow && (t.tier==='pflicht'||t.tier==='standard')).forEach(t=>{
+      if(!isDone(t.id,dk) && !isSkipped(t.id,dk) && !moved.has(t.id)) out.push({task:t, von:dk});
+    });
+  }
+  return out;
+}
+function nachholen(id,von){ const dk=todayKey(); S.extra[dk]=S.extra[dk]||[]; S.extra[dk].push({id,von}); save(); render(); }
+function removeNachgeholt(dk,i){ (S.extra[dk]||[]).splice(i,1); save(); render(); }
 function isDone(id,dk){ return !!(S.done[dk]&&S.done[dk][id]); }
 function isSkipped(id,dk){ return !!(S.skipped[dk]&&S.skipped[dk][id]); }
 function toggleDone(id,dk){ S.done[dk]=S.done[dk]||{}; S.done[dk][id]=!S.done[dk][id]; if(S.done[dk][id]&&S.skipped[dk])delete S.skipped[dk][id]; save(); render(); }
@@ -389,12 +445,14 @@ function setRegen(dk,v){ S.regenMo[dk]=v; save(); render(); }
 function renderHeader(){
   const hm = daysUntil(RACES[0].date), bln = daysUntil(RACES[1].date);
   const ph = getPhase();
+  const h1 = bln>1? `Noch ${bln} Tage` : (bln===1? 'Morgen. Berlin.' : (bln===0? 'Heute. Berlin!' : 'Geschafft.'));
+  document.title = bln>0? `Noch ${bln} Tage` : 'Berlin 2026';
   document.getElementById('header').innerHTML = `
-    <h1>Dein Coach</h1>
-    <div class="sub">Phase: ${esc(ph.name)} · ${todayKey()===getViewingDate()? 'Heute' : fmtDate(getViewingDate())}</div>
+    <h1>${h1}</h1>
+    <div class="sub">${bln>0? 'bis Berlin · ':''}Phase: ${esc(ph.name)} · ${todayKey()===getViewingDate()? 'Heute' : fmtDate(getViewingDate())}</div>
     <div class="chips">
-      ${hm>=0? `<div class="chip">München HM in ${hm} Tagen</div>`:''}
-      <div class="chip accent">Berlin in ${bln} Tagen</div>
+      ${hm>=0? `<div class="chip accent">München HM in ${hm} Tagen</div>`:''}
+      <div class="chip ghost">Berlin: 27.09.</div>
     </div>`;
 }
 
@@ -459,16 +517,20 @@ function renderFeel(dk){
 
 function renderTask(t, dk){
   const done = isDone(t.id,dk), skip = isSkipped(t.id,dk);
-  const prog = PROGRESSION[t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'')];
+  const prog = PROGRESSION[t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'').replace(/^nh\d+-/,'')];
   const pchip = prog? ` · ${prog[phaseId()]}` : '';
+  const von = t.von? ` · von ${fmtDate(t.von)}` : '';
+  const rmAction = t.tier==='nachgeholt'
+    ? `removeNachgeholt('${dk}',${t._nh})`
+    : `toggleSkip('${t.id}','${dk}')`;
   return `<div class="task ${done?'done':''} ${skip?'skipped':''}" onclick="toggleDone('${t.id}','${dk}')">
     <div class="box">${done?'✓':''}</div>
     <div style="flex:1">
       <div class="tn">${esc(t.name)}</div>
-      <div class="td">${esc(t.duration)} · ${esc(t.trigger)}${esc(pchip)}</div>
+      <div class="td">${esc(t.duration)} · ${esc(t.trigger)}${esc(pchip)}${esc(von)}</div>
       <div class="twhy">${esc(t.why)}</div>
     </div>
-    <button class="skipbtn" onclick="event.stopPropagation();toggleSkip('${t.id}','${dk}')" title="Überspringen">${skip?'↩':'✕'}</button>
+    <button class="skipbtn" onclick="event.stopPropagation();${rmAction}" title="Entfernen">${skip?'↩':'✕'}</button>
   </div>`;
 }
 
@@ -479,6 +541,7 @@ function renderHeute(){
   const platt = S.feel[dk]==='platt';
   const groups = [
     {key:'pflicht', label:'Minimum', cls:'t-min'},
+    {key:'nachgeholt', label:'Nachgeholt', cls:'t-nach'},
     {key:'activity', label:'Lauf & Aktivität', cls:'t-act'},
     {key:'standard', label:'Standard', cls:'t-std'},
     {key:'bonus', label:'Bonus', cls:'t-bon'},
@@ -486,6 +549,20 @@ function renderHeute(){
   let html = renderDays();
   html += renderFeel(dk);
   html += renderBriefing(dk);
+  if(dk===todayKey()){
+    const missed = getMissed();
+    if(missed.length){
+      html += `<div class="card warn"><b style="font-size:16px">Diese Woche liegengeblieben</b>
+        <div class="small" style="margin:4px 0 8px">Antippen = heute nachholen. Nachgeholt zählt voll — kein Drama.</div>` +
+        missed.slice(0,6).map(m=>`<div style="display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px dashed var(--line)">
+          <div style="flex:1"><div style="font-weight:600;font-size:15.5px">${esc(m.task.name)}</div>
+          <div class="small">${fmtDate(m.von)} · ${esc(m.task.duration)}</div></div>
+          <button class="feelbtn" style="flex:0 0 auto;padding:8px 14px" onclick="nachholen('${m.task.id}','${m.von}')">→ heute</button>
+        </div>`).join('') +
+        (missed.length>6? `<div class="small" style="margin-top:6px">… und ${missed.length-6} weitere. Aber ehrlich: erst mal diese.</div>`:'') +
+      `</div>`;
+    }
+  }
 
   if(dow===1){
     html += `<div class="card note"><b style="font-size:16px">Gestern Long Run gewesen?</b>
@@ -510,6 +587,10 @@ function renderHeute(){
       <div class="headline" style="margin:4px 0 2px">Dein Plan für morgen steht →</div>
       <div class="small">${esc(DATA.briefings[tk].headline)}</div></div>`;
   }
+  html += `<div class="card" style="margin-top:18px;border-style:dashed">
+    <div class="blocklabel" style="font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Spruch des Tages</div>
+    <div class="serif" style="font-size:18px;margin-top:5px;line-height:1.45">${esc(spruchFuer(dk))}</div>
+  </div>`;
   document.getElementById('view-heute').innerHTML = html;
 }
 
