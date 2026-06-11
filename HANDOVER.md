@@ -238,3 +238,20 @@ To continue in Claude Code:
 1. Open this project folder in Claude Code
 2. All app logic is in a single `<script>` tag at the bottom of `index.html`
 3. Push changes with `git push` — GitHub Pages deploys automatically
+
+---
+
+# Coach v2 (`/coach/`) — seit 11. Juni 2026
+
+Zweite App im selben Repo: **„Dein Coach"** — `coach/index.html` (single file) + `coach/data.json` (vom Abend-Coach generiert) + `coach/icon.png`.
+
+**Live:** https://skiefa.github.io/marathon-strength/coach/ (Safari → Teilen → Zum Home-Bildschirm)
+
+- **Heute:** Tages-Briefing aus `data.json` (Minimum/Bonus abhakbar, Fueling, Warnung, Coach-Spruch) + Übungs-Checkliste (Tiers: pflicht→Minimum). Abends ≥16 Uhr: Hinweis-Karte auf den Plan für morgen. „Akku"-Check-in: bei „Platt" werden Standard+Bonus ausgeblendet.
+- **Woche:** Wochen-Fokus + Lücken aus data.json, 7-Tage-Karten, Körper-Abdeckung (Coverage-Zonen wie v1).
+- **Buch:** Trainingstagebuch (localStorage), Export als Markdown mit Frontmatter (kompatibel zum journal/-Format in arzt-befunde) via Share/Clipboard.
+- **Trends:** HRV/Ruhepuls/Schlaf-Sparklines aus data.json, km/Woche aus dem Tagebuch, „Beweise"-Karten.
+- **Wissen:** Fueling-Guide (Frauen 50+/Sims), Tipps-Radar (datums-gesteuert, Unknown Unknowns), Übungen + Warum (aus v1 übernommen).
+
+**State:** localStorage-Key `coach-v2` (getrennt von v1).
+**Gehirn:** `/abend-coach`-Befehl im Ordner `arzt-befunde` (liest Kalender + Körperdaten, schreibt `coach/data.json`, pusht). Schema siehe `arzt-befunde/.claude/commands/abend-coach.md`.

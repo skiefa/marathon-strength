@@ -1,0 +1,123 @@
+{
+  "generated": "2026-06-11T17:30:00+02:00",
+  "datenstand": {
+    "wearables": "2026-04-24",
+    "kommentar": "Deine Wearable-Daten enden am 24. April. Ich fliege seitdem teilweise blind — richte Health Auto Export ein, dann sehe ich wieder, was dein Körper nachts erzählt."
+  },
+  "briefings": {
+    "2026-06-12": {
+      "headline": "Voller Tag außer Haus — wir spielen das klug.",
+      "kalender": "9–22 Uhr AI Builders Day am Tegernsee. Dein Kalender ist heute kein Trainingspartner, sondern ein Gegner. Akzeptiert.",
+      "einheit": "Kraft-Session #3 fällt heute offiziell aus — verschoben auf Samstag 14 Uhr. Kein schlechtes Gewissen: ein 13-Stunden-Tag ist auch Belastung, nur ohne Medaille.",
+      "minimum": [
+        "Beckenboden 3 min — morgens im Bett, merkt niemand",
+        "Wall Sit 45 sek beim ersten Kaffee",
+        "Einbeinstand 1 min beim Zähneputzen (links zuerst!)",
+        "In jeder Event-Pause: 30 sek aufstehen + Hüfte strecken"
+      ],
+      "bonus": [
+        "10-Minuten-Dosis vor der Abfahrt: Side Plank 2×30s pro Seite + Hip Thrust 3×10 (ohne Geräte, neben dem Koffer)"
+      ],
+      "fueling": [
+        "Frühstück mit 25–30 g Protein (Skyr, Eier) — trägt dich durch den Vormittag",
+        "Mittags beim Event: Proteinquelle zuerst auf den Teller, dann der Rest",
+        "Nachmittagstief: Nüsse statt zweitem Kuchen",
+        "Wasser: alle 2–3 h ein großes Glas — volle Tage = vergessenes Trinken"
+      ],
+      "warnung": "Langes Sitzen + Stehen = beleidigter Hüftbeuger. Der rächt sich sonst beim Long Run am Sonntag. Pausen nutzen.",
+      "coachSays": "Heute zählt Beckenboden, nicht Bestzeit. Das Minimum reicht. Wirklich. Ich schaue trotzdem nach, ob du es abgehakt hast."
+    },
+    "2026-06-13": {
+      "headline": "Nachhol-Tag: Kraft #3, dann ist die Woche sauber.",
+      "kalender": "9:30–11:30 Friseur. Danach gehört der Tag dir.",
+      "einheit": "Kraft Coach-Plan 30 min + Side Plank + Hip Thrust + Beckenboden + Knee Extension Theraband. Bestes Fenster: 14–17 Uhr, nach Mittagessen und Verdauungspause.",
+      "minimum": [
+        "Kraft Coach-Plan 30 min (die verschobene Freitags-Session)",
+        "Side Plank 2×30s pro Seite",
+        "Hip Thrust 3×10",
+        "Beckenboden 3 min"
+      ],
+      "bonus": [
+        "Single Leg Deadlift 3×8 pro Seite",
+        "Wadenheber 20× + 10× einbeinig — Achilles-Pflege vor dem Long Run",
+        "Copenhagen Plank 2×20s — die vergessenen Adduktoren"
+      ],
+      "fueling": [
+        "60–90 min vor Kraft: kleine Mahlzeit mit Kohlenhydraten + Protein",
+        "Nach Kraft: 30 g Protein innerhalb von 30–40 min — dein Fenster ist kürzer als das, was in Männer-Studien steht",
+        "Abends kohlenhydratbetont essen: morgen ist Long Run, die Speicher wollen voll sein",
+        "Früh ins Bett — der Long Run wird morgens gelaufen"
+      ],
+      "warnung": "Wenn das Knie oder die Achillessehne nach der Kraft-Session mehr als ein 3/10-Ziehen melden: notier es im Tagebuch. Melden statt helden.",
+      "coachSays": "Frische Frisur, frische Glute-Aktivierung. Nur eins davon hält bis Berlin — und es ist nicht die Frisur."
+    },
+    "2026-06-14": {
+      "headline": "Long Run — heute wird Rennverpflegung geübt, nicht nur gelaufen.",
+      "kalender": "Frei. Perfekt. Start vor 9 Uhr, bevor es warm wird.",
+      "einheit": "Long Run 20–22 km, locker (Build Phase 1). Vorher: Pre-Run Aktivierung 3 min — beim Long Run am wichtigsten. Danach: Wadenheber.",
+      "minimum": [
+        "Pre-Run Aktivierung 3 min (nicht verhandelbar)",
+        "16 km, falls der Tag quer läuft",
+        "Wadenheber nach dem Lauf — Achilles-Tag 4 von 4",
+        "30–40 g Protein + Kohlenhydrate innerhalb von 30–40 min nach dem Lauf"
+      ],
+      "bonus": [
+        "Volle 22 km",
+        "Letzte 2×3 min Richtung HM-Tempo — nur wenn die Beine von selbst wollen"
+      ],
+      "fueling": [
+        "DAS ist heute der eigentliche Trainingsinhalt: Race-Day-Simulation für München (in 3 Wochen!)",
+        "2–3 h vorher das Frühstück testen, das du am Renntag essen willst (z. B. Toast + Honig + Banane)",
+        "Ab km 8: alle 35–40 min ein Gel — genau die Marke, die du in München nehmen willst. Ziel: 30–60 g KH pro Stunde",
+        "Trinken: alle 20 min ein paar Schlucke, nicht erst bei Durst",
+        "Danach: Shake oder Skyr + Banane. Fenster: 30–40 min"
+      ],
+      "warnung": "Blasen-Protokoll nach dem Intervall-Vorfall: eingelaufene Socken (keine Baumwolle), bekannte Reibestellen vorher mit Hirschtalg/Vaseline, Schnürung prüfen. Nach dem Lauf: Füße inspizieren und ins Tagebuch. Achillessehne: Ziehen über 3/10 → eintragen, nicht wegatmen.",
+      "coachSays": "Ein Long Run ohne Fueling-Test ist nur Schaufensterbummel auf Beinen. Heute wird geprobt, was am 5. Juli zählt."
+    }
+  },
+  "woche": {
+    "start": "2026-06-08",
+    "fokus": "Build Phase 1, Woche 4 von 6 — Schwellen-Arbeit + Long Runs bis 22–24 km. In 2,5 Wochen beginnt der HM-Taper.",
+    "luecken": [
+      "Kraft #3 von Freitag auf Samstag verschoben — damit bleibt die Woche bei 3× Kraft. Gut so.",
+      "Wearable-Daten enden am 24. April — Health Auto Export einrichten, damit ich HRV und Schlaf wieder sehe.",
+      "Gel-Marke für München noch nicht festgelegt — Sonntag ist der Test dafür. Nach dem Lauf entscheiden."
+    ]
+  },
+  "trends": {
+    "kommentar": "Januar bis Anfang April: Lehrbuch. Ruhepuls runter, HRV stabil, Schlaf über 8 h. Mitte April: HRV auf 30 gefallen, Schlaf auf 6,2 h — da war zu viel Alltag im Training. Seitdem: Funkstille. Ich hätte gern wieder Daten.",
+    "wochen": [
+      { "woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5 },
+      { "woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3 },
+      { "woche": "2026-01-19", "hrv": 37.4, "rhr": 55.4, "schlaf": 8.1 },
+      { "woche": "2026-01-26", "hrv": 35.4, "rhr": 55.0, "schlaf": 7.7 },
+      { "woche": "2026-02-02", "hrv": 38.4, "rhr": 55.6, "schlaf": 8.1 },
+      { "woche": "2026-02-09", "hrv": 38.3, "rhr": 53.9, "schlaf": 7.8 },
+      { "woche": "2026-02-16", "hrv": 39.4, "rhr": 54.7, "schlaf": 8.4 },
+      { "woche": "2026-02-23", "hrv": 36.9, "rhr": 56.1, "schlaf": 7.8 },
+      { "woche": "2026-03-02", "hrv": 34.4, "rhr": 58.3, "schlaf": 7.5 },
+      { "woche": "2026-03-09", "hrv": 36.9, "rhr": 54.9, "schlaf": 8.1 },
+      { "woche": "2026-03-16", "hrv": 37.0, "rhr": 55.1, "schlaf": 8.3 },
+      { "woche": "2026-03-23", "hrv": 35.3, "rhr": 54.6, "schlaf": 7.6 },
+      { "woche": "2026-03-30", "hrv": 37.1, "rhr": 53.6, "schlaf": 8.5 },
+      { "woche": "2026-04-06", "hrv": 39.3, "rhr": 52.9, "schlaf": 8.4 },
+      { "woche": "2026-04-13", "hrv": 31.0, "rhr": 54.2, "schlaf": 6.2 },
+      { "woche": "2026-04-20", "hrv": 29.9, "rhr": 52.7, "schlaf": 6.8 }
+    ]
+  },
+  "beweise": [
+    {
+      "titel": "Dein Herz arbeitet effizienter",
+      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,7 Ende April. Dasselbe Herz, derselbe Job, drei Schläge weniger pro Minute. Das ist Ausdauer-Anpassung, schwarz auf weiß — auch wenn sie sich beim Laufen nicht so anfühlt."
+    },
+    {
+      "titel": "Du schläfst wie eine Athletin",
+      "text": "Drei Monate lang im Schnitt 8,1 h Schlaf. Das schaffen die wenigsten Marathonläuferinnen — und es ist dein stärkster Recovery-Hebel in der Perimenopause."
+    },
+    {
+      "titel": "Dein Körper kann Belastung wegstecken",
+      "text": "HRV-Spitzen von 39+ Mitte Februar und Anfang April — immer in Wochen mit gutem Schlaf. Die Formel ist sichtbar: Schlaf rein, Belastbarkeit raus. Sie funktioniert bei dir nachweislich."
+    }
+  ]
+}

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" type="image/png" href="icon.png">
+<title>Coach — Berlin 2026</title>
+<style>
+:root{
+  --bg:#f4f1ea; --ink:#1a1a1a; --paper:#fdfbf6; --line:#c8c3b4;
+  --accent:#d63a17; --green:#3d6b2c; --amber:#9b7c2a; --blue:#1c4a6c; --teal:#2a7a8a;
+  --muted:#6b6657;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--ink);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  max-width:480px;margin:0 auto;padding:env(safe-area-inset-top) 16px calc(96px + env(safe-area-inset-bottom));
+  font-size:15px;line-height:1.45}
+h1,h2,h3,.serif{font-family:Georgia,serif;font-style:italic;font-weight:normal}
+h1{font-size:22px;margin:18px 0 2px}
+h2{font-size:18px;margin:22px 0 8px}
+h3{font-size:16px}
+.sub{color:var(--muted);font-size:12.5px;letter-spacing:.02em}
+.chips{display:flex;gap:8px;margin:10px 0 4px;flex-wrap:wrap}
+.chip{background:var(--ink);color:var(--paper);border-radius:14px;padding:4px 11px;font-size:11.5px;letter-spacing:.04em}
+.chip.accent{background:var(--accent)}
+.chip.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.card.brief{border-left:4px solid var(--accent)}
+.card.warn{border-left:4px solid var(--amber)}
+.card.note{border-left:4px solid var(--teal)}
+.brief .headline{font-family:Georgia,serif;font-style:italic;font-size:17px;margin-bottom:6px}
+.brief .block{margin:10px 0 0}
+.brief .blocklabel{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:3px}
+.coachsays{font-family:Georgia,serif;font-style:italic;border-top:1px dashed var(--line);margin-top:12px;padding-top:9px;font-size:14.5px}
+.coachsays::before{content:"Coach: ";font-weight:bold;font-style:normal;font-family:'Helvetica Neue',sans-serif;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+/* day switcher */
+.days{display:flex;gap:5px;margin:12px 0 2px}
+.dayp{flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:6px 0 4px;background:var(--paper);font-size:11px;cursor:pointer;position:relative}
+.dayp .dn{font-size:13px;font-weight:600;display:block}
+.dayp.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dayp.today::after{content:"";position:absolute;bottom:3px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:2px;background:var(--accent)}
+.dayp .dot{display:block;width:5px;height:5px;border-radius:3px;margin:2px auto 0;background:transparent}
+.dayp .dot.done{background:var(--green)}
+/* tiers + tasks */
+.tierlabel{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px}
+.tierlabel b{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.tierlabel .ln{flex:1;border-top:1px solid var(--line)}
+.t-min b{color:var(--ink)} .t-std b{color:var(--green)} .t-bon b{color:var(--amber)} .t-act b{color:var(--blue)}
+.task{display:flex;align-items:flex-start;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:11px 12px;margin:7px 0;cursor:pointer}
+.task .box{width:22px;height:22px;border:2px solid var(--ink);border-radius:7px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--paper)}
+.task.done .box{background:var(--green);border-color:var(--green)}
+.task.done .tn{text-decoration:line-through;opacity:.5}
+.task.skipped{opacity:.45}
+.task.skipped .box{border-style:dashed}
+.task .tn{font-weight:600;font-size:14.5px}
+.task .td{font-size:12px;color:var(--muted);margin-top:1px}
+.task .twhy{font-size:12px;color:var(--muted);margin-top:5px;display:none;font-style:italic;font-family:Georgia,serif}
+.task.open .twhy{display:block}
+.task .skipbtn{margin-left:auto;border:none;background:none;color:var(--muted);font-size:16px;padding:2px 4px;flex-shrink:0}
+/* feel checkin */
+.feelrow{display:flex;gap:8px;margin-top:8px}
+.feelbtn{flex:1;border:1px solid var(--line);background:var(--paper);border-radius:9px;padding:9px 0;font-size:13px;cursor:pointer}
+.feelbtn.sel{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* week */
+.wkcard{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:10px 13px;margin:7px 0;cursor:pointer}
+.wkcard .wkd{width:36px;font-weight:600}
+.wkcard .wkinfo{flex:1;font-size:12.5px;color:var(--muted)}
+.wkcard .wkinfo b{color:var(--ink);font-weight:600;font-size:13.5px;display:block;font-style:italic;font-family:Georgia,serif}
+.wkcard .wkc{font-size:12px;color:var(--green);font-weight:600}
+.zone{margin:9px 0}
+.zone .zl{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:3px}
+.zbar{height:7px;background:#e7e2d6;border-radius:4px;overflow:hidden}
+.zfill{height:100%;border-radius:4px;background:var(--green)}
+.zfill.low{background:var(--accent)} .zfill.mid{background:var(--amber)}
+/* journal */
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:15px;background:var(--paper);font-family:inherit;color:var(--ink)}
+textarea{min-height:70px;resize:vertical}
+.frow{display:flex;gap:8px;margin:8px 0}
+.frow>div{flex:1}
+label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:3px}
+.btn{display:block;width:100%;background:var(--accent);color:#fff;border:none;border-radius:11px;padding:13px;font-size:15px;font-weight:600;margin:12px 0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.jentry{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:12px;margin:8px 0;font-size:13.5px}
+.jentry .jh{display:flex;justify-content:space-between;align-items:baseline}
+.jentry .jh b{font-family:Georgia,serif;font-style:italic;font-size:15px}
+.jentry .jmeta{color:var(--muted);font-size:12px;margin:4px 0}
+.jentry .del{color:var(--muted);background:none;border:none;font-size:12px;text-decoration:underline;cursor:pointer}
+.pill-alert{background:#f3e9e5;border:1px solid var(--accent);color:var(--accent);border-radius:9px;padding:8px 12px;font-size:12.5px;margin:8px 0}
+/* trends */
+.spark{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:12px;margin:9px 0}
+.spark .sl{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;margin-bottom:5px}
+.spark .sl b{font-size:14px}
+.spark .sv{font-family:Georgia,serif;font-style:italic;font-size:17px}
+/* wissen subtabs */
+.subtabs{display:flex;gap:6px;margin:12px 0;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:6px 13px;font-size:13px;cursor:pointer}
+.subtab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.guide{background:var(--paper);border:1px solid var(--line);border-radius:11px;margin:7px 0;overflow:hidden}
+.guide .gh{padding:11px 13px;font-weight:600;font-size:14px;cursor:pointer;display:flex;justify-content:space-between}
+.guide .gb{display:none;padding:0 13px 12px;font-size:13.5px}
+.guide.open .gb{display:block}
+.guide .gb p{margin:6px 0}
+.guide .gb .gl{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.tip{border-left:4px solid var(--line)}
+.tip.now{border-left-color:var(--accent)}
+.tip .when{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);margin-bottom:3px}
+/* tab bar */
+.tabbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;
+  background:var(--paper);border-top:1px solid var(--line);display:flex;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+.tab{flex:1;text-align:center;font-size:10.5px;color:var(--muted);padding:5px 0;cursor:pointer;border:none;background:none;font-family:inherit}
+.tab .ti{font-size:19px;display:block;margin-bottom:1px}
+.tab.active{color:var(--accent);font-weight:600}
+.view{display:none} .view.active{display:block}
+ul.clean{list-style:none}
+ul.clean li{padding:4px 0 4px 18px;position:relative;font-size:13.5px}
+ul.clean li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div id="view-heute" class="view active"></div>
+<div id="view-woche" class="view"></div>
+<div id="view-buch" class="view"></div>
+<div id="view-trends" class="view"></div>
+<div id="view-wissen" class="view"></div>
+
+<nav class="tabbar">
+  <button class="tab active" data-v="heute"><span class="ti">☀︎</span>Heute</button>
+  <button class="tab" data-v="woche"><span class="ti">▦</span>Woche</button>
+  <button class="tab" data-v="buch"><span class="ti">✎</span>Buch</button>
+  <button class="tab" data-v="trends"><span class="ti">↗</span>Trends</button>
+  <button class="tab" data-v="wissen"><span class="ti">✳</span>Wissen</button>
+</nav>
+
+<script>
+/* ================= STAMMDATEN ================= */
+const RACES = [
+  { id:'hm',     name:'München HM',      date:'2026-07-05', taper:'2026-06-28' },
+  { id:'berlin', name:'Berlin-Marathon', date:'2026-09-27', taper:'2026-09-07' },
+];
+const PHASES = [
+  { name:'Base',              start:'2026-04-01', end:'2026-05-17' },
+  { name:'Build 1',           start:'2026-05-18', end:'2026-06-28' },
+  { name:'Taper HM',          start:'2026-06-29', end:'2026-07-04' },
+  { name:'Race: München HM',  start:'2026-07-05', end:'2026-07-05' },
+  { name:'Regeneration',      start:'2026-07-06', end:'2026-07-12' },
+  { name:'Build 2 / Peak',    start:'2026-07-13', end:'2026-09-06' },
+  { name:'Taper Berlin',      start:'2026-09-07', end:'2026-09-26' },
+  { name:'Race: Berlin!',     start:'2026-09-27', end:'2026-09-27' },
+  { name:'Post-Saison',       start:'2026-09-28', end:'2026-12-31' },
+];
+
+const PROGRESSION = {
+  'mo-lunge':    { phase1:'Bodyweight · 2×45s', phase2:'2×5kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
+  'mo-bulgarian':{ phase1:'Bodyweight · 2×45s', phase2:'2×6kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
+  'mo-knee':     { phase1:'Theraband leicht · 3×15', phase2:'Theraband mittel · 3×20', phase3:'Theraband leicht · 2×15' },
+  'mi-sldl':     { phase1:'Bodyweight · 3×8', phase2:'1×8kg KH · 3×8', phase3:'1×6kg KH · 2×8' },
+  'fr-stepup':   { phase1:'Bodyweight · 3×8', phase2:'6–8kg KH · 3×8', phase3:'4kg KH · 2×8' },
+  'mo-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+  'mi-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+  'fr-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
+};
+
+const TASKS = [
+  { id:'mo-kraft', day:1, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Ganzkörper-Stabi mit Bein-Anteil. Bulgarian Split + Reverse Lunge stärken knieumgebende Muskulatur.', problems:['knie','po'] },
+  { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
+  { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose.', problems:['po','huefte'] },
+  { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
+  { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
+  { id:'mo-lunge', day:1, tier:'bonus', name:'Reverse Lunge (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat falls du es einzeln dazu machen willst.', problems:['huefte','knie'] },
+  { id:'mo-bulgarian', day:1, tier:'bonus', name:'Bulgarian Split Squat (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat als zusätzliche Dosis.', problems:['knie','po'] },
+  { id:'di-aktivierung', day:2, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Clams + Glute Bridge + Monster Walks wecken Po auf. Schlafender Po = Kompensation.', problems:['po','huefte','knie'] },
+  { id:'di-intervall', day:2, tier:'activity', name:'Intervall-Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Reiz. Geschwindigkeit entwickeln.', problems:[] },
+  { id:'di-atem', day:2, tier:'pflicht', name:'Atemübung (Garmin)', duration:'5 min', trigger:'direkt nach Cool-Down', why:'Parasympathisches Runterfahren. HRV-Rebound nach Intervall.', problems:['recovery'] },
+  { id:'di-wade', day:2, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne im ermüdeten Zustand stärken — am wirksamsten.', problems:['achilles','shinSplints'] },
+  { id:'mi-kraft', day:3, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens', why:'Zweite Kraft-Session. Volumen für muskuläre Adaption.', problems:['knie','po'] },
+  { id:'mi-sideplank', day:3, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'2. von 3× Woche. Vom Orthopäden verordnet.', problems:['patella','knie','stabilitaet'] },
+  { id:'mi-hipthrust', day:3, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'2. von 3× Woche. Po-Aufbau braucht Frequenz.', problems:['po','huefte'] },
+  { id:'mi-beckenboden', day:3, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'2. von 3× Woche. Stabilität von innen, schützt vor Stressinkontinenz bei Lauf-Impact.', problems:['stabilitaet'] },
+  { id:'mi-sldl', day:3, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'nach Kraft', why:'Exzentrisches Hamstring-Training. Schützt Sehnenansatz. 2×/Woche (Mi+Sa).', problems:['po','huefte'] },
+  { id:'mi-schwimmen', day:3, tier:'activity', name:'Schwimmen', duration:'~60 min', trigger:'abends', why:'Cross-Training, gelenkfreundlich. Recovery für die Beine.', problems:['recovery'] },
+  { id:'do-aktivierung', day:4, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Po-Aktivierung verhindert Hüftbeuger-/Hamstring-Kompensation.', problems:['po','huefte'] },
+  { id:'do-lauf', day:4, tier:'activity', name:'Flotter Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Dauerlauf. Aerobe Kapazität bei höherer Intensität.', problems:[] },
+  { id:'do-wade', day:4, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne nach Lauf stärken.', problems:['achilles','shinSplints'] },
+  { id:'fr-kraft', day:5, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Dritte Kraft-Session. Schließt die Woche.', problems:['knie','po'] },
+  { id:'fr-sideplank', day:5, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'3. von 3× Woche. Schließt die Side-Plank-Routine.', problems:['patella','knie','stabilitaet'] },
+  { id:'fr-hipthrust', day:5, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'3. von 3× Woche. Po-Frequenz für echten Aufbau.', problems:['po','huefte'] },
+  { id:'fr-beckenboden', day:5, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'3. von 3× Woche.', problems:['stabilitaet'] },
+  { id:'fr-knee', day:5, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'nach Kraft', why:'2. von 2× Woche. VMO-Aufbau gegen Patella-Lateralisation.', problems:['knie','patella'] },
+  { id:'fr-stepup', day:5, tier:'bonus', name:'Kettlebell Step-Up', duration:'5 min · 3×8 pro Seite', trigger:'falls Zeit nach Kraft', why:'1×/Woche reicht — Coach-Plan deckt einbeinige Kraft schon ab. Hier als Zusatzdosis.', problems:['knie','po'] },
+  { id:'sa-rad', day:6, tier:'activity', name:'Radfahren (alternativ)', duration:'45 min · 35 TSS', trigger:'lt. Coach-Plan', why:'Ausdauer ohne Lauf-Belastung.', problems:['recovery'] },
+  { id:'sa-sldl', day:6, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'morgens', why:'2. von 2× Woche. Hamstring + Glute.', problems:['po','huefte'] },
+  { id:'sa-copenhagen', day:6, tier:'bonus', name:'Copenhagen Plank', duration:'3 min · 2×20s pro Seite', trigger:'irgendwann', why:'Adduktoren — oft vergessene Lücke. 1×/Woche reicht für Reiz.', problems:['huefte','stabilitaet'] },
+  { id:'sa-soleus', day:6, tier:'bonus', name:'Bent-Knee Calf Raise', duration:'2 min · 3×15', trigger:'morgens', why:'Soleus (tiefe Wade). Ergänzt normale Wadenheber — 1×/Woche als Variation.', problems:['achilles','shinSplints'] },
+  { id:'sa-faszien', day:6, tier:'bonus', name:'Faszienrolle', duration:'5 min', trigger:'vor Netflix abends', why:'Quadrizeps + IT-Band + Wade. NICHT direkt unter Po.', problems:['patella','knie'] },
+  { id:'sa-huefte', day:6, tier:'bonus', name:'Hüftöffner 90/90', duration:'3 min', trigger:'irgendwann', why:'Steife Hüfte zwingt Knie zu kompensieren.', problems:['huefte'] },
+  { id:'sa-wade', day:6, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'morgens', why:'Achillessehne 4×/Woche. Samstag ist Tag 3.', problems:['achilles','shinSplints'] },
+  { id:'so-aktivierung', day:0, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'vor Long Run', why:'Beim Long Run am wichtigsten: Glute-Aktivierung verhindert Form-Verfall.', problems:['po','huefte','knie'] },
+  { id:'so-longrun', day:0, tier:'activity', name:'Long Run', duration:'lt. Coach', trigger:'wann es passt', why:'Wichtigster Lauf der Woche. Aerobe Basis.', problems:[] },
+  { id:'so-wade', day:0, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach Long Run', why:'Achillessehne nach längstem Lauf der Woche. Tag 4.', problems:['achilles','shinSplints'] },
+  { id:'daily-meditation', day:'daily', tier:'pflicht', name:'Meditation', duration:'10 min', trigger:'morgens, vor allem anderen', why:'Nervensystem regulieren. Senkt Cortisol — in der Perimenopause doppelt wertvoll.', problems:['recovery'] },
+  { id:'daily-wallsit', day:'daily', tier:'pflicht', name:'Wall Sit', duration:'45 sek', trigger:'beim Kaffee', why:'Quadrizeps isometrisch — kniefreundlich, ohne Knorpel-Belastung.', problems:['knie','patella'] },
+  { id:'daily-balance', day:'daily', tier:'pflicht', name:'Einbeinstand', duration:'1 min', trigger:'Zähneputzen abends', why:'Stabilität. Links ist instabiler (HUBER-Test) — links extra üben.', problems:['stabilitaet','knie'] },
+  { id:'daily-ankle', day:'daily', tier:'standard', name:'Sprunggelenk-Mobi', duration:'1 min', trigger:'nach Wall Sit', why:'Schlechte Dorsalflexion = Shin Splints + Knie-Stress.', problems:['shinSplints','knie'] },
+  { id:'daily-birddog', day:'daily', tier:'bonus', name:'Bird Dog', duration:'2 min · 2×8 pro Seite', trigger:'irgendwann zwischendurch', why:'Rumpf + Hüft-Stabilität gleichzeitig. Lauf-spezifisch (diagonale Verbindung).', problems:['stabilitaet','po'] },
+];
+
+const REGEN_TASKS = [
+  { id:'regen-faszien', tier:'pflicht', name:'Faszienrolle', duration:'10 min', trigger:'morgens', why:'Quads, IT-Band, Wade ausrollen. Nach Long Run Pflicht.', problems:['knie','patella'] },
+  { id:'regen-spazieren', tier:'pflicht', name:'Spaziergang', duration:'20–30 min', trigger:'irgendwann', why:'Aktive Erholung fördert Durchblutung ohne Belastung.', problems:['recovery'] },
+  { id:'regen-beine', tier:'pflicht', name:'Beine hochlegen', duration:'10 min', trigger:'abends', why:'Venösen Rückfluss fördern. Schwellung reduzieren.', problems:['recovery'] },
+  { id:'regen-huefte', tier:'standard', name:'Hüftöffner + Psoas-Dehnung', duration:'5 min', trigger:'nach Spaziergang', why:'Nach Long Run verkürzt sich der Psoas. Jetzt dehnen.', problems:['huefte'] },
+];
+
+const PROBLEMS = [
+  { id:'knie', name:'Knie / Knorpel', desc:'Chondropathie Grad 2 lateral, Grad 3 retropatellar. Knorpel hinter der Kniescheibe. Beim Laufen schmerzfrei, Aufbau ist Pflicht.', exercises:['Kraft Coach-Plan','Knee Extension Theraband (Mo)','Kettlebell Step-Up (Fr)','Wall Sit täglich'] },
+  { id:'patella', name:'Patella-Führung (VMO)', desc:'Kniescheibe wird seitlich gezogen. Ursache: schwacher VMO + Glute med + verspanntes IT-Band.', exercises:['Knee Extension Theraband — wichtigste Übung','Faszienrolle IT-Band','Wall Sit','Clams (Pre-Run)'] },
+  { id:'po', name:'Po / Glute', desc:'Beinmuskulatur Durchschnitt. Schwacher Po → Hamstrings/Hüftbeuger kompensieren → Knie leiden.', exercises:['Pre-Run Aktivierung (3× vor Lauf)','Single Leg Deadlift (Mi)','Bulgarian Split Squat','Kettlebell Step-Up (Fr)'] },
+  { id:'huefte', name:'Hüftbeuger / Psoas', desc:'Verkürzt durch Sitzen + Laufen. Ermüdet auf langen Distanzen → Laufstil bricht ein.', exercises:['Psoas-Dehnung nach Kraft','Hüftöffner 90/90 (Sa + Regen-Mo)','Reverse Lunge (Mo)'] },
+  { id:'achilles', name:'Achillessehne', desc:'Marathon-Schwachstelle. 4×/Woche nach Läufen (Di/Do/Sa/So) — nicht täglich, Sehnen brauchen 48h.', exercises:['Wadenheber nach Läufen (Di/Do/Sa/So)','Sprunggelenk-Mobi täglich'] },
+  { id:'shinSplints', name:'Wade / Shin Splints', desc:'Schienbeinkanten-Reizung durch Unterschenkel-Dysbalance und schlechte Sprunggelenk-Mobi.', exercises:['Wadenheber 4×/Woche','Sprunggelenk-Mobi täglich'] },
+  { id:'stabilitaet', name:'Stabilität / Balance', desc:'Gesamtstabilität unter Normwert, links instabiler. Schlechte Stabilität → schlechte Knie-Position.', exercises:['Einbeinstand täglich (Augen zu)','Single Leg Deadlift','High Plank Toe Tap'] },
+  { id:'recovery', name:'Erholung / Recovery', desc:'Niedriggradige Entzündung + Knorpelschaden. Regeneration ist Training.', exercises:['Meditation täglich','Atemübung nach Intervall','Montag Regen nach Long Run','Beine hochlegen'] },
+];
+
+const COVERAGE_ZONES = [
+  { id:'knie', name:'Knie / Knorpel', target:12, low:5 },
+  { id:'patella', name:'Patella-Führung', target:8, low:3 },
+  { id:'po', name:'Po / Glute', target:6, low:3 },
+  { id:'huefte', name:'Hüftbeuger / Adduktoren', target:4, low:2 },
+  { id:'achilles', name:'Achillessehne', target:5, low:2 },
+  { id:'shinSplints', name:'Wade / Shin Splints', target:6, low:2 },
+  { id:'stabilitaet', name:'Stabilität', target:8, low:3 },
+  { id:'recovery', name:'Erholung', target:3, low:1 },
+];
+
+const EXERCISE_GUIDES = [
+  { category:'Pre-Run Aktivierung', items:[
+    { name:'Clams (mit Miniband)', setup:'Auf der Seite liegen, Knie gebeugt 90°, Miniband oberhalb der Knie. Fersen zusammen.', bewegung:'Oberes Knie nach außen öffnen, ohne Becken zu drehen. Langsam runter. 2×15 pro Seite.', tipp:'Wenn Becken kippt: Bewegung kleiner machen. Du sollst es im Po-Außen spüren, nicht vorne.' },
+    { name:'Glute Bridge einbeinig', setup:'Rückenlage, ein Fuß aufgestellt, anderes Bein gestreckt in die Luft.', bewegung:'Becken über das aufgestellte Bein heben, 2 Sek halten, langsam runter. 2×10 pro Seite.', tipp:'Po anspannen, nicht den unteren Rücken überstrecken. Hüfte gerade.' },
+    { name:'Monster Walks', setup:'Miniband um Knöchel oder oberhalb Knie. Halbe Hocke (Knie leicht gebeugt).', bewegung:'Kleine Schritte seitwärts, dann vor und zurück. Band immer auf Spannung. 10 Schritte je Richtung.', tipp:'Hocke halten — nicht zwischen den Schritten hochkommen.' },
+  ]},
+  { category:'Kraft Coach-Plan', items:[
+    { name:'Reverse Lunge', setup:'Aufrecht stehen, Füße hüftbreit, Bauchspannung.', bewegung:'Großen Schritt nach hinten, hinteres Knie sinkt Richtung Boden. Vorderes Knie über Knöchel. Hochdrücken über die vordere Ferse.', tipp:'Knieschonender als normaler Lunge. Oberkörper aufrecht, leicht nach vorne lehnen okay.' },
+    { name:'Bulgarian Split Squat', setup:'Rückfuß auf Bank/Sofa, vorderer Fuß ca. 60-80cm davor. Hüfte gerade.', bewegung:'Vorderes Knie beugen, hinteres Knie sinkt Richtung Boden. Hochdrücken über die ganze Fußsohle.', tipp:'Knie nicht nach innen kippen lassen. Wenn Patella zwickt: Fuß weiter nach vorne stellen.' },
+    { name:'High Plank Toe Tap', setup:'Liegestütz-Position, Hände unter Schultern, Körper eine Linie.', bewegung:'Ein Fuß seitlich ausstrecken (kleiner Tap), zurück. Im Wechsel.', tipp:'Hüfte nicht rotieren lassen. Rumpf bleibt stabil — das ist die eigentliche Übung.' },
+    { name:'Reverse Crunch', setup:'Rückenlage, Knie 90° angezogen, Hände neben dem Körper.', bewegung:'Knie Richtung Brust ziehen, Becken hebt leicht ab. Langsam zurück.', tipp:'Kein Schwung. Bauchmuskeln machen die Arbeit, nicht die Hüftbeuger.' },
+    { name:'Bridge Pose', setup:'Rückenlage, beide Füße aufgestellt, Arme neben dem Körper.', bewegung:'Becken hochheben, Po fest anspannen. Halten.', tipp:'Schultern bleiben am Boden. Po macht die Arbeit, nicht die Hamstrings.' },
+    { name:'Butterfly Crunch', setup:'Rückenlage, Fußsohlen aneinander, Knie fallen seitlich auf.', bewegung:'Schulterblätter vom Boden heben, Brust Richtung Decke. Langsam zurück.', tipp:'Kein Zug am Nacken. Bauch zieht — nicht der Kopf.' },
+    { name:'Ipsilateral Dead Bug', setup:'Rückenlage, Arme nach oben, Knie 90°.', bewegung:'Rechter Arm und rechtes Bein gleichzeitig ausstrecken (gleiche Seite!). Zurück. Dann links.', tipp:'Unterer Rücken bleibt am Boden — wenn er sich hebt: Bewegung kleiner.' },
+    { name:'Superman', setup:'Bauchlage, Arme nach vorne ausgestreckt.', bewegung:'Arme, Brust und Beine gleichzeitig vom Boden heben. 2 Sek halten, langsam runter.', tipp:'Nicht überstrecken. Blick zum Boden, Nacken lang.' },
+  ]},
+  { category:'Zusatz-Übungen (Mo/Mi/Fr)', items:[
+    { name:'Knee Extension Theraband', setup:'Sitzen, Theraband um Knöchel, anderes Ende fixiert (Tischbein, Türgriff). Knie 90°.', bewegung:'Bein langsam strecken, in den letzten 30° besonders kontrolliert. 2 Sek halten. Zurück. 3×15.', tipp:'Die letzten 30° sind das Wichtigste — da arbeitet der VMO. Nicht durchschnaufen.' },
+    { name:'Single Leg Deadlift', setup:'Auf einem Bein stehen, Stand-Knie leicht gebeugt. (Optional Kurzhantel in einer Hand)', bewegung:'Oberkörper langsam nach vorne kippen, freies Bein streckt nach hinten. Wie eine Wippe. Zurück. 3×8 pro Seite.', tipp:'Rücken bleibt gerade. Hüfte parallel zum Boden — nicht zur Seite kippen. Langsam exzentrisch (3 Sek runter).' },
+    { name:'Kettlebell Step-Up', setup:'Vor einer stabilen Bank/Stufe (kniehoch). KH oder KB in einer Hand.', bewegung:'Ein Fuß komplett auf die Bank, über die Ferse hochdrücken. Anderes Bein hochziehen ohne abzudrücken. Kontrolliert runter. 3×8 pro Seite.', tipp:'Nicht mit dem hinteren Bein abspringen. Die ganze Arbeit macht das vordere Bein.' },
+    { name:'Hip Thrust', setup:'Mit Schulterblättern auf Sofa/Bank lehnen, Füße flach am Boden, schulterbreit. Knie 90°. (Optional KH auf Hüfte)', bewegung:'Hüfte hochdrücken bis Körper gerade Linie von Knie bis Schulter bildet. Po fest anspannen, 2 Sek halten. Langsam runter. 3×10.', tipp:'Die "echte" Glute-Übung — viel stärker als Bridge. Po anspannen, nicht den Rücken überstrecken. Kinn leicht zur Brust.' },
+    { name:'Side Plank', setup:'Seitlich auf Unterarm gestützt, Ellbogen unter Schulter. Beine gestreckt, Füße übereinander.', bewegung:'Hüfte hochheben bis Körper eine gerade Linie ist. 30 Sek halten. 2 Sätze pro Seite.', tipp:'Vom Orthopäden für dein Knie verordnet. Hüfte nicht absinken lassen. Wenn zu schwer: unteres Knie aufstützen.' },
+    { name:'Copenhagen Plank', setup:'Seitlich liegen, oberes Bein auf Sofa/Bank (Innenseite des Beins auf Kante). Unteres Bein hängt frei.', bewegung:'Hüfte hochdrücken — gestützt nur durch das obere Bein und den unteren Arm. 20 Sek halten. 2 Sätze pro Seite.', tipp:'Anstrengender als es aussieht. Wenn zu schwer: Knie statt ganzes Bein auf die Bank. Trainiert die oft vergessenen Adduktoren.' },
+    { name:'Bent-Knee Calf Raise', setup:'Knie leicht gebeugt (ca. 20°), Fußballen auf einer Stufe oder am Boden, Fersen frei.', bewegung:'Fersen langsam hoch auf Zehenspitzen, kurz halten, langsam runter. 3×15.', tipp:'Unterschied zu normalen Wadenheber: gebeugtes Knie zielt auf den Soleus (tiefe Wade) — beim Laufen wichtiger als die oberflächliche Wade.' },
+    { name:'Beckenboden-Training', setup:'Bequem sitzen oder liegen. Aufmerksamkeit auf den Beckenboden.', bewegung:'Wie Pipi-Anhalten-Bewegung: nach innen und oben ziehen, 5 Sek halten, langsam loslassen. 10 Wiederholungen. Dann 10× schnelle Kontraktionen.', tipp:'Nicht den Po anspannen, nicht den Bauch. Nur Beckenboden. Atmung läuft normal weiter.' },
+  ]},
+  { category:'Tägliche Snacks', items:[
+    { name:'Meditation', setup:'Bequeme Position, Augen geschlossen oder weicher Blick.', bewegung:'Atem beobachten, Gedanken kommen lassen und gehen. 10 Min.', tipp:'Morgens vor allem anderen. App egal — Stille ist auch eine Methode.' },
+    { name:'Wadenheber', setup:'Auf einer Stufe stehen, Fußballen drauf, Fersen frei. Festhalten zur Balance.', bewegung:'Fersen tief absenken, langsam hoch auf Zehenspitzen, kurz halten, langsam runter. 20× beidbeinig, dann 10× einbeinig pro Seite.', tipp:'Langsam ist wichtiger als hoch. Der exzentrische (runter) Teil baut die Sehne auf.' },
+    { name:'Wall Sit', setup:'Rücken an Wand, Füße schulterbreit, ca. 50 cm von Wand weg.', bewegung:'Tiefer rutschen bis Knie 90° (oder so tief wie schmerzfrei). 45 Sek halten.', tipp:'Knie nicht über die Zehen. Wenn Patella zwickt: weniger tief gehen.' },
+    { name:'Einbeinstand', setup:'Aufrecht stehen, ein Bein leicht anheben.', bewegung:'1 Minute halten. Steigerung: Augen schließen.', tipp:'Links extra üben (laut HUBER instabiler). Wackeln ist okay — die Muskeln lernen.' },
+    { name:'Sprunggelenk-Mobilisation (Wall Ankle)', setup:'Vor einer Wand stehen, Fuß ca. 10 cm vor der Wand.', bewegung:'Knie zur Wand drücken (versuchen sie zu berühren) ohne dass die Ferse hochgeht. 10× pro Seite.', tipp:'Wenn Knie die Wand erreicht: Fuß einen Schritt zurück. Ferse muss am Boden bleiben.' },
+    { name:'Bird Dog', setup:'Vierfüßlerstand, Hände unter Schultern, Knie unter Hüfte. Rücken neutral.', bewegung:'Rechten Arm und linkes Bein gleichzeitig ausstrecken (diagonal!). 2 Sek halten. Zurück. Dann andere Seite. 8 pro Seite, 2 Sätze.', tipp:'Hüfte gerade — nicht zur Seite kippen. Diagonal = Bauch und Po arbeiten zusammen, genau wie beim Laufen.' },
+  ]},
+  { category:'Regeneration (Montag nach Long Run)', items:[
+    { name:'Faszienrolle', setup:'Rolle auf den Boden, langsam mit Körpergewicht über den Muskel rollen.', bewegung:'Quadrizeps (vorne), IT-Band (außen am Oberschenkel), Wade. Je 1-2 Min pro Bereich.', tipp:'NICHT direkt unter der Pobacke (Sehnenansatz schonen). Schmerzhafte Stellen: aushalten, atmen, weiter.' },
+    { name:'Spaziergang', setup:'Lockere Kleidung, bequeme Schuhe.', bewegung:'20-30 Min in lockerem Tempo. Draußen ist besser.', tipp:'Kein Sport, keine Leistung. Bewegung fördert Durchblutung und Erholung.' },
+    { name:'Beine hochlegen', setup:'Rückenlage, Beine senkrecht hoch an eine Wand oder auf ein Sofa.', bewegung:'10 Min so liegen. Tief atmen.', tipp:'Hilft venösem Rückfluss. Schwellungen reduzieren sich messbar.' },
+    { name:'Hüftöffner 90/90', setup:'Im Sitzen, vorderes Bein 90° gebeugt vor dem Körper, hinteres Bein 90° zur Seite.', bewegung:'Oberkörper nach vorne neigen über das vordere Bein. 60 Sek halten, atmen. Seite wechseln.', tipp:'Hüfte verkürzt sich nach Long Runs. Jetzt ist der Zeitpunkt zu dehnen.' },
+    { name:'Psoas-Dehnung', setup:'Ausfallschritt-Position, hinteres Knie am Boden, vorderes Bein 90°.', bewegung:'Becken nach vorne schieben, Po anspannen. Spannung an der Vorderseite der hinteren Hüfte. 30 Sek pro Seite.', tipp:'Po anspannen ist wichtig — sonst dehnst du nur den Rücken.' },
+  ]},
+];
+
+/* ===== FUELING (Wissenschaft für Frauen 50+, Sims-Prinzipien) ===== */
+const FUELING = [
+  { titel:'Die Grundregeln (Perimenopause-Edition)', punkte:[
+    'Protein: 1,6–2,0 g pro kg Körpergewicht täglich, verteilt auf 3–4 Mahlzeiten mit je 25–35 g. Mit 50+ braucht dein Muskel einen stärkeren Protein-Reiz als mit 25 — das ist der wichtigste Unterschied zu allgemeinen Lauf-Ratschlägen.',
+    'Nicht nüchtern trainieren — vor allem nicht intensiv oder lang. Bei Frauen in der Perimenopause treibt Nüchterntraining Cortisol hoch und sabotiert genau die Anpassung, die du willst.',
+    'Kohlenhydrate gehören rund ums Training (vorher/währenddessen/danach), nicht gestrichen. Low-Carb und Marathon-Training für Frauen 50+ vertragen sich nicht.',
+    'Dein Erholungsfenster nach Belastung ist kürzer als in Männer-Studien: 30–40 g Protein + Kohlenhydrate innerhalb von 30–40 Minuten.',
+    'Kreatin 3–5 g täglich weiterführen — gut belegt für Muskelerhalt und sogar Kognition in der Menopause.',
+  ]},
+  { titel:'Vor dem Lauf', punkte:[
+    'Lockerer Lauf unter 60 min: kleine Kleinigkeit reicht (halbe Banane, Toast) — aber nicht komplett leer starten.',
+    'Intensiv oder lang: 1–3 h vorher eine kohlenhydratreiche Mini-Mahlzeit + etwas Protein. Bewährt: Toast mit Honig + Skyr, Porridge, Banane.',
+    'Kaffee vorher ist gut (Koffein wirkt leistungsfördernd, gut belegt) — aber zur gewohnten Zeit, nichts Neues am Renntag.',
+  ]},
+  { titel:'Während des Laufs', punkte:[
+    'Unter 75 min: Wasser reicht.',
+    'Über 75 min: 30–60 g Kohlenhydrate pro Stunde — Gels, Chews oder Sportgetränk. Das muss im Training geübt werden, der Darm ist trainierbar.',
+    'Faustregel Long Run: ab km 8 alle 35–40 min ein Gel, dazu Wasser.',
+    'Bei Hitze oder über 90 min: Elektrolyte (Natrium!) dazu — Schwitzen verändert sich unter Hormonumstellung, lieber etwas mehr Salz.',
+  ]},
+  { titel:'Nach dem Lauf', punkte:[
+    '30–40 g Protein + Kohlenhydrate innerhalb von 30–40 min. Bewährt: Shake, Skyr mit Banane und Honig, Milchreis.',
+    'Nach dem Long Run zusätzlich: eine richtige, salzige Mahlzeit innerhalb von 2 h.',
+    'An harten Tagen abends extra Protein (z. B. Quark) — die Nacht ist deine Muskel-Reparatur-Schicht, und Schlaf ist das beste Recovery-Tool, das du hast.',
+  ]},
+  { titel:'Race-Day (München & Berlin)', punkte:[
+    'Carbo-Loading: 36–48 h vorher auf ~8–10 g KH pro kg Körpergewicht hoch, Ballaststoffe runter. Nicht erst am Vorabend bergeweise Pasta.',
+    'Renn-Frühstück: 2,5–3 h vor Start, im Training erprobt. Danach nur noch nippen.',
+    'Im Rennen: HM ~45–60 g KH/h, Marathon 60+ g/h — exakt das Gel-Setup, das du im Training geübt hast.',
+    'Die goldene Regel: NICHTS Neues am Renntag. Keine neuen Gels, Schuhe, Socken, BHs, Frühstücke. Null.',
+  ]},
+];
+
+/* ===== TIPPS & UNKNOWN UNKNOWNS (Radar) ===== */
+const TIPPS = [
+  { von:'2026-06-01', bis:'2026-06-28', titel:'Gel-Marke jetzt festlegen', text:'Jeder Long Run bis zum HM ist ein Test-Slot für deine Race-Verpflegung. Eine Marke wählen, dabei bleiben, Magen beobachten. In München läufst du nur mit Erprobtem.' },
+  { von:'2026-06-01', bis:'2026-07-04', titel:'Blasen-Protokoll (nie wieder Intervall-Blasen)', text:'1) Eingelaufene Lauf-Socken, nie Baumwolle. 2) Bekannte Reibestellen vor langen Läufen mit Hirschtalg oder Vaseline. 3) Schnürung prüfen — bei Fersenschlupf den „Heel Lock" (letztes Schnürloch) nutzen. 4) Zehennägel 3 Tage vor dem Rennen schneiden, nicht am Vortag.' },
+  { von:'2026-06-15', bis:'2026-07-04', titel:'Race-Outfit Generalprobe', text:'Einmal komplett im München-Outfit laufen: Schuhe, Socken, BH, Hose, ggf. Gürtel. Scheuerstellen zeigen sich erst nach 90+ Minuten — besser jetzt als bei km 18.' },
+  { von:'2026-06-28', bis:'2026-07-04', titel:'Taper-Gefühle sind normal', text:'Im Taper fühlen sich die Beine oft schwer und die Laune kippt („Taper Tantrums" — dokumentiertes Phänomen). Phantom-Zwicken taucht auf und verschwindet wieder. Das ist dein Körper beim Reparieren. Nicht kompensieren, nicht doch noch eine Einheit reinschieben.' },
+  { von:'2026-06-29', bis:'2026-07-05', titel:'HM-Rennwoche: Pacing-Plan', text:'Die ersten 5 km bewusst zu langsam anfühlen lassen — Adrenalin lügt. Negativer Split (zweite Hälfte schneller) ist die beste Strategie für dein erstes Renn-Halbjahr. Startnummern-Logistik 2 Tage vorher klären.' },
+  { von:'2026-07-06', bis:'2026-07-12', titel:'Nach dem HM: Erholung ist Pflichtprogramm', text:'10 Tage nach dem Rennen kein Bluttest (Werte sind verfälscht — dein Retest liegt richtig am 18.7.). Eine Woche locker, auch wenn du dich nach 3 Tagen wieder fit fühlst. Das Hochgefühl nach dem Rennen ist der gefährlichste Moment für Übermut.' },
+  { von:'2026-07-13', bis:'2026-09-06', titel:'Peak-Phase: Darm-Training wird ernst', text:'Long Runs gehen Richtung 32–35 km. Jetzt lernst du, 60+ g Kohlenhydrate pro Stunde zu verdauen — das trainiert man wie einen Muskel. Jeder Long Run: volle Race-Verpflegung simulieren.' },
+  { von:'2026-07-13', bis:'2026-08-31', titel:'Sommerhitze: früh laufen, Salz erhöhen', text:'Long Runs vor 8 Uhr starten. Elektrolyte sind im Sommer Pflicht, nicht Kür — in der Perimenopause verändert sich die Thermoregulation, gib deinem Körper Natrium zum Arbeiten.' },
+  { von:'2026-07-13', bis:'2026-08-10', titel:'Marathon-Schuhe jetzt kaufen', text:'Spätestens Anfang August das Berlin-Paar kaufen und 100–150 km einlaufen. Ideal: zwei Paar in Rotation (verlängert die Lebensdauer beider und senkt das Verletzungsrisiko nachweislich).' },
+  { von:'2026-09-07', bis:'2026-09-26', titel:'Berlin-Taper: Vertrauen üben', text:'3 Wochen Taper. Volumen sinkt, Zweifel steigen — „Maranoia" (eingebildete Wehwehchen im Taper) trifft fast alle. Krafttraining nicht komplett streichen: 1× pro Woche leicht erhält, was du aufgebaut hast. Schlaf ist jetzt dein wichtigstes Training.' },
+  { von:'2026-09-21', bis:'2026-09-27', titel:'Berlin-Rennwoche: Logistik-Liste', text:'Expo früh in der Woche (nicht am Vortag stundenlang stehen). Anreise + Frühstücks-Plan für Sonntag 5:30 Uhr. Kleiderbeutel-Plan. Wetterbericht erst ab Donnerstag ernst nehmen. Und: 42 km sind nur der Siegeslauf — die Arbeit ist dann längst getan.' },
+  { von:'2026-06-01', bis:'2026-09-27', titel:'Ferritin & Eisen im Blick (Läuferinnen-Klassiker)', text:'Dein Ferritin ist von 129 auf 91 gefallen — noch okay, aber Ausdauer frisst Eisen (Fußaufprall zerstört rote Blutkörperchen). Beim Retest Mitte Juli prüfen. Unter 50: Eisenbisglycinat-Plan aktivieren. Müdigkeit, die sich nicht wegschlafen lässt, immer ernst nehmen.' },
+  { von:'2026-06-01', bis:'2026-09-27', titel:'Die Achilles-Ampel', text:'Morgensteifigkeit unter 5 min + Ziehen ≤3/10, das beim Laufen verschwindet = grün, weiterlaufen. Schmerz, der im Lauf schlimmer wird oder am nächsten Morgen >5 min steif = gelb, 2 Tage Laufpause + Wadenheber isometrisch. Stechen oder Schwellung = rot, Arzt. Diese Ampel ist deine Versicherung — Sehnen bestrafen Ignoranz, nicht Vorsicht.' },
+];
+
+const COACH_FALLBACK = [
+  'Für diesen Tag habe ich kein Briefing geschrieben. Sag dem Abend-Coach auf dem Mac Bescheid — er arbeitet nur, wenn man ihn lässt.',
+];
+
+/* ================= STATE ================= */
+const KEY = 'coach-v2';
+let S = loadState();
+function loadState(){
+  try { return Object.assign({done:{},skipped:{},feel:{},journal:[],regenMo:{},briefDone:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},journal:[],regenMo:{},briefDone:{}}; }
+}
+function save(){ localStorage.setItem(KEY, JSON.stringify(S)); }
+
+let DATA = { briefings:{}, woche:null, trends:null, beweise:[], datenstand:null };
+let viewingDate = null;
+let activeView = 'heute';
+let wissenTab = 'fueling';
+
+/* ================= HELPERS ================= */
+function todayKey(d){ d = d || new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function parseLocal(s){ const p=s.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+function getViewingDate(){ return viewingDate || todayKey(); }
+function daysUntil(dateStr){ const ms = parseLocal(dateStr) - parseLocal(todayKey()); return Math.round(ms/86400000); }
+function getWeekStart(dk){ const d = parseLocal(dk||todayKey()); const dow=(d.getDay()+6)%7; d.setDate(d.getDate()-dow); return d; }
+function fmtDate(dk){ const d=parseLocal(dk); return ['So','Mo','Di','Mi','Do','Fr','Sa'][d.getDay()]+', '+d.getDate()+'.'+(d.getMonth()+1)+'.'; }
+function getPhase(dk){ dk = dk||todayKey(); return PHASES.find(p=>dk>=p.start && dk<=p.end) || PHASES[PHASES.length-1]; }
+function phaseId(){ const w = Math.ceil(daysUntil(RACES[1].date)/7); if(w>11) return 'phase1'; if(w>=5) return 'phase2'; return 'phase3'; }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+function tasksForDay(dk){
+  const dow = parseLocal(dk).getDay();
+  let base;
+  if (dow===1 && S.regenMo[dk]) base = REGEN_TASKS.map(t=>({...t, id:t.id}));
+  else base = TASKS.filter(t=>t.day===dow);
+  const daily = TASKS.filter(t=>t.day==='daily').map(t=>({...t, id:t.id+'-'+dk}));
+  return base.concat(daily);
+}
+function isDone(id,dk){ return !!(S.done[dk]&&S.done[dk][id]); }
+function isSkipped(id,dk){ return !!(S.skipped[dk]&&S.skipped[dk][id]); }
+function toggleDone(id,dk){ S.done[dk]=S.done[dk]||{}; S.done[dk][id]=!S.done[dk][id]; if(S.done[dk][id]&&S.skipped[dk])delete S.skipped[dk][id]; save(); render(); }
+function toggleSkip(id,dk){ S.skipped[dk]=S.skipped[dk]||{}; S.skipped[dk][id]=!S.skipped[dk][id]; if(S.skipped[dk][id]&&S.done[dk])delete S.done[dk][id]; save(); render(); }
+function toggleBrief(dk,i){ S.briefDone[dk]=S.briefDone[dk]||{}; S.briefDone[dk][i]=!S.briefDone[dk][i]; save(); render(); }
+function setFeel(dk,v){ S.feel[dk] = (S.feel[dk]===v? null : v); save(); render(); }
+function setRegen(dk,v){ S.regenMo[dk]=v; save(); render(); }
+
+/* ================= RENDER: HEADER ================= */
+function renderHeader(){
+  const hm = daysUntil(RACES[0].date), bln = daysUntil(RACES[1].date);
+  const ph = getPhase();
+  document.getElementById('header').innerHTML = `
+    <h1>Dein Coach</h1>
+    <div class="sub">Phase: ${esc(ph.name)} · ${todayKey()===getViewingDate()? 'Heute' : fmtDate(getViewingDate())}</div>
+    <div class="chips">
+      ${hm>=0? `<div class="chip">München HM in ${hm} Tagen</div>`:''}
+      <div class="chip accent">Berlin in ${bln} Tagen</div>
+    </div>`;
+}
+
+/* ================= RENDER: HEUTE ================= */
+function renderDays(){
+  const ws = getWeekStart(getViewingDate());
+  let html = '<div class="days">';
+  for(let i=0;i<7;i++){
+    const d = new Date(ws); d.setDate(ws.getDate()+i);
+    const dk = todayKey(d);
+    const tasks = tasksForDay(dk).filter(t=>t.tier==='pflicht');
+    const allDone = tasks.length && tasks.every(t=>isDone(t.id,dk)||isSkipped(t.id,dk));
+    html += `<div class="dayp ${dk===getViewingDate()?'active':''} ${dk===todayKey()?'today':''}" onclick="viewingDate='${dk}';render()">
+      ${['Mo','Di','Mi','Do','Fr','Sa','So'][i]}<span class="dn">${d.getDate()}</span><span class="dot ${allDone?'done':''}"></span></div>`;
+  }
+  return html+'</div>';
+}
+
+function renderBriefing(dk){
+  const b = DATA.briefings[dk];
+  if(!b) return `<div class="card note"><div class="small">${COACH_FALLBACK[0]}</div></div>`;
+  const bd = S.briefDone[dk]||{};
+  const items = (list, prefix) => list.map((t,i)=>{
+    const id = prefix+i;
+    return `<div class="task ${bd[id]?'done':''}" onclick="toggleBrief('${dk}','${id}')">
+      <div class="box">${bd[id]?'✓':''}</div><div><div class="tn">${esc(t)}</div></div></div>`;
+  }).join('');
+  return `<div class="card brief">
+    <div class="headline">${esc(b.headline)}</div>
+    <div class="small">${esc(b.kalender)}</div>
+    <div class="block"><div class="blocklabel">Die Einheit</div><div>${esc(b.einheit)}</div></div>
+    <div class="block"><div class="blocklabel">Minimum — das zählt</div>${items(b.minimum,'min')}</div>
+    ${b.bonus && b.bonus.length? `<div class="block"><div class="blocklabel">Bonus — wenn der Tag es hergibt</div>${items(b.bonus,'bon')}</div>`:''}
+    <div class="block"><div class="blocklabel">Fueling</div><ul class="clean">${b.fueling.map(f=>'<li>'+esc(f)+'</li>').join('')}</ul></div>
+    <div class="block"><div class="blocklabel">⚠ Im Blick</div><div class="small" style="color:var(--ink)">${esc(b.warnung)}</div></div>
+    <div class="coachsays">${esc(b.coachSays)}</div>
+  </div>`;
+}
+
+function renderFeel(dk){
+  if(dk!==todayKey()) return '';
+  const f = S.feel[dk];
+  return `<div class="card">
+    <b style="font-size:13.5px">Wie ist der Akku heute?</b>
+    <div class="feelrow">
+      <button class="feelbtn ${f==='gut'?'sel':''}" onclick="setFeel('${dk}','gut')">Gut 💪</button>
+      <button class="feelbtn ${f==='okay'?'sel':''}" onclick="setFeel('${dk}','okay')">Okay</button>
+      <button class="feelbtn ${f==='platt'?'sel':''}" onclick="setFeel('${dk}','platt')">Platt</button>
+    </div>
+    ${f==='platt'? '<div class="pill-alert" style="margin-bottom:0">Verstanden. Heute zählt nur das Minimum — Standard und Bonus sind gestrichen, nicht verschoben. Ausruhen ist eine Trainingsentscheidung.</div>':''}
+  </div>`;
+}
+
+function renderTask(t, dk){
+  const done = isDone(t.id,dk), skip = isSkipped(t.id,dk);
+  const prog = PROGRESSION[t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'')];
+  const pchip = prog? ` · ${prog[phaseId()]}` : '';
+  return `<div class="task ${done?'done':''} ${skip?'skipped':''}" onclick="toggleDone('${t.id}','${dk}')">
+    <div class="box">${done?'✓':''}</div>
+    <div style="flex:1">
+      <div class="tn">${esc(t.name)}</div>
+      <div class="td">${esc(t.duration)} · ${esc(t.trigger)}${esc(pchip)}</div>
+      <div class="twhy">${esc(t.why)}</div>
+    </div>
+    <button class="skipbtn" onclick="event.stopPropagation();toggleSkip('${t.id}','${dk}')" title="Überspringen">${skip?'↩':'✕'}</button>
+  </div>`;
+}
+
+function renderHeute(){
+  const dk = getViewingDate();
+  const dow = parseLocal(dk).getDay();
+  const tasks = tasksForDay(dk);
+  const platt = S.feel[dk]==='platt';
+  const groups = [
+    {key:'pflicht', label:'Minimum', cls:'t-min'},
+    {key:'activity', label:'Lauf & Aktivität', cls:'t-act'},
+    {key:'standard', label:'Standard', cls:'t-std'},
+    {key:'bonus', label:'Bonus', cls:'t-bon'},
+  ];
+  let html = renderDays();
+  html += renderFeel(dk);
+  html += renderBriefing(dk);
+
+  if(dow===1){
+    html += `<div class="card note"><b style="font-size:13.5px">Gestern Long Run gewesen?</b>
+      <div class="feelrow">
+        <button class="feelbtn ${S.regenMo[dk]?'sel':''}" onclick="setRegen('${dk}',true)">Ja → Regen-Tag</button>
+        <button class="feelbtn ${S.regenMo[dk]===false?'sel':''}" onclick="setRegen('${dk}',false)">Nein → normal</button>
+      </div></div>`;
+  }
+  for(const g of groups){
+    const ts = tasks.filter(t=>t.tier===g.key);
+    if(!ts.length) continue;
+    if(platt && (g.key==='standard'||g.key==='bonus')) continue;
+    html += `<div class="tierlabel ${g.cls}"><b>${g.label}</b><span class="ln"></span></div>`;
+    html += ts.map(t=>renderTask(t,dk)).join('');
+  }
+  // Abend-Hinweis auf morgen
+  if(dk===todayKey() && new Date().getHours()>=16){
+    const tm = new Date(); tm.setDate(tm.getDate()+1);
+    const tk = todayKey(tm);
+    if(DATA.briefings[tk]) html += `<div class="card brief" style="cursor:pointer" onclick="viewingDate='${tk}';render();window.scrollTo(0,0)">
+      <div class="blocklabel" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent)">Abend-Ritual</div>
+      <div class="headline" style="margin:4px 0 2px">Dein Plan für morgen steht →</div>
+      <div class="small">${esc(DATA.briefings[tk].headline)}</div></div>`;
+  }
+  document.getElementById('view-heute').innerHTML = html;
+}
+
+/* ================= RENDER: WOCHE ================= */
+function calcCoverage(){
+  const ws = getWeekStart(todayKey());
+  const counts = {};
+  for(let i=0;i<7;i++){
+    const d = new Date(ws); d.setDate(ws.getDate()+i);
+    const dk = todayKey(d);
+    tasksForDay(dk).forEach(t=>{
+      if(isDone(t.id,dk)) (t.problems||[]).forEach(p=>counts[p]=(counts[p]||0)+1);
+    });
+  }
+  return counts;
+}
+function renderWoche(){
+  let html = '';
+  if(DATA.woche){
+    html += `<div class="card brief"><div class="blocklabel" style="font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Wochen-Fokus</div>
+      <div style="margin-top:4px">${esc(DATA.woche.fokus)}</div>
+      ${DATA.woche.luecken && DATA.woche.luecken.length? `<div class="block" style="margin-top:10px"><div class="blocklabel">Offene Lücken</div><ul class="clean">${DATA.woche.luecken.map(l=>'<li>'+esc(l)+'</li>').join('')}</ul></div>`:''}
+    </div>`;
+  }
+  html += '<h2>Die Woche</h2>';
+  const ws = getWeekStart(todayKey());
+  for(let i=0;i<7;i++){
+    const d = new Date(ws); d.setDate(ws.getDate()+i);
+    const dk = todayKey(d);
+    const ts = tasksForDay(dk).filter(t=>t.tier==='pflicht');
+    const done = ts.filter(t=>isDone(t.id,dk)).length;
+    const b = DATA.briefings[dk];
+    const act = tasksForDay(dk).filter(t=>t.tier==='activity').map(t=>t.name).join(', ');
+    html += `<div class="wkcard" onclick="viewingDate='${dk}';switchView('heute')">
+      <div class="wkd">${['Mo','Di','Mi','Do','Fr','Sa','So'][i]}<br><span class="small">${d.getDate()}.</span></div>
+      <div class="wkinfo">${b? '<b>'+esc(b.headline)+'</b>' : ''}${esc(act||'')}</div>
+      <div class="wkc">${done}/${ts.length}</div>
+    </div>`;
+  }
+  html += '<h2>Körper-Abdeckung diese Woche</h2><div class="card">';
+  const cov = calcCoverage();
+  for(const z of COVERAGE_ZONES){
+    const c = cov[z.id]||0;
+    const pct = Math.min(100, Math.round(c/z.target*100));
+    const cls = c<z.low? 'low' : (pct<70?'mid':'');
+    html += `<div class="zone"><div class="zl"><span>${esc(z.name)}</span><span>${c}/${z.target}</span></div>
+      <div class="zbar"><div class="zfill ${cls}" style="width:${pct}%"></div></div></div>`;
+  }
+  html += '</div>';
+  document.getElementById('view-woche').innerHTML = html;
+}
+
+/* ================= RENDER: TAGEBUCH ================= */
+function saveJournal(){
+  const g = id=>document.getElementById(id).value;
+  const e = {
+    datum: g('j-datum'), art: g('j-art'),
+    km: g('j-km')? parseFloat(g('j-km')) : null,
+    dauer_min: g('j-dauer')? parseInt(g('j-dauer')) : null,
+    anstrengung_1_10: g('j-rpe')? parseInt(g('j-rpe')) : null,
+    knie_0_10: g('j-knie')? parseInt(g('j-knie')) : null,
+    achilles_0_10: g('j-achilles')? parseInt(g('j-achilles')) : null,
+    stimmung_1_5: g('j-stimmung')? parseInt(g('j-stimmung')) : null,
+    notizen: g('j-notiz') || '',
+    ts: new Date().toISOString()
+  };
+  if(!e.datum) return;
+  S.journal.unshift(e); save(); render();
+  const pain = Math.max(e.knie_0_10||0, e.achilles_0_10||0);
+  if(pain>=4) alert('Notiert. Schmerz ≥4/10 — das beobachten wir. Wenn es beim nächsten Lauf wieder auftaucht: 2 Tage Pause-Regel, kein Heldentum.');
+}
+function delJournal(i){ if(confirm('Eintrag löschen?')){ S.journal.splice(i,1); save(); render(); } }
+function exportJournal(){
+  const md = S.journal.slice().reverse().map(e=>
+`---
+datum: ${e.datum}
+art: ${e.art}
+km: ${e.km==null?'null':e.km}
+dauer_min: ${e.dauer_min==null?'null':e.dauer_min}
+anstrengung_1_10: ${e.anstrengung_1_10==null?'null':e.anstrengung_1_10}
+knie_schmerz_0_10: ${e.knie_0_10==null?'null':e.knie_0_10}
+achilles_0_10: ${e.achilles_0_10==null?'null':e.achilles_0_10}
+stimmung_1_5: ${e.stimmung_1_5==null?'null':e.stimmung_1_5}
+---
+${e.notizen}
+`).join('\n');
+  if(navigator.share){ navigator.share({title:'Trainingstagebuch', text:md}).catch(()=>{}); }
+  else { navigator.clipboard.writeText(md).then(()=>alert('Tagebuch kopiert — auf dem Mac bei Claude einfügen, der sortiert es ins Journal.')); }
+}
+function renderBuch(){
+  const today = todayKey();
+  let html = `<h2>Eintrag</h2><div class="card">
+    <div class="frow"><div><label>Datum</label><input type="date" id="j-datum" value="${today}"></div>
+    <div><label>Art</label><select id="j-art"><option>Lauf</option><option>Long Run</option><option>Intervall</option><option>Kraft</option><option>Rad/Schwimmen</option><option>Ruhetag</option></select></div></div>
+    <div class="frow"><div><label>km</label><input type="number" id="j-km" inputmode="decimal" placeholder="–"></div>
+    <div><label>Dauer (min)</label><input type="number" id="j-dauer" inputmode="numeric" placeholder="–"></div>
+    <div><label>Anstrengung 1–10</label><input type="number" id="j-rpe" inputmode="numeric" min="1" max="10" placeholder="–"></div></div>
+    <div class="frow"><div><label>Knie 0–10</label><input type="number" id="j-knie" inputmode="numeric" min="0" max="10" placeholder="0"></div>
+    <div><label>Achilles 0–10</label><input type="number" id="j-achilles" inputmode="numeric" min="0" max="10" placeholder="0"></div>
+    <div><label>Stimmung 1–5</label><input type="number" id="j-stimmung" inputmode="numeric" min="1" max="5" placeholder="–"></div></div>
+    <label>Notizen (Blasen? Schlaf? Kopf?)</label><textarea id="j-notiz" placeholder="Wie war's wirklich?"></textarea>
+    <button class="btn" onclick="saveJournal()">Eintragen</button>
+  </div>`;
+  if(S.journal.length){
+    html += `<h2>Einträge (${S.journal.length})</h2>`;
+    html += `<button class="btn ghost" onclick="exportJournal()">Ans Coach-Gehirn senden (kopieren/teilen)</button>`;
+    html += S.journal.map((e,i)=>{
+      const meta = [e.km!=null? e.km+' km':null, e.dauer_min!=null? e.dauer_min+' min':null,
+        e.anstrengung_1_10!=null? 'RPE '+e.anstrengung_1_10:null,
+        e.knie_0_10? '⚠ Knie '+e.knie_0_10:null, e.achilles_0_10? '⚠ Achilles '+e.achilles_0_10:null].filter(Boolean).join(' · ');
+      return `<div class="jentry"><div class="jh"><b>${fmtDate(e.datum)} — ${esc(e.art)}</b>
+        <button class="del" onclick="delJournal(${i})">löschen</button></div>
+        <div class="jmeta">${esc(meta)}</div>${e.notizen? '<div>'+esc(e.notizen)+'</div>':''}</div>`;
+    }).join('');
+  } else {
+    html += `<div class="card note"><div class="small">Noch keine Einträge. Nach jedem Lauf 30 Sekunden hier — und in ein paar Wochen kannst du deinem Zweifel („ich werde gar nicht besser") Daten entgegenhalten.</div></div>`;
+  }
+  document.getElementById('view-buch').innerHTML = html;
+}
+
+/* ================= RENDER: TRENDS ================= */
+function sparkSVG(vals, color){
+  const w=300, h=54, pad=4;
+  const mn=Math.min(...vals), mx=Math.max(...vals);
+  const x=i=> pad + i*(w-2*pad)/(vals.length-1);
+  const y=v=> mx===mn? h/2 : h-pad-(v-mn)*(h-2*pad)/(mx-mn);
+  const pts = vals.map((v,i)=>x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}">
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${x(vals.length-1)}" cy="${y(vals[vals.length-1])}" r="3.5" fill="${color}"/></svg>`;
+}
+function isoWeek(dk){ const d=parseLocal(dk); const ws=getWeekStart(dk); return todayKey(ws); }
+function renderTrends(){
+  let html = '';
+  if(DATA.datenstand) html += `<div class="pill-alert">Wearable-Daten bis ${fmtDate(DATA.datenstand.wearables)} — ${esc(DATA.datenstand.kommentar)}</div>`;
+  if(DATA.trends && DATA.trends.wochen && DATA.trends.wochen.length){
+    const W = DATA.trends.wochen;
+    const series = [
+      {key:'hrv', name:'HRV (Wochenschnitt)', unit:'ms', color:'#2a7a8a', goodUp:true},
+      {key:'rhr', name:'Ruhepuls', unit:'bpm', color:'#d63a17', goodUp:false},
+      {key:'schlaf', name:'Schlaf', unit:'h', color:'#1c4a6c', goodUp:true},
+    ];
+    html += '<h2>Körper-Trends</h2>';
+    for(const s of series){
+      const vals = W.map(w=>w[s.key]).filter(v=>v!=null);
+      const last = vals[vals.length-1], first = vals[0];
+      html += `<div class="spark"><div class="sl"><b>${s.name}</b><span class="sv">${last} ${s.unit}</span></div>
+        ${sparkSVG(vals, s.color)}
+        <div class="small">${fmtDate(W[0].woche)} → ${fmtDate(W[W.length-1].woche)} · Start: ${first} ${s.unit}</div></div>`;
+    }
+    if(DATA.trends.kommentar) html += `<div class="card"><div class="coachsays" style="border:none;margin:0;padding:0">${esc(DATA.trends.kommentar)}</div></div>`;
+  }
+  // km aus Journal
+  const runs = S.journal.filter(e=>e.km!=null);
+  if(runs.length){
+    const byWeek = {};
+    runs.forEach(e=>{ const wk=isoWeek(e.datum); byWeek[wk]=(byWeek[wk]||0)+e.km; });
+    const weeks = Object.keys(byWeek).sort();
+    html += '<h2>Deine Kilometer (aus dem Tagebuch)</h2><div class="card">';
+    const mx = Math.max(...weeks.map(w=>byWeek[w]));
+    weeks.forEach(w=>{
+      html += `<div class="zone"><div class="zl"><span>Woche ab ${fmtDate(w)}</span><span>${byWeek[w].toFixed(1)} km</span></div>
+        <div class="zbar"><div class="zfill" style="width:${Math.round(byWeek[w]/mx*100)}%"></div></div></div>`;
+    });
+    html += '</div>';
+  }
+  if(DATA.beweise && DATA.beweise.length){
+    html += '<h2>Beweise, dass du besser wirst</h2>';
+    html += DATA.beweise.map(b=>`<div class="card brief"><div class="headline" style="font-size:15.5px">${esc(b.titel)}</div><div class="small" style="color:var(--ink)">${esc(b.text)}</div></div>`).join('');
+  }
+  document.getElementById('view-trends').innerHTML = html;
+}
+
+/* ================= RENDER: WISSEN ================= */
+function renderWissen(){
+  const tabs = [['fueling','Fueling'],['tipps','Tipps-Radar'],['uebungen','Übungen'],['warum','Warum']];
+  let html = '<div class="subtabs">'+tabs.map(t=>`<button class="subtab ${wissenTab===t[0]?'active':''}" onclick="wissenTab='${t[0]}';render()">${t[1]}</button>`).join('')+'</div>';
+  const today = todayKey();
+  if(wissenTab==='fueling'){
+    html += `<div class="card note"><div class="small">Basiert auf Forschung zu Ausdauersportlerinnen in der Perimenopause (u. a. Stacy Sims) — nicht auf Studien an 25-jährigen Männern. Dein Körper spielt nach eigenen Regeln, und das hier sind sie.</div></div>`;
+    html += FUELING.map(f=>`<div class="guide open"><div class="gh" onclick="this.parentElement.classList.toggle('open')">${esc(f.titel)}<span>—</span></div>
+      <div class="gb"><ul class="clean">${f.punkte.map(p=>'<li>'+esc(p)+'</li>').join('')}</ul></div></div>`).join('');
+  }
+  if(wissenTab==='tipps'){
+    const current = TIPPS.filter(t=> today>=t.von && today<=t.bis);
+    const later = TIPPS.filter(t=> today<t.von);
+    html += `<div class="card note"><div class="small">Dein Radar für die Unknown Unknowns — Dinge, die Anfängerinnen kalt erwischen. Rot markiert: jetzt relevant.</div></div>`;
+    const tip = (t,now)=>`<div class="guide tip ${now?'now':''} ${now?'open':''}"><div class="gh" onclick="this.parentElement.classList.toggle('open')">${esc(t.titel)}<span>＋</span></div>
+      <div class="gb">${now?'':'<div class="when" style="color:var(--muted)">ab '+fmtDate(t.von)+'</div>'}<p>${esc(t.text)}</p></div></div>`;
+    html += '<h2>Jetzt relevant</h2>' + current.map(t=>tip(t,true)).join('');
+    if(later.length) html += '<h2>Kommt noch auf dich zu</h2>' + later.sort((a,b)=>a.von<b.von?-1:1).map(t=>tip(t,false)).join('');
+  }
+  if(wissenTab==='uebungen'){
+    html += EXERCISE_GUIDES.map(c=>`<h2>${esc(c.category)}</h2>`+c.items.map(e=>
+      `<div class="guide"><div class="gh" onclick="this.parentElement.classList.toggle('open')">${esc(e.name)}<span>＋</span></div>
+      <div class="gb"><p><span class="gl">Setup</span><br>${esc(e.setup)}</p><p><span class="gl">Bewegung</span><br>${esc(e.bewegung)}</p><p><span class="gl">Tipp</span><br>${esc(e.tipp)}</p></div></div>`).join('')).join('');
+  }
+  if(wissenTab==='warum'){
+    html += `<div class="card note"><div class="small">Dein Körper, deine Diagnosen, deine Übungen — warum was wofür da ist.</div></div>`;
+    html += PROBLEMS.map(p=>`<div class="guide"><div class="gh" onclick="this.parentElement.classList.toggle('open')">${esc(p.name)}<span>＋</span></div>
+      <div class="gb"><p>${esc(p.desc)}</p><p><span class="gl">Deine Übungen dafür</span></p><ul class="clean">${p.exercises.map(e=>'<li>'+esc(e)+'</li>').join('')}</ul></div></div>`).join('');
+  }
+  document.getElementById('view-wissen').innerHTML = html;
+}
+
+/* ================= NAV + BOOT ================= */
+function switchView(v){
+  activeView = v;
+  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
+  document.getElementById('view-'+v).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.v===v));
+  render();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>switchView(t.dataset.v)));
+
+function render(){
+  renderHeader();
+  if(activeView==='heute') renderHeute();
+  if(activeView==='woche') renderWoche();
+  if(activeView==='buch') renderBuch();
+  if(activeView==='trends') renderTrends();
+  if(activeView==='wissen') renderWissen();
+}
+
+fetch('data.json?v='+Date.now())
+  .then(r=>r.json())
+  .then(d=>{ DATA = Object.assign(DATA, d); render(); })
+  .catch(()=>{ render(); });
+render();
+</script>
+</body>
+</html>
