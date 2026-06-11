@@ -343,8 +343,8 @@ const COACH_FALLBACK = [
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},journal:[],regenMo:{},briefDone:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},journal:[],regenMo:{},briefDone:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); }
 
@@ -378,6 +378,7 @@ function toggleDone(id,dk){ S.done[dk]=S.done[dk]||{}; S.done[dk][id]=!S.done[dk
 function toggleSkip(id,dk){ S.skipped[dk]=S.skipped[dk]||{}; S.skipped[dk][id]=!S.skipped[dk][id]; if(S.skipped[dk][id]&&S.done[dk])delete S.done[dk][id]; save(); render(); }
 function toggleBrief(dk,i){ S.briefDone[dk]=S.briefDone[dk]||{}; S.briefDone[dk][i]=!S.briefDone[dk][i]; save(); render(); }
 function setFeel(dk,v){ S.feel[dk] = (S.feel[dk]===v? null : v); save(); render(); }
+function setAchilles(dk,v){ S.achilles[dk] = (S.achilles[dk]===v? null : v); save(); render(); }
 function setRegen(dk,v){ S.regenMo[dk]=v; save(); render(); }
 
 /* ================= RENDER: HEADER ================= */
@@ -431,15 +432,24 @@ function renderBriefing(dk){
 
 function renderFeel(dk){
   if(dk!==todayKey()) return '';
-  const f = S.feel[dk];
+  const f = S.feel[dk], a = S.achilles[dk];
   return `<div class="card">
-    <b style="font-size:13.5px">Wie ist der Akku heute?</b>
+    <b style="font-size:13.5px">Morgen-Check</b> <span class="small">— gleich nach dem Aufstehen</span>
+    <div class="small" style="margin-top:8px">Wie ist der Akku?</div>
     <div class="feelrow">
       <button class="feelbtn ${f==='gut'?'sel':''}" onclick="setFeel('${dk}','gut')">Gut 💪</button>
       <button class="feelbtn ${f==='okay'?'sel':''}" onclick="setFeel('${dk}','okay')">Okay</button>
       <button class="feelbtn ${f==='platt'?'sel':''}" onclick="setFeel('${dk}','platt')">Platt</button>
     </div>
-    ${f==='platt'? '<div class="pill-alert" style="margin-bottom:0">Verstanden. Heute zählt nur das Minimum — Standard und Bonus sind gestrichen, nicht verschoben. Ausruhen ist eine Trainingsentscheidung.</div>':''}
+    ${f==='platt'? '<div class="pill-alert">Verstanden. Heute zählt nur das Minimum — Standard und Bonus sind gestrichen, nicht verschoben. Ausruhen ist eine Trainingsentscheidung.</div>':''}
+    <div class="small" style="margin-top:8px">Achillessehne beim Aufstehen?</div>
+    <div class="feelrow">
+      <button class="feelbtn ${a==='ok'?'sel':''}" onclick="setAchilles('${dk}','ok')">Locker</button>
+      <button class="feelbtn ${a==='kurz'?'sel':''}" onclick="setAchilles('${dk}','kurz')">Steif &lt;5 min</button>
+      <button class="feelbtn ${a==='lang'?'sel':''}" onclick="setAchilles('${dk}','lang')">Steif &gt;5 min</button>
+    </div>
+    ${a==='kurz'? '<div class="pill-alert" style="margin-bottom:0;border-color:var(--amber);color:var(--amber);background:#f3efe2">Grün-gelb: Kurze Morgensteifigkeit ist bei Sehnen normal. Heute laufen ist okay — aber Wadenheber nicht schwänzen und beobachten, ob es mehr wird.</div>':''}
+    ${a==='lang'? '<div class="pill-alert" style="margin-bottom:0">Gelb: Über 5 min steif = die Sehne meldet Überlastung. Heute kein Tempo, im Zweifel Lauf tauschen gegen Rad/Schwimmen. Wadenheber nur isometrisch. Bleibt es 3 Tage so → Ampel rot, Arzt. Und: ins Tagebuch damit.</div>':''}
   </div>`;
 }
 
@@ -587,7 +597,8 @@ ${e.notizen}
 }
 function renderBuch(){
   const today = todayKey();
-  let html = `<h2>Eintrag</h2><div class="card">
+  let html = `<div class="card note"><div class="small"><b>Voice-first:</b> Am Mac erzählst du deinen Lauf einfach Claude Code („14 km, 1:20, Knie ruhig") — das landet direkt im Journal. Dieses Formular hier ist für unterwegs, wenn der Mac weit weg ist.</div></div>
+  <h2>Eintrag</h2><div class="card">
     <div class="frow"><div><label>Datum</label><input type="date" id="j-datum" value="${today}"></div>
     <div><label>Art</label><select id="j-art"><option>Lauf</option><option>Long Run</option><option>Intervall</option><option>Kraft</option><option>Rad/Schwimmen</option><option>Ruhetag</option></select></div></div>
     <div class="frow"><div><label>km</label><input type="number" id="j-km" inputmode="decimal" placeholder="–"></div>
@@ -648,19 +659,24 @@ function renderTrends(){
     }
     if(DATA.trends.kommentar) html += `<div class="card"><div class="coachsays" style="border:none;margin:0;padding:0">${esc(DATA.trends.kommentar)}</div></div>`;
   }
-  // km aus Journal
-  const runs = S.journal.filter(e=>e.km!=null);
-  if(runs.length){
-    const byWeek = {};
-    runs.forEach(e=>{ const wk=isoWeek(e.datum); byWeek[wk]=(byWeek[wk]||0)+e.km; });
-    const weeks = Object.keys(byWeek).sort();
-    html += '<h2>Deine Kilometer (aus dem Tagebuch)</h2><div class="card">';
+  // km pro Woche: Mac-Journal (data.json) ist Quelle der Wahrheit, App-Tagebuch nur Fallback
+  let byWeek = {}, kmQuelle = '';
+  if(DATA.trends && DATA.trends.kmWochen && DATA.trends.kmWochen.length){
+    DATA.trends.kmWochen.forEach(w=>{ byWeek[w.woche]=w.km; });
+    kmQuelle = 'Quelle: dein Journal auf dem Mac';
+  } else {
+    S.journal.filter(e=>e.km!=null).forEach(e=>{ const wk=isoWeek(e.datum); byWeek[wk]=(byWeek[wk]||0)+e.km; });
+    kmQuelle = 'Quelle: App-Tagebuch';
+  }
+  const weeks = Object.keys(byWeek).sort();
+  if(weeks.length){
+    html += '<h2>Deine Kilometer</h2><div class="card">';
     const mx = Math.max(...weeks.map(w=>byWeek[w]));
     weeks.forEach(w=>{
       html += `<div class="zone"><div class="zl"><span>Woche ab ${fmtDate(w)}</span><span>${byWeek[w].toFixed(1)} km</span></div>
         <div class="zbar"><div class="zfill" style="width:${Math.round(byWeek[w]/mx*100)}%"></div></div></div>`;
     });
-    html += '</div>';
+    html += `<div class="small" style="margin-top:6px">${kmQuelle}</div></div>`;
   }
   if(DATA.beweise && DATA.beweise.length){
     html += '<h2>Beweise, dass du besser wirst</h2>';
