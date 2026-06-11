@@ -578,8 +578,10 @@ function saveJournal(){
   if(pain>=4) alert('Notiert. Schmerz ≥4/10 — das beobachten wir. Wenn es beim nächsten Lauf wieder auftaucht: 2 Tage Pause-Regel, kein Heldentum.');
 }
 function delJournal(i){ if(confirm('Eintrag löschen?')){ S.journal.splice(i,1); save(); render(); } }
-function exportJournal(){
-  const md = S.journal.slice().reverse().map(e=>
+function exportAll(){
+  let md = '# App-Export vom ' + todayKey() + '\n';
+  if(S.journal.length){
+    md += '\n## Tagebuch (in der App erfasst)\n\n' + S.journal.slice().reverse().map(e=>
 `---
 datum: ${e.datum}
 art: ${e.art}
@@ -592,8 +594,21 @@ stimmung_1_5: ${e.stimmung_1_5==null?'null':e.stimmung_1_5}
 ---
 ${e.notizen}
 `).join('\n');
-  if(navigator.share){ navigator.share({title:'Trainingstagebuch', text:md}).catch(()=>{}); }
-  else { navigator.clipboard.writeText(md).then(()=>alert('Tagebuch kopiert — auf dem Mac bei Claude einfügen, der sortiert es ins Journal.')); }
+  }
+  const checkDays = [...new Set([...Object.keys(S.feel),...Object.keys(S.achilles)])].sort();
+  if(checkDays.length){
+    md += '\n## Morgen-Checks\n' + checkDays.map(d=>`- ${d}: Akku ${S.feel[d]||'–'} · Achilles ${S.achilles[d]||'–'}`).join('\n') + '\n';
+  }
+  const NAME = {}; TASKS.concat(REGEN_TASKS).forEach(t=>NAME[t.id]=t.name);
+  const doneDays = Object.keys(S.done).sort();
+  let doneMd = '';
+  doneDays.forEach(dk=>{
+    const ids = Object.keys(S.done[dk]).filter(id=>S.done[dk][id]);
+    if(ids.length) doneMd += `- ${dk}: ${ids.map(id=>NAME[id.replace(/-\d{4}-\d{2}-\d{2}$/,'')]||id).join(', ')}\n`;
+  });
+  if(doneMd) md += '\n## Abgehakte Übungen\n' + doneMd;
+  if(navigator.share){ navigator.share({title:'Coach App-Export', text:md}).catch(()=>{}); }
+  else { navigator.clipboard.writeText(md).then(()=>alert('Alles kopiert — auf dem Mac bei Claude einfügen, der sortiert es ein.')); }
 }
 function renderBuch(){
   const today = todayKey();
@@ -610,9 +625,9 @@ function renderBuch(){
     <label>Notizen (Blasen? Schlaf? Kopf?)</label><textarea id="j-notiz" placeholder="Wie war's wirklich?"></textarea>
     <button class="btn" onclick="saveJournal()">Eintragen</button>
   </div>`;
+  html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
   if(S.journal.length){
     html += `<h2>Einträge (${S.journal.length})</h2>`;
-    html += `<button class="btn ghost" onclick="exportJournal()">Ans Coach-Gehirn senden (kopieren/teilen)</button>`;
     html += S.journal.map((e,i)=>{
       const meta = [e.km!=null? e.km+' km':null, e.dauer_min!=null? e.dauer_min+' min':null,
         e.anstrengung_1_10!=null? 'RPE '+e.anstrengung_1_10:null,
