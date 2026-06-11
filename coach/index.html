@@ -84,6 +84,9 @@ textarea{min-height:70px;resize:vertical}
 label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:3px}
 .btn{display:block;width:100%;background:var(--accent);color:#fff;border:none;border-radius:11px;padding:13px;font-size:15px;font-weight:600;margin:12px 0;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.micbtn{width:62px;height:62px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:24px;cursor:pointer}
+.micbtn.rec{background:var(--green);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .jentry{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:12px;margin:8px 0;font-size:13.5px}
 .jentry .jh{display:flex;justify-content:space-between;align-items:baseline}
 .jentry .jh b{font-family:Georgia,serif;font-style:italic;font-size:15px}
@@ -559,23 +562,71 @@ function renderWoche(){
 }
 
 /* ================= RENDER: TAGEBUCH ================= */
-function saveJournal(){
-  const g = id=>document.getElementById(id).value;
-  const e = {
-    datum: g('j-datum'), art: g('j-art'),
-    km: g('j-km')? parseFloat(g('j-km')) : null,
-    dauer_min: g('j-dauer')? parseInt(g('j-dauer')) : null,
-    anstrengung_1_10: g('j-rpe')? parseInt(g('j-rpe')) : null,
-    knie_0_10: g('j-knie')? parseInt(g('j-knie')) : null,
-    achilles_0_10: g('j-achilles')? parseInt(g('j-achilles')) : null,
-    stimmung_1_5: g('j-stimmung')? parseInt(g('j-stimmung')) : null,
-    notizen: g('j-notiz') || '',
-    ts: new Date().toISOString()
-  };
-  if(!e.datum) return;
-  S.journal.unshift(e); save(); render();
-  const pain = Math.max(e.knie_0_10||0, e.achilles_0_10||0);
-  if(pain>=4) alert('Notiert. Schmerz ≥4/10 — das beobachten wir. Wenn es beim nächsten Lauf wieder auftaucht: 2 Tage Pause-Regel, kein Heldentum.');
+function parseEntry(text){
+  const t = text.toLowerCase();
+  let km=null, m=t.match(/(\d+[.,]?\d*)\s*(?:km|kilometer)/); if(m) km=parseFloat(m[1].replace(',','.'));
+  let dauer=null;
+  m=t.match(/(\d+):(\d{2})/); if(m) dauer=parseInt(m[1])*60+parseInt(m[2]);
+  if(dauer==null){ m=t.match(/(\d+)\s*(?:min|minuten)/); if(m) dauer=parseInt(m[1]); }
+  if(dauer==null){ m=t.match(/(\d+[.,]?\d*)\s*stunden?/); if(m) dauer=Math.round(parseFloat(m[1].replace(',','.'))*60); }
+  const pain=(word)=>{ const mm=t.match(new RegExp(word+'\\D{0,14}?(\\d+)')); if(mm){const v=parseInt(mm[1]); if(v<=10) return v;} return null; };
+  let art='Lauf';
+  if(/intervall/.test(t)) art='Intervall';
+  else if(/long ?run|langer lauf/.test(t)) art='Long Run';
+  else if(/kraft|hantel|gym|coach-plan/.test(t)) art='Kraft';
+  else if(/rad ?fahr|fahrrad|schwimm/.test(t)) art='Rad/Schwimmen';
+  else if(/ruhetag|pausentag/.test(t)) art='Ruhetag';
+  else if(!/lauf|gelaufen|gejoggt|km|kilometer/.test(t)) art='Training';
+  let rpe=null; m=t.match(/(?:anstrengung|rpe)\D{0,10}?(\d+)/); if(m && parseInt(m[1])<=10) rpe=parseInt(m[1]);
+  const d=new Date();
+  if(/vorgestern/.test(t)) d.setDate(d.getDate()-2);
+  else if(/gestern/.test(t)) d.setDate(d.getDate()-1);
+  return { datum:todayKey(d), art, km, dauer, rpe, knie:pain('knie'), achilles:pain('achill') };
+}
+function saveVoice(){
+  const ta = document.getElementById('v-text');
+  const text = ta.value.trim();
+  if(!text) return;
+  if(recActive){ try{rec.stop();}catch(e){} }
+  const p = parseEntry(text);
+  S.journal.unshift({ datum:p.datum, art:p.art, km:p.km, dauer_min:p.dauer,
+    anstrengung_1_10:p.rpe, knie_0_10:p.knie, achilles_0_10:p.achilles, stimmung_1_5:null,
+    notizen:text, ts:new Date().toISOString() });
+  save(); render();
+  if((p.knie||0)>=4 || (p.achilles||0)>=4) alert('Notiert — und gehört: Schmerz ab 4/10. Das beobachten wir. Taucht es beim nächsten Mal wieder auf: 2 Tage Pause-Regel.');
+}
+/* Diktat direkt in der App (wo der Browser es kann) */
+let rec=null, recActive=false;
+function micSupported(){ return ('webkitSpeechRecognition' in window) || ('SpeechRecognition' in window); }
+function updateMicUI(){
+  const b=document.getElementById('micbtn'), h=document.getElementById('michint');
+  if(!b) return;
+  b.classList.toggle('rec', recActive);
+  b.textContent = recActive? '■' : '🎤';
+  if(h) h.textContent = recActive? 'Ich höre zu … antippen zum Stoppen' : 'Antippen und einfach erzählen';
+}
+function toggleMic(){
+  if(recActive){ try{rec.stop();}catch(e){} return; }
+  try{
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    rec = new SR(); rec.lang='de-DE'; rec.continuous=true; rec.interimResults=true;
+    const ta = document.getElementById('v-text');
+    const base = ta.value? ta.value.trim()+' ' : '';
+    rec.onresult = ev=>{
+      let fin='', interim='';
+      for(let i=0;i<ev.results.length;i++){
+        if(ev.results[i].isFinal) fin += ev.results[i][0].transcript+' ';
+        else interim += ev.results[i][0].transcript;
+      }
+      ta.value = (base+fin+interim).trim();
+    };
+    rec.onstart = ()=>{ recActive=true; updateMicUI(); };
+    rec.onend = ()=>{ recActive=false; updateMicUI(); };
+    rec.onerror = ()=>{ recActive=false; updateMicUI(); };
+    rec.start();
+  }catch(e){
+    const w=document.getElementById('micwrap'); if(w) w.style.display='none';
+  }
 }
 function delJournal(i){ if(confirm('Eintrag löschen?')){ S.journal.splice(i,1); save(); render(); } }
 function exportAll(){
@@ -611,19 +662,14 @@ ${e.notizen}
   else { navigator.clipboard.writeText(md).then(()=>alert('Alles kopiert — auf dem Mac bei Claude einfügen, der sortiert es ein.')); }
 }
 function renderBuch(){
-  const today = todayKey();
-  let html = `<div class="card note"><div class="small"><b>Voice-first:</b> Am Mac erzählst du deinen Lauf einfach Claude Code („14 km, 1:20, Knie ruhig") — das landet direkt im Journal. Dieses Formular hier ist für unterwegs, wenn der Mac weit weg ist.</div></div>
-  <h2>Eintrag</h2><div class="card">
-    <div class="frow"><div><label>Datum</label><input type="date" id="j-datum" value="${today}"></div>
-    <div><label>Art</label><select id="j-art"><option>Lauf</option><option>Long Run</option><option>Intervall</option><option>Kraft</option><option>Rad/Schwimmen</option><option>Ruhetag</option></select></div></div>
-    <div class="frow"><div><label>km</label><input type="number" id="j-km" inputmode="decimal" placeholder="–"></div>
-    <div><label>Dauer (min)</label><input type="number" id="j-dauer" inputmode="numeric" placeholder="–"></div>
-    <div><label>Anstrengung 1–10</label><input type="number" id="j-rpe" inputmode="numeric" min="1" max="10" placeholder="–"></div></div>
-    <div class="frow"><div><label>Knie 0–10</label><input type="number" id="j-knie" inputmode="numeric" min="0" max="10" placeholder="0"></div>
-    <div><label>Achilles 0–10</label><input type="number" id="j-achilles" inputmode="numeric" min="0" max="10" placeholder="0"></div>
-    <div><label>Stimmung 1–5</label><input type="number" id="j-stimmung" inputmode="numeric" min="1" max="5" placeholder="–"></div></div>
-    <label>Notizen (Blasen? Schlaf? Kopf?)</label><textarea id="j-notiz" placeholder="Wie war's wirklich?"></textarea>
-    <button class="btn" onclick="saveJournal()">Eintragen</button>
+  let html = `<h2>Erzähl einfach</h2><div class="card">
+    <textarea id="v-text" style="min-height:110px" placeholder="z. B.: 14 km gelaufen in 1:20, Knie ruhig, ab km 10 schwer. Neues Gel probiert, Magen okay. — Kilometer, Dauer, Art und Schmerzen erkenne ich von selbst, auch ein Wort wie gestern."></textarea>
+    <div id="micwrap" style="display:${micSupported()?'block':'none'};text-align:center;margin-top:12px">
+      <button id="micbtn" class="micbtn" onclick="toggleMic()">🎤</button>
+      <div class="small" id="michint" style="margin-top:6px">Antippen und einfach erzählen</div>
+    </div>
+    ${micSupported()? '' : '<div class="small" style="margin-top:10px">Diktieren: einfach die 🎤-Taste auf der Tastatur drücken und reden.</div>'}
+    <button class="btn" onclick="saveVoice()">Sichern — den Rest verstehe ich selbst</button>
   </div>`;
   html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
   if(S.journal.length){
