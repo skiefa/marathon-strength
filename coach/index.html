@@ -383,7 +383,122 @@ function loadState(){
   try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
   catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}; }
 }
-function save(){ localStorage.setItem(KEY, JSON.stringify(S)); }
+function save(){ localStorage.setItem(KEY, JSON.stringify(S)); scheduleSync(); }
+
+/* ================= BACKUP-SYNC (privates GitHub-Repo skiefa/coach-state) =================
+   Jede Änderung wird automatisch (4 s debounced) nach GitHub gesichert.
+   Beim Öffnen wird der Remote-Stand geladen und per Vereinigung gemerged —
+   so konvergieren auch getrennte iOS-Speicher (Safari vs. Home-Bildschirm-App). */
+const SYNC_API = 'https://api.github.com/repos/skiefa/coach-state/contents/state.json';
+let syncSha = null, syncTimer = null, syncBusy = false, syncQueued = false;
+let SYNC = loadSync();
+function loadSync(){ try { return JSON.parse(localStorage.getItem('coach-sync')||'{}'); } catch(e){ return {}; } }
+function setSync(p){ SYNC = Object.assign(SYNC, p); localStorage.setItem('coach-sync', JSON.stringify(SYNC)); }
+function syncToken(){ return SYNC.token || ''; }
+function ghHeaders(){ return { 'Authorization':'Bearer '+syncToken(), 'Accept':'application/vnd.github+json' }; }
+function b64enc(s){ return btoa(unescape(encodeURIComponent(s))); }
+function b64dec(s){ return decodeURIComponent(escape(atob(String(s).replace(/\s/g,'')))); }
+function scheduleSync(){ if(!syncToken()) return; setSync({dirty:true}); renderSyncCard(); clearTimeout(syncTimer); syncTimer = setTimeout(syncUp, 4000); }
+
+async function syncUp(){
+  if(!syncToken()) return;
+  if(syncBusy){ syncQueued = true; return; }
+  syncBusy = true;
+  try {
+    if(syncSha === null){
+      const g = await fetch(SYNC_API, {headers: ghHeaders(), cache:'no-store'});
+      if(g.status===200) syncSha = (await g.json()).sha;
+      else if(g.status===404) syncSha = '';
+      else throw new Error(g.status===401? 'Token ungültig oder abgelaufen' : 'HTTP '+g.status);
+    }
+    const content = b64enc(JSON.stringify({savedAt:new Date().toISOString(), state:S}, (k,v)=> k==='_edit'? undefined : v));
+    const body = {message:'Backup', content};
+    if(syncSha) body.sha = syncSha;
+    let r = await fetch(SYNC_API, {method:'PUT', headers:ghHeaders(), body:JSON.stringify(body)});
+    if(r.status===409 || r.status===422){
+      const g = await fetch(SYNC_API, {headers: ghHeaders(), cache:'no-store'});
+      if(g.status===200) body.sha = (await g.json()).sha;
+      r = await fetch(SYNC_API, {method:'PUT', headers:ghHeaders(), body:JSON.stringify(body)});
+    }
+    if(!r.ok) throw new Error(r.status===401? 'Token ungültig oder abgelaufen' : 'HTTP '+r.status);
+    syncSha = (await r.json()).content.sha;
+    setSync({lastUp:new Date().toISOString(), dirty:false, error:null});
+  } catch(e){
+    setSync({error: String(e && e.message || e)});
+  }
+  syncBusy = false;
+  renderSyncCard();
+  if(syncQueued){ syncQueued = false; scheduleSync(); }
+}
+
+async function syncDown(){
+  if(!syncToken()) return;
+  try {
+    const r = await fetch(SYNC_API, {headers: ghHeaders(), cache:'no-store'});
+    if(r.status===404){ setSync({error:null}); scheduleSync(); return; }
+    if(!r.ok) throw new Error(r.status===401? 'Token ungültig oder abgelaufen' : 'HTTP '+r.status);
+    const j = await r.json(); syncSha = j.sha;
+    const remote = JSON.parse(b64dec(j.content));
+    const before = JSON.stringify(S);
+    mergeState(remote && remote.state || {});
+    const after = JSON.stringify(S);
+    localStorage.setItem(KEY, after);
+    setSync({lastDown:new Date().toISOString(), error:null});
+    if(after !== JSON.stringify(remote && remote.state || {})) scheduleSync();
+    else setSync({dirty:false});
+    if(after !== before) render(); else renderSyncCard();
+  } catch(e){ setSync({error:String(e && e.message || e)}); renderSyncCard(); }
+}
+
+/* Vereinigung statt Überschreiben: nichts geht verloren.
+   Bei direktem Konflikt (gleicher Tag, gleiches Feld) gewinnt der lokale Wert. */
+function mergeState(R){
+  ['done','skipped','briefDone','extra'].forEach(k=>{ R[k]=R[k]||{}; S[k]=S[k]||{}; });
+  ['done','skipped','briefDone'].forEach(k=>{
+    for(const dk in R[k]) S[k][dk] = Object.assign({}, R[k][dk], S[k][dk]||{});
+  });
+  ['feel','achilles','regenMo'].forEach(k=>{ S[k] = Object.assign({}, R[k]||{}, S[k]||{}); });
+  for(const dk in R.extra){
+    const have = new Set((S.extra[dk]||[]).map(x=>x.id+'|'+x.von));
+    S.extra[dk] = (S.extra[dk]||[]).concat((R.extra[dk]||[]).filter(x=>!have.has(x.id+'|'+x.von)));
+  }
+  const jkey = e => e.ts || (e.datum+'|'+(e.notizen||'').slice(0,60));
+  const have = new Set((S.journal||[]).map(jkey));
+  (R.journal||[]).forEach(e=>{ if(!have.has(jkey(e))) S.journal.push(e); });
+  S.journal.sort((a,b)=> (b.datum+'|'+(b.ts||'')).localeCompare(a.datum+'|'+(a.ts||'')));
+}
+
+function saveSyncToken(){
+  const el = document.getElementById('sync-token');
+  const t = el && el.value.trim();
+  if(!t) return;
+  setSync({token:t, error:null});
+  syncSha = null;
+  syncDown();
+  render();
+}
+function fmtSyncTime(iso){ return iso? new Date(iso).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '–'; }
+function syncCardHTML(){
+  if(!syncToken()){
+    return `<div class="card warn"><b style="font-size:16px">Backup nicht aktiv</b>
+      <div class="small" style="margin:4px 0 8px">Deine Einträge leben nur in diesem Browser und können verloren gehen. Einmal Token einfügen — ab dann sichert die App automatisch nach GitHub (privat) und stellt auf jedem Gerät wieder her. Anleitung: hat dir Claude auf dem Mac gegeben.</div>
+      <input type="password" id="sync-token" placeholder="GitHub-Token (github_pat_…)" autocomplete="off">
+      <button class="btn" style="margin:8px 0 2px" onclick="saveSyncToken()">Backup aktivieren</button></div>`;
+  }
+  return `<div class="card ${SYNC.error?'warn':'note'}">
+    <div style="display:flex;justify-content:space-between;align-items:baseline">
+      <b style="font-size:16px">${SYNC.error? 'Backup-Problem ⚠️' : 'Backup aktiv ✓'}</b>
+      <button class="del" onclick="if(confirm('Token wirklich entfernen?')){setSync({token:null});render()}">Token ändern</button>
+    </div>
+    <div class="small">${SYNC.error? esc(SYNC.error)+' — ' : ''}zuletzt gesichert: ${fmtSyncTime(SYNC.lastUp)}${SYNC.dirty? ' · ungesicherte Änderungen':''}</div>
+    ${SYNC.error||SYNC.dirty? `<button class="btn ghost" style="margin:8px 0 2px" onclick="syncSha=null;syncUp()">Jetzt sichern</button>`:''}
+  </div>`;
+}
+function renderSyncCard(){
+  const el = document.getElementById('sync-wrap');
+  if(el) el.innerHTML = syncCardHTML();
+}
+addEventListener('pagehide', ()=>{ if(SYNC.dirty && syncToken() && !syncBusy){ clearTimeout(syncTimer); syncUp(); } });
 
 let DATA = { briefings:{}, woche:null, trends:null, beweise:[], datenstand:null };
 let viewingDate = null;
@@ -804,6 +919,7 @@ function renderBuch(){
     <div class="small" id="v-erkannt" style="margin-top:6px"></div>
     <button class="btn" onclick="saveVoice()">Sichern</button>
   </div>`;
+  html += `<div id="sync-wrap">${syncCardHTML()}</div>`;
   html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
   if(S.journal.length){
     html += `<h2>Einträge (${S.journal.length})</h2>`;
@@ -947,6 +1063,7 @@ fetch('data.json?v='+Date.now())
   .then(d=>{ DATA = Object.assign(DATA, d); render(); })
   .catch(()=>{ render(); });
 render();
+syncDown();
 </script>
 </body>
 </html>
