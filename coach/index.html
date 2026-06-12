@@ -482,7 +482,7 @@ function syncCardHTML(){
   if(!syncToken()){
     return `<div class="card warn"><b style="font-size:16px">Backup nicht aktiv</b>
       <div class="small" style="margin:4px 0 8px">Deine Einträge leben nur in diesem Browser und können verloren gehen. Einmal Token einfügen — ab dann sichert die App automatisch nach GitHub (privat) und stellt auf jedem Gerät wieder her. Anleitung: hat dir Claude auf dem Mac gegeben.</div>
-      <input type="password" id="sync-token" placeholder="GitHub-Token (github_pat_…)" autocomplete="off">
+      <input type="text" id="sync-token" placeholder="GitHub-Token (github_pat_…)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <button class="btn" style="margin:8px 0 2px" onclick="saveSyncToken()">Backup aktivieren</button></div>`;
   }
   return `<div class="card ${SYNC.error?'warn':'note'}">
