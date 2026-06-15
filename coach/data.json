@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-15T21:00:00+02:00",
+  "generated": "2026-06-15T21:30:00+02:00",
   "datenstand": {
     "wearables": "2026-06-15",
-    "kommentar": "Morgen-Checks aktuell und durchweg grün (Akku gut, Achilles locker bis heute). Numerische HRV/Schlaf/Puls-Werte fehlen aber seit 08.06. — ein Health-/TP-Export nach data/incoming/ würde die Trend-Charts wieder mit echten Zahlen füttern. Zweite Erinnerung, ich sag's nur."
+    "kommentar": "TP-Daten bis heute da — danke! HRV auf sauber getrackten Nächten Ø 37, Ruhepuls 54, Schlaf 7,8 h, Body Battery Ø 68, Stress niedrig (Ø 18). Heute früh: HRV 36, Schlaf 8,1 h — solider Wochenstart. Hinweis: 06.–09.06. lag die Uhr nachts nicht an (Schlaf 0,0 h), die HRV-Werte dieser Nächte sind Geräte-Artefakte, nicht echte Tiefs — die habe ich rausgerechnet."
   },
   "briefings": {
     "2026-06-16": {
@@ -85,7 +85,7 @@
     ]
   },
   "trends": {
-    "kommentar": "Der Long Run vom Sonntag ist das Highlight: 15.8 km, 2,5 h, 71 % in Zone 2 — locker gelaufen, ohne Schmerz. Das ist dein längster Lauf seit Monaten, und du hast ihn aerob im Griff gehabt statt dich durchzukämpfen. Die Morgen-Checks waren die ganze Woche grün. Numerische HRV/Schlaf-Zahlen fehlen seit dem 08.06. — die Charts hängen, bis ein Export kommt.",
+    "kommentar": "Jetzt mit echten TP-Zahlen: Trainingswoche mit drei Läufen (Intervalle 9,6 km, Tempolauf 6,8 km, Long Run 15,8 km = 32 km), dazu Schwimmen, Rad, Yoga, täglich Meditation. HRV auf sauber getrackten Nächten Ø 37 (Baseline-Niveau), Ruhepuls 54, Stress niedrig — dein Körper trägt die Last gut. Der Long-Run-Puls von Ø 129 ist mustergültig aerob, genau wie vom Coach verordnet. Der Ruhepuls kroch über die Woche von 51 auf 56 (Ermüdung vom Aufbau + Long Run) und war Montag wieder bei 53 — sauberes Erholungssignal.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -107,7 +107,7 @@
       {"woche": "2026-05-18", "hrv": 36.9, "rhr": 53.9, "schlaf": 8.1},
       {"woche": "2026-05-25", "hrv": 36.6, "rhr": 52.6, "schlaf": 8.4},
       {"woche": "2026-06-01", "hrv": 38.3, "rhr": 52.9, "schlaf": 8.5},
-      {"woche": "2026-06-08", "hrv": 38.5, "rhr": 52.8, "schlaf": 7.7}
+      {"woche": "2026-06-08", "hrv": 37.0, "rhr": 53.7, "schlaf": 7.8}
     ],
     "kmWochen": [
       {"woche": "2026-04-27", "km": 11.3},
@@ -125,12 +125,12 @@
       "text": "Sonntag: 15.8 km in 2,5 h, 71 % sauber in Zone 2 (127–140 bpm), Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. Jetzt läufst du 3 km weiter — aerob im Griff. Genau so wächst Marathon-Ausdauer."
     },
     {
-      "titel": "Acht Tage, acht mal angetreten",
-      "text": "Wall Sit an 8 von 8 Tagen, Achilles-Morgen-Check 4 von 4 Tagen locker. Keine spektakuläre Einzelleistung — aber genau diese unsichtbare Konstanz ist es, die dich im September 42 km trägt."
+      "titel": "Deine Intervalle sitzen — sagt nicht nur die Uhr",
+      "text": "Intervalleinheit am 09.06.: Ø-HF 134, Spitzen bis 147, TSS 105 — und der Kommentar deines Coaches: „sehr sehr sehr schön gemacht!\". Du läufst die harten Tage hart und die lockeren locker. Genau diese Polarisierung baut Tempo, ohne dich zu verheizen."
     },
     {
       "titel": "Dein Herz arbeitet ökonomischer",
-      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,8 Anfang Juni. Fast drei Schläge weniger pro Minute für denselben Job — Ausdauer-Anpassung, dokumentiert über fünf Monate."
+      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 53,7 jetzt, an Ruhetagen sogar 51–53. Und nach dem 15,8-km-Long-Run war er am nächsten Morgen direkt wieder unten. Ein Herz, das so schnell erholt, ist gut trainiert."
     }
   ]
 }
