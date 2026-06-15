@@ -1,92 +1,91 @@
 {
-  "generated": "2026-06-12T07:30:00+02:00",
+  "generated": "2026-06-15T21:00:00+02:00",
   "datenstand": {
-    "wearables": "2026-06-12",
-    "kommentar": "Heute: Schlaf ~6 h (selbst gemeldet), starke Müdigkeit. Letzte Wearable-Messung Donnerstag: HRV 38, RHR 53 — Freitag-Werte liegen noch nicht vor, aber 6 h Schlaf bedeuten wahrscheinlich niedrigere HRV heute. TP-CSV liegt nur bis 24. April — für Trends nutze ich importierte Wochendaten."
+    "wearables": "2026-06-15",
+    "kommentar": "Morgen-Checks aktuell und durchweg grün (Akku gut, Achilles locker bis heute). Numerische HRV/Schlaf/Puls-Werte fehlen aber seit 08.06. — ein Health-/TP-Export nach data/incoming/ würde die Trend-Charts wieder mit echten Zahlen füttern. Zweite Erinnerung, ich sag's nur."
   },
   "briefings": {
-    "2026-06-12": {
-      "headline": "Builders Day mit 6 h Schlaf — Schaden begrenzen, nicht heroisch sein.",
-      "kalender": "Builders Day 9–22 Uhr. Heute Morgen: ~6 h Schlaf, starke Müdigkeit gemeldet. Das ändert die Taktik: kein Bonus, kein Ehrgeiz — nur Schaden begrenzen und heute Abend früh schlafen.",
-      "einheit": "Kraft bleibt verschoben auf Samstag. Richtige Entscheidung — mit 6 h Schlaf sinkt Kraftleistung um 10–20 %, Verletzungsrisiko steigt. Heute: Minimum, nicht mehr.",
+    "2026-06-16": {
+      "headline": "Quality-Tag: Die eine harte Einheit der Woche.",
+      "kalender": "Tagsüber frei, Lauf-Slot 16–17 Uhr steht im Kalender. Perfektes Fenster. Du bist ausgeruht — Montag Pause, Sonntag-Long-Run sauber verdaut, Morgen-Checks grün.",
+      "einheit": "Intervall- oder Tempolauf, der qualitative Reiz der Woche. 16 Uhr ist gut: aufgewärmt vom Tag, aber nicht erschöpft. Davor 3 min Pre-Run Aktivierung (Po wecken), danach Atemübung für den HRV-Rebound und Wadenheber.",
       "minimum": [
-        "Beckenboden 3 min — morgens oder in der ersten Pause",
-        "Einbeinstand 1 min beim Zähneputzen",
-        "In jeder Event-Pause: aufstehen + 30 sek Hüftbeuger strecken",
-        "Bis 22 Uhr essen fertig — nicht erst im Auto heimfahrend"
+        "Pre-Run Aktivierung 3 min — Clams + Glute Bridge, nicht verhandelbar",
+        "Intervall-/Tempolauf nach Coach-Plan",
+        "Wadenheber 20× + 10× einbeinig nach dem Lauf",
+        "Atemübung 5 min im Cool-Down — bringt die HRV nach dem Reiz zurück"
       ],
-      "bonus": [],
+      "bonus": [
+        "Beckenboden 3 min — die erste der 3 Wocheneinheiten",
+        "Einbeinstand beim Zähneputzen, links zuerst"
+      ],
       "fueling": [
-        "Frühstück JETZT wenn noch nicht: 25–30 g Protein — müde Körper brauchen mehr Protein, nicht mehr Koffein",
-        "Mittags: Protein + komplexe KH, kein Weißbrot-Tief am Nachmittag",
-        "Nachmittag: Nüsse oder ein Stück dunkle Schokolade — kein Zucker-Crash",
-        "Wasser: alle 2 h, Müdigkeit und Dehydration fühlen sich gleich an",
-        "Supplements: D3+K2 + Omega-3 zum Frühstück nicht vergessen (fetthaltiges Essen Pflicht)"
+        "Nicht nüchtern in die Intervalle: 1–2 h vorher kleine KH-Mahlzeit (Banane + Skyr, Toast mit Honig)",
+        "Kaffee vorher ist okay — wirkt leistungsfördernd, zur gewohnten Zeit",
+        "Nach dem Lauf 30–40 g Protein + KH innerhalb 30–40 min — dein Fenster ist kürzer als in Männer-Studien",
+        "Über den Tag: 3–4 Protein-Mahlzeiten à 25–35 g, du bist im Aufbau"
       ],
-      "warnung": "6 h Schlaf + 13-Stunden-Tag = echte Erschöpfung heute Abend. Ziel: vor 23 Uhr im Bett. Kraft morgen funktioniert nur mit 7+ h Schlaf heute Nacht.",
-      "coachSays": "Kein Heldentag. Builders Day überleben, gut essen, früh schlafen. Morgen ist Kraft-Tag."
+      "warnung": "Intervalle sind der Moment, wo die Achillessehne im ermüdeten Zustand getestet wird. Ziehen über 3/10 → abbrechen und ins Tagebuch. Bisher 4 Tage locker — so soll es bleiben.",
+      "coachSays": "Eine harte Einheit pro Woche reicht, aber die machst du dann auch richtig. Halbe Intervalle sind verschenkte Intervalle."
     },
-    "2026-06-13": {
-      "headline": "Friseur, Kraft #3 — und zwei überfällige Anrufe.",
-      "kalender": "Friseur 9:30–11:30 Uhr. Danach freier Tag. Hinweis: Gyn-Termin war bis 31.05 fällig (jetzt 14 Tage über Zeit) und Knie-Recheck bei Dr. Haag bis 28.05 (17 Tage über Zeit). DEXA-Scan-Deadline 30.06. — in 17 Tagen.",
-      "einheit": "Kraft Coach-Plan 30 min — aber erst wenn du ausreichend geschlafen hast. Wenn heute Nacht wieder unter 7 h: Kraft auf Sonntag schieben und Long Run auf 10–12 km kürzen. Bestes Fenster bei gutem Schlaf: 14–17 Uhr.",
+    "2026-06-17": {
+      "headline": "Voller Vormittag — Kraft wandert in den Nachmittag.",
+      "kalender": "Dicht: Physio 8–9 Uhr (Steffi Klinik), Dennis Coworking 9–12, Steinbeis M3 (Teams) 12–12:30. Erst ab ~13 Uhr gehört der Tag dir. Letzte Woche nur eine Kraft-Session geschafft — diese Woche holen wir die Frequenz zurück.",
+      "einheit": "Kraft Coach-Plan 30 min, bestes Fenster 14–16 Uhr nach Verdauungspause. Build-Phase = 3 Sätze, progressiv. Wenn sich die letzten Wochen leicht anfühlten: bei Bulgarian Split + Hip Thrust 1–2 kg drauf. Dazu Side Plank, Beckenboden, Single Leg Deadlift.",
       "minimum": [
-        "Kraft Coach-Plan 30 min (die verschobene Freitags-Session)",
+        "Kraft Coach-Plan 30 min (Nachmittag)",
         "Side Plank 2×30s pro Seite",
-        "Hip Thrust 3×10",
-        "Wadenheber 20× + 10× einbeinig — Achilles-Pflege vor dem Long Run"
+        "Hip Thrust 3×10 — deine wichtigste Glute-Übung",
+        "Beckenboden 3 min — zweite der Woche"
       ],
       "bonus": [
         "Single Leg Deadlift 3×8 pro Seite",
-        "Copenhagen Plank 2×20s — die vergessenen Adduktoren",
-        "Gyn-Termin buchen (Gamma-GT 73, DEXA-Scan, Progesteron — alle drei Punkte in CLAUDE.md)",
-        "Knie-Recheck Dr. Haag anrufen — 16 Tage über Zeit"
+        "Knee Extension Theraband — VMO gegen Patella",
+        "Beim Physio Knie + Achilles ansprechen — und nach Überweisung/Tipp für den überfälligen Knie-Recheck fragen"
       ],
       "fueling": [
-        "60–90 min vor Kraft: kleine Mahlzeit mit KH + Protein (Banane + Skyr geht)",
-        "Nach Kraft: 30 g Protein innerhalb 30–40 min — dein Fenster ist kürzer als in Männer-Studien",
-        "Abends KH-betont: morgen ist Long Run, Glykogenspeicher wollen voll sein",
-        "Früh ins Bett — der Long Run wird morgens gelaufen"
+        "60–90 min vor Kraft kleine Mahlzeit mit KH + Protein — nicht aus dem Coworking-Hunger heraus trainieren",
+        "Nach Kraft 30 g Protein in 30–40 min (Shake, Quark, Skyr)",
+        "Über den vollen Vormittag: Wasser nicht vergessen, Sitzungen fressen Trinkpausen",
+        "Proteinreich zu Mittag, sonst kippt die Kraft am Nachmittag"
       ],
-      "warnung": "HM in 22 Tagen, Taper startet in 16 Tagen (29.06.). Wenn Knie oder Achilles nach Kraft ≥3/10 melden: ins Tagebuch, nicht wegatmen.",
-      "coachSays": "Frische Frisur, zwei Arzt-Anrufe, eine Kraft-Session. In dieser Reihenfolge. Der Coach erwartet Bericht."
+      "warnung": "Physio nutzen: die offenen Punkte (Knie-Recheck überfällig seit 28.05., DEXA-Deadline 30.06.) gehören angesprochen. Kraft erst nach der Verdauungspause, nicht direkt nach dem Steinbeis-Call.",
+      "coachSays": "Ein voller Kalender ist keine Ausrede, nur eine Terminverschiebung. 14 Uhr, Hantel in die Hand."
     },
-    "2026-06-14": {
-      "headline": "Long Run 14 km + Gel-Test — München ist in 21 Tagen.",
-      "kalender": "Frei. Perfekt. Start vor 9 Uhr, bevor es warm wird. HM-Taper beginnt in 15 Tagen (29.06.).",
-      "einheit": "Long Run 14 km, Zone 2 locker. Das ist gleichzeitig der Gel-Test für München — die letzte passende Gelegenheit vor dem Rennen. Pre-Run Aktivierung 3 min vorher. Wadenheber danach.",
+    "2026-06-18": {
+      "headline": "Mamas OP-Tag — heute trägst du, nicht die Beine.",
+      "kalender": "Mama Augen-OP 12 Uhr, du holst sie 12–15 Uhr ab. Emotional und logistisch ein schwerer Tag — der Mittag ist blockiert, der Kopf woanders. Das ist auch eine Belastung, nur ohne Pulsmesser.",
+      "einheit": "Kein Pflicht-Lauf heute. Wenn du den Kopf freikriegen willst: lockerer 30–40-min-Lauf früh am Morgen vor der Klinik — aber locker, kein Tempo. Wenn nicht: völlig okay, dann zählt heute nur das Minimum. Das ist eine Coaching-Entscheidung, kein Versäumnis.",
       "minimum": [
-        "Pre-Run Aktivierung 3 min (nicht verhandelbar)",
-        "12 km Minimum, falls der Tag quer läuft",
-        "Gel-Test: 1 Gel bei km 6 + 1 Gel bei km 10 — die Marke, die du in München nimmst",
-        "30–40 g Protein + KH innerhalb 30–40 min nach dem Lauf"
+        "Pre-Run Aktivierung ODER 5 min Mobilität morgens — irgendeine Bewegung vor dem Tag",
+        "Wall Sit 45 sek beim Kaffee",
+        "Einbeinstand 1 min — links zuerst",
+        "Beckenboden 3 min, wenn ein ruhiger Moment kommt — dritte der Woche"
       ],
       "bonus": [
-        "Volle 14 km — bei richtig guten Beinen 15, nicht mehr, auch wenn es leicht geht",
-        "Blasen-Check nach dem Lauf: Füße inspizieren, Reibestellen notieren"
+        "Lockerer 30–40-min-Lauf früh, falls Zeit und Lust — Zone 2, zum Kopf-Lüften"
       ],
       "fueling": [
-        "2–3 h vorher: Race-Day-Frühstück testen — was du in München essen willst (Toast + Honig + Banane)",
-        "Bei ~85–90 min Laufzeit: Gel bei km 6 + Gel bei km 10, genau die Marke für München",
-        "Alle 20 min trinken, nicht erst bei Durst",
-        "Danach: Skyr + Banane oder Shake — Fenster 30–40 min. Heute zählt das Timing.",
-        "Blasen-Prophylaxe: eingelaufene Socken (keine Baumwolle), bekannte Reibestellen vorher mit Hirschtalg"
+        "Frühstück mit 25–30 g Protein, bevor der Klinik-Tag startet — Wartezimmer haben kein gutes Essen",
+        "Snack einpacken (Nüsse, Skyr-to-go), damit du beim Abholen nicht auf leeren Magen läufst",
+        "Genug trinken — Stress-Tage lassen einen das Wasser vergessen",
+        "Abends eine richtige, warme Mahlzeit — du hast heute Care-Arbeit geleistet"
       ],
-      "warnung": "Achillessehne: Ziehen über 3/10 → ins Tagebuch eintragen, nicht wegatmen. In 15 Tagen beginnt der Taper — da ist kein Platz mehr für Experimente mit Verletzungen.",
-      "coachSays": "21 Tage bis München. Heute isst du, was du am Renntag frühstücken wirst, und läufst mit dem Gel, das du in München nimmst. Alles andere ist Rauschen."
+      "warnung": "Emotionaler Stress senkt HRV und Schlafqualität genauso wie ein harter Lauf. Wenn du heute nicht läufst, ist das kein verlorener Tag — morgen ist wieder Struktur. Nicht aus schlechtem Gewissen abends noch eine Einheit reinquetschen.",
+      "coachSays": "Heute ist deine Mutter dein A-Race. Die Beine warten geduldig bis morgen."
     }
   },
   "woche": {
-    "start": "2026-06-08",
-    "fokus": "Build Phase 1, Woche 4 von 6 — Tempolauf heute ✓, Kraft Samstag, Long Run + Gel-Test Sonntag. HM-Taper in 18 Tagen (29.06.), HM in 24 Tagen (05.07.). Wochenziel: 30 km.",
+    "start": "2026-06-15",
+    "fokus": "Build Phase 1, vorletzte Woche vor dem HM-Taper (startet 29.06.). HM in 20 Tagen. Plan: Di Quality-Lauf, Mi + Fr Kraft (Frequenz zurückholen — letzte Woche nur 1 Session), So Long Run 16–18 km. Dann Taper.",
     "luecken": [
-      "Long-Run-Aufbau bis HM: So 14.6. → 14 km, So 21.6. → 15–16 km, dann Taper ab 29.06. München als Zone-2-Generalprobe, kein Wettkampf gegen die Uhr.",
-      "Ärzte überfällig: Gyn-Termin (fällig 31.05., jetzt 13 Tage drüber) + Knie-Recheck Dr. Haag (fällig 28.05., 16 Tage drüber). Samstag oder Sonntag buchen — DEXA-Deadline ist 30.06.",
-      "Gel-Marke für München: Sonntag beim Long Run final testen. Danach entschieden."
+      "Kraft-Frequenz: Letzte Woche nur 1 von geplanten 2–3 Kraft-Sessions (Mi). Diese Woche Mi + Fr fest einplanen — mit 52 baut sich Muskel schneller ab als auf, gerade jetzt vor dem Renn-Block zählt jede Session.",
+      "Arzt-Baustellen offen: Gyn-Termin (überfällig seit 31.05.) + Knie-Recheck Dr. Haag (überfällig seit 28.05.). DEXA-Deadline 30.06. — in 15 Tagen. Beim Physio Mittwoch ansprechen.",
+      "Long-Run-Aufbau: 15.8 km am Sonntag sitzt sauber. Nächster Sonntag 16–18 km als letzter langer vor dem HM-Taper, dann runter."
     ]
   },
   "trends": {
-    "kommentar": "Die April-Delle ist Geschichte: HRV von 30 zurück auf 38,5, Schlaf wieder bei 8,4–8,5 h, Ruhepuls 52,8 — niedriger als je zuvor. Laufvolumen: 11 → 26 → 34 km pro Woche — verdreifacht in fünf Wochen, ohne Verletzung, bei stabiler HRV. Genau so sieht kluger Aufbau aus.",
+    "kommentar": "Der Long Run vom Sonntag ist das Highlight: 15.8 km, 2,5 h, 71 % in Zone 2 — locker gelaufen, ohne Schmerz. Das ist dein längster Lauf seit Monaten, und du hast ihn aerob im Griff gehabt statt dich durchzukämpfen. Die Morgen-Checks waren die ganze Woche grün. Numerische HRV/Schlaf-Zahlen fehlen seit dem 08.06. — die Charts hängen, bis ein Export kommt.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -117,21 +116,21 @@
       {"woche": "2026-05-18", "km": 26.4},
       {"woche": "2026-05-25", "km": 24.9},
       {"woche": "2026-06-01", "km": 33.6},
-      {"woche": "2026-06-08", "km": 16.4}
+      {"woche": "2026-06-08", "km": 32.2}
     ]
   },
   "beweise": [
     {
-      "titel": "Die April-Krise? Komplett verdaut.",
-      "text": "Ende April: HRV 30, Schlaf 6,2 h. Heute: HRV 38,5, Schlaf wieder über 8 h, drei Excellent-Nächte allein diese Woche. Dein Körper hat sich nicht nur erholt — er ist belastbarer als vorher."
+      "titel": "Dein längster Lauf seit Monaten — und du hast ihn locker gelaufen",
+      "text": "Sonntag: 15.8 km in 2,5 h, 71 % sauber in Zone 2 (127–140 bpm), Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. Jetzt läufst du 3 km weiter — aerob im Griff. Genau so wächst Marathon-Ausdauer."
     },
     {
-      "titel": "Dein Herz wird messbar ökonomischer",
-      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,8 jetzt. Fast drei Schläge weniger pro Minute für denselben Job. Das ist Ausdauer-Anpassung, dokumentiert über fünf Monate."
+      "titel": "Acht Tage, acht mal angetreten",
+      "text": "Wall Sit an 8 von 8 Tagen, Achilles-Morgen-Check 4 von 4 Tagen locker. Keine spektakuläre Einzelleistung — aber genau diese unsichtbare Konstanz ist es, die dich im September 42 km trägt."
     },
     {
-      "titel": "Laufvolumen verdreifacht — ohne Verletzung",
-      "text": "11 km Wochenumfang Anfang Mai, 33,6 km Anfang Juni. Verdreifacht in fünf Wochen, HRV stabil bei 38,5. In 21 Tagen läufst du den ersten Wettkampf dieses Blocks. Der Aufbau sitzt."
+      "titel": "Dein Herz arbeitet ökonomischer",
+      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 52,8 Anfang Juni. Fast drei Schläge weniger pro Minute für denselben Job — Ausdauer-Anpassung, dokumentiert über fünf Monate."
     }
   ]
 }
