@@ -164,25 +164,20 @@ const PHASES = [
 ];
 
 const PROGRESSION = {
-  'mo-lunge':    { phase1:'Bodyweight · 2×45s', phase2:'2×5kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
-  'mo-bulgarian':{ phase1:'Bodyweight · 2×45s', phase2:'2×6kg KH · 3×45s', phase3:'2×5kg KH · 2×45s' },
   'mo-knee':     { phase1:'Theraband leicht · 3×15', phase2:'Theraband mittel · 3×20', phase3:'Theraband leicht · 2×15' },
   'mi-sldl':     { phase1:'Bodyweight · 3×8', phase2:'1×8kg KH · 3×8', phase3:'1×6kg KH · 2×8' },
   'fr-stepup':   { phase1:'Bodyweight · 3×8', phase2:'6–8kg KH · 3×8', phase3:'4kg KH · 2×8' },
-  'mo-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
   'mi-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
   'fr-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
 };
 
 const TASKS = [
-  { id:'mo-kraft', day:1, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Ganzkörper-Stabi mit Bein-Anteil. Bulgarian Split + Reverse Lunge stärken knieumgebende Muskulatur.', problems:['knie','po'] },
+  { id:'mo-recovery', day:1, tier:'activity', name:'Aktive Erholung', duration:'20–40 min', trigger:'wann es passt', why:'Tag NACH dem Long Run, Tag VOR den Intervallen: lockeres Schwimmen, Radeln oder zügiger Spaziergang. Durchblutung fördern, Beine ausschütteln, keine Intensität. So bleibst du frisch für Dienstag. Keine schwere Kraft heute — die liegt Mi + Fr.', problems:['recovery'] },
   { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
   { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose.', problems:['po','huefte'] },
   { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
   { id:'mo-mobility', day:1, tier:'pflicht', name:'Mobility-Training', duration:'ca. 15 min', trigger:'morgens oder wann es passt', why:'Neu von deiner Laufcoachin (Mo + Sa). Fokus aufs Mobilisieren, nicht dehnen — hält Hüfte, Sprunggelenk und Brustwirbelsäule geschmeidig für sauberen Laufstil. Coach-Video: youtube.com/watch?v=W9v_HuYzwZA', problems:['huefte','knie','stabilitaet'] },
   { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
-  { id:'mo-lunge', day:1, tier:'bonus', name:'Reverse Lunge (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat falls du es einzeln dazu machen willst.', problems:['huefte','knie'] },
-  { id:'mo-bulgarian', day:1, tier:'bonus', name:'Bulgarian Split Squat (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat als zusätzliche Dosis.', problems:['knie','po'] },
   { id:'di-aktivierung', day:2, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Clams + Glute Bridge + Monster Walks wecken Po auf. Schlafender Po = Kompensation.', problems:['po','huefte','knie'] },
   { id:'di-intervall', day:2, tier:'activity', name:'Intervall-Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Reiz. Geschwindigkeit entwickeln.', problems:[] },
   { id:'di-atem', day:2, tier:'pflicht', name:'Atemübung (Garmin)', duration:'5 min', trigger:'direkt nach Cool-Down', why:'Parasympathisches Runterfahren. HRV-Rebound nach Intervall.', problems:['recovery'] },
