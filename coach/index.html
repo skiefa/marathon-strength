@@ -179,6 +179,7 @@ const TASKS = [
   { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
   { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose.', problems:['po','huefte'] },
   { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
+  { id:'mo-mobility', day:1, tier:'pflicht', name:'Mobility-Training', duration:'ca. 15 min', trigger:'morgens oder wann es passt', why:'Neu von deiner Laufcoachin (Mo + Sa). Fokus aufs Mobilisieren, nicht dehnen — hält Hüfte, Sprunggelenk und Brustwirbelsäule geschmeidig für sauberen Laufstil. Coach-Video: youtube.com/watch?v=W9v_HuYzwZA', problems:['huefte','knie','stabilitaet'] },
   { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
   { id:'mo-lunge', day:1, tier:'bonus', name:'Reverse Lunge (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat falls du es einzeln dazu machen willst.', problems:['huefte','knie'] },
   { id:'mo-bulgarian', day:1, tier:'bonus', name:'Bulgarian Split Squat (separat)', duration:'5 min', trigger:'falls nicht im Coach-Plan', why:'Ist normalerweise im Coach-Plan. Hier nur separat als zusätzliche Dosis.', problems:['knie','po'] },
@@ -208,6 +209,7 @@ const TASKS = [
   { id:'sa-faszien', day:6, tier:'bonus', name:'Faszienrolle', duration:'5 min', trigger:'vor Netflix abends', why:'Quadrizeps + IT-Band + Wade. NICHT direkt unter Po.', problems:['patella','knie'] },
   { id:'sa-huefte', day:6, tier:'bonus', name:'Hüftöffner 90/90', duration:'3 min', trigger:'irgendwann', why:'Steife Hüfte zwingt Knie zu kompensieren.', problems:['huefte'] },
   { id:'sa-wade', day:6, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'morgens', why:'Achillessehne 4×/Woche. Samstag ist Tag 3.', problems:['achilles','shinSplints'] },
+  { id:'sa-mobility', day:6, tier:'pflicht', name:'Mobility-Training', duration:'ca. 15 min', trigger:'morgens oder wann es passt', why:'Neu von deiner Laufcoachin (Mo + Sa). Fokus aufs Mobilisieren, nicht dehnen — hält Hüfte, Sprunggelenk und Brustwirbelsäule geschmeidig für sauberen Laufstil. Coach-Video: youtube.com/watch?v=W9v_HuYzwZA', problems:['huefte','knie','stabilitaet'] },
   { id:'so-aktivierung', day:0, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'vor Long Run', why:'Beim Long Run am wichtigsten: Glute-Aktivierung verhindert Form-Verfall.', problems:['po','huefte','knie'] },
   { id:'so-longrun', day:0, tier:'activity', name:'Long Run', duration:'lt. Coach', trigger:'wann es passt', why:'Wichtigster Lauf der Woche. Aerobe Basis.', problems:[] },
   { id:'so-wade', day:0, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach Long Run', why:'Achillessehne nach längstem Lauf der Woche. Tag 4.', problems:['achilles','shinSplints'] },
@@ -223,6 +225,7 @@ const REGEN_TASKS = [
   { id:'regen-spazieren', tier:'pflicht', name:'Spaziergang', duration:'20–30 min', trigger:'irgendwann', why:'Aktive Erholung fördert Durchblutung ohne Belastung.', problems:['recovery'] },
   { id:'regen-beine', tier:'pflicht', name:'Beine hochlegen', duration:'10 min', trigger:'abends', why:'Venösen Rückfluss fördern. Schwellung reduzieren.', problems:['recovery'] },
   { id:'regen-huefte', tier:'standard', name:'Hüftöffner + Psoas-Dehnung', duration:'5 min', trigger:'nach Spaziergang', why:'Nach Long Run verkürzt sich der Psoas. Jetzt dehnen.', problems:['huefte'] },
+  { id:'regen-mobility', tier:'pflicht', name:'Mobility-Training', duration:'ca. 15 min', trigger:'morgens oder wann es passt', why:'Neu von deiner Laufcoachin (Mo + Sa). Mobilisieren statt dehnen — passt perfekt an einen Regenerationstag. Coach-Video: youtube.com/watch?v=W9v_HuYzwZA', problems:['huefte','knie','stabilitaet'] },
 ];
 
 const PROBLEMS = [
