@@ -2,7 +2,7 @@
   "generated": "2026-06-15T21:30:00+02:00",
   "datenstand": {
     "wearables": "2026-06-15",
-    "kommentar": "TP-Daten bis heute da — danke! HRV auf sauber getrackten Nächten Ø 37, Ruhepuls 54, Schlaf 7,8 h, Body Battery Ø 68, Stress niedrig (Ø 18). Heute früh: HRV 36, Schlaf 8,1 h — solider Wochenstart. Hinweis: 06.–09.06. lag die Uhr nachts nicht an (Schlaf 0,0 h), die HRV-Werte dieser Nächte sind Geräte-Artefakte, nicht echte Tiefs — die habe ich rausgerechnet."
+    "kommentar": "TP + Garmin bis heute da — danke! Garmins nächtlicher HRV-Status war die ganze Woche bockstabil bei 37–39, jede Nacht. Ruhepuls 54, Schlaf 7,7 h, Stress niedrig. Heute früh: Sleep Score 88, HRV 38, Ruhepuls 53, 8:07 h — sehr solider Wochenstart. (Die HRV-Tiefs von 21–28 in der TP-Datei waren Geräte-Artefakte aus Nächten ohne Uhr — Garmins saubere Werte beweisen: echter Einbruch gab es nie.)"
   },
   "briefings": {
     "2026-06-16": {
@@ -85,7 +85,7 @@
     ]
   },
   "trends": {
-    "kommentar": "Jetzt mit echten TP-Zahlen: Trainingswoche mit drei Läufen (Intervalle 9,6 km, Tempolauf 6,8 km, Long Run 15,8 km = 32 km), dazu Schwimmen, Rad, Yoga, täglich Meditation. HRV auf sauber getrackten Nächten Ø 37 (Baseline-Niveau), Ruhepuls 54, Stress niedrig — dein Körper trägt die Last gut. Der Long-Run-Puls von Ø 129 ist mustergültig aerob, genau wie vom Coach verordnet. Der Ruhepuls kroch über die Woche von 51 auf 56 (Ermüdung vom Aufbau + Long Run) und war Montag wieder bei 53 — sauberes Erholungssignal.",
+    "kommentar": "Jetzt mit echten TP-Zahlen: Trainingswoche mit drei Läufen (Intervalle 9,6 km, Tempolauf 6,8 km, Long Run 15,8 km = 32 km), dazu Schwimmen, Rad, Yoga, täglich Meditation. Garmins nächtlicher HRV-Status Ø 38 und über die Woche völlig stabil (37–39), Ruhepuls 54, Stress niedrig — dein Körper trägt die Last gut. Der Long-Run-Puls von Ø 129 ist mustergültig aerob, genau wie vom Coach verordnet. Der Ruhepuls kroch über die Woche von 51 auf 56 (Ermüdung vom Aufbau + Long Run) und war Montag wieder bei 53 — sauberes Erholungssignal.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -107,7 +107,7 @@
       {"woche": "2026-05-18", "hrv": 36.9, "rhr": 53.9, "schlaf": 8.1},
       {"woche": "2026-05-25", "hrv": 36.6, "rhr": 52.6, "schlaf": 8.4},
       {"woche": "2026-06-01", "hrv": 38.3, "rhr": 52.9, "schlaf": 8.5},
-      {"woche": "2026-06-08", "hrv": 37.0, "rhr": 53.7, "schlaf": 7.8}
+      {"woche": "2026-06-08", "hrv": 38.0, "rhr": 54.0, "schlaf": 7.7}
     ],
     "kmWochen": [
       {"woche": "2026-04-27", "km": 11.3},
