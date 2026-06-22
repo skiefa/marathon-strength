@@ -74,11 +74,11 @@
   },
   "woche": {
     "start": "2026-06-22",
-    "fokus": "Letzte Build-Woche vor dem HM-Taper (startet 29.06.). HM in 13 Tagen. Reise-/Lehrwoche: Di St. Gallen + spät heim, Mi Intervalle früh 6:30, Do Lehr-Marathon mit Tempo/Rad, Fr Kraft. Priorität kippt Richtung Frische — Quality mitnehmen wenn Energie da, sonst entschärfen.",
+    "fokus": "Letzte Build-Woche vor dem HM-Taper (startet 29.06.). HM in 13 Tagen. Plan: Di Intervalle (reisebedingt auf Mi früh 6:30 verschoben), Mi+Fr Kraft (Muckibude 1, 22 Sätze), Do Tempo 50 min oder Rad 45 min, So Zone-2-Lauf 1:45 h / 14,6 km (Coach: optional vorher radeln, um die Belastungszeit zu strecken ohne mehr Lauf-Impact). Priorität kippt Richtung Frische.",
     "luecken": [
-      "GEL-LEKTION (wichtig): Das neue Gel am Sonntag hat auf den Darm geschlagen — Gehpausen, Toiletten-Stopp bei Hitze. Für München (05.07.) ein ERPROBTES, verträgliches Gel bestätigen, nichts Neues mehr am Renntag. Gut, dass es im Training passiert ist.",
-      "Reisewoche: Quality-Einheiten (Mi Intervalle, Do Tempo/Rad) nur mit ausreichend Schlaf voll durchziehen — sonst kürzen. Kraft realistisch nur Freitag, die dann sichern.",
-      "Wearable-Export seit 15.06. überfällig (7 Tage) — TP/Garmin nach data/incoming/, dann passen auch die km-Charts wieder."
+      "FUELING/DARM-LEKTION vom Sonntag: Ursache war wahrscheinlich nicht das Gel, sondern (1) zu früher, ungewohnter Start mit zu wenig Zeit, den Darm vor dem Lauf zu entleeren, und (2) proteinlastige Vortags-Ernährung + Abend-Shake statt leicht verdaulicher KH. Für München: Vortag KH-betont + ballaststoffarm, abends keine Protein-Bombe; Renn-Morgen früh genug für Kaffee + Frühstück + vollständigen Toilettengang VOR dem Start. Routine vorher proben.",
+      "Plan vs. Realität: Kraft steht Mi+Fr — weil die Intervalle reisebedingt auf Mi früh rutschen, ist Mi-Kraft unrealistisch. Also Freitag-Kraft sichern, das ist diese Woche die eine verlässliche Session.",
+      "Sonntag ist der letzte Long Run vor dem Taper (1:45 h / 14,6 km). Diesmal die Renn-Morgenroutine bewusst proben: Vortag leicht verdaulich essen, früh genug aufstehen, Darm leeren — Generalprobe für München."
     ]
   },
   "trends": {
