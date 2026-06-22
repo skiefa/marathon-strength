@@ -1,91 +1,88 @@
 {
-  "generated": "2026-06-18T21:00:00+02:00",
+  "generated": "2026-06-22T21:00:00+02:00",
   "datenstand": {
     "wearables": "2026-06-15",
-    "kommentar": "Numerische Wearable-Werte zuletzt bis 15.06. (HRV stabil 37–39). Morgen-Checks seither täglich grün: Akku gut, Achilles locker bis heute (18.06.). Ein TP-/Garmin-Export nach dem Sonntags-Long-Run würde die Charts wieder auffrischen — kein Stress, liegt erst 3 Tage zurück."
+    "kommentar": "Morgen-Checks weiter täglich grün (Akku gut, Achilles locker — jetzt 10 Tage am Stück). Aber: numerische Wearable-Werte stehen seit 15.06., also 7 Tage. Ein TP-/Garmin-Export nach data/incoming/ wäre fällig — gerade der Sonntags-Long-Run fehlt in den Zahlen. Du weißt, wo der Export-Knopf ist."
   },
   "briefings": {
-    "2026-06-19": {
-      "headline": "Kraft-Tag früh um 8 — und diese Woche zählt sie doppelt.",
-      "kalender": "Voll: Muckibude 8:00, Podcast-Prep 9:00, Tax 10:30–12:30, abends Schützenweg-Fest. Die Kraft liegt clever vor der Arbeit. Wichtig: Mittwoch ist die Kraft ausgefallen (nur geschwommen) — heute ist also deine einzige Kraft-Einheit der Woche. Die machst du.",
-      "einheit": "Muckibude 1 um 8:00 (22 Sätze, 14 Übungen). Build-Phase = 3 Sätze, progressiv. Wenn sich Reverse Lunge + Hip Thrust zuletzt leicht anfühlten: 1–2 kg drauf. Davor 5–10 min warm, danach Knee Extension Theraband.",
+    "2026-06-23": {
+      "headline": "St. Gallen + Heimreise — heute hält der Kopf her, nicht die Beine.",
+      "kalender": "Workshop Raiffeisen 9–17 Uhr, dann Zug 18:32 → München → Herrsching, Ankunft 22:35. Langer Tag, späte Heimkehr. Dein Coach hat die Intervalle klugerweise auf morgen früh verschoben.",
+      "einheit": "Kein echtes Training heute — und das ist richtig so. Ein 8-Stunden-Workshop plus 4 Stunden Reise sind Belastung genug. Beine im Hotel und im Zug nur geschmeidig halten.",
       "minimum": [
-        "Kraft Muckibude 1 — die ganze Session, nicht die Kurzfassung",
-        "Side Plank 2×30s pro Seite",
-        "Hip Thrust 3×10",
-        "Beckenboden 3 min"
+        "Morgens im Hotel 5 min Mobility/Aktivierung — wach werden, Hüfte öffnen",
+        "Im Zug ein paar Mal aufstehen, Hüftbeuger strecken",
+        "Abends trotz später Ankunft Protein essen (nicht nur Bahnhofs-Brezn)",
+        "TP-/Garmin-Export nach data/incoming/ legen — der Long Run fehlt noch"
       ],
       "bonus": [
-        "Single Leg Deadlift 3×8 pro Seite",
-        "Knee Extension Theraband — VMO gegen Patella"
+        "Mittags/abends 10 min Spaziergang durch St. Gallen, Treppen statt Lift"
       ],
       "fueling": [
-        "Vor 8 Uhr klein anfüttern: Banane oder Toast mit Honig — nicht komplett nüchtern an die Hantel",
-        "Nach der Kraft 30 g Protein in 30–40 min (Skyr, Quark, Shake) — bevor Podcast + Tax den Tag fressen",
-        "Über den Bürotag: Wasser griffbereit, bei Hitze mehr",
-        "Schützenweg-Fest abends: genießen, aber Sonntag ist früher Long Run (6:30!) — kein Mitternachts-Heimweg, kein Übermut mit Festbier-Ersatz"
+        "Workshop-Tag: Protein zu jeder Mahlzeit, nicht von Keksen am Buffet leben",
+        "Wasser dauerhaft griffbereit — Reden + Klimaanlage trocknen aus",
+        "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot) — nicht hungrig bis 22:35",
+        "Spät heim = leicht und früh genug essen, damit der Schlaf nicht leidet"
       ],
-      "warnung": "Beine waren Di + Do beide schwer (Hitze + Aufbau-Müdigkeit). Kraft ist heute okay — aber die Bein-Übungen sauber, nicht prügeln. Freitag-Kraft → Sonntag-Long-Run sind ~48 h, das passt.",
-      "coachSays": "Eine Kraft-Session diese Woche ist das Minimum, das nicht verhandelbar ist. 8 Uhr, Muckibude, keine Ausrede im Kalender."
+      "warnung": "Morgen früh um 6:30 stehen Intervalle an. Heißt: heute im Zug dösen und nach der Ankunft direkt ins Bett — die Quality-Einheit morgen wird nur was, wenn du heute nicht bis 1 Uhr wach liegst.",
+      "coachSays": "Reisetage sind keine verlorenen Tage, nur ehrliche. Heute regeneriert, morgen geliefert."
     },
-    "2026-06-20": {
-      "headline": "Espresso-Run + Mobility — locker halten, Sonntag ist der große Tag.",
-      "kalender": "Espresso-Run 9:00 (sozial, locker ☕), Mobility 10:15. Sonst frei. Genau die richtige Mischung als Vorbereitung auf den Long Run morgen.",
-      "einheit": "Espresso-Run LOCKER — das ist kein Tempotest, sondern Kaffee mit Laufschuhen. Danach Mobility 17 min (deine Coachin: mobilisieren, nicht dehnen). Beine schonen, morgen ist der letzte große Long Run vor dem HM-Taper.",
+    "2026-06-24": {
+      "headline": "Intervalle um 6:30 — bevor der Tag dich auffrisst.",
+      "kalender": "Intervalle 6:30–7:45, dann Claude-Meeting 8:00, Coworking 9–12, Prep Steinbeis 14:00, Prep Ljubow 16:00. Komplett verplant — die Intervalle gehen nur ganz früh.",
+      "einheit": "Intervalle früh um 6:30 (vom Reise-Dienstag verschoben). Die Quality-Einheit der Woche. Davor Pre-Run Aktivierung, danach Wadenheber + Atemübung für den HRV-Rebound. Kraft fällt diese Woche realistisch auf Freitag.",
       "minimum": [
-        "Espresso-Run locker (Zone 2, plaudern können)",
-        "Mobility 17 min",
+        "Pre-Run Aktivierung 3 min",
+        "Intervalle nach Coach-Plan",
         "Wadenheber 20× + 10× einbeinig",
-        "Beckenboden 3 min"
+        "Atemübung 5 min danach"
       ],
       "bonus": [
-        "Single Leg Deadlift — leicht, nichts Schweres vor dem Long Run",
-        "Abends Beine kurz hochlegen + früh ins Bett (6:30-Start morgen!)"
+        "Beckenboden 3 min, wenn ein ruhiger Moment kommt"
       ],
       "fueling": [
-        "Über den Tag kohlenhydratbetont essen — die Speicher wollen voll sein für morgen früh",
-        "Viel trinken bei der Hitze, abends Elektrolyte dazu",
-        "Abendessen nicht zu spät und nicht zu schwer — du stehst morgen vor 6 Uhr auf",
-        "Long-Run-Verpflegung heute schon herrichten: Gels, Flasche, Socken (Race-Setup für München)"
+        "NICHT nüchtern um 6:30: 30–45 min vorher kleine KH-Portion (Banane oder Toast+Honig, was am Do funktioniert hat)",
+        "Direkt nach dem Lauf 30 g Protein — bevor Meeting + Coworking den Vormittag schlucken",
+        "Über den Sitzungs-Tag Wasser nicht vergessen",
+        "Mittag proteinreich, sonst kippt die Energie am Nachmittag"
       ],
-      "warnung": "Versuch nicht, beim Espresso-Run mit der Gruppe mitzuziehen — deine Beine waren diese Woche schwer, und morgen brauchst du sie. Heute locker = morgen stark.",
-      "coachSays": "Der Espresso ist die Belohnung, nicht der Wettkampf. Schnell wird morgen gelaufen — heute nur gemütlich."
+      "warnung": "Gestern spät heim + heute 6:30 raus: Wenn der Schlaf unter 6 h lag, mach die Intervalle kürzer oder lockerer statt sie müde durchzuprügeln. Frische Quality schlägt müden Junk — nächste Woche ist eh Taper.",
+      "coachSays": "Früh aufstehen ist hart. Weißt du, was härter ist? Den ganzen Tag zu wissen, dass du es nicht gemacht hast."
     },
-    "2026-06-21": {
-      "headline": "Letzter großer Long Run vor dem Taper — früh raus, dann Familie.",
-      "kalender": "Long Run 6:30–9:30, danach 10:30 Familienausflug Brauneck mit Opa. Der frühe Start ist goldrichtig: Hitze umgehen UND rechtzeitig fertig für die Familie. Gut geplant.",
-      "einheit": "Long Run 16–18 km, locker in Zone 2. Das ist der Schlüssel-Lauf vor dem HM-Taper und gleichzeitig die letzte Gel-Generalprobe — München ist in 14 Tagen. Vorher 3 min Pre-Run Aktivierung, danach Wadenheber.",
+    "2026-06-25": {
+      "headline": "Lehr-Marathon — Tempolauf nur, wenn der Kopf noch mitmacht.",
+      "kalender": "Tech-Check 8:40, Modul 3 (du leitest!) 9–13, Tempolauf 15:00–15:50, abends Ljubow-Workshop 19–21. Ein 12-Stunden-Tag mit viel Reden und Verantwortung.",
+      "einheit": "Tempolauf 15:00–15:50 in der Lücke zwischen den Lehrblöcken. Alternative laut Plan: 45 min lockeres Rad. Ehrlich: nach 4 h Teaching ist die Rad-Variante oft die klügere — entscheide nach Tagesform, nicht nach Ehrgeiz.",
       "minimum": [
-        "Pre-Run Aktivierung 3 min — vor dem Long Run am wichtigsten",
-        "Long Run 16 km (Minimum, falls Beine schwer)",
-        "Wadenheber nach dem Lauf",
-        "30–40 g Protein + KH innerhalb 30–40 min — VOR der Abfahrt zur Familie einpacken!"
+        "Tempolauf 50 min ODER 45 min lockeres Rad — eins davon",
+        "Pre-Run Aktivierung vor dem Lauf",
+        "Wadenheber danach",
+        "Wall Sit in einer Lehrpause — Beine wach halten"
       ],
       "bonus": [
-        "Volle 18 km, wenn die Beine mitspielen — aber bei schweren Beinen lieber 16 sauber als 18 gequält"
+        "Voller Tempolauf, wenn sich der Kopf nach Modul 3 noch frisch anfühlt"
       ],
       "fueling": [
-        "Race-Frühstück testen wie für München: kleines Toast+Honig+Banane ~60–90 min vorher (so wie Donnerstag, hat funktioniert)",
-        "Gel bei km 6 und km 12 — genau die Marke, die du in München nimmst. Letzte Generalprobe!",
-        "Hitze + früher Start: Elektrolyte + alle 20 min trinken, nicht erst bei Durst",
-        "Recovery-Essen für unterwegs packen (Skyr, Banane, Shake) — beim Familienausflug gibt's vielleicht nichts Gescheites",
-        "Auf dem Brauneck den Tag über genug essen + trinken — du hast morgens ordentlich verbraucht"
+        "Protein-Frühstück vor dem Lehrtag, Snacks zwischen den Blöcken (Nüsse statt Keksteller)",
+        "Vor dem 15-Uhr-Lauf was Kleines mit KH — nicht aus dem Lehr-Loch heraus loslaufen",
+        "Nach dem Lauf Protein, bevor der Abend-Workshop startet",
+        "Beim Reden viel trinken — Stimme und Kreislauf danken es"
       ],
-      "warnung": "Zwei Quality-Tage mit schweren Beinen diese Woche — heute strikt Zone 2, kein Pace-Ehrgeiz. Wenn die Beine nach 12 km zu sind: bei 16 km abbrechen ist klug, nicht schwach. Und Achilles/Knie auch nach dem Lauf checken, bevor der Familientrubel beginnt.",
-      "coachSays": "Heute aerob sammeln, dann ab in die Berge mit Opa. Der Taper kommt nächste Woche — deine Beine haben ihn sich verdient."
+      "warnung": "Ein 12-h-Lehrtag ist echte nervliche Last, auch ohne Lauf. Der Tempolauf ist Kür, nicht Pflicht — bei leerem Tank lieber lockeres Rad oder streichen. Taper-Woche steht vor der Tür, da zählt Frische. NICHT das Sonntags-Gel testen — für München ein verträgliches bestätigen.",
+      "coachSays": "Du bringst heute anderen was bei. Dein Körper darf da auch mal nur Zuhörer sein."
     }
   },
   "woche": {
-    "start": "2026-06-15",
-    "fokus": "Build Phase 1, letzte volle Woche vor dem HM-Taper (startet 29.06.). HM in 17 Tagen. Quality steht: Di Intervalle (7×6 min) ✓, Do Tempo ✓. Noch offen: Fr Kraft (Mi ausgefallen!), So Long Run 16–18 km als letzter großer vor dem Taper.",
+    "start": "2026-06-22",
+    "fokus": "Letzte Build-Woche vor dem HM-Taper (startet 29.06.). HM in 13 Tagen. Reise-/Lehrwoche: Di St. Gallen + spät heim, Mi Intervalle früh 6:30, Do Lehr-Marathon mit Tempo/Rad, Fr Kraft. Priorität kippt Richtung Frische — Quality mitnehmen wenn Energie da, sonst entschärfen.",
     "luecken": [
-      "Kraft-Adhärenz: Mittwoch wieder nur geschwommen statt Kraft — Freitag ist jetzt die EINZIGE Kraft-Einheit der Woche. Mit 52 ist das das Minimum, um Muskel zu halten. Bitte durchziehen.",
-      "Beine schwer an beiden Quality-Tagen (Di + Do) — Aufbau-Müdigkeit + Hitze. Kein Alarm (HRV grün, kein Schmerz), aber Sonntag strikt Zone 2 und der Taper ab 29.06. kommt zur richtigen Zeit.",
-      "Sonntag-Long-Run = letzte Gel-Generalprobe vor München (HM 05.07., dann gilt: nichts Neues mehr ausprobieren)."
+      "GEL-LEKTION (wichtig): Das neue Gel am Sonntag hat auf den Darm geschlagen — Gehpausen, Toiletten-Stopp bei Hitze. Für München (05.07.) ein ERPROBTES, verträgliches Gel bestätigen, nichts Neues mehr am Renntag. Gut, dass es im Training passiert ist.",
+      "Reisewoche: Quality-Einheiten (Mi Intervalle, Do Tempo/Rad) nur mit ausreichend Schlaf voll durchziehen — sonst kürzen. Kraft realistisch nur Freitag, die dann sichern.",
+      "Wearable-Export seit 15.06. überfällig (7 Tage) — TP/Garmin nach data/incoming/, dann passen auch die km-Charts wieder."
     ]
   },
   "trends": {
-    "kommentar": "Jetzt mit echten TP-Zahlen: Trainingswoche mit drei Läufen (Intervalle 9,6 km, Tempolauf 6,8 km, Long Run 15,8 km = 32 km), dazu Schwimmen, Rad, Yoga, täglich Meditation. Garmins nächtlicher HRV-Status Ø 38 und über die Woche völlig stabil (37–39), Ruhepuls 54, Stress niedrig — dein Körper trägt die Last gut. Der Long-Run-Puls von Ø 129 ist mustergültig aerob, genau wie vom Coach verordnet. Der Ruhepuls kroch über die Woche von 51 auf 56 (Ermüdung vom Aufbau + Long Run) und war Montag wieder bei 53 — sauberes Erholungssignal.",
+    "kommentar": "Stand 15.06.: Garmins nächtlicher HRV-Status Ø 38 und über die Woche stabil (37–39), Ruhepuls 54, Stress niedrig. Morgen-Checks seither 10 Tage durchgehend grün. Letzte Woche: Intervalle + Tempo geliefert, Freitag die Muckibude-Kraft durchgezogen, Sonntag ein zäher Long Run bei Hitze (neues Gel = Magen-Darm, Lektion gelernt). Sobald der Sonntags-Export da ist, fülle ich die Zahlen nach.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -116,21 +113,22 @@
       {"woche": "2026-05-18", "km": 26.4},
       {"woche": "2026-05-25", "km": 24.9},
       {"woche": "2026-06-01", "km": 33.6},
-      {"woche": "2026-06-08", "km": 32.2}
+      {"woche": "2026-06-08", "km": 32.2},
+      {"woche": "2026-06-15", "km": 30.0}
     ]
   },
   "beweise": [
     {
-      "titel": "Dein längster Lauf seit Monaten — und du hast ihn locker gelaufen",
-      "text": "Sonntag 14.06.: 15,8 km in 2,5 h, 71 % sauber in Zone 2 (127–140 bpm), Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. Jetzt läufst du 3 km weiter — aerob im Griff. Genau so wächst Marathon-Ausdauer."
+      "titel": "Dein längster Lauf seit Monaten — locker gelaufen",
+      "text": "14.06.: 15,8 km in 2,5 h, 71 % sauber in Zone 2, Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. Drei Kilometer weiter, aerob im Griff — so wächst Marathon-Ausdauer."
     },
     {
-      "titel": "Quality durchgezogen, auch bei Hitze und schweren Beinen",
-      "text": "Diese Woche beide harten Einheiten geliefert: Dienstag 7×6 min Intervalle (10 km), Donnerstag Tempolauf bei Hitze. Beide Male fühlten sich die Beine schwer an — und du hast sie trotzdem gemacht. Das ist die Disziplin, die im September zählt."
+      "titel": "Kraft zurück auf der Matte",
+      "text": "Freitag 19.06.: Muckibude 1 durchgezogen — 22 Sätze, 14 Übungen, plus Side Plank + Hip Thrust. Nach zwei Wochen mit nur je einer Session wieder eine volle Kraft-Einheit. Genau die hält mit 52 den Muskel — weiter so."
     },
     {
-      "titel": "Dein Herz arbeitet ökonomischer",
-      "text": "Ruhepuls-Wochenschnitt: 55,4 im Januar → 53,7 jetzt, an Ruhetagen sogar 51–53. Und nach dem 15,8-km-Long-Run war er am nächsten Morgen direkt wieder unten. Ein Herz, das so schnell erholt, ist gut trainiert."
+      "titel": "Drei stabile Trainingswochen am Stück",
+      "text": "33,6 → 32,2 → ~30 km pro Woche, jede mit Intervallen, Tempo und Long Run — bei durchgehend grünen Morgen-Checks und HRV stabil um 38. Kein Einbruch, keine Verletzung. Das ist der Aufbau, der dich nach Berlin trägt."
     }
   ]
 }
