@@ -1,8 +1,8 @@
 {
   "generated": "2026-06-22T21:00:00+02:00",
   "datenstand": {
-    "wearables": "2026-06-15",
-    "kommentar": "Morgen-Checks weiter täglich grün (Akku gut, Achilles locker — jetzt 10 Tage am Stück). Aber: numerische Wearable-Werte stehen seit 15.06., also 7 Tage. Ein TP-/Garmin-Export nach data/incoming/ wäre fällig — gerade der Sonntags-Long-Run fehlt in den Zahlen. Du weißt, wo der Export-Knopf ist."
+    "wearables": "2026-06-22",
+    "kommentar": "TP-Daten bis 22.06. da — danke! HRV auf sauberen Nächten Ø ~40 (Spitze 46 am Sonntag), Ruhepuls 55, Schlaf ~8 h. Trotz Hitze und heftiger Trainingswoche zieht die HRV sogar leicht an — starkes Erholungssignal. Morgen-Checks 10+ Tage durchgehend grün."
   },
   "briefings": {
     "2026-06-23": {
@@ -82,7 +82,7 @@
     ]
   },
   "trends": {
-    "kommentar": "Stand 15.06.: Garmins nächtlicher HRV-Status Ø 38 und über die Woche stabil (37–39), Ruhepuls 54, Stress niedrig. Morgen-Checks seither 10 Tage durchgehend grün. Letzte Woche: Intervalle + Tempo geliefert, Freitag die Muckibude-Kraft durchgezogen, Sonntag ein zäher Long Run bei Hitze (neues Gel = Magen-Darm, Lektion gelernt). Sobald der Sonntags-Export da ist, fülle ich die Zahlen nach.",
+    "kommentar": "Stand 22.06.: HRV zieht trotz heißer, voller Trainingswoche sogar leicht an (Wochen-Ø ~40, Sonntag-Spitze 46), Ruhepuls 55, Schlaf ~8 h. Letzte Woche: Intervalle (10 km, HF 140) + Tempo geliefert, Freitag Muckibude-Kraft durchgezogen, Sonntag 13,66 km Long Run bei Hitze mit Ø-HF 124 — trotz Gehpausen und Magen-Darm (neues Gel) sauber aerob. Lektion gelernt: dieses Gel fällt für München aus.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -104,7 +104,8 @@
       {"woche": "2026-05-18", "hrv": 36.9, "rhr": 53.9, "schlaf": 8.1},
       {"woche": "2026-05-25", "hrv": 36.6, "rhr": 52.6, "schlaf": 8.4},
       {"woche": "2026-06-01", "hrv": 38.3, "rhr": 52.9, "schlaf": 8.5},
-      {"woche": "2026-06-08", "hrv": 38.0, "rhr": 54.0, "schlaf": 7.7}
+      {"woche": "2026-06-08", "hrv": 38.0, "rhr": 54.0, "schlaf": 7.7},
+      {"woche": "2026-06-15", "hrv": 39.7, "rhr": 54.6, "schlaf": 8.0}
     ],
     "kmWochen": [
       {"woche": "2026-04-27", "km": 11.3},
@@ -114,7 +115,7 @@
       {"woche": "2026-05-25", "km": 24.9},
       {"woche": "2026-06-01", "km": 33.6},
       {"woche": "2026-06-08", "km": 32.2},
-      {"woche": "2026-06-15", "km": 30.0}
+      {"woche": "2026-06-15", "km": 30.1}
     ]
   },
   "beweise": [
