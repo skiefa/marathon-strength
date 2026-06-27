@@ -1,88 +1,165 @@
 {
-  "generated": "2026-06-22T21:00:00+02:00",
+  "generated": "2026-06-27T13:00:00+02:00",
   "datenstand": {
     "wearables": "2026-06-22",
-    "kommentar": "TP-Daten bis 22.06. da — danke! HRV auf sauberen Nächten Ø ~40 (Spitze 46 am Sonntag), Ruhepuls 55, Schlaf ~8 h. Trotz Hitze und heftiger Trainingswoche zieht die HRV sogar leicht an — starkes Erholungssignal. Morgen-Checks 10+ Tage durchgehend grün."
+    "kommentar": "Letzter TP-Stand 22.06.: HRV ~40, Ruhepuls 55, Schlaf ~8 h — stark. Diese Woche ist HM-Race-Woche (München So 05.07.). Nach dem HM gern wieder exportieren, dann fülle ich die Zahlen nach."
   },
   "briefings": {
-    "2026-06-23": {
-      "headline": "St. Gallen + Heimreise — heute hält der Kopf her, nicht die Beine.",
-      "kalender": "Workshop Raiffeisen 9–17 Uhr, dann Zug 18:32 → München → Herrsching, Ankunft 22:35. Langer Tag, späte Heimkehr. Dein Coach hat die Intervalle klugerweise auf morgen früh verschoben.",
-      "einheit": "Kein echtes Training heute — und das ist richtig so. Ein 8-Stunden-Workshop plus 4 Stunden Reise sind Belastung genug. Beine im Hotel und im Zug nur geschmeidig halten.",
+    "2026-06-29": {
+      "headline": "Kraft vorgezogen — bevor die Reisewoche losgeht.",
+      "kalender": "Zuhause: KI-Workshop 10–11:30, Prep 15:30–17:30. Dazwischen ist Platz für die Einheit.",
+      "einheit": "Muckibude 2 (28 Sätze) + Mobility. Vom Dienstag vorgezogen, weil Di dein Berlin-Reisetag ist. 6 Tage vor dem HM — perfekt, die Beine erholen sich locker bis Sonntag.",
       "minimum": [
-        "Morgens im Hotel 5 min Mobility/Aktivierung — wach werden, Hüfte öffnen",
-        "Im Zug ein paar Mal aufstehen, Hüftbeuger strecken",
-        "Abends trotz später Ankunft Protein essen (nicht nur Bahnhofs-Brezn)",
-        "TP-/Garmin-Export nach data/incoming/ legen — der Long Run fehlt noch"
+        "Kraft Muckibude 2 — volle Session",
+        "Mobility 17 min",
+        "Beckenboden 3 min",
+        "Meditation / Atemübung"
       ],
       "bonus": [
-        "Mittags/abends 10 min Spaziergang durch St. Gallen, Treppen statt Lift"
+        "Einbeinstand abends, links zuerst"
       ],
       "fueling": [
-        "Workshop-Tag: Protein zu jeder Mahlzeit, nicht von Keksen am Buffet leben",
-        "Wasser dauerhaft griffbereit — Reden + Klimaanlage trocknen aus",
-        "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot) — nicht hungrig bis 22:35",
-        "Spät heim = leicht und früh genug essen, damit der Schlaf nicht leidet"
+        "Vor der Kraft kleine KH+Protein-Portion — nicht nüchtern",
+        "Nach der Kraft 30 g Protein in 30–40 min",
+        "Über den Tag 3–4 Protein-Mahlzeiten à 25–35 g"
       ],
-      "warnung": "Morgen früh um 6:30 stehen Intervalle an. Heißt: heute im Zug dösen und nach der Ankunft direkt ins Bett — die Quality-Einheit morgen wird nur was, wenn du heute nicht bis 1 Uhr wach liegst.",
-      "coachSays": "Reisetage sind keine verlorenen Tage, nur ehrliche. Heute regeneriert, morgen geliefert."
+      "warnung": "Das ist die letzte schwere Kraft vor dem HM. Sauber ausführen, aber nicht zerstören — danach hält die Woche die Beine frisch.",
+      "coachSays": "Heute die Arbeit, die der Dienstag nicht hergibt. Clever vorgezogen."
     },
-    "2026-06-24": {
-      "headline": "Intervalle um 6:30 — bevor der Tag dich auffrisst.",
-      "kalender": "Intervalle 6:30–7:45, dann Claude-Meeting 8:00, Coworking 9–12, Prep Steinbeis 14:00, Prep Ljubow 16:00. Komplett verplant — die Intervalle gehen nur ganz früh.",
-      "einheit": "Intervalle früh um 6:30 (vom Reise-Dienstag verschoben). Die Quality-Einheit der Woche. Davor Pre-Run Aktivierung, danach Wadenheber + Atemübung für den HRV-Rebound. Kraft fällt diese Woche realistisch auf Freitag.",
+    "2026-06-30": {
+      "headline": "Reisetag Berlin — Schwimmen statt Schwitzen.",
+      "kalender": "Zug 7:05 → Berlin 12:23, Siemens-Workshop 15–18, Abend-Schwimmen 19–20.",
+      "einheit": "Kein Lauf heute. Das Abend-Schwimmen ist perfekte aktive Erholung. Im Hotel oder Zug kurz mobilisieren.",
+      "minimum": [
+        "Abend-Schwimmen locker",
+        "Im Zug/Hotel 5 min mobilisieren, Hüfte öffnen",
+        "Protein trotz Reise (nicht nur Bahnhofssnacks)",
+        "Meditation / Atemübung"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot)",
+        "Wasser dauerhaft griffbereit — Reisen + Workshop trocknen aus",
+        "Abends nicht zu spät schwer essen — morgen früh stehen Intervalle an"
+      ],
+      "warnung": "Morgen früh Intervalle in Berlin — heute früh genug ins Bett, damit die Quality-Einheit was wird.",
+      "coachSays": "Reisetag heißt nicht Faultag — aber heute reicht das Wasser unter dir."
+    },
+    "2026-07-01": {
+      "headline": "Intervalle früh in Berlin — die Quality-Einheit der Woche.",
+      "kalender": "Call hast du verschoben → Intervalle früh. Danach Zug Berlin → Nürnberg 13:37, abends dein Talk.",
+      "einheit": "Intervalle (Plan 1:15 h) früh am Morgen. Davor Pre-Run Aktivierung, danach kurz auslaufen + Wadenheber. Die einzige harte Lauf-Einheit der Woche.",
       "minimum": [
         "Pre-Run Aktivierung 3 min",
-        "Intervalle nach Coach-Plan",
-        "Wadenheber 20× + 10× einbeinig",
-        "Atemübung 5 min danach"
+        "Intervalle nach Plan",
+        "Kurz auslaufen + Wadenheber",
+        "Protein in 30–40 min danach"
       ],
       "bonus": [
-        "Beckenboden 3 min, wenn ein ruhiger Moment kommt"
+        "Atemübung für den HRV-Rebound"
       ],
       "fueling": [
-        "NICHT nüchtern um 6:30: 30–45 min vorher kleine KH-Portion (Banane oder Toast+Honig, was am Do funktioniert hat)",
-        "Direkt nach dem Lauf 30 g Protein — bevor Meeting + Coworking den Vormittag schlucken",
-        "Über den Sitzungs-Tag Wasser nicht vergessen",
-        "Mittag proteinreich, sonst kippt die Energie am Nachmittag"
+        "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast+Honig)",
+        "Direkt nach dem Lauf Protein, bevor der Reise-/Talk-Tag startet",
+        "Über den Tag viel trinken — Zugfahrt + Reden zehren"
       ],
-      "warnung": "Gestern spät heim + heute 6:30 raus: Wenn der Schlaf unter 6 h lag, mach die Intervalle kürzer oder lockerer statt sie müde durchzuprügeln. Frische Quality schlägt müden Junk — nächste Woche ist eh Taper.",
-      "coachSays": "Früh aufstehen ist hart. Weißt du, was härter ist? Den ganzen Tag zu wissen, dass du es nicht gemacht hast."
+      "warnung": "Voller Reise- und Vortragstag danach — nach den Intervallen ordentlich essen und trinken, nicht auslaufen lassen.",
+      "coachSays": "Erst die Intervalle, dann die Bühne. In beidem lieferst du."
     },
-    "2026-06-25": {
-      "headline": "Lehr-Marathon — Tempolauf nur, wenn der Kopf noch mitmacht.",
-      "kalender": "Tech-Check 8:40, Modul 3 (du leitest!) 9–13, Tempolauf 15:00–15:50, abends Ljubow-Workshop 19–21. Ein 12-Stunden-Tag mit viel Reden und Verantwortung.",
-      "einheit": "Tempolauf 15:00–15:50 in der Lücke zwischen den Lehrblöcken. Alternative laut Plan: 45 min lockeres Rad. Ehrlich: nach 4 h Teaching ist die Rad-Variante oft die klügere — entscheide nach Tagesform, nicht nach Ehrgeiz.",
+    "2026-07-02": {
+      "headline": "Zweite Kraft — oder Gnade, je nach Reise-Restmüdigkeit.",
+      "kalender": "Zuhause: Modul 4 9–13, Cowork 17:30. Menstruationsphase. Dazwischen Platz.",
+      "einheit": "Muckibude 2 zuhause (Bodyweight). Wenn Reise + Menstruation dich platt gemacht haben: leichter machen oder durch Mobility ersetzen. Drei Tage vor dem Rennen gilt: lieber etwas weniger als zu viel.",
       "minimum": [
-        "Tempolauf 50 min ODER 45 min lockeres Rad — eins davon",
-        "Pre-Run Aktivierung vor dem Lauf",
-        "Wadenheber danach",
-        "Wall Sit in einer Lehrpause — Beine wach halten"
+        "Kraft Muckibude 2 (oder leichter / Mobility)",
+        "Beckenboden 3 min",
+        "Meditation / Atemübung",
+        "Wall Sit in einer Pause"
       ],
       "bonus": [
-        "Voller Tempolauf, wenn sich der Kopf nach Modul 3 noch frisch anfühlt"
+        "Ein paar Steigerungen, wenn die Beine Lust haben"
       ],
       "fueling": [
-        "Protein-Frühstück vor dem Lehrtag, Snacks zwischen den Blöcken (Nüsse statt Keksteller)",
-        "Vor dem 15-Uhr-Lauf was Kleines mit KH — nicht aus dem Lehr-Loch heraus loslaufen",
-        "Nach dem Lauf Protein, bevor der Abend-Workshop startet",
-        "Beim Reden viel trinken — Stimme und Kreislauf danken es"
+        "Menstruation: auf Eisen achten (rotes Fleisch / Hülsenfrüchte + Vit C), genug Protein + KH",
+        "Nicht nüchtern trainieren",
+        "Genug trinken"
       ],
-      "warnung": "Ein 12-h-Lehrtag ist echte nervliche Last, auch ohne Lauf. Der Tempolauf ist Kür, nicht Pflicht — bei leerem Tank lieber lockeres Rad oder streichen. Taper-Woche steht vor der Tür, da zählt Frische. NICHT das Sonntags-Gel testen — für München ein verträgliches bestätigen.",
-      "coachSays": "Du bringst heute anderen was bei. Dein Körper darf da auch mal nur Zuhörer sein."
+      "warnung": "Menstruation + Reise = evtl. weniger Energie. Hör auf den Körper — das ist 3 Tage vor dem HM, Frische schlägt Ehrgeiz.",
+      "coachSays": "Dein Körper hat diese Woche viel getragen. Heute darf er auch mal Nein sagen."
+    },
+    "2026-07-03": {
+      "headline": "Tempolauf — letzter Reiz, dann Ruhe.",
+      "kalender": "Zuhause: Podcasts 9–12, Money 14–15, Timon 15:25. Menstruationsphase.",
+      "einheit": "Tempolauf 50 min — letzte intensivere Einheit vor dem HM. Wenn du den HM frischer angehen willst: kürzer + ein paar Renntempo-Steigerungen statt voller 50 min.",
+      "minimum": [
+        "Tempolauf 50 min (oder kürzer + Steigerungen)",
+        "Pre-Run Aktivierung",
+        "Wadenheber danach",
+        "Protein in 30–40 min"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Nicht nüchtern, KH vorher",
+        "Ab heute bewusst gut hydrieren — Richtung Renntag",
+        "Protein + KH nach dem Lauf"
+      ],
+      "warnung": "Morgen Ruhe, übermorgen HM — heute nicht überziehen. Das ist kein Trainingstag mehr zum Beweisen.",
+      "coachSays": "Kurz scharf, dann Deckel drauf. Sonntag wird abgerechnet, nicht heute."
+    },
+    "2026-07-04": {
+      "headline": "Ruhetag — Beine sparen, Kopf vorbereiten.",
+      "kalender": "Frei. Tag vor dem HM.",
+      "einheit": "Ruhe. Optional 15-min-Shakeout mit 3–4 Steigerungen, um die Beine zu wecken — mehr nicht. Heute zählt Vorbereitung, nicht Training.",
+      "minimum": [
+        "Ruhe oder 15-min-Shakeout + ein paar Steigerungen",
+        "Locker mobilisieren",
+        "Startbeutel + erprobte Gels + Renn-Outfit richten",
+        "Leicht verdauliche KH, ballaststoffarm — abends KEINE Protein-Bombe"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Tagsüber kohlenhydratbetont, ballaststoffarm (kein Vollkorn-Berg, keine großen Salate)",
+        "Abends früh + leicht essen, keine Protein-Bombe, kein Shake — deine Darm-Lektion!",
+        "Gut hydrieren + Elektrolyte",
+        "Renn-Morgen einplanen: früh genug aufstehen für Kaffee + Frühstück + vollständigen Toilettengang VOR dem Start"
+      ],
+      "warnung": "Nichts Neues mehr — keine neuen Gels, Schuhe, Socken, Lebensmittel. Früh ins Bett, der Start ist morgen früh.",
+      "coachSays": "Heute gewinnt man kein Rennen, aber man kann eins verlieren. Also: Beine hoch, Speicher voll."
+    },
+    "2026-07-05": {
+      "headline": "München Halbmarathon — deine Generalprobe für Berlin.",
+      "kalender": "SportScheck HM, 21 km. Der Tag, auf den die Woche zuläuft.",
+      "einheit": "HM kontrolliert laufen — Pace und Race-Nutrition für Berlin testen, kein PR-Stress. Erste 5 km bewusst zu langsam anfühlen lassen, dann negativer Split.",
+      "minimum": [
+        "Morgenroutine: früh auf, Kaffee + Frühstück + Klo VOR dem Start",
+        "Nur erprobte Gels — nichts Neues",
+        "Kontrolliert starten, zweite Hälfte schneller",
+        "Nach dem Lauf 30–40 g Protein + KH"
+      ],
+      "bonus": [
+        "Wenn alles passt und die Beine wollen: die letzten 5 km laufen lassen"
+      ],
+      "fueling": [
+        "Renn-Frühstück 2,5–3 h vorher, erprobt (Toast + Honig + Banane)",
+        "Gels nach Plan (z. B. km 7 und km 14), nur die verträgliche Marke",
+        "Elektrolyte bei Wärme, alle paar km ein Schluck",
+        "Danach: Protein + KH in 30–40 min, dann eine richtige Mahlzeit"
+      ],
+      "warnung": "Die Beine sind von der Trainingswoche nicht 100 % frisch — nach Gefühl steuern, nicht auf die Uhr starren. Achilles/Knie wie immer im Blick.",
+      "coachSays": "Generalprobe für Berlin: heute testest du Pace und Bauch, nicht dein Ego. Lauf klug, dann läuft der Herbst."
     }
   },
   "woche": {
-    "start": "2026-06-22",
-    "fokus": "Letzte Build-Woche vor dem HM-Taper (startet 29.06.). HM in 13 Tagen. Plan: Di Intervalle (reisebedingt auf Mi früh 6:30 verschoben), Mi+Fr Kraft (Muckibude 1, 22 Sätze), Do Tempo 50 min oder Rad 45 min, So Zone-2-Lauf 1:45 h / 14,6 km (Coach: optional vorher radeln, um die Belastungszeit zu strecken ohne mehr Lauf-Impact). Priorität kippt Richtung Frische.",
+    "start": "2026-06-29",
+    "fokus": "HM-Race-Woche — München Halbmarathon So 05.07. (B-Race / Generalprobe für Berlin). Leichter Taper: Mo Kraft (vom Di vorgezogen) + Mobility, Di Reise Berlin + Schwimmen, Mi Intervalle früh, Do Kraft/leicht, Fr Tempo, Sa Ruhe, So HM kontrolliert.",
     "luecken": [
-      "FUELING/DARM-LEKTION vom Sonntag: Ursache war wahrscheinlich nicht das Gel, sondern (1) zu früher, ungewohnter Start mit zu wenig Zeit, den Darm vor dem Lauf zu entleeren, und (2) proteinlastige Vortags-Ernährung + Abend-Shake statt leicht verdaulicher KH. Für München: Vortag KH-betont + ballaststoffarm, abends keine Protein-Bombe; Renn-Morgen früh genug für Kaffee + Frühstück + vollständigen Toilettengang VOR dem Start. Routine vorher proben.",
-      "Plan vs. Realität: Kraft steht Mi+Fr — weil die Intervalle reisebedingt auf Mi früh rutschen, ist Mi-Kraft unrealistisch. Also Freitag-Kraft sichern, das ist diese Woche die eine verlässliche Session.",
-      "Sonntag ist der letzte Long Run vor dem Taper (1:45 h / 14,6 km). Diesmal die Renn-Morgenroutine bewusst proben: Vortag leicht verdaulich essen, früh genug aufstehen, Darm leeren — Generalprobe für München."
+      "Renn-Morgenroutine ist der Schlüssel (Lektion vom letzten Long Run): Vortag (Sa) leicht verdauliche KH + ballaststoffarm, abends KEINE Protein-Bombe/Shake. Renn-Morgen früh genug aufstehen für Kaffee + Frühstück + vollständigen Toilettengang vor dem Start.",
+      "Nur ERPROBTE Gels im Rennen — das neue Gel vom letzten Mal ist raus.",
+      "Reise Di/Mi: Quality (Mi Intervalle) früh sichern, Di nur Schwimmen. Kraft auf Mo vorgezogen, weil Di Reisetag."
     ]
   },
   "trends": {
-    "kommentar": "Stand 22.06.: HRV zieht trotz heißer, voller Trainingswoche sogar leicht an (Wochen-Ø ~40, Sonntag-Spitze 46), Ruhepuls 55, Schlaf ~8 h. Letzte Woche: Intervalle (10 km, HF 140) + Tempo geliefert, Freitag Muckibude-Kraft durchgezogen, Sonntag 13,66 km Long Run bei Hitze mit Ø-HF 124 — trotz Gehpausen und Magen-Darm (neues Gel) sauber aerob. Lektion gelernt: dieses Gel fällt für München aus.",
+    "kommentar": "Stand 22.06.: HRV zieht trotz heißer, voller Trainingswoche leicht an (Wochen-Ø ~40, Sonntag-Spitze 46), Ruhepuls 55, Schlaf ~8 h. Drei stabile 30+-km-Wochen mit Intervallen, Tempo und Long Run hinter dir — jetzt die HM-Woche als Generalprobe.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -121,15 +198,15 @@
   "beweise": [
     {
       "titel": "Dein längster Lauf seit Monaten — locker gelaufen",
-      "text": "14.06.: 15,8 km in 2,5 h, 71 % sauber in Zone 2, Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. Drei Kilometer weiter, aerob im Griff — so wächst Marathon-Ausdauer."
+      "text": "14.06.: 15,8 km in 2,5 h, 71 % sauber in Zone 2, Beine locker, kein Schmerz. Im Mai war dein längster Lauf 12,6 km und fühlte sich nach Kampf an. So wächst Marathon-Ausdauer."
     },
     {
-      "titel": "Kraft zurück auf der Matte",
-      "text": "Freitag 19.06.: Muckibude 1 durchgezogen — 22 Sätze, 14 Übungen, plus Side Plank + Hip Thrust. Nach zwei Wochen mit nur je einer Session wieder eine volle Kraft-Einheit. Genau die hält mit 52 den Muskel — weiter so."
+      "titel": "HRV steigt trotz Volllast",
+      "text": "In einer heißen Woche mit Intervallen, Tempo und Long Run ist deine nächtliche HRV nicht eingebrochen, sondern auf Ø ~40 gestiegen (Spitze 46). Dein Körper adaptiert — genau das Signal, das man vor einem Rennen sehen will."
     },
     {
       "titel": "Drei stabile Trainingswochen am Stück",
-      "text": "33,6 → 32,2 → ~30 km pro Woche, jede mit Intervallen, Tempo und Long Run — bei durchgehend grünen Morgen-Checks und HRV stabil um 38. Kein Einbruch, keine Verletzung. Das ist der Aufbau, der dich nach Berlin trägt."
+      "text": "33,6 → 32,2 → 30,1 km pro Woche, jede mit Intervallen, Tempo und Long Run, bei grünen Morgen-Checks. Kein Einbruch, keine Verletzung. Auf dieser Basis läufst du den HM."
     }
   ]
 }
