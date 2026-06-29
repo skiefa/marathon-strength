@@ -1,8 +1,8 @@
 {
   "generated": "2026-06-27T13:00:00+02:00",
   "datenstand": {
-    "wearables": "2026-06-22",
-    "kommentar": "Letzter TP-Stand 22.06.: HRV ~40, Ruhepuls 55, Schlaf ~8 h — stark. Diese Woche ist HM-Race-Woche (München So 05.07.). Nach dem HM gern wieder exportieren, dann fülle ich die Zahlen nach."
+    "wearables": "2026-06-29",
+    "kommentar": "TP-Daten bis heute (29.06.). Die Reisewoche (Berlin/Nürnberg) hat die HRV etwas gedrückt — Wochen-Ø ~33 statt 40, aber der Ruhepuls blieb top (Ø 52, zuletzt 48). Heute: HRV 36, RHR 48 — erholt sich schon wieder. Gutes Timing: die Race-Woche ist ruhiger, da rebounded die HRV bis München."
   },
   "briefings": {
     "2026-06-29": {
@@ -159,7 +159,7 @@
     ]
   },
   "trends": {
-    "kommentar": "Stand 22.06.: HRV zieht trotz heißer, voller Trainingswoche leicht an (Wochen-Ø ~40, Sonntag-Spitze 46), Ruhepuls 55, Schlaf ~8 h. Drei stabile 30+-km-Wochen mit Intervallen, Tempo und Long Run hinter dir — jetzt die HM-Woche als Generalprobe.",
+    "kommentar": "Stand 29.06.: Die Reisewoche (Berlin/Nürnberg, später Talk) hat die HRV erwartbar gedrückt (Wochen-Ø 33), der Ruhepuls blieb dabei niedrig (Ø 52) — typische Reise-Stress-Signatur, kein Übertraining. Heute schon wieder HRV 36, RHR 48. Trainingsmäßig komplett geliefert: Intervalle (8,8 km), Tempo (5,8 km) und Long Run 12,1 km (mit Rad-Einrollen davor) = 28,4 km. Jetzt Race-Woche, ruhiger — die HRV rebounded bis München.",
     "wochen": [
       {"woche": "2026-01-05", "hrv": 36.4, "rhr": 55.1, "schlaf": 8.5},
       {"woche": "2026-01-12", "hrv": 34.7, "rhr": 55.4, "schlaf": 8.3},
@@ -182,7 +182,8 @@
       {"woche": "2026-05-25", "hrv": 36.6, "rhr": 52.6, "schlaf": 8.4},
       {"woche": "2026-06-01", "hrv": 38.3, "rhr": 52.9, "schlaf": 8.5},
       {"woche": "2026-06-08", "hrv": 38.0, "rhr": 54.0, "schlaf": 7.7},
-      {"woche": "2026-06-15", "hrv": 39.7, "rhr": 54.6, "schlaf": 8.0}
+      {"woche": "2026-06-15", "hrv": 39.7, "rhr": 54.6, "schlaf": 8.0},
+      {"woche": "2026-06-22", "hrv": 33.0, "rhr": 51.9, "schlaf": 7.6}
     ],
     "kmWochen": [
       {"woche": "2026-04-27", "km": 11.3},
@@ -192,7 +193,8 @@
       {"woche": "2026-05-25", "km": 24.9},
       {"woche": "2026-06-01", "km": 33.6},
       {"woche": "2026-06-08", "km": 32.2},
-      {"woche": "2026-06-15", "km": 30.1}
+      {"woche": "2026-06-15", "km": 30.1},
+      {"woche": "2026-06-22", "km": 28.4}
     ]
   },
   "beweise": [
