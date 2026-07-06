@@ -418,8 +418,7 @@ const PROGRESSION = {
 // ===== TASKS =====
 const TASKS = [
   // MONTAG (Kraft oder Regen — flexibel)
-  { id:'mo-kraft', day:1, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Ganzkörper-Stabi mit Bein-Anteil. Bulgarian Split + Reverse Lunge stärken knieumgebende Muskulatur.', problems:['knie','po'] },
-  { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
+  { id:'mo-kraft', day:1, tier:'pflicht', name:'Kraft Coach-Plan', duration:'~45 min', trigger:'morgens oder mittags', why:'Ganzkörper-Stabi mit Bein-Anteil. Neuer Coach-Plan (Muckibude 2): Warm-up, 11 Übungen à 2 Sätze inkl. Side Plank + Clam Shell + Hip Circle, Cool-down. Side Plank (Ortho-verordnet, Glute med) ist jetzt fest im Plan.', problems:['knie','po','patella','stabilitaet'] },
   { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose.', problems:['po','huefte'] },
   { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
   { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
@@ -433,8 +432,7 @@ const TASKS = [
   { id:'di-wade', day:2, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne im ermüdeten Zustand stärken — am wirksamsten.', problems:['achilles','shinSplints'] },
 
   // MITTWOCH
-  { id:'mi-kraft', day:3, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens', why:'Zweite Kraft-Session. Volumen für muskuläre Adaption.', problems:['knie','po'] },
-  { id:'mi-sideplank', day:3, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'2. von 3× Woche. Vom Orthopäden verordnet.', problems:['patella','knie','stabilitaet'] },
+  { id:'mi-kraft', day:3, tier:'pflicht', name:'Kraft Coach-Plan', duration:'~45 min', trigger:'morgens', why:'Zweite Kraft-Session. Volumen für muskuläre Adaption. Neuer Coach-Plan (Muckibude 2, 28 Sätze) inkl. Side Plank.', problems:['knie','po','patella','stabilitaet'] },
   { id:'mi-hipthrust', day:3, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'2. von 3× Woche. Po-Aufbau braucht Frequenz.', problems:['po','huefte'] },
   { id:'mi-beckenboden', day:3, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'2. von 3× Woche. Stabilität von innen, schützt vor Stressinkontinenz bei Lauf-Impact.', problems:['stabilitaet'] },
   { id:'mi-sldl', day:3, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'nach Kraft', why:'Exzentrisches Hamstring-Training. Schützt Sehnenansatz. 2×/Woche (Mi+Sa).', problems:['po','huefte'] },
@@ -446,8 +444,7 @@ const TASKS = [
   { id:'do-wade', day:4, tier:'standard', name:'Wadenheber', duration:'1 min · 20×+10× einbeinig', trigger:'nach dem Lauf', why:'Achillessehne nach Lauf stärken.', problems:['achilles','shinSplints'] },
 
   // FREITAG
-  { id:'fr-kraft', day:5, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Dritte Kraft-Session. Schließt die Woche.', problems:['knie','po'] },
-  { id:'fr-sideplank', day:5, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'3. von 3× Woche. Schließt die Side-Plank-Routine.', problems:['patella','knie','stabilitaet'] },
+  { id:'fr-kraft', day:5, tier:'pflicht', name:'Kraft Coach-Plan', duration:'~45 min', trigger:'morgens oder mittags', why:'Dritte Kraft-Session. Schließt die Woche. Neuer Coach-Plan (Muckibude 2, 28 Sätze) inkl. Side Plank.', problems:['knie','po','patella','stabilitaet'] },
   { id:'fr-hipthrust', day:5, tier:'pflicht', name:'Hip Thrust', duration:'5 min · 3×10', trigger:'nach Kraft', why:'3. von 3× Woche. Po-Frequenz für echten Aufbau.', problems:['po','huefte'] },
   { id:'fr-beckenboden', day:5, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'3. von 3× Woche.', problems:['stabilitaet'] },
   { id:'fr-knee', day:5, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'nach Kraft', why:'2. von 2× Woche. VMO-Aufbau gegen Patella-Lateralisation.', problems:['knie','patella'] },
@@ -527,6 +524,10 @@ const EXERCISE_GUIDES = [
   {
     category: 'Kraft Coach-Plan',
     items: [
+      { name: 'Aufwärmen (A)',
+        setup: 'Locker im Stand, etwas Platz. Ziel: Kreislauf hoch, Gelenke geölt — je ~1 Min.',
+        bewegung: 'Schulter kreisen → zügig auf der Stelle gehen → locker hüpfen → ein paar Air Squats (Kniebeuge ohne Gewicht).',
+        tipp: 'Kein Ehrgeiz, nur warm werden. Air Squat kontrolliert, Fersen bleiben am Boden.' },
       { name: 'Reverse Lunge',
         setup: 'Aufrecht stehen, Füße hüftbreit, Bauchspannung.',
         bewegung: 'Großen Schritt nach hinten, hinteres Knie sinkt Richtung Boden. Vorderes Knie über Knöchel. Hochdrücken über die vordere Ferse.',
@@ -559,6 +560,22 @@ const EXERCISE_GUIDES = [
         setup: 'Bauchlage, Arme nach vorne ausgestreckt.',
         bewegung: 'Arme, Brust und Beine gleichzeitig vom Boden heben. 2 Sek halten, langsam runter.',
         tipp: 'Nicht überstrecken. Blick zum Boden, Nacken lang.' },
+      { name: 'Side Plank',
+        setup: 'Seitlich auf Unterarm gestützt, Ellbogen unter Schulter. Beine gestreckt, Füße übereinander.',
+        bewegung: 'Hüfte hochheben bis Körper eine gerade Linie ist. Halten. 2 Sätze pro Seite (Coach: ~1 Min).',
+        tipp: 'Jetzt fester Bestandteil des Coach-Plans (vom Orthopäden fürs Knie verordnet — Glute med gegen Patella-Lateralisation). Hüfte nicht absinken lassen. Zu schwer: unteres Knie aufstützen.' },
+      { name: 'Banded Clam Shell',
+        setup: 'Auf der Seite liegen, Knie gebeugt 90°, Miniband oberhalb der Knie. Fersen zusammen.',
+        bewegung: 'Oberes Knie nach außen öffnen, ohne Becken zu drehen. Langsam zurück. 2 Sätze pro Seite (Coach: ~45 Sek).',
+        tipp: 'Wenn Becken kippt: Bewegung kleiner. Du sollst es im Po-Außen spüren, nicht vorne. (Gleiche Übung wie die Pre-Run-Clams, hier als Kräftigung im Plan.)' },
+      { name: 'Hip Circle',
+        setup: 'Vierfüßlerstand, Hände unter Schultern, Knie unter Hüfte. Rücken neutral, Bauchspannung.',
+        bewegung: 'Ein Knie angewinkelt seitlich/nach hinten in großen, kontrollierten Kreisen führen — die Hüfte öffnet und schließt. Beide Richtungen, dann Seite wechseln. ~1 Min.',
+        tipp: 'Mobilität für die Hüfte + Glute-med-Aktivierung. Becken ruhig, nur die Hüfte arbeitet. (Falls dein Coach etwas anderes meint — z.B. stehende Beinkreise — sag Bescheid, dann passe ich es an.)' },
+      { name: 'Abkühlung (M)',
+        setup: 'Am Ende der Session, Matte, ruhig atmen — je ~1 Min.',
+        bewegung: 'Child’s Pose: aus dem Fersensitz Oberkörper nach vorne ablegen, Arme lang. Dann Happy Baby: Rückenlage, Knie zur Brust, Außenkanten der Füße greifen, sanft wiegen.',
+        tipp: 'Kein Dehn-Zwang — der Fokus ist Runterkommen und Hüfte/unteren Rücken lösen.' },
     ]
   },
   {
