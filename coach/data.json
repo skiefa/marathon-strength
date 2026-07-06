@@ -151,25 +151,25 @@
    "coachSays": "Gestern hast du Berlin geprobt. Heute reparierst du. Regeneration ist Training, das wie Faulheit aussieht — mach sie trotzdem."
   },
   "2026-07-07": {
-   "headline": "Urlaubswoche startet — und der Plan will Intervalle. Ich nicht.",
-   "kalender": "Urlaubs-Blocker ab heute. 8:00 Janick bei Dr. Steiner. Sonst frei — morgen geht's in die Karwendel-Hütten.",
-   "einheit": "TrainingPeaks hat Intervalle (1:20 h) drin — aber das ist 2 Tage nach dem HM und deine HRV ist heute auf 21 abgestürzt (Baseline ~36). Kein Vollgas. Wenn die Beine laufen wollen: 30–40 min ganz locker + 3–4 Steigerungen. Sonst Ruhe/Spaziergang. Die harten Intervalle holst du nach dem Urlaub nach.",
+   "headline": "Intervalle heute — der letzte Reiz vor den Bergen.",
+   "kalender": "Urlaubs-Blocker ab heute. 8:00 Janick bei Dr. Steiner. Ab morgen Karwendel — heute also die Quality-Einheit.",
+   "einheit": "Intervalle nach Plan (1:20 h). ABER: 2 Tage nach dem HM, HRV heute 21. Gut einlaufen und die Wiederholungen nach Gefühl steuern — wenn die Beine schwer sind, lieber etwas kürzer/langsamer als mit Gewalt durchprügeln. Danach kurz auslaufen + Wadenheber.",
    "minimum": [
-    "KEIN hartes Intervall-Training heute",
-    "Wenn Lauf: locker 30–40 min, kein Tempo",
-    "Waden + Mobility, Beine ausschütteln",
-    "Protein über den Tag (Reparatur nach 21 km)"
+    "Pre-Run Aktivierung 3 min",
+    "Intervalle nach Plan — nach Gefühl, nicht auf Bestzeit",
+    "Kurz auslaufen + Wadenheber",
+    "Protein 30–40 g in 30–40 min danach"
    ],
    "bonus": [
-    "Kurze Reflexion HM-Fueling → Notiz für Berlin"
+    "Atemübung für den HRV-Rebound danach"
    ],
    "fueling": [
-    "Glykogen weiter auffüllen — kein Low-Carb heute",
-    "Protein 1,6–2,0 g/kg für die Muskelreparatur",
-    "Für morgen Wander-Verpflegung + Elektrolyt-Tabs einpacken"
+    "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — kein Honig)",
+    "Direkt nach dem Lauf Protein",
+    "Über den Tag gut hydrieren + Elektrolyte"
    ],
-   "warnung": "HRV 21 + Post-Race-Muskelkater: heute ist Erholung, nicht Ehrgeiz. Achilles nach 21 km im Blick.",
-   "coachSays": "Der Plan kennt deinen Sonntag nicht. Ich schon. Heute keine Intervalle — die Berge fordern die Beine ab morgen genug."
+   "warnung": "HRV 21 + Post-HM: kein Tag für eine Intervall-Bestzeit. Reiz setzen, nicht zerstören — morgen fahren die Beine eh in die Berge.",
+   "coachSays": "Okay, du läufst. Dann klug: heute der saubere Reiz, ab morgen machen die Berge die Erholung."
   },
   "2026-07-08": {
    "headline": "Ab in die Karwendel-Hütten — Wandern ist ab jetzt dein Training.",
@@ -279,7 +279,7 @@
  },
  "woche": {
   "start": "2026-07-06",
-  "fokus": "Erholungs- & Bergwoche nach dem HM. Mo/Di aktive Erholung zuhause (KEINE harten Intervalle trotz TP-Plan — HRV heute 21, 2 Tage nach dem Rennen). Mi–So Karwendel-Hütten + Achensee = Wandern statt Laufen (aktive Erholung + exzentrische Bein-Arbeit bergab). Der Sonntags-HM im TP ist ein Fehler → ignorieren. Danach Build-2-Start Richtung Berlin.",
+  "fokus": "Erholungs- & Bergwoche nach dem HM. Di 07.07 noch die Intervalle zuhause (nach Gefühl steuern — HRV heute 21, 2 Tage nach dem Rennen). Mi–So Karwendel-Hütten + Achensee = Wandern statt Laufen (aktive Erholung + exzentrische Bein-Arbeit bergab). Der Sonntags-HM im TP ist ein Fehler → ignorieren. Danach Build-2-Start Richtung Berlin.",
   "luecken": [
    "HM-Fueling-Lektionen für Berlin (Detail: fueling-plan-berlin-2026.md): Natrium war viel zu niedrig (~40 mg statt 600–1.200) → volle Elektrolyt-Tab, Flasche leer trinken. Carbs nur ~30 g/h → auf 60–70 hochtrainieren. Gel IMMER mit reinem Wasser. Gummibärchen raus.",
    "Po + Hamstring waren ab km 14 die Schwäche (dein Renn-Kommentar) → im Build-2 schwere Hip-Hinge-Kraft (SLDL/Hip Thrust) priorisieren. Bergab-Wandern diese Woche zahlt schon drauf ein.",
