@@ -501,7 +501,10 @@
         "daily-meditation",
         "daily-wallsit",
         "daily-balance",
-        "daily-ankle"
+        "daily-ankle",
+        "daily-supp-morgen",
+        "daily-supp-tag",
+        "daily-supp-abend"
       ],
       "extra": [
         {
@@ -533,7 +536,10 @@
         "daily-meditation",
         "daily-wallsit",
         "daily-balance",
-        "daily-ankle"
+        "daily-ankle",
+        "daily-supp-morgen",
+        "daily-supp-tag",
+        "daily-supp-abend"
       ],
       "extra": [
         {
@@ -565,7 +571,10 @@
         "daily-meditation",
         "daily-wallsit",
         "daily-balance",
-        "daily-ankle"
+        "daily-ankle",
+        "daily-supp-morgen",
+        "daily-supp-tag",
+        "daily-supp-abend"
       ],
       "extra": [
         {
@@ -597,7 +606,10 @@
         "daily-meditation",
         "daily-wallsit",
         "daily-balance",
-        "daily-ankle"
+        "daily-ankle",
+        "daily-supp-morgen",
+        "daily-supp-tag",
+        "daily-supp-abend"
       ],
       "extra": [
         {
@@ -622,7 +634,10 @@
         "daily-meditation",
         "daily-wallsit",
         "daily-balance",
-        "daily-ankle"
+        "daily-ankle",
+        "daily-supp-morgen",
+        "daily-supp-tag",
+        "daily-supp-abend"
       ],
       "extra": [
         {

@@ -216,6 +216,9 @@ const TASKS = [
   { id:'daily-wallsit', day:'daily', tier:'pflicht', name:'Wall Sit', duration:'45 sek', trigger:'beim Kaffee', why:'Quadrizeps isometrisch — kniefreundlich, ohne Knorpel-Belastung.', problems:['knie','patella'] },
   { id:'daily-balance', day:'daily', tier:'pflicht', name:'Einbeinstand', duration:'1 min', trigger:'Zähneputzen abends', why:'Stabilität. Links ist instabiler (HUBER-Test) — links extra üben.', problems:['stabilitaet','knie'] },
   { id:'daily-ankle', day:'daily', tier:'standard', name:'Sprunggelenk-Mobi', duration:'1 min', trigger:'nach Wall Sit', why:'Schlechte Dorsalflexion = Shin Splints + Knie-Stress.', problems:['shinSplints','knie'] },
+  { id:'daily-supp-morgen', day:'daily', tier:'standard', name:'Supps Frühstück', duration:'D3+K2 · 2× Omega-3 · 2× Magnesium', trigger:'zum fetthaltigen Frühstück', why:'D3 braucht Fett zur Aufnahme. Adherence zählt: der Blut-Retest (18.07) zeigt nur dann echte Effekte, wenn der Stack konsequent lief.', problems:['recovery'] },
+  { id:'daily-supp-tag', day:'daily', tier:'standard', name:'Supps Mittag/Nachmittag', duration:'2× Omega-3', trigger:'zur fetthaltigen Mahlzeit', why:'Zweite Omega-3-Dosis → 1.200 mg EPA+DHA/Tag voll.', problems:['recovery'] },
+  { id:'daily-supp-abend', day:'daily', tier:'standard', name:'Supps abends', duration:'1× Magnesium · 3–5 g Kreatin', trigger:'vor dem Schlafen', why:'Magnesium für Schlaf/Muskeln (Vollblut war an der Untergrenze). Kreatin täglich konstant — Muskelerhalt + Knochendichte 50+.', problems:['recovery'] },
   { id:'daily-birddog', day:'daily', tier:'bonus', name:'Bird Dog', duration:'2 min · 2×8 pro Seite', trigger:'irgendwann zwischendurch', why:'Rumpf + Hüft-Stabilität gleichzeitig. Lauf-spezifisch (diagonale Verbindung).', problems:['stabilitaet','po'] },
 ];
 
@@ -406,8 +409,8 @@ function spruchFuer(dk){
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); scheduleSync(); }
 
@@ -487,6 +490,11 @@ function mergeState(R){
   for(const dk in R.extra){
     const have = new Set((S.extra[dk]||[]).map(x=>x.id+'|'+x.von));
     S.extra[dk] = (S.extra[dk]||[]).concat((R.extra[dk]||[]).filter(x=>!have.has(x.id+'|'+x.von)));
+  }
+  R.essen = R.essen||{}; S.essen = S.essen||{};
+  for(const dk in R.essen){
+    const haveE = new Set((S.essen[dk]||[]).map(x=>x.ts||x.text));
+    S.essen[dk] = (S.essen[dk]||[]).concat((R.essen[dk]||[]).filter(x=>!haveE.has(x.ts||x.text)));
   }
   const jkey = e => e.ts || (e.datum+'|'+(e.notizen||'').slice(0,60));
   const have = new Set((S.journal||[]).map(jkey));
@@ -941,6 +949,18 @@ ${e.notizen}
   if(navigator.share){ navigator.share({title:'Coach App-Export', text:md}).catch(()=>{}); }
   else { navigator.clipboard.writeText(md).then(()=>alert('Alles kopiert — auf dem Mac bei Claude einfügen, der sortiert es ein.')); }
 }
+function saveTeller(){
+  const txt = (document.getElementById('t-text').value||'').trim();
+  if(!txt) return;
+  const off = +(document.getElementById('t-tag').value||0);
+  const d = new Date(); d.setDate(d.getDate()-off);
+  const dk = todayKey(d);
+  S.essen[dk] = S.essen[dk]||[];
+  S.essen[dk].push({ts:new Date().toISOString(), text:txt});
+  save(); render();
+}
+function delTeller(dk,i){ (S.essen[dk]||[]).splice(i,1); save(); render(); }
+
 function renderBuch(){
   const tagOpt = [0,1,2].map(o=>{
     const d=new Date(); d.setDate(d.getDate()-o);
@@ -961,6 +981,19 @@ function renderBuch(){
     </div>
     <div class="small" id="v-erkannt" style="margin-top:6px"></div>
     <button class="btn" onclick="saveVoice()">Sichern</button>
+  </div>`;
+  const tTagOpt = [0,1].map(o=>{
+    const d=new Date(); d.setDate(d.getDate()-o);
+    return `<option value="${o}">${(o===0?'Heute':'Gestern')+' · '+fmtDate(todayKey(d))}</option>`;
+  }).join('');
+  html += `<h2>Teller — Essen &amp; Trinken</h2><div class="card">
+    <div class="small" style="margin-bottom:8px">Einfach reinsprechen, was du gegessen und getrunken hast (Mikrofon-Taste auf der Tastatur). Mengen grob reichen — der Coach rechnet abends Protein &amp; Flüssigkeit aus und sagt dir im Briefing, was fehlt. Ziel: <b>117–146 g Protein/Tag</b>.</div>
+    <textarea id="t-text" style="min-height:80px" placeholder="z. B.: Frühstück Skyr mit Beeren und Toast, mittags Linsensuppe, abends Lachs mit Kartoffeln. Getrunken: 2 große Flaschen Wasser + 1 Elektrolyt."></textarea>
+    <div class="frow" style="margin-top:10px"><div><label>Tag</label><select id="t-tag">${tTagOpt}</select></div><div></div></div>
+    <button class="btn" onclick="saveTeller()">Teller sichern</button>
+    ${(()=>{ const days=Object.keys(S.essen||{}).sort().reverse().slice(0,3); if(!days.length) return '';
+      return days.map(dk=>`<div style="margin-top:12px"><b class="small">${fmtDate(dk)}</b>`+
+        (S.essen[dk]||[]).map((e,i)=>`<div class="jentry" style="margin-top:6px"><div class="jh"><div class="small" style="flex:1">${esc(e.text)}</div><button class="del" onclick="delTeller('${dk}',${i})">löschen</button></div></div>`).join('')+`</div>`).join(''); })()}
   </div>`;
   html += `<div id="sync-wrap">${syncCardHTML()}</div>`;
   html += `<button class="btn ghost" onclick="exportAll()">Alles ans Coach-Gehirn senden (Tagebuch + Checks + Abgehaktes)</button>`;
