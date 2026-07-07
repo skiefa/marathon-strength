@@ -527,6 +527,13 @@
           "duration": "10 min",
           "trigger": "abends",
           "why": "Venöser Rückfluss nach dem Bergtag."
+        },
+        {
+          "tier": "standard",
+          "name": "⏸ Magnesium-Pause (Darm-Test)",
+          "duration": "nichts nehmen!",
+          "trigger": "ganze Bergwoche",
+          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
         }
       ]
     },
@@ -562,6 +569,13 @@
           "duration": "10 min",
           "trigger": "abends",
           "why": "Venöser Rückfluss nach dem Bergtag."
+        },
+        {
+          "tier": "standard",
+          "name": "⏸ Magnesium-Pause (Darm-Test)",
+          "duration": "nichts nehmen!",
+          "trigger": "ganze Bergwoche",
+          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
         }
       ]
     },
@@ -597,6 +611,13 @@
           "duration": "10 min",
           "trigger": "abends",
           "why": "Venöser Rückfluss nach dem Bergtag."
+        },
+        {
+          "tier": "standard",
+          "name": "⏸ Magnesium-Pause (Darm-Test)",
+          "duration": "nichts nehmen!",
+          "trigger": "ganze Bergwoche",
+          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
         }
       ]
     },
@@ -625,6 +646,13 @@
           "duration": "2 min · 3×30 s",
           "trigger": "abends auf der Hütte",
           "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        },
+        {
+          "tier": "standard",
+          "name": "⏸ Magnesium-Pause (Darm-Test)",
+          "duration": "nichts nehmen!",
+          "trigger": "ganze Bergwoche",
+          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
         }
       ]
     },
@@ -653,6 +681,13 @@
           "duration": "2 min · 3×30 s",
           "trigger": "abends auf der Hütte",
           "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        },
+        {
+          "tier": "standard",
+          "name": "⏸ Magnesium-Pause (Darm-Test)",
+          "duration": "nichts nehmen!",
+          "trigger": "ganze Bergwoche",
+          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
         }
       ]
     }
