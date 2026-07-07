@@ -256,6 +256,7 @@ button { transition:transform .08s, opacity .08s, background .12s; }
 button:active { transform:scale(.94); opacity:.75; }
 .checkbox:active { transform:scale(.85); }
 .tab:active { opacity:.6; }
+.override-banner{background:linear-gradient(135deg,#1e3a2f,#14532d);color:#dcfce7;border:1px solid #16a34a55;border-radius:12px;padding:10px 14px;margin:0 0 12px;font-size:13px;line-height:1.45}
 </style>
 </head>
 <body>
@@ -507,6 +508,8 @@ const COVERAGE_ZONES = [
 ];
 
 // ===== EXERCISE GUIDES =====
+let TAGESPLAN = {}; // per-Datum-Overrides aus coach/data.json (schreibt /abend-coach)
+
 const EXERCISE_GUIDES = [
   {
     category: 'Plyo & Waden-Upgrade (ab 13.07)',
@@ -1167,7 +1170,15 @@ function renderSuggestions() {
 function renderTodayTasks(dayOfWeek, dk) {
   const phase = getPhase();
   const isRegen = dayOfWeek===1 && isRegenMonday(dk);
-  const tasks = isRegen ? REGEN_TASKS : getTasksForDay(dayOfWeek, dk);
+  let tasks = isRegen ? REGEN_TASKS : getTasksForDay(dayOfWeek, dk);
+  const ov = TAGESPLAN[dk];
+  if (ov && !isRegen) {
+    const baseId = id => id.replace(/-\d{4}-\d{2}-\d{2}$/,'');
+    if (Array.isArray(ov.nur)) tasks = tasks.filter(t => ov.nur.includes(baseId(t.id)));
+    if (Array.isArray(ov.extra)) tasks = [...tasks, ...ov.extra.map((e,n)=>({
+      id:`ov-${dk}-${n}`, day:dayOfWeek, tier:e.tier||'pflicht', name:e.name,
+      duration:e.duration||'', trigger:e.trigger||'', why:e.why||'', problems:e.problems||[] }))];
+  }
   const extras = (state.extraDays[dk]||[]).flatMap(d => TASKS.filter(t=>t.day===d&&t.tier!=='activity'&&t.day!=='daily').map(t=>({...t,isExtra:true,extraFrom:d})));
   const suggested = (state.suggestedTasks[dk]||[]).map(t=>({...t,isSuggested:true}));
   const sessions = getCustomSessions(dk);
@@ -1201,6 +1212,7 @@ function renderTodayTasks(dayOfWeek, dk) {
   });
 
   let html='', total=0, done=0;
+  if (ov && ov.hinweis) html+=`<div class="override-banner">🏔 ${ov.hinweis}</div>`;
   tierOrder.forEach(tier => {
     if (!grouped[tier].length) return;
     html+=`<div class="section"><div class="section-header"><span class="section-tag ${tier}">${tierLabels[tier]}</span><span class="section-title">${tierDescs[tier]}</span></div>`;
@@ -1463,6 +1475,11 @@ document.querySelectorAll('.sub-tab').forEach(sub => {
 (async function init() {
   await loadState();
   render();
+  // Kontext-Tagesplan vom Abend-Coach (coach/data.json → tagesplan). Offline/Fehler → Standardprogramm.
+  fetch('coach/data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+    TAGESPLAN = (d && d.tagesplan) || {};
+    render();
+  }).catch(()=>{});
 })();
 </script>
 </body>

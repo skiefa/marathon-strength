@@ -493,5 +493,153 @@
       "titel": "Taper hat funktioniert — HRV frisch ins Rennen",
       "text": "Race-Woche-HRV Ø 40 (Vorwoche 33), Schlaf stabil. Dein Nervensystem war am Renntag frisch — der positive Form-Wert (TSB +17) bestätigt es. Der HRV-Dip heute ist nur der verdiente Muskelkater in Zahlen."
     }
-  ]
+  ],
+  "tagesplan": {
+    "2026-07-08": {
+      "hinweis": "Bergwoche: Kraftprogramm pausiert bewusst — Wandern IST heute das Training. Nur das Hütten-Minimum unten.",
+      "nur": [
+        "daily-meditation",
+        "daily-wallsit",
+        "daily-balance",
+        "daily-ankle"
+      ],
+      "extra": [
+        {
+          "tier": "activity",
+          "name": "Karwendel-Wanderung",
+          "duration": "lt. Tagesform",
+          "trigger": "tagsüber",
+          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Zehenstand-Isometrie (Achilles)",
+          "duration": "2 min · 3×30 s",
+          "trigger": "abends auf der Hütte",
+          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        },
+        {
+          "tier": "bonus",
+          "name": "Beine hochlegen",
+          "duration": "10 min",
+          "trigger": "abends",
+          "why": "Venöser Rückfluss nach dem Bergtag."
+        }
+      ]
+    },
+    "2026-07-09": {
+      "hinweis": "Bergtag 2. Morgen-Check ehrlich: Achilles >5 min steif → flachere Etappe. Kein schlechtes Gewissen wegen Kraft — ab Montag geht das neue Programm los.",
+      "nur": [
+        "daily-meditation",
+        "daily-wallsit",
+        "daily-balance",
+        "daily-ankle"
+      ],
+      "extra": [
+        {
+          "tier": "activity",
+          "name": "Hütten-Etappe",
+          "duration": "lt. Tagesform",
+          "trigger": "tagsüber",
+          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Zehenstand-Isometrie (Achilles)",
+          "duration": "2 min · 3×30 s",
+          "trigger": "abends auf der Hütte",
+          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        },
+        {
+          "tier": "bonus",
+          "name": "Beine hochlegen",
+          "duration": "10 min",
+          "trigger": "abends",
+          "why": "Venöser Rückfluss nach dem Bergtag."
+        }
+      ]
+    },
+    "2026-07-10": {
+      "hinweis": "Bergtag 3 = Stapel-Tag. Wenn die Achilles heute ruhig ist, hast du richtig dosiert.",
+      "nur": [
+        "daily-meditation",
+        "daily-wallsit",
+        "daily-balance",
+        "daily-ankle"
+      ],
+      "extra": [
+        {
+          "tier": "activity",
+          "name": "Hütten-Etappe",
+          "duration": "lt. Tagesform",
+          "trigger": "tagsüber",
+          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Zehenstand-Isometrie (Achilles)",
+          "duration": "2 min · 3×30 s",
+          "trigger": "abends auf der Hütte",
+          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        },
+        {
+          "tier": "bonus",
+          "name": "Beine hochlegen",
+          "duration": "10 min",
+          "trigger": "abends",
+          "why": "Venöser Rückfluss nach dem Bergtag."
+        }
+      ]
+    },
+    "2026-07-11": {
+      "hinweis": "Abschluss-Wanderung + Heimreise. Bei langer Autofahrt: alle 60–90 min raus und Hüfte mobilisieren.",
+      "nur": [
+        "daily-meditation",
+        "daily-wallsit",
+        "daily-balance",
+        "daily-ankle"
+      ],
+      "extra": [
+        {
+          "tier": "activity",
+          "name": "Abschluss-Wanderung",
+          "duration": "lt. Tagesform",
+          "trigger": "tagsüber",
+          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Zehenstand-Isometrie (Achilles)",
+          "duration": "2 min · 3×30 s",
+          "trigger": "abends auf der Hütte",
+          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        }
+      ]
+    },
+    "2026-07-12": {
+      "hinweis": "Ausklang am Achensee. Der Sonntags-HM im TrainingPeaks ist ein Geist — ignorieren. Morgen startet Build 2 + das neue Kraft/Plyo-Programm.",
+      "nur": [
+        "daily-meditation",
+        "daily-wallsit",
+        "daily-balance",
+        "daily-ankle"
+      ],
+      "extra": [
+        {
+          "tier": "activity",
+          "name": "Lockeres Wandern / Spazieren",
+          "duration": "nach Gefühl",
+          "trigger": "tagsüber",
+          "why": "Letzter Erholungstag vor Build 2."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Zehenstand-Isometrie (Achilles)",
+          "duration": "2 min · 3×30 s",
+          "trigger": "abends auf der Hütte",
+          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
+        }
+      ]
+    }
+  }
 }
