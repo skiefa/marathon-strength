@@ -1,494 +1,497 @@
 {
- "generated": "2026-07-06T15:45:00+02:00",
- "datenstand": {
-  "wearables": "2026-07-06",
-  "kommentar": "Frischer TP-Import bis 06.07 (Metrics + Workouts inkl. HM ausgewertet). HRV/RHR/Schlaf aktuell. Nächster Export nach der Bergwoche."
- },
- "briefings": {
-  "2026-06-30": {
-   "headline": "Reisetag Berlin — Schwimmen statt Schwitzen.",
-   "kalender": "Zug 7:05 → Berlin 12:23, Siemens-Workshop 15–18, Abend-Schwimmen 19–20.",
-   "einheit": "Kein Lauf heute. Das Abend-Schwimmen ist perfekte aktive Erholung. Im Hotel oder Zug kurz mobilisieren.",
-   "minimum": [
-    "Abend-Schwimmen locker",
-    "Im Zug/Hotel 5 min mobilisieren, Hüfte öffnen",
-    "Protein trotz Reise (nicht nur Bahnhofssnacks)",
-    "Meditation / Atemübung"
-   ],
-   "bonus": [],
-   "fueling": [
-    "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot)",
-    "Wasser dauerhaft griffbereit — Reisen + Workshop trocknen aus",
-    "Abends nicht zu spät schwer essen — morgen früh stehen Intervalle an"
-   ],
-   "warnung": "Morgen früh Intervalle in Berlin — heute früh genug ins Bett, damit die Quality-Einheit was wird.",
-   "coachSays": "Reisetag heißt nicht Faultag — aber heute reicht das Wasser unter dir."
+  "generated": "2026-07-06T15:45:00+02:00",
+  "datenstand": {
+    "wearables": "2026-07-06",
+    "kommentar": "Frischer TP-Import bis 06.07 (Metrics + Workouts inkl. HM ausgewertet). HRV/RHR/Schlaf aktuell. Nächster Export nach der Bergwoche."
   },
-  "2026-07-01": {
-   "headline": "Intervalle früh in Berlin — die Quality-Einheit der Woche.",
-   "kalender": "Call hast du verschoben → Intervalle früh. Danach Zug Berlin → Nürnberg 13:37, abends dein Talk.",
-   "einheit": "Intervalle (Plan 1:15 h) früh am Morgen. Davor Pre-Run Aktivierung, danach kurz auslaufen + Wadenheber. Die einzige harte Lauf-Einheit der Woche.",
-   "minimum": [
-    "Pre-Run Aktivierung 3 min",
-    "Intervalle nach Plan",
-    "Kurz auslaufen + Wadenheber",
-    "Protein in 30–40 min danach"
-   ],
-   "bonus": [
-    "Atemübung für den HRV-Rebound"
-   ],
-   "fueling": [
-    "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — KEIN Honig, dein Darm-Trigger)",
-    "Direkt nach dem Lauf Protein, bevor der Reise-/Talk-Tag startet",
-    "Über den Tag viel trinken — Zugfahrt + Reden zehren"
-   ],
-   "warnung": "Voller Reise- und Vortragstag danach — nach den Intervallen ordentlich essen und trinken, nicht auslaufen lassen.",
-   "coachSays": "Erst die Intervalle, dann die Bühne. In beidem lieferst du."
+  "briefings": {
+    "2026-06-30": {
+      "headline": "Reisetag Berlin — Schwimmen statt Schwitzen.",
+      "kalender": "Zug 7:05 → Berlin 12:23, Siemens-Workshop 15–18, Abend-Schwimmen 19–20.",
+      "einheit": "Kein Lauf heute. Das Abend-Schwimmen ist perfekte aktive Erholung. Im Hotel oder Zug kurz mobilisieren.",
+      "minimum": [
+        "Abend-Schwimmen locker",
+        "Im Zug/Hotel 5 min mobilisieren, Hüfte öffnen",
+        "Protein trotz Reise (nicht nur Bahnhofssnacks)",
+        "Meditation / Atemübung"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot)",
+        "Wasser dauerhaft griffbereit — Reisen + Workshop trocknen aus",
+        "Abends nicht zu spät schwer essen — morgen früh stehen Intervalle an"
+      ],
+      "warnung": "Morgen früh Intervalle in Berlin — heute früh genug ins Bett, damit die Quality-Einheit was wird.",
+      "coachSays": "Reisetag heißt nicht Faultag — aber heute reicht das Wasser unter dir."
+    },
+    "2026-07-01": {
+      "headline": "Intervalle früh in Berlin — die Quality-Einheit der Woche.",
+      "kalender": "Call hast du verschoben → Intervalle früh. Danach Zug Berlin → Nürnberg 13:37, abends dein Talk.",
+      "einheit": "Intervalle (Plan 1:15 h) früh am Morgen. Davor Pre-Run Aktivierung, danach kurz auslaufen + Wadenheber. Die einzige harte Lauf-Einheit der Woche.",
+      "minimum": [
+        "Pre-Run Aktivierung 3 min",
+        "Intervalle nach Plan",
+        "Kurz auslaufen + Wadenheber",
+        "Protein in 30–40 min danach"
+      ],
+      "bonus": [
+        "Atemübung für den HRV-Rebound"
+      ],
+      "fueling": [
+        "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — KEIN Honig, dein Darm-Trigger)",
+        "Direkt nach dem Lauf Protein, bevor der Reise-/Talk-Tag startet",
+        "Über den Tag viel trinken — Zugfahrt + Reden zehren"
+      ],
+      "warnung": "Voller Reise- und Vortragstag danach — nach den Intervallen ordentlich essen und trinken, nicht auslaufen lassen.",
+      "coachSays": "Erst die Intervalle, dann die Bühne. In beidem lieferst du."
+    },
+    "2026-07-02": {
+      "headline": "Zweite Kraft — oder Gnade, je nach Reise-Restmüdigkeit.",
+      "kalender": "Zuhause: Modul 4 9–13, Cowork 17:30. Menstruationsphase. Dazwischen Platz.",
+      "einheit": "Muckibude 2 zuhause (Bodyweight). Wenn Reise + Menstruation dich platt gemacht haben: leichter machen oder durch Mobility ersetzen. Drei Tage vor dem Rennen gilt: lieber etwas weniger als zu viel.",
+      "minimum": [
+        "Kraft Muckibude 2 (oder leichter / Mobility)",
+        "Beckenboden 3 min",
+        "Meditation / Atemübung",
+        "Wall Sit in einer Pause"
+      ],
+      "bonus": [
+        "Ein paar Steigerungen, wenn die Beine Lust haben"
+      ],
+      "fueling": [
+        "Menstruation: auf Eisen achten (rotes Fleisch / Hülsenfrüchte + Vit C), genug Protein + KH",
+        "Nicht nüchtern trainieren",
+        "Genug trinken"
+      ],
+      "warnung": "Menstruation + Reise = evtl. weniger Energie. Hör auf den Körper — das ist 3 Tage vor dem HM, Frische schlägt Ehrgeiz.",
+      "coachSays": "Dein Körper hat diese Woche viel getragen. Heute darf er auch mal Nein sagen."
+    },
+    "2026-07-03": {
+      "headline": "Tempolauf — letzter Reiz, dann Ruhe.",
+      "kalender": "Zuhause: Podcasts 9–12, Money 14–15, Timon 15:25. Menstruationsphase.",
+      "einheit": "Tempolauf 50 min — letzte intensivere Einheit vor dem HM. Wenn du den HM frischer angehen willst: kürzer + ein paar Renntempo-Steigerungen statt voller 50 min.",
+      "minimum": [
+        "Tempolauf 50 min (oder kürzer + Steigerungen)",
+        "Pre-Run Aktivierung",
+        "Wadenheber danach",
+        "Protein in 30–40 min"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Nicht nüchtern, KH vorher",
+        "Ab heute bewusst gut hydrieren — Richtung Renntag",
+        "Protein + KH nach dem Lauf"
+      ],
+      "warnung": "Morgen Ruhe, übermorgen HM — heute nicht überziehen. Das ist kein Trainingstag mehr zum Beweisen.",
+      "coachSays": "Kurz scharf, dann Deckel drauf. Sonntag wird abgerechnet, nicht heute."
+    },
+    "2026-07-04": {
+      "headline": "Ruhetag — Beine sparen, Kopf vorbereiten.",
+      "kalender": "Frei — Tag vor dem HM. WICHTIG: Startnummer holen bei Naked Studios, Fäustlestraße 7, München (bis 20:00). Nicht auf morgen früh verschieben.",
+      "einheit": "Ruhe. Optional 15-min-Shakeout mit 3–4 Steigerungen, um die Beine zu wecken — mehr nicht. Heute zählt Vorbereitung, nicht Training.",
+      "minimum": [
+        "Startnummer + Startbeutel HEUTE holen (München, bis 20:00)",
+        "Ruhe oder 15-min-Shakeout + 3–4 Steigerungen",
+        "Gels, Renn-Outfit, Chip/Startnummer richten — nichts Neues",
+        "Große KH-Mahlzeit zu MITTAG, abends leichter (weiße Pasta, einfache Tomatensauce)"
+      ],
+      "bonus": [],
+      "fueling": [
+        "Do–Sa Ballaststoffe + Fett runter (low-residue): kein Vollkorn, kein Rohgemüse, keine Nüsse/Bohnen, keine großen Salate",
+        "Große Carb-Mahlzeit MITTAGS: weiße Pasta + einfache Tomatensauce — KEIN Knoblauch/Zwiebel/Sahne (FODMAP). Abends leicht.",
+        "Gut hydrieren + Elektrolyte (Natrium macht durstig → du trinkst mehr)",
+        "Renn-Morgen einplanen: früh genug aufstehen für Kaffee + Frühstück (Toast + Marmelade, KEIN Honig) + vollständigen Toilettengang VOR dem Start"
+      ],
+      "warnung": "Nichts Neues mehr — keine neuen Gels, Schuhe, Socken, Lebensmittel. Früh ins Bett, der Start ist morgen früh.",
+      "coachSays": "Dein Freitags-Lauf lief flott und die Morgenroutine saß (2× Klo vor dem Start) — genau das nimmst du mit. Heute nur: Beine hoch, Speicher voll, Startnummer im Sack."
+    },
+    "2026-07-05": {
+      "headline": "München Halbmarathon — deine Generalprobe für Berlin.",
+      "kalender": "SportScheck HM, 21 km. Der Tag, auf den die Woche zuläuft.",
+      "einheit": "HM kontrolliert laufen — Pace und Race-Nutrition für Berlin testen, kein PR-Stress. Erste 5 km bewusst zu langsam anfühlen lassen, dann negativer Split.",
+      "minimum": [
+        "Morgenroutine: früh auf, Kaffee + Frühstück + Klo VOR dem Start",
+        "Nur erprobte Gels — nichts Neues",
+        "Kontrolliert starten, zweite Hälfte schneller",
+        "Nach dem Lauf 30–40 g Protein + KH"
+      ],
+      "bonus": [
+        "Wenn alles passt und die Beine wollen: die letzten 5 km laufen lassen"
+      ],
+      "fueling": [
+        "Renn-Frühstück 2,5–3 h vorher, erprobt: weißer Toast mit MARMELADE (kein Honig!) + Banane. Honig = dein FODMAP-Darm-Trigger.",
+        "Gels nach Plan (z. B. km 7 und km 14), nur die verträgliche Marke",
+        "Elektrolyte bei Wärme, alle paar km ein Schluck",
+        "Danach: Protein + KH in 30–40 min, dann eine richtige Mahlzeit"
+      ],
+      "warnung": "Die Beine sind von der Trainingswoche nicht 100 % frisch — nach Gefühl steuern, nicht auf die Uhr starren. Achilles/Knie wie immer im Blick.",
+      "coachSays": "Generalprobe für Berlin: heute testest du Pace und Bauch, nicht dein Ego. Lauf klug, dann läuft der Herbst."
+    },
+    "2026-07-06": {
+      "headline": "Tag danach — Erholung, kein Zurück-ins-Training.",
+      "kalender": "10:00 „I love controversy\" (LinkedIn-Block, 2 h). Sonst frei — Regenerationswoche startet.",
+      "einheit": "Aktive Erholung: 20–30 min lockerer Spaziergang oder leichtes Radeln, Beine ausschütteln. KEIN Laufen, KEINE Kraft heute. Wenn die Beine schwer/DOMS: nur Gehen + Mobility.",
+      "minimum": [
+        "Lockere Bewegung 20–30 min (Gehen/Rad) — nicht laufen",
+        "Sanfte Mobility, Waden locker ausrollen",
+        "Protein über den Tag verteilt (Reparatur): 1,6–2,0 g/kg",
+        "Früh ins Bett — Schlaf ist jetzt die beste Regeneration"
+      ],
+      "bonus": [
+        "Kurze Reflexion: Was hat beim HM beim Fueling/Pacing funktioniert? (Notiz für Berlin)",
+        "Nach dem HM: TP-Metrics als CSV exportieren → data/incoming/ (Erholungs-Readout)"
+      ],
+      "fueling": [
+        "Glykogen wieder auffüllen: KH über den Tag, kein Low-Carb heute",
+        "Protein 30–40 g direkt nach dem Aufstehen + zu jeder Mahlzeit (Muskelreparatur)",
+        "Gut hydrieren, Elektrolyte — nach dem Renn-Schweiß auffüllen",
+        "Jetzt darf auch wieder normal/ballaststoffreich gegessen werden (kein low-residue mehr nötig)"
+      ],
+      "warnung": "Muskelkater und Reiz-Achilles nach 21 km sind normal — NICHT durch einen „Lockerlauf\" überspielen. Erst wieder laufen, wenn die Beine sich normal anfühlen. Achilles/Knie diese Woche besonders beobachten.",
+      "coachSays": "Gestern hast du Berlin geprobt. Heute reparierst du. Regeneration ist Training, das wie Faulheit aussieht — mach sie trotzdem."
+    },
+    "2026-07-07": {
+      "headline": "Intervalle heute — der letzte Reiz vor den Bergen.",
+      "kalender": "Urlaubs-Blocker ab heute. 8:00 Janick bei Dr. Steiner. Ab morgen Karwendel — heute also die Quality-Einheit.",
+      "einheit": "Intervalle nach Plan (1:20 h). ABER: 2 Tage nach dem HM, HRV heute 21. Gut einlaufen und die Wiederholungen nach Gefühl steuern — wenn die Beine schwer sind, lieber etwas kürzer/langsamer als mit Gewalt durchprügeln. Danach kurz auslaufen + Wadenheber.",
+      "minimum": [
+        "Pre-Run Aktivierung 3 min",
+        "Intervalle nach Plan — nach Gefühl, nicht auf Bestzeit",
+        "Kurz auslaufen + Wadenheber",
+        "Protein 30–40 g in 30–40 min danach"
+      ],
+      "bonus": [
+        "Atemübung für den HRV-Rebound danach"
+      ],
+      "fueling": [
+        "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — kein Honig)",
+        "Direkt nach dem Lauf Protein",
+        "Über den Tag gut hydrieren + Elektrolyte"
+      ],
+      "warnung": "HRV 21 + Post-HM: kein Tag für eine Intervall-Bestzeit. Reiz setzen, nicht zerstören — morgen fahren die Beine eh in die Berge.",
+      "coachSays": "Okay, du läufst. Dann klug: heute der saubere Reiz, ab morgen machen die Berge die Erholung."
+    },
+    "2026-07-08": {
+      "headline": "Ab in die Karwendel-Hütten — Wandern ist ab jetzt dein Training.",
+      "kalender": "Karwendel-Hütten (bis So 12.07). Vormittags evtl. noch Calls (CC Weekly 8:00, Podcasts 9:00) — je nach Empfang. Ab dann: Berge.",
+      "einheit": "Diese Woche KEINE Läufe — bewusst. Bergwandern ist perfekte aktive Erholung: aerober Reiz ohne Lauf-Impact, und bergab bekommen deine Beine exzentrische Arbeit — genau die Po-/Hamstring-Baustelle vom HM.",
+      "minimum": [
+        "Wandern genießen — das IST die Einheit",
+        "Nach dem Abstieg Waden + Quads locker ausrollen",
+        "Protein zu jeder Mahlzeit (Hütten-Essen zählt)",
+        "Viel trinken — Höhe + Anstrengung trocknen aus"
+      ],
+      "bonus": [
+        "Abends 1 min Einbeinstand pro Seite auf der Hütte",
+        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
+      ],
+      "fueling": [
+        "Unterwegs KH + etwas Salz (Brot, Riegel, Elektrolyt-Tab ins Wasser)",
+        "Genug trinken, gerade bergauf in der Sonne",
+        "Abends ordentlich KH + Protein — Wandern zehrt mehr als man denkt"
+      ],
+      "warnung": "Achilles meckert erfahrungsgemäß am Tag NACH der Wanderung. Heute vorbeugen: Stöcke ab der ersten Stunde (nicht erst wenn's zieht), bergauf kleine Schritte statt Zehenspitzen-Push, bergab Knie weich + kurze Schritte. Abends auf der Hütte: 3×30 s Zehenstand halten (Isometrie beruhigt die Sehne).",
+      "coachSays": "Keine Laufschuhe diese Woche — die Berge machen den Job. Genieß es, das ist verdient."
+    },
+    "2026-07-09": {
+      "headline": "Tag 2 Karwendel — Beine in den Bergen, Kopf frei.",
+      "kalender": "Karwendel-Hütten, frei zum Wandern.",
+      "einheit": "Weiter wandern statt laufen. Wenn gestern lange Abstiege in den Beinen sitzen: heute ruhigere Route wählen. Der aerobe Reiz bleibt, die Beine danken es dir für Berlin.",
+      "minimum": [
+        "Wandern in angenehmem Tempo",
+        "Waden/Quads abends ausrollen",
+        "Protein + genug trinken",
+        "Kurz mobilisieren (Hüfte, Sprunggelenk)"
+      ],
+      "bonus": [
+        "Ein paar Wadenheber auf einer Stufe — Sehne mag Konstanz",
+        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
+      ],
+      "fueling": [
+        "Wander-Snacks mit KH + Salz",
+        "Trinken vor dem Durst",
+        "Abends auffüllen: KH + 30 g Protein"
+      ],
+      "warnung": "Morgen-Check ehrlich: Achilles >5 min steif oder ≥3/10 → heute flachere Etappe, mehr Pausen. Muskelkater vom HM + Bergab stapelt sich. Wieder: Stöcke, kleine Schritte, abends 3×30 s Zehenstand.",
+      "coachSays": "Erholung sieht diese Woche aus wie Bergpanorama. Nimm's."
+    },
+    "2026-07-10": {
+      "headline": "Karwendel Tag 3 — wandern, nicht rennen.",
+      "kalender": "Karwendel. 14:00 „I love Money\" (Buchhaltung, falls Empfang/Lust). Sonst Berge.",
+      "einheit": "Wandern. Immer noch keine Läufe — wir sind in der Erholungswoche, und die Beine bauen im Hintergrund Berlin-Substanz auf. Genieße die Höhenmeter.",
+      "minimum": [
+        "Wandern",
+        "Waden + Beine locker abends",
+        "Protein zu jeder Mahlzeit",
+        "Trinken + Elektrolyte bei Hitze"
+      ],
+      "bonus": [
+        "Einbeinstand / kurze Mobility auf der Hütte",
+        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
+      ],
+      "fueling": [
+        "Unterwegs regelmäßig KH + Salz",
+        "Abends KH auffüllen",
+        "Kreatin nicht vergessen (auch im Urlaub)"
+      ],
+      "warnung": "Tag 3 ist der Stapel-Tag — wenn Achilles jetzt ruhig ist, hast du es richtig dosiert. Bleib bei Stöcken + kurzen Schritten bergab. KEIN Waden-Dehnen bei gereizter Sehne (Dehnung komprimiert den Ansatz) — Isometrie statt Stretching.",
+      "coachSays": "Drei Tage ohne Laufschuhe und die Welt dreht sich weiter. Sie dreht sich sogar besser."
+    },
+    "2026-07-11": {
+      "headline": "Letzter Berg-Tag — dann Richtung Achensee.",
+      "kalender": "Karwendel, danach Übergang zum Achensee.",
+      "einheit": "Abschluss-Wanderung, dann Wechsel. Kein Lauf. Wenn die Beine sich langsam wieder frisch anfühlen: gutes Zeichen für den Wiedereinstieg nächste Woche — aber HEUTE noch nicht.",
+      "minimum": [
+        "Wandern / Transfer",
+        "Beine ausschütteln, Waden ausrollen",
+        "Protein + trinken",
+        "Kurze Mobility nach dem Sitzen im Auto"
+      ],
+      "bonus": [
+        "Reflexion: fühlen sich die Beine erholt an? (für Wiedereinstieg-Timing)"
+      ],
+      "fueling": [
+        "Transfer-Snacks mit KH + Protein statt Raststätten-Zucker",
+        "Gut hydrieren",
+        "Abends normal + vollwertig"
+      ],
+      "warnung": "Langes Autofahren macht Hüfte/Psoas steif — zwischendurch aufstehen, kurz mobilisieren.",
+      "coachSays": "Berge abgehakt, Beine aufgeladen. Der Herbst wird's dir danken."
+    },
+    "2026-07-12": {
+      "headline": "Wechsel zum Achensee — und nein, heute ist KEIN Halbmarathon.",
+      "kalender": "Reiterhof Achensee ab heute. ⚠️ Der „Halbmarathon Sport Scheck\" im TrainingPeaks ist ein FEHLER — ignorieren, kein Rennen.",
+      "einheit": "Ausklang der Erholungswoche. Lockeres Wandern/Spazieren am Achensee, wenn dir danach ist. Erst wenn die Beine sich normal anfühlen, planen wir den Lauf-Wiedereinstieg (nächste Woche, Build-2-Start Richtung Berlin).",
+      "minimum": [
+        "Locker bewegen, kein strukturiertes Training",
+        "Mobility + Waden",
+        "Protein + KH normal weiter",
+        "Wenn Empfang: HRV checken — rebounded sie?"
+      ],
+      "bonus": [
+        "Kommende Woche sichten: Build-2-Start + fueling-plan-berlin-2026.md"
+      ],
+      "fueling": [
+        "Normal + vollwertig essen, Ballaststoffe okay",
+        "Weiter gut hydrieren",
+        "Kreatin + Magnesium + D3 — Urlaubs-Routine hält"
+      ],
+      "warnung": "Der TP-Sonntags-HM ist ein Geist — nicht loslaufen, weil die App es sagt. Deine nächste harte Einheit ist erst nach dem Urlaub.",
+      "coachSays": "Eine Woche ohne Laufschuhe ist kein Rückschritt — es ist der Boden, auf dem der Berlin-Block wächst."
+    }
   },
-  "2026-07-02": {
-   "headline": "Zweite Kraft — oder Gnade, je nach Reise-Restmüdigkeit.",
-   "kalender": "Zuhause: Modul 4 9–13, Cowork 17:30. Menstruationsphase. Dazwischen Platz.",
-   "einheit": "Muckibude 2 zuhause (Bodyweight). Wenn Reise + Menstruation dich platt gemacht haben: leichter machen oder durch Mobility ersetzen. Drei Tage vor dem Rennen gilt: lieber etwas weniger als zu viel.",
-   "minimum": [
-    "Kraft Muckibude 2 (oder leichter / Mobility)",
-    "Beckenboden 3 min",
-    "Meditation / Atemübung",
-    "Wall Sit in einer Pause"
-   ],
-   "bonus": [
-    "Ein paar Steigerungen, wenn die Beine Lust haben"
-   ],
-   "fueling": [
-    "Menstruation: auf Eisen achten (rotes Fleisch / Hülsenfrüchte + Vit C), genug Protein + KH",
-    "Nicht nüchtern trainieren",
-    "Genug trinken"
-   ],
-   "warnung": "Menstruation + Reise = evtl. weniger Energie. Hör auf den Körper — das ist 3 Tage vor dem HM, Frische schlägt Ehrgeiz.",
-   "coachSays": "Dein Körper hat diese Woche viel getragen. Heute darf er auch mal Nein sagen."
+  "woche": {
+    "start": "2026-07-06",
+    "fokus": "Erholungs- & Bergwoche nach dem HM. Di 07.07 noch die Intervalle zuhause (nach Gefühl steuern — HRV heute 21, 2 Tage nach dem Rennen). Mi–So Karwendel-Hütten + Achensee = Wandern statt Laufen (aktive Erholung + exzentrische Bein-Arbeit bergab). Der Sonntags-HM im TP ist ein Fehler → ignorieren. Danach Build-2-Start Richtung Berlin.",
+    "luecken": [
+      "HM-Fueling-Lektionen für Berlin (Detail: fueling-plan-berlin-2026.md): Natrium war viel zu niedrig (~40 mg statt 600–1.200) → volle Elektrolyt-Tab, Flasche leer trinken. Carbs nur ~30 g/h → auf 60–70 hochtrainieren. Gel IMMER mit reinem Wasser. Gummibärchen raus.",
+      "Po + Hamstring waren ab km 14 die Schwäche (dein Renn-Kommentar) → im Build-2 schwere Hip-Hinge-Kraft (SLDL/Hip Thrust) priorisieren. Bergab-Wandern diese Woche zahlt schon drauf ein.",
+      "HRV heute 21 (Post-Race-Crash) → auf Rebound achten, erst mit normalem Bein-Gefühl wieder laufen."
+    ]
   },
-  "2026-07-03": {
-   "headline": "Tempolauf — letzter Reiz, dann Ruhe.",
-   "kalender": "Zuhause: Podcasts 9–12, Money 14–15, Timon 15:25. Menstruationsphase.",
-   "einheit": "Tempolauf 50 min — letzte intensivere Einheit vor dem HM. Wenn du den HM frischer angehen willst: kürzer + ein paar Renntempo-Steigerungen statt voller 50 min.",
-   "minimum": [
-    "Tempolauf 50 min (oder kürzer + Steigerungen)",
-    "Pre-Run Aktivierung",
-    "Wadenheber danach",
-    "Protein in 30–40 min"
-   ],
-   "bonus": [],
-   "fueling": [
-    "Nicht nüchtern, KH vorher",
-    "Ab heute bewusst gut hydrieren — Richtung Renntag",
-    "Protein + KH nach dem Lauf"
-   ],
-   "warnung": "Morgen Ruhe, übermorgen HM — heute nicht überziehen. Das ist kein Trainingstag mehr zum Beweisen.",
-   "coachSays": "Kurz scharf, dann Deckel drauf. Sonntag wird abgerechnet, nicht heute."
+  "trends": {
+    "kommentar": "Stand 06.07 (frischer TP-Import bis heute): Race-Woche-HRV auf Ø 40 hoch (von 33 in der Vorwoche) — der Taper hat sauber funktioniert. Post-HM heute erwartbarer Crash: HRV 21, RHR 52, aber Schlaf 8,7 h. Das ist der akute Renn-Preis, kein Alarm — die Bergwoche ist perfekt getimte aktive Erholung. Lauf-km Race-Woche: 38,4 (Intervalle 10,2 + Tempo 6,9 + HM 21,3).",
+    "wochen": [
+      {
+        "woche": "2026-01-05",
+        "hrv": 36.4,
+        "rhr": 55.1,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-01-12",
+        "hrv": 34.7,
+        "rhr": 55.4,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-01-19",
+        "hrv": 37.4,
+        "rhr": 55.4,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-01-26",
+        "hrv": 35.4,
+        "rhr": 55.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-02-02",
+        "hrv": 38.4,
+        "rhr": 55.6,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-02-09",
+        "hrv": 38.3,
+        "rhr": 53.9,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-02-16",
+        "hrv": 39.4,
+        "rhr": 54.7,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-02-23",
+        "hrv": 36.9,
+        "rhr": 56.1,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-03-02",
+        "hrv": 34.4,
+        "rhr": 58.3,
+        "schlaf": 7.5
+      },
+      {
+        "woche": "2026-03-09",
+        "hrv": 36.9,
+        "rhr": 54.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-03-16",
+        "hrv": 37.0,
+        "rhr": 55.1,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-03-23",
+        "hrv": 35.3,
+        "rhr": 54.6,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-03-30",
+        "hrv": 37.1,
+        "rhr": 53.6,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-04-06",
+        "hrv": 39.3,
+        "rhr": 52.9,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-04-13",
+        "hrv": 31.0,
+        "rhr": 54.2,
+        "schlaf": 6.2
+      },
+      {
+        "woche": "2026-04-20",
+        "hrv": 29.9,
+        "rhr": 52.7,
+        "schlaf": 6.8
+      },
+      {
+        "woche": "2026-05-11",
+        "hrv": 38.0,
+        "rhr": 53.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-05-18",
+        "hrv": 36.9,
+        "rhr": 53.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-05-25",
+        "hrv": 36.6,
+        "rhr": 52.6,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-06-01",
+        "hrv": 38.3,
+        "rhr": 52.9,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-06-08",
+        "hrv": 38.0,
+        "rhr": 54.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-06-15",
+        "hrv": 39.7,
+        "rhr": 54.6,
+        "schlaf": 8.0
+      },
+      {
+        "woche": "2026-06-22",
+        "hrv": 33.0,
+        "rhr": 51.9,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-06-29",
+        "hrv": 40.4,
+        "rhr": 51.6,
+        "schlaf": 7.6
+      }
+    ],
+    "kmWochen": [
+      {
+        "woche": "2026-04-27",
+        "km": 11.3
+      },
+      {
+        "woche": "2026-05-04",
+        "km": 11.7
+      },
+      {
+        "woche": "2026-05-11",
+        "km": 13.9
+      },
+      {
+        "woche": "2026-05-18",
+        "km": 26.4
+      },
+      {
+        "woche": "2026-05-25",
+        "km": 24.9
+      },
+      {
+        "woche": "2026-06-01",
+        "km": 33.6
+      },
+      {
+        "woche": "2026-06-08",
+        "km": 32.2
+      },
+      {
+        "woche": "2026-06-15",
+        "km": 30.1
+      },
+      {
+        "woche": "2026-06-22",
+        "km": 28.4
+      },
+      {
+        "woche": "2026-06-29",
+        "km": 38.4
+      }
+    ]
   },
-  "2026-07-04": {
-   "headline": "Ruhetag — Beine sparen, Kopf vorbereiten.",
-   "kalender": "Frei — Tag vor dem HM. WICHTIG: Startnummer holen bei Naked Studios, Fäustlestraße 7, München (bis 20:00). Nicht auf morgen früh verschieben.",
-   "einheit": "Ruhe. Optional 15-min-Shakeout mit 3–4 Steigerungen, um die Beine zu wecken — mehr nicht. Heute zählt Vorbereitung, nicht Training.",
-   "minimum": [
-    "Startnummer + Startbeutel HEUTE holen (München, bis 20:00)",
-    "Ruhe oder 15-min-Shakeout + 3–4 Steigerungen",
-    "Gels, Renn-Outfit, Chip/Startnummer richten — nichts Neues",
-    "Große KH-Mahlzeit zu MITTAG, abends leichter (weiße Pasta, einfache Tomatensauce)"
-   ],
-   "bonus": [],
-   "fueling": [
-    "Do–Sa Ballaststoffe + Fett runter (low-residue): kein Vollkorn, kein Rohgemüse, keine Nüsse/Bohnen, keine großen Salate",
-    "Große Carb-Mahlzeit MITTAGS: weiße Pasta + einfache Tomatensauce — KEIN Knoblauch/Zwiebel/Sahne (FODMAP). Abends leicht.",
-    "Gut hydrieren + Elektrolyte (Natrium macht durstig → du trinkst mehr)",
-    "Renn-Morgen einplanen: früh genug aufstehen für Kaffee + Frühstück (Toast + Marmelade, KEIN Honig) + vollständigen Toilettengang VOR dem Start"
-   ],
-   "warnung": "Nichts Neues mehr — keine neuen Gels, Schuhe, Socken, Lebensmittel. Früh ins Bett, der Start ist morgen früh.",
-   "coachSays": "Dein Freitags-Lauf lief flott und die Morgenroutine saß (2× Klo vor dem Start) — genau das nimmst du mit. Heute nur: Beine hoch, Speicher voll, Startnummer im Sack."
-  },
-  "2026-07-05": {
-   "headline": "München Halbmarathon — deine Generalprobe für Berlin.",
-   "kalender": "SportScheck HM, 21 km. Der Tag, auf den die Woche zuläuft.",
-   "einheit": "HM kontrolliert laufen — Pace und Race-Nutrition für Berlin testen, kein PR-Stress. Erste 5 km bewusst zu langsam anfühlen lassen, dann negativer Split.",
-   "minimum": [
-    "Morgenroutine: früh auf, Kaffee + Frühstück + Klo VOR dem Start",
-    "Nur erprobte Gels — nichts Neues",
-    "Kontrolliert starten, zweite Hälfte schneller",
-    "Nach dem Lauf 30–40 g Protein + KH"
-   ],
-   "bonus": [
-    "Wenn alles passt und die Beine wollen: die letzten 5 km laufen lassen"
-   ],
-   "fueling": [
-    "Renn-Frühstück 2,5–3 h vorher, erprobt: weißer Toast mit MARMELADE (kein Honig!) + Banane. Honig = dein FODMAP-Darm-Trigger.",
-    "Gels nach Plan (z. B. km 7 und km 14), nur die verträgliche Marke",
-    "Elektrolyte bei Wärme, alle paar km ein Schluck",
-    "Danach: Protein + KH in 30–40 min, dann eine richtige Mahlzeit"
-   ],
-   "warnung": "Die Beine sind von der Trainingswoche nicht 100 % frisch — nach Gefühl steuern, nicht auf die Uhr starren. Achilles/Knie wie immer im Blick.",
-   "coachSays": "Generalprobe für Berlin: heute testest du Pace und Bauch, nicht dein Ego. Lauf klug, dann läuft der Herbst."
-  },
-  "2026-07-06": {
-   "headline": "Tag danach — Erholung, kein Zurück-ins-Training.",
-   "kalender": "10:00 „I love controversy\" (LinkedIn-Block, 2 h). Sonst frei — Regenerationswoche startet.",
-   "einheit": "Aktive Erholung: 20–30 min lockerer Spaziergang oder leichtes Radeln, Beine ausschütteln. KEIN Laufen, KEINE Kraft heute. Wenn die Beine schwer/DOMS: nur Gehen + Mobility.",
-   "minimum": [
-    "Lockere Bewegung 20–30 min (Gehen/Rad) — nicht laufen",
-    "Sanfte Mobility, Waden locker ausrollen",
-    "Protein über den Tag verteilt (Reparatur): 1,6–2,0 g/kg",
-    "Früh ins Bett — Schlaf ist jetzt die beste Regeneration"
-   ],
-   "bonus": [
-    "Kurze Reflexion: Was hat beim HM beim Fueling/Pacing funktioniert? (Notiz für Berlin)",
-    "Nach dem HM: TP-Metrics als CSV exportieren → data/incoming/ (Erholungs-Readout)"
-   ],
-   "fueling": [
-    "Glykogen wieder auffüllen: KH über den Tag, kein Low-Carb heute",
-    "Protein 30–40 g direkt nach dem Aufstehen + zu jeder Mahlzeit (Muskelreparatur)",
-    "Gut hydrieren, Elektrolyte — nach dem Renn-Schweiß auffüllen",
-    "Jetzt darf auch wieder normal/ballaststoffreich gegessen werden (kein low-residue mehr nötig)"
-   ],
-   "warnung": "Muskelkater und Reiz-Achilles nach 21 km sind normal — NICHT durch einen „Lockerlauf\" überspielen. Erst wieder laufen, wenn die Beine sich normal anfühlen. Achilles/Knie diese Woche besonders beobachten.",
-   "coachSays": "Gestern hast du Berlin geprobt. Heute reparierst du. Regeneration ist Training, das wie Faulheit aussieht — mach sie trotzdem."
-  },
-  "2026-07-07": {
-   "headline": "Intervalle heute — der letzte Reiz vor den Bergen.",
-   "kalender": "Urlaubs-Blocker ab heute. 8:00 Janick bei Dr. Steiner. Ab morgen Karwendel — heute also die Quality-Einheit.",
-   "einheit": "Intervalle nach Plan (1:20 h). ABER: 2 Tage nach dem HM, HRV heute 21. Gut einlaufen und die Wiederholungen nach Gefühl steuern — wenn die Beine schwer sind, lieber etwas kürzer/langsamer als mit Gewalt durchprügeln. Danach kurz auslaufen + Wadenheber.",
-   "minimum": [
-    "Pre-Run Aktivierung 3 min",
-    "Intervalle nach Plan — nach Gefühl, nicht auf Bestzeit",
-    "Kurz auslaufen + Wadenheber",
-    "Protein 30–40 g in 30–40 min danach"
-   ],
-   "bonus": [
-    "Atemübung für den HRV-Rebound danach"
-   ],
-   "fueling": [
-    "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — kein Honig)",
-    "Direkt nach dem Lauf Protein",
-    "Über den Tag gut hydrieren + Elektrolyte"
-   ],
-   "warnung": "HRV 21 + Post-HM: kein Tag für eine Intervall-Bestzeit. Reiz setzen, nicht zerstören — morgen fahren die Beine eh in die Berge.",
-   "coachSays": "Okay, du läufst. Dann klug: heute der saubere Reiz, ab morgen machen die Berge die Erholung."
-  },
-  "2026-07-08": {
-   "headline": "Ab in die Karwendel-Hütten — Wandern ist ab jetzt dein Training.",
-   "kalender": "Karwendel-Hütten (bis So 12.07). Vormittags evtl. noch Calls (CC Weekly 8:00, Podcasts 9:00) — je nach Empfang. Ab dann: Berge.",
-   "einheit": "Diese Woche KEINE Läufe — bewusst. Bergwandern ist perfekte aktive Erholung: aerober Reiz ohne Lauf-Impact, und bergab bekommen deine Beine exzentrische Arbeit — genau die Po-/Hamstring-Baustelle vom HM.",
-   "minimum": [
-    "Wandern genießen — das IST die Einheit",
-    "Nach dem Abstieg Waden + Quads locker ausrollen",
-    "Protein zu jeder Mahlzeit (Hütten-Essen zählt)",
-    "Viel trinken — Höhe + Anstrengung trocknen aus"
-   ],
-   "bonus": [
-    "Abends 1 min Einbeinstand pro Seite auf der Hütte"
-   ],
-   "fueling": [
-    "Unterwegs KH + etwas Salz (Brot, Riegel, Elektrolyt-Tab ins Wasser)",
-    "Genug trinken, gerade bergauf in der Sonne",
-    "Abends ordentlich KH + Protein — Wandern zehrt mehr als man denkt"
-   ],
-   "warnung": "Langes Bergab reizt Achilles + Knie. Bewusst gehen, Stöcke nutzen, bei Knie ≥3/10 kürzertreten.",
-   "coachSays": "Keine Laufschuhe diese Woche — die Berge machen den Job. Genieß es, das ist verdient."
-  },
-  "2026-07-09": {
-   "headline": "Tag 2 Karwendel — Beine in den Bergen, Kopf frei.",
-   "kalender": "Karwendel-Hütten, frei zum Wandern.",
-   "einheit": "Weiter wandern statt laufen. Wenn gestern lange Abstiege in den Beinen sitzen: heute ruhigere Route wählen. Der aerobe Reiz bleibt, die Beine danken es dir für Berlin.",
-   "minimum": [
-    "Wandern in angenehmem Tempo",
-    "Waden/Quads abends ausrollen",
-    "Protein + genug trinken",
-    "Kurz mobilisieren (Hüfte, Sprunggelenk)"
-   ],
-   "bonus": [
-    "Ein paar Wadenheber auf einer Stufe — Sehne mag Konstanz"
-   ],
-   "fueling": [
-    "Wander-Snacks mit KH + Salz",
-    "Trinken vor dem Durst",
-    "Abends auffüllen: KH + 30 g Protein"
-   ],
-   "warnung": "Muskelkater vom HM + Bergab kann sich stapeln. Achilles/Knie ehrlich einschätzen, lieber flacher gehen.",
-   "coachSays": "Erholung sieht diese Woche aus wie Bergpanorama. Nimm's."
-  },
-  "2026-07-10": {
-   "headline": "Karwendel Tag 3 — wandern, nicht rennen.",
-   "kalender": "Karwendel. 14:00 „I love Money\" (Buchhaltung, falls Empfang/Lust). Sonst Berge.",
-   "einheit": "Wandern. Immer noch keine Läufe — wir sind in der Erholungswoche, und die Beine bauen im Hintergrund Berlin-Substanz auf. Genieße die Höhenmeter.",
-   "minimum": [
-    "Wandern",
-    "Waden + Beine locker abends",
-    "Protein zu jeder Mahlzeit",
-    "Trinken + Elektrolyte bei Hitze"
-   ],
-   "bonus": [
-    "Einbeinstand / kurze Mobility auf der Hütte"
-   ],
-   "fueling": [
-    "Unterwegs regelmäßig KH + Salz",
-    "Abends KH auffüllen",
-    "Kreatin nicht vergessen (auch im Urlaub)"
-   ],
-   "warnung": "Wenn Achilles morgens >5 min steif ist: heute deutlich flacher. Bergab ist der Reiz, den er nicht mag.",
-   "coachSays": "Drei Tage ohne Laufschuhe und die Welt dreht sich weiter. Sie dreht sich sogar besser."
-  },
-  "2026-07-11": {
-   "headline": "Letzter Berg-Tag — dann Richtung Achensee.",
-   "kalender": "Karwendel, danach Übergang zum Achensee.",
-   "einheit": "Abschluss-Wanderung, dann Wechsel. Kein Lauf. Wenn die Beine sich langsam wieder frisch anfühlen: gutes Zeichen für den Wiedereinstieg nächste Woche — aber HEUTE noch nicht.",
-   "minimum": [
-    "Wandern / Transfer",
-    "Beine ausschütteln, Waden ausrollen",
-    "Protein + trinken",
-    "Kurze Mobility nach dem Sitzen im Auto"
-   ],
-   "bonus": [
-    "Reflexion: fühlen sich die Beine erholt an? (für Wiedereinstieg-Timing)"
-   ],
-   "fueling": [
-    "Transfer-Snacks mit KH + Protein statt Raststätten-Zucker",
-    "Gut hydrieren",
-    "Abends normal + vollwertig"
-   ],
-   "warnung": "Langes Autofahren macht Hüfte/Psoas steif — zwischendurch aufstehen, kurz mobilisieren.",
-   "coachSays": "Berge abgehakt, Beine aufgeladen. Der Herbst wird's dir danken."
-  },
-  "2026-07-12": {
-   "headline": "Wechsel zum Achensee — und nein, heute ist KEIN Halbmarathon.",
-   "kalender": "Reiterhof Achensee ab heute. ⚠️ Der „Halbmarathon Sport Scheck\" im TrainingPeaks ist ein FEHLER — ignorieren, kein Rennen.",
-   "einheit": "Ausklang der Erholungswoche. Lockeres Wandern/Spazieren am Achensee, wenn dir danach ist. Erst wenn die Beine sich normal anfühlen, planen wir den Lauf-Wiedereinstieg (nächste Woche, Build-2-Start Richtung Berlin).",
-   "minimum": [
-    "Locker bewegen, kein strukturiertes Training",
-    "Mobility + Waden",
-    "Protein + KH normal weiter",
-    "Wenn Empfang: HRV checken — rebounded sie?"
-   ],
-   "bonus": [
-    "Kommende Woche sichten: Build-2-Start + fueling-plan-berlin-2026.md"
-   ],
-   "fueling": [
-    "Normal + vollwertig essen, Ballaststoffe okay",
-    "Weiter gut hydrieren",
-    "Kreatin + Magnesium + D3 — Urlaubs-Routine hält"
-   ],
-   "warnung": "Der TP-Sonntags-HM ist ein Geist — nicht loslaufen, weil die App es sagt. Deine nächste harte Einheit ist erst nach dem Urlaub.",
-   "coachSays": "Eine Woche ohne Laufschuhe ist kein Rückschritt — es ist der Boden, auf dem der Berlin-Block wächst."
-  }
- },
- "woche": {
-  "start": "2026-07-06",
-  "fokus": "Erholungs- & Bergwoche nach dem HM. Di 07.07 noch die Intervalle zuhause (nach Gefühl steuern — HRV heute 21, 2 Tage nach dem Rennen). Mi–So Karwendel-Hütten + Achensee = Wandern statt Laufen (aktive Erholung + exzentrische Bein-Arbeit bergab). Der Sonntags-HM im TP ist ein Fehler → ignorieren. Danach Build-2-Start Richtung Berlin.",
-  "luecken": [
-   "HM-Fueling-Lektionen für Berlin (Detail: fueling-plan-berlin-2026.md): Natrium war viel zu niedrig (~40 mg statt 600–1.200) → volle Elektrolyt-Tab, Flasche leer trinken. Carbs nur ~30 g/h → auf 60–70 hochtrainieren. Gel IMMER mit reinem Wasser. Gummibärchen raus.",
-   "Po + Hamstring waren ab km 14 die Schwäche (dein Renn-Kommentar) → im Build-2 schwere Hip-Hinge-Kraft (SLDL/Hip Thrust) priorisieren. Bergab-Wandern diese Woche zahlt schon drauf ein.",
-   "HRV heute 21 (Post-Race-Crash) → auf Rebound achten, erst mit normalem Bein-Gefühl wieder laufen."
+  "beweise": [
+    {
+      "titel": "Halbmarathon gefinisht — deine Berlin-Generalprobe",
+      "text": "05.07.: 21,3 km in 2:33 h, HF Ø149, TSS 236, IF 0,96. Kontrolliert gepact, Beine trugen bis km 14. Genau der Formtest, den der Berlin-Block braucht."
+    },
+    {
+      "titel": "Ausdauerbasis verdreifacht seit April",
+      "text": "Von ~11 km/Woche Ende April auf 38 km in der Race-Woche (inkl. HM). Fitness/CTL 52 — die aerobe Basis für Berlin steht."
+    },
+    {
+      "titel": "Taper hat funktioniert — HRV frisch ins Rennen",
+      "text": "Race-Woche-HRV Ø 40 (Vorwoche 33), Schlaf stabil. Dein Nervensystem war am Renntag frisch — der positive Form-Wert (TSB +17) bestätigt es. Der HRV-Dip heute ist nur der verdiente Muskelkater in Zahlen."
+    }
   ]
- },
- "trends": {
-  "kommentar": "Stand 06.07 (frischer TP-Import bis heute): Race-Woche-HRV auf Ø 40 hoch (von 33 in der Vorwoche) — der Taper hat sauber funktioniert. Post-HM heute erwartbarer Crash: HRV 21, RHR 52, aber Schlaf 8,7 h. Das ist der akute Renn-Preis, kein Alarm — die Bergwoche ist perfekt getimte aktive Erholung. Lauf-km Race-Woche: 38,4 (Intervalle 10,2 + Tempo 6,9 + HM 21,3).",
-  "wochen": [
-   {
-    "woche": "2026-01-05",
-    "hrv": 36.4,
-    "rhr": 55.1,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-01-12",
-    "hrv": 34.7,
-    "rhr": 55.4,
-    "schlaf": 8.3
-   },
-   {
-    "woche": "2026-01-19",
-    "hrv": 37.4,
-    "rhr": 55.4,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-01-26",
-    "hrv": 35.4,
-    "rhr": 55.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-02-02",
-    "hrv": 38.4,
-    "rhr": 55.6,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-02-09",
-    "hrv": 38.3,
-    "rhr": 53.9,
-    "schlaf": 7.8
-   },
-   {
-    "woche": "2026-02-16",
-    "hrv": 39.4,
-    "rhr": 54.7,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-02-23",
-    "hrv": 36.9,
-    "rhr": 56.1,
-    "schlaf": 7.8
-   },
-   {
-    "woche": "2026-03-02",
-    "hrv": 34.4,
-    "rhr": 58.3,
-    "schlaf": 7.5
-   },
-   {
-    "woche": "2026-03-09",
-    "hrv": 36.9,
-    "rhr": 54.9,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-03-16",
-    "hrv": 37.0,
-    "rhr": 55.1,
-    "schlaf": 8.3
-   },
-   {
-    "woche": "2026-03-23",
-    "hrv": 35.3,
-    "rhr": 54.6,
-    "schlaf": 7.6
-   },
-   {
-    "woche": "2026-03-30",
-    "hrv": 37.1,
-    "rhr": 53.6,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-04-06",
-    "hrv": 39.3,
-    "rhr": 52.9,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-04-13",
-    "hrv": 31.0,
-    "rhr": 54.2,
-    "schlaf": 6.2
-   },
-   {
-    "woche": "2026-04-20",
-    "hrv": 29.9,
-    "rhr": 52.7,
-    "schlaf": 6.8
-   },
-   {
-    "woche": "2026-05-11",
-    "hrv": 38.0,
-    "rhr": 53.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-05-18",
-    "hrv": 36.9,
-    "rhr": 53.9,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-05-25",
-    "hrv": 36.6,
-    "rhr": 52.6,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-06-01",
-    "hrv": 38.3,
-    "rhr": 52.9,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-06-08",
-    "hrv": 38.0,
-    "rhr": 54.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-06-15",
-    "hrv": 39.7,
-    "rhr": 54.6,
-    "schlaf": 8.0
-   },
-   {
-    "woche": "2026-06-22",
-    "hrv": 33.0,
-    "rhr": 51.9,
-    "schlaf": 7.6
-   },
-   {
-    "woche": "2026-06-29",
-    "hrv": 40.4,
-    "rhr": 51.6,
-    "schlaf": 7.6
-   }
-  ],
-  "kmWochen": [
-   {
-    "woche": "2026-04-27",
-    "km": 11.3
-   },
-   {
-    "woche": "2026-05-04",
-    "km": 11.7
-   },
-   {
-    "woche": "2026-05-11",
-    "km": 13.9
-   },
-   {
-    "woche": "2026-05-18",
-    "km": 26.4
-   },
-   {
-    "woche": "2026-05-25",
-    "km": 24.9
-   },
-   {
-    "woche": "2026-06-01",
-    "km": 33.6
-   },
-   {
-    "woche": "2026-06-08",
-    "km": 32.2
-   },
-   {
-    "woche": "2026-06-15",
-    "km": 30.1
-   },
-   {
-    "woche": "2026-06-22",
-    "km": 28.4
-   },
-   {
-    "woche": "2026-06-29",
-    "km": 38.4
-   }
-  ]
- },
- "beweise": [
-  {
-   "titel": "Halbmarathon gefinisht — deine Berlin-Generalprobe",
-   "text": "05.07.: 21,3 km in 2:33 h, HF Ø149, TSS 236, IF 0,96. Kontrolliert gepact, Beine trugen bis km 14. Genau der Formtest, den der Berlin-Block braucht."
-  },
-  {
-   "titel": "Ausdauerbasis verdreifacht seit April",
-   "text": "Von ~11 km/Woche Ende April auf 38 km in der Race-Woche (inkl. HM). Fitness/CTL 52 — die aerobe Basis für Berlin steht."
-  },
-  {
-   "titel": "Taper hat funktioniert — HRV frisch ins Rennen",
-   "text": "Race-Woche-HRV Ø 40 (Vorwoche 33), Schlaf stabil. Dein Nervensystem war am Renntag frisch — der positive Form-Wert (TSB +17) bestätigt es. Der HRV-Dip heute ist nur der verdiente Muskelkater in Zahlen."
-  }
- ]
 }
