@@ -409,8 +409,8 @@ function spruchFuer(dk){
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); scheduleSync(); }
 
@@ -495,6 +495,11 @@ function mergeState(R){
   for(const dk in R.essen){
     const haveE = new Set((S.essen[dk]||[]).map(x=>x.ts||x.text));
     S.essen[dk] = (S.essen[dk]||[]).concat((R.essen[dk]||[]).filter(x=>!haveE.has(x.ts||x.text)));
+  }
+  R.trinken = R.trinken||{}; S.trinken = S.trinken||{};
+  for(const dk in R.trinken){
+    const haveT = new Set((S.trinken[dk]||[]).map(x=>x.ts));
+    S.trinken[dk] = (S.trinken[dk]||[]).concat((R.trinken[dk]||[]).filter(x=>!haveT.has(x.ts)));
   }
   const jkey = e => e.ts || (e.datum+'|'+(e.notizen||'').slice(0,60));
   const have = new Set((S.journal||[]).map(jkey));
@@ -679,6 +684,54 @@ function renderFeel(dk){
   </div>`;
 }
 
+/* ===== TRINKEN =====
+   Tagesziel kommt vom Abend-Coach (data.json → hydration[datum]), sonst 2.500-ml-Fallback.
+   Pacing: linear 07:00–22:00. Alles zählt (Wasser, Tee, Kaffee, Elektrolyt). */
+function hydrationZiel(dk){
+  const h = (DATA.hydration||{})[dk];
+  return (h && h.ziel_ml) ? {ziel:h.ziel_ml, grund:h.grund||''}
+       : {ziel:2500, grund:'Standardziel — heutiges Training/Wetter noch nicht eingerechnet'};
+}
+function trinkenSum(dk){ return (S.trinken[dk]||[]).reduce((a,e)=>a+(+e.ml||0),0); }
+function fmtL(ml){ return (ml/1000).toFixed(1).replace('.',',')+' l'; }
+function addTrinken(ml){ const dk=todayKey(); S.trinken[dk]=S.trinken[dk]||[]; S.trinken[dk].push({ts:new Date().toISOString(), ml:ml}); save(); render(); }
+function undoTrinken(){ const dk=todayKey(); const a=S.trinken[dk]||[]; if(a.length){ a.pop(); save(); render(); } }
+function renderHydration(dk){
+  if(dk!==todayKey()) return '';
+  const z = hydrationZiel(dk);
+  const ist = trinkenSum(dk);
+  const now = new Date();
+  const frac = Math.min(1, Math.max(0, (now.getHours()+now.getMinutes()/60-7)/15));
+  const soll = Math.round(z.ziel*frac);
+  let cls='', msg='';
+  if(ist>=z.ziel){ msg='Ziel erreicht ✓ — stark.'; }
+  else if(frac<=0){ msg='Der Tag startet — erstes Glas gleich nach dem Aufstehen.'; }
+  else {
+    const q = soll>0 ? ist/soll : 1;
+    const sollTxt = 'Für '+now.getHours()+' Uhr solltest du bei ~'+fmtL(soll)+' sein';
+    if(q>=0.9){ msg=sollTxt+' — passt.'; }
+    else if(q>=0.6){ cls='mid'; msg=sollTxt+' — leicht hinterher, ein Glas jetzt.'; }
+    else { cls='low'; msg=sollTxt+' — deutlich zu wenig. Flasche holen.'; }
+  }
+  const pct = Math.min(100, Math.round(ist/z.ziel*100));
+  const hasEntries = (S.trinken[dk]||[]).length>0;
+  return `<div class="card">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+      <b style="font-size:16px">Trinken 💧</b>
+      <span style="font-weight:700">${fmtL(ist)} <span class="small" style="font-weight:400">/ ${fmtL(z.ziel)}</span></span>
+    </div>
+    <div class="zbar" style="margin-top:8px"><div class="zfill ${cls}" style="width:${pct}%"></div></div>
+    <div class="feelrow">
+      <button class="feelbtn" onclick="addTrinken(250)">+ 250 ml</button>
+      <button class="feelbtn" onclick="addTrinken(400)">+ 400 ml</button>
+      <button class="feelbtn" onclick="addTrinken(500)">+ 500 ml</button>
+    </div>
+    <div class="small" style="margin-top:8px">${esc(msg)}</div>
+    ${z.grund? `<div class="small" style="margin-top:4px">Ziel heute: ${esc(z.grund)}</div>`:''}
+    ${hasEntries? `<div style="margin-top:6px;text-align:right"><button class="del" onclick="undoTrinken()">Rückgängig</button></div>`:''}
+  </div>`;
+}
+
 function renderTask(t, dk){
   const done = isDone(t.id,dk), skip = isSkipped(t.id,dk);
   const prog = PROGRESSION[t.id.replace(/-\d{4}-\d{2}-\d{2}$/,'').replace(/^nh\d+-/,'')];
@@ -712,6 +765,7 @@ function renderHeute(){
   ];
   let html = renderDays();
   html += renderFeel(dk);
+  html += renderHydration(dk);
   const ovH = dayOverride(dk);
   if (ovH && ovH.hinweis) html += `<div class="card" style="background:linear-gradient(135deg,#eaf7ee,#dff0e4);border-color:#3e9c5a55"><b style="font-size:15px">🏔 Anderer Plan heute</b><div class="small" style="margin-top:4px;color:var(--ink)">${esc(ovH.hinweis)}</div></div>`;
   html += renderBriefing(dk);
@@ -938,6 +992,10 @@ ${e.notizen}
   if(checkDays.length){
     md += '\n## Morgen-Checks\n' + checkDays.map(d=>`- ${d}: Akku ${S.feel[d]||'–'} · Achilles ${S.achilles[d]||'–'}`).join('\n') + '\n';
   }
+  const trinkDays = Object.keys(S.trinken||{}).sort();
+  if(trinkDays.length){
+    md += '\n## Getrunken\n' + trinkDays.map(d=>`- ${d}: ${fmtL(trinkenSum(d))}`).join('\n') + '\n';
+  }
   const NAME = {}; TASKS.concat(REGEN_TASKS).forEach(t=>NAME[t.id]=t.name);
   const doneDays = Object.keys(S.done).sort();
   let doneMd = '';
@@ -987,8 +1045,8 @@ function renderBuch(){
     return `<option value="${o}">${(o===0?'Heute':'Gestern')+' · '+fmtDate(todayKey(d))}</option>`;
   }).join('');
   html += `<h2>Teller — Essen &amp; Trinken</h2><div class="card">
-    <div class="small" style="margin-bottom:8px">Einfach reinsprechen, was du gegessen und getrunken hast (Mikrofon-Taste auf der Tastatur). Mengen grob reichen — der Coach rechnet abends Protein &amp; Flüssigkeit aus und sagt dir im Briefing, was fehlt. Ziel: <b>117–146 g Protein/Tag</b>.</div>
-    <textarea id="t-text" style="min-height:80px" placeholder="z. B.: Frühstück Skyr mit Beeren und Toast, mittags Linsensuppe, abends Lachs mit Kartoffeln. Getrunken: 2 große Flaschen Wasser + 1 Elektrolyt."></textarea>
+    <div class="small" style="margin-bottom:8px">Einfach reinsprechen, was du gegessen hast (Mikrofon-Taste auf der Tastatur). Mengen grob reichen — der Coach rechnet abends Protein aus und sagt dir im Briefing, was fehlt. Ziel: <b>117–146 g Protein/Tag</b>. Getrunkenes bitte oben auf „Heute" antippen — das zählt der Coach exakt.</div>
+    <textarea id="t-text" style="min-height:80px" placeholder="z. B.: Frühstück Skyr mit Beeren und Toast, mittags Linsensuppe, abends Lachs mit Kartoffeln."></textarea>
     <div class="frow" style="margin-top:10px"><div><label>Tag</label><select id="t-tag">${tTagOpt}</select></div><div></div></div>
     <button class="btn" onclick="saveTeller()">Teller sichern</button>
     ${(()=>{ const days=Object.keys(S.essen||{}).sort().reverse().slice(0,3); if(!days.length) return '';

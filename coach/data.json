@@ -4,6 +4,20 @@
     "wearables": "2026-07-15",
     "kommentar": "Oura frisch bis 15.07 (Schlaf/Readiness/HRV). Schlaf top: Score Ø 91 über 8 Nächte, bis 9 h. Readiness 83-91. Aber: nächtliche HRV in den letzten 2 Nächten von ~37 auf 23 ms gefallen — Reload nach Karwendel-Woche + Hitze-Intervalle (14.07, 28°C) + Plyo-Start. Readiness trägt noch. TP-Wochenplan 15.07 eingelesen."
   },
+  "hydration": {
+    "2026-07-15": {
+      "ziel_ml": 2600,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) — max. 25 °C, kein Hitzezuschlag"
+    },
+    "2026-07-16": {
+      "ziel_ml": 3500,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + 28 °C (+500)"
+    },
+    "2026-07-17": {
+      "ziel_ml": 2600,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) — max. 24 °C, kein Hitzezuschlag"
+    }
+  },
   "briefings": {
     "2026-07-16": {
       "headline": "Tempolauf mit Ansage — und der Countdown zum Blut-Retest läuft.",
