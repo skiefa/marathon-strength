@@ -6,16 +6,16 @@
   },
   "hydration": {
     "2026-07-15": {
-      "ziel_ml": 2600,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) — max. 25 °C, kein Hitzezuschlag"
+      "ziel_ml": 2200,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) − 400 Kaffee & Co. (läuft nicht über den Tracker) — max. 25 °C, kein Hitzezuschlag"
     },
     "2026-07-16": {
-      "ziel_ml": 3500,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + 28 °C (+500)"
+      "ziel_ml": 3100,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + 28 °C (+500) − 400 Kaffee & Co."
     },
     "2026-07-17": {
-      "ziel_ml": 2600,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) — max. 24 °C, kein Hitzezuschlag"
+      "ziel_ml": 2200,
+      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) − 400 Kaffee & Co. — max. 24 °C, kein Hitzezuschlag"
     }
   },
   "briefings": {

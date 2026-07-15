@@ -686,7 +686,8 @@ function renderFeel(dk){
 
 /* ===== TRINKEN =====
    Tagesziel kommt vom Abend-Coach (data.json → hydration[datum]), sonst 2.500-ml-Fallback.
-   Pacing: linear 07:00–22:00. Alles zählt (Wasser, Tee, Kaffee, Elektrolyt). */
+   Pacing: linear 07:00–22:00. Getrackt wird nur Wasser + Elektrolyt — Kaffee & Co. laufen
+   übers Teller-Diktat und sind im Ziel bereits pauschal abgezogen (Formel in ernaehrung-ziele.yaml). */
 function hydrationZiel(dk){
   const h = (DATA.hydration||{})[dk];
   return (h && h.ziel_ml) ? {ziel:h.ziel_ml, grund:h.grund||''}
@@ -1045,7 +1046,7 @@ function renderBuch(){
     return `<option value="${o}">${(o===0?'Heute':'Gestern')+' · '+fmtDate(todayKey(d))}</option>`;
   }).join('');
   html += `<h2>Teller — Essen &amp; Trinken</h2><div class="card">
-    <div class="small" style="margin-bottom:8px">Einfach reinsprechen, was du gegessen hast (Mikrofon-Taste auf der Tastatur). Mengen grob reichen — der Coach rechnet abends Protein aus und sagt dir im Briefing, was fehlt. Ziel: <b>117–146 g Protein/Tag</b>. Getrunkenes bitte oben auf „Heute" antippen — das zählt der Coach exakt.</div>
+    <div class="small" style="margin-bottom:8px">Einfach reinsprechen, was du gegessen hast (Mikrofon-Taste auf der Tastatur). Mengen grob reichen — der Coach rechnet abends Protein aus und sagt dir im Briefing, was fehlt. Ziel: <b>117–146 g Protein/Tag</b>. Wasser &amp; Elektrolyt bitte oben auf „Heute" antippen — Kaffee &amp; Co. einfach hier miterzählen.</div>
     <textarea id="t-text" style="min-height:80px" placeholder="z. B.: Frühstück Skyr mit Beeren und Toast, mittags Linsensuppe, abends Lachs mit Kartoffeln."></textarea>
     <div class="frow" style="margin-top:10px"><div><label>Tag</label><select id="t-tag">${tTagOpt}</select></div><div></div></div>
     <button class="btn" onclick="saveTeller()">Teller sichern</button>
