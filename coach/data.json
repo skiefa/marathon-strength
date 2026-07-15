@@ -1,298 +1,92 @@
 {
-  "generated": "2026-07-06T15:45:00+02:00",
+  "generated": "2026-07-15T21:00:00+02:00",
   "datenstand": {
-    "wearables": "2026-07-06",
-    "kommentar": "Frischer TP-Import bis 06.07 (Metrics + Workouts inkl. HM ausgewertet). HRV/RHR/Schlaf aktuell. Nächster Export nach der Bergwoche."
+    "wearables": "2026-07-15",
+    "kommentar": "Oura frisch bis 15.07 (Schlaf/Readiness/HRV). Schlaf top: Score Ø 91 über 8 Nächte, bis 9 h. Readiness 83-91. Aber: nächtliche HRV in den letzten 2 Nächten von ~37 auf 23 ms gefallen — Reload nach Karwendel-Woche + Hitze-Intervalle (14.07, 28°C) + Plyo-Start. Readiness trägt noch. TP-Wochenplan 15.07 eingelesen."
   },
   "briefings": {
-    "2026-06-30": {
-      "headline": "Reisetag Berlin — Schwimmen statt Schwitzen.",
-      "kalender": "Zug 7:05 → Berlin 12:23, Siemens-Workshop 15–18, Abend-Schwimmen 19–20.",
-      "einheit": "Kein Lauf heute. Das Abend-Schwimmen ist perfekte aktive Erholung. Im Hotel oder Zug kurz mobilisieren.",
+    "2026-07-16": {
+      "headline": "Tempolauf mit Ansage — und der Countdown zum Blut-Retest läuft.",
+      "kalender": "Zahnarzt 8:00-9:00. Danach frei — der Tag gehört dem Tempolauf. Do/Fr Steuer-Kram am Schreibtisch.",
+      "einheit": "Tempolauf 55 min / 89 TSS (Coachin ausdrücklich: 'gut verpflegen!') + Mobi 17 min. Bestes Fenster: direkt nach dem Zahnarzt ~9:30, bevor die Hitze kommt — am See im Schatten. Nicht nüchtern loslaufen.",
       "minimum": [
-        "Abend-Schwimmen locker",
-        "Im Zug/Hotel 5 min mobilisieren, Hüfte öffnen",
-        "Protein trotz Reise (nicht nur Bahnhofssnacks)",
-        "Meditation / Atemübung"
-      ],
-      "bonus": [],
-      "fueling": [
-        "Für den Zug was Ordentliches einpacken (Nüsse, Skyr, belegtes Brot)",
-        "Wasser dauerhaft griffbereit — Reisen + Workshop trocknen aus",
-        "Abends nicht zu spät schwer essen — morgen früh stehen Intervalle an"
-      ],
-      "warnung": "Morgen früh Intervalle in Berlin — heute früh genug ins Bett, damit die Quality-Einheit was wird.",
-      "coachSays": "Reisetag heißt nicht Faultag — aber heute reicht das Wasser unter dir."
-    },
-    "2026-07-01": {
-      "headline": "Intervalle früh in Berlin — die Quality-Einheit der Woche.",
-      "kalender": "Call hast du verschoben → Intervalle früh. Danach Zug Berlin → Nürnberg 13:37, abends dein Talk.",
-      "einheit": "Intervalle (Plan 1:15 h) früh am Morgen. Davor Pre-Run Aktivierung, danach kurz auslaufen + Wadenheber. Die einzige harte Lauf-Einheit der Woche.",
-      "minimum": [
-        "Pre-Run Aktivierung 3 min",
-        "Intervalle nach Plan",
-        "Kurz auslaufen + Wadenheber",
-        "Protein in 30–40 min danach"
+        "Tempolauf wie geplant, aber HF-ehrlich: nächtliche HRV 2 Nächte gefallen (37→23) — wenn die Beine schwer sind, oberes Tempo-Ende weglassen statt erzwingen.",
+        "Isometrischer Wadenhalt + Wadenheber im Warm-up (Achilles-Priming).",
+        "Abends Kreatin 3-5 g + Magnesium (edubily-Neustart) — gestern nicht abgehakt.",
+        "Mobi 17 min: mobilisieren, nicht in die Dehnung gehen."
       ],
       "bonus": [
-        "Atemübung für den HRV-Rebound"
+        "Copenhagen Plank 3×20 s/Seite.",
+        "Nach dem Steuer-Sitzen 10 min Spaziergang."
       ],
       "fueling": [
-        "NICHT nüchtern: 30–45 min vorher kleine KH-Portion (Banane / Toast mit Marmelade — KEIN Honig, dein Darm-Trigger)",
-        "Direkt nach dem Lauf Protein, bevor der Reise-/Talk-Tag startet",
-        "Über den Tag viel trinken — Zugfahrt + Reden zehren"
+        "Pre (60-90 min vorher): Toast/Banane + Kaffee, ~40 g KH — kein Nüchtern-Tempo bei 89 TSS.",
+        "Während: 1 Gel bei ~Min 30 mit 200 ml Wasser als Gut-Training (Squeezy Basic üben). Elektrolytflasche (volle Tab / 500 ml) getrennt nebenher — bei der Hitze leer trinken.",
+        "Natrium 500-700 mg/h über die Flasche — nie in die Gel-/Wasserflasche mischen.",
+        "Nach dem Lauf binnen 30-40 min 30-40 g Protein (Skyr + Whey oder Eier).",
+        "Protein-Radar: gestern lag dein Frühstück bei ~19 g — heute +1 Skyr (25 g) oder 2 Eier ins Frühstück, sonst reißt du die 117 g wieder."
       ],
-      "warnung": "Voller Reise- und Vortragstag danach — nach den Intervallen ordentlich essen und trinken, nicht auslaufen lassen.",
-      "coachSays": "Erst die Intervalle, dann die Bühne. In beidem lieferst du."
+      "warnung": "Blut-Retest ist 18.07 (Sa) fällig — Tempo heute + Kraft morgen liegen davor. GGT (deine Kernfrage) stört das kaum, CK/GPT schon: morgen deshalb keine schwere Bein-Exzentrik/kein Plyo. Termin noch nicht gebucht? Heute machen.",
+      "coachSays": "Die Coachin schreibt 'du schaffst das' — ich schreibe: verpfleg dich, sonst schaffst du's mit halbem Tank."
     },
-    "2026-07-02": {
-      "headline": "Zweite Kraft — oder Gnade, je nach Reise-Restmüdigkeit.",
-      "kalender": "Zuhause: Modul 4 9–13, Cowork 17:30. Menstruationsphase. Dazwischen Platz.",
-      "einheit": "Muckibude 2 zuhause (Bodyweight). Wenn Reise + Menstruation dich platt gemacht haben: leichter machen oder durch Mobility ersetzen. Drei Tage vor dem Rennen gilt: lieber etwas weniger als zu viel.",
+    "2026-07-17": {
+      "headline": "Kraft ja — aber heute die schlaue Variante vor der Nadel.",
+      "kalender": "Schreibtischtag: Steuererklärung + 'I love Money' ab 14:00. Zu Hause, viel Sitzen.",
+      "einheit": "Muckibude-2-Strength steht im Plan. Meine Anpassung: Oberkörper + Core + Mobility, KEIN schweres Hip Thrust/SLDL, kein Plyo — die schwere hintere Kette holst du nächste Woche nach.",
       "minimum": [
-        "Kraft Muckibude 2 (oder leichter / Mobility)",
-        "Beckenboden 3 min",
-        "Meditation / Atemübung",
-        "Wall Sit in einer Pause"
+        "Kraft leicht (Oberkörper/Core), ~25 min.",
+        "Isometrischer Wadenhalt + lockere Wadenheber (2×15, kein schweres HSR heute).",
+        "Alle 45 min vom Schreibtisch auf: 10 Kniebeugen oder 1 min gehen (exercise snacks gegen den Sitz-Tag).",
+        "Supplements morgen/tag/abend abhaken — aber B-Komplex NICHT starten (erst nach der Abnahme)."
       ],
       "bonus": [
-        "Ein paar Steigerungen, wenn die Beine Lust haben"
+        "Abendspaziergang 15-20 min.",
+        "Squeezy-Gels + Elektrolyt-Tabs für Sonntag rauslegen."
       ],
       "fueling": [
-        "Menstruation: auf Eisen achten (rotes Fleisch / Hülsenfrüchte + Vit C), genug Protein + KH",
-        "Nicht nüchtern trainieren",
-        "Genug trinken"
+        "Protein 3× 30-35 g über den Tag — am Schreibtisch geht Verteilung gern verloren.",
+        "Ab dem Abendessen leicht & low-residue (kein Vollkorn-Berg, keine Hülsenfrüchte) — morgen früh nüchtern zur Abnahme.",
+        "1,5-2 l trinken, damit die Venen morgen früh kooperieren.",
+        "Kein Alkohol, auch kein AF-Bier (Zucker) — hält das Laborbild sauber."
       ],
-      "warnung": "Menstruation + Reise = evtl. weniger Energie. Hör auf den Körper — das ist 3 Tage vor dem HM, Frische schlägt Ehrgeiz.",
-      "coachSays": "Dein Körper hat diese Woche viel getragen. Heute darf er auch mal Nein sagen."
+      "warnung": "Nüchtern ab ~22:00: nichts mehr essen, nur Wasser, damit die Abnahme morgen valide ist. Und heute wirklich kein hartes Beintraining (CK).",
+      "coachSays": "Ein Reload-Freitag ohne schwere Kniebeuge ist kein verlorener Tag — er ist die Voraussetzung für ein ehrliches Laborbild."
     },
-    "2026-07-03": {
-      "headline": "Tempolauf — letzter Reiz, dann Ruhe.",
-      "kalender": "Zuhause: Podcasts 9–12, Money 14–15, Timon 15:25. Menstruationsphase.",
-      "einheit": "Tempolauf 50 min — letzte intensivere Einheit vor dem HM. Wenn du den HM frischer angehen willst: kürzer + ein paar Renntempo-Steigerungen statt voller 50 min.",
+    "2026-07-18": {
+      "headline": "Nadel am Morgen, Long-Run-Vorbereitung am Abend.",
+      "kalender": "Kein Termin im Kalender — Blut-Retest-Tag. Morgen (So) der große Long Run.",
+      "einheit": "Kein Lauf, keine schwere Kraft. Nur lockere Mobility. Der Tag dient dem sauberen Laborwert + dem Auftanken für morgen.",
       "minimum": [
-        "Tempolauf 50 min (oder kürzer + Steigerungen)",
-        "Pre-Run Aktivierung",
-        "Wadenheber danach",
-        "Protein in 30–40 min"
-      ],
-      "bonus": [],
-      "fueling": [
-        "Nicht nüchtern, KH vorher",
-        "Ab heute bewusst gut hydrieren — Richtung Renntag",
-        "Protein + KH nach dem Lauf"
-      ],
-      "warnung": "Morgen Ruhe, übermorgen HM — heute nicht überziehen. Das ist kein Trainingstag mehr zum Beweisen.",
-      "coachSays": "Kurz scharf, dann Deckel drauf. Sonntag wird abgerechnet, nicht heute."
-    },
-    "2026-07-04": {
-      "headline": "Ruhetag — Beine sparen, Kopf vorbereiten.",
-      "kalender": "Frei — Tag vor dem HM. WICHTIG: Startnummer holen bei Naked Studios, Fäustlestraße 7, München (bis 20:00). Nicht auf morgen früh verschieben.",
-      "einheit": "Ruhe. Optional 15-min-Shakeout mit 3–4 Steigerungen, um die Beine zu wecken — mehr nicht. Heute zählt Vorbereitung, nicht Training.",
-      "minimum": [
-        "Startnummer + Startbeutel HEUTE holen (München, bis 20:00)",
-        "Ruhe oder 15-min-Shakeout + 3–4 Steigerungen",
-        "Gels, Renn-Outfit, Chip/Startnummer richten — nichts Neues",
-        "Große KH-Mahlzeit zu MITTAG, abends leichter (weiße Pasta, einfache Tomatensauce)"
-      ],
-      "bonus": [],
-      "fueling": [
-        "Do–Sa Ballaststoffe + Fett runter (low-residue): kein Vollkorn, kein Rohgemüse, keine Nüsse/Bohnen, keine großen Salate",
-        "Große Carb-Mahlzeit MITTAGS: weiße Pasta + einfache Tomatensauce — KEIN Knoblauch/Zwiebel/Sahne (FODMAP). Abends leicht.",
-        "Gut hydrieren + Elektrolyte (Natrium macht durstig → du trinkst mehr)",
-        "Renn-Morgen einplanen: früh genug aufstehen für Kaffee + Frühstück (Toast + Marmelade, KEIN Honig) + vollständigen Toilettengang VOR dem Start"
-      ],
-      "warnung": "Nichts Neues mehr — keine neuen Gels, Schuhe, Socken, Lebensmittel. Früh ins Bett, der Start ist morgen früh.",
-      "coachSays": "Dein Freitags-Lauf lief flott und die Morgenroutine saß (2× Klo vor dem Start) — genau das nimmst du mit. Heute nur: Beine hoch, Speicher voll, Startnummer im Sack."
-    },
-    "2026-07-05": {
-      "headline": "München Halbmarathon — deine Generalprobe für Berlin.",
-      "kalender": "SportScheck HM, 21 km. Der Tag, auf den die Woche zuläuft.",
-      "einheit": "HM kontrolliert laufen — Pace und Race-Nutrition für Berlin testen, kein PR-Stress. Erste 5 km bewusst zu langsam anfühlen lassen, dann negativer Split.",
-      "minimum": [
-        "Morgenroutine: früh auf, Kaffee + Frühstück + Klo VOR dem Start",
-        "Nur erprobte Gels — nichts Neues",
-        "Kontrolliert starten, zweite Hälfte schneller",
-        "Nach dem Lauf 30–40 g Protein + KH"
+        "Blutabnahme nüchtern, früh. Mitmessen lassen: TSH/fT3/fT4, Holo-Transcobalamin, Folsäure, AP, Bilirubin, Kreatinin — plus Kontrolle GGT/GPT, Magnesium, Vit D, Ferritin, Homocystein.",
+        "Direkt nach der Abnahme ordentlich frühstücken: 30 g Protein + Carbs.",
+        "Ab mittags Carbs hochfahren + low-residue (Weißreis/Kartoffel/Weißbrot, wenig Faser) für den Long Run.",
+        "Leichte Mobility 10-15 min, sonst Beine schonen."
       ],
       "bonus": [
-        "Wenn alles passt und die Beine wollen: die letzten 5 km laufen lassen"
+        "Falls L-Glutamin da ist: für morgen ~15 g, 2 h vor dem Long Run einplanen (erst im Training testen).",
+        "Squeezy-Basic-Fuelingplan für morgen gedanklich durchgehen."
       ],
       "fueling": [
-        "Renn-Frühstück 2,5–3 h vorher, erprobt: weißer Toast mit MARMELADE (kein Honig!) + Banane. Honig = dein FODMAP-Darm-Trigger.",
-        "Gels nach Plan (z. B. km 7 und km 14), nur die verträgliche Marke",
-        "Elektrolyte bei Wärme, alle paar km ein Schluck",
-        "Danach: Protein + KH in 30–40 min, dann eine richtige Mahlzeit"
+        "Fastenbrechen mit Protein + Carbs (Skyr + Haferflocken + Obst, ~30 g Protein).",
+        "Über den Tag 5-7 g/kg Carbs (≈365-500 g) — Long Run morgen 15,2 km / 1:50 Zone 2.",
+        "Low-residue ab mittags: keine Hülsenfrüchte, kein Vollkorn, wenig Rohkost — Darm-Ruhe fürs Gut-Training.",
+        "Viel trinken, Natrium mit rein — nicht trocken in die heiße Nacht."
       ],
-      "warnung": "Die Beine sind von der Trainingswoche nicht 100 % frisch — nach Gefühl steuern, nicht auf die Uhr starren. Achilles/Knie wie immer im Blick.",
-      "coachSays": "Generalprobe für Berlin: heute testest du Pace und Bauch, nicht dein Ego. Lauf klug, dann läuft der Herbst."
-    },
-    "2026-07-06": {
-      "headline": "Tag danach — Erholung, kein Zurück-ins-Training.",
-      "kalender": "10:00 „I love controversy\" (LinkedIn-Block, 2 h). Sonst frei — Regenerationswoche startet.",
-      "einheit": "Aktive Erholung: 20–30 min lockerer Spaziergang oder leichtes Radeln, Beine ausschütteln. KEIN Laufen, KEINE Kraft heute. Wenn die Beine schwer/DOMS: nur Gehen + Mobility.",
-      "minimum": [
-        "Lockere Bewegung 20–30 min (Gehen/Rad) — nicht laufen",
-        "Sanfte Mobility, Waden locker ausrollen",
-        "Protein über den Tag verteilt (Reparatur): 1,6–2,0 g/kg",
-        "Früh ins Bett — Schlaf ist jetzt die beste Regeneration"
-      ],
-      "bonus": [
-        "Kurze Reflexion: Was hat beim HM beim Fueling/Pacing funktioniert? (Notiz für Berlin)",
-        "Nach dem HM: TP-Metrics als CSV exportieren → data/incoming/ (Erholungs-Readout)"
-      ],
-      "fueling": [
-        "Glykogen wieder auffüllen: KH über den Tag, kein Low-Carb heute",
-        "Protein 30–40 g direkt nach dem Aufstehen + zu jeder Mahlzeit (Muskelreparatur)",
-        "Gut hydrieren, Elektrolyte — nach dem Renn-Schweiß auffüllen",
-        "Jetzt darf auch wieder normal/ballaststoffreich gegessen werden (kein low-residue mehr nötig)"
-      ],
-      "warnung": "Muskelkater und Reiz-Achilles nach 21 km sind normal — NICHT durch einen „Lockerlauf\" überspielen. Erst wieder laufen, wenn die Beine sich normal anfühlen. Achilles/Knie diese Woche besonders beobachten.",
-      "coachSays": "Gestern hast du Berlin geprobt. Heute reparierst du. Regeneration ist Training, das wie Faulheit aussieht — mach sie trotzdem."
-    },
-    "2026-07-07": {
-      "headline": "Intervalle heute — der letzte Reiz vor den Bergen.",
-      "kalender": "Urlaubs-Blocker ab heute. 8:00 Janick bei Dr. Steiner. Ab morgen Karwendel — heute also die Quality-Einheit.",
-      "einheit": "Intervalle nach Plan (1:20 h). ABER: 2 Tage nach dem HM, HRV heute 21. Gut einlaufen und die Wiederholungen nach Gefühl steuern — wenn die Beine schwer sind, lieber etwas kürzer/langsamer als mit Gewalt durchprügeln. Danach kurz auslaufen + Wadenheber.",
-      "minimum": [
-        "Pre-Run Aktivierung 3 min",
-        "Intervalle nach Plan — nach Gefühl, nicht auf Bestzeit",
-        "Kurz auslaufen + Wadenheber",
-        "Protein 30–40 g in 30–40 min danach"
-      ],
-      "bonus": [
-        "Atemübung für den HRV-Rebound danach"
-      ],
-      "fueling": [
-        "2–3 h vor den Intervallen normale Mahlzeit — falls knapper: 45–60 min vorher Banane + Kaffee (deine bewährte Routine). NICHT nüchtern!",
-        "Depot hinstellen (du läufst von zuhause): Flasche 1 = 500 ml pures Wasser · Flasche 2 = 500 ml mit VOLLER Elektrolyt-Tab",
-        "1 Gel (MNSTRY Mango, ohne Koffein) in der Trabpause nach Intervall 2 (~Min. 37) + 150–200 ml aus der WASSER-Flasche — Gel unter Belastung = bestes Gut-Training für Berlin",
-        "Elektrolyt-Flasche in den übrigen Pausen in kleinen Schlucken — am Ende leer!",
-        "Binnen 30–40 min danach: 30–40 g Protein + Carbs (Skyr + Banane/Haferflocken oder Shake)"
-      ],
-      "warnung": "HRV 21 + Post-HM: kein Tag für eine Intervall-Bestzeit. Reiz setzen, nicht zerstören — morgen fahren die Beine eh in die Berge.",
-      "coachSays": "Okay, du läufst. Dann klug: heute der saubere Reiz, ab morgen machen die Berge die Erholung."
-    },
-    "2026-07-08": {
-      "headline": "Ab in die Karwendel-Hütten — Wandern ist ab jetzt dein Training.",
-      "kalender": "Karwendel-Hütten (bis So 12.07). Vormittags evtl. noch Calls (CC Weekly 8:00, Podcasts 9:00) — je nach Empfang. Ab dann: Berge.",
-      "einheit": "Diese Woche KEINE Läufe — bewusst. Bergwandern ist perfekte aktive Erholung: aerober Reiz ohne Lauf-Impact, und bergab bekommen deine Beine exzentrische Arbeit — genau die Po-/Hamstring-Baustelle vom HM.",
-      "minimum": [
-        "Wandern genießen — das IST die Einheit",
-        "Nach dem Abstieg Waden + Quads locker ausrollen",
-        "Protein zu jeder Mahlzeit (Hütten-Essen zählt)",
-        "Viel trinken — Höhe + Anstrengung trocknen aus"
-      ],
-      "bonus": [
-        "Abends 1 min Einbeinstand pro Seite auf der Hütte",
-        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
-      ],
-      "fueling": [
-        "Unterwegs KH + etwas Salz (Brot, Riegel, Elektrolyt-Tab ins Wasser)",
-        "Genug trinken, gerade bergauf in der Sonne",
-        "Abends ordentlich KH + Protein — Wandern zehrt mehr als man denkt"
-      ],
-      "warnung": "Achilles meckert erfahrungsgemäß am Tag NACH der Wanderung. Heute vorbeugen: Stöcke ab der ersten Stunde (nicht erst wenn's zieht), bergauf kleine Schritte statt Zehenspitzen-Push, bergab Knie weich + kurze Schritte. Abends auf der Hütte: 3×30 s Zehenstand halten (Isometrie beruhigt die Sehne).",
-      "coachSays": "Keine Laufschuhe diese Woche — die Berge machen den Job. Genieß es, das ist verdient."
-    },
-    "2026-07-09": {
-      "headline": "Tag 2 Karwendel — Beine in den Bergen, Kopf frei.",
-      "kalender": "Karwendel-Hütten, frei zum Wandern.",
-      "einheit": "Weiter wandern statt laufen. Wenn gestern lange Abstiege in den Beinen sitzen: heute ruhigere Route wählen. Der aerobe Reiz bleibt, die Beine danken es dir für Berlin.",
-      "minimum": [
-        "Wandern in angenehmem Tempo",
-        "Waden/Quads abends ausrollen",
-        "Protein + genug trinken",
-        "Kurz mobilisieren (Hüfte, Sprunggelenk)"
-      ],
-      "bonus": [
-        "Ein paar Wadenheber auf einer Stufe — Sehne mag Konstanz",
-        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
-      ],
-      "fueling": [
-        "Wander-Snacks mit KH + Salz",
-        "Trinken vor dem Durst",
-        "Abends auffüllen: KH + 30 g Protein"
-      ],
-      "warnung": "Morgen-Check ehrlich: Achilles >5 min steif oder ≥3/10 → heute flachere Etappe, mehr Pausen. Muskelkater vom HM + Bergab stapelt sich. Wieder: Stöcke, kleine Schritte, abends 3×30 s Zehenstand.",
-      "coachSays": "Erholung sieht diese Woche aus wie Bergpanorama. Nimm's."
-    },
-    "2026-07-10": {
-      "headline": "Karwendel Tag 3 — wandern, nicht rennen.",
-      "kalender": "Karwendel. 14:00 „I love Money\" (Buchhaltung, falls Empfang/Lust). Sonst Berge.",
-      "einheit": "Wandern. Immer noch keine Läufe — wir sind in der Erholungswoche, und die Beine bauen im Hintergrund Berlin-Substanz auf. Genieße die Höhenmeter.",
-      "minimum": [
-        "Wandern",
-        "Waden + Beine locker abends",
-        "Protein zu jeder Mahlzeit",
-        "Trinken + Elektrolyte bei Hitze"
-      ],
-      "bonus": [
-        "Einbeinstand / kurze Mobility auf der Hütte",
-        "Hüttenabend: 3×30 s Zehenstand-Halte (beide Beine) — das beste Achilles-Beruhigungsmittel"
-      ],
-      "fueling": [
-        "Unterwegs regelmäßig KH + Salz",
-        "Abends KH auffüllen",
-        "Kreatin nicht vergessen (auch im Urlaub)"
-      ],
-      "warnung": "Tag 3 ist der Stapel-Tag — wenn Achilles jetzt ruhig ist, hast du es richtig dosiert. Bleib bei Stöcken + kurzen Schritten bergab. KEIN Waden-Dehnen bei gereizter Sehne (Dehnung komprimiert den Ansatz) — Isometrie statt Stretching.",
-      "coachSays": "Drei Tage ohne Laufschuhe und die Welt dreht sich weiter. Sie dreht sich sogar besser."
-    },
-    "2026-07-11": {
-      "headline": "Letzter Berg-Tag — dann Richtung Achensee.",
-      "kalender": "Karwendel, danach Übergang zum Achensee.",
-      "einheit": "Abschluss-Wanderung, dann Wechsel. Kein Lauf. Wenn die Beine sich langsam wieder frisch anfühlen: gutes Zeichen für den Wiedereinstieg nächste Woche — aber HEUTE noch nicht.",
-      "minimum": [
-        "Wandern / Transfer",
-        "Beine ausschütteln, Waden ausrollen",
-        "Protein + trinken",
-        "Kurze Mobility nach dem Sitzen im Auto"
-      ],
-      "bonus": [
-        "Reflexion: fühlen sich die Beine erholt an? (für Wiedereinstieg-Timing)"
-      ],
-      "fueling": [
-        "Transfer-Snacks mit KH + Protein statt Raststätten-Zucker",
-        "Gut hydrieren",
-        "Abends normal + vollwertig"
-      ],
-      "warnung": "Langes Autofahren macht Hüfte/Psoas steif — zwischendurch aufstehen, kurz mobilisieren.",
-      "coachSays": "Berge abgehakt, Beine aufgeladen. Der Herbst wird's dir danken."
-    },
-    "2026-07-12": {
-      "headline": "Wechsel zum Achensee — und nein, heute ist KEIN Halbmarathon.",
-      "kalender": "Reiterhof Achensee ab heute. ⚠️ Der „Halbmarathon Sport Scheck\" im TrainingPeaks ist ein FEHLER — ignorieren, kein Rennen.",
-      "einheit": "Ausklang der Erholungswoche. Lockeres Wandern/Spazieren am Achensee, wenn dir danach ist. Erst wenn die Beine sich normal anfühlen, planen wir den Lauf-Wiedereinstieg (nächste Woche, Build-2-Start Richtung Berlin).",
-      "minimum": [
-        "Locker bewegen, kein strukturiertes Training",
-        "Mobility + Waden",
-        "Protein + KH normal weiter",
-        "Wenn Empfang: HRV checken — rebounded sie?"
-      ],
-      "bonus": [
-        "Kommende Woche sichten: Build-2-Start + fueling-plan-berlin-2026.md"
-      ],
-      "fueling": [
-        "Normal + vollwertig essen, Ballaststoffe okay",
-        "Weiter gut hydrieren",
-        "Kreatin + Magnesium + D3 — Urlaubs-Routine hält"
-      ],
-      "warnung": "Der TP-Sonntags-HM ist ein Geist — nicht loslaufen, weil die App es sagt. Deine nächste harte Einheit ist erst nach dem Urlaub.",
-      "coachSays": "Eine Woche ohne Laufschuhe ist kein Rückschritt — es ist der Boden, auf dem der Berlin-Block wächst."
+      "warnung": "Kein Honig / keine FODMAP-Bomben heute Abend (dein Trigger). Und: B-Komplex ERST nach der Abnahme starten — sonst ist die Holo-TC/Folsäure-Messung hinüber.",
+      "coachSays": "Ein Piks, ein guter Teller, ein voller Tank — mehr will ich heute gar nicht von dir."
     }
   },
   "woche": {
-    "start": "2026-07-06",
-    "fokus": "Erholungs- & Bergwoche nach dem HM. Di 07.07 noch die Intervalle zuhause (nach Gefühl steuern — HRV heute 21, 2 Tage nach dem Rennen). Mi–So Karwendel-Hütten + Achensee = Wandern statt Laufen (aktive Erholung + exzentrische Bein-Arbeit bergab). Der Sonntags-HM im TP ist ein Fehler → ignorieren. Danach Build-2-Start Richtung Berlin.",
+    "start": "2026-07-13",
+    "fokus": "Build-2-Start Richtung Berlin (Peak-Phase). Di 14.07 Intervalle 10,3 km (119 statt geplant 75 TSS — härter). Do 16.07 Tempolauf 55 min / 89 TSS (Coachin: 'gut verpflegen!'). Fr Kraft. So 19.07 Long Run Zone 2, 1:50 / 15,2 km — Gut-Training. Plyo-Block 1 (Pogos) seit 13.07. Querschnittsthema: Blut-Retest 18.07 sauber timen.",
     "luecken": [
-      "HM-Fueling-Lektionen für Berlin (Detail: fueling-plan-berlin-2026.md): Natrium war viel zu niedrig (~40 mg statt 600–1.200) → volle Elektrolyt-Tab, Flasche leer trinken. Carbs nur ~30 g/h → auf 60–70 hochtrainieren. Gel IMMER mit reinem Wasser. Gummibärchen raus.",
-      "Po + Hamstring waren ab km 14 die Schwäche (dein Renn-Kommentar) → im Build-2 schwere Hip-Hinge-Kraft (SLDL/Hip Thrust) priorisieren. Bergab-Wandern diese Woche zahlt schon drauf ein.",
-      "HRV heute 21 (Post-Race-Crash) → auf Rebound achten, erst mit normalem Bein-Gefühl wieder laufen."
+      "Protein-Verteilung: Frühstücke laufen protein-leicht (~15-19 g statt 30 g/Mahlzeit) → Tages-Ø unter 117 g. Fix: Skyr/Eier ins Frühstück.",
+      "Blut-Retest 18.07 kollidiert mit Tempo Do + Kraft Fr — CK/GPT sauber halten (Fr keine schwere Bein-Exzentrik/kein Plyo).",
+      "Omega-3 weiter 2+2 pushen bis Flasche leer, dann Norsan (Nachschub-Reminder 25.07)."
     ]
   },
   "trends": {
-    "kommentar": "Stand 06.07 (frischer TP-Import bis heute): Race-Woche-HRV auf Ø 40 hoch (von 33 in der Vorwoche) — der Taper hat sauber funktioniert. Post-HM heute erwartbarer Crash: HRV 21, RHR 52, aber Schlaf 8,7 h. Das ist der akute Renn-Preis, kein Alarm — die Bergwoche ist perfekt getimte aktive Erholung. Lauf-km Race-Woche: 38,4 (Intervalle 10,2 + Tempo 6,9 + HM 21,3).",
+    "kommentar": "Fitness/CTL 63 (TP 15.07), höher als zur HM-Race-Woche (52). HRV-Wochenschnitt 13.-15.07 gefallen (28,7 ms) — Reload nach Bergwoche, Schlaf & Readiness tragen.",
     "wochen": [
       {
         "woche": "2026-01-05",
@@ -437,6 +231,18 @@
         "hrv": 40.4,
         "rhr": 51.6,
         "schlaf": 7.6
+      },
+      {
+        "woche": "2026-07-06",
+        "hrv": 36.0,
+        "rhr": 52.0,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-07-13",
+        "hrv": 28.7,
+        "rhr": 54.0,
+        "schlaf": 8.8
       }
     ],
     "kmWochen": [
@@ -479,6 +285,14 @@
       {
         "woche": "2026-06-29",
         "km": 38.4
+      },
+      {
+        "woche": "2026-07-06",
+        "km": 10.0
+      },
+      {
+        "woche": "2026-07-13",
+        "km": 15.2
       }
     ]
   },
@@ -488,208 +302,62 @@
       "text": "05.07.: 21,3 km in 2:33 h, HF Ø149, TSS 236, IF 0,96. Kontrolliert gepact, Beine trugen bis km 14. Genau der Formtest, den der Berlin-Block braucht."
     },
     {
-      "titel": "Ausdauerbasis verdreifacht seit April",
-      "text": "Von ~11 km/Woche Ende April auf 38 km in der Race-Woche (inkl. HM). Fitness/CTL 52 — die aerobe Basis für Berlin steht."
+      "titel": "Fitness auf Höchststand: CTL 63",
+      "text": "Deine Fitness (CTL) steht laut TP bei 63 — höher als zur HM-Race-Woche (52). Karwendel-Woche (63 km / 2630 hm Wandern) + Build-2-Reload haben die Basis ausgebaut, nicht gekostet."
     },
     {
-      "titel": "Taper hat funktioniert — HRV frisch ins Rennen",
-      "text": "Race-Woche-HRV Ø 40 (Vorwoche 33), Schlaf stabil. Dein Nervensystem war am Renntag frisch — der positive Form-Wert (TSB +17) bestätigt es. Der HRV-Dip heute ist nur der verdiente Muskelkater in Zahlen."
+      "titel": "Erholung trägt den Build",
+      "text": "8 Nächte Schlaf-Score Ø 91 (bis 95), Readiness 83-91. Die Bergwoche hat regeneriert statt ausgelaugt — du gehst ausgeruht in die Peak-Phase."
     }
   ],
   "tagesplan": {
-    "2026-07-08": {
-      "hinweis": "Bergwoche: Kraftprogramm pausiert bewusst — Wandern IST heute das Training. Nur das Hütten-Minimum unten.",
+    "2026-07-17": {
+      "hinweis": "Blut-Retest morgen früh (18.07, nüchtern). Heute KEINE schwere Bein-Exzentrik (Hip Thrust/SLDL schwer) und kein Plyo — die treiben CK/GPT hoch und verfälschen die Werte. Oberkörper, Core, Mobility ja. Schwere hintere Kette nächste Woche.",
       "nur": [
         "daily-meditation",
         "daily-wallsit",
-        "daily-balance",
+        "daily-birddog",
         "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend"
+        "daily-balance"
       ],
       "extra": [
         {
-          "tier": "activity",
-          "name": "Karwendel-Wanderung",
-          "duration": "lt. Tagesform",
-          "trigger": "tagsüber",
-          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
-        },
-        {
-          "tier": "pflicht",
-          "name": "Zehenstand-Isometrie (Achilles)",
-          "duration": "2 min · 3×30 s",
-          "trigger": "abends auf der Hütte",
-          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
-        },
-        {
-          "tier": "bonus",
-          "name": "Beine hochlegen",
-          "duration": "10 min",
-          "trigger": "abends",
-          "why": "Venöser Rückfluss nach dem Bergtag."
-        },
-        {
           "tier": "standard",
-          "name": "⏸ Magnesium-Pause (Darm-Test)",
-          "duration": "nichts nehmen!",
-          "trigger": "ganze Bergwoche",
-          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
+          "name": "Kraft leicht: Oberkörper + Core (kein schweres Bein-Exzentrik)",
+          "duration": "25 min",
+          "trigger": "statt der schweren Fr-Session",
+          "why": "CK niedrig halten für den Blut-Retest morgen"
+        },
+        {
+          "tier": "activity",
+          "name": "Mobility 15 min (mobilisieren, nicht dehnen)",
+          "duration": "15 min",
+          "trigger": "Coachin-Mobi-Einheit + Schreibtischtag",
+          "why": "Steuer-Sitzen auflockern"
         }
       ]
     },
-    "2026-07-09": {
-      "hinweis": "Bergtag 2. Morgen-Check ehrlich: Achilles >5 min steif → flachere Etappe. Kein schlechtes Gewissen wegen Kraft — ab Montag geht das neue Programm los.",
+    "2026-07-18": {
+      "hinweis": "Blut-Retest-Tag (nüchtern, früh). Kein Lauf, keine schwere Kraft — nur lockere Mobility. Nach der Abnahme richtig frühstücken (30 g Protein). Abends low-residue + Carbs für den Long Run morgen.",
       "nur": [
         "daily-meditation",
-        "daily-wallsit",
         "daily-balance",
-        "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend"
+        "daily-ankle"
       ],
       "extra": [
         {
-          "tier": "activity",
-          "name": "Hütten-Etappe",
-          "duration": "lt. Tagesform",
-          "trigger": "tagsüber",
-          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
-        },
-        {
           "tier": "pflicht",
-          "name": "Zehenstand-Isometrie (Achilles)",
-          "duration": "2 min · 3×30 s",
-          "trigger": "abends auf der Hütte",
-          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
-        },
-        {
-          "tier": "bonus",
-          "name": "Beine hochlegen",
-          "duration": "10 min",
-          "trigger": "abends",
-          "why": "Venöser Rückfluss nach dem Bergtag."
+          "name": "Blutabnahme nüchtern (TSH/fT3/fT4, Holo-TC, Folsäure, AP, Bilirubin, Kreatinin + Kontrolle GGT/GPT, Mg, D, Ferritin, Homocystein)",
+          "duration": "—",
+          "trigger": "Retest fällig 18.07",
+          "why": "12 Wochen nach Supplement-Start; B-Komplex bis dahin NICHT starten"
         },
         {
           "tier": "standard",
-          "name": "⏸ Magnesium-Pause (Darm-Test)",
-          "duration": "nichts nehmen!",
-          "trigger": "ganze Bergwoche",
-          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
-        }
-      ]
-    },
-    "2026-07-10": {
-      "hinweis": "Bergtag 3 = Stapel-Tag. Wenn die Achilles heute ruhig ist, hast du richtig dosiert.",
-      "nur": [
-        "daily-meditation",
-        "daily-wallsit",
-        "daily-balance",
-        "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend"
-      ],
-      "extra": [
-        {
-          "tier": "activity",
-          "name": "Hütten-Etappe",
-          "duration": "lt. Tagesform",
-          "trigger": "tagsüber",
-          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
-        },
-        {
-          "tier": "pflicht",
-          "name": "Zehenstand-Isometrie (Achilles)",
-          "duration": "2 min · 3×30 s",
-          "trigger": "abends auf der Hütte",
-          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
-        },
-        {
-          "tier": "bonus",
-          "name": "Beine hochlegen",
-          "duration": "10 min",
-          "trigger": "abends",
-          "why": "Venöser Rückfluss nach dem Bergtag."
-        },
-        {
-          "tier": "standard",
-          "name": "⏸ Magnesium-Pause (Darm-Test)",
-          "duration": "nichts nehmen!",
-          "trigger": "ganze Bergwoche",
-          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
-        }
-      ]
-    },
-    "2026-07-11": {
-      "hinweis": "Abschluss-Wanderung + Heimreise. Bei langer Autofahrt: alle 60–90 min raus und Hüfte mobilisieren.",
-      "nur": [
-        "daily-meditation",
-        "daily-wallsit",
-        "daily-balance",
-        "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend"
-      ],
-      "extra": [
-        {
-          "tier": "activity",
-          "name": "Abschluss-Wanderung",
-          "duration": "lt. Tagesform",
-          "trigger": "tagsüber",
-          "why": "Aktive Erholung + exzentrische Bein-Arbeit bergab. Stöcke ab Stunde 1, bergauf kleine Schritte, bergab Knie weich."
-        },
-        {
-          "tier": "pflicht",
-          "name": "Zehenstand-Isometrie (Achilles)",
-          "duration": "2 min · 3×30 s",
-          "trigger": "abends auf der Hütte",
-          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
-        },
-        {
-          "tier": "standard",
-          "name": "⏸ Magnesium-Pause (Darm-Test)",
-          "duration": "nichts nehmen!",
-          "trigger": "ganze Bergwoche",
-          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
-        }
-      ]
-    },
-    "2026-07-12": {
-      "hinweis": "Ausklang am Achensee. Der Sonntags-HM im TrainingPeaks ist ein Geist — ignorieren. Morgen startet Build 2 + das neue Kraft/Plyo-Programm.",
-      "nur": [
-        "daily-meditation",
-        "daily-wallsit",
-        "daily-balance",
-        "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend"
-      ],
-      "extra": [
-        {
-          "tier": "activity",
-          "name": "Lockeres Wandern / Spazieren",
-          "duration": "nach Gefühl",
-          "trigger": "tagsüber",
-          "why": "Letzter Erholungstag vor Build 2."
-        },
-        {
-          "tier": "pflicht",
-          "name": "Zehenstand-Isometrie (Achilles)",
-          "duration": "2 min · 3×30 s",
-          "trigger": "abends auf der Hütte",
-          "why": "Isometrie beruhigt die Sehne nach dem Wandertag — bestes Achilles-Beruhigungsmittel. KEIN Waden-Dehnen bei gereizter Sehne."
-        },
-        {
-          "tier": "standard",
-          "name": "⏸ Magnesium-Pause (Darm-Test)",
-          "duration": "nichts nehmen!",
-          "trigger": "ganze Bergwoche",
-          "why": "Eliminations-Test: Das neue 'Komplex 9' enthält Citrat/Gluconat/Salzsee-Konzentrat (abführend) — Verdacht als Mitverursacher des Rumorens. 5 Tage Pause, Bauch beobachten. D3+K2, Omega-3 (2+2!) und Kreatin laufen normal weiter. Abhaken = heute kein Magnesium genommen."
+          "name": "Low-residue essen + Carb-Load ab mittags",
+          "duration": "—",
+          "trigger": "Long Run morgen 15,2 km",
+          "why": "GI-Schutz + volle Speicher fürs Gut-Training"
         }
       ]
     }
