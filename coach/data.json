@@ -26,54 +26,54 @@
         "Nach dem Lauf binnen 30-40 min 30-40 g Protein (Skyr + Whey oder Eier).",
         "Protein-Radar: gestern lag dein Frühstück bei ~19 g — heute +1 Skyr (25 g) oder 2 Eier ins Frühstück, sonst reißt du die 117 g wieder."
       ],
-      "warnung": "Blut-Retest ist 18.07 (Sa) fällig — Tempo heute + Kraft morgen liegen davor. GGT (deine Kernfrage) stört das kaum, CK/GPT schon: morgen deshalb keine schwere Bein-Exzentrik/kein Plyo. Termin noch nicht gebucht? Heute machen.",
+      "warnung": "HRV 2 Nächte gefallen (37→23 ms) + gestern GI-Reiz bei Intervall 4 in der Hitze: heute nicht nüchtern, Elektrolyte mitnehmen, und wenn die Beine schwer sind lieber HF-gedeckelt als das obere Tempo-Ende erzwingen. Nebenbei: Blut-Retest-Termin (fällig 18.07) ist noch nicht gebucht — diese Woche ausmachen.",
       "coachSays": "Die Coachin schreibt 'du schaffst das' — ich schreibe: verpfleg dich, sonst schaffst du's mit halbem Tank."
     },
     "2026-07-17": {
-      "headline": "Kraft ja — aber heute die schlaue Variante vor der Nadel.",
+      "headline": "Kraft- und Plyo-Tag zwischen Steuerbelegen.",
       "kalender": "Schreibtischtag: Steuererklärung + 'I love Money' ab 14:00. Zu Hause, viel Sitzen.",
-      "einheit": "Muckibude-2-Strength steht im Plan. Meine Anpassung: Oberkörper + Core + Mobility, KEIN schweres Hip Thrust/SLDL, kein Plyo — die schwere hintere Kette holst du nächste Woche nach.",
+      "einheit": "Muckibude-2-Kraft wie geplant — inkl. schwerer hinterer Kette (Hip Thrust/SLDL) + Fr-Plyo (Pogos 2×15, ~30 Kontakte, frisch nach Warm-up). Bestes Fenster morgens vor dem Steuer-Block, solange die Beine frisch sind.",
       "minimum": [
-        "Kraft leicht (Oberkörper/Core), ~25 min.",
-        "Isometrischer Wadenhalt + lockere Wadenheber (2×15, kein schweres HSR heute).",
+        "Kraft-Session komplett: schwere hintere Kette + Soleus (Bent-Knee Calf Raise 3×10 schwer) + gestreckte Wadenheber.",
+        "Pogos 2×15 flach, weich federn — Abbruch bei jedem Knie-/Achilles-Zwicken (Sehnen-Training, kein Ausdauer).",
         "Alle 45 min vom Schreibtisch auf: 10 Kniebeugen oder 1 min gehen (exercise snacks gegen den Sitz-Tag).",
-        "Supplements morgen/tag/abend abhaken — aber B-Komplex NICHT starten (erst nach der Abnahme)."
+        "Supplements morgen/tag/abend abhaken — B-Komplex weiter warten (erst nach der Blutabnahme)."
       ],
       "bonus": [
         "Abendspaziergang 15-20 min.",
-        "Squeezy-Gels + Elektrolyt-Tabs für Sonntag rauslegen."
+        "Copenhagen Plank 3×20 s/Seite."
       ],
       "fueling": [
-        "Protein 3× 30-35 g über den Tag — am Schreibtisch geht Verteilung gern verloren.",
-        "Ab dem Abendessen leicht & low-residue (kein Vollkorn-Berg, keine Hülsenfrüchte) — morgen früh nüchtern zur Abnahme.",
-        "1,5-2 l trinken, damit die Venen morgen früh kooperieren.",
-        "Kein Alkohol, auch kein AF-Bier (Zucker) — hält das Laborbild sauber."
+        "Protein 3× 30-35 g über den Tag — am Schreibtisch geht Verteilung gern verloren; ein Skyr griffbereit.",
+        "Rund um die Kraft-Session Carbs (vorher Banane/Haferflocken, nachher 30-40 g Protein binnen 30-40 min).",
+        "1,5-2 l trinken über den Tag, bei der Hitze mehr.",
+        "Kalzium-Quelle einbauen (Skyr/Käse/Sesam) — Wochenziel 1000-1200 mg aus Nahrung."
       ],
-      "warnung": "Nüchtern ab ~22:00: nichts mehr essen, nur Wasser, damit die Abnahme morgen valide ist. Und heute wirklich kein hartes Beintraining (CK).",
-      "coachSays": "Ein Reload-Freitag ohne schwere Kniebeuge ist kein verlorener Tag — er ist die Voraussetzung für ein ehrliches Laborbild."
+      "warnung": "Plyo nur auf frischen Beinen und festem Boden (nicht Asphalt bergab, nicht müde). Knie/Achilles ≥3/10 → Plyo streichen, Kraft-Progression einfrieren.",
+      "coachSays": "Schreibtisch macht keine schnellen Muskeln — die 40 Minuten Muckibude sind heute nicht verhandelbar."
     },
     "2026-07-18": {
-      "headline": "Nadel am Morgen, Long-Run-Vorbereitung am Abend.",
-      "kalender": "Kein Termin im Kalender — Blut-Retest-Tag. Morgen (So) der große Long Run.",
-      "einheit": "Kein Lauf, keine schwere Kraft. Nur lockere Mobility. Der Tag dient dem sauberen Laborwert + dem Auftanken für morgen.",
+      "headline": "Ruhetag mit Ansage: morgen wartet der Long Run.",
+      "kalender": "Kein Termin im Kalender. Ruhetag im Plan (TP leer). Morgen (So) Long Run Zone 2, 15,2 km.",
+      "einheit": "Kein Lauf, keine schwere Kraft — Ruhetag. Lockere Mobility, Beine hochlegen, Speicher füllen.",
       "minimum": [
-        "Blutabnahme nüchtern, früh. Mitmessen lassen: TSH/fT3/fT4, Holo-Transcobalamin, Folsäure, AP, Bilirubin, Kreatinin — plus Kontrolle GGT/GPT, Magnesium, Vit D, Ferritin, Homocystein.",
-        "Direkt nach der Abnahme ordentlich frühstücken: 30 g Protein + Carbs.",
-        "Ab mittags Carbs hochfahren + low-residue (Weißreis/Kartoffel/Weißbrot, wenig Faser) für den Long Run.",
-        "Leichte Mobility 10-15 min, sonst Beine schonen."
+        "Leichte Mobility 10-15 min, sonst echte Pause.",
+        "Ab mittags Carbs hochfahren für den Long Run: 5-7 g/kg (≈365-500 g).",
+        "Long-Run-Ausrüstung checken: Squeezy-Basic-Gels, Elektrolyt-Tabs, Flasche.",
+        "Blut-Retest-Termin ausmachen (fällig 18.07) — Timing so, dass keine harte Einheit 24-48 h davor liegt."
       ],
       "bonus": [
         "Falls L-Glutamin da ist: für morgen ~15 g, 2 h vor dem Long Run einplanen (erst im Training testen).",
-        "Squeezy-Basic-Fuelingplan für morgen gedanklich durchgehen."
+        "Fuelingplan für morgen gedanklich durchgehen (Gel-Intervalle + Natrium 500-700 mg/h)."
       ],
       "fueling": [
-        "Fastenbrechen mit Protein + Carbs (Skyr + Haferflocken + Obst, ~30 g Protein).",
-        "Über den Tag 5-7 g/kg Carbs (≈365-500 g) — Long Run morgen 15,2 km / 1:50 Zone 2.",
-        "Low-residue ab mittags: keine Hülsenfrüchte, kein Vollkorn, wenig Rohkost — Darm-Ruhe fürs Gut-Training.",
-        "Viel trinken, Natrium mit rein — nicht trocken in die heiße Nacht."
+        "Abends leicht & low-residue (kein Vollkorn-Berg, keine Hülsenfrüchte, wenig Rohkost) — Darm-Ruhe fürs Gut-Training morgen.",
+        "Über den Tag Carbs betonen, Protein weiter 3× verteilt (Frühstück nicht wieder unter 25 g).",
+        "Kein Honig / keine FODMAP-Bomben (dein Trigger) — vor dem Long Run nichts Neues.",
+        "Viel trinken + Natrium, damit du morgen nicht mit Defizit startest."
       ],
-      "warnung": "Kein Honig / keine FODMAP-Bomben heute Abend (dein Trigger). Und: B-Komplex ERST nach der Abnahme starten — sonst ist die Holo-TC/Folsäure-Messung hinüber.",
-      "coachSays": "Ein Piks, ein guter Teller, ein voller Tank — mehr will ich heute gar nicht von dir."
+      "warnung": "Nach den Hitze-Intervallen + gefallener HRV ist der Ruhetag heute wirklich ein Ruhetag — nicht 'nur mal kurz' laufen. Morgen ist die Qualität dran.",
+      "coachSays": "Ruhe ist Training, das du dir nicht anmerken lässt — bis es morgen den Long Run trägt."
     }
   },
   "woche": {
@@ -81,7 +81,7 @@
     "fokus": "Build-2-Start Richtung Berlin (Peak-Phase). Di 14.07 Intervalle 10,3 km (119 statt geplant 75 TSS — härter). Do 16.07 Tempolauf 55 min / 89 TSS (Coachin: 'gut verpflegen!'). Fr Kraft. So 19.07 Long Run Zone 2, 1:50 / 15,2 km — Gut-Training. Plyo-Block 1 (Pogos) seit 13.07. Querschnittsthema: Blut-Retest 18.07 sauber timen.",
     "luecken": [
       "Protein-Verteilung: Frühstücke laufen protein-leicht (~15-19 g statt 30 g/Mahlzeit) → Tages-Ø unter 117 g. Fix: Skyr/Eier ins Frühstück.",
-      "Blut-Retest 18.07 kollidiert mit Tempo Do + Kraft Fr — CK/GPT sauber halten (Fr keine schwere Bein-Exzentrik/kein Plyo).",
+      "Blut-Retest (fällig 18.07) hat noch keinen Termin — diese Woche ausmachen. Timing dann so legen, dass keine harte Einheit in den 24-48 h davor liegt (CK/GPT sauber).",
       "Omega-3 weiter 2+2 pushen bis Flasche leer, dann Norsan (Nachschub-Reminder 25.07)."
     ]
   },
@@ -310,56 +310,5 @@
       "text": "8 Nächte Schlaf-Score Ø 91 (bis 95), Readiness 83-91. Die Bergwoche hat regeneriert statt ausgelaugt — du gehst ausgeruht in die Peak-Phase."
     }
   ],
-  "tagesplan": {
-    "2026-07-17": {
-      "hinweis": "Blut-Retest morgen früh (18.07, nüchtern). Heute KEINE schwere Bein-Exzentrik (Hip Thrust/SLDL schwer) und kein Plyo — die treiben CK/GPT hoch und verfälschen die Werte. Oberkörper, Core, Mobility ja. Schwere hintere Kette nächste Woche.",
-      "nur": [
-        "daily-meditation",
-        "daily-wallsit",
-        "daily-birddog",
-        "daily-ankle",
-        "daily-balance"
-      ],
-      "extra": [
-        {
-          "tier": "standard",
-          "name": "Kraft leicht: Oberkörper + Core (kein schweres Bein-Exzentrik)",
-          "duration": "25 min",
-          "trigger": "statt der schweren Fr-Session",
-          "why": "CK niedrig halten für den Blut-Retest morgen"
-        },
-        {
-          "tier": "activity",
-          "name": "Mobility 15 min (mobilisieren, nicht dehnen)",
-          "duration": "15 min",
-          "trigger": "Coachin-Mobi-Einheit + Schreibtischtag",
-          "why": "Steuer-Sitzen auflockern"
-        }
-      ]
-    },
-    "2026-07-18": {
-      "hinweis": "Blut-Retest-Tag (nüchtern, früh). Kein Lauf, keine schwere Kraft — nur lockere Mobility. Nach der Abnahme richtig frühstücken (30 g Protein). Abends low-residue + Carbs für den Long Run morgen.",
-      "nur": [
-        "daily-meditation",
-        "daily-balance",
-        "daily-ankle"
-      ],
-      "extra": [
-        {
-          "tier": "pflicht",
-          "name": "Blutabnahme nüchtern (TSH/fT3/fT4, Holo-TC, Folsäure, AP, Bilirubin, Kreatinin + Kontrolle GGT/GPT, Mg, D, Ferritin, Homocystein)",
-          "duration": "—",
-          "trigger": "Retest fällig 18.07",
-          "why": "12 Wochen nach Supplement-Start; B-Komplex bis dahin NICHT starten"
-        },
-        {
-          "tier": "standard",
-          "name": "Low-residue essen + Carb-Load ab mittags",
-          "duration": "—",
-          "trigger": "Long Run morgen 15,2 km",
-          "why": "GI-Schutz + volle Speicher fürs Gut-Training"
-        }
-      ]
-    }
-  }
+  "tagesplan": {}
 }
