@@ -1,21 +1,25 @@
 {
-  "generated": "2026-07-15T21:00:00+02:00",
+  "generated": "2026-07-16T13:20:00+02:00",
   "datenstand": {
-    "wearables": "2026-07-15",
-    "kommentar": "Oura frisch bis 15.07 (Schlaf/Readiness/HRV). Schlaf top: Score Ø 91 über 8 Nächte, bis 9 h. Readiness 83-91. Aber: nächtliche HRV in den letzten 2 Nächten von ~37 auf 23 ms gefallen — Reload nach Karwendel-Woche + Hitze-Intervalle (14.07, 28°C) + Plyo-Start. Readiness trägt noch. TP-Wochenplan 15.07 eingelesen."
+    "wearables": "2026-07-16",
+    "kommentar": "Oura frisch bis 16.07. Schlaf weiter top: Score Ø 91 über 8 Nächte (92-95), 7,3-9 h. Readiness trägt (86-91, heute 91). ABER: nächtliche HRV die letzten 3 Nächte im tiefen 20er-Bereich (23-24 ms) gegen Baseline ~36 — klarer Reload nach Build-2-Start (14.07 Hitze-Intervalle 119 statt 75 TSS, 15.07 Kraft, 16.07 Tempo). Kein Alarm, solange Readiness/Schlaf tragen — aber Sonntag Long Run wirklich HF-gedeckelt laufen."
   },
   "hydration": {
-    "2026-07-15": {
-      "ziel_ml": 2200,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) − 400 Kaffee & Co. (läuft nicht über den Tracker) — max. 25 °C, kein Hitzezuschlag"
-    },
     "2026-07-16": {
       "ziel_ml": 3100,
       "grund": "Basis 2.400 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + 28 °C (+500) − 400 Kaffee & Co."
     },
     "2026-07-17": {
-      "ziel_ml": 2200,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) − 400 Kaffee & Co. — max. 24 °C, kein Hitzezuschlag"
+      "ziel_ml": 2700,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) + 28 °C (+500) − 400 Kaffee & Co."
+    },
+    "2026-07-18": {
+      "ziel_ml": 2000,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Ruhetag/Blut-Retest (kein Trainingszuschlag) + max. 22 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
+    },
+    "2026-07-19": {
+      "ziel_ml": 3100,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Long Run 110 min (+1.100) + max. 20 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
     }
   },
   "briefings": {
@@ -44,63 +48,87 @@
       "coachSays": "Die Coachin schreibt 'du schaffst das' — ich schreibe: verpfleg dich, sonst schaffst du's mit halbem Tank."
     },
     "2026-07-17": {
-      "headline": "Kraft- und Plyo-Tag zwischen Steuerbelegen.",
-      "kalender": "Schreibtischtag: Steuererklärung + 'I love Money' ab 14:00. Zu Hause, viel Sitzen.",
-      "einheit": "Muckibude-2-Kraft wie geplant — inkl. schwerer hinterer Kette (Hip Thrust/SLDL) + Fr-Plyo (Pogos 2×15, ~30 Kontakte, frisch nach Warm-up). Bestes Fenster morgens vor dem Steuer-Block, solange die Beine frisch sind.",
+      "headline": "Kraft + Plyo — Beine für den Sonntags-Long-Run laden, ohne den Blut-Retest zu versauen.",
+      "kalender": "Arzt mit Janick 8:00-12:30 (Vormittag blockiert), Steuererklärung läuft nebenher. Kraft/Plyo liegt im Kalender auf 17:00 — verschiebbar, falls nach dem Arzt früher Zeit ist.",
+      "einheit": "Muckibude 2 (28 Sätze) inkl. schwerer hinterer Kette (Hip Thrust/SLDL) + Fr-Plyo: Pogos 2×15 flach (~30 Kontakte), frisch nach Warm-up. Nach dem Arzt-Vormittag; frische, nicht müde Beine für die Pogos.",
       "minimum": [
-        "Kraft-Session komplett: schwere hintere Kette + Soleus (Bent-Knee Calf Raise 3×10 schwer) + gestreckte Wadenheber.",
-        "Pogos 2×15 flach, weich federn — Abbruch bei jedem Knie-/Achilles-Zwicken (Sehnen-Training, kein Ausdauer).",
-        "Alle 45 min vom Schreibtisch auf: 10 Kniebeugen oder 1 min gehen (exercise snacks gegen den Sitz-Tag).",
-        "Supplements morgen/tag/abend abhaken — B-Komplex weiter warten (erst nach der Blutabnahme)."
+        "Kraft komplett: schwere hintere Kette + Soleus (Bent-Knee Calf Raise 3×10 schwer) + gestreckte Wadenheber.",
+        "Pogos 2×15 flach, weich federn, fester Boden — Abbruch bei jedem Knie-/Achilles-Zwicken (Sehnen-Training, kein Ausdauer-Reiz).",
+        "Sitz-Tag brechen: alle 45 min auf, 10 Kniebeugen oder 1 min gehen.",
+        "Supplements morgen/tag/abend abhaken — B-Komplex weiter NICHT starten (erst nach der Blutabnahme morgen)."
       ],
       "bonus": [
         "Abendspaziergang 15-20 min.",
-        "Copenhagen Plank 3×20 s/Seite."
+        "Squeezy-Basic-Gels + Elektrolyt-Tabs schon für Sonntag rauslegen."
       ],
       "fueling": [
-        "Protein 3× 30-35 g über den Tag — am Schreibtisch geht Verteilung gern verloren; ein Skyr griffbereit.",
-        "Rund um die Kraft-Session Carbs (vorher Banane/Haferflocken, nachher 30-40 g Protein binnen 30-40 min).",
-        "1,5-2 l trinken über den Tag, bei der Hitze mehr.",
+        "Protein-Radar (DIE Lücke der Woche): Di 80 g, Mi 82 g — zwei Tage klar unter 117 g. Heute bewusst 3× 35 g: Frühstück Skyr/Eier (35), Mittag Fleisch/Fisch (35), Abend (35). Nicht auf den Abend-Bolus verlassen.",
+        "Rund um die Kraft-Session Carbs: vorher Banane/Haferflocken, nachher 30-40 g Protein binnen 30-40 min.",
+        "2,7 l trinken (28 °C) — Flasche an den Schreibtisch, nicht nur zur Kraft.",
         "Kalzium-Quelle einbauen (Skyr/Käse/Sesam) — Wochenziel 1000-1200 mg aus Nahrung."
       ],
-      "warnung": "Plyo nur auf frischen Beinen und festem Boden (nicht Asphalt bergab, nicht müde). Knie/Achilles ≥3/10 → Plyo streichen, Kraft-Progression einfrieren.",
-      "coachSays": "Schreibtisch macht keine schnellen Muskeln — die 40 Minuten Muckibude sind heute nicht verhandelbar."
+      "warnung": "Morgen früh Blut-Retest (nüchtern). Heavy Hip Thrust + Pogos treiben CK/GPT kurzfristig hoch — also heute die geplante Plyo-Dosis NICHT überziehen (30 Kontakte, kein Extra), damit die Leber-/Muskel-Enzyme morgen nicht verzerrt sind. Knie/Achilles ≥3/10 → Plyo streichen, Kraft-Progression einfrieren.",
+      "coachSays": "Zwei Aufgaben heute: die Beine stark machen und sie morgen früh für die Nadel sauber halten. Beides geht — wenn du die Pogos nicht zum Wettkampf machst."
     },
     "2026-07-18": {
-      "headline": "Ruhetag mit Ansage: morgen wartet der Long Run.",
-      "kalender": "Kein Termin im Kalender. Ruhetag im Plan (TP leer). Morgen (So) Long Run Zone 2, 15,2 km.",
-      "einheit": "Kein Lauf, keine schwere Kraft — Ruhetag. Lockere Mobility, Beine hochlegen, Speicher füllen.",
+      "headline": "Blut-Retest: nüchtern hin, dann Ruhetag und Speicher für den Long Run laden.",
+      "kalender": "Kein Termin im Kalender, Ruhetag im Plan (TP leer). Der Blut-Retest ist auf heute fällig (reminders.yaml) — kein Trainings-Event nötig.",
+      "einheit": "Kein Lauf, keine schwere Kraft. Lockere Mobility 10-15 min, Beine hoch, essen. Morgen der Long Run.",
       "minimum": [
-        "Leichte Mobility 10-15 min, sonst echte Pause.",
-        "Ab mittags Carbs hochfahren für den Long Run: 5-7 g/kg (≈365-500 g).",
-        "Long-Run-Ausrüstung checken: Squeezy-Basic-Gels, Elektrolyt-Tabs, Flasche.",
-        "Blut-Retest-Termin ausmachen (fällig 18.07) — Timing so, dass keine harte Einheit 24-48 h davor liegt."
+        "Blut-Retest NÜCHTERN, früh, vor allem anderen (nur Wasser — kein Kaffee mit Milch, kein Frühstück davor).",
+        "Zettel ans Labor — NEU mitmessen: TSH/fT3/fT4, Holo-Transcobalamin, Folsäure, AP, Bilirubin (ges.+direkt), Kreatinin. KONTROLLE: Gamma-GT, GPT, Magnesium Vollblut, Vitamin D, Ferritin, Transferrin-Sättigung, Homocystein.",
+        "Notiz fürs Labor/zur Interpretation: Magnesium 08.-12.07 pausiert (Karwendel), Neustart edubily-Bisglycinat ab 13.07.",
+        "Nach der Abnahme: B-Komplex darf jetzt starten (vorher hätte er Holo-TC/Folsäure verfälscht)."
       ],
       "bonus": [
-        "Falls L-Glutamin da ist: für morgen ~15 g, 2 h vor dem Long Run einplanen (erst im Training testen).",
-        "Fuelingplan für morgen gedanklich durchgehen (Gel-Intervalle + Natrium 500-700 mg/h)."
+        "L-Glutamin für morgen bereitlegen: ~15 g, 2 h vor dem Long Run (erste Probe, nur im Training testen).",
+        "Long-Run-Fuel checken: Squeezy-Basic-Gels, Elektrolyt-Tabs, Flasche, Natrium."
       ],
       "fueling": [
-        "Abends leicht & low-residue (kein Vollkorn-Berg, keine Hülsenfrüchte, wenig Rohkost) — Darm-Ruhe fürs Gut-Training morgen.",
-        "Über den Tag Carbs betonen, Protein weiter 3× verteilt (Frühstück nicht wieder unter 25 g).",
-        "Kein Honig / keine FODMAP-Bomben (dein Trigger) — vor dem Long Run nichts Neues.",
-        "Viel trinken + Natrium, damit du morgen nicht mit Defizit startest."
+        "Zur Abnahme wirklich nüchtern (nur Wasser). Direkt danach ordentliches Frühstück mit Protein.",
+        "Ab mittags Carbs hochfahren für den Long Run (5-7 g/kg ≈ 365-500 g), aber LOW-RESIDUE: kein Vollkorn-Berg, keine Hülsenfrüchte, wenig Rohkost — Darm-Ruhe fürs Gut-Training.",
+        "Protein weiter 3× verteilt (Frühstück nicht wieder unter 25 g) — heute keine Ausrede, du sitzt eh zu Hause.",
+        "Kein Honig / keine FODMAP-Bomben. Viel trinken + Natrium, damit du morgen nicht mit Defizit startest."
       ],
-      "warnung": "Nach den Hitze-Intervallen + gefallener HRV ist der Ruhetag heute wirklich ein Ruhetag — nicht 'nur mal kurz' laufen. Morgen ist die Qualität dran.",
-      "coachSays": "Ruhe ist Training, das du dir nicht anmerken lässt — bis es morgen den Long Run trägt."
+      "warnung": "Falls die Praxis samstags zu ist: Retest NICHT auf Mo/Di schieben (dann wären es <72 h nach dem Sonntags-Long-Run, CK/GPT verzerrt) — dann lieber gleich heute organisieren oder erst ab Mi 22.07. Ansonsten heute echter Ruhetag, nicht 'nur mal kurz' laufen.",
+      "coachSays": "Ein Pieks nüchtern, ein Tag Beine hoch, ein voller Kohlenhydratspeicher — das ist heute die ganze Kunst. Morgen zahlt es sich aus."
+    },
+    "2026-07-19": {
+      "headline": "Long Run als Gut-Training: Zone 2, Squeezy Basic, erste Glutamin-Probe.",
+      "kalender": "Long Run im Kalender 8:00-10:00, sonst frei. Früh raus, obwohl mit 20 °C moderat.",
+      "einheit": "Long Run Zone 2, 15,2 km / 1:50, 146 TSS. Coachin: 'no SchnickSchnack — nicht schneller als Vorgabe.' HF-gedeckelt, das ist ein Fuel-/Darm-Trainingslauf, kein Tempolauf.",
+      "minimum": [
+        "HF wirklich in Zone 2 decken — nach der HRV-Woche (23-24 ms) ist Disziplin nach oben heute wichtiger als Tempo.",
+        "Squeezy Basic üben: alle ~40-45 min 1 Gel (21 g) mit 150-250 ml reinem Wasser → ~40-45 g KH/h.",
+        "Elektrolytflasche (volle Tab) GETRENNT nebenher, leer trinken — Natrium 500-700 mg/h.",
+        "Nach dem Lauf binnen 30-40 min 30-40 g Protein + Carbs (endlich mal ein 40-g-Tag)."
+      ],
+      "bonus": [
+        "After-Run leichte Mobility / Beine hoch.",
+        "Kurz notieren, wie Darm + Glutamin sich angefühlt haben (fürs nächste Gut-Training)."
+      ],
+      "fueling": [
+        "Pre (90 min vorher): Toast/Banane + Kaffee, 40-60 g KH — KEIN Nüchtern-Long-Run.",
+        "L-Glutamin ~15 g (0,25 g/kg FFM) 2 h vorher, in Wasser — erste Probe, deshalb im Training und nicht am Renntag.",
+        "Während: Squeezy Basic 40-45 g/h + reines Wasser pro Gel; Elektrolyt strikt getrennt, nie mischen.",
+        "Kein Honig / nichts Neues außer dem Geplanten (Squeezy + Glutamin).",
+        "Danach 30-40 g Protein + Carbs zum Auffüllen."
+      ],
+      "warnung": "Erste Glutamin-Probe UND erstes längeres Squeezy-Basic-Training: bewusst konservativ, ein GI-Reiz (wie 14.07 bei Belastung+Hitze) ist Info, kein Drama — Gel + reines Wasser, nie mit Elektrolyt mischen. Bei Krämpfen: ist neuromuskulär/Kondition, nicht Salzmangel — Tempo raus, nicht Salz rein.",
+      "coachSays": "Heute gewinnst du keinen Preis fürs Tempo, sondern dafür, dass dein Darm die 45 g/h schluckt. Genau das trägt dich in Berlin über km 30."
     }
   },
   "woche": {
     "start": "2026-07-13",
-    "fokus": "Build-2-Start Richtung Berlin (Peak-Phase). Di 14.07 Intervalle 10,3 km (119 statt geplant 75 TSS — härter). Do 16.07 Tempolauf 55 min / 89 TSS (Coachin: 'gut verpflegen!'). Fr Kraft. So 19.07 Long Run Zone 2, 1:50 / 15,2 km — Gut-Training. Plyo-Block 1 (Pogos) seit 13.07. Querschnittsthema: Blut-Retest 18.07 sauber timen.",
+    "fokus": "Build-2 / Peak Richtung Berlin. Di 14.07 Intervalle 10,3 km (119 statt geplant 75 TSS — härter), Do 16.07 Tempolauf 55 min / 89 TSS, Fr 17.07 Kraft + Plyo, So 19.07 Long Run Zone 2, 15,2 km — erstes Gut-Training (Squeezy Basic + Glutamin-Probe). Plyo-Block 1 (Pogos) seit 13.07. Querschnitt: Blut-Retest 18.07 sauber timen (nüchtern, Enzyme nicht durch Fr-Plyo verzerren).",
     "luecken": [
-      "Protein-Verteilung: Frühstücke laufen protein-leicht (~15-19 g statt 30 g/Mahlzeit) → Tages-Ø unter 117 g. Fix: Skyr/Eier ins Frühstück.",
-      "Blut-Retest (fällig 18.07) hat noch keinen Termin — diese Woche ausmachen. Timing dann so legen, dass keine harte Einheit in den 24-48 h davor liegt (CK/GPT sauber).",
+      "Protein ist DIE Lücke: Di 80 g, Mi 82 g — zwei Tage klar unter 117 g in der Peak-Phase. Fix: 3× 35 g fest einplanen (Frühstück Skyr/Eier, nicht Abend-Bolus).",
+      "Blut-Retest (fällig 18.07) sauber legen: nüchtern, Fr-Plyo-Dosis nicht überziehen (CK/GPT), Neu-Panel TSH/Holo-TC/Folsäure/AP/Bili/Kreatinin mitmessen. B-Komplex erst danach starten.",
       "Omega-3 weiter 2+2 pushen bis Flasche leer, dann Norsan (Nachschub-Reminder 25.07)."
     ]
   },
   "trends": {
-    "kommentar": "Fitness/CTL 63 (TP 15.07), höher als zur HM-Race-Woche (52). HRV-Wochenschnitt 13.-15.07 gefallen (28,7 ms) — Reload nach Bergwoche, Schlaf & Readiness tragen.",
+    "kommentar": "Fitness/CTL 63 (TP 15.07), höher als zur HM-Race-Woche (52). HRV-Wochenschnitt 13.-16.07 auf 27,5 ms gefallen (Baseline ~36) — Reload nach Bergwoche + Build-2-Ramp; Schlaf (Ø 91) & Readiness (86-91) tragen den Build noch.",
     "wochen": [
       {
         "woche": "2026-01-05",
@@ -254,9 +282,9 @@
       },
       {
         "woche": "2026-07-13",
-        "hrv": 28.7,
-        "rhr": 54.0,
-        "schlaf": 8.8
+        "hrv": 27.5,
+        "rhr": 53.9,
+        "schlaf": 8.4
       }
     ],
     "kmWochen": [
@@ -321,8 +349,40 @@
     },
     {
       "titel": "Erholung trägt den Build",
-      "text": "8 Nächte Schlaf-Score Ø 91 (bis 95), Readiness 83-91. Die Bergwoche hat regeneriert statt ausgelaugt — du gehst ausgeruht in die Peak-Phase."
+      "text": "8 Nächte Schlaf-Score Ø 91 (bis 95), Readiness 86-91. Die HRV ist runter (Reload), aber Schlaf & Readiness zeigen: dein Körper verarbeitet die Build-2-Last, statt zu kippen."
     }
   ],
-  "tagesplan": {}
+  "tagesplan": {
+    "2026-07-18": {
+      "hinweis": "Kein Standard-Kraft-Tag: heute Blut-Retest (nüchtern, früh) + Ruhetag. Fokus = Abnahme sauber erledigen und ab mittags low-residue Carbs für den Long Run morgen laden.",
+      "nur": [
+        "daily-meditation",
+        "daily-ankle",
+        "daily-balance"
+      ],
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Blut-Retest nüchtern",
+          "duration": "morgens",
+          "trigger": "vor dem Frühstück, nur Wasser",
+          "why": "Retest fällig 18.07 — nüchtern für Leber/Glukose. Neu mitmessen: TSH/fT3/fT4, Holo-TC, Folsäure, AP, Bilirubin, Kreatinin. Notiz: Mg-Pause 08.-12.07 + Neustart 13.07."
+        },
+        {
+          "tier": "activity",
+          "name": "Lockere Mobility",
+          "duration": "10-15 min",
+          "trigger": "irgendwann tagsüber",
+          "why": "Echter Ruhetag — nur mobilisieren, keine Belastung. Morgen ist der Long Run dran."
+        },
+        {
+          "tier": "standard",
+          "name": "Long-Run-Fuel vorbereiten",
+          "duration": "5 min",
+          "trigger": "abends",
+          "why": "Squeezy-Basic-Gels, Elektrolyt-Tabs, Flasche, L-Glutamin (~15 g für 2 h vor dem Lauf) bereitlegen."
+        }
+      ]
+    }
+  }
 }
