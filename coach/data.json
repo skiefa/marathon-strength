@@ -2,7 +2,7 @@
   "generated": "2026-07-18T10:00:00+02:00",
   "datenstand": {
     "wearables": "2026-07-18",
-    "kommentar": "Oura frisch bis 18.07. Nächtliche HRV bleibt im Keller (19-27 ms gegen Baseline ~36, seit 5 Nächten) — Reload nach Karwendel-Woche + Build-2-Ramp, jetzt zusätzlich durch den ausgefallenen Fr-Kraft-Tag (Erschöpfung → Ruhetag). Oura-Readiness selbst hält trotzdem (83-92, heute 92 — bester Wert der Woche), Schlaf stabil bei 7,9-9h. Steffi berichtet 'müde trotz gutem Schlaf' — passt zur Aktivitäts-Balance (Oura), die die ganze Woche niedrig lag (54-78): Körper verarbeitet noch die Last, kein Alarmsignal, aber ernst nehmen. Deshalb heute Kraft nur leicht statt volle Fr-Session nachholen, morgen Long Run wirklich HF-gedeckelt."
+    "kommentar": "Oura frisch bis 18.07. HRV jetzt Oura-only (Garmins hoeherer 00:00-Wert raus): Oura-Nacht-HRV die letzten Naechte 19-27 ms, Oura-Wochenschnitt von ~34 (Ende Juni) auf ~25 (Mitte Juli) gefallen — Reload nach Karwendel + Build-2, plus der ausgefallene Fr-Kraft-Tag (Erschoepfung -> Ruhetag). Wichtig: NICHT mit dem alten '~36-Baseline' vergleichen, das war Garmins Methode. Oura-Readiness haelt (83-92, heute 92 — bester Wert der Woche), Schlaf stabil 7,9-9h. 'Muede trotz gutem Schlaf' passt zur Oura-Aktivitaets-Balance (54-78 die Woche): Koerper verarbeitet die Last, kein Alarm, aber ernst nehmen — heute Kraft nur leicht, morgen Long Run HF-gedeckelt."
   },
   "hydration": {
     "2026-07-16": {
@@ -180,161 +180,161 @@
     ]
   },
   "trends": {
-    "kommentar": "Fitness/CTL 63 (TP 15.07), höher als zur HM-Race-Woche (52). HRV-Wochenschnitt 13.-16.07 auf 27,5 ms gefallen (Baseline ~36) — Reload nach Bergwoche + Build-2-Ramp; Schlaf (Ø 91) & Readiness (86-91) tragen den Build noch.",
+    "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter.",
     "wochen": [
       {
         "woche": "2026-01-05",
-        "hrv": 36.4,
+        "hrv": null,
         "rhr": 55.1,
         "schlaf": 8.5
       },
       {
         "woche": "2026-01-12",
-        "hrv": 34.7,
+        "hrv": null,
         "rhr": 55.4,
         "schlaf": 8.3
       },
       {
         "woche": "2026-01-19",
-        "hrv": 37.4,
+        "hrv": null,
         "rhr": 55.4,
         "schlaf": 8.1
       },
       {
         "woche": "2026-01-26",
-        "hrv": 35.4,
+        "hrv": null,
         "rhr": 55.0,
         "schlaf": 7.7
       },
       {
         "woche": "2026-02-02",
-        "hrv": 38.4,
+        "hrv": null,
         "rhr": 55.6,
         "schlaf": 8.1
       },
       {
         "woche": "2026-02-09",
-        "hrv": 38.3,
+        "hrv": null,
         "rhr": 53.9,
         "schlaf": 7.8
       },
       {
         "woche": "2026-02-16",
-        "hrv": 39.4,
+        "hrv": null,
         "rhr": 54.7,
         "schlaf": 8.4
       },
       {
         "woche": "2026-02-23",
-        "hrv": 36.9,
+        "hrv": null,
         "rhr": 56.1,
         "schlaf": 7.8
       },
       {
         "woche": "2026-03-02",
-        "hrv": 34.4,
+        "hrv": null,
         "rhr": 58.3,
         "schlaf": 7.5
       },
       {
         "woche": "2026-03-09",
-        "hrv": 36.9,
+        "hrv": null,
         "rhr": 54.9,
         "schlaf": 8.1
       },
       {
         "woche": "2026-03-16",
-        "hrv": 37.0,
+        "hrv": null,
         "rhr": 55.1,
         "schlaf": 8.3
       },
       {
         "woche": "2026-03-23",
-        "hrv": 35.3,
+        "hrv": null,
         "rhr": 54.6,
         "schlaf": 7.6
       },
       {
         "woche": "2026-03-30",
-        "hrv": 37.1,
+        "hrv": null,
         "rhr": 53.6,
         "schlaf": 8.5
       },
       {
         "woche": "2026-04-06",
-        "hrv": 39.3,
+        "hrv": null,
         "rhr": 52.9,
         "schlaf": 8.4
       },
       {
         "woche": "2026-04-13",
-        "hrv": 31.0,
+        "hrv": null,
         "rhr": 54.2,
         "schlaf": 6.2
       },
       {
         "woche": "2026-04-20",
-        "hrv": 29.9,
+        "hrv": null,
         "rhr": 52.7,
         "schlaf": 6.8
       },
       {
         "woche": "2026-05-11",
-        "hrv": 38.0,
+        "hrv": null,
         "rhr": 53.0,
         "schlaf": 7.7
       },
       {
         "woche": "2026-05-18",
-        "hrv": 36.9,
+        "hrv": null,
         "rhr": 53.9,
         "schlaf": 8.1
       },
       {
         "woche": "2026-05-25",
-        "hrv": 36.6,
+        "hrv": null,
         "rhr": 52.6,
         "schlaf": 8.4
       },
       {
         "woche": "2026-06-01",
-        "hrv": 38.3,
+        "hrv": null,
         "rhr": 52.9,
         "schlaf": 8.5
       },
       {
         "woche": "2026-06-08",
-        "hrv": 38.0,
+        "hrv": null,
         "rhr": 54.0,
         "schlaf": 7.7
       },
       {
         "woche": "2026-06-15",
-        "hrv": 39.7,
+        "hrv": null,
         "rhr": 54.6,
         "schlaf": 8.0
       },
       {
         "woche": "2026-06-22",
-        "hrv": 33.0,
+        "hrv": 28.2,
         "rhr": 51.9,
         "schlaf": 7.6
       },
       {
         "woche": "2026-06-29",
-        "hrv": 40.4,
+        "hrv": 34.2,
         "rhr": 51.6,
         "schlaf": 7.6
       },
       {
         "woche": "2026-07-06",
-        "hrv": 36.0,
+        "hrv": 30.6,
         "rhr": 52.0,
         "schlaf": 8.1
       },
       {
         "woche": "2026-07-13",
-        "hrv": 27.5,
+        "hrv": 25.2,
         "rhr": 53.9,
         "schlaf": 8.4
       }
