@@ -180,7 +180,7 @@
     ]
   },
   "trends": {
-    "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter.",
+    "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter. Ruhepuls: ebenfalls auf Oura umgestellt (Loader + Oura-Aera-Wochen), ABER Historie behalten — Garmin & Oura stimmen beim RHR auf ~1 bpm ueberein (keine Klippe), und die lange Linie zeigt den Fitness-Trend (Jahresanfang ~55 -> jetzt ~50 bpm).",
     "wochen": [
       {
         "woche": "2026-01-05",
@@ -317,25 +317,25 @@
       {
         "woche": "2026-06-22",
         "hrv": 28.2,
-        "rhr": 51.9,
+        "rhr": 52.2,
         "schlaf": 7.6
       },
       {
         "woche": "2026-06-29",
         "hrv": 34.2,
-        "rhr": 51.6,
+        "rhr": 53.0,
         "schlaf": 7.6
       },
       {
         "woche": "2026-07-06",
         "hrv": 30.6,
-        "rhr": 52.0,
+        "rhr": 50.4,
         "schlaf": 8.1
       },
       {
         "woche": "2026-07-13",
         "hrv": 25.2,
-        "rhr": 53.9,
+        "rhr": 50.8,
         "schlaf": 8.4
       }
     ],
