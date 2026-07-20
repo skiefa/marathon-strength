@@ -1,22 +1,10 @@
 {
-  "generated": "2026-07-18T10:00:00+02:00",
+  "generated": "2026-07-20T21:00:00+02:00",
   "datenstand": {
-    "wearables": "2026-07-18",
-    "kommentar": "Oura frisch bis 18.07. HRV jetzt Oura-only (Garmins hoeherer 00:00-Wert raus): Oura-Nacht-HRV die letzten Naechte 19-27 ms, Oura-Wochenschnitt von ~34 (Ende Juni) auf ~25 (Mitte Juli) gefallen — Reload nach Karwendel + Build-2, plus der ausgefallene Fr-Kraft-Tag (Erschoepfung -> Ruhetag). Wichtig: NICHT mit dem alten '~36-Baseline' vergleichen, das war Garmins Methode. Oura-Readiness haelt (83-92, heute 92 — bester Wert der Woche), Schlaf stabil 7,9-9h. 'Muede trotz gutem Schlaf' passt zur Oura-Aktivitaets-Balance (54-78 die Woche): Koerper verarbeitet die Last, kein Alarm, aber ernst nehmen — heute Kraft nur leicht, morgen Long Run HF-gedeckelt."
+    "wearables": "2026-07-20",
+    "kommentar": "Oura frisch bis 20.07. HRV Oura-only: Nacht-HRV die letzten 4 Naechte 27/24/21/21 ms, Wochenschnitt weiter ~23 ms (Reload nach Karwendel + Build-2 haelt an). NICHT mit dem alten '~36-Baseline' (Garmin-Methode) vergleichen. Readiness robust 86-93 (heute 86), Schlaf-Score stabil 88-93 (heute 91, 7,5 h). Achilles/Akku im App-Check jeden Tag 'gut/ok' — keine Sehnen-Flags. Sprich: der Koerper traegt die Last, HRV ist der einzige Reload-Marker. Long Run diese Woche SAMSTAG (So = Workshop)."
   },
   "hydration": {
-    "2026-07-16": {
-      "ziel_ml": 3100,
-      "grund": "Basis 2.400 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + 28 °C (+500) − 400 Kaffee & Co."
-    },
-    "2026-07-17": {
-      "ziel_ml": 2700,
-      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Kraft/Plyo 40 min (+200, zählt halb) + 28 °C (+500) − 400 Kaffee & Co."
-    },
-    "2026-07-18": {
-      "ziel_ml": 2700,
-      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Kraft leicht ~40 min (+200, zählt halb) + 25 °C (+500) − 400 Kaffee & Co."
-    },
     "2026-07-19": {
       "ziel_ml": 3100,
       "grund": "Basis 2.422 (33 ml × 73,4 kg) + Long Run 110 min (+1.100) + max. 20 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
@@ -26,58 +14,19 @@
       "grund": "Basis 2.422 (33 ml × 73,4 kg) + Mo-Block leicht ~30 min (+150, zählt halb) + max. 22 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
     },
     "2026-07-21": {
-      "ziel_ml": 2800,
-      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Intervalle ~80 min (+800, geschätzt — TP-Plan noch nicht gepostet) + max. 20 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
+      "ziel_ml": 2900,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Intervalle 90 min (+900) + max. 22 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
+    },
+    "2026-07-22": {
+      "ziel_ml": 2200,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) + max. 23 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
+    },
+    "2026-07-23": {
+      "ziel_ml": 2600,
+      "grund": "Basis 2.422 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + max. 21 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
     }
   },
   "briefings": {
-    "2026-07-16": {
-      "headline": "Tempolauf mit Ansage — und der Countdown zum Blut-Retest läuft.",
-      "kalender": "Zahnarzt 8:00-9:00. Danach frei — der Tag gehört dem Tempolauf. Do/Fr Steuer-Kram am Schreibtisch.",
-      "einheit": "Tempolauf 55 min / 89 TSS (Coachin ausdrücklich: 'gut verpflegen!') + Mobi 17 min. Bestes Fenster: direkt nach dem Zahnarzt ~9:30, bevor die Hitze kommt — am See im Schatten. Nicht nüchtern loslaufen.",
-      "minimum": [
-        "Tempolauf wie geplant, aber HF-ehrlich: nächtliche HRV 2 Nächte gefallen (37→23) — wenn die Beine schwer sind, oberes Tempo-Ende weglassen statt erzwingen.",
-        "Isometrischer Wadenhalt + Wadenheber im Warm-up (Achilles-Priming).",
-        "Abends Kreatin 3-5 g + Magnesium (edubily-Neustart) — gestern nicht abgehakt.",
-        "Mobi 17 min: mobilisieren, nicht in die Dehnung gehen."
-      ],
-      "bonus": [
-        "Copenhagen Plank 3×20 s/Seite.",
-        "Nach dem Steuer-Sitzen 10 min Spaziergang."
-      ],
-      "fueling": [
-        "Pre (60-90 min vorher): Toast/Banane + Kaffee, ~40 g KH — kein Nüchtern-Tempo bei 89 TSS.",
-        "Während: 1 Gel bei ~Min 30 mit 200 ml Wasser als Gut-Training (Squeezy Basic üben). Elektrolytflasche (volle Tab / 500 ml) getrennt nebenher — bei der Hitze leer trinken.",
-        "Natrium 500-700 mg/h über die Flasche — nie in die Gel-/Wasserflasche mischen.",
-        "Nach dem Lauf binnen 30-40 min 30-40 g Protein (Skyr + Whey oder Eier).",
-        "Protein-Radar: gestern lag dein Frühstück bei ~19 g — heute +1 Skyr (25 g) oder 2 Eier ins Frühstück, sonst reißt du die 117 g wieder."
-      ],
-      "warnung": "HRV 2 Nächte gefallen (37→23 ms) + gestern GI-Reiz bei Intervall 4 in der Hitze: heute nicht nüchtern, Elektrolyte mitnehmen, und wenn die Beine schwer sind lieber HF-gedeckelt als das obere Tempo-Ende erzwingen. Nebenbei: Blut-Retest-Termin (fällig 18.07) ist noch nicht gebucht — diese Woche ausmachen.",
-      "coachSays": "Die Coachin schreibt 'du schaffst das' — ich schreibe: verpfleg dich, sonst schaffst du's mit halbem Tank."
-    },
-    "2026-07-17": {
-      "headline": "Kraft + Plyo — Beine für den Sonntags-Long-Run laden, ohne den Blut-Retest zu versauen.",
-      "kalender": "Arzt mit Janick 8:00-12:30 (Vormittag blockiert), Steuererklärung läuft nebenher. Kraft/Plyo liegt im Kalender auf 17:00 — verschiebbar, falls nach dem Arzt früher Zeit ist.",
-      "einheit": "Muckibude 2 (28 Sätze) inkl. schwerer hinterer Kette (Hip Thrust/SLDL) + Fr-Plyo: Pogos 2×15 flach (~30 Kontakte), frisch nach Warm-up. Nach dem Arzt-Vormittag; frische, nicht müde Beine für die Pogos.",
-      "minimum": [
-        "Kraft komplett: schwere hintere Kette + Soleus (Bent-Knee Calf Raise 3×10 schwer) + gestreckte Wadenheber.",
-        "Pogos 2×15 flach, weich federn, fester Boden — Abbruch bei jedem Knie-/Achilles-Zwicken (Sehnen-Training, kein Ausdauer-Reiz).",
-        "Sitz-Tag brechen: alle 45 min auf, 10 Kniebeugen oder 1 min gehen.",
-        "Supplements morgen/tag/abend abhaken — B-Komplex weiter NICHT starten (erst nach der Blutabnahme morgen)."
-      ],
-      "bonus": [
-        "Abendspaziergang 15-20 min.",
-        "Squeezy-Basic-Gels + Elektrolyt-Tabs schon für Sonntag rauslegen."
-      ],
-      "fueling": [
-        "Protein-Radar (DIE Lücke der Woche): Di 80 g, Mi 82 g — zwei Tage klar unter 117 g. Heute bewusst 3× 35 g: Frühstück Skyr/Eier (35), Mittag Fleisch/Fisch (35), Abend (35). Nicht auf den Abend-Bolus verlassen.",
-        "Rund um die Kraft-Session Carbs: vorher Banane/Haferflocken, nachher 30-40 g Protein binnen 30-40 min.",
-        "2,7 l trinken (28 °C) — Flasche an den Schreibtisch, nicht nur zur Kraft.",
-        "Kalzium-Quelle einbauen (Skyr/Käse/Sesam) — Wochenziel 1000-1200 mg aus Nahrung."
-      ],
-      "warnung": "Morgen früh Blut-Retest (nüchtern). Heavy Hip Thrust + Pogos treiben CK/GPT kurzfristig hoch — also heute die geplante Plyo-Dosis NICHT überziehen (30 Kontakte, kein Extra), damit die Leber-/Muskel-Enzyme morgen nicht verzerrt sind. Knie/Achilles ≥3/10 → Plyo streichen, Kraft-Progression einfrieren.",
-      "coachSays": "Zwei Aufgaben heute: die Beine stark machen und sie morgen früh für die Nadel sauber halten. Beides geht — wenn du die Pogos nicht zum Wettkampf machst."
-    },
     "2026-07-18": {
       "headline": "Kraft nachholen — aber leicht. Die Beine gehören noch dir für morgen früh.",
       "kalender": "Kein Termin im Kalender heute — frei wählbar.",
@@ -148,35 +97,83 @@
       "coachSays": "Heute zählt Minimum wirklich als Minimum — mach die 15 Minuten und geh dann sauberen Gewissens nach München."
     },
     "2026-07-21": {
-      "headline": "Intervalle + der tatsächliche Plyo-Start — die Fr-Pogos werden heute nachgeholt.",
-      "kalender": "Kein Termin bekannt — freier Tag fürs Training.",
-      "einheit": "Intervalle nach Standard-Di-Muster; TP-Plan der Coachin für diese Woche noch nicht gepostet (bitte Screenshot schicken, sobald da). Vor dem Warm-up: erste Pogos-Session (2×15 flach, ~30 Kontakte, weich federn) — der Fr-Termin ist ausgefallen, das hier ist der tatsächliche Plyo-Start von Block 1.",
+      "headline": "Intervalle 90 min — nach München zurück, jetzt richtig verpflegt, nicht wie am 14.07.",
+      "kalender": "Kein fixer Termin bekannt — freier Tag fürs Training. (Falls doch was reinkommt: Lauf früh legen.)",
+      "einheit": "Intervalle 1:30 / 70 TSS (Coachin: 'Whooooohoooo du schaffst das!') + After Run Yoga 11 min. Bestes Fenster: vormittags, 22 °C — nicht nüchtern. HF-gesteuert: HRV ist im Reload (Oura 21 ms), Readiness trägt aber (86) — in den harten Blöcken auf HF hören, wenn die Beine zicken das obere Ende weglassen statt erzwingen.",
       "minimum": [
-        "Pogos 2×15 flach, frisch VOR den Intervallen, fester Boden, Abbruch bei jedem Knie-/Achilles-Zwicken.",
-        "Isometrischer Wadenhalt im Warm-up.",
-        "Intervalle: wenn HRV/Müdigkeit bis dahin nicht zurück ist, nach Herzfrequenz fahren statt Pace zu erzwingen (wie am 07.07.).",
-        "Supplements + Sitz-Pausen wie gewohnt."
+        "Intervalle wie geplant, aber HF-ehrlich — 90 min sind lang genug, dass Fueling über Erfolg/Misserfolg entscheidet.",
+        "Isometrischer Wadenhalt + Wadenheber im Warm-up (Achilles-Priming).",
+        "After Run Yoga 11 min dranhängen — steht ohnehin im Plan.",
+        "Supplements morgen/tag/abend abhaken — gestern (Reisetag) nur 1 Häkchen, heute wieder voll."
       ],
       "bonus": [
         "Nach-Lauf-Wadenheber locker 2×15.",
-        "Feedback notieren, wie sich die ersten Pogos angefühlt haben (Knie/Achilles)."
+        "Pogos NICHT heute — die kommen morgen auf frische Kraft-Tag-Beine, nicht direkt vor/nach harten Intervallen."
       ],
       "fueling": [
-        "Bei intensiv/lang: 1. Gel bei ~40-45 min mit 150-250 ml Wasser, Elektrolytflasche getrennt.",
-        "Protein-Fenster nach dem Lauf: 30-40 g binnen 30-40 min — die Woche hat es nötig.",
-        "Kein Nüchterntraining, auch wenn früh."
+        "Pre (60-90 min vorher): Toast/Banane + Kaffee, 40-60 g KH — KEIN Nüchtern-Intervall. Am 14.07. gab's ohne Fuel bei Intervall 4 Darmdrang, am 19.07. mit Squeezy + Wasser 0 Probleme: das ist der Beweis, mach's heute genauso.",
+        "Während (90 min = 30-45 g KH/h): 1. Squeezy Basic (21 g) bei ~Min 40-45 mit 150-250 ml reinem Wasser, 2. Gel bei ~Min 80. Elektrolytflasche (volle Tab / 500 ml) strikt GETRENNT, leer trinken.",
+        "Natrium 500-700 mg/h über die Flasche — nie ins Gel-Wasser mischen.",
+        "Nach dem Lauf 30-40 g Protein binnen 30-40 min: Skyr + Whey oder 250 g Hüttenkäse. DAS ist diese Woche der Knackpunkt (s. Warnung)."
       ],
-      "warnung": "Falls die Beine/HRV bis Dienstag noch nicht erholt sind: Pogos ganz vorne nur bei beschwerdefreien Beinen — sonst lieber eine Woche verschieben als auf müde Beine draufzusatteln. Kein Plyo <24h vor dem Long Run gilt hier nicht (Long Run war Sonntag), aber frisch sollten die Sehnen trotzdem sein.",
-      "coachSays": "Die Pogos warten seit Freitag geduldig — heute holen wir sie nach, aber nur wenn die Beine wirklich mitspielen."
+      "warnung": "Protein-Radar — DIE Lücke: 6 Tage in Folge unter Ziel (80/82/97/79/93/40 g vs. 117 min), im Schnitt ~40 g zu wenig. Am Long-Run-Tag (19.07.) landeten sogar nur ~40 g, weil das Post-Run-Essen nur EIN Drumstick hatte. In der Peak-Phase frisst das deine Anpassung auf. Ab heute: 3× fest 35 g (Frühstück Skyr/Eier, Mittag + Abend je eine Handfläche Fleisch/Fisch) + der Post-Lauf-Shake. Nicht auf 'ergibt sich' verlassen.",
+      "coachSays": "Deine Coachin jubelt dir zu — ich zähle mit: sechs Tage zu wenig Eiweiß. Heute drehen wir das, sonst trainierst du gegen deinen eigenen Muskel."
+    },
+    "2026-07-22": {
+      "headline": "Kraft-Tag — und der echte Plyo-Start. Frische Beine, kleine erste Dosis.",
+      "kalender": "Kein fixer Termin bekannt. Kraft am besten vormittags, solange die Beine frisch sind.",
+      "einheit": "Muckibude 2 (28 Sätze) inkl. schwerer hinterer Kette (Hip Thrust/SLDL) + Soleus. Davor, auf frische Beine: der tatsächliche Pogo-Start von Block 1 — die Fr-Session (17.07.) fiel aus, seither keine Plyo. Heute klein anfangen: 2×10 flach (~20 Kontakte), weich federn, fester Boden.",
+      "minimum": [
+        "Pogos 2×10 flach VOR der Kraft, frische Beine — Abbruch bei jedem Knie-/Achilles-Zwicken (Sehnen-Reiz, kein Ausdauer-Reiz). Lieber 20 saubere Kontakte als 30 müde.",
+        "Kraft komplett: schwere hintere Kette (Hip Thrust/SLDL) + Soleus (Bent-Knee Calf Raise 3×10 schwer) + gestreckte Wadenheber.",
+        "Sitz-Tag brechen: alle 45 min auf, 10 Kniebeugen oder 1 min gehen.",
+        "Supplements morgen/tag/abend abhaken."
+      ],
+      "bonus": [
+        "Copenhagen Plank 3×20 s/Seite.",
+        "Kurz notieren, wie sich die ersten Pogos angefühlt haben (Knie/Achilles) — Basis fürs Steigern auf 2×15."
+      ],
+      "fueling": [
+        "Rund um die Kraft Carbs: vorher Banane/Haferflocken, nachher 30-40 g Protein binnen 30-40 min (Post-Kraft-Shake wie am 18.07. — hat funktioniert).",
+        "Protein-Radar weiter: heute wieder 3× 35 g. Wenn Kraft-Tag, dann ist der Post-Kraft-Shake dein leichtester 30-g-Gewinn — nutz ihn.",
+        "Kalzium-Quelle einbauen (Skyr/Käse/Sesam) — Wochenziel 1000-1200 mg aus Nahrung.",
+        "2,2 l trinken — Flasche an den Schreibtisch, nicht nur zur Kraft."
+      ],
+      "warnung": "Erste Plyo-Session überhaupt in diesem Block + HRV noch im Reload (Oura 21 ms): bewusst klein (2×10), auf frische Beine, nicht müde. Knie oder Achilles ≥3/10 → Pogos streichen, Kraft-Progression einfrieren, und mir Bescheid geben. Schwere hintere Kette heute ist ok — Long Run erst Samstag, die 24h-Regel ist gewahrt.",
+      "coachSays": "Plyo ist Sehnentraining, kein Wettkampf. Zwanzig saubere, weiche Kontakte schlagen dreißig, nach denen die Achilles morgen meckert."
+    },
+    "2026-07-23": {
+      "headline": "Tempolauf 55 min — kurz, aber intensiv. Verpflegen wie die Coachin sagt.",
+      "kalender": "Kein fixer Termin bekannt. Tempolauf am besten vormittags bei 20 °C.",
+      "einheit": "Tempolauf 55 min / 89 TSS (Coachin ausdrücklich: 'Bitte gut verpflegen!') + AbendMeditation. 89 TSS auf 55 min = hohe Intensität — nicht nüchtern, und wenn die Beine vom Kraft-Tag schwer sind, HF-ehrlich das obere Ende weglassen.",
+      "minimum": [
+        "Tempolauf wie geplant, HF-gesteuert. Nach dem Kraft-/Plyo-Tag gestern zuerst prüfen: Beine frisch genug fürs Tempo? Wenn nicht, lieber solide statt spitz.",
+        "Isometrischer Wadenhalt + Wadenheber im Warm-up.",
+        "AbendMeditation 10 min — steht im Plan, nimm sie mit.",
+        "Supplements morgen/tag/abend abhaken."
+      ],
+      "bonus": [
+        "Nach dem Lauf 10 min lockere Mobility.",
+        "Squeezy-Basic-Gels + Elektrolyt-Tabs schon für den Samstags-Long-Run rauslegen."
+      ],
+      "fueling": [
+        "Pre (60-90 min vorher): Toast/Banane + Kaffee, ~40 g KH — kein Nüchtern-Tempo bei 89 TSS.",
+        "Während: 1 Squeezy Basic (21 g) bei ~Min 30 mit 200 ml reinem Wasser als Gut-Training. Elektrolytflasche (volle Tab) getrennt nebenher.",
+        "Natrium 500-700 mg/h über die Flasche — nie ins Gel-Wasser mischen.",
+        "Nach dem Lauf 30-40 g Protein binnen 30-40 min. Achte drauf — genau dieses Fenster ist die Woche mehrfach durchgerutscht."
+      ],
+      "warnung": "Zweiter intensiver Tag nach dem Kraft-/Plyo-Tag: wenn HRV weiter niedrig UND Beine schwer, ist ein solider Tempolauf mehr wert als ein spitzer, der dich für Samstags-Long-Run kostet. Der Long Run (2:00 / 191 TSS) ist das Wochen-Highlight — nicht am Donnerstag verausgaben.",
+      "coachSays": "Kurz und knackig heute. 'Gut verpflegen' steht sogar im Plan — also keine Ausrede, das Gel und den Post-Protein zu vergessen."
     }
   },
   "woche": {
-    "start": "2026-07-13",
-    "fokus": "Build-2 / Peak Richtung Berlin. Di 14.07 Intervalle 10,3 km (119 statt geplant 75 TSS — härter), Do 16.07 Tempolauf 55 min / 89 TSS, Fr 17.07 Ruhetag statt Kraft+Plyo (Erschöpfung), Sa 18.07 Kraft leicht nachgeholt (Beine frisch gehalten), So 19.07 Long Run Zone 2, 15,2 km — erstes Gut-Training (Squeezy Basic + Glutamin-Probe). Plyo-Block 1 (Pogos) dadurch erst Di 21.07 als tatsächlicher Erstversuch.",
+    "start": "2026-07-20",
+    "fokus": "Peak Richtung Berlin, Long Run diese Woche SAMSTAG (So = Workshop). Mo 20.07 Reise/Meetup München + Open Water Swim, Di 21.07 Intervalle 1:30 / 70 TSS, Mi 22.07 Kraft + tatsächlicher Plyo-Start (Pogos, klein), Do 23.07 Tempolauf 55 min / 89 TSS, Fr 24.07 Kraft + Plyo, Sa 25.07 Long Run 2:00 / 191 TSS (Gut-Training, Squeezy + 15 g Glutamin).",
     "luecken": [
-      "Protein ist DIE Lücke: Di 80 g, Mi 82 g, Do 97 g, Fr 79 g — vier Tage in Folge unter 117 g in der Peak-Phase. Fix: 3× 35 g fest einplanen (Frühstück Skyr/Eier, nicht Abend-Bolus).",
-      "Blut-Retest verschoben (kein Praxistermin am 18.07.) — Steffi ruft KW 30 an. Sobald Termin steht: nüchtern, mind. 72h nach dem Long Run, Neu-Panel TSH/Holo-TC/Folsäure/AP/Bili/Kreatinin mitmessen. B-Komplex erst danach starten.",
-      "Erholung im Blick behalten: Aktivitäts-Balance (Oura) die ganze Woche niedrig (54-78), müde trotz gutem Schlaf — Fr-Ruhetag + Sa-Kraft-leicht war die richtige Reaktion, nicht als Ausnahme behandeln, falls es nächste Woche wieder kippt."
+      "Protein bleibt DIE Lücke: 6 Tage in Folge unter 117 g (80/82/97/79/93/40), im Schnitt ~40 g zu wenig — am Long-Run-Tag sogar nur 40 g (Post-Run nur 1 Drumstick). Fix: 3× fest 35 g + Post-Training-Shake, nicht dem Zufall überlassen. Diese Woche das Nadelöhr.",
+      "Plyo-Nachhol: Pogos sind seit dem 17.07. offen (Fr fiel aus). Diese Woche 2×: Mi klein starten (2×10), Fr steigern — nur auf beschwerdefreie Beine, Abbruch-Gate ≥3/10.",
+      "Blut-Retest: Steffi ruft KW 30 (diese Woche) die Praxis an — ohne Termin kein Retest. Sobald Slot steht: nüchtern, ≥72 h nach dem Long Run (also nicht Sa/So), Neu-Panel TSH/Holo-TC/Folsäure/AP/Bili/Kreatinin. B-Komplex erst danach.",
+      "Erholung beobachten: HRV (Oura) hält den Reload-Tiefstand (~21-24 ms), Readiness/Schlaf tragen aber (86-93 / Score 91). Kein Alarm, aber bei einer weiteren mageren Protein-Woche + HRV unten wird's LEA-verdächtig."
     ]
   },
   "trends": {
@@ -405,49 +402,6 @@
     }
   ],
   "tagesplan": {
-    "2026-07-18": {
-      "hinweis": "Kein Standard-Sa-Tag: Bluttest ist verschoben (kein Praxistermin), stattdessen wird die verpasste Fr-Kraft nachgeholt — aber bewusst LEICHT (Oberkörper/Core/Aktivierung), keine schwere Bein-Kraft und kein Plyo, weil morgen früh der Long Run ansteht (<24h-Regel).",
-      "nur": [
-        "daily-meditation",
-        "daily-wallsit",
-        "daily-balance",
-        "daily-ankle",
-        "daily-supp-morgen",
-        "daily-supp-tag",
-        "daily-supp-abend",
-        "daily-birddog"
-      ],
-      "extra": [
-        {
-          "tier": "pflicht",
-          "name": "Kraft nachholen — LEICHT (Oberkörper + Core)",
-          "duration": "30-40 min",
-          "trigger": "flexibel, heute irgendwann",
-          "why": "Verpasste Fr-Session nachholen, aber ohne schwere Bein-Kraft/Plyo — Long Run morgen 8:00, <24h-Regel. Volle Session (Hip Thrust/SLDL/Pogos) folgt regulär am Mittwoch."
-        },
-        {
-          "tier": "activity",
-          "name": "Soleus/Wadenheber moderat",
-          "duration": "10 min",
-          "trigger": "im Rahmen der Kraft-Session",
-          "why": "Sehnen-Konstanz zählt mehr als die schwerste Progression — heute submaximal reicht."
-        },
-        {
-          "tier": "standard",
-          "name": "Long-Run-Fuel für morgen vorbereiten",
-          "duration": "5 min",
-          "trigger": "abends",
-          "why": "Squeezy-Basic-Gels, Elektrolyt-Tabs, Flasche, L-Glutamin (~15 g für 2 h vorher) bereitlegen."
-        },
-        {
-          "tier": "bonus",
-          "name": "Praxis-Nummer raussuchen",
-          "duration": "5 min",
-          "trigger": "irgendwann heute",
-          "why": "Blut-Retest ohne Termin verschoben — Anruf steht kommende Woche (KW 30) an, jetzt schon vorbereiten macht das leichter."
-        }
-      ]
-    },
     "2026-07-20": {
       "hinweis": "Reisetag München (Podcast ab 9:00, Abfahrt 16:30, Meetup 18:30-23:00) — Standard-Mo-Block bleibt, aber bewusst kurz halten.",
       "nur": [
