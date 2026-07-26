@@ -649,6 +649,179 @@
      "why": "Steht im Coach-Plan. Bei sinkender HRV der billigste Hebel, den du hast."
     }
    ]
+  },
+  "2026-07-26": {
+   "hinweis": "Dein Long Run lag diese Woche SAMSTAG (16,4 km / 2:00 h — erledigt). Heute ist Workshop-Tag: Mobi 17 min, sonst Ruhe. Die Checkliste hat den Standard-Sonntag angezeigt — das war falsch, hier die richtige Version.",
+   "nur": [
+    "so-wade",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Mobi (Coach-Einheit)",
+     "duration": "17 min",
+     "trigger": "wann es passt",
+     "why": "Steht so im TrainingPeaks-Plan. Coachin: 'nicht zu sehr in die Dehnung gehen, Fokus auf mobilisieren'."
+    },
+    {
+     "tier": "standard",
+     "name": "Beine hochlegen",
+     "duration": "10 min",
+     "trigger": "abends",
+     "why": "Tag nach 2 h Long Run. Venöser Rückfluss, und morgen liegen Intervalle."
+    }
+   ]
+  },
+  "2026-07-30": {
+   "hinweis": "KEIN Lauf heute — anders als im Standardprogramm. Deine Coachin hält den Donnerstag bewusst leer, weil morgen die sportmedizinische Untersuchung ansteht. 'Spannung halten' statt Reiz setzen.",
+   "nur": [
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Mobi (Coach-Einheit)",
+     "duration": "17 min",
+     "trigger": "morgens",
+     "why": "Coachin: 'nicht zu sehr in die Dehnung gehen, Fokus auf mobilisieren'."
+    },
+    {
+     "tier": "pflicht",
+     "name": "'Spannung halten' (Coach-Einheit)",
+     "duration": "16:30 min · 19 TSS",
+     "trigger": "wann es passt",
+     "why": "Zweite Einheit dieser Art in der Woche. Coachin: 'nichts wildes, nur Spannung vorm Test halten'."
+    },
+    {
+     "tier": "pflicht",
+     "name": "Breathing",
+     "duration": "5 min",
+     "trigger": "abends",
+     "why": "Steht im Coach-Plan. Vor einem Leistungstest ist runterfahren wichtiger als reinhauen."
+    },
+    {
+     "tier": "standard",
+     "name": "Test-Vorbereitung: Kohlenhydrate hoch, früh ins Bett",
+     "duration": "—",
+     "trigger": "den ganzen Tag",
+     "why": "Morgen Leistungstest. Heute 365 g+ Carbs, ordentlich trinken, 8 h Schlaf anpeilen. Ein Test auf leeren Speichern misst deine Ernährung, nicht deine Form."
+    }
+   ]
+  },
+  "2026-07-31": {
+   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG — der Test, auf den Mi und Do hingearbeitet haben. Kraft (Muckibude 3) erst DANACH, nie davor. Plyo fällt heute aus: nach einer Ausbelastung springt man nicht.",
+   "nur": [
+    "fr-kraft",
+    "fr-hipthrust",
+    "fr-sideplank",
+    "fr-beckenboden",
+    "fr-calves",
+    "fr-slidecurl",
+    "fr-knee",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Sportmedizinische Untersuchung (Leistungstest)",
+     "duration": "lt. Termin",
+     "trigger": "zuerst — vor allem anderen",
+     "why": "Nicht nüchtern hingehen: 2-3 h vorher eine normale kohlenhydratbetonte Mahlzeit, kein Experiment. Trainingstagebuch-Fragen mitnehmen (Berlin-Zielzeit 5:15-5:30, HF-Zonen, Fettstoffwechsel). Ergebnisse hinterher hier ablegen — sie gehören in befunde/ und ins Trainingsgespräch mit der Laufcoachin."
+    },
+    {
+     "tier": "standard",
+     "name": "Test-Ergebnisse fotografieren / mitnehmen",
+     "duration": "2 min",
+     "trigger": "direkt beim Termin",
+     "why": "Laktatkurve, HF-Zonen, VO2max — sonst versickert das Papier. Danach in Claude Code diktieren, dann landet es in den Befunden."
+    }
+   ]
+  },
+  "2026-08-01": {
+   "hinweis": "Ruhetag vor dem Long Run — und der Tag nach dem Leistungstest. Kein Single Leg Deadlift heute (24-h-Regel: keine schwere hintere Kette vor dem Long Run). Nur Mobi + Breathing, wie im Coach-Plan.",
+   "nur": [
+    "sa-mobility",
+    "sa-faszien",
+    "sa-huefte",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Breathing",
+     "duration": "5 min",
+     "trigger": "wann es passt",
+     "why": "Steht im Coach-Plan."
+    },
+    {
+     "tier": "standard",
+     "name": "Long-Run-Fuel für morgen vorbereiten",
+     "duration": "5 min",
+     "trigger": "abends",
+     "why": "Squeezy Basic bereitlegen, Elektrolyt-Tab, UND 15 g L-Glutamin (ESN, 3 Löffel) abmessen — die kommen morgen 90-120 min vor dem Start in ~400 ml Wasser."
+    }
+   ]
+  },
+  "2026-08-02": {
+   "hinweis": "Long Run wieder am Sonntag, wie gewohnt: 2:00 h / 191 TSS, Zone 2. Coachin: 'nicht schneller als Vorgabe, bitte gut verpflegen!'",
+   "nur": [
+    "so-longrun",
+    "so-aktivierung",
+    "so-wade",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "L-Glutamin 15 g",
+     "duration": "—",
+     "trigger": "90-120 min VOR dem Start",
+     "why": "3 Löffel ESN in ~400 ml Wasser. Darmbarriere-Schutz fürs Gut-Training — der Darmdruck kam im HM ab km 19. Zusätzlich zur täglichen 5-g-Abenddosis."
+    },
+    {
+     "tier": "standard",
+     "name": "Gel-Plan: Squeezy Basic alle 40-45 min",
+     "duration": "—",
+     "trigger": "während des Laufs",
+     "why": "Je Gel 150-250 ml REINES Wasser. Elektrolytflasche (volle Tab) strikt getrennt nebenher, 500-700 mg Natrium/h. Nie mischen. Bei 2 h also 2-3 Gels."
+    }
+   ]
   }
  }
 }
