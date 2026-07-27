@@ -130,10 +130,10 @@
   "2026-07-27": {
    "headline": "Intervall-Montag: dein Rhythmus dreht sich diese Woche — Läufe Mo/Mi/So, Kraft Di/Fr.",
    "kalender": "10-12 Uhr 'I love controversy' (Content-Block). Ganztägig markiert: Steuererklärung letzter Tag. Kein Trainingsproblem, aber es frisst Kopf — leg den Lauf davor, dann ist wenigstens der abgehakt.",
-   "einheit": "Intervalle 1:30 / 70 TSS, HF-gesteuert. Bestes Fenster 7:30-9:00: 24,4 °C Tageshoch, morgens angenehm, und du bist vor dem 10-Uhr-Block fertig. Davor auf frische Beine: Pogos 3×20 (Plyo-Dosis Woche 3, ~60 Bodenkontakte, kurzer Bodenkontakt = 'heißer Boden').",
+   "einheit": "Intervalle 1:30 / 70 TSS. Neue Vorgabe deiner Coachin: nach PACE laufen (7:00–8:00/km), nicht mehr nach Herzfrequenz. Bestes Fenster 7:30-9:00: 24,4 °C Tageshoch, morgens angenehm, und du bist vor dem 10-Uhr-Block fertig. Davor auf frische Beine: Pogos 3×20 (Plyo-Dosis Woche 3, ~60 Bodenkontakte, kurzer Bodenkontakt = 'heißer Boden').",
    "minimum": [
     "Pre-Run Aktivierung 3 min + 3×30 s Zehenstand (Achilles-Priming) — dann erst Pogos",
-    "Intervalle nach Herzfrequenz laufen, nicht nach Pace. Readiness ist heute 78, das Wochentief.",
+    "Pace 7:00–8:00/km — das ist die Vorgabe, nicht der Puls. Bei 24 °C gut machbar.",
     "Nach dem Lauf: Wadenheber locker 2×15 + Atemübung 5 min (HRV-Rebound)",
     "Alle drei Supplement-Slots. Letzte Woche 13 von 21 — der Mittags-Slot (2× Omega-3) fehlte dreimal."
    ],
@@ -149,8 +149,8 @@
     "Carbs heute mindestens 365 g. Ist an Lauftagen zuletzt Ø ~200 g — heute eine Portion mehr auf JEDEN Teller (100 g Reis trocken = +78 g).",
     "Trinken: Ziel 2.900 ml. Schnitt der letzten 4 Tage 1.650 von 2.475 ml. Flasche an den Schreibtisch, bevor der 10-Uhr-Block startet."
    ],
-   "warnung": "Drei Erholungssignale kippen gleichzeitig: HRV-Wochenschnitt 23,0 ms (Vorwoche 25,7), Ruhepuls 51,9 (49,0), Schlaf 7,67 h (8,21) — dazu Readiness heute 78. Und der Zone-2-Long-Run am Samstag lief mit Ø 143 bpm, eine Woche davor waren es 132 bei derselben Vorgabe. Bei Ø 200 g Carbs statt 365 ist das kein Pech, das ist Unterversorgung. Heute nicht härter laufen als die HF-Vorgabe, und iss ordentlich.",
-   "coachSays": "Dein Körper arbeitet gerade teurer für dieselbe Leistung. Das repariert man mit Reis, nicht mit Disziplin."
+   "warnung": "Erholungslage im Blick behalten: HRV-Wochenschnitt 23,0 ms (Vorwoche 25,7), Ruhepuls 51,9 (49,0), Schlaf 7,67 h (8,21), Readiness gestern 78. Der höhere Lauf-Puls am Samstag (143) ist dagegen KEIN Warnsignal — der kommt von der schnelleren Pace-Vorgabe. Das eigentliche Thema bleiben die Kohlenhydrate: zuletzt Ø ~200 g an Lauftagen statt 365.",
+   "coachSays": "Neue Pace-Vorgabe heißt neue Belastung — und die will bezahlt werden. Iss die Kohlenhydrate, sonst holst du dir das Tempo aus der Substanz."
   },
   "2026-07-28": {
    "headline": "Neuer Kraft-Block: 'Muckibude 3', 16 Übungen. Heute lernen, nicht prügeln.",
@@ -179,10 +179,11 @@
   "2026-07-29": {
    "headline": "Tempolauf bei 32 °C — entweder um 6:30 Uhr oder in abgeschwächter Form.",
    "kalender": "8:00-8:30 Claude Code Weekly, 9:00-12:00 'I love Podcasts'. Der Vormittag ist zu, danach ist es zu heiß.",
-   "einheit": "Tempolauf 55 min / 89 TSS. Start 6:15-6:30 — dann bist du vor dem Meeting fertig und vor der Hitze. Tageshoch 31,8 °C, gefühlt 33,5; abends steht die Wärme noch, das ist keine echte Alternative. Dazu 'Spannung halten' 16:30 (Coachin: 'nichts wildes, nur Spannung vorm Test halten') + AbendMeditation.",
+   "einheit": "Tempolauf 55 min / 89 TSS, Pace-gesteuert (7:00–8:00/km). Start 6:15-6:30 — dann bist du vor dem Meeting fertig und vor der Hitze. Tageshoch 31,8 °C, gefühlt 33,5; abends steht die Wärme noch, das ist keine echte Alternative. Dazu 'Spannung halten' 16:30 (Coachin: 'nichts wildes, nur Spannung vorm Test halten') + AbendMeditation.",
    "minimum": [
     "Wecker so stellen, dass du um 6:15 an der Tür stehst — das ist heute die eigentliche Entscheidung",
     "Pre-Run Aktivierung 3 min + Zehenstand vor dem Lauf",
+    "Pace 7:00–8:00/km, bei der Hitze am OBEREN Ende bleiben (also eher 8:00 als 7:00)",
     "'Spannung halten' 16:30 — die Einheit arbeitet auf Freitag hin, nicht auf heute",
     "Alle drei Supplement-Slots"
    ],
@@ -194,12 +195,13 @@
    "fueling": [
     "Vorher: 40-50 g Carbs 45-60 min davor (Toast mit Marmelade + Banane). Bei 55 min intensiv ist das Pre-Fuel der Hebel, nicht das Gel.",
     "Während: Elektrolytflasche ist heute Pflicht, nicht optional — volle Tab / 500 ml, 500-700 mg Natrium. Bei dem Wetter leer trinken.",
+    "Trinken bei Tempo üben: 2 Schlucke mitten im schnellen Abschnitt, auch wenn es stört (Regel FL-2).",
     "Optional als Renn-Übung: 1 Squeezy Basic bei Min 30 mit 150-200 ml reinem Wasser. Nie mit der Elektrolytflasche mischen.",
     "Danach: 30-40 g Protein binnen 40 min, plus Carbs — die Hitze zieht zusätzlich Glykogen.",
     "Trinken: Ziel 3.700 ml, höchster Tag der Woche. Bei 1.650 ml Schnitt heißt das: über den Tag verteilt nachlegen, nicht abends drei Gläser."
    ],
-   "warnung": "31,8 °C ist der heißeste Tag der Woche. Bei Hitze steigt der Puls bei gleicher Pace um 5-10 bpm — deckel nach Herzfrequenz und Gefühl, nicht nach Zielpace. Und denk an Freitag: die sportmedizinische Untersuchung ist der Test, auf den diese Woche zuläuft. Heute nicht auf Kante.",
-   "coachSays": "Ein Tempolauf, der bei 32 °C erzwungen wird, kostet dich den Test am Freitag. Früh raus oder bewusst abschwächen — beides sind Erwachsenen-Entscheidungen."
+   "warnung": "31,8 °C ist der heißeste Tag der Woche — heute 7,4 Grad wärmer als am Montag. Die Pace-Vorgabe gilt, aber bleib am oberen Ende: dieselbe Geschwindigkeit kostet bei der Hitze 5-10 Schläge mehr, aus einem lockeren Lauf wird sonst faktisch eine harte Einheit. Und denk an Freitag: die sportmedizinische Untersuchung ist der Test, auf den diese Woche zuläuft.",
+   "coachSays": "7:00 bei 24 Grad und 7:00 bei 32 Grad sind zwei völlig verschiedene Einheiten. Heute das obere Ende nehmen ist kein Nachlassen, sondern Rechnen können."
   }
  },
  "woche": {
@@ -511,7 +513,7 @@
      "name": "Intervalle 1:30 (Coach-Plan, 70 TSS)",
      "duration": "90 min",
      "trigger": "7:30-9:00, vor dem 10-Uhr-Block",
-     "why": "HF-gesteuert laufen, nicht nach Pace. Readiness 78 = Wochentief. 1 Gel bei Min 40-45 + Elektrolytflasche getrennt."
+     "why": "Neue Vorgabe: nach PACE laufen (7:00–8:00/km), nicht mehr nach Herzfrequenz. 1 Gel bei Min 40-45 + Elektrolytflasche getrennt, volle Tab, leer trinken."
     },
     {
      "tier": "standard",
@@ -625,7 +627,7 @@
      "name": "Tempolauf 55 min (Coach-Plan, 89 TSS)",
      "duration": "55 min",
      "trigger": "Start 6:15-6:30",
-     "why": "Tageshoch 31,8 °C, gefühlt 33,5. Nach HF/Gefühl deckeln, nicht nach Zielpace — bei Hitze kostet dieselbe Pace 5-10 bpm mehr. Elektrolytflasche Pflicht."
+     "why": "Tageshoch 31,8 °C, gefühlt 33,5. Pace 7:00–8:00/km — bei der Hitze am oberen Ende bleiben, dieselbe Geschwindigkeit kostet dann 5-10 Schläge mehr. Elektrolytflasche Pflicht: volle Tab, leer trinken."
     },
     {
      "tier": "standard",
@@ -823,5 +825,79 @@
     }
    ]
   }
- }
+ },
+ "regeln": [
+  {
+   "id": "PC-1",
+   "regel": "Pace 7:00–8:00/km ist die Vorgabe — nicht die Herzfrequenz.",
+   "warum": "Umstellung deiner Laufcoachin. Der höhere Puls ist die Folge der schnelleren Pace, kein Warnsignal. Ausnahme: ab ~28 °C am oberen Ende bleiben.",
+   "beleg": "Pace war im Durchschnitt 7:20 — Zone 3 laut Garmin.",
+   "belegDatum": "25.07.",
+   "zahl": "Long-Run-Pace: 9:30 → 8:10 → 7:20/km über sechs Wochen."
+  },
+  {
+   "id": "RD-1",
+   "regel": "Am Renntag: die ersten 10 km bewusst kontrolliert. Nicht mitziehen lassen.",
+   "warum": "Musik, Menge und fremde Gruppen heben dein Tempo — und senken gleichzeitig, wie anstrengend es sich anfühlt. Im Training egal, in Berlin entscheidend.",
+   "beleg": "Bin durch Zufall auf eine parkrun-Gruppe gestoßen und habe mich für 5 km angeschlossen. Sobald ich alleine gelaufen bin, hat es sich gleich wieder schwerer angefühlt.",
+   "belegDatum": "25.07.",
+   "zahl": "Berlin: km 1–5 mit 8:00/km. Auch wenn es sich zu langsam anfühlt."
+  },
+  {
+   "id": "KR-1",
+   "regel": "Hamstring-Krämpfe? Ferse näher zum Po, Becken hinten kippen, vorher den Po wecken.",
+   "warum": "Es krampft bei Sliding Leg Curl und einbeiniger Glute Bridge — beide strecken die Hüfte bei gebeugtem Knie. Der Hamstring übernimmt, weil der Glute nicht feuert. Kein Magnesium-Problem. Leg Curl: 3×6 statt 3×8, nicht ganz durchstrecken.",
+   "beleg": "Hamstrings krampfen jedes Mal. Weiss nicht woran das liegt.",
+   "belegDatum": "22.07.",
+   "zahl": "Passt zur OZ-Diagnose (Glute = Schwachstelle Nr. 1) und zum HM ab km 14."
+  },
+  {
+   "id": "GI-1",
+   "regel": "Morgens laufen, mindestens 3 Stunden Vorlauf, Darm vollständig leer.",
+   "warum": "Das ist dein eigentlicher Darm-Hebel — nicht das Gel. Kaffee ist dabei Werkzeug, nicht Trigger. Berlin startet um 9:15: also 6 Uhr aufstehen.",
+   "beleg": "2 Darmentleerungen — einen ganz in der früh und einen zweiten kurz vor dem Lauf nach 2 Kaffee.",
+   "belegDatum": "16.07.",
+   "zahl": "Jeder Morgenlauf mit dieser Routine war problemfrei. Jeder ohne ging schief."
+  },
+  {
+   "id": "FL-1",
+   "regel": "Elektrolytflasche: VOLLE Tablette auf 500 ml — und leer trinken.",
+   "warum": "Im Halbmarathon war es ein Viertel Tab, davon die Hälfte. Macht rund 40 mg Natrium für zweieinhalb Stunden. Gebraucht werden 500–700 mg pro Stunde.",
+   "beleg": "Ich hatte eine Flasche dabei mit 500ml und einem Viertel Tablette Elektrolytes. Davon habe ich aber nur ca 250ml getrunken.",
+   "belegDatum": "05.07. (HM)",
+   "zahl": "Ziel: die Flasche kommt leer ins Ziel."
+  },
+  {
+   "id": "FL-2",
+   "regel": "Trinken bei Tempo üben — zwei Schlucke mitten im schnellen Abschnitt.",
+   "warum": "Das ist eine motorische Fähigkeit, keine Willensfrage. Wenn du es im Training nicht übst, geht es im Rennen auch nicht.",
+   "beleg": "Beim schnellen laufen konnte ich nichts trinken, da es zu anstrengend war.",
+   "belegDatum": "16.07.",
+   "zahl": "Diese Woche dran: Tempolauf am Mittwoch."
+  },
+  {
+   "id": "GI-2",
+   "regel": "Abendläufe sind dein Darm-Risiko — nicht das Gel.",
+   "warum": "Ohne Morgenroutine fehlt die vollständige Entleerung. Wenn abends gelaufen wird: Fuel bewusst konservativ halten.",
+   "beleg": "Bei Intervall 4 dann Drang aufs Klo zu gehen und Darm zu entleeren. Musste 3 kurze Pausen machen.",
+   "belegDatum": "14.07. (17:30 Uhr)",
+   "zahl": "Zum Vergleich: 3 Gels beim Morgen-Long-Run am 25.07. — null Probleme."
+  },
+  {
+   "id": "GI-3",
+   "regel": "Kohlenhydrate pro Stunde schrittweise Richtung 60 g steigern.",
+   "warum": "Du bist bei 31 g/h. Berlin braucht 60 g/h über 5,5 Stunden. Steigern nur über die Long Runs, nie im Rennen etwas Neues.",
+   "beleg": "3 squeezy gels während des Laufs, nach 30 min, 60 und 90 min. Keine darmbeschwerden beim laufen nur am Schluss ein paar pupse.",
+   "belegDatum": "25.07.",
+   "zahl": "Die „Pupse\" sind deine aktuelle Obergrenze. Erst stabilisieren, dann erhöhen."
+  },
+  {
+   "id": "DOK-1",
+   "regel": "Diktier auch die Kraft-Tage und die schlechten Tage.",
+   "warum": "Läufe schilderst du in ganzen Absätzen, Kraft fast nie — ein einziger Eintrag seit Mitte Juni. Die Muster stehen aber genau dort.",
+   "beleg": "Generell habe ich heute mich nicht viel um mich gekümmert, zu wenig getrunken und zu wenig bewegt.",
+   "belegDatum": "17.07.",
+   "zahl": "Dieser eine Satz war wertvoller als zehn gute Lauf-Einträge."
+  }
+ ]
 }
