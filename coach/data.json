@@ -137,45 +137,46 @@
   "2026-07-31": {
    "headline": "Testtag. Alles andere kommt danach — und zwar wirklich danach.",
    "kalender": "Ganztaegig 'Sportmedizinischer Checkup'. 'Anfahrt' 10:00-14:15 blockt Vormittag und Mittag komplett, direkt danach 14:00-15:00 Ship Day + Weekly Check-in. Ab morgen steht 'Ferien' im Kalender (bis 15.09.) — wenn du verreist, sag es mir, dann plane ich Long Run und Fuel-Logistik darauf um.",
-   "einheit": "Erst der Leistungstest, dann Muckibude 3 — frueher nicht. Realistisches Kraft-Fenster: ab 15:15, nach dem Check-in. Gewichte halten, nicht steigern; nach einer Ausbelastung ist Kraft Reiz-Erhalt, kein Progressionstag. Pogos/Plyo fallen heute aus (Plyo-Slot 2 der Woche gestrichen) — nach einem Ausbelastungstest springt man nicht.",
+   "einheit": "Erst der Leistungstest, dann Muckibude 3 — frueher nicht. Realistisches Fenster: ab 15:15, nach dem Check-in. Gewichte HALTEN, nicht steigern. Dazu vier feste Nachhol-Blocke fuer hintere Kette und Achilles (stehen als Aufgaben in der Checkliste): Wadenheber schwer, Hip Thrust, Sliding Leg Curl, Side Plank + Beckenboden. Pogos und SLDL sind fuer diese Woche gestrichen und zwar bewusst — Plyo braucht frische Beine, SLDL waere Samstag und damit zu nah am Long Run.",
    "minimum": [
     "Nicht nuechtern zum Test: 2-3 h vorher eine normale, kohlenhydratbetonte Mahlzeit, nichts Neues",
     "Fragenliste mitnehmen: HF-Zonen, Berlin-Zielzeit 5:15-5:30, Kohlenhydratrate/Fettstoffwechsel, Gamma-GT 73",
-    "Laktatkurve + Zonen + VO2max abfotografieren, bevor du das Institut verlaesst — sonst versickert das Papier",
-    "Muckibude 3 ab ~15:15, Gewichte halten",
-    "Alle drei Supplement-Slots — heute ist der Mittags-Slot der wichtigste (siehe Fueling)"
+    "Laktatkurve + Zonen + VO2max abfotografieren, bevor du das Institut verlaesst",
+    "Kraft ab ~15:15: 5 min Glute-Aktivierung, dann Wadenheber schwer ZUERST — das ist die Uebung, die 17 Tage gefehlt hat",
+    "Alle drei Supplement-Slots (das Norsan kommt heute an — ab morgen gilt 2+2 wieder ohne Ausrede)"
    ],
    "bonus": [
-    "Wadenheber locker 2x15 (Sehnen-Regel laeuft durch alle Phasen)",
-    "Praxis-Anruf fuer den Blut-Retest — seit dem 20.07 offen, zehn Tage inzwischen",
-    "Norsan Total Kapseln bestellen (3er-Pack, ~78 EUR) — Details liegen in reminders.yaml"
+    "Kettlebell Step-Up 3×8/Seite, falls nach dem Test noch was da ist",
+    "Praxis-Anruf fuer den Blut-Retest — seit dem 20.07 offen, inzwischen zehn Tage",
+    "Kraft-Tag diktieren (Regel DOK-1): Kraft-Sessions stehen fast nie im Tagebuch, aber genau dort liegen die Muster — z. B. ob die Hamstrings heute wieder krampfen"
    ],
    "fueling": [
     "2-3 h vor dem Test: 60-80 g Carbs, vertraut. Hafer mit Banane oder 2 Toast mit Marmelade. Kein Gel, kein Experiment vor einem Test.",
     "Kaffee genau wie immer — nicht mehr, nicht weniger. Der Test soll dich messen, nicht ein neues Setup.",
-    "Fuer die Anfahrt (10:00-14:15) Elektrolytflasche mit VOLLER Tab und eine Banane ins Auto. Bei 35 Grad trocknest du im Auto aus, bevor du auf dem Ergometer sitzt — und dehydriert verschiebt sich deine Laktatkurve nach links. Du misst dann deinen Wasserhaushalt, nicht deine Form.",
-    "Nach dem Test: 30-40 g Protein binnen 40 min, dazu Carbs. Der Test ist eine harte Einheit, auch wenn er sich nicht so anfuehlt.",
-    "DIE LUECKE DER WOCHE, Zahl auf den Tisch: Supplements 8 von 21 Slots in 7 Tagen (38 %) — Vorwoche waren es 62 %. Der Mittags-Slot mit den 2 Omega-3-Kapseln stand an 0 von 7 Tagen. Null. Damit landest du bei 300-600 mg EPA+DHA statt 1.200 — der Recovery-Effekt, um den es geht, existiert bei der Dosis nicht. Und wenn die edubily-Flasche schon leer ist: dann ist Norsan bestellen heute kein Bonus, sondern der Fix.",
-    "Trinken: Ziel 3.700 ml (Basis 2.400 + Test + Kraft + 35,2 Grad). Am Mittwoch hast du 3.900 geschafft — du kannst das, es war kein Zufallstag."
+    "Fuer die Anfahrt (10:00-14:15) Elektrolytflasche mit VOLLER Tab und eine Banane ins Auto. Bei 35 Grad trocknest du im Auto aus, bevor du auf dem Ergometer sitzt — und dehydriert verschiebt sich die Laktatkurve nach links. Du misst dann deinen Wasserhaushalt, nicht deine Form.",
+    "Nach Test UND Kraft: 30-40 g Protein binnen 40 min, dazu Carbs. Zwei Belastungen an einem Tag, das Fenster gilt doppelt.",
+    "Am Mittwoch standen 406 g Carbs und 3.900 ml im Log — beides erstmals ueber Ziel. Genau so heute wieder, das war der Unterschied.",
+    "Trinken: Ziel 3.700 ml (Basis 2.400 + Test + Kraft + 35,2 Grad)."
    ],
-   "warnung": "35,2 Grad, heissester Tag der Woche, und du sitzt vorher zwei Stunden im Auto. Dazu der Mittwoch: 30 min Tempo mit OE 6:18/km, davon 29 min in Zone 4 und 5 — bei 28 Grad. Der PC-1-Korridor ist 7:00-8:00/km; gelaufen ist eine Schwellen-/VO2max-Einheit, zwei Tage vor dem Test. Wenn sich die Beine morgen schwer anfuehlen, weisst du warum — und dann sag es beim Test, damit die Werte richtig eingeordnet werden.",
-   "coachSays": "Ein Leistungstest misst, was da ist — nicht, was du dir am Morgen noch reindrueckst. Satt, getrunken, ausgeschlafen hingehen: das ist die komplette Vorbereitung."
+   "warnung": "DIE LUECKE DER WOCHE, und du hast sie selbst gespuert: hintere Kette und Achilles stehen diese Woche bei NULL. Hip Thrust 0x (Soll 3x), Sliding Leg Curl 0x (Soll 2x), Side Plank 0x, Beckenboden 0x, Pogos 0x — und die schweren Wadenheber, seit dem 13.07 als Pflicht im Plan, 0x in 17 Tagen. Ein Teil davon war ein Fehler im System: die Tages-Checkliste hat die Kraft-Uebungen am Dienstag rausgefiltert, du konntest gar nicht abhaken. Das ist repariert, und ab jetzt zaehlt der Abend-Coach jede dieser Uebungen mit und setzt Fehlendes automatisch auf den naechsten Kraft-Tag. Zweitens: 35,2 Grad und zwei Stunden Auto vor dem Test. Und der Mittwoch war mit OE 6:18/km und 29 von 30 Minuten in Zone 4/5 keine Tempoeinheit, sondern eine Schwellen-Einheit — wenn die Beine morgen schwer sind, weisst du warum, und dann sag es beim Test.",
+   "coachSays": "Der Soleus ist der Muskel, der im Marathon die Waden traegt — und er hat seit 17 Tagen keinen Reiz gesehen. Heute nach dem Test acht Minuten Wadenheber: das ist die billigste Versicherung, die du in diesem Block kaufen kannst."
   },
   "2026-08-01": {
    "headline": "Ruhetag mit genau einem Auftrag: den Long Run von morgen vorbereiten.",
    "kalender": "Frei. Ab heute laeuft 'Ferien' im Kalender bis 15.09. — sag mir, ob und wohin du wegfaehrst, das aendert die Long-Run-Planung.",
-   "einheit": "Mobi 17 min ('nicht zu sehr dehnen, Fokus mobilisieren') + Breathing. Kein Lauf. Kein Single Leg Deadlift, keine schwere hintere Kette — 24-h-Regel vor dem Long Run. Wenn der Leistungstest gestern Substanz gekostet hat: heute wirklich nichts, das ist kein Nachlassen, das ist der Plan.",
+   "einheit": "Mobi 17 min ('nicht zu sehr dehnen, Fokus mobilisieren') + Breathing + Copenhagen Plank 3×20 s/Seite. Kein Lauf, KEIN Single Leg Deadlift — schwere hintere Kette <24 h vor dem Long Run ist verboten, deshalb faellt der SLDL-Slot diese Woche ersatzlos weg. Copenhagen darf bleiben: kleine Last, und sie stand diese Woche 0x.",
    "minimum": [
     "Mobi 17 min",
+    "Copenhagen Plank 3×20 s/Seite — der eine Kette-Baustein, der heute erlaubt ist",
     "Breathing 5 min",
     "Abends: 15 g L-Glutamin abmessen (3 Loeffel ESN), Squeezy Basic + Elektrolyt-Tabs rauslegen",
-    "Trinken 2.600 ml — und zwar HEUTE, nicht morgen nachholen (Begruendung in der Warnung)",
-    "Alle drei Supplement-Slots"
+    "Trinken 2.600 ml — HEUTE, nicht morgen nachholen (Begruendung in der Warnung)",
+    "Alle drei Supplement-Slots, Norsan jetzt mit 2+2"
    ],
    "bonus": [
     "Test-Ergebnisse von gestern in Claude Code diktieren — dann landen sie in befunde/ und in der Trainingsplanung",
     "Supplement-Bestand pruefen (1. des Monats): Mg, D3+K2, Omega-3, Kreatin, Glutamin",
-    "Norsan bestellen, falls gestern nicht passiert"
+    "Wie haben sich die Wadenheber gestern angefuehlt? Kurz diktieren — davon haengt die Dosis am Mittwoch ab"
    ],
    "fueling": [
     "Carbs hoch: 400 g+. Reis, Nudeln, Kartoffeln, Brot, Saftschorle. Morgen sind 2 h bei Hitze zu bezahlen — der Speicher wird heute gefuellt, nicht morgen frueh.",
@@ -220,12 +221,12 @@
   "start": "2026-07-27",
   "fokus": "Peak Richtung Berlin, Woche mit Test-Ziel: Fr 31.07 sportmedizinische Untersuchung. Mo 27.07 Intervalle 1:30 / 70 TSS + Pogos 3×20 (Plyo-Woche 3), Di 28.07 Kraft NEU 'Muckibude 3' (27 Sätze / 16 Übungen), Mi 29.07 Tempolauf 55 min / 89 TSS bei 32 °C + 'Spannung halten', Do 30.07 kein Lauf (Mobi + Spannung halten), Fr 31.07 Leistungstest + Muckibude 3, Sa 01.08 Mobi, So 02.08 Long Run 2:00 / 191 TSS (Gut-Training).",
   "luecken": [
-   "DIE Luecke der Woche: Supplements. 8 von 21 Slots in 7 Tagen (38 %) — in der Vorwoche waren es 62 %, es wird also schlechter, nicht besser. Der Mittags-Slot mit den 2 Omega-3-Kapseln stand an 0 von 7 Tagen. Damit nimmst du 300-600 mg EPA+DHA statt 1.200 — bei der Dosis gibt es den Recovery-Effekt einfach nicht. Fix: Kapseln neben den Mittagsteller legen, nicht in die Schublade. Und wenn die edubily-Flasche leer ist, ist Norsan bestellen der Fix, kein Bonus.",
-   "Carbs sind geknackt — genau das war letzte Woche die Luecke Nr. 1. Am 29.07 standen 406 g gegenueber dem 365-g-Minimum, erster Tag darueber seit Beginn der Auswertung. Die Tage davor lagen bei 190-205 g. Bitte so weiterlaufen lassen: eine Carb-Portion pro Teller mehr, dann haelt es.",
-   "Hydration zieht an, ist aber noch nicht rund: Oe 2.157 ml ueber die letzten 7 Tage bei Zielen um 2.500-3.700. ABER: 29.07 = 3.900 ml, hoechster Tag seit Tracker-Start. Es geht also. Heute (30.07) stehen um 14:45 erst 1.300 ml.",
-   "Protein stabil im Aufwaertstrend, aber die Streuung ist das Problem: 25.07 = 130 g, 27.07 = 54 g, 28.07 = 71 g, 29.07 = 109 g. Der Post-Run-Shake ist der Hebel, der funktioniert — an den Tagen ohne Lauf faellt er weg und mit ihm 40 g. Fix fuer Kraft- und Ruhetage: 250 g Skyr oder ein Shake fest einplanen, nicht 'wenn's passt'.",
-   "Kraft: 'Muckibude 3' hat am 28.07 nur 30 min gedauert und hat keine Rep-Vorgaben im TP. Dein eigener Kommentar: 'Das ist zu wenig.' Du hast recht — in der Peak-Phase ist das ein Erhaltungsreiz, kein Aufbau. Nimm die Reps aus kraft-plyo-plan-berlin-2026.md (Hip Thrust 4x8, SLDL, Soleus schwer) oder frag die Coachin nach Vorgaben.",
-   "Offen aus reminders.yaml: Praxis-Anruf fuer den Blut-Retest ist seit dem 20.07 faellig — zehn Tage. Ohne Termin kein Retest, und der Termin muss >=72 h nach einem Long Run liegen und nicht in eine Testwoche fallen. Dazu Norsan Total bestellen und am 01.08 der Monats-Check Supplement-Bestand."
+   "DIE Luecke der Woche: hintere Kette + Achilles, und zwar bei NULL. 27.-30.07: Hip Thrust 0x (Soll 3x), Sliding Leg Curl 0x (Soll 2x), Single Leg Deadlift 0x (Soll 2x), Side Plank 0x, Beckenboden 0x, Pogos 0x. Die schweren Wadenheber (Bent-Knee Soleus + gestreckt), seit dem 13.07 PFLICHT: 0x in 17 Tagen. Genau der Muskel, dessen Krampf-Neigung im HM aufgefallen ist. Mitverursacht vom System — die nur-Whitelists der Tages-Checkliste hatten die Kraft-IDs am Kraft-Tag (28.07) komplett rausgefiltert. Repariert: Freitag stehen vier Nachhol-Blocke als abhakbare Pflicht-Aufgaben drin, und der Abend-Coach zaehlt diese Uebungen ab jetzt jeden Tag mit.",
+   "Dazu Steffis eigene Beobachtung vom 28.07: 'Muckibude 3' hat nur 30 min gedauert und hat keine Rep-Vorgaben im TrainingPeaks. In der Peak-Phase ist das Erhaltung, kein Aufbau. Die Reps stehen in kraft-plyo-plan-berlin-2026.md (Hip Thrust 4x8 schwer, Soleus 3x10 mit 3 s exzentrisch, Sliding Leg Curl 3x8) — oder die Coachin nach Vorgaben fragen.",
+   "Supplements: 8 von 21 Slots (38 %), Mittags-Slot 0 von 7 Tagen. GELOEST ab 31.07 — Norsan Total ist nachbestellt und kommt am 30.07 an. Damit gibt es keinen Grund mehr fuer 300 statt 1.200 mg EPA+DHA. Ab morgen 2 Kapseln morgens UND 2 mittags, an Lauf-/Kraft-Tagen 5 statt 4.",
+   "Carbs sind geknackt — letzte Woche noch Luecke Nr. 1. Am 29.07 standen 406 g gegenueber dem 365-g-Minimum, erster Tag darueber seit Beginn der Auswertung; die Tage davor lagen bei 190-205 g. Bitte so weiterlaufen lassen.",
+   "Hydration zieht an: 29.07 = 3.900 ml, hoechster Tag seit Tracker-Start, bei einem Ziel von 3.700. Der 7-Tage-Schnitt liegt aber noch bei 2.157 ml. Es geht also — es muss nur der Normalfall werden, nicht der Ausreisser.",
+   "Offen aus reminders.yaml: Praxis-Anruf fuer den Blut-Retest seit dem 20.07 faellig (zehn Tage). Ohne Termin kein Retest, und er muss >=72 h nach einem Long Run und ausserhalb einer Testwoche liegen. Am 01.08 zusaetzlich der Monats-Check Supplement-Bestand."
   ]
  },
  "trends": {
@@ -743,14 +744,14 @@
    ]
   },
   "2026-07-31": {
-   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG — der Test, auf den Mi und Do hingearbeitet haben. Der Kalender ist bis 14:15 zu (Anfahrt) und danach direkt Ship Day bis 15:00. Kraft (Muckibude 3) realistisch ab 15:15, und nur mit gehaltenen Gewichten. Plyo faellt heute aus: nach einer Ausbelastung springt man nicht.",
+   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG — und danach die Kraft-Session, die diese Woche noch fehlt. Kalender ist bis 14:15 zu (Anfahrt), danach Ship Day bis 15:00 — Kraft realistisch ab 15:15. Muckibude 3 mit GEHALTENEN Gewichten (nach einer Ausbelastung ist Kraft Reiz-Erhalt), dazu vier feste Blocke fuer hintere Kette und Achilles: die standen diese Woche 0x. Plyo/Pogos faellt aus — nach einem Test springt man nicht.",
    "nur": [
     "fr-kraft",
     "fr-hipthrust",
-    "fr-sideplank",
-    "fr-beckenboden",
     "fr-calves",
     "fr-slidecurl",
+    "fr-sideplank",
+    "fr-beckenboden",
     "fr-knee",
     "daily-meditation",
     "daily-wallsit",
@@ -782,12 +783,55 @@
      "duration": "2 min",
      "trigger": "direkt beim Termin",
      "why": "Laktatkurve, HF-Zonen, VO2max — sonst versickert das Papier. Danach in Claude Code diktieren, dann landet es in den Befunden."
+    },
+    {
+     "tier": "pflicht",
+     "name": "Glute-Aktivierung VOR allem anderen",
+     "duration": "5 min",
+     "trigger": "zuerst in der Kraft-Session",
+     "why": "Clams + Glute Bridge + Monster Walks. Regel KR-1: deine Hamstrings krampfen, weil der Po nicht feuert und die Beinrueckseite uebernimmt. Ohne diese 5 Minuten trainierst du die Kompensation mit."
+    },
+    {
+     "tier": "pflicht",
+     "name": "① Wadenheber SCHWER: Bent-Knee (Soleus) 3×10 + gestreckt 3×10, je 3 s runter",
+     "duration": "8 min",
+     "trigger": "nach dem Warm-up",
+     "why": "HOECHSTE PRIORITAET. Soll 2x/Woche (Mi+Fr) und seit dem 13.07 als PFLICHT im Plan — tatsaechlich 0x in 17 Tagen. Das ist genau die Achilles-/Waden-Arbeit, die dir fehlt (Beinahe-Krampf im HM). Heavy Slow Resistance ist die beste Achilles-Evidenz, und sie kostet kaum Nervensystem — geht also auch nach dem Test."
+    },
+    {
+     "tier": "pflicht",
+     "name": "② Hip Thrust 4×8 — Gewicht vom letzten Mal HALTEN",
+     "duration": "8 min",
+     "trigger": "nach den Waden",
+     "why": "0x in 7 Tagen, Soll 3x. Wichtigste Schwachstelle laut OZ-Theresie-Diagnose, und im HM war die Beinrueckseite ab km 14-16 leer. Heute NICHT steigern: du kommst von einer Ausbelastung, Sonntag steht der Long Run."
+    },
+    {
+     "tier": "pflicht",
+     "name": "③ Sliding Leg Curl 3×6 mit verkuerzter ROM",
+     "duration": "5 min",
+     "trigger": "nach Hip Thrust",
+     "why": "0x in 7 Tagen, Soll 2x. Bewusst 3x6 statt 3x8 und kleinere Bewegung — KR-1-Fix gegen die Kraempfe. Fersen langsam (3-4 s) wegschieben. Krampft es trotzdem: abbrechen und mir sagen, dann bauen wir erst die Po-Ansteuerung."
+    },
+    {
+     "tier": "pflicht",
+     "name": "④ Side Plank 2×30 s/Seite + Beckenboden 3 min",
+     "duration": "6 min",
+     "trigger": "zum Abschluss",
+     "why": "Beide 0x in 7 Tagen, Soll je 3x. Side Plank ist vom Orthopaeden verordnet (Glute medius gegen Patella-Lateralisation) — der billigste Baustein, der am haeufigsten wegfaellt."
+    },
+    {
+     "tier": "standard",
+     "name": "GESTRICHEN diese Woche: Pogos + Single Leg Deadlift",
+     "duration": "—",
+     "trigger": "zur Info",
+     "why": "Damit du es weisst und nicht suchst: Pogos fallen aus, weil Plyo nur auf frische Beine gehoert (heute Test). SLDL faellt aus, weil der Slot Samstag waere — und schwere hintere Kette <24 h vor dem Long Run ist verboten. Beides kommt Dienstag/Mittwoch zurueck, nicht als Nachholstapel."
     }
    ]
   },
   "2026-08-01": {
-   "hinweis": "Ruhetag vor dem Long Run — und der Tag nach dem Leistungstest. Kein Single Leg Deadlift heute (24-h-Regel: keine schwere hintere Kette vor dem Long Run). Nur Mobi + Breathing, wie im Coach-Plan.",
+   "hinweis": "Ruhetag vor dem Long Run — und der Tag nach dem Leistungstest. KEIN Single Leg Deadlift (24-h-Regel: keine schwere hintere Kette vor dem Long Run). Copenhagen Plank steht aber drin: 0x diese Woche, Soll 1x, und die Last ist klein genug, dass sie morgen nichts kostet. Sonst nur Mobi + Breathing, wie im Coach-Plan.",
    "nur": [
+    "sa-copenhagen",
     "sa-mobility",
     "sa-faszien",
     "sa-huefte",
@@ -801,6 +845,13 @@
     "daily-supp-abend"
    ],
    "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Copenhagen Plank 3×20 s/Seite",
+     "duration": "4 min",
+     "trigger": "nach der Mobi",
+     "why": "0x diese Woche, Soll 1x (Samstags-Slot). Adduktoren + Rumpf seitlich — HUBER-Test: links instabiler. Niedrige Last, kollidiert nicht mit dem Long Run morgen. Progression +5 s/Woche."
+    },
     {
      "tier": "pflicht",
      "name": "Breathing",
@@ -849,79 +900,5 @@
     }
    ]
   }
- },
- "regeln": [
-  {
-   "id": "PC-1",
-   "regel": "Pace 7:00–8:00/km ist die Vorgabe — nicht die Herzfrequenz.",
-   "warum": "Umstellung deiner Laufcoachin. Der höhere Puls ist die Folge der schnelleren Pace, kein Warnsignal. Ausnahme: ab ~28 °C am oberen Ende bleiben.",
-   "beleg": "Pace war im Durchschnitt 7:20 — Zone 3 laut Garmin.",
-   "belegDatum": "25.07.",
-   "zahl": "Long-Run-Pace: 9:30 → 8:10 → 7:20/km über sechs Wochen."
-  },
-  {
-   "id": "RD-1",
-   "regel": "Am Renntag: die ersten 10 km bewusst kontrolliert. Nicht mitziehen lassen.",
-   "warum": "Musik, Menge und fremde Gruppen heben dein Tempo — und senken gleichzeitig, wie anstrengend es sich anfühlt. Im Training egal, in Berlin entscheidend.",
-   "beleg": "Bin durch Zufall auf eine parkrun-Gruppe gestoßen und habe mich für 5 km angeschlossen. Sobald ich alleine gelaufen bin, hat es sich gleich wieder schwerer angefühlt.",
-   "belegDatum": "25.07.",
-   "zahl": "Berlin: km 1–5 mit 8:00/km. Auch wenn es sich zu langsam anfühlt."
-  },
-  {
-   "id": "KR-1",
-   "regel": "Hamstring-Krämpfe? Ferse näher zum Po, Becken hinten kippen, vorher den Po wecken.",
-   "warum": "Es krampft bei Sliding Leg Curl und einbeiniger Glute Bridge — beide strecken die Hüfte bei gebeugtem Knie. Der Hamstring übernimmt, weil der Glute nicht feuert. Kein Magnesium-Problem. Leg Curl: 3×6 statt 3×8, nicht ganz durchstrecken.",
-   "beleg": "Hamstrings krampfen jedes Mal. Weiss nicht woran das liegt.",
-   "belegDatum": "22.07.",
-   "zahl": "Passt zur OZ-Diagnose (Glute = Schwachstelle Nr. 1) und zum HM ab km 14."
-  },
-  {
-   "id": "GI-1",
-   "regel": "Morgens laufen, mindestens 3 Stunden Vorlauf, Darm vollständig leer.",
-   "warum": "Das ist dein eigentlicher Darm-Hebel — nicht das Gel. Kaffee ist dabei Werkzeug, nicht Trigger. Berlin startet um 9:15: also 6 Uhr aufstehen.",
-   "beleg": "2 Darmentleerungen — einen ganz in der früh und einen zweiten kurz vor dem Lauf nach 2 Kaffee.",
-   "belegDatum": "16.07.",
-   "zahl": "Jeder Morgenlauf mit dieser Routine war problemfrei. Jeder ohne ging schief."
-  },
-  {
-   "id": "FL-1",
-   "regel": "Elektrolytflasche: VOLLE Tablette auf 500 ml — und leer trinken.",
-   "warum": "Im Halbmarathon war es ein Viertel Tab, davon die Hälfte. Macht rund 40 mg Natrium für zweieinhalb Stunden. Gebraucht werden 500–700 mg pro Stunde.",
-   "beleg": "Ich hatte eine Flasche dabei mit 500ml und einem Viertel Tablette Elektrolytes. Davon habe ich aber nur ca 250ml getrunken.",
-   "belegDatum": "05.07. (HM)",
-   "zahl": "Ziel: die Flasche kommt leer ins Ziel."
-  },
-  {
-   "id": "FL-2",
-   "regel": "Trinken bei Tempo üben — zwei Schlucke mitten im schnellen Abschnitt.",
-   "warum": "Das ist eine motorische Fähigkeit, keine Willensfrage. Wenn du es im Training nicht übst, geht es im Rennen auch nicht.",
-   "beleg": "Beim schnellen laufen konnte ich nichts trinken, da es zu anstrengend war.",
-   "belegDatum": "16.07.",
-   "zahl": "Diese Woche dran: Tempolauf am Mittwoch."
-  },
-  {
-   "id": "GI-2",
-   "regel": "Abendläufe sind dein Darm-Risiko — nicht das Gel.",
-   "warum": "Ohne Morgenroutine fehlt die vollständige Entleerung. Wenn abends gelaufen wird: Fuel bewusst konservativ halten.",
-   "beleg": "Bei Intervall 4 dann Drang aufs Klo zu gehen und Darm zu entleeren. Musste 3 kurze Pausen machen.",
-   "belegDatum": "14.07. (17:30 Uhr)",
-   "zahl": "Zum Vergleich: 3 Gels beim Morgen-Long-Run am 25.07. — null Probleme."
-  },
-  {
-   "id": "GI-3",
-   "regel": "Kohlenhydrate pro Stunde schrittweise Richtung 60 g steigern.",
-   "warum": "Du bist bei 31 g/h. Berlin braucht 60 g/h über 5,5 Stunden. Steigern nur über die Long Runs, nie im Rennen etwas Neues.",
-   "beleg": "3 squeezy gels während des Laufs, nach 30 min, 60 und 90 min. Keine darmbeschwerden beim laufen nur am Schluss ein paar pupse.",
-   "belegDatum": "25.07.",
-   "zahl": "Die „Pupse\" sind deine aktuelle Obergrenze. Erst stabilisieren, dann erhöhen."
-  },
-  {
-   "id": "DOK-1",
-   "regel": "Diktier auch die Kraft-Tage und die schlechten Tage.",
-   "warum": "Läufe schilderst du in ganzen Absätzen, Kraft fast nie — ein einziger Eintrag seit Mitte Juni. Die Muster stehen aber genau dort.",
-   "beleg": "Generell habe ich heute mich nicht viel um mich gekümmert, zu wenig getrunken und zu wenig bewegt.",
-   "belegDatum": "17.07.",
-   "zahl": "Dieser eine Satz war wertvoller als zehn gute Lauf-Einträge."
-  }
- ]
+ }
 }
