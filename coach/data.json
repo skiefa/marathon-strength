@@ -744,14 +744,9 @@
    ]
   },
   "2026-07-31": {
-   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG — und danach die Kraft-Session, die diese Woche noch fehlt. Kalender ist bis 14:15 zu (Anfahrt), danach Ship Day bis 15:00 — Kraft realistisch ab 15:15. Muckibude 3 mit GEHALTENEN Gewichten (nach einer Ausbelastung ist Kraft Reiz-Erhalt), dazu vier feste Blocke fuer hintere Kette und Achilles: die standen diese Woche 0x. Plyo/Pogos faellt aus — nach einem Test springt man nicht.",
+   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG — und danach die Kraft-Session, die diese Woche noch fehlt. Kalender ist bis 14:15 zu (Anfahrt), danach Ship Day bis 15:00 — Kraft realistisch ab 15:15. NEU: Hintere Kette und Achilles laufen ab jetzt ueber das Wochenkonto oben auf dem Heute-Tab, nicht mehr ueber Wochentage. Diese Woche steht dort alles auf 0 — heute den Achilles-Snack zuerst. Pogos faellt aus (Frische-Gate).",
    "nur": [
     "fr-kraft",
-    "fr-hipthrust",
-    "fr-calves",
-    "fr-slidecurl",
-    "fr-sideplank",
-    "fr-beckenboden",
     "fr-knee",
     "daily-meditation",
     "daily-wallsit",
@@ -786,45 +781,17 @@
     },
     {
      "tier": "pflicht",
-     "name": "Glute-Aktivierung VOR allem anderen",
-     "duration": "5 min",
-     "trigger": "zuerst in der Kraft-Session",
-     "why": "Clams + Glute Bridge + Monster Walks. Regel KR-1: deine Hamstrings krampfen, weil der Po nicht feuert und die Beinrueckseite uebernimmt. Ohne diese 5 Minuten trainierst du die Kompensation mit."
-    },
-    {
-     "tier": "pflicht",
-     "name": "① Wadenheber SCHWER: Bent-Knee (Soleus) 3×10 + gestreckt 3×10, je 3 s runter",
-     "duration": "8 min",
-     "trigger": "nach dem Warm-up",
-     "why": "HOECHSTE PRIORITAET. Soll 2x/Woche (Mi+Fr) und seit dem 13.07 als PFLICHT im Plan — tatsaechlich 0x in 17 Tagen. Das ist genau die Achilles-/Waden-Arbeit, die dir fehlt (Beinahe-Krampf im HM). Heavy Slow Resistance ist die beste Achilles-Evidenz, und sie kostet kaum Nervensystem — geht also auch nach dem Test."
-    },
-    {
-     "tier": "pflicht",
-     "name": "② Hip Thrust 4×8 — Gewicht vom letzten Mal HALTEN",
-     "duration": "8 min",
-     "trigger": "nach den Waden",
-     "why": "0x in 7 Tagen, Soll 3x. Wichtigste Schwachstelle laut OZ-Theresie-Diagnose, und im HM war die Beinrueckseite ab km 14-16 leer. Heute NICHT steigern: du kommst von einer Ausbelastung, Sonntag steht der Long Run."
-    },
-    {
-     "tier": "pflicht",
-     "name": "③ Sliding Leg Curl 3×6 mit verkuerzter ROM",
-     "duration": "5 min",
-     "trigger": "nach Hip Thrust",
-     "why": "0x in 7 Tagen, Soll 2x. Bewusst 3x6 statt 3x8 und kleinere Bewegung — KR-1-Fix gegen die Kraempfe. Fersen langsam (3-4 s) wegschieben. Krampft es trotzdem: abbrechen und mir sagen, dann bauen wir erst die Po-Ansteuerung."
-    },
-    {
-     "tier": "pflicht",
-     "name": "④ Side Plank 2×30 s/Seite + Beckenboden 3 min",
-     "duration": "6 min",
-     "trigger": "zum Abschluss",
-     "why": "Beide 0x in 7 Tagen, Soll je 3x. Side Plank ist vom Orthopaeden verordnet (Glute medius gegen Patella-Lateralisation) — der billigste Baustein, der am haeufigsten wegfaellt."
+     "name": "Wochenkonto abarbeiten — in dieser Reihenfolge",
+     "duration": "~30 min",
+     "trigger": "nach dem Test, ab ~15:15",
+     "why": "Oben auf dem Heute-Tab steht neu die Karte 'Kette & Sehnen'. Diese Woche steht dort alles auf 0. Reihenfolge heute: (1) 5 min Glute-Aktivierung, (2) Achilles-Snack — hoechste Prioritaet, seit 13.07 Pflicht und 0x gemacht, (3) Po-Snack mit GEHALTENEM Gewicht, (4) Hamstring-Snack mit 3x6 statt 3x8. Pogos NICHT: nach einer Ausbelastung sind die Beine nicht frisch, das Gate gilt."
     },
     {
      "tier": "standard",
-     "name": "GESTRICHEN diese Woche: Pogos + Single Leg Deadlift",
-     "duration": "—",
-     "trigger": "zur Info",
-     "why": "Damit du es weisst und nicht suchst: Pogos fallen aus, weil Plyo nur auf frische Beine gehoert (heute Test). SLDL faellt aus, weil der Slot Samstag waere — und schwere hintere Kette <24 h vor dem Long Run ist verboten. Beides kommt Dienstag/Mittwoch zurueck, nicht als Nachholstapel."
+     "name": "Muckibude 3 — Reps selbst setzen",
+     "duration": "30 min",
+     "trigger": "zusammen mit dem Kraft-Block",
+     "why": "Im TrainingPeaks stehen keine Wiederholungen, deshalb waren es am 28.07 nur 30 min. Nimm die Vorgaben aus kraft-plyo-plan-berlin-2026.md. Heute Gewichte halten, nicht steigern."
     }
    ]
   },
@@ -845,13 +812,6 @@
     "daily-supp-abend"
    ],
    "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Copenhagen Plank 3×20 s/Seite",
-     "duration": "4 min",
-     "trigger": "nach der Mobi",
-     "why": "0x diese Woche, Soll 1x (Samstags-Slot). Adduktoren + Rumpf seitlich — HUBER-Test: links instabiler. Niedrige Last, kollidiert nicht mit dem Long Run morgen. Progression +5 s/Woche."
-    },
     {
      "tier": "pflicht",
      "name": "Breathing",

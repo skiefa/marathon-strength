@@ -77,6 +77,11 @@ h3{font-size:18px}
 .zbar{height:7px;background:#e7e2d6;border-radius:4px;overflow:hidden}
 .zfill{height:100%;border-radius:4px;background:var(--green)}
 .zfill.low{background:var(--accent)} .zfill.mid{background:var(--amber)}
+.kdot{display:inline-block;width:9px;height:9px;border-radius:5px;border:1.5px solid var(--muted);margin-right:4px;vertical-align:middle}
+.kdot.on{background:var(--green);border-color:var(--green)}
+.krow{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-top:1px dashed var(--line)}
+.kadd{flex:0 0 auto;border:1.5px solid var(--ink);background:var(--paper);border-radius:9px;width:42px;height:38px;font-size:21px;line-height:1;cursor:pointer;color:var(--ink)}
+.kadd.full{border-color:var(--green);color:var(--green)}
 /* journal */
 input,select,textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:17px;background:var(--paper);font-family:inherit;color:var(--ink)}
 textarea{min-height:70px;resize:vertical}
@@ -165,46 +170,58 @@ const PHASES = [
 
 const PROGRESSION = {
   'mo-knee':     { phase1:'Theraband leicht · 3×15', phase2:'Theraband mittel · 3×20', phase3:'Theraband leicht · 2×15' },
-  'mi-sldl':     { phase1:'Bodyweight · 3×8', phase2:'1×8kg KH · 3×8', phase3:'1×6kg KH · 2×8' },
   'fr-stepup':   { phase1:'Bodyweight · 3×8', phase2:'6–8kg KH · 3×8', phase3:'4kg KH · 2×8' },
   'mi-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
   'fr-kraft':    { phase1:'2 Sätze Coach-Plan', phase2:'3 Sätze, +Gewicht', phase3:'2 Sätze, Erhalt' },
 };
 
+/* ================= WOCHENKONTO: KETTE & SEHNEN =================
+   Diese Übungen sind WOCHEN-DOSEN, keine Tages-Termine. Sie hingen früher an
+   festen Wochentagen (mi-calves, fr-slidecurl …) — und fielen jedes Mal raus,
+   wenn die Laufcoachin die Woche umstellte oder ein tagesplan-Override die IDs
+   wegfilterte (genau so passiert 27.–30.07.2026: alles 0×, Soleus 0× seit 13.07.).
+   Jetzt: eine Karte, jeden Tag sichtbar, tippbar wann es passt. Reset montags.
+   Soll-Dosen aus kraft-plyo-plan-berlin-2026.md — bei Blockwechsel dort UND hier anpassen. */
+const KONTO = [
+  { key:'achilles', icon:'🦵', name:'Achilles-Snack', soll:2, dauer:'8 min',
+    uebungen:'Bent-Knee Calf Raise (Soleus) 3×10, 3 s runter · Wadenheber gestreckt 3×10, langsam',
+    why:'Heavy Slow Resistance ist die beste Achilles-Evidenz. Der Soleus trägt beim Laufen mehr als der Gastrocnemius — deine Beinahe-Waden-Krämpfe im HM zeigen genau dahin.',
+    prog:{ phase1:'Körpergewicht → Rucksack', phase2:'+Gewicht, wenn 3×12 sauber', phase3:'Gewicht halten, 2 Sätze' } },
+  { key:'po', icon:'🍑', name:'Po-Snack', soll:3, dauer:'10 min',
+    uebungen:'Hip Thrust 4×8 schwer (RPE 7–8) · Side Plank 2×30 s pro Seite',
+    why:'Glute ist laut OZ-Theresie-Diagnose deine wichtigste Schwachstelle, und im HM war die Beinrückseite ab km 14–16 leer. Side Plank ist zusätzlich vom Orthopäden verordnet (Glute medius gegen Patella-Lateralisation).',
+    prog:{ phase1:'Hip Thrust 3×8', phase2:'4×8, +2,5 kg bei RPE ≤7', phase3:'Gewicht halten, 2 Sätze' } },
+  { key:'hamstring', icon:'🦵', name:'Hamstring-Snack', soll:2, dauer:'8 min',
+    uebungen:'Sliding Leg Curl 3×6, verkürzte ROM, 3–4 s exzentrisch · Single Leg Deadlift 3×8 pro Seite',
+    why:'Exzentrik schützt den Sehnenansatz. Krampft es (Regel KR-1): vorher 5 min Glute-Aktivierung, Ferse näher zum Po, Druck über die Ferse. Krampft es trotzdem — abbrechen und im Tagebuch sagen.',
+    prog:{ phase1:'SLDL Bodyweight · 3×8', phase2:'SLDL 8 kg KH · 3×8', phase3:'SLDL 6 kg · 2×8' } },
+  { key:'pogo', icon:'⚡', name:'Pogos', soll:2, dauer:'3 min',
+    uebungen:'3×20 beidbeinig flach, Knie fast gestreckt, Bodenkontakt kurz („heißer Boden")',
+    why:'Sehnen-Steifigkeit für die Achilles + Knochendichte-Reiz in der Perimenopause, solange der DEXA aussteht.',
+    gate:'Nur auf FRISCHE Beine: nach dem Warm-up, nie nach harten Einheiten, nie <24 h vor dem Long Run. Knie oder Achilles ≥3/10 → heute nicht.',
+    prog:{ phase1:'2×15 → 3×20', phase2:'3×20, ≤100 Kontakte', phase3:'2×15 als Frische-Reiz' } },
+  { key:'beckenboden', icon:'🔵', name:'Beckenboden', soll:3, dauer:'3 min',
+    uebungen:'Standard-Übung, 3 min',
+    why:'Für Frauen 50+ in Marathon-Vorbereitung wesentlich — Stabilität von innen, schützt vor Stressinkontinenz bei Lauf-Impact.' },
+];
+
 const TASKS = [
   { id:'mo-recovery', day:1, tier:'activity', name:'Aktive Erholung', duration:'20–40 min', trigger:'wann es passt', why:'Tag NACH dem Long Run, Tag VOR den Intervallen: lockeres Schwimmen, Radeln oder zügiger Spaziergang. Durchblutung fördern, Beine ausschütteln, keine Intensität. So bleibst du frisch für Dienstag. Keine schwere Kraft heute — die liegt Mi + Fr.', problems:['recovery'] },
-  { id:'mo-sideplank', day:1, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'1. von 3× Woche. Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation.', problems:['patella','knie','stabilitaet'] },
-  { id:'mo-hipthrust', day:1, tier:'pflicht', name:'Hip Thrust', duration:'8 min · 4×8 schwer', trigger:'wann es passt', why:'1. von 3× Woche. Beste Glute-Aktivierung — deine wichtigste Schwachstelle laut Diagnose. UPGRADE ab 13.07: 4×8 schwer (RPE 7–8), +2,5 kg sobald 4×8 bei RPE ≤7 — die hintere Kette war im HM ab km 14–16 die Schwachstelle.', problems:['po','huefte'] },
-  { id:'mo-beckenboden', day:1, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'1. von 3× Woche. Für Frauen 50+ in Marathon-Vorbereitung wesentlich.', problems:['stabilitaet'] },
   { id:'mo-mobility', day:1, tier:'pflicht', name:'Mobility-Training', duration:'ca. 15 min', trigger:'morgens oder wann es passt', why:'Neu von deiner Laufcoachin (Mo + Sa). Fokus aufs Mobilisieren, nicht dehnen — hält Hüfte, Sprunggelenk und Brustwirbelsäule geschmeidig für sauberen Laufstil. Coach-Video: youtube.com/watch?v=W9v_HuYzwZA', problems:['huefte','knie','stabilitaet'] },
   { id:'mo-knee', day:1, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'direkt nach Kraft', why:'VMO (innerer Quadrizeps) zieht Patella zurück. 2×/Woche (Mo+Fr).', problems:['knie','patella'] },
   { id:'di-aktivierung', day:2, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Clams + Glute Bridge + Monster Walks wecken Po auf. Schlafender Po = Kompensation. Danach 3×30 s Zehenstand halten (isometrisch) — Achilles-Priming.', problems:['po','huefte','knie'] },
-  { id:'di-pogo', day:2, tier:'pflicht', name:'Pogos (Sprungtraining)', duration:'3 min · lt. Plyo-Plan', trigger:'nach dem Einlaufen, VOR den Intervallen', why:'NEU ab 13.07 (Start 2×15, Steigerung wöchentlich): federnde beidbeinige Sprünge, Knie fast gestreckt, Bodenkontakt kurz („heißer Boden"). Sehnen-Training für die Achilles + Knochendichte-Reiz. Nur frisch springen. Knie/Achilles ≥3/10 → heute ausfallen lassen.', problems:['achilles','stabilitaet'] },
   { id:'di-intervall', day:2, tier:'activity', name:'Intervall-Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Reiz. Geschwindigkeit entwickeln.', problems:[] },
   { id:'di-atem', day:2, tier:'pflicht', name:'Atemübung (Garmin)', duration:'5 min', trigger:'direkt nach Cool-Down', why:'Parasympathisches Runterfahren. HRV-Rebound nach Intervall.', problems:['recovery'] },
   { id:'di-wade', day:2, tier:'standard', name:'Wadenheber (locker)', duration:'1 min · 2×15', trigger:'nach dem Lauf', why:'Locker, Körpergewicht — Sehnen-Pflege im ermüdeten Zustand. Die schweren Reize liegen Mi+Fr.', problems:['achilles','shinSplints'] },
   { id:'mi-kraft', day:3, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens', why:'Zweite Kraft-Session. Volumen für muskuläre Adaption.', problems:['knie','po'] },
-  { id:'mi-sideplank', day:3, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'2. von 3× Woche. Vom Orthopäden verordnet.', problems:['patella','knie','stabilitaet'] },
-  { id:'mi-hipthrust', day:3, tier:'pflicht', name:'Hip Thrust', duration:'8 min · 4×8 schwer', trigger:'nach Kraft', why:'2. von 3× Woche. Po-Aufbau braucht Frequenz.', problems:['po','huefte'] },
-  { id:'mi-beckenboden', day:3, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'2. von 3× Woche. Stabilität von innen, schützt vor Stressinkontinenz bei Lauf-Impact.', problems:['stabilitaet'] },
-  { id:'mi-sldl', day:3, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'nach Kraft', why:'Exzentrisches Hamstring-Training. Schützt Sehnenansatz. 2×/Woche (Mi+Sa). Progression: +2 kg nach 2 sauberen Sessions.', problems:['po','huefte'] },
-  { id:'mi-calves', day:3, tier:'pflicht', name:'Wadenheber schwer (Soleus + gestreckt)', duration:'8 min · je 3×10, 3 s runter', trigger:'nach Kraft', why:'NEU ab 13.07, 1. von 2×/Woche (Mi+Fr). Heavy Slow Resistance = beste Achilles-Evidenz. Der Bent-Knee-Teil trifft den Soleus — den Marathon-Muskel. Deine Beinahe-Waden-Krämpfe im HM zeigen genau dahin. +Gewicht, wenn 3×12 sauber.', problems:['achilles','shinSplints'] },
-  { id:'mi-slidecurl', day:3, tier:'standard', name:'Sliding Leg Curl', duration:'5 min · 3×8', trigger:'nach Kraft', why:'NEU ab 13.07, 1. von 2×/Woche (Mi+Fr). Hamstring-Exzentrik (Nordic-Curl-Ersatz): Rückenlage, Fersen auf Handtuch, Becken oben, Fersen langsam (3–4 s) wegschieben. Beinrückseite = HM-Schwachstelle.', problems:['po','huefte'] },
   { id:'mi-schwimmen', day:3, tier:'activity', name:'Schwimmen', duration:'~60 min', trigger:'abends', why:'Cross-Training, gelenkfreundlich. Recovery für die Beine.', problems:['recovery'] },
   { id:'do-aktivierung', day:4, tier:'pflicht', name:'Pre-Run Aktivierung', duration:'3 min', trigger:'direkt vor Lauf', why:'Po-Aktivierung verhindert Hüftbeuger-/Hamstring-Kompensation. Danach 3×30 s Zehenstand halten (Achilles-Priming).', problems:['po','huefte'] },
   { id:'do-lauf', day:4, tier:'activity', name:'Flotter Lauf', duration:'lt. Coach', trigger:'wann es passt', why:'Tempo-Dauerlauf. Aerobe Kapazität bei höherer Intensität.', problems:[] },
   { id:'do-wade', day:4, tier:'standard', name:'Wadenheber (locker)', duration:'1 min · 2×15', trigger:'nach dem Lauf', why:'Locker, Körpergewicht. Die schweren Reize liegen Mi+Fr.', problems:['achilles','shinSplints'] },
   { id:'fr-kraft', day:5, tier:'pflicht', name:'Kraft Coach-Plan', duration:'30 min', trigger:'morgens oder mittags', why:'Dritte Kraft-Session. Schließt die Woche.', problems:['knie','po'] },
-  { id:'fr-sideplank', day:5, tier:'pflicht', name:'Side Plank', duration:'3 min · 2×30s pro Seite', trigger:'nach Kraft', why:'3. von 3× Woche. Schließt die Side-Plank-Routine.', problems:['patella','knie','stabilitaet'] },
-  { id:'fr-hipthrust', day:5, tier:'pflicht', name:'Hip Thrust', duration:'8 min · 4×8 schwer', trigger:'nach Kraft', why:'3. von 3× Woche. Po-Frequenz für echten Aufbau.', problems:['po','huefte'] },
-  { id:'fr-beckenboden', day:5, tier:'pflicht', name:'Beckenboden-Training', duration:'3 min', trigger:'morgens oder vor Kraft', why:'3. von 3× Woche.', problems:['stabilitaet'] },
   { id:'fr-knee', day:5, tier:'standard', name:'Knee Extension Theraband', duration:'5 min', trigger:'nach Kraft', why:'2. von 2× Woche. VMO-Aufbau gegen Patella-Lateralisation.', problems:['knie','patella'] },
-  { id:'fr-pogo', day:5, tier:'pflicht', name:'Pogos (Sprungtraining)', duration:'3 min · lt. Plyo-Plan', trigger:'nach dem Kraft-Warm-up', why:'2. Plyo-Dosis der Woche (NEU ab 13.07). Frisch springen, Qualität vor Menge — Deckel ~100 Bodenkontakte pro Session. Nie <24 h vor dem Long Run.', problems:['achilles','stabilitaet'] },
-  { id:'fr-calves', day:5, tier:'pflicht', name:'Wadenheber schwer (Soleus + gestreckt)', duration:'8 min · je 3×10, 3 s runter', trigger:'nach Kraft', why:'2. von 2×/Woche. Schwere Wadenarbeit nur Mi+Fr — Sehnen brauchen 48 h zwischen schweren Reizen.', problems:['achilles','shinSplints'] },
-  { id:'fr-slidecurl', day:5, tier:'standard', name:'Sliding Leg Curl', duration:'5 min · 3×8', trigger:'nach Kraft', why:'2. von 2×/Woche. Langsam exzentrisch (3–4 s). Wenn 3×10 leicht: einbeinig.', problems:['po','huefte'] },
   { id:'fr-stepup', day:5, tier:'bonus', name:'Kettlebell Step-Up', duration:'5 min · 3×8 pro Seite', trigger:'falls Zeit nach Kraft', why:'1×/Woche reicht — Coach-Plan deckt einbeinige Kraft schon ab. Hier als Zusatzdosis.', problems:['knie','po'] },
   { id:'sa-rad', day:6, tier:'activity', name:'Radfahren (alternativ)', duration:'45 min · 35 TSS', trigger:'lt. Coach-Plan', why:'Ausdauer ohne Lauf-Belastung.', problems:['recovery'] },
-  { id:'sa-sldl', day:6, tier:'standard', name:'Single Leg Deadlift', duration:'5 min · 3×8 pro Seite', trigger:'morgens', why:'2. von 2× Woche. Hamstring + Glute.', problems:['po','huefte'] },
   { id:'sa-copenhagen', day:6, tier:'standard', name:'Copenhagen Plank', duration:'4 min · 3×20s pro Seite', trigger:'irgendwann', why:'Adduktoren = Knie-Führung. Aufgewertet (Bonus → Standard) ab 13.07, +5 s pro Woche.', problems:['huefte','stabilitaet'] },
   { id:'sa-faszien', day:6, tier:'bonus', name:'Faszienrolle', duration:'5 min', trigger:'vor Netflix abends', why:'Quadrizeps + IT-Band + Wade. NICHT direkt unter Po.', problems:['patella','knie'] },
   { id:'sa-huefte', day:6, tier:'bonus', name:'Hüftöffner 90/90', duration:'3 min', trigger:'irgendwann', why:'Steife Hüfte zwingt Knie zu kompensieren.', problems:['huefte'] },
@@ -409,8 +426,8 @@ function spruchFuer(dk){
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); scheduleSync(); }
 
@@ -773,6 +790,58 @@ function renderRegel(dk){
   </div>`;
 }
 
+/* ================= WOCHENKONTO: Logik ================= */
+/* Gespeichert als S.wochenkonto[<Montag-ISO>][<snack-key>] = [ISO-Timestamps].
+   Array statt Zähler, damit "Rückgängig" den letzten Eintrag poppen kann und
+   der Abend-Coach sieht, WANN trainiert wurde. Wochenwechsel = neuer Key = Reset. */
+function kontoWeekKey(dk){ return todayKey(getWeekStart(dk||todayKey())); }
+function kontoWeek(dk){ const wk=kontoWeekKey(dk); S.wochenkonto[wk]=S.wochenkonto[wk]||{}; return S.wochenkonto[wk]; }
+function kontoCount(key,dk){ return (kontoWeek(dk)[key]||[]).length; }
+function addKonto(key){ const w=kontoWeek(); w[key]=w[key]||[]; w[key].push(new Date().toISOString()); save(); render(); }
+function undoKonto(key){ const w=kontoWeek(); if((w[key]||[]).length){ w[key].pop(); save(); render(); } }
+function kontoOffen(dk){ return KONTO.reduce((n,k)=>n+Math.max(0,k.soll-kontoCount(k.key,dk)),0); }
+function kontoTageRest(dk){ const d=parseLocal(dk||todayKey()); return 7-((d.getDay()+6)%7); }
+
+function renderKonto(dk){
+  if(dk!==todayKey()) return '';
+  const rest = kontoTageRest(dk), offen = kontoOffen(dk);
+  const gesamtSoll = KONTO.reduce((n,k)=>n+k.soll,0);
+  const gesamtIst = KONTO.reduce((n,k)=>n+Math.min(k.soll,kontoCount(k.key,dk)),0);
+  const pct = Math.round(gesamtIst/gesamtSoll*100);
+  const cls = pct>=80? '' : (pct>=40? 'mid' : 'low');
+  let msg;
+  if(offen===0) msg='Alles im Soll. Das ist die Woche, die deine Achillessehne durch Berlin trägt.';
+  else if(rest<=2 && offen>=4) msg='Noch '+offen+' Einheiten und nur '+rest+' Tag'+(rest===1?'':'e')+' — nicht alles nachholen wollen. Nimm den Achilles-Snack, der Rest verfällt.';
+  else msg='Noch '+offen+' Einheiten, '+rest+' Tag'+(rest===1?'':'e')+' Zeit. Passt in jede Kaffeepause.';
+
+  let html = `<div class="card note">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+      <b style="font-size:16px">Kette &amp; Sehnen</b>
+      <span style="font-weight:700">${gesamtIst} <span class="small" style="font-weight:400">/ ${gesamtSoll} diese Woche</span></span>
+    </div>
+    <div class="zbar" style="margin-top:8px"><div class="zfill ${cls}" style="width:${pct}%"></div></div>
+    <div class="small" style="margin-top:8px">${esc(msg)}</div>`;
+
+  for(const k of KONTO){
+    const n = kontoCount(k.key,dk), voll = n>=k.soll;
+    let dots=''; for(let i=0;i<Math.max(k.soll,n);i++) dots += `<span class="kdot ${i<n?'on':''}"></span>`;
+    const pr = k.prog? ' · '+k.prog[phaseId()] : '';
+    html += `<div class="krow">
+      <div style="flex:1">
+        <div style="font-weight:600;font-size:15.5px">${esc(k.icon)} ${esc(k.name)} <span class="small" style="font-weight:400">${esc(k.dauer)}${esc(pr)}</span></div>
+        <div style="margin:4px 0 3px">${dots}<span class="small" style="margin-left:5px;font-weight:600;color:${voll?'var(--green)':'var(--muted)'}">${n}/${k.soll}</span></div>
+        <div class="small">${esc(k.uebungen)}</div>
+        ${k.gate? `<div class="small" style="margin-top:3px;color:var(--accent)">⚠ ${esc(k.gate)}</div>`:''}
+        <div class="small" style="margin-top:3px;font-style:italic;font-family:Georgia,serif">${esc(k.why)}</div>
+        ${n? `<div style="margin-top:5px"><button class="del" onclick="undoKonto('${k.key}')">Rückgängig</button></div>`:''}
+      </div>
+      <button class="kadd ${voll?'full':''}" onclick="addKonto('${k.key}')" title="Gemacht">+</button>
+    </div>`;
+  }
+  html += `<div class="small" style="margin-top:10px;border-top:1px dashed var(--line);padding-top:8px">Wann du sie machst, ist egal — Wochen-Dosis, kein Termin. Reset ist montags.</div></div>`;
+  return html;
+}
+
 function renderHeute(){
   const dk = getViewingDate();
   const dow = parseLocal(dk).getDay();
@@ -788,6 +857,7 @@ function renderHeute(){
   let html = renderDays();
   html += renderFeel(dk);
   html += renderHydration(dk);
+  html += renderKonto(dk);
   const ovH = dayOverride(dk);
   if (ovH && ovH.hinweis) html += `<div class="card" style="background:linear-gradient(135deg,#eaf7ee,#dff0e4);border-color:#3e9c5a55"><b style="font-size:15px">🏔 Anderer Plan heute</b><div class="small" style="margin-top:4px;color:var(--ink)">${esc(ovH.hinweis)}</div></div>`;
   html += renderBriefing(dk);
@@ -857,6 +927,18 @@ function renderWoche(){
       <div style="margin-top:4px">${esc(DATA.woche.fokus)}</div>
       ${DATA.woche.luecken && DATA.woche.luecken.length? `<div class="block" style="margin-top:10px"><div class="blocklabel">Offene Lücken</div><ul class="clean">${DATA.woche.luecken.map(l=>'<li>'+esc(l)+'</li>').join('')}</ul></div>`:''}
     </div>`;
+  }
+  // Wochenkonto Kette & Sehnen — kompakte Zeile auch im Wochen-Tab
+  {
+    const dk = todayKey();
+    const rows = KONTO.map(k=>{
+      const n = kontoCount(k.key,dk), voll = n>=k.soll;
+      return `<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px dashed var(--line)">
+        <span>${esc(k.icon)} ${esc(k.name)}</span>
+        <b style="color:${voll?'var(--green)':'var(--accent)'}">${n}/${k.soll}</b></div>`;
+    }).join('');
+    html += `<div class="card note"><div class="blocklabel" style="font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Kette &amp; Sehnen — Wochen-Soll</div>${rows}
+      <div class="small" style="margin-top:8px">Abhaken auf dem Heute-Tab. Zählt für die ganze Woche, egal an welchem Tag.</div></div>`;
   }
   html += '<h2>Die Woche</h2>';
   const ws = getWeekStart(todayKey());
