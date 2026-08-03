@@ -2,7 +2,7 @@
  "generated": "2026-08-02T20:15:00+02:00",
  "datenstand": {
   "wearables": "2026-08-02",
-  "kommentar": "Oura frisch bis 02.08. Journal 31.07/01.08/02.08 aus dem App-Backup ins Mac-Archiv uebernommen. Woche 27.07-02.08: Laktat-Test Fr (5x3 min, Zone 5 erreicht), Long Run Sa 15,56 km / 2:00 / Pace 7:45 mit 3 Gels OHNE Darmprobleme, So 9 km wandern (3 h) statt komplettem Ruhetag. Achilles links am Sa an den Huegeln kurz gespuert (neue Hoka Bondi, Profil auf/ab) — Morgen-Check trotzdem 7/7 'ok', Akku 3x 'gut'. Wochenkonto neu seit 30.07: Achilles-Snack 1x, Beckenboden 1x abgehakt. Hydration bleibt die Baustelle: 30.07-02.08 nur 1.800 / 2.100 / 2.200 / 1.200 ml."
+  "kommentar": "TrainingPeaks-Export 'metrics 7' + 'workouts 9' am 03.08 importiert (168 neue Zeilen), Oura frisch bis 02.08. WICHTIG: Die Garmin-Schlafwerte im Export sind fuer 27.-30.07 und 01.-02.08 unbrauchbar (0,01-0,53 h = Uhr nachts nicht getragen) — Schlaf und HRV kommen wie immer aus Oura. Wochenschnitte 27.07-02.08 (Oura): HRV 23,0 ms (Vorwoche 24,7), Ruhepuls 52,7 (52,7), Schlaf 8,10 h (7,90). ACHTUNG HRV-EINBRUCH am Wochenende: 18 ms (01.08) und 19 ms (02.08) — die zwei tiefsten Werte des Zeitraums, nach Long Run und 3 h Wandern. Schlafscores (93/89) und Readiness (84/83) tragen aber weiter. Lauf-Woche 37,2 km, hoechste seit dem Halbmarathon. Achilles-Morgencheck 7/7 'ok'."
  },
  "hydration": {
   "2026-07-27": {
@@ -213,8 +213,8 @@
    ],
    "bonus": [
     "Test-Ergebnisse vom 31.07 diktieren, falls die Laktatkurve schon vorliegt",
-    "Pogos 3×20, falls sich die Beine frisch anfuehlen — Block 2 startet, das ist ab jetzt die Standarddosis",
-    "Wochen-Reflektion (Montags-Reminder): letzte Woche war Test + Long Run + Wandern, lohnt einen Blick"
+    "Wochen-Reflektion (Montags-Reminder): letzte Woche war Test + Long Run + Wandern, lohnt einen Blick",
+    "Heute KEINE Pogos — HRV 18/19 zwei Tage in Folge, Plyo gehoert nur auf erholte Beine"
    ],
    "fueling": [
     "Nuechtern bis 09:00, dann sofort ein richtiges Fruehstueck: 30-40 g Protein + Carbs. Du bist dann 13 h ohne Essen.",
@@ -223,7 +223,7 @@
     "Nach dem Kraftblock 30-40 g Protein binnen 40 min.",
     "Trinken 3.200 ml. Gestern standen 1.200 bei 3 h Wandern und 29,5 Grad — das war der schlechteste Tag seit Tracker-Start."
    ],
-   "warnung": "Der Kreatin-Hinweis ist heute das Wichtigste, was du sagen kannst. Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion — sagst du es nicht, sieht die Niere auf dem Papier schlechter aus, als sie ist. Auspausen bringt nichts (Auswaschzeit Wochen), sagen bringt alles. Und erwaehne die 3 Stunden Wandern von gestern: geplant war ein kompletter Ruhetag, Wandern ist zwar deutlich harmloser als Laufen, aber der Arzt soll die Werte richtig einordnen.",
+   "warnung": "Neu aus den Daten von heute Nacht: HRV steht bei 18 ms (01.08) und 19 ms (02.08) — zwei Tage in Folge die tiefsten Werte seit Wochen, gegen einen Schnitt von 23-25. Das ist der Long Run plus drei Stunden Wandern an einem Tag, der als kompletter Ruhetag geplant war. Schlaf (8,3 / 7,8 h) und Readiness (84/83) tragen noch, also kein Alarm — aber die Erholung hat schlicht nicht stattgefunden. Heute deshalb: Kraftblock ja (der belastet das System kaum), Pogos NEIN. Und morgen stehen 1:35 Intervalle bei 34,9 Grad an — wenn die HRV morgen frueh nicht mindestens Richtung 22 zurueckkommt, laeufst du die am oberen Pace-Ende und ohne Ehrgeiz. Der Kreatin-Hinweis ist heute das Wichtigste, was du sagen kannst. Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion — sagst du es nicht, sieht die Niere auf dem Papier schlechter aus, als sie ist. Auspausen bringt nichts (Auswaschzeit Wochen), sagen bringt alles. Und erwaehne die 3 Stunden Wandern von gestern: geplant war ein kompletter Ruhetag, Wandern ist zwar deutlich harmloser als Laufen, aber der Arzt soll die Werte richtig einordnen.",
    "coachSays": "Zehn Tage auf diesen Termin gewartet. Zwei Glaeser Wasser vorher und ein Satz ueber Kreatin entscheiden, ob die Zahlen etwas wert sind."
   },
   "2026-08-04": {
@@ -292,7 +292,7 @@
   ]
  },
  "trends": {
-  "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter. Ruhepuls: ebenfalls auf Oura umgestellt (Loader + Oura-Aera-Wochen), ABER Historie behalten — Garmin & Oura stimmen beim RHR auf ~1 bpm ueberein (keine Klippe), und die lange Linie zeigt den Fitness-Trend (Jahresanfang ~55 -> jetzt ~50 bpm). | 26.07.: Wochen-km rueckwirkend aus den TrainingPeaks-Workout-Exporten korrigiert (06.07: 10->16,4 · 13.07: 23,9->36,4 · 20.07: 11,3->36,1) — das Journal hatte Luecken, der TP-Export ist vollstaendig. | 30.07.: Woche 27.07 mit ~16,3 km als LAUFENDER Stand eingetragen (Intervalle 27.07 ~8,4 km — letztes Intervall GI-bedingt abgebrochen; Tempolauf 29.07 ~7,9 km), beides aus dem Journal geschaetzt, da der TrainingPeaks-Workout-Export noch vom 26.07 ist. Der Long Run 2:00 h am 02.08 fehlt noch — beim Sonntags-Export korrigieren. | 02.08.: Woche 27.07 auf 40,3 km finalisiert (Intervalle 27.07 ~8,4 abgebrochen · Tempolauf 29.07 ~7,9 · Laktat-Test 31.07 ~8,4 · Long Run 01.08 15,56). Das 9-km-Wandern am 02.08 zaehlt bewusst NICHT in die Lauf-km. Hoechste Wochen-km seit dem Halbmarathon.",
+  "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter. Ruhepuls: ebenfalls auf Oura umgestellt (Loader + Oura-Aera-Wochen), ABER Historie behalten — Garmin & Oura stimmen beim RHR auf ~1 bpm ueberein (keine Klippe), und die lange Linie zeigt den Fitness-Trend (Jahresanfang ~55 -> jetzt ~50 bpm). | 26.07.: Wochen-km rueckwirkend aus den TrainingPeaks-Workout-Exporten korrigiert (06.07: 10->16,4 · 13.07: 23,9->36,4 · 20.07: 11,3->36,1) — das Journal hatte Luecken, der TP-Export ist vollstaendig. | 30.07.: Woche 27.07 mit ~16,3 km als LAUFENDER Stand eingetragen (Intervalle 27.07 ~8,4 km — letztes Intervall GI-bedingt abgebrochen; Tempolauf 29.07 ~7,9 km), beides aus dem Journal geschaetzt, da der TrainingPeaks-Workout-Export noch vom 26.07 ist. Der Long Run 2:00 h am 02.08 fehlt noch — beim Sonntags-Export korrigieren. | 03.08.: Woche 27.07 aus dem TP-Export 'workouts 9' EXAKT auf 37,2 km korrigiert (Schaetzung war 40,3): Intervalle 27.07 10,01 km / 102 TSS · Tempolauf 29.07 7,58 km / 86 TSS · 'Spannung halten' 30.07 1,91 km · Laktat-Test 31.07 2,09 km · Long Run 01.08 15,56 km / 174 TSS. Wandern 02.08 (9,38 km) zaehlt bewusst NICHT als Lauf-km. Trotzdem hoechste Lauf-Woche seit dem Halbmarathon. Nebenbefund aus dem Export: sie schwimmt fast taeglich (Open Water 4-23 min) — das taucht in keiner Planung auf, ist aber echtes Cross-Training.",
   "wochen": [
    {
     "woche": "2026-01-05",
@@ -455,6 +455,12 @@
     "hrv": 23.0,
     "rhr": 51.9,
     "schlaf": 7.67
+   },
+   {
+    "woche": "2026-07-27",
+    "hrv": 23.0,
+    "rhr": 52.7,
+    "schlaf": 8.1
    }
   ],
   "kmWochen": [
@@ -512,7 +518,7 @@
    },
    {
     "woche": "2026-07-27",
-    "km": 40.3
+    "km": 37.2
    }
   ]
  },
