@@ -1043,6 +1043,39 @@
      "why": "Steht so im TrainingPeaks-Plan. Symbolisch, aber es ist eingetragen."
     }
    ]
+  },
+  "2026-08-06": {
+   "hinweis": "VO2max Ballerei 6:15-7:15 (bleibt am Donnerstag). AUSSERDEM: letzter Tag Estradiol + Progesteron (Tag 26), ab morgen eine Woche Pause. Ab morgen laeuft der Selbsttest zur Morgen-Muedigkeit — Fruehstueck NICHT mehr aendern, sonst ist die Pausenwoche nicht auswertbar.",
+   "nur": [
+    "di-aktivierung",
+    "di-intervall",
+    "di-atem",
+    "di-wade",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Ab morgen: Morgen-Muedigkeit taeglich notieren",
+     "duration": "1 min",
+     "trigger": "jeden Morgen 30-60 min nach dem Fruehstueck",
+     "why": "HRT-Pause 07.-13.08 = natuerliches Experiment. Frage: Ist die Muedigkeit nach dem Fruehstueck in der Pausenwoche weg? Wenn ja, liegt es am abendlichen Progesteron (First-Pass zu Allopregnanolon, GABA-A, Sedierung) und nicht am Essen. Einfach 0-10 ins Tagebuch, mehr braucht es nicht. WICHTIG: Fruehstueck ab morgen NICHT weiter veraendern, sonst sind zwei Variablen gleichzeitig offen."
+    },
+    {
+     "tier": "standard",
+     "name": "Letzter Tag Estradiol + Progesteron (Tag 26)",
+     "duration": "—",
+     "trigger": "abends",
+     "why": "Danach eine Woche Pause. Erste lange Einheit ohne Estradiol ist der Long Run am Sonntag — Waermeregulation und Erholung koennen abweichen, das gehoert ins Tagebuch."
+    }
+   ]
   }
  }
 }
