@@ -1077,5 +1077,794 @@
     }
    ]
   }
+ },
+ "essensplan": {
+  "2026-08-06": {
+   "tagestyp": "vo2max",
+   "typLabel": "VO2max / kurz & hart",
+   "rev": 1,
+   "hinweis": "Wenn Kraft am selben Tag: zusätzlich Whey-Shake binnen 40 min nach der Kraft-Session. Wenn nicht, ist der Nachmittags-Milchreis der Ersatz-Anker.",
+   "ziel": {
+    "p": 145,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-06-m1",
+     "slot": "pre_run",
+     "snack": false,
+     "zeitLabel": "🌅 vor dem Lauf",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane (bei 6:15-Start halbe Portion, ~30 min vorher)",
+     "p": 6,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-06-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "zeitLabel": "🍳 binnen 40 min",
+     "name": "Protein-Porridge",
+     "zutaten": "50 g Haferflocken in 250 ml Milch · 100 g Magerquark · Banane · Mandelmus",
+     "p": 30,
+     "kh": 60,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-06-m3",
+     "slot": "vormittag",
+     "snack": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "100 g Mozzarella mit Tomate + 1 Scheibe Brot",
+     "zutaten": "100 g Mozzarella · Tomate · 1 Scheibe Brot",
+     "p": 18,
+     "kh": 25,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-06-m4",
+     "slot": "mittag",
+     "snack": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Putenschnitzel + 400 g Süßkartoffel-Wedges + Kräuter-Sahne-Dip + Rucola",
+     "zutaten": "Putenschnitzel · 400 g Süßkartoffel-Wedges · 150 g Quark, 2 EL Sahne, Schnittlauch, Petersilie, Zitrone · Rucola",
+     "p": 40,
+     "kh": 85,
+     "rezept": "Kräuter-Sahne-Dip (2 Min): Quark mit Sahne, Schnittlauch, Petersilie, Zitrone, Salz verrühren."
+    },
+    {
+     "id": "2026-08-06-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "zeitLabel": "🍚 Snack",
+     "name": "250 g Milchreis mit Zimt",
+     "zutaten": "250 g Milchreis · Zimt",
+     "p": 9,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-06-m6",
+     "slot": "abend",
+     "snack": false,
+     "zeitLabel": "🌙 Abend",
+     "name": "Steak + 400 g Ofenkartoffeln + Kräuterquark",
+     "zutaten": "Steak · 400 g Ofenkartoffeln · Kräuterquark",
+     "p": 42,
+     "kh": 85,
+     "rezept": "Das Steak ist das eine rote Fleisch der Woche — bewusst am Tag mit zwei Einheiten."
+    }
+   ]
+  },
+  "2026-08-07": {
+   "tagestyp": "kraft",
+   "typLabel": "Kraft-Tag",
+   "rev": 1,
+   "hinweis": "Der Shake binnen 40 min nach der Kraft ist der Anker, der zuletzt gefehlt hat (28.07.: 71 g Protein).",
+   "ziel": {
+    "p": 138,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-07-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "zeitLabel": "🌅 Frühstück",
+     "name": "Overnight Oats",
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+     "p": 30,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-07-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "zeitLabel": "🥤 binnen 40 min nach Kraft",
+     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "p": 22,
+     "kh": 30,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-07-m3",
+     "slot": "vormittag",
+     "snack": true,
+     "zeitLabel": "🥨 Snack",
+     "name": "Brot mit Marmelade + 1 Banane",
+     "zutaten": "Brot · Marmelade · 1 Banane",
+     "p": 6,
+     "kh": 50,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-07-m4",
+     "slot": "mittag",
+     "snack": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Kichererbsen-Hähnchen in Kokos-Curry + 70 g Reis",
+     "zutaten": "150 g Hähnchen · 240 g Kichererbsen (1 Dose abgetropft) · 150 ml Kokosmilch · Kurkuma, Ingwer, Curry, Limette · Paprika/Zucchini · 70 g Reis",
+     "p": 40,
+     "kh": 80,
+     "rezept": "20 Min: Hähnchen anbraten, Kichererbsen und Kokosmilch dazu, Gewürze, Gemüse mitgaren. Reis dazu."
+    },
+    {
+     "id": "2026-08-07-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "zeitLabel": "🥨 Snack",
+     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
+     "zutaten": "Vollkornbrot · Mandelmus · 1 Banane",
+     "p": 10,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-07-m6",
+     "slot": "abend",
+     "snack": false,
+     "zeitLabel": "🌙 Abend",
+     "name": "Käsespätzle mit Rosenkohl",
+     "zutaten": "130 g Spätzle · 60 g Bergkäse · 100 g Hüttenkäse untergehoben · Röstzwiebeln · 200 g Rosenkohl",
+     "p": 30,
+     "kh": 95,
+     "rezept": null
+    }
+   ]
+  },
+  "2026-08-08": {
+   "tagestyp": "vortag_longrun",
+   "typLabel": "Vortag Long Run — low-residue",
+   "rev": 1,
+   "hinweis": "Abendessen bis 18:30 — der wichtigste Punkt des Tages (frühes Abendessen = morgens leerer Darm). Heute ist Weißmehl richtig, Vollkorn falsch. Kein Kohl, keine Hülsenfrüchte, kein Rohkostsalat. Abends 15 g L-Glutamin abmessen, Gels rauslegen. Wenn 380 g nicht reichen: Reisdrink oder Squeezy Energy Drink Basic Pro über den Nachmittag.",
+   "ziel": {
+    "p": 137,
+    "kh": 380
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-08-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "zeitLabel": "08:00",
+     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
+     "p": 20,
+     "kh": 65,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-08-m2",
+     "slot": "vormittag",
+     "snack": false,
+     "zeitLabel": "10:30",
+     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
+     "zutaten": "125 g Mozzarella · Tomate · 1 Semmel · Olivenöl",
+     "p": 22,
+     "kh": 30,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-08-m3",
+     "slot": "mittag",
+     "snack": false,
+     "zeitLabel": "12:30",
+     "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
+     "zutaten": "150 g Hähnchen · 150 ml Kokosmilch + 50 ml Sahne · mildes Curry, Ingwer, Limette · geschälte Karotte · 80 g weißer Reis",
+     "p": 38,
+     "kh": 65,
+     "rezept": "20 Min: Hähnchen anbraten, Kokosmilch + Sahne, mildes Curry, Ingwer, Limette, Karotte weich mitgaren. OHNE Zwiebel und Knoblauch (FODMAP) — Ingwer und Limette tragen den Geschmack."
+    },
+    {
+     "id": "2026-08-08-m4",
+     "slot": "nachmittag",
+     "snack": false,
+     "zeitLabel": "15:00",
+     "name": "250 g Milchreis mit Zimt",
+     "zutaten": "250 g Milchreis · Zimt",
+     "p": 9,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-08-m5",
+     "slot": "nachmittag",
+     "snack": false,
+     "zeitLabel": "16:30",
+     "name": "1 Semmel mit Marmelade + 1 Banane",
+     "zutaten": "1 Semmel · Marmelade · 1 Banane",
+     "p": 5,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-08-m6",
+     "slot": "abend",
+     "snack": false,
+     "zeitLabel": "18:00 ⚠️",
+     "name": "Tagliatelle in Sahne-Parmesan-Sauce (100 g trocken)",
+     "zutaten": "100 g Tagliatelle · 100 ml Sahne · 50 g Parmesan · Muskat, Pfeffer · optional Schinkenwürfel",
+     "p": 25,
+     "kh": 80,
+     "rezept": "15 Min: Sahne mit Parmesan einkochen, Muskat, Pfeffer. Kein Salat dazu. Bis 18:30 gegessen!"
+    },
+    {
+     "id": "2026-08-08-m7",
+     "slot": "spaet",
+     "snack": false,
+     "zeitLabel": "19:15",
+     "name": "150 g Hüttenkäse mit Weißbrot",
+     "zutaten": "150 g Hüttenkäse · Weißbrot",
+     "p": 18,
+     "kh": 30,
+     "rezept": null
+    }
+   ]
+  },
+  "2026-08-09": {
+   "tagestyp": "longrun",
+   "typLabel": "Long-Run-Tag",
+   "rev": 1,
+   "hinweis": "Der große Post-Run-Teller ist bewusst auf zwei Termine gesplittet — nach 2:20 h kommt der Appetit oft verzögert. Der Kaffee morgens ist funktional: er hilft beim Darmentleeren vor dem Start.",
+   "ziel": {
+    "p": 150,
+    "kh": 450
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-09-m1",
+     "slot": "pre_run",
+     "snack": false,
+     "zeitLabel": "90-120 min vorher",
+     "name": "1 Semmel mit Marmelade + Latte macchiato + 15 g L-Glutamin in ~400 ml Wasser",
+     "zutaten": "1 Semmel · Marmelade · Latte macchiato · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "p": 7,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-09-m2",
+     "slot": "im_lauf",
+     "snack": false,
+     "zeitLabel": "🏃 im Lauf",
+     "name": "5 Squeezy-Basic-Gels, alle 25-28 min",
+     "zutaten": "5 Squeezy Basic Gels · je 100-150 ml Wasser · Elektrolytflasche getrennt",
+     "p": 0,
+     "kh": 105,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-09-m3",
+     "slot": "post_belastung",
+     "snack": false,
+     "zeitLabel": "🍳 binnen 40 min",
+     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
+     "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
+     "p": 30,
+     "kh": 60,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-09-m4",
+     "slot": "vormittag",
+     "snack": false,
+     "zeitLabel": "~1 h später",
+     "name": "2 Eier Rührei + 1 Semmel",
+     "zutaten": "2 Eier · 1 Semmel",
+     "p": 20,
+     "kh": 45,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-09-m5",
+     "slot": "mittag",
+     "snack": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Asiatische Hähnchen-Reispfanne + 80 g Reis",
+     "zutaten": "150 g Hähnchen · Paprika · Frühlingszwiebel · Erbsen · Sojasauce, Ingwer, Sesamöl, Limette · Sesam · 80 g Reis",
+     "p": 38,
+     "kh": 65,
+     "rezept": "25 Min: Hähnchen in Streifen scharf anbraten, Gemüse dazu, mit Sojasauce, Ingwer, Sesamöl, Limette abschmecken, Sesam drüber. Nach dem Lauf sind Zwiebel und Knoblauch kein Thema mehr."
+    },
+    {
+     "id": "2026-08-09-m6",
+     "slot": "nachmittag",
+     "snack": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "Mozzarella oder Hüttenkäse mit Brot",
+     "zutaten": "Mozzarella oder Hüttenkäse · Brot",
+     "p": 20,
+     "kh": 35,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-09-m7",
+     "slot": "abend",
+     "snack": false,
+     "zeitLabel": "🌙 Abend",
+     "name": "Lachs in Sahne-Dill-Sauce + 400 g Kartoffeln",
+     "zutaten": "150 g Lachs · 100 ml Sahne · Dill, Senf, Zitrone · 400 g Kartoffeln",
+     "p": 35,
+     "kh": 85,
+     "rezept": "20 Min: Lachs braten. Sahne mit Dill, Senf und Zitrone einkochen. Dazu Salzkartoffeln."
+    }
+   ]
+  }
+ },
+ "essenAlternativen": {
+  "snacks": [
+   {
+    "id": "snack-mandelmus",
+    "name": "Vollkornbrot mit Mandelmus + Banane",
+    "p": 10,
+    "kh": 55,
+    "low_residue": false
+   },
+   {
+    "id": "snack-porridge",
+    "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
+    "p": 12,
+    "kh": 45,
+    "low_residue": false
+   },
+   {
+    "id": "snack-skyr",
+    "name": "Skyr mit Haferflocken und Beeren",
+    "p": 25,
+    "kh": 50,
+    "low_residue": false
+   },
+   {
+    "id": "snack-avocado",
+    "name": "Vollkornbrot mit Avocado und Tomate",
+    "p": 10,
+    "kh": 50,
+    "low_residue": false
+   },
+   {
+    "id": "snack-quinoa-skyr",
+    "name": "Quinoa-Bowl mit Skyr und Beeren",
+    "p": 30,
+    "kh": 50,
+    "low_residue": false
+   },
+   {
+    "id": "snack-reiswaffeln",
+    "name": "Reiswaffeln mit Erdnussmus + Banane",
+    "p": 10,
+    "kh": 45,
+    "low_residue": true
+   },
+   {
+    "id": "snack-marmelade",
+    "name": "Brot mit Marmelade + Banane",
+    "p": 7,
+    "kh": 55,
+    "low_residue": true
+   }
+  ],
+  "slots": {
+   "fruehstueck": [
+    {
+     "id": "ruhetag-m1",
+     "name": "Skyr-Beeren-Schüssel",
+     "p": 30,
+     "kh": 50,
+     "low_residue": false
+    },
+    {
+     "id": "kraft-m1",
+     "name": "Overnight Oats",
+     "p": 30,
+     "kh": 55,
+     "low_residue": false
+    },
+    {
+     "id": "vortag_longrun-m1",
+     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+     "p": 20,
+     "kh": 65,
+     "low_residue": true
+    },
+    {
+     "id": "tag_nach_longrun-m1",
+     "name": "Protein-Pancakes",
+     "p": 33,
+     "kh": 60,
+     "low_residue": false
+    },
+    {
+     "id": "alt-hafer-milchfrei",
+     "name": "Milchfreie Protein-Haferflocken",
+     "p": 37,
+     "kh": 65,
+     "low_residue": false
+    }
+   ],
+   "mittag": [
+    {
+     "id": "ruhetag-m3",
+     "name": "Putenhack-Bowl asiatisch + 70 g Reis",
+     "p": 34,
+     "kh": 60,
+     "low_residue": false
+    },
+    {
+     "id": "intervall-m4",
+     "name": "Hähnchen-Nudeln in Sahne-Parmesan mit Spinat (100 g Nudeln)",
+     "p": 45,
+     "kh": 75,
+     "low_residue": false
+    },
+    {
+     "id": "vo2max-m4",
+     "name": "Putenschnitzel + 400 g Süßkartoffel-Wedges + Kräuter-Sahne-Dip + Rucola",
+     "p": 40,
+     "kh": 85,
+     "low_residue": false
+    },
+    {
+     "id": "kraft-m4",
+     "name": "Kichererbsen-Hähnchen in Kokos-Curry + 70 g Reis",
+     "p": 40,
+     "kh": 80,
+     "low_residue": false
+    },
+    {
+     "id": "vortag_longrun-m3",
+     "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
+     "p": 38,
+     "kh": 65,
+     "low_residue": true
+    },
+    {
+     "id": "longrun-m5",
+     "name": "Asiatische Hähnchen-Reispfanne + 80 g Reis",
+     "p": 38,
+     "kh": 65,
+     "low_residue": false
+    },
+    {
+     "id": "tag_nach_longrun-m3",
+     "name": "Hühnersuppe mit 80 g Suppennudeln",
+     "p": 35,
+     "kh": 75,
+     "low_residue": false
+    }
+   ],
+   "abend": [
+    {
+     "id": "ruhetag-m5",
+     "name": "Lachs in Sahne-Dill-Sauce + 350 g Kartoffeln + Feldsalat",
+     "p": 35,
+     "kh": 70,
+     "low_residue": false
+    },
+    {
+     "id": "intervall-m6",
+     "name": "Linsen-Kokos-Curry + 70 g Reis",
+     "p": 25,
+     "kh": 90,
+     "low_residue": false
+    },
+    {
+     "id": "vo2max-m6",
+     "name": "Steak + 400 g Ofenkartoffeln + Kräuterquark",
+     "p": 42,
+     "kh": 85,
+     "low_residue": false
+    },
+    {
+     "id": "kraft-m6",
+     "name": "Käsespätzle mit Rosenkohl",
+     "p": 30,
+     "kh": 95,
+     "low_residue": false
+    },
+    {
+     "id": "vortag_longrun-m6",
+     "name": "Tagliatelle in Sahne-Parmesan-Sauce (100 g trocken)",
+     "p": 25,
+     "kh": 80,
+     "low_residue": true
+    },
+    {
+     "id": "longrun-m7",
+     "name": "Lachs in Sahne-Dill-Sauce + 400 g Kartoffeln",
+     "p": 35,
+     "kh": 85,
+     "low_residue": false
+    },
+    {
+     "id": "tag_nach_longrun-m5",
+     "name": "Ofenlachs in Sahne-Dill + 200 g Grünkohl + 400 g Süßkartoffel",
+     "p": 38,
+     "kh": 90,
+     "low_residue": false
+    }
+   ]
+  }
+ },
+ "einkauf": {
+  "2026-08-03": {
+   "erstellt": "2026-08-05",
+   "items": [
+    {
+     "id": "putenschnitzel",
+     "name": "Putenschnitzel",
+     "menge": "1 Stück (~150 g)",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "id": "steak",
+     "name": "Steak",
+     "menge": "1 Stück (~180 g)",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "id": "haehnchenbrust",
+     "name": "Hähnchenbrust",
+     "menge": "~450 g (3×150 g)",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "id": "lachs",
+     "name": "Lachs",
+     "menge": "150 g",
+     "kategorie": "Fleisch & Fisch"
+    },
+    {
+     "id": "skyr",
+     "name": "Skyr",
+     "menge": "400 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "milch",
+     "name": "Milch",
+     "menge": "~1,5 l",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "quark",
+     "name": "Quark/Magerquark",
+     "menge": "~350 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "mozzarella",
+     "name": "Mozzarella",
+     "menge": "2 Kugeln (100 g + 125 g)",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "huettenkaese",
+     "name": "Hüttenkäse",
+     "menge": "250 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "bergkaese",
+     "name": "Bergkäse + Käsescheiben",
+     "menge": "~100 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "parmesan",
+     "name": "Parmesan",
+     "menge": "50 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "sahne",
+     "name": "Sahne",
+     "menge": "~400 ml",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "milchreis",
+     "name": "Milchreis (fertig)",
+     "menge": "2×250 g",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "eier",
+     "name": "Eier",
+     "menge": "6 Stück",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "whey",
+     "name": "Whey (Vorrat prüfen)",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "bananen",
+     "name": "Bananen",
+     "menge": "~6 Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "beeren",
+     "name": "Beeren",
+     "menge": "~300 g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "suesskartoffeln",
+     "name": "Süßkartoffeln",
+     "menge": "400 g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "kartoffeln",
+     "name": "Kartoffeln",
+     "menge": "~800 g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "rosenkohl",
+     "name": "Rosenkohl",
+     "menge": "200 g",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "rucola",
+     "name": "Rucola",
+     "menge": "1 Packung",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "tomaten",
+     "name": "Tomaten",
+     "menge": "~4 Stück",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "paprika",
+     "name": "Paprika + Frühlingszwiebel",
+     "menge": "",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "karotte",
+     "name": "Karotten",
+     "menge": "",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "erbsen",
+     "name": "Erbsen (TK)",
+     "menge": "",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "zitrone",
+     "name": "Zitrone + Limette + Ingwer",
+     "menge": "",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "kraeuter",
+     "name": "Dill, Schnittlauch, Petersilie",
+     "menge": "",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "semmeln",
+     "name": "Semmeln",
+     "menge": "~9 (Sa/So — frisch kaufen)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "toast",
+     "name": "Toast + Weißbrot",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "brot",
+     "name": "Brot + Vollkornbrot",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "tagliatelle",
+     "name": "Tagliatelle",
+     "menge": "100 g",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "spaetzle",
+     "name": "Spätzle",
+     "menge": "130 g",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "reis",
+     "name": "Reis (weiß)",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "haferflocken",
+     "name": "Haferflocken",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "marmelade",
+     "name": "Marmelade",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "mandelmus",
+     "name": "Mandelmus",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "chia-walnuss",
+     "name": "Chiasamen + Walnüsse",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "kichererbsen",
+     "name": "Kichererbsen",
+     "menge": "1 Dose",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "kokosmilch",
+     "name": "Kokosmilch",
+     "menge": "2 Dosen",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "sojasauce",
+     "name": "Sojasauce + Sesamöl + Sesam",
+     "menge": "Vorrat prüfen",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "roestzwiebeln",
+     "name": "Röstzwiebeln",
+     "menge": "",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "squeezy",
+     "name": "Squeezy Basic Gels",
+     "menge": "5 für So (Bestand prüfen!)",
+     "kategorie": "Vorrat"
+    }
+   ]
+  }
  }
 }
