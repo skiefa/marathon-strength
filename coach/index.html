@@ -1498,10 +1498,27 @@ function render(){
   if(activeView==='wissen') renderWissen();
 }
 
-fetch('data.json?v='+Date.now())
-  .then(r=>r.json())
-  .then(d=>{ DATA = Object.assign(DATA, d); render(); })
-  .catch(()=>{ render(); });
+/* data.json laden — beim Start UND bei jeder Rückkehr in den Vordergrund.
+   iOS-Home-Bildschirm-Apps werden praktisch nie neu gestartet; ohne den
+   visibilitychange-Reload hing die App tagelang auf dem Stand des letzten Boots. */
+let lastFetch = 0;
+function refreshData(){
+  fetch('data.json?v='+Date.now())
+    .then(r=>r.json())
+    .then(d=>{
+      DATA = Object.assign(DATA, d); lastFetch = Date.now();
+      // Getippten, noch nicht gesicherten Text über das Re-Render retten
+      const keep = {};
+      ['v-text','t-text','swap-text'].forEach(id=>{ const el=document.getElementById(id); if(el && el.value) keep[id]=el.value; });
+      render();
+      for(const id in keep){ const el=document.getElementById(id); if(el) el.value=keep[id]; }
+    })
+    .catch(()=>{});
+}
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState==='visible' && Date.now()-lastFetch > 60000){ refreshData(); syncDown(); }
+});
+refreshData();
 render();
 syncDown();
 </script>
