@@ -1290,7 +1290,14 @@ function renderEssen(){
     </div>`;
     html += (plan.mahlzeiten||[]).map(m=>renderMahlzeit(dk,m)).join('');
   } else {
-    html += `<div class="card note"><div class="small">Für diesen Tag gibt es noch keinen Essensplan. Sag auf dem Mac <b>/essensplan</b> — dann plant Claude die Woche passend zu deinem Training und sie erscheint hier.</div></div>`;
+    const geplant = Object.keys(DATA.essensplan||{}).filter(k=>k>=todayKey()).sort();
+    if(geplant.length){
+      html += `<div class="card note"><div class="small">Für <b>${fmtDate(dk)}</b> gibt es keinen Essensplan — aber für
+        <b>${fmtDate(geplant[0])}${geplant.length>1? ' bis '+fmtDate(geplant[geplant.length-1]) : ''}</b> ist er da.</div>
+        <button class="btn ghost" style="margin:10px 0 2px" onclick="viewingDate='${geplant[0]}';render()">Zum ${fmtDate(geplant[0])} springen →</button></div>`;
+    } else {
+      html += `<div class="card note"><div class="small">Für diesen Tag gibt es noch keinen Essensplan. Sag auf dem Mac <b>/essensplan</b> — dann plant Claude die Woche passend zu deinem Training und sie erscheint hier.</div></div>`;
+    }
   }
   // Teller-Diktat (hierher umgezogen vom Buch-Tab)
   const tTagOpt = [0,1].map(o=>{

@@ -1412,6 +1412,84 @@
      "rezept": "20 Min: Lachs braten. Sahne mit Dill, Senf und Zitrone einkochen. Dazu Salzkartoffeln."
     }
    ]
+  },
+  "2026-08-05": {
+   "tagestyp": "kraft",
+   "typLabel": "Kraft-Tag",
+   "rev": 1,
+   "hinweis": "Der Shake binnen 40 min nach der Kraft ist der Anker, der zuletzt gefehlt hat (28.07.: 71 g Protein). Nachträglich ergänzt am Nachmittag des 05.08. — schon Gegessenes einfach abhaken oder ins Teller-Diktat.",
+   "ziel": {
+    "p": 138,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-05-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "zeitLabel": "🌅 Frühstück",
+     "name": "Overnight Oats",
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+     "p": 30,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-05-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "zeitLabel": "🥤 binnen 40 min nach Kraft",
+     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "p": 22,
+     "kh": 30,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-05-m3",
+     "slot": "vormittag",
+     "snack": true,
+     "zeitLabel": "🥨 Snack",
+     "name": "Brot mit Marmelade + 1 Banane",
+     "zutaten": "Brot · Marmelade · 1 Banane",
+     "p": 6,
+     "kh": 50,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-05-m4",
+     "slot": "mittag",
+     "snack": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Kichererbsen-Hähnchen in Kokos-Curry + 70 g Reis",
+     "zutaten": "150 g Hähnchen · 240 g Kichererbsen (1 Dose abgetropft) · 150 ml Kokosmilch · Kurkuma, Ingwer, Curry, Limette · Paprika/Zucchini · 70 g Reis",
+     "p": 40,
+     "kh": 80,
+     "rezept": "20 Min: Hähnchen anbraten, Kichererbsen und Kokosmilch dazu, Gewürze, Gemüse mitgaren. Reis dazu."
+    },
+    {
+     "id": "2026-08-05-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "zeitLabel": "🥨 Snack",
+     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
+     "zutaten": "Vollkornbrot · Mandelmus · 1 Banane",
+     "p": 10,
+     "kh": 55,
+     "rezept": null
+    },
+    {
+     "id": "2026-08-05-m6",
+     "slot": "abend",
+     "snack": false,
+     "zeitLabel": "🌙 Abend",
+     "name": "Käsespätzle mit Rosenkohl",
+     "zutaten": "130 g Spätzle · 60 g Bergkäse · 100 g Hüttenkäse untergehoben · Röstzwiebeln · 200 g Rosenkohl",
+     "p": 30,
+     "kh": 95,
+     "rezept": null
+    }
+   ]
   }
  },
  "essenAlternativen": {
