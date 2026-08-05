@@ -1580,6 +1580,13 @@
      "p": 37,
      "kh": 65,
      "low_residue": false
+    },
+    {
+     "id": "alt-power-fruehstueck",
+     "name": "Mediterranes Power-Frühstück",
+     "p": 24,
+     "kh": 40,
+     "low_residue": false
     }
    ],
    "mittag": [
@@ -1631,6 +1638,48 @@
      "p": 35,
      "kh": 75,
      "low_residue": false
+    },
+    {
+     "id": "alt-quinoa-feta",
+     "name": "Mediterrane Quinoa-Bowl mit Feta",
+     "p": 30,
+     "kh": 75,
+     "low_residue": false
+    },
+    {
+     "id": "alt-vk-pasta-linsen",
+     "name": "Vollkornpasta mit Spinat und Linsen",
+     "p": 32,
+     "kh": 85,
+     "low_residue": false
+    },
+    {
+     "id": "alt-buddha-bowl",
+     "name": "Bunte Buddha Bowl",
+     "p": 28,
+     "kh": 75,
+     "low_residue": false
+    },
+    {
+     "id": "alt-linsen-feta",
+     "name": "Linsen-Feta-Salat mit Brot",
+     "p": 30,
+     "kh": 55,
+     "low_residue": false
+    },
+    {
+     "id": "alt-hk-bowl",
+     "name": "Mediterrane Hüttenkäse-Bowl",
+     "p": 35,
+     "kh": 45,
+     "low_residue": false
+    },
+    {
+     "id": "alt-sandwich",
+     "name": "Protein-Sandwich",
+     "p": 25,
+     "kh": 60,
+     "low_residue": false
     }
    ],
    "abend": [
@@ -1681,6 +1730,57 @@
      "name": "Ofenlachs in Sahne-Dill + 200 g Grünkohl + 400 g Süßkartoffel",
      "p": 38,
      "kh": 90,
+     "low_residue": false
+    },
+    {
+     "id": "alt-ofengemuese",
+     "name": "Ofengemüse mit Kräuterquark",
+     "p": 33,
+     "kh": 50,
+     "low_residue": false
+    },
+    {
+     "id": "alt-edamame-bowl",
+     "name": "Edamame-Bowl mit Reis",
+     "p": 26,
+     "kh": 65,
+     "low_residue": false
+    }
+   ],
+   "post_belastung": [
+    {
+     "id": "alt-smoothie-bowl",
+     "name": "Recovery Smoothie Bowl",
+     "p": 35,
+     "kh": 40,
+     "low_residue": false
+    },
+    {
+     "id": "intervall-m2",
+     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
+     "p": 32,
+     "kh": 60,
+     "low_residue": false
+    },
+    {
+     "id": "vo2max-m2",
+     "name": "Protein-Porridge",
+     "p": 30,
+     "kh": 60,
+     "low_residue": false
+    },
+    {
+     "id": "kraft-m2",
+     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+     "p": 22,
+     "kh": 30,
+     "low_residue": true
+    },
+    {
+     "id": "longrun-m3",
+     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
+     "p": 30,
+     "kh": 60,
      "low_residue": false
     }
    ]
