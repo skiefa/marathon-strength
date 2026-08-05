@@ -1160,6 +1160,7 @@ function delTeller(dk,i){ (S.essen[dk]||[]).splice(i,1); save(); render(); }
    name = Snapshot des Plan-Namens beim Antippen (Drift-Schutz, der Abend-Coach sieht,
    worauf sich der Haken bezog). Einkaufsliste: S.einkauf[<Montag-ISO>][itemId] = true/false. */
 let swapFor = null;
+let einkaufOpen = {};   // Aufklapp-Zustand der Einkaufslisten — überlebt das Re-Render beim Abhaken
 function essenPlanFor(dk){ return (DATA.essensplan||{})[dk] || null; }
 function planMeal(dk,id){ const p = essenPlanFor(dk); return p? (p.mahlzeiten||[]).find(m=>m.id===id) : null; }
 function mealState(dk,id){ return (S.mahlzeiten[dk]||{})[id] || null; }
@@ -1223,12 +1224,15 @@ function renderMahlzeit(dk,m){
   const s = st.s||0;
   const done = s==='gegessen', weg = s==='weg', ers = s==='ersetzt';
   const swapOpen = swapFor && swapFor.dk===dk && swapFor.id===m.id;
+  const rezeptHint = ` · <span style="color:var(--teal);white-space:nowrap">📖 Rezept</span>`;
   let body = `<div class="tn">${esc(m.zeitLabel||'')} ${esc(m.name)}</div>
-    <div class="td">${esc(m.zutaten||'')}${m.p||m.kh? ` · <b>${m.p||0} P / ${m.kh||0} KH</b>`:''}</div>`;
+    <div class="td">${esc(m.zutaten||'')}${m.p||m.kh? ` · <b>${m.p||0} P / ${m.kh||0} KH</b>`:''}${m.rezept? rezeptHint:''}</div>`;
   if(ers){
     const e = st.ersatz||{};
+    const alt = e.altId? findAlt(e.altId) : null;
     body = `<div class="tn">${esc(m.zeitLabel||'')} ${esc(e.name||e.text||'')}</div>
-      <div class="td">statt: ${esc(m.name)}${e.p!=null&&(e.p||e.kh)? ` · <b>${e.p||0} P / ${e.kh||0} KH</b>`:''}${e.text? ' · der Coach rechnet das abends ein':''}</div>`;
+      <div class="td">${alt&&alt.zutaten? esc(alt.zutaten)+' · ':''}${e.p!=null&&(e.p||e.kh)? `<b>${e.p||0} P / ${e.kh||0} KH</b> · `:''}statt: ${esc(m.name)}${e.text? ' · der Coach rechnet das abends ein':''}${alt&&alt.rezept? rezeptHint:''}</div>`;
+    if(alt && alt.rezept) body += `<div class="twhy">${esc(alt.rezept)}</div>`;
   }
   if(m.rezept && !ers) body += `<div class="twhy">${esc(m.rezept)}</div>`;
   let html = `<div class="task ${done?'done':''} ${weg?'skipped':''}">
@@ -1320,7 +1324,7 @@ function renderEssen(){
     const chk = S.einkauf[wk]||{};
     const offen = ek.items.filter(it=>!chk[it.id]).length;
     const kats = [...new Set(ek.items.map(it=>it.kategorie||'Sonstiges'))];
-    html += `<div class="guide"><div class="gh" onclick="this.parentElement.classList.toggle('open')">🛒 Einkauf — Woche ab ${fmtDate(wk)}<span>${offen? offen+' offen' : '✓'}</span></div><div class="gb">`;
+    html += `<div class="guide ${einkaufOpen[wk]?'open':''}"><div class="gh" onclick="einkaufOpen['${wk}']=!einkaufOpen['${wk}'];render()">🛒 Einkauf — Woche ab ${fmtDate(wk)}<span>${offen? offen+' offen' : '✓'}</span></div><div class="gb">`;
     for(const kat of kats){
       html += `<div class="small" style="text-transform:uppercase;letter-spacing:.07em;font-size:12px;margin:10px 0 2px;color:var(--muted)">${esc(kat)}</div>`;
       html += ek.items.filter(it=>(it.kategorie||'Sonstiges')===kat).map(it=>{
