@@ -616,26 +616,26 @@
    ]
   },
   "2026-08-11": {
-   "hinweis": "Standardprogramm gilt. Der Lauf liegt MORGENS (29,7 Grad, und am 04.08. war dieselbe Einheit ein Abendlauf). Zusaetzlich einer der Kette-Snacks — das Wochenkonto steht auf 0 von 12.",
+   "hinweis": "Standardprogramm gilt. Der Lauf liegt MORGENS (29,7 Grad, und am 04.08. war dieselbe Einheit ein Abendlauf).",
    "extra": [
     {
-     "tier": "pflicht",
+     "tier": "standard",
      "name": "Beckenboden-Snack (Wochenkonto)",
      "duration": "3 min",
      "trigger": "abends, nach dem Lauf",
-     "why": "Wochenkonto Beckenboden: 0 von 3 diese Woche, und in der Vorwoche ebenfalls 0. Abhaken bitte in der Karte 'Kette & Sehnen', nicht hier — sonst gibt es zwei Buchhaltungen. Neural billig, geht auch nach den Intervallen."
+     "why": "In der Karte 'Kette & Sehnen' steht der Beckenboden diese Woche auf 0 von 3. Neural billig, geht auch nach den Intervallen. Abhaken bitte dort, nicht hier."
     }
    ]
   },
   "2026-08-12": {
-   "hinweis": "Kraft-Tag mit vollem Vormittag (Weekly 8:00, Podcasts 9-12, Physio 9:30). Muckibude 3 auf 12:30 legen, nach der Physio. Reduziert wird ueber Saetze und Gewicht, nicht durch Weglassen — die Session ist zweimal in Folge ausgefallen.",
+   "hinweis": "Kraft-Tag mit vollem Vormittag (Weekly 8:00, Podcasts 9-12, Physio 9:30). Muckibude 3 auf 12:30 legen, nach der Physio. Letzte Woche standen beide Sessions (25/27 und 27/27 Saetze) — heute geht es um die Gewichte, nicht ums Erscheinen.",
    "extra": [
     {
-     "tier": "pflicht",
-     "name": "Kette-Nachholblock (Wochenkonto) — Reihenfolge einhalten",
+     "tier": "standard",
+     "name": "Pogos + Achilles-Snack (Wochenkonto)",
      "duration": "11 min gesamt",
      "trigger": "Pogos direkt nach dem Warm-up, Achilles-Snack am Ende der Kraft",
-     "why": "Wochenkonto: Pogos 0 von 2, Achilles-Snack 0 von 2 — und der letzte schwere Soleus-Reiz war der 31.07. Reihenfolge: 1. Pogos 3x20 auf frische Beine (nach dem Warm-up, VOR der Kraft). 2. Achilles-Snack am Ende: Bent-Knee Calf Raise 3x10 mit 3 s exzentrisch, dann Wadenheber gestreckt 3x10. Po- und Hamstring-Snack sind heute bewusst NICHT dabei — eine ganze Woche laesst sich nicht an einem Tag nachholen. Der Po-Snack liegt auf Donnerstag. Abhaken in der Karte 'Kette & Sehnen'."
+     "why": "Reihenfolge: 1. Pogos 3x20 auf frische Beine, VOR der Kraft. 2. Achilles-Snack am Ende — Bent-Knee Calf Raise 3x10 mit 3 s exzentrisch, dann Wadenheber gestreckt 3x10 — ABER nur, falls die Waden nicht ohnehin in den 16 Muckibude-Uebungen drankamen. Sag mir kurz im Tagebuch, was in der Muckibude drin ist, dann hoere ich auf, es doppelt einzuplanen. Po- und Hamstring-Snack heute bewusst nicht: eine Woche laesst sich nicht an einem Tag nachholen."
     }
    ]
   },
@@ -643,11 +643,11 @@
    "hinweis": "08:00-08:15 Mammografie, Tempolauf danach ab 09:15. 30,7 Grad — Schatten, und nach Gefuehl deckeln (PC-1-Hitzeausnahme).",
    "extra": [
     {
-     "tier": "pflicht",
+     "tier": "standard",
      "name": "Po-Snack (Wochenkonto)",
      "duration": "10 min",
      "trigger": "abends, mit Abstand zum Lauf",
-     "why": "Wochenkonto Po: 0 von 3. Hip Thrust 4x8 schwer (RPE 7-8) + Side Plank 2x30 s pro Seite. Der Glute ist laut OZ-Theresie-Diagnose deine wichtigste Schwachstelle, und im Halbmarathon war die Beinrueckseite ab km 14-16 leer. Abhaken in der Karte 'Kette & Sehnen'."
+     "why": "Hip Thrust 4x8 schwer (RPE 7-8) + Side Plank 2x30 s pro Seite. Der Glute ist laut OZ-Theresie-Diagnose deine wichtigste Schwachstelle, und im Halbmarathon war die Beinrueckseite ab km 14-16 leer. Abhaken in der Karte 'Kette & Sehnen'."
     }
    ]
   }
