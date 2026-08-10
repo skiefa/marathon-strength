@@ -1,34 +1,10 @@
 {
- "generated": "2026-08-02T20:15:00+02:00",
+ "generated": "2026-08-10T20:00:00+02:00",
  "datenstand": {
-  "wearables": "2026-08-02",
-  "kommentar": "TrainingPeaks-Export 'metrics 7' + 'workouts 9' am 03.08 importiert (168 neue Zeilen), Oura frisch bis 02.08. WICHTIG: Die Garmin-Schlafwerte im Export sind fuer 27.-30.07 und 01.-02.08 unbrauchbar (0,01-0,53 h = Uhr nachts nicht getragen) — Schlaf und HRV kommen wie immer aus Oura. Wochenschnitte 27.07-02.08 (Oura): HRV 23,0 ms (Vorwoche 24,7), Ruhepuls 52,7 (52,7), Schlaf 8,10 h (7,90). ACHTUNG HRV-EINBRUCH am Wochenende: 18 ms (01.08) und 19 ms (02.08) — die zwei tiefsten Werte des Zeitraums, nach Long Run und 3 h Wandern. Schlafscores (93/89) und Readiness (84/83) tragen aber weiter. Lauf-Woche 37,2 km, hoechste seit dem Halbmarathon. Achilles-Morgencheck 7/7 'ok'."
+  "wearables": "2026-08-09",
+  "kommentar": "TrainingPeaks-Export 'metrics 8' + 'workouts 10' am 10.08 importiert (173 neue Zeilen), Oura frisch bis 10.08. Wochenschnitte 03.-09.08 (Oura): HRV 29,5 ms (Vorwoche 23,0 — deutliche Erholung), Ruhepuls 55,1 (52,7), Schlaf 8,16 h (8,10). Der 03.08. faellt beim Schlaf raus (0,19 h = Ring nicht getragen). Lauf-Woche 38,5 km (12,89 Intervalle + 7,29 VO2max + 18,33 Long Run), hoechste seit dem Halbmarathon, dazu 6,6 km Wandern und taeglich Schwimmen. KRAFT: null. In TrainingPeaks steht weder am 05.08. noch am 07.08. eine Muckibude-Einheit, in der App ist keine abgehakt, das Wochenkonto steht auf 0/12. Achilles-Morgencheck 7/7 'ok', Akku 7/7 'gut'."
  },
  "hydration": {
-  "2026-07-27": {
-   "ziel_ml": 2900,
-   "grund": "Basis 2.422 (33 ml × 73,4 kg) + Intervalle 90 min (+900) + max. 24,4 °C (kein Hitzezuschlag) − 400 Kaffee & Co."
-  },
-  "2026-07-28": {
-   "ziel_ml": 2700,
-   "grund": "Basis 2.422 (33 ml × 73,4 kg) + Kraft 40 min (+200, zählt halb) + max. 27,8 °C (+500) − 400 Kaffee & Co."
-  },
-  "2026-07-29": {
-   "ziel_ml": 3700,
-   "grund": "Basis 2.422 (33 ml × 73,4 kg) + Tempolauf 55 min (+550) + Spannung halten 17 min (+83, zählt halb) + max. 31,8 °C (+1.000) − 400 Kaffee & Co."
-  },
-  "2026-07-31": {
-   "ziel_ml": 3500,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Leistungstest ~45 min (+450) + 35,2 Grad (+1.000) - 400 Kaffee-Abzug = 3.500 ml (Kraft gestrichen)"
-  },
-  "2026-08-01": {
-   "ziel_ml": 3700,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Long Run 2:00 h (+1.200) + 27,3 Grad (+500) - 400 Kaffee-Abzug = 3.700 ml"
-  },
-  "2026-08-02": {
-   "ziel_ml": 3100,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Mobi 22 min halb (+100) + 31,5 Grad (+1.000) - 400 Kaffee-Abzug = 3.100 ml. Ruhetag, aber heiss - und morgen frueh nuechtern zur Abnahme, also HEUTE trinken."
-  },
   "2026-08-03": {
    "ziel_ml": 3200,
    "grund": "Basis 2.400 (33 ml x 73,4 kg) + Kette-Kraftblock 45 min halb (+225) + 35,0 Grad (+1.000) - 400 Kaffee-Abzug = 3.200 ml"
@@ -40,166 +16,21 @@
   "2026-08-05": {
    "ziel_ml": 3200,
    "grund": "Basis 2.400 (33 ml x 73,4 kg) + Muckibude 3 halb (+200) + 30,9 Grad (+1.000) - 400 Kaffee-Abzug = 3.200 ml"
+  },
+  "2026-08-11": {
+   "ziel_ml": 3300,
+   "grund": "Basis 2.455 (33 ml x 74,4 kg) + Intervalle 75 min (+750) + 29,7 Grad (+500) - 400 Kaffee-Abzug = 3.305, gerundet 3.300"
+  },
+  "2026-08-12": {
+   "ziel_ml": 2800,
+   "grund": "Basis 2.455 + Kraft 45 min (halb gezaehlt, +225) + 29,6 Grad (+500) - 400 Kaffee-Abzug = 2.780, gerundet 2.800"
+  },
+  "2026-08-13": {
+   "ziel_ml": 3600,
+   "grund": "Basis 2.455 + Tempolauf 55 min (+550) + 30,7 Grad (+1.000, ab 30 Grad) - 400 Kaffee-Abzug = 3.605, gerundet 3.600"
   }
  },
  "briefings": {
-  "2026-07-27": {
-   "headline": "Intervall-Montag: dein Rhythmus dreht sich diese Woche — Läufe Mo/Mi/So, Kraft Di/Fr.",
-   "kalender": "10-12 Uhr 'I love controversy' (Content-Block). Ganztägig markiert: Steuererklärung letzter Tag. Kein Trainingsproblem, aber es frisst Kopf — leg den Lauf davor, dann ist wenigstens der abgehakt.",
-   "einheit": "Intervalle 1:30 / 70 TSS. Neue Vorgabe deiner Coachin: nach PACE laufen (7:00–8:00/km), nicht mehr nach Herzfrequenz. Bestes Fenster 7:30-9:00: 24,4 °C Tageshoch, morgens angenehm, und du bist vor dem 10-Uhr-Block fertig. Davor auf frische Beine: Pogos 3×20 (Plyo-Dosis Woche 3, ~60 Bodenkontakte, kurzer Bodenkontakt = 'heißer Boden').",
-   "minimum": [
-    "Pre-Run Aktivierung 3 min + 3×30 s Zehenstand (Achilles-Priming) — dann erst Pogos",
-    "Pace 7:00–8:00/km — das ist die Vorgabe, nicht der Puls. Bei 24 °C gut machbar.",
-    "Nach dem Lauf: Wadenheber locker 2×15 + Atemübung 5 min (HRV-Rebound)",
-    "Alle drei Supplement-Slots. Letzte Woche 13 von 21 — der Mittags-Slot (2× Omega-3) fehlte dreimal."
-   ],
-   "bonus": [
-    "After Run Yoga 11 min (steht im Coach-Plan)",
-    "Beckenboden 3 min",
-    "Praxis anrufen wegen Blut-Retest — seit dem 20.07 überfällig, und mit dem Test am Freitag wird die Woche nicht leerer"
-   ],
-   "fueling": [
-    "Vorher: 60-90 min davor 60-70 g Carbs — 2 Toast mit Marmelade + Banane. 90 min Intervalle nüchtern sind keine Option.",
-    "Während: 1 Squeezy Basic (21 g) bei Min 40-45 mit 200 ml reinem Wasser. Elektrolytflasche (volle Tab / 500 ml) getrennt nebenher, leer trinken.",
-    "Danach: 30-40 g Protein binnen 40 min — Shake direkt nach dem Lauf. Genau das hat letzte Woche funktioniert, bitte beibehalten.",
-    "Carbs heute mindestens 365 g. Ist an Lauftagen zuletzt Ø ~200 g — heute eine Portion mehr auf JEDEN Teller (100 g Reis trocken = +78 g).",
-    "Trinken: Ziel 2.900 ml. Schnitt der letzten 4 Tage 1.650 von 2.475 ml. Flasche an den Schreibtisch, bevor der 10-Uhr-Block startet."
-   ],
-   "warnung": "Erholungslage im Blick behalten: HRV-Wochenschnitt 23,0 ms (Vorwoche 25,7), Ruhepuls 51,9 (49,0), Schlaf 7,67 h (8,21), Readiness gestern 78. Der höhere Lauf-Puls am Samstag (143) ist dagegen KEIN Warnsignal — der kommt von der schnelleren Pace-Vorgabe. Das eigentliche Thema bleiben die Kohlenhydrate: zuletzt Ø ~200 g an Lauftagen statt 365.",
-   "coachSays": "Neue Pace-Vorgabe heißt neue Belastung — und die will bezahlt werden. Iss die Kohlenhydrate, sonst holst du dir das Tempo aus der Substanz."
-  },
-  "2026-07-28": {
-   "headline": "Neuer Kraft-Block: 'Muckibude 3', 16 Übungen. Heute lernen, nicht prügeln.",
-   "kalender": "Nichts im Kalender. Der freieste Tag der Woche — nutz ihn für die Kraft, statt sie abends reinzuquetschen.",
-   "einheit": "Muckibude 3 (27 Sätze / 16 Übungen) + Meditation. Vormittags. Erste Session eines neuen Programms: Gewichte bewusst konservativ, jeden Load notieren — die Progression läuft ab nächster Woche, nicht heute.",
-   "minimum": [
-    "Muckibude 3 komplett, RPE 7 statt 9 — bei 16 unbekannten Übungen zählt die saubere Ausführung",
-    "Hip Thrust 4×8 schwer (die hintere Kette war im HM ab km 14 die Schwachstelle)",
-    "Wadenheber schwer: Soleus (gebeugtes Knie) + gestreckt, je 3×10, 3 s runter",
-    "Alle drei Supplement-Slots — inklusive Mittag (2× Omega-3)"
-   ],
-   "bonus": [
-    "Sliding Leg Curl 3×8, exzentrisch 3-4 s",
-    "Side Plank 2×30 s pro Seite + Beckenboden 3 min",
-    "Abends schwimmen — 28 °C, und die Beine danken es dir vor dem Mittwoch"
-   ],
-   "fueling": [
-    "Nicht nüchtern in die Kraft: 30-40 g Carbs + etwas Protein vorher (Skyr mit Haferflocken reicht).",
-    "Danach 30-40 g Protein binnen 40 min — der Reiz aus 27 Sätzen verpufft sonst zur Hälfte.",
-    "Carbs auch heute 365 g Minimum. Kraft-Tag heißt nicht Low-Carb-Tag — Muckibude 3 zieht Glykogen.",
-    "Trinken: Ziel 2.700 ml bei 27,8 °C. Eine Flasche vor der Kraft, eine danach, dann ist es fast erledigt."
-   ],
-   "warnung": "16 neue Übungen verführen dazu, alles auf Maximum auszutesten. Deine Deadline für neue Übungen ist der 30.08. — du hast fünf Wochen zum Steigern. Wenn morgen der Tempolauf bei 32 °C schwer in den Beinen liegt, war heute zu viel.",
-   "coachSays": "Ein neues Programm gewinnt man in Woche vier, nicht in Woche eins. Schreib die Gewichte auf, das ist heute die eigentliche Aufgabe."
-  },
-  "2026-07-29": {
-   "headline": "Tempolauf bei 32 °C — entweder um 6:30 Uhr oder in abgeschwächter Form.",
-   "kalender": "8:00-8:30 Claude Code Weekly, 9:00-12:00 'I love Podcasts'. Der Vormittag ist zu, danach ist es zu heiß.",
-   "einheit": "Tempolauf 55 min / 89 TSS, Pace-gesteuert (7:00–8:00/km). Start 6:15-6:30 — dann bist du vor dem Meeting fertig und vor der Hitze. Tageshoch 31,8 °C, gefühlt 33,5; abends steht die Wärme noch, das ist keine echte Alternative. Dazu 'Spannung halten' 16:30 (Coachin: 'nichts wildes, nur Spannung vorm Test halten') + AbendMeditation.",
-   "minimum": [
-    "Wecker so stellen, dass du um 6:15 an der Tür stehst — das ist heute die eigentliche Entscheidung",
-    "Pre-Run Aktivierung 3 min + Zehenstand vor dem Lauf",
-    "Pace 7:00–8:00/km, bei der Hitze am OBEREN Ende bleiben (also eher 8:00 als 7:00)",
-    "'Spannung halten' 16:30 — die Einheit arbeitet auf Freitag hin, nicht auf heute",
-    "Alle drei Supplement-Slots"
-   ],
-   "bonus": [
-    "AbendMeditation 10 min",
-    "Wadenheber locker 2×15 nach dem Lauf",
-    "Fuel und Kleidung am Vorabend rauslegen — bei 6:15 Uhr entscheidet die Vorbereitung"
-   ],
-   "fueling": [
-    "Vorher: 40-50 g Carbs 45-60 min davor (Toast mit Marmelade + Banane). Bei 55 min intensiv ist das Pre-Fuel der Hebel, nicht das Gel.",
-    "Während: Elektrolytflasche ist heute Pflicht, nicht optional — volle Tab / 500 ml, 500-700 mg Natrium. Bei dem Wetter leer trinken.",
-    "Trinken bei Tempo üben: 2 Schlucke mitten im schnellen Abschnitt, auch wenn es stört (Regel FL-2).",
-    "Optional als Renn-Übung: 1 Squeezy Basic bei Min 30 mit 150-200 ml reinem Wasser. Nie mit der Elektrolytflasche mischen.",
-    "Danach: 30-40 g Protein binnen 40 min, plus Carbs — die Hitze zieht zusätzlich Glykogen.",
-    "Trinken: Ziel 3.700 ml, höchster Tag der Woche. Bei 1.650 ml Schnitt heißt das: über den Tag verteilt nachlegen, nicht abends drei Gläser."
-   ],
-   "warnung": "31,8 °C ist der heißeste Tag der Woche — heute 7,4 Grad wärmer als am Montag. Die Pace-Vorgabe gilt, aber bleib am oberen Ende: dieselbe Geschwindigkeit kostet bei der Hitze 5-10 Schläge mehr, aus einem lockeren Lauf wird sonst faktisch eine harte Einheit. Und denk an Freitag: die sportmedizinische Untersuchung ist der Test, auf den diese Woche zuläuft.",
-   "coachSays": "7:00 bei 24 Grad und 7:00 bei 32 Grad sind zwei völlig verschiedene Einheiten. Heute das obere Ende nehmen ist kein Nachlassen, sondern Rechnen können."
-  },
-  "2026-07-31": {
-   "headline": "Testtag. Kraft danach optional — aber von der Guertellinie aufwaerts.",
-   "kalender": "Ganztaegig 'Sportmedizinischer Checkup'. 'Anfahrt' 10:00-14:15 blockt Vormittag und Mittag, direkt danach 14:00-15:00 Ship Day + Weekly Check-in. Ab morgen laeuft 'Ferien' im Kalender (bis 15.09.) — du bleibst aber da, das ist nur der Schulferien-Marker.",
-   "einheit": "Erst der Leistungstest. Kraft danach ist OPTIONAL und geteilt: Oberkoerper, Rumpf, Side Plank, Beckenboden und leichte Aktivierung gehen problemlos — schwere hintere Kette und alles Exzentrische nicht, der Long Run ist 16 Stunden spaeter. Wenn der Test dich leer gemacht hat: heute nur der Test, ohne schlechtes Gewissen. Der volle Kette-Nachholblock steht Montag nach der Blutabnahme, da ist er richtig platziert.",
-   "minimum": [
-    "Nicht nuechtern zum Test: 2-3 h vorher eine normale, kohlenhydratbetonte Mahlzeit, nichts Neues",
-    "Fragenliste mitnehmen: HF-Zonen, Berlin-Zielzeit 5:15-5:30, Kohlenhydratrate/Fettstoffwechsel, Gamma-GT 73",
-    "Laktatkurve + Zonen + VO2max abfotografieren, bevor du das Institut verlaesst",
-    "ABENDS: 15 g L-Glutamin abmessen, 3 Squeezy Basic + 2 Elektrolyt-Tabs rauslegen — der Long Run ist MORGEN",
-    "Alle drei Supplement-Slots — das Norsan ist da, ab heute 2 morgens UND 2 mittags"
-   ],
-   "bonus": [
-    "Kraft-Option A (leicht): Muckibude 3 nur Oberkoerper/Rumpf + Side Plank + Beckenboden + Knee Extension — kostet morgen nichts",
-    "Kraft-Option B (wenn der Test leicht war): zusaetzlich Hip Thrust 2×8 bei RPE 6 als Ansteuerung, nicht 4×8 schwer",
-    "Carbs heute abend hoch (400 g+), Ballaststoffe runter (<20 g) — morgen frueh 2 h Zone 2"
-   ],
-   "fueling": [
-    "2-3 h vor dem Test: 60-80 g Carbs, vertraut. Hafer mit Banane oder 2 Toast mit Marmelade. Kein Gel, kein Experiment vor einem Test.",
-    "Kaffee genau wie immer — nicht mehr, nicht weniger. Der Test soll dich messen, nicht ein neues Setup.",
-    "Fuer die Anfahrt (10:00-14:15) Elektrolytflasche mit VOLLER Tab und eine Banane ins Auto. Bei 35 Grad trocknest du im Auto aus, bevor du auf dem Ergometer sitzt — und dehydriert verschiebt sich die Laktatkurve nach links. Du misst dann deinen Wasserhaushalt, nicht deine Form.",
-    "Nach dem Test: 30-40 g Protein binnen 40 min + Carbs.",
-    "Abends Carb-Load fuer morgen: Reis, Nudeln, Kartoffeln, Brot. Am Mittwoch standen 406 g im Log — genau die Groessenordnung.",
-    "Trinken: Ziel 3.500 ml. Heissester Tag der Woche mit 35,2 Grad."
-   ],
-   "warnung": "Wenn du heute Kraft machst, dann bewusst OHNE Exzentrik: kein Sliding Leg Curl, keine schweren Wadenheber mit 3 s runter, kein SLDL. Muskelkater in Waden und Beinruecken kommt nach 24-48 h — also genau waehrend deiner zwei Stunden morgen frueh. Deine Waden waren im HM kurz vorm Krampfen, das ist die Stelle, an der du kein Risiko nehmen willst. Dazu: 35,2 Grad, zwei Stunden Auto vor dem Test, und der Mittwoch lief mit OE 6:18/km und 29 von 30 Minuten in Zone 4/5 deutlich haerter als geplant. Wenn die Beine heute schwer sind, weisst du warum — sag es beim Test.",
-   "coachSays": "Kraft heute: ja, aber von der Guertellinie aufwaerts. Die Beine gehoeren morgen frueh dem Long Run, und uebermorgen der Blutabnahme."
-  },
-  "2026-08-01": {
-   "headline": "Long Run heute statt Sonntag — wegen der Blutabnahme am Montag. Und der kuehlste Tag der Woche.",
-   "kalender": "Frei. 'Ferien' laeuft (Schulferien-Marker, du bleibst da). Der Tag gehoert dem Lauf und dem Danach.",
-   "einheit": "Long Run 2:00 h / 191 TSS, Zone 2, 'no SchnickSchnack'. Coachin: 'nicht schneller als Vorgabe, gut verpflegen!' Start 7:00 — heute reichen 27,3 Grad Tageshoch (Fr 35,2 · So 31,5), du musst also NICHT um 4:45 raus. Zwischen 7:00 und 9:15 hast du rund 18-22 Grad, das ist das beste Fenster der ganzen Woche. Pace im 7:00-8:00-Korridor, bei den Temperaturen heute darfst du sie ausnahmsweise auch wirklich laufen.",
-   "minimum": [
-    "Aufstehen ~5:15: Glutamin 15 g, Kaffee, Fruehstueck, Zeit fuer die vollstaendige Darmentleerung — dann 7:00 los (Regel GI-1)",
-    "Pre-Run Aktivierung 3 min + 3x30 s Zehenstand",
-    "Elektrolytflasche VOLLE Tab / 500 ml — und leer trinken (Regel FL-1)",
-    "Post-Run binnen 40 min: 30-40 g Protein + Carbs",
-    "Lauf abends in der App diktieren — besonders, wie der Darm sich gehalten hat",
-    "Alle drei Supplement-Slots"
-   ],
-   "bonus": [
-    "Achilles-Snack aus dem Wochenkonto NACH dem Lauf, locker statt schwer — oder ganz weglassen und Montag machen",
-    "Supplement-Bestand pruefen (1. des Monats): Mg, D3+K2, Omega-3, Kreatin, Glutamin",
-    "TrainingPeaks-Metrics als CSV exportieren und nach data/incoming/ legen"
-   ],
-   "fueling": [
-    "15 g L-Glutamin (3 Loeffel ESN) in ~400 ml Wasser, 90-120 min vor dem Start — bei 7:00 Start also gegen 5:15. Gestern Abend abgemessen.",
-    "Fruehstueck wie am 25.07, das hat funktioniert: Semmel oder Toast mit Marmelade + Kaffee. Bewaehrt, langweilig, kein Honig.",
-    "3x Squeezy Basic bei Min 40, 80 und ggf. 115 — je 150-250 ml REINES Wasser. Das sind ~31 g/h und damit genau die Dosis vom 25.07 (Darm ruhig, nur am Schluss Pupse). Regel GI-3: das ist deine aktuelle Obergrenze, heute NICHT erhoehen.",
-    "Natrium 500-700 mg/h: 2 volle Tabs auf 2x 500 ml, strikt getrennt von den Gels. Nie mischen. Bei 27 Grad reicht eine Runde mit Depot am Startpunkt.",
-    "Danach 30-40 g Protein binnen 40 min. Am 25.07 hat der Post-Run-Teller direkt nach dem Lauf funktioniert (130 g am Tag) — genau so wieder.",
-    "Trinken 3.700 ml. Und heute ordentlich: morgen ist Ruhetag, uebermorgen frueh gehst du nuechtern zur Abnahme."
-   ],
-   "warnung": "Du kommst von einer Ausbelastung gestern — das steckt in den Beinen, auch wenn der Kopf frisch ist. Zone 2 heisst heute WIRKLICH Zone 2: wenn die Vorgabe-Pace sich nach Arbeit anfuehlt, geh ans obere Ende. Und leg die Runde so, dass eine Toilette erreichbar ist — am 27.07 war genau das das Problem. Abbrechen ist bei driftendem Puls oder dumpfem Kopf die richtige Entscheidung, nicht die schwache.",
-   "coachSays": "27 Grad statt 31, ausgeschlafen statt um 4:45 raus, und die Blutwerte werden trotzdem sauber. Der Tausch kostet dich nichts und rettet dir die GGT-Frage."
-  },
-  "2026-08-02": {
-   "headline": "Kompletter Ruhetag. Heute ist Nichtstun die Leistung — morgen frueh wird gemessen.",
-   "kalender": "Frei. Morgen 08:00 Blutentnahme nuechtern, danach ab 10:00 der uebliche Montag.",
-   "einheit": "KEIN Lauf, KEINE Kraft, KEIN Plyo, auch nichts 'Lockeres'. Nur Mobi 17 min + Breathing. Das ist keine Faulheit, das ist das 72-Stunden-Fenster vor der Blutabnahme: Belastung hebt GGT, GPT, Kreatinin, Ferritin und die Thrombozyten transient an. Und GGT 73 ist genau der Wert, wegen dem du den Retest machst — eine Einheit heute wuerde die Antwort unbrauchbar machen.",
-   "minimum": [
-    "Mobi 17 min + Breathing 5 min — mehr nicht",
-    "Trinken 3.100 ml HEUTE, ueber den Tag verteilt — morgen frueh darfst du nur Wasser",
-    "Ab ca. 20 Uhr nuechtern: nichts mehr essen, keine Saefte, keine Milch im Kaffee",
-    "Abends normal Magnesium + Kreatin nehmen, aber morgen frueh KEINE Supplements vor der Abnahme",
-    "Zettel oder Handy-Notiz fuer morgen: 'Ich nehme taeglich 3-5 g Kreatin' (Begruendung in der Warnung)"
-   ],
-   "bonus": [
-    "Test-Ergebnisse von Freitag diktieren, falls noch nicht passiert — Laktatkurve, Zonen, VO2max",
-    "Long Run von gestern ins Tagebuch, falls gestern abend nichts mehr ging",
-    "Fruehstueck fuer morgen nach der Abnahme schon richten — du kommst hungrig heim"
-   ],
-   "fueling": [
-    "Normal essen bis ~20 Uhr, dann nuechtern. Protein 117-146 g, Carbs im Ruhetag-Bereich (220-365 g).",
-    "Wasser ist bis zur Abnahme erlaubt und sogar gut — dehydriert sind Haematokrit und Haemoglobin falsch hoch. Also morgen frueh 1-2 Glaeser stilles Wasser, nur eben ohne alles.",
-    "Kaffee morgen frueh: NEIN vor der Abnahme (schwarz waere strenggenommen tolerabel, aber 'nuechtern' heisst nuechtern — nicht diskutieren, nachher gibt es Kaffee).",
-    "Kreuzbluetler heute gerne wieder (Brokkoli, Rucola, Kohl) — Leber-Support fuer die GGT-Frage, und heute stoert der Ballaststoff-Gehalt nicht.",
-    "Trinken 3.100 ml trotz Ruhetag: 31,5 Grad, und morgen frueh faellt die Fluessigkeitszufuhr aus."
-   ],
-   "warnung": "EINE Sache musst du morgen unbedingt sagen: du nimmst taeglich 3-5 g Kreatin. Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion — sagst du es nicht, sieht die Niere auf dem Papier schlechter aus, als sie ist, und du bekommst eine Diagnose, die keine ist. Auspausen bringt nichts (Auswaschzeit sind Wochen), sagen bringt alles. Ebenfalls erwaehnen: Leistungstest war Freitag, Long Run Samstag frueh — beides mehr als 48 h her, das passt, aber der Arzt soll es wissen.",
-   "coachSays": "Du hast auf diesen Termin zehn Tage gewartet. Ein Ruhetag ist der billigste Preis, den du je fuer verwertbare Blutwerte gezahlt hast."
-  },
   "2026-08-03": {
    "headline": "Blutabnahme 8:00 nuechtern — und heute noch trinken, sonst misst du deinen Wasserhaushalt.",
    "kalender": "08:00-09:00 Blutentnahme nuechtern · 10:00-12:00 'I love controversy' · 12:15 Kette-Nachholblock · 14:00 und 14:35 zwei Calls. Ganztaegig 'Steinbeiss Coaching Sessions'. Kein Lauf heute — steht so im Plan.",
@@ -278,17 +109,91 @@
    ],
    "warnung": "Kraft ohne Reps ist Erhaltung, kein Aufbau — das hast du am 28.07 selbst gemerkt ('das ist zu wenig'). Nimm die Vorgaben aus dem Kraft-Plyo-Plan: Hip Thrust 4×8 schwer, Soleus 3×10 mit 3 s exzentrisch, Sliding Leg Curl 3×8. Acht Wochen vor Berlin ist das die letzte Phase, in der du noch aufbaust — ab dem 30.08 gibt es keine neuen Uebungen mehr, ab dem 07.09 nur noch Erhalt. Und morgen frueh steht die VO2max Ballerei um 6:15 an — 10x 1 min bei 5:37-6:01/km. Heute deshalb die Beine nicht ruinieren: Plyo ja, aber der Deckel von ~100 Bodenkontakten gilt.",
    "coachSays": "Block 2 heisst: die Gewichte steigen noch vier Wochen, dann nie wieder vor Berlin. Nutz das Fenster."
+  },
+  "2026-08-11": {
+   "headline": "Intervalle — und diesmal morgens, nicht um sieben Uhr abends.",
+   "kalender": "Ferien laufen. 19:00-20:00 Zoom-Workshop (Allie K. Miller / Mark Cuban), Elias fliegt um 22:30. Der Vormittag gehoert dir komplett.",
+   "einheit": "Intervalle 1:15 / 110 TSS — die haerteste Lauf-Einheit der Woche. Bester Slot: 6:45-8:00. Grund: 29,7 Grad Tagesmaximum, und am 04.08. bist du dieselbe Einheit um 19 Uhr bei 28 Grad gelaufen. Morgens ist es kuehler, der Darm ist leer (Regel GI-1: drei Stunden Vorlauf, vollstaendige Entleerung — genau so hast du es Sonntag gemacht und es hat gehalten), und der Abend ist ohnehin verplant. Pace-Korridor 7:00-8:00/km fuer die lockeren Teile; bei der Hitze ans obere Ende, das ist ausdruecklich erlaubt (Regel PC-1).",
+   "minimum": [
+    "Intervalle 1:15 morgens — vorher Pre-Run-Aktivierung 3 min (Clams, Glute Bridge, Monster Walks) und 3x30 s Zehenstand",
+    "Direkt danach 30-40 g Protein. Am Donnerstag nach der VO2max gab es nur eine Banane — das ist eine verschenkte Einheit",
+    "Beckenboden-Snack 3 min aus dem Wochenkonto (steht diese Woche auf 0, Soll 3x) — neural billig, geht auch nach einem harten Lauf",
+    "Trinken 3.300 ml",
+    "Alle drei Supplement-Slots, vor allem der Mittags-Slot (2x Omega-3)"
+   ],
+   "bonus": [
+    "After Run Yoga 11 min — deine Coachin hat es extra rausgesucht",
+    "Kurz ins Tagebuch: wie fuehlen sich die Hoka Bondi bei Tempo an? Du hast sie am 01.08. und 04.08. zweimal als instabil beschrieben"
+   ],
+   "fueling": [
+    "Pre-Fuel: 40-60 g Carbs 60-90 min vorher (Toast mit Marmelade + halbe Banane). Kein Nuechterntraining bei intensiv — das ist nicht verhandelbar.",
+    "Im Lauf: 1 Squeezy Basic bei Minute 40-45 mit 200 ml Wasser. Am 04.08. hast du zwei Gels gut vertragen, das System steht.",
+    "Elektrolytflasche 500 ml mit VOLLER Tab getrennt nebenher — und leer trinken. Am 04.08. waren 500 ml Wasser nach deinem eigenen Urteil 'etwas zu wenig'.",
+    "Nach dem Lauf 30-40 g Protein binnen 40 min.",
+    "Trink-Ist letzte Woche: Schnitt 2.010 ml pro Tag bei Zielen um 3.000-3.600. Zwei Tage lagen bei 1.100 und 1.200 ml. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht."
+   ],
+   "warnung": "Kraft. In der Woche 03.-09.08. sind BEIDE Muckibude-Sessions ausgefallen (Mi und Fr, in TrainingPeaks je keine Einheit, in der App nichts abgehakt), und das Wochenkonto Kette & Sehnen steht auf 0 von 12. Du hast es Sonntag selbst diktiert: 'Generell mache ich zu wenig Kraft.' Diese Woche stehen zwei Kraft-Tage im Plan (Mi + Fr) — die sind ab jetzt so wichtig wie die Laeufe. Mit 52 und in der Perimenopause ist ausgelassene Kraft nicht aufholbares Volumen, sondern verlorene Muskelmasse.",
+   "coachSays": "Deine Laeufe waren letzte Woche makellos — 38,5 km, der laengste Long Run des Blocks, HF 136 bei 7:39 exakt auf der Lab-Schwelle. Die Kraft war null. Ein Marathonkoerper wird nicht auf einer Saeule gebaut."
+  },
+  "2026-08-12": {
+   "headline": "Kraft-Tag. Der wichtigste Termin der Woche, und er steht in keinem Kalender.",
+   "kalender": "08:00-08:30 Claude Code Weekly, 09:00-12:00 'I love Podcasts', 09:30-10:30 Physio bei Tina. Der Vormittag ist dicht — Kraft danach, ab ca. 12:30.",
+   "einheit": "Muckibude 3 — 27 Saetze / 16 Uebungen (Warm Up, Reverse Lunge, Bulgarian Split Squat, High Plank Shoulder Tap + 8 weitere). Kein Lauf. Slot: 12:30-13:15, direkt nach der Physio, da sind Huefte und Sprunggelenk schon gelockert. Gib dir selbst die Rep-Vorgaben, bevor du anfaengst — in TrainingPeaks stehen keine, und genau deshalb waren es am 28.07. nur 30 statt 45 Minuten.",
+   "minimum": [
+    "Muckibude 3 vollstaendig — 27 Saetze, nicht 'so lange wie es passt'",
+    "Glute-Aktivierung 5 min VOR der Session (Regel KR-1 gegen die Hamstring-Kraempfe)",
+    "Pogos 3x20 auf die frischen Beine, direkt nach dem Warm-up (Wochenkonto: 0 von 2)",
+    "Achilles-Snack im Anschluss: Bent-Knee Calf Raise 3x10, 3 s runter, plus Wadenheber gestreckt 3x10 (Wochenkonto: 0 von 2 — und der letzte schwere Soleus-Reiz ist der 31.07.)",
+    "Trinken 2.800 ml"
+   ],
+   "bonus": [
+    "Po-Snack (Hip Thrust 4x8 + Side Plank), falls nach der Kraft noch Luft ist — sonst faellt er auf Donnerstag",
+    "Schwimmen abends, wenn der Tag es hergibt",
+    "Kraft-Tag diktieren (Regel DOK-1): welche Gewichte, und krampfen die Hamstrings mit den KR-1-Fixes noch?"
+   ],
+   "fueling": [
+    "Vor der Kraft 30-40 g Carbs — auch Kraft nicht nuechtern. Nach der Physio um 10:30 ist ein guter Zeitpunkt.",
+    "Danach 30-40 g Protein binnen 40 min. An Kraft-Tagen faellt der Post-Run-Shake weg und mit ihm der halbe Proteintag: 07.08. kam auf 110 g, 28.07. auf 71 g.",
+    "Protein-Schnitt der letzten Woche liegt bei rund 105 g — 12 g unter dem Minimum von 117 g. Ein Skyr (200 g = 25 g) am Nachmittag schliesst die Luecke komplett.",
+    "Fetter Fisch ist diese Woche noch offen (Soll 2x): Lachs oder Makrele einplanen.",
+    "Trinken 2.800 ml — kein Lauf, aber 29,6 Grad."
+   ],
+   "warnung": "Wenn dieser Tag wieder wegfaellt, ist es die dritte ausgefallene Kraft-Session in Folge. Der Soleus hat seit dem 31.07. keinen schweren Reiz mehr gesehen, und der Soleus ist die Struktur, die im Marathon zuerst aufgibt — deine Beinahe-Krampfe im Halbmarathon zeigten genau dahin. Kraft geht vor Laufvolumen, wenn du diese Woche waehlen musst.",
+   "coachSays": "45 Minuten. Nach der Physio. Kein Verhandlungsspielraum, keine Kurzversion — schreib dir die Wiederholungen vorher auf einen Zettel, dann hoert die Session nicht einfach auf, wenn du muede wirst."
+  },
+  "2026-08-13": {
+   "headline": "Mammografie um acht, Tempolauf danach — der heisseste Tag der Woche.",
+   "kalender": "08:00-08:15 Radiologie Herrsching (Mammografie, Seestrasse 43). Sonst frei. Der Lauf passt danach, ab ca. 09:15.",
+   "einheit": "Tempolauf 0:55 / 79 TSS. Coachin-Note: 'Bitte gut verpflegen!' Slot: 09:15-10:15, am See im Schatten. 30,7 Grad Tagesmaximum — das ist der PC-1-Ausnahmefall: nach Gefuehl deckeln, die Tempo-Abschnitte nicht auf die Sekunde jagen. Ein Tempolauf bei 30 Grad ist bereits eine harte Einheit, auch wenn die Uhr etwas anderes sagt. Abends laufen ist keine Alternative (Regel GI-2).",
+   "minimum": [
+    "Tempolauf 55 min am Vormittag — vorher Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand",
+    "Post-Run-Protein 30-40 g binnen 40 min",
+    "Po-Snack abends: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite (Wochenkonto 0 von 3)",
+    "Trinken 3.600 ml — hoechstes Ziel der Woche"
+   ],
+   "bonus": [
+    "Wadenheber locker 2x15 nach dem Lauf",
+    "Faszienrolle abends: Quads, IT-Band, Wade"
+   ],
+   "fueling": [
+    "'Bitte gut verpflegen' heisst hier konkret: 40-60 g Carbs 60-90 min vorher. Die Mammografie braucht keine Nuechternheit — friss vor dem Termin.",
+    "Im Lauf 1 Squeezy Basic bei Minute 30-35 mit 200 ml Wasser (bei 55 min intensiv frueher als sonst, damit er noch wirkt).",
+    "Elektrolytflasche mit voller Tab — bei 30 Grad 500-700 mg Natrium pro Stunde. Und leer trinken.",
+    "Danach 30-40 g Protein binnen 40 min plus Carbs — an heissen Tagen faellt der Appetit ab, plane das Essen vorher.",
+    "Trinken 3.600 ml: das sind ueber den Tag verteilt neun Glaeser. Ohne Flasche am Schreibtisch wird das nichts."
+   ],
+   "warnung": "30,7 Grad bei einer Tempo-Einheit. Wenn der Puls im Tempo-Abschnitt ueber 155 klettert und sich das falsch anfuehlt, nimm Tempo raus — deine LT2 liegt bei HF 151, alles darueber ist bei dieser Hitze kein Trainingsreiz mehr, sondern nur Hitzestress. Lieber 30 Sekunden pro Kilometer langsamer als eine Woche Loch danach.",
+   "coachSays": "Erst der Termin, dann der Lauf, dann der Po-Snack am Abend. Drei Dinge, alle machbar — und keins davon faellt weg, nur weil es warm ist."
   }
  },
  "woche": {
-  "start": "2026-08-03",
-  "fokus": "Peak, Block 2 startet. Mo 03.08 Blutabnahme 8:00 nuechtern + Kette-Nachholblock (kein Lauf) · Di 04.08 Intervalle 1:35 / 74 TSS um 6:15 · Mi 05.08 Muckibude 3 + Plyo · Do 06.08 VO2max Ballerei 55 min / 73 TSS um 6:15 (bleibt am Donnerstag — Dennis kommt spaeter als der Kalender-Blocker sagt) · Fr 07.08 Muckibude 3 + Mobi, kein Lauf · Sa 08.08 Paeuschen · So 09.08 Long Run 2:20 / 224 TSS — der laengste des Blocks bisher. Ab 07.08 eine Woche HRT-Pause (letzter Tag Estradiol+Progesteron ist der 06.08.).",
+  "start": "2026-08-10",
+  "fokus": "Peak, Block 2, Woche 2 — KRAFT-WOCHE. Mo 10.08 Mobi 8:45, kein Lauf · Di 11.08 Intervalle 1:15 / 110 TSS, morgens wegen 29,7 Grad · Mi 12.08 Muckibude 3 (27 Saetze / 16 Uebungen), Slot 12:30 nach der Physio · Do 13.08 Tempolauf 55 min / 79 TSS nach der Mammografie, 30,7 Grad · Fr 14.08 'Muckibude schnell' (27 Saetze / 18 Uebungen, enthaelt Single Leg Calf Raise) · Sa 15.08 Mobi 17 min + /essensplan + Glutamin abmessen · So 16.08 Long Run 2:30 / 240 TSS — wieder der laengste des Blocks. Zwei Kraft-Tage und zwei Laeufe unter der Woche.",
   "luecken": [
-   "DIE Luecke der Woche: Hydration. 30.07-02.08 nur 1.800 / 2.100 / 2.200 / 1.200 ml bei Zielen um 3.100-3.700. Der gestrige Tag ist der schlechteste seit Tracker-Start — 1.200 ml bei 3 Stunden Wandern und 29,5 Grad, und das direkt vor einer nuechternen Blutabnahme, bei der Dehydration Haemoglobin, Haematokrit und Ferritin falsch hoch erscheinen laesst. Diese Woche stehen Ziele bis 4.000 ml an (Dienstag). Fix: Flasche an den Schreibtisch, und die Elektrolytflasche im Lauf wirklich leer trinken (Regel FL-1).",
-   "Wochenkonto laeuft an, aber duenn: seit Einfuehrung am 30.07 stehen Achilles-Snack 1x und Beckenboden 1x. Po-, Hamstring-Snack und Pogos: 0x. Montag ab 12:15 ist der Nachholblock eingeplant, Mittwoch der Kraft-Tag — an diesen beiden Tagen ist die Woche zu retten.",
-   "Kraft ohne Rep-Vorgaben bleibt ungeloest. Am 28.07 dauerte Muckibude 3 nur 30 min, dein eigener Kommentar: 'das ist zu wenig'. Im TrainingPeaks stehen keine Wiederholungen. Nimm sie aus kraft-plyo-plan-berlin-2026.md — und ab dem 30.08 sind neue Uebungen ohnehin gesperrt, das Aufbaufenster schliesst in vier Wochen.",
-   "Gel-Strategie ist geloest, bitte so lassen: 01.08 drei Squeezy Basic ueber 2 Stunden, null Darmprobleme — der dritte Gel-Lauf in Folge ohne Zwischenfall. Am Sonntag sind es 2:20, also 3-4 Gels. Aber: Glutamin waren am 01.08 nur ~8 g in einem Glas Wasser statt 15 g in 400 ml. Beim naechsten Long Run volle Dosis, sonst testest du etwas anderes als geplant.",
-   "Beobachten, nicht behandeln: Achilles links am 01.08 an den Huegeln gespuert, neue Hoka Bondi, laut dir bei Schotter und bergab instabil. Zwei neue Variablen gleichzeitig. Dienstag flach laufen — kommt es eben auch, liegt es am Schuh."
+   "DIE Luecke der Woche: KRAFT. In der Woche 03.-09.08. sind beide Muckibude-Sessions ausgefallen (Mi 05.08. und Fr 07.08. — in TrainingPeaks keine Kraft-Einheit, in der App nichts abgehakt). Das Wochenkonto 'Kette & Sehnen' steht auf 0 von 12: Achilles 0/2, Po 0/3, Hamstring 0/2, Pogos 0/2, Beckenboden 0/3. Der letzte schwere Soleus-Reiz war der 31.07. Steffi hat es am 09.08. selbst diktiert: 'Generell mache ich zu wenig Kraft.' Diese Woche stehen Mi + Fr im Plan — die sind ab jetzt gleichrangig mit den Laeufen. Realistischer Nachholplan: Mi Pogos + Achilles-Snack, Do Po-Snack, Di Beckenboden. Hamstring-Snack wird diese Woche bewusst gestrichen statt gestapelt.",
+   "Carbs am Vortag des Long Runs. Der 08.08. war der Vortag des laengsten Long Runs des Blocks — der Essensplan (7 Mahlzeiten, ~360 g KH) wurde kein einziges Mal abgehakt, das Diktat nennt zwei Mahlzeiten, geschaetzt ~90 g KH. Am Tag danach: '4 Gels waren fast zu wenig.' Nicht das Gel war knapp, der Vortag war es. Am 15.08. wieder Vortag — diesmal low-residue, aber KH-dicht (Weissbrot, Reis, Milchreis, wenig Ballaststoff).",
+   "Hydration bleibt zaeh: Schnitt der letzten sieben Tage 2.010 ml gegen Ziele um 3.000-3.600. Zwei Tage bei 1.100 und 1.200 ml, davon einer der Vortag des Long Runs bei 30 Grad. Der Sonntag (3.200 ml) zeigt, dass es geht.",
+   "Fuel-Dosis im Long Run nachziehen: 4 Gels auf 2:20 h = 36 g/h. Am 16.08. sind es 2:30 h — dafuer 6 Gels einpacken (45 g/h), und L-Glutamin 15 g endlich vollstaendig: am 01.08. waren es ~8 g, am 09.08. vergessen."
   ]
  },
  "trends": {
@@ -461,6 +366,12 @@
     "hrv": 23.0,
     "rhr": 52.7,
     "schlaf": 8.1
+   },
+   {
+    "woche": "2026-08-03",
+    "hrv": 29.5,
+    "rhr": 55.1,
+    "schlaf": 8.16
    }
   ],
   "kmWochen": [
@@ -519,402 +430,28 @@
    {
     "woche": "2026-07-27",
     "km": 37.2
+   },
+   {
+    "woche": "2026-08-03",
+    "km": 38.5
    }
   ]
  },
  "beweise": [
   {
-   "titel": "Das Darm-Problem ist geloest — drei Laeufe in Folge sauber",
-   "text": "01.08: 15,56 km in 2:00 h, DREI Squeezy-Gels, null Darmprobleme. Davor 25.07 mit 3 Gels und 23.07 mit 2 Gels ebenfalls sauber. Im Halbmarathon am 05.07 war bei km 19 Schluss mit Darmdruck — dieselbe Distanz laeuft jetzt durch. Das Gut-Training hat funktioniert, und zwar messbar: 0 von 3 statt 1 von 1."
+   "titel": "Der laengste Long Run des Blocks — und technisch der sauberste",
+   "text": "09.08.: 18,33 km in 2:20 h, Durchschnittspace 7:39/km bei Durchschnittspuls 136. Deine Leistungsdiagnostik vom 31.07. hat LT1 auf HF 139 bei 7:38/km gemessen. Du bist also exakt auf deiner aeroben Schwelle gelaufen, auf die Sekunde und einen Schlag darunter — ohne Uhr-Blick, ohne Vorgabe. Vor acht Wochen (14.06.) lag dieselbe Zone bei 9:30/km."
   },
   {
-   "titel": "Leistungsdiagnostik gemacht — und du haettest noch gekonnt",
-   "text": "31.07: Laktat-Test, 5x 3 min auf dem Laufband bis in Zone 5. Deine eigene Einschaetzung: 'Ich haette 6x geschafft vermutlich.' Am Tag darauf 2 Stunden Long Run mit guten Beinen. Das ist keine Selbsttaeuschung, das ist eine belastbare Basis — und ab jetzt hast du echte Zonen statt geschaetzter."
+   "titel": "Der Darm haelt jetzt genau da, wo er im Halbmarathon aufgab",
+   "text": "Im HM am 05.07. war bei km 19 Schluss: Darmdruck, Gehpause. Am 09.08. hattest du nach zwei Stunden wieder Druck — und bist durchgelaufen, 18,33 km ohne einen einzigen Stopp, mit 4 Gels intus. Vier Laeufe in Folge mit Gels ohne Zwischenfall (23.07., 25.07., 01.08., 09.08.). Das Gut-Training funktioniert, und die Morgenroutine mit vollstaendiger Entleerung ist der Grund."
   },
   {
-   "titel": "Long-Run-Pace faellt weiter, ohne dass es haerter wird",
-   "text": "Long-Run-Pace ueber sechs Wochen: 9:30 → 8:10 → 7:20 → 7:45/km. Der 01.08 lief mit 7:45 auf einer Strecke 'auf und ab', also profilbedingt langsamer als der flache 25.07 — bei RPE 5 und 'Beine haben sich gut angefuehlt'. Zum Vergleich: im April lagst du bei denselben Einheiten noch bei 9:30."
+   "titel": "Die Erholung ist zurueck, trotz der hoechsten Laufwoche seit dem HM",
+   "text": "Wochenschnitt HRV 29,5 ms gegen 23,0 in der Vorwoche — plus 28 Prozent. Schlaf 8,16 h im Schnitt, Readiness heute 90, Schlafscore 94 nach neun Stunden. Und das in einer Woche mit 38,5 Laufkilometern, der hoechsten seit dem Halbmarathon. Deine Basis traegt das Volumen."
   }
  ],
  "tagesplan": {
-  "2026-07-27": {
-   "hinweis": "Woche umgestellt: Intervalle liegen diese Woche MONTAG, Kraft auf Di + Fr. Heute also Lauf-Tag mit Plyo — keine schwere Kraft. Hip Thrust & Side Plank wandern auf die Kraft-Tage.",
-   "nur": [
-    "mo-beckenboden",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Pre-Run Aktivierung",
-     "duration": "3 min",
-     "trigger": "direkt vor dem Lauf",
-     "why": "Clams + Glute Bridge + Monster Walks, danach 3×30 s Zehenstand (Achilles-Priming). Erst danach die Pogos."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Pogos 3×20 (Plyo-Dosis Woche 3)",
-     "duration": "5 min · ~60 Bodenkontakte",
-     "trigger": "nach dem Einlaufen, VOR den Intervallen",
-     "why": "Fokus diese Woche: kurzer Bodenkontakt ('heißer Boden'), Knie fast gestreckt. Nur auf frische Beine — fühlen sie sich im Warm-up schwer an, schieb die Pogos auf Dienstag. Abbruch bei jedem Achilles-/Knie-Zwicken."
-    },
-    {
-     "tier": "activity",
-     "name": "Intervalle 1:30 (Coach-Plan, 70 TSS)",
-     "duration": "90 min",
-     "trigger": "7:30-9:00, vor dem 10-Uhr-Block",
-     "why": "Neue Vorgabe: nach PACE laufen (7:00–8:00/km), nicht mehr nach Herzfrequenz. 1 Gel bei Min 40-45 + Elektrolytflasche getrennt, volle Tab, leer trinken."
-    },
-    {
-     "tier": "standard",
-     "name": "Wadenheber locker 2×15",
-     "duration": "1 min",
-     "trigger": "nach dem Lauf",
-     "why": "Körpergewicht, Sehnenpflege im ermüdeten Zustand. Die schweren Reize liegen diese Woche Di + Fr."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Atemübung",
-     "duration": "5 min",
-     "trigger": "direkt nach dem Cool-Down",
-     "why": "Parasympathisches Runterfahren. Bei einer HRV, die drei Wochen in Folge sinkt, ist das keine Kür."
-    },
-    {
-     "tier": "bonus",
-     "name": "After Run Yoga",
-     "duration": "11 min",
-     "trigger": "nach dem Lauf",
-     "why": "Steht so im TrainingPeaks-Plan deiner Coachin."
-    }
-   ]
-  },
-  "2026-07-28": {
-   "hinweis": "Kraft-Tag statt Intervall-Tag: diese Woche liegen die Läufe Mo/Mi/So, die Kraft Di + Fr. Heute startet 'Muckibude 3' — neues Programm, erste Session.",
-   "nur": [
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Kraft: Muckibude 3 (NEU)",
-     "duration": "40 min · 27 Sätze / 16 Übungen",
-     "trigger": "vormittags",
-     "why": "Erste Session des neuen Coach-Programms. Gewichte konservativ, jeden Load notieren — progressiv gesteigert wird ab nächster Woche. RPE 7, nicht 9."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Hip Thrust 4×8 schwer",
-     "duration": "8 min",
-     "trigger": "nach der Kraft",
-     "why": "Hintere Kette war im HM ab km 14-16 die Schwachstelle. +2,5 kg sobald 4×8 bei RPE ≤7 sauber laufen."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Wadenheber schwer (Soleus + gestreckt)",
-     "duration": "8 min · je 3×10, 3 s runter",
-     "trigger": "nach der Kraft",
-     "why": "1. von 2 schweren Waden-Einheiten der Woche (2. am Freitag). Der Soleus ist der Marathon-Muskel — die Beinahe-Krämpfe im HM zeigen genau dahin."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Side Plank 2×30 s pro Seite",
-     "duration": "3 min",
-     "trigger": "nach der Kraft",
-     "why": "Vom Orthopäden verordnet. Glute medius gegen Patella-Lateralisation."
-    },
-    {
-     "tier": "standard",
-     "name": "Sliding Leg Curl 3×8",
-     "duration": "5 min",
-     "trigger": "nach der Kraft",
-     "why": "Hamstring-Exzentrik, Fersen langsam (3-4 s) wegschieben. Beinrückseite = HM-Schwachstelle."
-    },
-    {
-     "tier": "standard",
-     "name": "Beckenboden-Training",
-     "duration": "3 min",
-     "trigger": "morgens oder vor der Kraft",
-     "why": "Für Frauen 50+ in Marathon-Vorbereitung wesentlich."
-    },
-    {
-     "tier": "bonus",
-     "name": "Schwimmen",
-     "duration": "~45 min",
-     "trigger": "abends",
-     "why": "27,8 °C und Beine, die morgen bei 32 °C Tempo laufen sollen. Cross-Training statt Couch."
-    }
-   ]
-  },
-  "2026-07-29": {
-   "hinweis": "Tempolauf-Tag (nicht Kraft-Tag — die liegt diese Woche Di + Fr). Bei 31,8 °C nur früh: Start 6:15-6:30, vor dem 8-Uhr-Meeting. Dazu 'Spannung halten' als Vorbereitung auf den Test am Freitag.",
-   "nur": [
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Pre-Run Aktivierung",
-     "duration": "3 min",
-     "trigger": "direkt vor dem Lauf",
-     "why": "Po-Aktivierung + 3×30 s Zehenstand. Bei früher Uhrzeit doppelt wichtig — kalte Sehnen mögen keinen Tempolauf."
-    },
-    {
-     "tier": "activity",
-     "name": "Tempolauf 55 min (Coach-Plan, 89 TSS)",
-     "duration": "55 min",
-     "trigger": "Start 6:15-6:30",
-     "why": "Tageshoch 31,8 °C, gefühlt 33,5. Pace 7:00–8:00/km — bei der Hitze am oberen Ende bleiben, dieselbe Geschwindigkeit kostet dann 5-10 Schläge mehr. Elektrolytflasche Pflicht: volle Tab, leer trinken."
-    },
-    {
-     "tier": "standard",
-     "name": "Wadenheber locker 2×15",
-     "duration": "1 min",
-     "trigger": "nach dem Lauf",
-     "why": "Körpergewicht. Die schweren Reize lagen gestern und liegen Freitag."
-    },
-    {
-     "tier": "pflicht",
-     "name": "'Spannung halten' (Coach-Einheit)",
-     "duration": "16:30 min · 19 TSS",
-     "trigger": "später am Tag",
-     "why": "Coachin: 'nichts wildes, nur Spannung vorm Test halten'. Die Einheit arbeitet auf die sportmedizinische Untersuchung am Freitag hin."
-    },
-    {
-     "tier": "bonus",
-     "name": "AbendMeditation 'loslassen'",
-     "duration": "10 min",
-     "trigger": "vor dem Schlafen",
-     "why": "Steht im Coach-Plan. Bei sinkender HRV der billigste Hebel, den du hast."
-    }
-   ]
-  },
-  "2026-07-30": {
-   "hinweis": "KEIN Lauf heute — anders als im Standardprogramm. Deine Coachin hält den Donnerstag bewusst leer, weil morgen die sportmedizinische Untersuchung ansteht. 'Spannung halten' statt Reiz setzen.",
-   "nur": [
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Mobi (Coach-Einheit)",
-     "duration": "17 min",
-     "trigger": "morgens",
-     "why": "Coachin: 'nicht zu sehr in die Dehnung gehen, Fokus auf mobilisieren'."
-    },
-    {
-     "tier": "pflicht",
-     "name": "'Spannung halten' (Coach-Einheit)",
-     "duration": "16:30 min · 19 TSS",
-     "trigger": "wann es passt",
-     "why": "Zweite Einheit dieser Art in der Woche. Coachin: 'nichts wildes, nur Spannung vorm Test halten'."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Breathing",
-     "duration": "5 min",
-     "trigger": "abends",
-     "why": "Steht im Coach-Plan. Vor einem Leistungstest ist runterfahren wichtiger als reinhauen."
-    },
-    {
-     "tier": "standard",
-     "name": "Test-Vorbereitung: Kohlenhydrate hoch, früh ins Bett",
-     "duration": "—",
-     "trigger": "den ganzen Tag",
-     "why": "Morgen Leistungstest. Heute 365 g+ Carbs, ordentlich trinken, 8 h Schlaf anpeilen. Ein Test auf leeren Speichern misst deine Ernährung, nicht deine Form."
-    }
-   ]
-  },
-  "2026-07-31": {
-   "hinweis": "SPORTMEDIZINISCHE UNTERSUCHUNG. Kraft ist heute OPTIONAL und in zwei Haelften geteilt: Oberkoerper, Rumpf und leichte Aktivierung gehen problemlos. Schwere hintere Kette und alles mit langsamer Exzentrik NICHT — der Long Run ist morgen frueh, das sind 16 Stunden, und Exzentrik macht 24-48 h Muskelkater in Waden und Beinruecken. Du entscheidest nach dem Test, wie viel Substanz da ist.",
-   "nur": [
-    "fr-kraft",
-    "fr-knee",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Sportmedizinische Untersuchung (Leistungstest)",
-     "duration": "lt. Termin",
-     "trigger": "zuerst — vor allem anderen",
-     "why": "Nicht nuechtern hingehen: 2-3 h vorher eine normale kohlenhydratbetonte Mahlzeit, kein Experiment. Fragen mitnehmen (Berlin-Zielzeit 5:15-5:30, HF-Zonen, Fettstoffwechsel, Gamma-GT 73)."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Elektrolytflasche + Banane fuer die Anfahrt",
-     "duration": "2 min",
-     "trigger": "vor 10:00",
-     "why": "35,2 Grad und zwei Stunden Auto vor dem Test. Dehydriert verschiebt sich die Laktatkurve nach links — dann misst der Test deinen Wasserhaushalt, nicht deine Form. Volle Tab auf 500 ml."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Long-Run-Fuel fuer MORGEN vorbereiten",
-     "duration": "5 min",
-     "trigger": "abends",
-     "why": "Der Long Run ist auf Samstag vorgezogen. 15 g L-Glutamin (3 Loeffel ESN) abmessen, 3 Squeezy Basic und 2 Elektrolyt-Tabs rauslegen. Morgen frueh um 5:15 willst du nicht suchen."
-    },
-    {
-     "tier": "standard",
-     "name": "Test-Ergebnisse fotografieren / mitnehmen",
-     "duration": "2 min",
-     "trigger": "direkt beim Termin",
-     "why": "Laktatkurve, HF-Zonen, VO2max — sonst versickert das Papier. Danach in Claude Code diktieren, dann landet es in den Befunden."
-    },
-    {
-     "tier": "standard",
-     "name": "✅ Kraft heute — das GEHT",
-     "duration": "20-35 min",
-     "trigger": "nach dem Test, ab ~15:15",
-     "why": "Muckibude 3, aber nur Oberkoerper + Rumpf (High Plank Shoulder Tap, Warm Up, Zug/Druck) · Side Plank 2×30 s pro Seite · Beckenboden 3 min · Knee Extension Theraband · Glute-Aktivierung leicht (Clams, Monster Walks). Alles davon kostet dich morgen nichts. Vom Wochenkonto darfst du heute BECKENBODEN abhaken."
-    },
-    {
-     "tier": "standard",
-     "name": "⛔ Kraft heute — das NICHT",
-     "duration": "—",
-     "trigger": "zur Info",
-     "why": "Wadenheber schwer (3 s exzentrisch) · Sliding Leg Curl · Single Leg Deadlift · Hip Thrust schwer · Pogos. Alle vier haben langsame Exzentrik oder schwere hintere Kette = 24-48 h Muskelkater genau da, wo du morgen 2 Stunden lang Leistung brauchst. Deine Waden haben im HM fast gekrampft — das ist kein theoretisches Risiko. Achilles-, Hamstring- und Po-Snack stehen Montag nach der Blutabnahme."
-    },
-    {
-     "tier": "bonus",
-     "name": "Wenn du den Po unbedingt willst: Hip Thrust 2×8 bei RPE 6",
-     "duration": "6 min",
-     "trigger": "nur wenn der Test leicht war",
-     "why": "Nicht 4×8 schwer, sondern zwei lockere Saetze als Ansteuerungs-Reiz. Das weckt den Po ohne Muskelkater. Den Po-Snack im Wochenkonto dann NICHT abhaken — die volle Dosis holst du Montag."
-    }
-   ]
-  },
-  "2026-08-01": {
-   "hinweis": "LONG RUN HEUTE statt Sonntag — vorgezogen wegen der Blutabnahme am Montag 08:00 (72-Stunden-Regel). Bonus: 27,3 Grad, der kuehlste Tag der Woche. Start 7:00, du musst nicht um 4:45 raus. Keine Kraft heute.",
-   "nur": [
-    "so-aktivierung",
-    "so-longrun",
-    "so-wade",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "L-Glutamin 15 g",
-     "duration": "—",
-     "trigger": "90-120 min VOR dem Start, also ~5:15",
-     "why": "3 Loeffel ESN in ~400 ml Wasser. Darmbarriere-Schutz fuers Gut-Training — der Darmdruck kam im HM ab km 19. Zusaetzlich zur taeglichen 5-g-Abenddosis."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Vollstaendige Darmentleerung vor dem Start",
-     "duration": "—",
-     "trigger": "zwischen Aufstehen und Losgehen",
-     "why": "Regel GI-1, und deine Bilanz ist eindeutig: 3 von 3 Morgenlaeufen mit Entleerung problemfrei (03.07., 16.07., 25.07.), 3 von 3 Spaetstarts ohne kaputt (21.06., 14.07., 27.07.). Deshalb 5:15 aufstehen und nicht hetzen."
-    },
-    {
-     "tier": "standard",
-     "name": "Gel-Plan: Squeezy Basic bei Min 40 / 80 / 115",
-     "duration": "—",
-     "trigger": "waehrend des Laufs",
-     "why": "Je Gel 150-250 ml REINES Wasser. Elektrolytflasche (2 volle Tabs) strikt getrennt nebenher, 500-700 mg Natrium/h. Nie mischen. ~31 g/h ist deine aktuelle Obergrenze (Regel GI-3) — heute nicht erhoehen."
-    },
-    {
-     "tier": "standard",
-     "name": "Supplement-Bestand pruefen (1. des Monats)",
-     "duration": "5 min",
-     "trigger": "wann es passt",
-     "why": "Monats-Check: Magnesium, D3+K2, Omega-3 (Norsan ist da), Kreatin, Glutamin. Nichts darf vor Berlin auslaufen."
-    }
-   ]
-  },
-  "2026-08-02": {
-   "hinweis": "KOMPLETTER RUHETAG — und zwar strikt. Morgen 08:00 Blutentnahme nuechtern, und Belastung heute wuerde GGT, GPT, Kreatinin, Ferritin und Thrombozyten transient anheben. GGT 73 ist genau die Frage, wegen der du den Retest machst. Nur Mobi + Breathing. Ab ~20 Uhr nuechtern.",
-   "nur": [
-    "sa-mobility",
-    "sa-faszien",
-    "sa-huefte",
-    "daily-meditation",
-    "daily-balance",
-    "daily-ankle",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Ab ~20 Uhr nuechtern",
-     "duration": "—",
-     "trigger": "abends",
-     "why": "Nichts mehr essen, keine Saefte, keine Milch. Wasser bleibt erlaubt und ist sogar gut — dehydriert sind Haematokrit und Haemoglobin falsch hoch."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Notiz fuer morgen: „Ich nehme taeglich 3-5 g Kreatin“",
-     "duration": "1 min",
-     "trigger": "heute noch",
-     "why": "Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion. Sagst du es nicht, sieht die Niere auf dem Papier schlechter aus als sie ist. Auspausen bringt nichts (Auswaschzeit Wochen), sagen bringt alles. Dazu erwaehnen: Leistungstest Fr, Long Run Sa frueh."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Morgen frueh KEINE Supplements vor der Abnahme",
-     "duration": "—",
-     "trigger": "Montag morgen",
-     "why": "D3+K2 und Omega-3 brauchen ohnehin Fett, also nach der Abnahme zum Fruehstueck. Magnesium und Kreatin wie gewohnt heute abend."
-    },
-    {
-     "tier": "standard",
-     "name": "Kreuzbluetler heute reinnehmen",
-     "duration": "—",
-     "trigger": "zum Essen",
-     "why": "Brokkoli, Rucola, Kohl, dazu Rote Bete oder Artischocke — Leber-Support fuer die GGT-Frage. Heute stoert der Ballaststoff-Gehalt nicht, weil der Long Run schon gelaufen ist."
-    },
-    {
-     "tier": "standard",
-     "name": "Breathing",
-     "duration": "5 min",
-     "trigger": "wann es passt",
-     "why": "Steht im Coach-Plan."
-    }
-   ]
-  },
   "2026-08-03": {
    "hinweis": "Blutentnahme 8:00 nuechtern. Kein Lauf heute. Vor der Abnahme 1-2 Glaeser WASSER (erlaubt und sinnvoll), keine Supplements. Ab 12:15 der Kette-Nachholblock aus dem Wochenkonto — die Abnahme ist dann durch.",
    "nur": [
@@ -1074,6 +611,42 @@
      "duration": "—",
      "trigger": "abends",
      "why": "Danach eine Woche Pause. Erste lange Einheit ohne Estradiol ist der Long Run am Sonntag — Waermeregulation und Erholung koennen abweichen, das gehoert ins Tagebuch."
+    }
+   ]
+  },
+  "2026-08-11": {
+   "hinweis": "Standardprogramm gilt. Der Lauf liegt MORGENS (29,7 Grad, und am 04.08. war dieselbe Einheit ein Abendlauf). Zusaetzlich einer der Kette-Snacks — das Wochenkonto steht auf 0 von 12.",
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Beckenboden-Snack (Wochenkonto)",
+     "duration": "3 min",
+     "trigger": "abends, nach dem Lauf",
+     "why": "Wochenkonto Beckenboden: 0 von 3 diese Woche, und in der Vorwoche ebenfalls 0. Abhaken bitte in der Karte 'Kette & Sehnen', nicht hier — sonst gibt es zwei Buchhaltungen. Neural billig, geht auch nach den Intervallen."
+    }
+   ]
+  },
+  "2026-08-12": {
+   "hinweis": "Kraft-Tag mit vollem Vormittag (Weekly 8:00, Podcasts 9-12, Physio 9:30). Muckibude 3 auf 12:30 legen, nach der Physio. Reduziert wird ueber Saetze und Gewicht, nicht durch Weglassen — die Session ist zweimal in Folge ausgefallen.",
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Kette-Nachholblock (Wochenkonto) — Reihenfolge einhalten",
+     "duration": "11 min gesamt",
+     "trigger": "Pogos direkt nach dem Warm-up, Achilles-Snack am Ende der Kraft",
+     "why": "Wochenkonto: Pogos 0 von 2, Achilles-Snack 0 von 2 — und der letzte schwere Soleus-Reiz war der 31.07. Reihenfolge: 1. Pogos 3x20 auf frische Beine (nach dem Warm-up, VOR der Kraft). 2. Achilles-Snack am Ende: Bent-Knee Calf Raise 3x10 mit 3 s exzentrisch, dann Wadenheber gestreckt 3x10. Po- und Hamstring-Snack sind heute bewusst NICHT dabei — eine ganze Woche laesst sich nicht an einem Tag nachholen. Der Po-Snack liegt auf Donnerstag. Abhaken in der Karte 'Kette & Sehnen'."
+    }
+   ]
+  },
+  "2026-08-13": {
+   "hinweis": "08:00-08:15 Mammografie, Tempolauf danach ab 09:15. 30,7 Grad — Schatten, und nach Gefuehl deckeln (PC-1-Hitzeausnahme).",
+   "extra": [
+    {
+     "tier": "pflicht",
+     "name": "Po-Snack (Wochenkonto)",
+     "duration": "10 min",
+     "trigger": "abends, mit Abstand zum Lauf",
+     "why": "Wochenkonto Po: 0 von 3. Hip Thrust 4x8 schwer (RPE 7-8) + Side Plank 2x30 s pro Seite. Der Glute ist laut OZ-Theresie-Diagnose deine wichtigste Schwachstelle, und im Halbmarathon war die Beinrueckseite ab km 14-16 leer. Abhaken in der Karte 'Kette & Sehnen'."
     }
    ]
   }
