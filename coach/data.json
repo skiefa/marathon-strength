@@ -2,7 +2,7 @@
  "generated": "2026-08-10T20:00:00+02:00",
  "datenstand": {
   "wearables": "2026-08-09",
-  "kommentar": "TrainingPeaks-Export 'metrics 8' + 'workouts 10' am 10.08 importiert (173 neue Zeilen), Oura frisch bis 10.08. Wochenschnitte 03.-09.08 (Oura): HRV 29,5 ms (Vorwoche 23,0 — deutliche Erholung), Ruhepuls 55,1 (52,7), Schlaf 8,16 h (8,10). Der 03.08. faellt beim Schlaf raus (0,19 h = Ring nicht getragen). Lauf-Woche 38,5 km (12,89 Intervalle + 7,29 VO2max + 18,33 Long Run), hoechste seit dem Halbmarathon, dazu 6,6 km Wandern und taeglich Schwimmen. KRAFT: null. In TrainingPeaks steht weder am 05.08. noch am 07.08. eine Muckibude-Einheit, in der App ist keine abgehakt, das Wochenkonto steht auf 0/12. Achilles-Morgencheck 7/7 'ok', Akku 7/7 'gut'."
+  "kommentar": "TrainingPeaks-Export 'metrics 8' + 'workouts 10' am 10.08 importiert (173 neue Zeilen), Oura frisch bis 10.08. Wochenschnitte 03.-09.08 (Oura): HRV 29,5 ms (Vorwoche 23,0 — deutliche Erholung), Ruhepuls 55,1 (52,7), Schlaf 8,16 h (8,10). Der 03.08. faellt beim Schlaf raus (0,19 h = Ring nicht getragen). Lauf-Woche 38,5 km (12,89 Intervalle + 7,29 VO2max + 18,33 Long Run), hoechste seit dem Halbmarathon, dazu 6,6 km Wandern und taeglich Schwimmen. KRAFT: beide Sessions vollstaendig (Mi 25/27 Saetze / 14/16 Uebungen, Fr 27/27 Saetze / 16/16 Uebungen) — Quelle ist der TP-Kalender-Screenshot vom 10.08. WICHTIG: Der CSV-Export enthaelt KEINE Kraft-Einheiten (WorkoutType nur Run/Swim/Walk/Bike/Other/Day Off). Kraft-Adherence darf nie aus dem CSV abgeleitet werden — am 10.08. ist genau dieser Fehlschluss passiert und wurde korrigiert (Regel DQ-1 in coach-plan.yaml). Achilles-Morgencheck 7/7 'ok', Akku 7/7 'gut'."
  },
  "hydration": {
   "2026-08-03": {
@@ -117,9 +117,9 @@
    "minimum": [
     "Intervalle 1:15 morgens — vorher Pre-Run-Aktivierung 3 min (Clams, Glute Bridge, Monster Walks) und 3x30 s Zehenstand",
     "Direkt danach 30-40 g Protein. Am Donnerstag nach der VO2max gab es nur eine Banane — das ist eine verschenkte Einheit",
-    "Beckenboden-Snack 3 min aus dem Wochenkonto (steht diese Woche auf 0, Soll 3x) — neural billig, geht auch nach einem harten Lauf",
+    "Vor dem Lauf ordentlich Carbs: 40-60 g. Letzte Woche lag der Carb-Schnitt rund 100 g unter dem Trainingstag-Minimum",
     "Trinken 3.300 ml",
-    "Alle drei Supplement-Slots, vor allem der Mittags-Slot (2x Omega-3)"
+    "Alle drei Supplement-Slots, vor allem der Mittags-Slot (2x Omega-3) — der stand letzte Woche 2 von 7 Tagen"
    ],
    "bonus": [
     "After Run Yoga 11 min — deine Coachin hat es extra rausgesucht",
@@ -132,34 +132,34 @@
     "Nach dem Lauf 30-40 g Protein binnen 40 min.",
     "Trink-Ist letzte Woche: Schnitt 2.010 ml pro Tag bei Zielen um 3.000-3.600. Zwei Tage lagen bei 1.100 und 1.200 ml. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht."
    ],
-   "warnung": "Kraft. In der Woche 03.-09.08. sind BEIDE Muckibude-Sessions ausgefallen (Mi und Fr, in TrainingPeaks je keine Einheit, in der App nichts abgehakt), und das Wochenkonto Kette & Sehnen steht auf 0 von 12. Du hast es Sonntag selbst diktiert: 'Generell mache ich zu wenig Kraft.' Diese Woche stehen zwei Kraft-Tage im Plan (Mi + Fr) — die sind ab jetzt so wichtig wie die Laeufe. Mit 52 und in der Perimenopause ist ausgelassene Kraft nicht aufholbares Volumen, sondern verlorene Muskelmasse.",
-   "coachSays": "Deine Laeufe waren letzte Woche makellos — 38,5 km, der laengste Long Run des Blocks, HF 136 bei 7:39 exakt auf der Lab-Schwelle. Die Kraft war null. Ein Marathonkoerper wird nicht auf einer Saeule gebaut."
+   "warnung": "Drei Tage mit 29-31 Grad in Folge, und zwei davon sind Lauf-Tage. Achilles und Knie melden 7 von 7 Tagen 'ok', die Struktur ist also sauber — das Risiko liegt diese Woche bei Hitze und Fluessigkeit, nicht bei den Sehnen. Trink-Schnitt der letzten sieben Tage: 2.010 ml gegen Ziele um 3.000-3.600, mit zwei Tagen bei 1.100 und 1.200 ml.",
+   "coachSays": "Letzte Woche war komplett: drei Laeufe, 38,5 km, UND beide Kraft-Sessions voll durchgezogen. Das ist die sauberste Woche des Blocks. Was jetzt noch hinterherhinkt, ist nicht die Disziplin — es ist der Sprit."
   },
   "2026-08-12": {
-   "headline": "Kraft-Tag. Der wichtigste Termin der Woche, und er steht in keinem Kalender.",
+   "headline": "Kraft-Tag Nummer drei in Folge — jetzt wird es interessant: steigen die Gewichte?",
    "kalender": "08:00-08:30 Claude Code Weekly, 09:00-12:00 'I love Podcasts', 09:30-10:30 Physio bei Tina. Der Vormittag ist dicht — Kraft danach, ab ca. 12:30.",
-   "einheit": "Muckibude 3 — 27 Saetze / 16 Uebungen (Warm Up, Reverse Lunge, Bulgarian Split Squat, High Plank Shoulder Tap + 8 weitere). Kein Lauf. Slot: 12:30-13:15, direkt nach der Physio, da sind Huefte und Sprunggelenk schon gelockert. Gib dir selbst die Rep-Vorgaben, bevor du anfaengst — in TrainingPeaks stehen keine, und genau deshalb waren es am 28.07. nur 30 statt 45 Minuten.",
+   "einheit": "Muckibude 3 — 27 Saetze / 16 Uebungen (Warm Up, Reverse Lunge, Bulgarian Split Squat, High Plank Shoulder Tap + 8 weitere). Kein Lauf. Slot: 12:30-13:15, direkt nach der Physio, da sind Huefte und Sprunggelenk schon gelockert. Am 05.08. hast du 25 von 27 Saetzen geschafft, am 07.08. 27 von 27 — die Session steht. Die offene Frage ist nicht mehr, OB sie stattfindet, sondern mit welchem Gewicht: in TrainingPeaks stehen keine Last- oder Rep-Vorgaben, und du hast am 09.08. selbst gesagt, du machst 'zu wenig Kraft'. Schreib heute die Gewichte auf.",
    "minimum": [
-    "Muckibude 3 vollstaendig — 27 Saetze, nicht 'so lange wie es passt'",
+    "Muckibude 3 vollstaendig — 27 von 27 Saetzen wie am Freitag, nicht 25",
+    "Gewichte notieren (App-Tagebuch oder Zettel). Ohne Zahlen gibt es keine Progression, und Progression ist genau das, was dir fehlt",
     "Glute-Aktivierung 5 min VOR der Session (Regel KR-1 gegen die Hamstring-Kraempfe)",
-    "Pogos 3x20 auf die frischen Beine, direkt nach dem Warm-up (Wochenkonto: 0 von 2)",
-    "Achilles-Snack im Anschluss: Bent-Knee Calf Raise 3x10, 3 s runter, plus Wadenheber gestreckt 3x10 (Wochenkonto: 0 von 2 — und der letzte schwere Soleus-Reiz ist der 31.07.)",
+    "Pogos 3x20 auf die frischen Beine, direkt nach dem Warm-up",
     "Trinken 2.800 ml"
    ],
    "bonus": [
-    "Po-Snack (Hip Thrust 4x8 + Side Plank), falls nach der Kraft noch Luft ist — sonst faellt er auf Donnerstag",
+    "Achilles-Snack im Anschluss: Bent-Knee Calf Raise 3x10, 3 s runter, plus Wadenheber gestreckt 3x10 — falls die Waden nicht ohnehin in der Muckibude drankamen",
     "Schwimmen abends, wenn der Tag es hergibt",
     "Kraft-Tag diktieren (Regel DOK-1): welche Gewichte, und krampfen die Hamstrings mit den KR-1-Fixes noch?"
    ],
    "fueling": [
     "Vor der Kraft 30-40 g Carbs — auch Kraft nicht nuechtern. Nach der Physio um 10:30 ist ein guter Zeitpunkt.",
-    "Danach 30-40 g Protein binnen 40 min. An Kraft-Tagen faellt der Post-Run-Shake weg und mit ihm der halbe Proteintag: 07.08. kam auf 110 g, 28.07. auf 71 g.",
+    "Danach 30-40 g Protein binnen 40 min. An Kraft-Tagen faellt der Post-Run-Shake weg und mit ihm der halbe Proteintag: der 07.08. kam auf 110 g.",
     "Protein-Schnitt der letzten Woche liegt bei rund 105 g — 12 g unter dem Minimum von 117 g. Ein Skyr (200 g = 25 g) am Nachmittag schliesst die Luecke komplett.",
     "Fetter Fisch ist diese Woche noch offen (Soll 2x): Lachs oder Makrele einplanen.",
     "Trinken 2.800 ml — kein Lauf, aber 29,6 Grad."
    ],
-   "warnung": "Wenn dieser Tag wieder wegfaellt, ist es die dritte ausgefallene Kraft-Session in Folge. Der Soleus hat seit dem 31.07. keinen schweren Reiz mehr gesehen, und der Soleus ist die Struktur, die im Marathon zuerst aufgibt — deine Beinahe-Krampfe im Halbmarathon zeigten genau dahin. Kraft geht vor Laufvolumen, wenn du diese Woche waehlen musst.",
-   "coachSays": "45 Minuten. Nach der Physio. Kein Verhandlungsspielraum, keine Kurzversion — schreib dir die Wiederholungen vorher auf einen Zettel, dann hoert die Session nicht einfach auf, wenn du muede wirst."
+   "warnung": "Zwei Kraft-Sessions in Folge komplett, ohne dass sich am Gewicht etwas bewegt hat, sind Erhaltung — kein Aufbau. Mit 52 und in der Perimenopause ist der Reiz die Last, nicht die Anwesenheit: 3-6 schwere Wiederholungen bei RPE 8. Wenn dir die letzten zwei Wiederholungen eines Satzes leichtfallen, ist das Gewicht zu niedrig. Bis 30.08. darf progressiv gesteigert werden, danach nur noch halten.",
+   "coachSays": "Du warst da, beide Male, vollstaendig — das war nie das Problem, und ich hatte es gestern falsch im Briefing stehen. Heute geht es um die Zahl auf der Hantel, nicht um das Haekchen."
   },
   "2026-08-13": {
    "headline": "Mammografie um acht, Tempolauf danach — der heisseste Tag der Woche.",
@@ -168,8 +168,8 @@
    "minimum": [
     "Tempolauf 55 min am Vormittag — vorher Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand",
     "Post-Run-Protein 30-40 g binnen 40 min",
-    "Po-Snack abends: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite (Wochenkonto 0 von 3)",
-    "Trinken 3.600 ml — hoechstes Ziel der Woche"
+    "Trinken 3.600 ml — hoechstes Ziel der Woche",
+    "Abends Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite"
    ],
    "bonus": [
     "Wadenheber locker 2x15 nach dem Lauf",
@@ -188,12 +188,13 @@
  },
  "woche": {
   "start": "2026-08-10",
-  "fokus": "Peak, Block 2, Woche 2 — KRAFT-WOCHE. Mo 10.08 Mobi 8:45, kein Lauf · Di 11.08 Intervalle 1:15 / 110 TSS, morgens wegen 29,7 Grad · Mi 12.08 Muckibude 3 (27 Saetze / 16 Uebungen), Slot 12:30 nach der Physio · Do 13.08 Tempolauf 55 min / 79 TSS nach der Mammografie, 30,7 Grad · Fr 14.08 'Muckibude schnell' (27 Saetze / 18 Uebungen, enthaelt Single Leg Calf Raise) · Sa 15.08 Mobi 17 min + /essensplan + Glutamin abmessen · So 16.08 Long Run 2:30 / 240 TSS — wieder der laengste des Blocks. Zwei Kraft-Tage und zwei Laeufe unter der Woche.",
+  "fokus": "Peak, Block 2, Woche 2. Mo 10.08 Mobi 8:45, kein Lauf · Di 11.08 Intervalle 1:15 / 110 TSS, morgens wegen 29,7 Grad · Mi 12.08 Muckibude 3 (27 Saetze / 16 Uebungen), Slot 12:30 nach der Physio · Do 13.08 Tempolauf 55 min / 79 TSS nach der Mammografie, 30,7 Grad · Fr 14.08 'Muckibude schnell' (27 Saetze / 18 Uebungen, enthaelt Single Leg Calf Raise) · Sa 15.08 Mobi 17 min + /essensplan + Glutamin abmessen · So 16.08 Long Run 2:30 / 240 TSS — wieder der laengste des Blocks. Ausgangslage: die Vorwoche war die kompletteste des Blocks — 38,5 Lauf-km UND beide Kraft-Sessions voll (Mi 25/27 Saetze, Fr 27/27). Die Baustelle liegt nicht im Training, sondern im Fueling.",
   "luecken": [
-   "DIE Luecke der Woche: KRAFT. In der Woche 03.-09.08. sind beide Muckibude-Sessions ausgefallen (Mi 05.08. und Fr 07.08. — in TrainingPeaks keine Kraft-Einheit, in der App nichts abgehakt). Das Wochenkonto 'Kette & Sehnen' steht auf 0 von 12: Achilles 0/2, Po 0/3, Hamstring 0/2, Pogos 0/2, Beckenboden 0/3. Der letzte schwere Soleus-Reiz war der 31.07. Steffi hat es am 09.08. selbst diktiert: 'Generell mache ich zu wenig Kraft.' Diese Woche stehen Mi + Fr im Plan — die sind ab jetzt gleichrangig mit den Laeufen. Realistischer Nachholplan: Mi Pogos + Achilles-Snack, Do Po-Snack, Di Beckenboden. Hamstring-Snack wird diese Woche bewusst gestrichen statt gestapelt.",
-   "Carbs am Vortag des Long Runs. Der 08.08. war der Vortag des laengsten Long Runs des Blocks — der Essensplan (7 Mahlzeiten, ~360 g KH) wurde kein einziges Mal abgehakt, das Diktat nennt zwei Mahlzeiten, geschaetzt ~90 g KH. Am Tag danach: '4 Gels waren fast zu wenig.' Nicht das Gel war knapp, der Vortag war es. Am 15.08. wieder Vortag — diesmal low-residue, aber KH-dicht (Weissbrot, Reis, Milchreis, wenig Ballaststoff).",
-   "Hydration bleibt zaeh: Schnitt der letzten sieben Tage 2.010 ml gegen Ziele um 3.000-3.600. Zwei Tage bei 1.100 und 1.200 ml, davon einer der Vortag des Long Runs bei 30 Grad. Der Sonntag (3.200 ml) zeigt, dass es geht.",
-   "Fuel-Dosis im Long Run nachziehen: 4 Gels auf 2:20 h = 36 g/h. Am 16.08. sind es 2:30 h — dafuer 6 Gels einpacken (45 g/h), und L-Glutamin 15 g endlich vollstaendig: am 01.08. waren es ~8 g, am 09.08. vergessen."
+   "DIE Luecke der Woche: Kohlenhydrate rund um den Long Run. Der 08.08. war der Vortag des laengsten Long Runs des Blocks — der Essensplan (7 Mahlzeiten, rund 360 g KH) wurde kein einziges Mal abgehakt, das Diktat nennt zwei Mahlzeiten, geschaetzt 90 g KH. Am Tag danach dein eigener Satz: '4 Gels waren fast zu wenig.' Nicht das Gel war knapp, der Vortag war es. Am Long-Run-Tag selbst kamst du auf 319 g KH gegen ein Ziel von mindestens 365 g, weil vier Planmahlzeiten unberuehrt blieben. Fix fuer den 15.08.: low-residue, aber KH-dicht — Weissbrot, weisser Reis, Milchreis, Kartoffeln, wenig Ballaststoff. Und am 16.08. sechs Gels statt vier (2:30 h x 45 g/h = 112 g).",
+   "Hydration bleibt zaeh: Schnitt der letzten sieben Tage 2.010 ml gegen Ziele um 3.000-3.600. Zwei Tage bei 1.100 und 1.200 ml, davon einer der Vortag des Long Runs bei 30 Grad. Der Sonntag (3.200 ml) zeigt, dass es geht. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht.",
+   "Protein liegt im Schnitt bei rund 105 g, das Minimum ist 117 g. Kein Drama, aber systematisch: die Fruehstuecke bringen 6-25 g, die Leucin-Schwelle ab 50 verlangt 25-35 g pro Mahlzeit. Ein Skyr oder ein Whey-Shake am Vormittag schliesst es.",
+   "Supplements: der Mittags-Slot (2x Omega-3) stand letzte Woche 2 von 7 Tagen, der Abend-Slot 3 von 7. Der Morgen-Slot laeuft mit 5 von 7. Ohne den Mittags-Slot kommst du auf 600 statt 1.200 mg EPA+DHA — der halbe Effekt.",
+   "Offene Frage statt Vorwurf: das Wochenkonto 'Kette & Sehnen' zeigt fuer die Vorwoche 0 Tipps. Waren Wadenheber, Hip Thrust und Co. in der Muckibude mit drin (dann ist die Karte nur Buchhaltung und wir passen sie an), oder sind sie separat liegengeblieben? Kurz ins Tagebuch sagen, dann weiss ich, ob ich sie ueberhaupt noch einplanen muss."
   ]
  },
  "trends": {
@@ -447,8 +448,8 @@
    "text": "Im HM am 05.07. war bei km 19 Schluss: Darmdruck, Gehpause. Am 09.08. hattest du nach zwei Stunden wieder Druck — und bist durchgelaufen, 18,33 km ohne einen einzigen Stopp, mit 4 Gels intus. Vier Laeufe in Folge mit Gels ohne Zwischenfall (23.07., 25.07., 01.08., 09.08.). Das Gut-Training funktioniert, und die Morgenroutine mit vollstaendiger Entleerung ist der Grund."
   },
   {
-   "titel": "Die Erholung ist zurueck, trotz der hoechsten Laufwoche seit dem HM",
-   "text": "Wochenschnitt HRV 29,5 ms gegen 23,0 in der Vorwoche — plus 28 Prozent. Schlaf 8,16 h im Schnitt, Readiness heute 90, Schlafscore 94 nach neun Stunden. Und das in einer Woche mit 38,5 Laufkilometern, der hoechsten seit dem Halbmarathon. Deine Basis traegt das Volumen."
+   "titel": "Die kompletteste Woche des Blocks — Laufen UND Kraft, und die Erholung hat es getragen",
+   "text": "03.-09.08.: drei Laeufe mit 38,5 km (hoechste Woche seit dem Halbmarathon) UND beide Muckibude-Sessions vollstaendig — Mittwoch 25 von 27 Saetzen, Freitag 27 von 27, alle 16 Uebungen. Dazu taeglich Schwimmen und 6,6 km Wandern. Und der Koerper hat mitgemacht: HRV im Wochenschnitt 29,5 ms gegen 23,0 in der Vorwoche, plus 28 Prozent. Schlaf 8,16 h, Readiness heute 90. Volumen hoch, Erholung hoch — das ist der Zustand, den man in einem Peak-Block haben will."
   }
  ],
  "tagesplan": {
