@@ -1196,19 +1196,29 @@ function applySwapText(dk,id){
   S.mahlzeiten[dk][id] = {s:'ersetzt', ersatz:{text:t}, name:(m?m.name:''), ts:new Date().toISOString()};
   swapFor = null; save(); render();
 }
+function ankerMahlzeiten(plan){ return (plan.mahlzeiten||[]).filter(m=>!m.familie); }
+function familieMahlzeit(plan){ return (plan.mahlzeiten||[]).find(m=>m.familie) || null; }
 function essenIst(dk){
   const plan = essenPlanFor(dk); if(!plan) return null;
   let p=0, kh=0, offen=0, freitext=0;
-  for(const m of (plan.mahlzeiten||[])){
+  // Nur Anker zaehlen — das Familienessen ist ein freier Slot ohne Soll (Steffi 10.08.2026:
+  // "wir essen in der Familie oft anders als im Plan"). Es wird abends aus dem Teller-Diktat geschaetzt.
+  const anker = ankerMahlzeiten(plan);
+  for(const m of anker){
     const st = mealState(dk,m.id);
     const s = st && st.s;
     if(s==='gegessen'){ p += m.p||0; kh += m.kh||0; }
     else if(s==='ersetzt'){ const e = st.ersatz||{}; if(e.text) freitext++; p += e.p||0; kh += e.kh||0; }
     else if(s!=='weg') offen++;
   }
-  return {p, kh, offen, freitext, total:(plan.mahlzeiten||[]).length};
+  return {p, kh, offen, freitext, total:anker.length};
 }
 function toggleEinkauf(wk,id){ S.einkauf[wk]=S.einkauf[wk]||{}; S.einkauf[wk][id]=!S.einkauf[wk][id]; save(); render(); }
+function focusTeller(){
+  const el = document.getElementById('t-text'); if(!el) return;
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  setTimeout(()=>el.focus(), 300);
+}
 
 function essenAlternativenFuer(dk,m){
   const A = DATA.essenAlternativen||{};
@@ -1276,23 +1286,40 @@ function renderEssen(){
   if(plan){
     const ist = essenIst(dk);
     const ziel = plan.ziel||{};
+    const fam = familieMahlzeit(plan);
     const bar = (label,istV,zielV)=>{
       const pct = zielV? Math.min(100, Math.round(istV/zielV*100)) : 0;
       const cls = pct>=90? '' : (pct>=60? 'mid':'low');
       return `<div class="zone"><div class="zl"><span>${label}</span><span><b>${istV}</b> / ${zielV} g</span></div>
         <div class="zbar"><div class="zfill ${cls}" style="width:${pct}%"></div></div></div>`;
     };
+    const restP = Math.max(0, (ziel.p||0) - ist.p), restKh = Math.max(0, (ziel.kh||0) - ist.kh);
     html += `<div class="card brief">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
         <b style="font-size:16px">${esc(plan.typLabel||plan.tagestyp||'')}</b>
-        <span class="small">${ist.total-ist.offen}/${ist.total} Mahlzeiten</span>
+        <span class="small">${ist.total-ist.offen}/${ist.total} Anker</span>
       </div>
       ${plan.hinweis? `<div class="small" style="margin-top:5px">${esc(plan.hinweis)}</div>`:''}
       <div style="margin-top:8px">${bar('Protein', ist.p, ziel.p||0)}${bar('Kohlenhydrate', ist.kh, ziel.kh||0)}</div>
+      <div class="small" style="margin-top:4px">Balken = <b>Anker</b> (${ist.p} P / ${ist.kh} KH).${fam? ` Bis zum Tagesziel fehlen noch ~${restP} P / ${restKh} KH — die holt das Abendessen.`:''}</div>
       ${ist.freitext? `<div class="small" style="margin-top:4px">${ist.freitext} freie${ist.freitext===1?'r':''} Ersatz — zählt hier 0 g, der Coach rechnet ihn abends ein.</div>`:''}
       <div class="small" style="margin-top:6px">Haken = gegessen wie geplant. ⇄ = tauschen. ✕ = fällt heute aus.</div>
     </div>`;
-    html += (plan.mahlzeiten||[]).map(m=>renderMahlzeit(dk,m)).join('');
+    html += ankerMahlzeiten(plan).map(m=>renderMahlzeit(dk,m)).join('');
+    if(fam){
+      html += `<div class="card" style="margin-top:10px;border-style:dashed">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+          <b style="font-size:15.5px">🍽 Abendessen — Familie, frei</b>
+          <span class="small">kein Soll</span>
+        </div>
+        <div class="small" style="margin-top:6px">Was auch immer es gibt — das hier ist ein Vorschlag, kein Plan. Nichts abzuhaken ist hier <b>kein</b> Versäumnis.</div>
+        ${fam.name? `<div class="tn" style="margin-top:10px">${esc(fam.name)}</div>`:''}
+        ${fam.zutaten? `<div class="td">${esc(fam.zutaten)}</div>`:''}
+        ${fam.fuerDich? `<div class="twhy" style="display:block;margin-top:8px">Für dich: ${esc(fam.fuerDich)}</div>`:''}
+        ${fam.rezept? `<div class="twhy" style="display:block;margin-top:6px">${esc(fam.rezept)}</div>`:''}
+        <button class="btn ghost" style="margin:12px 0 2px" onclick="focusTeller()">Diktieren, was es gab →</button>
+      </div>`;
+    }
   } else {
     const geplant = Object.keys(DATA.essensplan||{}).filter(k=>k>=todayKey()).sort();
     if(geplant.length){
