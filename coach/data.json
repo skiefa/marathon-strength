@@ -1,1795 +1,1688 @@
 {
- "generated": "2026-08-10T20:00:00+02:00",
- "datenstand": {
-  "wearables": "2026-08-09",
-  "kommentar": "TrainingPeaks-Export 'metrics 8' + 'workouts 10' am 10.08 importiert (173 neue Zeilen), Oura frisch bis 10.08. Wochenschnitte 03.-09.08 (Oura): HRV 29,5 ms (Vorwoche 23,0 — deutliche Erholung), Ruhepuls 55,1 (52,7), Schlaf 8,16 h (8,10). Der 03.08. faellt beim Schlaf raus (0,19 h = Ring nicht getragen). Lauf-Woche 38,5 km (12,89 Intervalle + 7,29 VO2max + 18,33 Long Run), hoechste seit dem Halbmarathon, dazu 6,6 km Wandern und taeglich Schwimmen. KRAFT: beide Sessions vollstaendig (Mi 25/27 Saetze / 14/16 Uebungen, Fr 27/27 Saetze / 16/16 Uebungen) — Quelle ist der TP-Kalender-Screenshot vom 10.08. WICHTIG: Der CSV-Export enthaelt KEINE Kraft-Einheiten (WorkoutType nur Run/Swim/Walk/Bike/Other/Day Off). Kraft-Adherence darf nie aus dem CSV abgeleitet werden — am 10.08. ist genau dieser Fehlschluss passiert und wurde korrigiert (Regel DQ-1 in coach-plan.yaml). Achilles-Morgencheck 7/7 'ok', Akku 7/7 'gut'."
- },
- "hydration": {
-  "2026-08-03": {
-   "ziel_ml": 3200,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Kette-Kraftblock 45 min halb (+225) + 35,0 Grad (+1.000) - 400 Kaffee-Abzug = 3.200 ml"
+  "generated": "2026-08-13T15:20:00+02:00",
+  "datenstand": {
+    "wearables": "2026-08-13",
+    "kommentar": "Oura frisch bis 13.08. (Abruf 13.08. 15:0x). Laufende Woche 10.-13.08.: HRV 28 / 33 / 29 / 40 ms (Schnitt 32,5, Vorwoche 29,5), Ruhepuls 49 / 46 / 47 / 47 (Schnitt 47,3 — deutlich unter dem Vorwochenschnitt von 55,1), Schlaf 9,00 / 7,33 / 7,95 / 7,03 h (Schnitt 7,83), Readiness 91 / 89 / 90 / 90. Achilles-Morgencheck und Akku an allen erfassten Tagen 'ok' bzw. 'gut'. TrainingPeaks-CSV-Export steht weiter auf dem Stand vom 09.08. — der Sonntags-Export ist am 16.08. faellig, dann sind die Lauf-km der Woche 10.-16.08. auswertbar (aktuell fehlen Di-Intervalle und Do-Tempolauf in kmWochen). App-Erfassung: Di 11.08. und Mi 12.08. komplett leer (kein Morgencheck, kein Trinken, kein Teller) — Erfassungsluecke, KEIN Beleg fuer ausgefallenes Training (Regel DQ-1). Wetter Herrsching: Fr 32,2 / Sa 33,7 / So 31,4 Grad, Sonntag 89 % Regenwahrscheinlichkeit."
   },
-  "2026-08-04": {
-   "ziel_ml": 4000,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Intervalle 1:35 (+950) + 34,9 Grad (+1.000) - 400 Kaffee-Abzug = 3.950, gerundet/gedeckelt 4.000 ml"
+  "hydration": {
+    "2026-08-11": {
+      "ziel_ml": 3300,
+      "grund": "Basis 2.455 (33 ml x 74,4 kg) + Intervalle 75 min (+750) + 29,7 Grad (+500) - 400 Kaffee-Abzug = 3.305, gerundet 3.300"
+    },
+    "2026-08-12": {
+      "ziel_ml": 2800,
+      "grund": "Basis 2.455 + Kraft 45 min (halb gezaehlt, +225) + 29,6 Grad (+500) - 400 Kaffee-Abzug = 2.780, gerundet 2.800"
+    },
+    "2026-08-13": {
+      "ziel_ml": 3600,
+      "grund": "Basis 2.455 + Tempolauf 55 min (+550) + 30,7 Grad (+1.000, ab 30 Grad) - 400 Kaffee-Abzug = 3.605, gerundet 3.600"
+    },
+    "2026-08-14": {
+      "ziel_ml": 3300,
+      "grund": "Basis 2.455 (33 ml x 74,4 kg) + Kraft 45 min (halb gezaehlt, +225) + 32,2 Grad (+1.000, ab 30 Grad) - 400 Kaffee-Abzug = 3.280, gerundet 3.300"
+    },
+    "2026-08-15": {
+      "ziel_ml": 3100,
+      "grund": "Basis 2.455 + Mobi 17 min (halb gezaehlt, +85) + 33,7 Grad (+1.000) - 400 Kaffee-Abzug = 3.140, gerundet 3.100. Vortag Long Run — heute trinken zaehlt fuer morgen."
+    },
+    "2026-08-16": {
+      "ziel_ml": 4000,
+      "grund": "Basis 2.455 + Long Run 2:30 (+1.500) + 31,4 Grad (+1.000) - 400 Kaffee-Abzug = 4.555, auf den Deckel 4.000 begrenzt. Davon ~1.000 ml waehrend des Laufs."
+    }
   },
-  "2026-08-05": {
-   "ziel_ml": 3200,
-   "grund": "Basis 2.400 (33 ml x 73,4 kg) + Muckibude 3 halb (+200) + 30,9 Grad (+1.000) - 400 Kaffee-Abzug = 3.200 ml"
+  "briefings": {
+    "2026-08-11": {
+      "headline": "Intervalle morgens — und abends die erste Doppeldosis aus dem Kette-Konto.",
+      "kalender": "Ferien laufen. 19:00-20:00 Zoom-Workshop (Allie K. Miller / Mark Cuban), Elias fliegt um 22:30. Der Vormittag gehoert dir komplett.",
+      "einheit": "Intervalle 1:15 / 110 TSS — die haerteste Lauf-Einheit der Woche. Bester Slot: 6:45-8:00. Grund: 29,7 Grad Tagesmaximum, und am 04.08. bist du dieselbe Einheit um 19 Uhr bei 28 Grad gelaufen. Morgens ist es kuehler, der Darm ist leer (Regel GI-1: drei Stunden Vorlauf, vollstaendige Entleerung — genau so hast du es Sonntag gemacht und es hat gehalten), und der Abend ist ohnehin verplant. Pace-Korridor 7:00-8:00/km fuer die lockeren Teile; bei der Hitze ans obere Ende, das ist ausdruecklich erlaubt (Regel PC-1).",
+      "minimum": [
+        "Intervalle 1:15 morgens — vorher Pre-Run-Aktivierung 3 min und 3x30 s Zehenstand",
+        "Direkt danach 30-40 g Protein",
+        "ABENDS Hamstring-Snack: Sliding Leg Curl 3x6 (verkuerzte ROM, 3-4 s exzentrisch) + Single Leg Deadlift 3x8 pro Seite. WICHTIG: 5 min Glute-Aktivierung davor (Regel KR-1) — exzentrische Hamstring-Arbeit am Abend eines Intervall-Tages ist sonst Krampf-Risiko. Krampft es trotzdem: abbrechen und ins Tagebuch",
+        "ABENDS Beckenboden-Snack 3 min",
+        "Trinken 3.300 ml"
+      ],
+      "bonus": [
+        "After Run Yoga 11 min — deine Coachin hat es extra rausgesucht",
+        "Kurz ins Tagebuch: wie fuehlen sich die Hoka Bondi bei Tempo an? Du hast sie am 01.08. und 04.08. zweimal als instabil beschrieben"
+      ],
+      "fueling": [
+        "Pre-Fuel: 40-60 g Carbs 60-90 min vorher (Toast mit Marmelade + halbe Banane). Kein Nuechterntraining bei intensiv — das ist nicht verhandelbar.",
+        "Im Lauf: 1 Squeezy Basic bei Minute 40-45 mit 200 ml Wasser. Am 04.08. hast du zwei Gels gut vertragen, das System steht.",
+        "Elektrolytflasche 500 ml mit VOLLER Tab getrennt nebenher — und leer trinken. Am 04.08. waren 500 ml Wasser nach deinem eigenen Urteil 'etwas zu wenig'.",
+        "Nach dem Lauf 30-40 g Protein binnen 40 min.",
+        "Trink-Ist letzte Woche: Schnitt 2.010 ml pro Tag bei Zielen um 3.000-3.600. Zwei Tage lagen bei 1.100 und 1.200 ml. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht."
+      ],
+      "warnung": "Die Kette-Snacks sind NICHT Teil der Muckibude — das ist seit heute geklaert, und damit hat der Soleus seit dem 31.07. keinen schweren Reiz mehr gesehen und der Glute keinen einzigen Hip Thrust. Genau die zwei Strukturen, die im Halbmarathon zuerst aufgegeben haben: Beinrueckseite ab km 14-16 leer, Waden am Krampfrand. Zwoelf Dosen in einer Woche sind viel — deshalb liegen sie in Zweier- und Dreierbloecken an den Tagen, an denen sie hingehoeren, und Samstag/Sonntag bleiben frei. Wenn ein Block wegfaellt: Achilles zuerst retten, dann Po, dann Hamstring, dann Beckenboden.",
+      "coachSays": "Die Muckibude laeuft, die Laeufe laufen. Was fehlt, sind acht bis zwanzig Minuten am Abend — und genau die entscheiden, ob dich in Berlin bei km 30 die Beinrueckseite traegt."
+    },
+    "2026-08-12": {
+      "headline": "Kraft-Tag Nummer drei in Folge — jetzt wird es interessant: steigen die Gewichte?",
+      "kalender": "08:00-08:30 Claude Code Weekly, 09:00-12:00 'I love Podcasts', 09:30-10:30 Physio bei Tina. Der Vormittag ist dicht — Kraft danach, ab ca. 12:30.",
+      "einheit": "Muckibude 3 — 27 Saetze / 16 Uebungen (Warm Up, Reverse Lunge, Bulgarian Split Squat, High Plank Shoulder Tap + 8 weitere). Kein Lauf. Slot: 12:30-13:15, direkt nach der Physio, da sind Huefte und Sprunggelenk schon gelockert. Am 05.08. hast du 25 von 27 Saetzen geschafft, am 07.08. 27 von 27 — die Session steht. Die offene Frage ist nicht mehr, OB sie stattfindet, sondern mit welchem Gewicht: in TrainingPeaks stehen keine Last- oder Rep-Vorgaben, und du hast am 09.08. selbst gesagt, du machst 'zu wenig Kraft'. Schreib heute die Gewichte auf.",
+      "minimum": [
+        "Pogos 3x20 direkt nach dem Warm-up, auf frische Beine — VOR der Kraft",
+        "Muckibude 3 vollstaendig, 27 von 27 Saetzen, Gewichte notieren (RPE 8: fallen die letzten zwei Wiederholungen leicht, ist es zu wenig)",
+        "Direkt im Anschluss Achilles-Snack: Bent-Knee Calf Raise 3x10 mit 3 s runter + Wadenheber gestreckt 3x10. Erster schwerer Soleus-Reiz seit dem 31.07.",
+        "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite",
+        "Trinken 2.800 ml"
+      ],
+      "bonus": [
+        "Schwimmen abends, wenn der Tag es hergibt",
+        "Kraft-Tag diktieren (Regel DOK-1): welche Gewichte beim Hip Thrust, und krampfen die Hamstrings mit den KR-1-Fixes noch?"
+      ],
+      "fueling": [
+        "Vor der Kraft 30-40 g Carbs — auch Kraft nicht nuechtern. Nach der Physio um 10:30 ist ein guter Zeitpunkt.",
+        "Danach 30-40 g Protein binnen 40 min. An Kraft-Tagen faellt der Post-Run-Shake weg und mit ihm der halbe Proteintag: der 07.08. kam auf 110 g.",
+        "Protein-Schnitt der letzten Woche liegt bei rund 105 g — 12 g unter dem Minimum von 117 g. Ein Skyr (200 g = 25 g) am Nachmittag schliesst die Luecke komplett.",
+        "Fetter Fisch ist diese Woche noch offen (Soll 2x): Lachs oder Makrele einplanen.",
+        "Trinken 2.800 ml — kein Lauf, aber 29,6 Grad."
+      ],
+      "warnung": "Drei Snacks plus 45 min Muckibude sind ein voller Kraft-Tag — plan 70 Minuten ein, nicht 45. Reihenfolge ist nicht beliebig: Pogos brauchen frische Beine und stehen deshalb VOR der Kraft, der Achilles-Snack gehoert ans Ende. Wenn die Zeit nicht reicht, faellt der Po-Snack (steht Freitag nochmal) — Pogos und Achilles nicht.",
+      "coachSays": "Heute ist der Tag, an dem die Kette wieder anfaengt zu zaehlen. Pogos, Muckibude mit Zahlen, Waden schwer, Hip Thrust. In dieser Reihenfolge."
+    },
+    "2026-08-13": {
+      "headline": "Mammografie um acht, Tempolauf danach — der heisseste Tag der Woche.",
+      "kalender": "08:00-08:15 Radiologie Herrsching (Mammografie, Seestrasse 43). Sonst frei. Der Lauf passt danach, ab ca. 09:15.",
+      "einheit": "Tempolauf 0:55 / 79 TSS. Coachin-Note: 'Bitte gut verpflegen!' Slot: 09:15-10:15, am See im Schatten. 30,7 Grad Tagesmaximum — das ist der PC-1-Ausnahmefall: nach Gefuehl deckeln, die Tempo-Abschnitte nicht auf die Sekunde jagen. Ein Tempolauf bei 30 Grad ist bereits eine harte Einheit, auch wenn die Uhr etwas anderes sagt. Abends laufen ist keine Alternative (Regel GI-2).",
+      "minimum": [
+        "Tempolauf 55 min am Vormittag — vorher Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand",
+        "Post-Run-Protein 30-40 g binnen 40 min",
+        "ABENDS Hamstring-Snack: Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8 pro Seite (48 h nach Dienstag, passt)",
+        "ABENDS Beckenboden-Snack 3 min — damit stehst du bei 3 von 3",
+        "Trinken 3.600 ml — hoechstes Ziel der Woche"
+      ],
+      "bonus": [
+        "Wadenheber locker 2x15 nach dem Lauf",
+        "Faszienrolle abends: Quads, IT-Band, Wade"
+      ],
+      "fueling": [
+        "'Bitte gut verpflegen' heisst hier konkret: 40-60 g Carbs 60-90 min vorher. Die Mammografie braucht keine Nuechternheit — friss vor dem Termin.",
+        "Im Lauf 1 Squeezy Basic bei Minute 30-35 mit 200 ml Wasser (bei 55 min intensiv frueher als sonst, damit er noch wirkt).",
+        "Elektrolytflasche mit voller Tab — bei 30 Grad 500-700 mg Natrium pro Stunde. Und leer trinken.",
+        "Danach 30-40 g Protein binnen 40 min plus Carbs — an heissen Tagen faellt der Appetit ab, plane das Essen vorher.",
+        "Trinken 3.600 ml: das sind ueber den Tag verteilt neun Glaeser. Ohne Flasche am Schreibtisch wird das nichts."
+      ],
+      "warnung": "30,7 Grad bei einer Tempo-Einheit. Wenn der Puls im Tempo-Abschnitt ueber 155 klettert und sich das falsch anfuehlt, nimm Tempo raus — deine LT2 liegt bei HF 151, alles darueber ist bei dieser Hitze kein Trainingsreiz mehr, sondern nur Hitzestress. Lieber 30 Sekunden pro Kilometer langsamer als eine Woche Loch danach.",
+      "coachSays": "Termin, Lauf, abends zehn Minuten Kette. Damit hast du am Donnerstagabend acht von zwoelf Dosen — und den Rest holt der Freitag."
+    },
+    "2026-08-14": {
+      "headline": "Kraft-Tag, Estradiol Tag 1 — und der Countdown zum laengsten Long Run des Blocks laeuft.",
+      "kalender": "Ganztags: 'Hormon: Estradiol Start (Tag 1)' — die HRT-Pause ist vorbei. 14:00-15:00 doppelt belegt: Ship Day + Weekly Check-in UND 'I love Money'. Der Vormittag gehoert dir.",
+      "einheit": "'Muckibude schnell' — 27 Saetze / 18 Uebungen, kein Lauf. Slot 9:30-10:30: bevor es warm wird und lange vor dem 14-Uhr-Block. 32,2 Grad draussen, das Studio ist heute klar der bessere Ort. Zwei Tage vor dem Long Run — schwere Beinkraft ist hier unproblematisch, die 24-h-Regel ist gewahrt.",
+      "minimum": [
+        "Muckibude schnell 9:30-10:30 — enthaelt Single Leg Calf Raise, aber der ersetzt den Soleus-Snack nicht",
+        "Achilles-Snack direkt an die Kraft: Bent-Knee Calf Raise 3x10 (3 s runter) + Wadenheber gestreckt 3x10 — 2. und letzte Dosis der Woche",
+        "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite",
+        "Post-Kraft 30-40 g Protein binnen 40 min — Whey-Shake steht als Anker im Plan",
+        "Trinken 3.300 ml"
+      ],
+      "bonus": [
+        "Beckenboden 3 min abends",
+        "In der Praxis nach dem B12-Ergebnis fragen — die Nachforderung aus der Probe vom 03.08. war seit gestern faellig",
+        "Zwei Saetze ins Tagebuch: erster Tag Estradiol nach einer Woche Pause. Deine HRV lag in der Pausenwoche bei 33-40 ms, so hoch wie seit Wochen nicht. Das ist eine Beobachtung wert."
+      ],
+      "fueling": [
+        "DIE Luecke der Woche ist die Fluessigkeit, und sie faellt genau in die falsche Woche. An den fuenf Tagen, an denen der Tracker lief: Schnitt 1.820 ml — 07.08. 1.100, 08.08. 1.200, 10.08. 1.600, gestern 2.000 von 3.600. Die Ziele lagen bei 2.800-3.600.",
+        "Der Beleg, warum das kein Zahlenspiel ist: am 08.08. — dem Vortag des letzten Long Runs — hast du 1.200 ml getrunken. Am Tag danach war dein eigenes Urteil '4 Gels waren fast zu wenig'. Nicht das Gel war knapp. Der Vortag war es. Sonntag ist derselbe Aufbau, nur 10 min laenger und bei 31 Grad.",
+        "Fix, eine Sache: 500-ml-Flasche steht auf dem Schreibtisch, bevor du den Rechner aufmachst. Sechs Fuellungen bis 20 Uhr sind die 3.300.",
+        "Vor der Kraft: 3 Scheiben Brot mit Marmelade + Banane (75 g KH). Nicht nuechtern in 27 Saetze.",
+        "Gestern standen 89 g Protein und 198 g Carbs auf der Uhr, Ziel war 140/365 — und der Milchreis, der die Luecke geschlossen haette, blieb liegen. Heute faengt das Auffuellen fuer Sonntag an: die zwei Snacks im Plan sind keine Deko."
+      ],
+      "warnung": "Wochenkonto Kette & Sehnen steht bei 1 von 12 — nur der Achilles-Snack vom Montag. Ob die Sessions gelaufen und nur nicht abgehakt sind, weiss ich nicht; die App war am Dienstag und Mittwoch komplett aus. Heute ist der letzte Slot der Woche, Samstag und Sonntag bleiben bewusst frei. Ich streiche dir Pogos (0/2) und Hamstring (0/2) fuer diese Woche explizit — eine Woche laesst sich nicht an einem Tag nachholen, das waere Verletzungsrisiko und kein Aufholen. Achilles und Po haben Prioritaet, mehr nicht.",
+      "coachSays": "Zwei Uebungen an die Kraft, eine Flasche auf den Schreibtisch. Sonntag entscheidet sich heute und morgen, nicht am Sonntag."
+    },
+    "2026-08-15": {
+      "headline": "Vortag. Heute wird nichts trainiert und alles vorbereitet.",
+      "kalender": "Frei. 33,7 Grad — der heisseste Tag der Woche, und du musst nirgendwohin. Gut so.",
+      "einheit": "Mobi 17 min, sonst nichts. Coachin-Note: 'Nicht zu sehr in die Dehnung gehen, Fokus auf mobilisieren.' Kein Lauf, keine Kraft, keine Pogos.",
+      "minimum": [
+        "Mobi 17 min",
+        "/essensplan am Vormittag laufen lassen — die Einkaufsliste landet dann im Essen-Tab, vor dem Einkauf",
+        "L-Glutamin 15 g ABMESSEN und neben die Schuhe stellen. Dritter Anlauf. Am 01.08. waren es 8 g in einem Glas, am 09.08. wieder nicht vollstaendig.",
+        "6 Squeezy Basic + Elektrolyt-Tabs rauslegen und zaehlen",
+        "Trinken 3.100 ml — heute ist es kein Selbstzweck, sondern der Tank fuer morgen",
+        "Beckenboden 3 min"
+      ],
+      "bonus": [
+        "Wecker fuer morgen auf 4:45 stellen, bevor du es abends vergisst",
+        "Gewitter-Check fuer Sonntagfrueh (89 % Regenwahrscheinlichkeit)"
+      ],
+      "fueling": [
+        "LOW-RESIDUE, und heute zaehlt der Abend ausnahmsweise wirklich mit: weisses Mehl, Sahne, Reis, Semmeln. Kein Kohl, keine Huelsenfruechte, kein Rohkost-Salat, kein Vollkorn. Ballaststoffe unter 20 g.",
+        "Der Plan traegt 380 g KH ueber sieben kleine Mahlzeiten — genau die Bauform, die dir liegt. Rührei mit Semmeln, Mozzarella, Haehnchen in Kokos-Sahne mit weissem Reis, 250 g Milchreis, Semmel mit Marmelade, Tagliatelle in Sahne-Parmesan, Huettenkaese mit Weissbrot.",
+        "Um 18:30 ist Schluss mit Essen. Alles danach steht dir morgen frueh noch im Magen.",
+        "Trinken ueber den Tag verteilt, nicht abends nachschuetten — was du um 22 Uhr trinkst, ist morgens um 5 wieder draussen.",
+        "Kein Experiment heute. Nichts, was du nicht kennst."
+      ],
+      "warnung": "33,7 Grad und ein Ruhetag heisst NICHT weniger trinken. An heissen Ruhetagen faellt dein Schnitt am staerksten ab (10.08.: 1.600 ml an einem Mobi-Tag). Und Ballaststoffe: der Reflex 'Ruhetag, dann esse ich mal gesund mit viel Salat' ist heute genau falsch.",
+      "coachSays": "Planen, abmessen, hinlegen, trinken. Der Sonntag wird heute gewonnen oder verloren."
+    },
+    "2026-08-16": {
+      "headline": "2:30 Long Run — der laengste des Blocks. Frueh raus, sonst gewinnt die Hitze.",
+      "kalender": "10:00-11:00 Schwimmen. Der Lauf muss vorher fertig sein: 6:45-9:15. Passt genau, und das Schwimmen danach ist die beste Regeneration, die du kriegen kannst — geschenkter Timing-Zufall.",
+      "einheit": "Long Run 2:30 / 240 TSS, Zone 2. Coachin woertlich: 'Bitte nicht schneller als Vorgabe. Bitte gut verpflegen!' Pace 7:30-8:00/km, HF als Rueckendeckel unter 140 — dein Fettstoffwechsel endet laut Leistungsdiagnostik bei HF 142 / 7:18/km. 31,4 Grad Tagesmaximum, morgens um 6:45 ist es das aber noch lange nicht. Um 9:15 schon.",
+      "minimum": [
+        "4:45 Wecker · 5:00 L-Glutamin 15 g in 400 ml Wasser + Kaffee · 5:15 Fruehstueck · 6:45 Start",
+        "Long Run 2:30 in Zone 2 — nicht schneller als Vorgabe, das ist keine Floskel",
+        "6 Gels mit, mindestens 5 nehmen",
+        "Post-Run 30-40 g Protein binnen 40 min — VOR dem Schwimmen, nicht danach",
+        "TrainingPeaks-Metrics exportieren und nach data/incoming/ legen (Sonntags-Reminder, der letzte Export ist vom 09.08.)"
+      ],
+      "bonus": [
+        "Zwei Saetze ins Tagebuch: wie viele Gels, wann der Darm was gemacht hat, wie sich die letzte halbe Stunde angefuehlt hat",
+        "Abends Beine hochlegen statt Faszienrolle — nach 2:30 bei Hitze ist Ruhe mehr wert"
+      ],
+      "fueling": [
+        "6 Squeezy Basic statt 5: 2:30 h x 45 g/h = 112 g = 5,5 Gels. Am 09.08. warst du mit 4 Gels auf 2:20 h bei 36 g/h und hast selbst gesagt, das war fast zu wenig. Erstes Gel bei Min 30, dann alle 25-30 min. Je Gel 150-250 ml reines Wasser.",
+        "L-Glutamin 15 g (3 Loeffel ESN) in ~400 ml Wasser, 90-120 min vor dem Start. Dritter Anlauf, diesmal vollstaendig — abgemessen steht es seit gestern neben den Schuhen.",
+        "Fruehstueck 5:15: 2 Semmeln oder Toast mit Marmelade + 1 Banane, ~80-90 g KH. Kein Honig. Kaffee ist hier Werkzeug, nicht Trigger — er bringt den Darm rechtzeitig in Gang.",
+        "Elektrolytflasche mit VOLLER Tab, getrennt von den Gels. Bei diesen Temperaturen 500-700 mg Natrium pro Stunde, und die Flasche wird leer getrunken. Im Halbmarathon war es eine Viertel-Tab, von der du die Haelfte getrunken hast.",
+        "Trinkziel 4.000 ml ueber den Tag, davon ~1.000 waehrend des Laufs."
+      ],
+      "warnung": "89 % Regenwahrscheinlichkeit. Morgens ist es meist noch trocken, aber schau vor dem Start auf den Radar — bei Gewitter wird nicht diskutiert, dann verschiebst du. Und der zweite Punkt: 2:30 ist 10 min laenger als alles, was du in diesem Block gelaufen bist. Am 09.08. kam nach zwei Stunden Darmdruck und du bist durchgelaufen. Wenn er diesmal frueher kommt, ist Gehen kein Scheitern — der Lauf zaehlt trotzdem.",
+      "coachSays": "Frueh, langsam, sechs Gels, volle Flasche. Alles andere ist Deko."
+    }
   },
-  "2026-08-11": {
-   "ziel_ml": 3300,
-   "grund": "Basis 2.455 (33 ml x 74,4 kg) + Intervalle 75 min (+750) + 29,7 Grad (+500) - 400 Kaffee-Abzug = 3.305, gerundet 3.300"
+  "woche": {
+    "start": "2026-08-10",
+    "fokus": "Peak, Block 2, Woche 2. Mo 10.08 Mobi 8:45, kein Lauf · Di 11.08 Intervalle 1:15 / 110 TSS, morgens wegen 29,7 Grad · Mi 12.08 Muckibude 3 (27 Saetze / 16 Uebungen), Slot 12:30 nach der Physio · Do 13.08 Tempolauf 55 min / 79 TSS nach der Mammografie, 30,7 Grad · Fr 14.08 'Muckibude schnell' (27 Saetze / 18 Uebungen, enthaelt Single Leg Calf Raise) · Sa 15.08 Mobi 17 min + /essensplan + Glutamin abmessen · So 16.08 Long Run 2:30 / 240 TSS — wieder der laengste des Blocks. Ausgangslage: die Vorwoche war die kompletteste des Blocks — 38,5 Lauf-km UND beide Kraft-Sessions voll (Mi 25/27 Saetze, Fr 27/27). Die Baustelle liegt nicht im Training, sondern im Fueling.",
+    "luecken": [
+      "DIE Luecke der Woche: Fluessigkeit, und sie trifft die falsche Woche. An den fuenf Tagen, an denen der Tracker lief, Schnitt 1.820 ml — 07.08. 1.100, 08.08. 1.200, 10.08. 1.600, 13.08. 2.000. Die Ziele lagen bei 2.800-3.600. Der Beleg, warum das zaehlt: am 08.08., dem Vortag des letzten Long Runs, waren es 1.200 ml, und am Tag danach lautete Steffis eigenes Urteil '4 Gels waren fast zu wenig'. Nicht das Gel war knapp, der Vortag war es. Sonntag ist derselbe Aufbau, 10 min laenger, bei 31,4 Grad. Fix: 500-ml-Flasche auf den Schreibtisch, bevor der Rechner aufgeht.",
+      "Erfassungslücke Di 11.08. und Mi 12.08.: die App war an beiden Tagen komplett aus — kein Morgencheck, kein Trink-Eintrag, kein Teller, keine Haken. Steffi hat es am 13.08. selbst benannt ('hatte keine Lust auf der App Zeit zu verbringen... es war definitiv zu wenig') und wieder angefangen. Kein Vorwurf, aber eine Konsequenz fuer die Auswertung: fuer diese zwei Tage gibt es keine Zahlen, und der Wochenschnitt ist entsprechend luecken behaftet. Was NICHT daraus folgt: dass Training oder Kraft ausgefallen sind (Regel DQ-1).",
+      "Wochenkonto Kette & Sehnen 1 von 12 — nur der Achilles-Snack vom Montag. Fuer diese Woche realistisch erreichbar sind noch 4 von 12: Freitag Achilles + Po an die Kraft, Samstag Beckenboden. Pogos (0/2) und Hamstring (0/2) werden explizit gestrichen statt stillschweigend verschoben. Fuer naechste Woche gehoeren Pogos und Hamstring auf feste Slots (Di und Fr), sonst wiederholt sich das.",
+      "Protein liegt weiter im Schnitt um 100-110 g gegen ein Minimum von 117 g. Der Hebel ist unveraendert der Vormittag: die Fruehstuecke bringen 6-25 g, die Leucin-Schwelle ab 50 verlangt 25-35 g pro Mahlzeit. Ein Skyr oder Whey-Shake bis 11 Uhr schliesst es.",
+      "Was laeuft: Erholung. Readiness sieben Tage in Folge zwischen 86 und 92, HRV 28-40 ms (gestern 40 — der hoechste Einzelwert seit Wochen), Schlaf im Schnitt 7,8 h, Achilles-Morgencheck durchgehend 'ok'. In einer Peak-Woche mit 30-Grad-Tagen ist das nicht selbstverstaendlich."
+    ]
   },
-  "2026-08-12": {
-   "ziel_ml": 2800,
-   "grund": "Basis 2.455 + Kraft 45 min (halb gezaehlt, +225) + 29,6 Grad (+500) - 400 Kaffee-Abzug = 2.780, gerundet 2.800"
+  "trends": {
+    "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter. Ruhepuls: ebenfalls auf Oura umgestellt (Loader + Oura-Aera-Wochen), ABER Historie behalten — Garmin & Oura stimmen beim RHR auf ~1 bpm ueberein (keine Klippe), und die lange Linie zeigt den Fitness-Trend (Jahresanfang ~55 -> jetzt ~50 bpm). | 26.07.: Wochen-km rueckwirkend aus den TrainingPeaks-Workout-Exporten korrigiert (06.07: 10->16,4 · 13.07: 23,9->36,4 · 20.07: 11,3->36,1) — das Journal hatte Luecken, der TP-Export ist vollstaendig. | 30.07.: Woche 27.07 mit ~16,3 km als LAUFENDER Stand eingetragen (Intervalle 27.07 ~8,4 km — letztes Intervall GI-bedingt abgebrochen; Tempolauf 29.07 ~7,9 km), beides aus dem Journal geschaetzt, da der TrainingPeaks-Workout-Export noch vom 26.07 ist. Der Long Run 2:00 h am 02.08 fehlt noch — beim Sonntags-Export korrigieren. | 03.08.: Woche 27.07 aus dem TP-Export 'workouts 9' EXAKT auf 37,2 km korrigiert (Schaetzung war 40,3): Intervalle 27.07 10,01 km / 102 TSS · Tempolauf 29.07 7,58 km / 86 TSS · 'Spannung halten' 30.07 1,91 km · Laktat-Test 31.07 2,09 km · Long Run 01.08 15,56 km / 174 TSS. Wandern 02.08 (9,38 km) zaehlt bewusst NICHT als Lauf-km. Trotzdem hoechste Lauf-Woche seit dem Halbmarathon. Nebenbefund aus dem Export: sie schwimmt fast taeglich (Open Water 4-23 min) — das taucht in keiner Planung auf, ist aber echtes Cross-Training.",
+    "wochen": [
+      {
+        "woche": "2026-01-05",
+        "hrv": null,
+        "rhr": 55.1,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-01-12",
+        "hrv": null,
+        "rhr": 55.4,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-01-19",
+        "hrv": null,
+        "rhr": 55.4,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-01-26",
+        "hrv": null,
+        "rhr": 55.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-02-02",
+        "hrv": null,
+        "rhr": 55.6,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-02-09",
+        "hrv": null,
+        "rhr": 53.9,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-02-16",
+        "hrv": null,
+        "rhr": 54.7,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-02-23",
+        "hrv": null,
+        "rhr": 56.1,
+        "schlaf": 7.8
+      },
+      {
+        "woche": "2026-03-02",
+        "hrv": null,
+        "rhr": 58.3,
+        "schlaf": 7.5
+      },
+      {
+        "woche": "2026-03-09",
+        "hrv": null,
+        "rhr": 54.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-03-16",
+        "hrv": null,
+        "rhr": 55.1,
+        "schlaf": 8.3
+      },
+      {
+        "woche": "2026-03-23",
+        "hrv": null,
+        "rhr": 54.6,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-03-30",
+        "hrv": null,
+        "rhr": 53.6,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-04-06",
+        "hrv": null,
+        "rhr": 52.9,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-04-13",
+        "hrv": null,
+        "rhr": 54.2,
+        "schlaf": 6.2
+      },
+      {
+        "woche": "2026-04-20",
+        "hrv": null,
+        "rhr": 52.7,
+        "schlaf": 6.8
+      },
+      {
+        "woche": "2026-05-11",
+        "hrv": null,
+        "rhr": 53.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-05-18",
+        "hrv": null,
+        "rhr": 53.9,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-05-25",
+        "hrv": null,
+        "rhr": 52.6,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-06-01",
+        "hrv": null,
+        "rhr": 52.9,
+        "schlaf": 8.5
+      },
+      {
+        "woche": "2026-06-08",
+        "hrv": null,
+        "rhr": 54.0,
+        "schlaf": 7.7
+      },
+      {
+        "woche": "2026-06-15",
+        "hrv": null,
+        "rhr": 54.6,
+        "schlaf": 8.0
+      },
+      {
+        "woche": "2026-06-22",
+        "hrv": 28.2,
+        "rhr": 52.2,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-06-29",
+        "hrv": 34.2,
+        "rhr": 53.0,
+        "schlaf": 7.6
+      },
+      {
+        "woche": "2026-07-06",
+        "hrv": 30.6,
+        "rhr": 50.4,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-07-13",
+        "hrv": 25.2,
+        "rhr": 50.8,
+        "schlaf": 8.4
+      },
+      {
+        "woche": "2026-07-20",
+        "hrv": 23.0,
+        "rhr": 51.9,
+        "schlaf": 7.67
+      },
+      {
+        "woche": "2026-07-27",
+        "hrv": 23.0,
+        "rhr": 52.7,
+        "schlaf": 8.1
+      },
+      {
+        "woche": "2026-08-03",
+        "hrv": 29.5,
+        "rhr": 55.1,
+        "schlaf": 8.16
+      }
+    ],
+    "kmWochen": [
+      {
+        "woche": "2026-04-27",
+        "km": 11.3
+      },
+      {
+        "woche": "2026-05-04",
+        "km": 11.7
+      },
+      {
+        "woche": "2026-05-11",
+        "km": 13.9
+      },
+      {
+        "woche": "2026-05-18",
+        "km": 26.4
+      },
+      {
+        "woche": "2026-05-25",
+        "km": 24.9
+      },
+      {
+        "woche": "2026-06-01",
+        "km": 33.6
+      },
+      {
+        "woche": "2026-06-08",
+        "km": 32.2
+      },
+      {
+        "woche": "2026-06-15",
+        "km": 30.1
+      },
+      {
+        "woche": "2026-06-22",
+        "km": 28.4
+      },
+      {
+        "woche": "2026-06-29",
+        "km": 38.4
+      },
+      {
+        "woche": "2026-07-06",
+        "km": 16.4
+      },
+      {
+        "woche": "2026-07-13",
+        "km": 36.4
+      },
+      {
+        "woche": "2026-07-20",
+        "km": 36.1
+      },
+      {
+        "woche": "2026-07-27",
+        "km": 37.2
+      },
+      {
+        "woche": "2026-08-03",
+        "km": 38.5
+      }
+    ]
   },
-  "2026-08-13": {
-   "ziel_ml": 3600,
-   "grund": "Basis 2.455 + Tempolauf 55 min (+550) + 30,7 Grad (+1.000, ab 30 Grad) - 400 Kaffee-Abzug = 3.605, gerundet 3.600"
-  }
- },
- "briefings": {
-  "2026-08-03": {
-   "headline": "Blutabnahme 8:00 nuechtern — und heute noch trinken, sonst misst du deinen Wasserhaushalt.",
-   "kalender": "08:00-09:00 Blutentnahme nuechtern · 10:00-12:00 'I love controversy' · 12:15 Kette-Nachholblock · 14:00 und 14:35 zwei Calls. Ganztaegig 'Steinbeiss Coaching Sessions'. Kein Lauf heute — steht so im Plan.",
-   "einheit": "KEIN Lauf. Mobi 17 min ('nicht zu sehr dehnen, Fokus mobilisieren') und ab 12:15 der Kette-Nachholblock aus dem Wochenkonto: Glute-Aktivierung 5 min, dann Achilles-Snack, Po-Snack, Hamstring-Snack. Die Abnahme ist dann durch, der Long Run zwei Tage her — jetzt ist der richtige Moment dafuer.",
-   "minimum": [
-    "VOR der Abnahme: 1-2 Glaeser stilles Wasser. Erlaubt, und dehydriert waeren Haemoglobin, Haematokrit und Ferritin falsch hoch",
-    "Dem Arzt/Labor SAGEN: taeglich 3-5 g Kreatin (hebt Serum-Kreatinin), Laktat-Test war Fr, Long Run Sa frueh, gestern 3 h gewandert",
-    "Keine Supplements vor der Abnahme — D3+K2 und Omega-3 brauchen ohnehin Fett, also danach zum Fruehstueck",
-    "Kette-Nachholblock ab 12:15: Achilles-Snack ZUERST",
-    "Trinken 3.200 ml — bei 35 Grad und nach dem gestrigen 1.200-ml-Tag"
-   ],
-   "bonus": [
-    "Test-Ergebnisse vom 31.07 diktieren, falls die Laktatkurve schon vorliegt",
-    "Wochen-Reflektion (Montags-Reminder): letzte Woche war Test + Long Run + Wandern, lohnt einen Blick",
-    "Heute KEINE Pogos — HRV 18/19 zwei Tage in Folge, Plyo gehoert nur auf erholte Beine"
-   ],
-   "fueling": [
-    "Nuechtern bis 09:00, dann sofort ein richtiges Fruehstueck: 30-40 g Protein + Carbs. Du bist dann 13 h ohne Essen.",
-    "Danach die Supplements nachholen, die morgens ausgefallen sind — inklusive der 2 Omega-3.",
-    "Kreuzbluetler heute reinnehmen (Brokkoli, Rucola, Kohl) plus Rote Bete oder Artischocke: Leber-Support fuer die GGT-Frage.",
-    "Nach dem Kraftblock 30-40 g Protein binnen 40 min.",
-    "Trinken 3.200 ml. Gestern standen 1.200 bei 3 h Wandern und 29,5 Grad — das war der schlechteste Tag seit Tracker-Start."
-   ],
-   "warnung": "Neu aus den Daten von heute Nacht: HRV steht bei 18 ms (01.08) und 19 ms (02.08) — zwei Tage in Folge die tiefsten Werte seit Wochen, gegen einen Schnitt von 23-25. Das ist der Long Run plus drei Stunden Wandern an einem Tag, der als kompletter Ruhetag geplant war. Schlaf (8,3 / 7,8 h) und Readiness (84/83) tragen noch, also kein Alarm — aber die Erholung hat schlicht nicht stattgefunden. Heute deshalb: Kraftblock ja (der belastet das System kaum), Pogos NEIN. Und morgen stehen 1:35 Intervalle bei 34,9 Grad an — wenn die HRV morgen frueh nicht mindestens Richtung 22 zurueckkommt, laeufst du die am oberen Pace-Ende und ohne Ehrgeiz. Der Kreatin-Hinweis ist heute das Wichtigste, was du sagen kannst. Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion — sagst du es nicht, sieht die Niere auf dem Papier schlechter aus, als sie ist. Auspausen bringt nichts (Auswaschzeit Wochen), sagen bringt alles. Und erwaehne die 3 Stunden Wandern von gestern: geplant war ein kompletter Ruhetag, Wandern ist zwar deutlich harmloser als Laufen, aber der Arzt soll die Werte richtig einordnen.",
-   "coachSays": "Zehn Tage auf diesen Termin gewartet. Zwei Glaeser Wasser vorher und ein Satz ueber Kreatin entscheiden, ob die Zahlen etwas wert sind."
-  },
-  "2026-08-04": {
-   "headline": "Intervalle 1:35 — frueh raus, bei 34,9 Grad ist das keine Stilfrage.",
-   "kalender": "Frei. Der ganze Tag gehoert dir, also gibt es keinen Grund, den Lauf nach hinten zu schieben.",
-   "einheit": "Intervalle 1:35 / 74 TSS — die leichtere der beiden Intervall-Einheiten dieser Woche. Coachin: 'Whoooooohoooo du schaffst das Steffi!' Danach After Run Yoga 11 min. START 6:15. Tageshoch 34,9 Grad (gefuehlt 35,6); zwischen 6:15 und 7:50 hast du rund 20-23 Grad. Pace-Korridor 7:00-8:00/km, bei der Hitze am OBEREN Ende (Regel PC-1, Hitze-Ausnahme).",
-   "minimum": [
-    "Wecker so, dass du 6:15 an der Tuer stehst — das ist heute die eigentliche Entscheidung",
-    "Vollstaendige Darmentleerung vor dem Start (Regel GI-1) — deshalb nicht auf den letzten Druecker aufstehen",
-    "Pre-Run Aktivierung 3 min + 3x30 s Zehenstand",
-    "Elektrolytflasche VOLLE Tab / 500 ml, und leer trinken (Regel FL-1)",
-    "Post-Run binnen 40 min: 30-40 g Protein + Carbs",
-    "Trinken 4.000 ml — hoechstes Tagesziel der Woche"
-   ],
-   "bonus": [
-    "After Run Yoga 11 min",
-    "Pogos 3×20 VOR dem Lauf auf frische Beine (Block-2-Dosis), wenn die Achilles ruhig ist",
-    "Wochenkonto: was gestern nicht gepasst hat, geht heute nach dem Lauf"
-   ],
-   "fueling": [
-    "Kein Nuechterntraining: 40-50 g Carbs 45-60 min vorher (Toast mit Marmelade + halbe Banane). Bei 1:35 ist das Pre-Fuel der Hebel.",
-    "1 Squeezy Basic bei Min 40-45 mit 150-250 ml REINEM Wasser, ein zweites gegen Min 80 wenn es sich gut anfuehlt.",
-    "Elektrolytflasche strikt getrennt von den Gels — nie mischen. Bei 35 Grad 500-700 mg Natrium/h.",
-    "Trinken unter Tempo UEBEN: 2 Schlucke mitten im schnellen Abschnitt, auch wenn es stoert (Regel FL-2).",
-    "Danach 30-40 g Protein binnen 40 min. Am Long Run hat der Post-Run-Teller funktioniert — gleiches Muster."
-   ],
-   "warnung": "Zweitheissester Tag der Woche und die laengste Einheit bis Sonntag. Wenn du erst um 9 losgehst, laeufst du faktisch eine harte Einheit statt einer moderaten. Und die Achilles: am Samstag hast du sie links an den Huegeln gespuert, in den neuen Hoka Bondi. Heute bewusst flach laufen und beobachten — kommt das Ziehen auf ebener Strecke wieder, liegt es am Schuh und nicht am Profil.",
-   "coachSays": "6:15 bei 21 Grad oder 9:00 bei 30 — dieselbe Einheit, zwei voellig verschiedene Belastungen. Der Wecker ist heute dein wichtigstes Trainingsgeraet."
-  },
-  "2026-08-05": {
-   "headline": "Kraft-Tag, Block 2 startet — und endlich mal Regen im Anmarsch.",
-   "kalender": "08:00-08:30 Claude Code Weekly, 09:00-12:00 'I love Podcasts'. Kraft davor oder nach 12:00.",
-   "einheit": "Muckibude 3 (27 Saetze / 16 Uebungen) + Breathing + das 1-Minuten-Radtraining aus dem Plan. Kein Lauf. Bester Slot: 6:45-7:45 vor dem Weekly, sonst ab 12:00. Block 2 des Kraft-Plyo-Plans startet — Pogos jetzt 3×20 als Standard, dazu kommen ab dieser Woche einbeinige Mini-Hops (2×8/Seite) als neue Variante.",
-   "minimum": [
-    "Muckibude 3 mit eigenen Rep-Vorgaben — im TrainingPeaks stehen keine, deshalb waren es am 28.07 nur 30 min",
-    "Glute-Aktivierung 5 min VOR der Session (Regel KR-1 gegen die Hamstring-Kraempfe)",
-    "Wochenkonto: Achilles-Snack und Hamstring-Snack gehoeren auf einen Kraft-Tag",
-    "Trinken 3.200 ml",
-    "Alle drei Supplement-Slots"
-   ],
-   "bonus": [
-    "Pogos 3×20 nach dem Warm-up, auf frische Beine",
-    "Radtraining laut Plan (1 TSS — symbolisch, aber es steht drin)",
-    "Kraft-Tag diktieren (Regel DOK-1): krampfen die Hamstrings mit den KR-1-Fixes noch?"
-   ],
-   "fueling": [
-    "Vor der Kraft 30-40 g Carbs, kein Nuechterntraining auch nicht bei Kraft.",
-    "Danach 30-40 g Protein binnen 40 min — an Kraft-Tagen faellt der Post-Run-Shake weg, und mit ihm 40 g. Das war zuletzt das Muster (28.07: 71 g gesamt).",
-    "Fetter Fisch waere diese Woche faellig (Soll 2x/Woche): Lachs, Makrele oder Hering.",
-    "Trinken 3.200 ml — 30,9 Grad, aber 83 % Regenwahrscheinlichkeit, also vielleicht der erste ertraegliche Tag.",
-    "Huelsenfruechte (Soll 3x/Woche) mit einer Vitamin-C-Quelle kombinieren — Eisen, Ferritin faellt seit April."
-   ],
-   "warnung": "Kraft ohne Reps ist Erhaltung, kein Aufbau — das hast du am 28.07 selbst gemerkt ('das ist zu wenig'). Nimm die Vorgaben aus dem Kraft-Plyo-Plan: Hip Thrust 4×8 schwer, Soleus 3×10 mit 3 s exzentrisch, Sliding Leg Curl 3×8. Acht Wochen vor Berlin ist das die letzte Phase, in der du noch aufbaust — ab dem 30.08 gibt es keine neuen Uebungen mehr, ab dem 07.09 nur noch Erhalt. Und morgen frueh steht die VO2max Ballerei um 6:15 an — 10x 1 min bei 5:37-6:01/km. Heute deshalb die Beine nicht ruinieren: Plyo ja, aber der Deckel von ~100 Bodenkontakten gilt.",
-   "coachSays": "Block 2 heisst: die Gewichte steigen noch vier Wochen, dann nie wieder vor Berlin. Nutz das Fenster."
-  },
-  "2026-08-11": {
-   "headline": "Intervalle morgens — und abends die erste Doppeldosis aus dem Kette-Konto.",
-   "kalender": "Ferien laufen. 19:00-20:00 Zoom-Workshop (Allie K. Miller / Mark Cuban), Elias fliegt um 22:30. Der Vormittag gehoert dir komplett.",
-   "einheit": "Intervalle 1:15 / 110 TSS — die haerteste Lauf-Einheit der Woche. Bester Slot: 6:45-8:00. Grund: 29,7 Grad Tagesmaximum, und am 04.08. bist du dieselbe Einheit um 19 Uhr bei 28 Grad gelaufen. Morgens ist es kuehler, der Darm ist leer (Regel GI-1: drei Stunden Vorlauf, vollstaendige Entleerung — genau so hast du es Sonntag gemacht und es hat gehalten), und der Abend ist ohnehin verplant. Pace-Korridor 7:00-8:00/km fuer die lockeren Teile; bei der Hitze ans obere Ende, das ist ausdruecklich erlaubt (Regel PC-1).",
-   "minimum": [
-    "Intervalle 1:15 morgens — vorher Pre-Run-Aktivierung 3 min und 3x30 s Zehenstand",
-    "Direkt danach 30-40 g Protein",
-    "ABENDS Hamstring-Snack: Sliding Leg Curl 3x6 (verkuerzte ROM, 3-4 s exzentrisch) + Single Leg Deadlift 3x8 pro Seite. WICHTIG: 5 min Glute-Aktivierung davor (Regel KR-1) — exzentrische Hamstring-Arbeit am Abend eines Intervall-Tages ist sonst Krampf-Risiko. Krampft es trotzdem: abbrechen und ins Tagebuch",
-    "ABENDS Beckenboden-Snack 3 min",
-    "Trinken 3.300 ml"
-   ],
-   "bonus": [
-    "After Run Yoga 11 min — deine Coachin hat es extra rausgesucht",
-    "Kurz ins Tagebuch: wie fuehlen sich die Hoka Bondi bei Tempo an? Du hast sie am 01.08. und 04.08. zweimal als instabil beschrieben"
-   ],
-   "fueling": [
-    "Pre-Fuel: 40-60 g Carbs 60-90 min vorher (Toast mit Marmelade + halbe Banane). Kein Nuechterntraining bei intensiv — das ist nicht verhandelbar.",
-    "Im Lauf: 1 Squeezy Basic bei Minute 40-45 mit 200 ml Wasser. Am 04.08. hast du zwei Gels gut vertragen, das System steht.",
-    "Elektrolytflasche 500 ml mit VOLLER Tab getrennt nebenher — und leer trinken. Am 04.08. waren 500 ml Wasser nach deinem eigenen Urteil 'etwas zu wenig'.",
-    "Nach dem Lauf 30-40 g Protein binnen 40 min.",
-    "Trink-Ist letzte Woche: Schnitt 2.010 ml pro Tag bei Zielen um 3.000-3.600. Zwei Tage lagen bei 1.100 und 1.200 ml. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht."
-   ],
-   "warnung": "Die Kette-Snacks sind NICHT Teil der Muckibude — das ist seit heute geklaert, und damit hat der Soleus seit dem 31.07. keinen schweren Reiz mehr gesehen und der Glute keinen einzigen Hip Thrust. Genau die zwei Strukturen, die im Halbmarathon zuerst aufgegeben haben: Beinrueckseite ab km 14-16 leer, Waden am Krampfrand. Zwoelf Dosen in einer Woche sind viel — deshalb liegen sie in Zweier- und Dreierbloecken an den Tagen, an denen sie hingehoeren, und Samstag/Sonntag bleiben frei. Wenn ein Block wegfaellt: Achilles zuerst retten, dann Po, dann Hamstring, dann Beckenboden.",
-   "coachSays": "Die Muckibude laeuft, die Laeufe laufen. Was fehlt, sind acht bis zwanzig Minuten am Abend — und genau die entscheiden, ob dich in Berlin bei km 30 die Beinrueckseite traegt."
-  },
-  "2026-08-12": {
-   "headline": "Kraft-Tag Nummer drei in Folge — jetzt wird es interessant: steigen die Gewichte?",
-   "kalender": "08:00-08:30 Claude Code Weekly, 09:00-12:00 'I love Podcasts', 09:30-10:30 Physio bei Tina. Der Vormittag ist dicht — Kraft danach, ab ca. 12:30.",
-   "einheit": "Muckibude 3 — 27 Saetze / 16 Uebungen (Warm Up, Reverse Lunge, Bulgarian Split Squat, High Plank Shoulder Tap + 8 weitere). Kein Lauf. Slot: 12:30-13:15, direkt nach der Physio, da sind Huefte und Sprunggelenk schon gelockert. Am 05.08. hast du 25 von 27 Saetzen geschafft, am 07.08. 27 von 27 — die Session steht. Die offene Frage ist nicht mehr, OB sie stattfindet, sondern mit welchem Gewicht: in TrainingPeaks stehen keine Last- oder Rep-Vorgaben, und du hast am 09.08. selbst gesagt, du machst 'zu wenig Kraft'. Schreib heute die Gewichte auf.",
-   "minimum": [
-    "Pogos 3x20 direkt nach dem Warm-up, auf frische Beine — VOR der Kraft",
-    "Muckibude 3 vollstaendig, 27 von 27 Saetzen, Gewichte notieren (RPE 8: fallen die letzten zwei Wiederholungen leicht, ist es zu wenig)",
-    "Direkt im Anschluss Achilles-Snack: Bent-Knee Calf Raise 3x10 mit 3 s runter + Wadenheber gestreckt 3x10. Erster schwerer Soleus-Reiz seit dem 31.07.",
-    "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite",
-    "Trinken 2.800 ml"
-   ],
-   "bonus": [
-    "Schwimmen abends, wenn der Tag es hergibt",
-    "Kraft-Tag diktieren (Regel DOK-1): welche Gewichte beim Hip Thrust, und krampfen die Hamstrings mit den KR-1-Fixes noch?"
-   ],
-   "fueling": [
-    "Vor der Kraft 30-40 g Carbs — auch Kraft nicht nuechtern. Nach der Physio um 10:30 ist ein guter Zeitpunkt.",
-    "Danach 30-40 g Protein binnen 40 min. An Kraft-Tagen faellt der Post-Run-Shake weg und mit ihm der halbe Proteintag: der 07.08. kam auf 110 g.",
-    "Protein-Schnitt der letzten Woche liegt bei rund 105 g — 12 g unter dem Minimum von 117 g. Ein Skyr (200 g = 25 g) am Nachmittag schliesst die Luecke komplett.",
-    "Fetter Fisch ist diese Woche noch offen (Soll 2x): Lachs oder Makrele einplanen.",
-    "Trinken 2.800 ml — kein Lauf, aber 29,6 Grad."
-   ],
-   "warnung": "Drei Snacks plus 45 min Muckibude sind ein voller Kraft-Tag — plan 70 Minuten ein, nicht 45. Reihenfolge ist nicht beliebig: Pogos brauchen frische Beine und stehen deshalb VOR der Kraft, der Achilles-Snack gehoert ans Ende. Wenn die Zeit nicht reicht, faellt der Po-Snack (steht Freitag nochmal) — Pogos und Achilles nicht.",
-   "coachSays": "Heute ist der Tag, an dem die Kette wieder anfaengt zu zaehlen. Pogos, Muckibude mit Zahlen, Waden schwer, Hip Thrust. In dieser Reihenfolge."
-  },
-  "2026-08-13": {
-   "headline": "Mammografie um acht, Tempolauf danach — der heisseste Tag der Woche.",
-   "kalender": "08:00-08:15 Radiologie Herrsching (Mammografie, Seestrasse 43). Sonst frei. Der Lauf passt danach, ab ca. 09:15.",
-   "einheit": "Tempolauf 0:55 / 79 TSS. Coachin-Note: 'Bitte gut verpflegen!' Slot: 09:15-10:15, am See im Schatten. 30,7 Grad Tagesmaximum — das ist der PC-1-Ausnahmefall: nach Gefuehl deckeln, die Tempo-Abschnitte nicht auf die Sekunde jagen. Ein Tempolauf bei 30 Grad ist bereits eine harte Einheit, auch wenn die Uhr etwas anderes sagt. Abends laufen ist keine Alternative (Regel GI-2).",
-   "minimum": [
-    "Tempolauf 55 min am Vormittag — vorher Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand",
-    "Post-Run-Protein 30-40 g binnen 40 min",
-    "ABENDS Hamstring-Snack: Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8 pro Seite (48 h nach Dienstag, passt)",
-    "ABENDS Beckenboden-Snack 3 min — damit stehst du bei 3 von 3",
-    "Trinken 3.600 ml — hoechstes Ziel der Woche"
-   ],
-   "bonus": [
-    "Wadenheber locker 2x15 nach dem Lauf",
-    "Faszienrolle abends: Quads, IT-Band, Wade"
-   ],
-   "fueling": [
-    "'Bitte gut verpflegen' heisst hier konkret: 40-60 g Carbs 60-90 min vorher. Die Mammografie braucht keine Nuechternheit — friss vor dem Termin.",
-    "Im Lauf 1 Squeezy Basic bei Minute 30-35 mit 200 ml Wasser (bei 55 min intensiv frueher als sonst, damit er noch wirkt).",
-    "Elektrolytflasche mit voller Tab — bei 30 Grad 500-700 mg Natrium pro Stunde. Und leer trinken.",
-    "Danach 30-40 g Protein binnen 40 min plus Carbs — an heissen Tagen faellt der Appetit ab, plane das Essen vorher.",
-    "Trinken 3.600 ml: das sind ueber den Tag verteilt neun Glaeser. Ohne Flasche am Schreibtisch wird das nichts."
-   ],
-   "warnung": "30,7 Grad bei einer Tempo-Einheit. Wenn der Puls im Tempo-Abschnitt ueber 155 klettert und sich das falsch anfuehlt, nimm Tempo raus — deine LT2 liegt bei HF 151, alles darueber ist bei dieser Hitze kein Trainingsreiz mehr, sondern nur Hitzestress. Lieber 30 Sekunden pro Kilometer langsamer als eine Woche Loch danach.",
-   "coachSays": "Termin, Lauf, abends zehn Minuten Kette. Damit hast du am Donnerstagabend acht von zwoelf Dosen — und den Rest holt der Freitag."
-  }
- },
- "woche": {
-  "start": "2026-08-10",
-  "fokus": "Peak, Block 2, Woche 2. Mo 10.08 Mobi 8:45, kein Lauf · Di 11.08 Intervalle 1:15 / 110 TSS, morgens wegen 29,7 Grad · Mi 12.08 Muckibude 3 (27 Saetze / 16 Uebungen), Slot 12:30 nach der Physio · Do 13.08 Tempolauf 55 min / 79 TSS nach der Mammografie, 30,7 Grad · Fr 14.08 'Muckibude schnell' (27 Saetze / 18 Uebungen, enthaelt Single Leg Calf Raise) · Sa 15.08 Mobi 17 min + /essensplan + Glutamin abmessen · So 16.08 Long Run 2:30 / 240 TSS — wieder der laengste des Blocks. Ausgangslage: die Vorwoche war die kompletteste des Blocks — 38,5 Lauf-km UND beide Kraft-Sessions voll (Mi 25/27 Saetze, Fr 27/27). Die Baustelle liegt nicht im Training, sondern im Fueling.",
-  "luecken": [
-   "DIE Luecke der Woche: Kette & Sehnen. Am 10.08. geklaert — diese Uebungen sind NICHT Teil der Muckibude und muessen extra gemacht werden. Damit steht fest: der Soleus hat seit dem 31.07. keinen schweren Reiz mehr gesehen, Hip Thrust, Sliding Leg Curl und Pogos stehen seit Einfuehrung des Kontos am 30.07. bei je 0-1. Das sind genau die Strukturen, die im Halbmarathon zuerst aufgegeben haben (Beinrueckseite ab km 14-16 leer, Waden am Krampfrand) und die ueber die letzten 12 km in Berlin entscheiden. Steffi hat sich diese Woche ausdruecklich darauf festgelegt. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
-   "Hydration bleibt zaeh: Schnitt der letzten sieben Tage 2.010 ml gegen Ziele um 3.000-3.600. Zwei Tage bei 1.100 und 1.200 ml, davon einer der Vortag des Long Runs bei 30 Grad. Der Sonntag (3.200 ml) zeigt, dass es geht. Fix: Flasche an den Schreibtisch, bevor der Vormittag losgeht.",
-   "Protein liegt im Schnitt bei rund 105 g, das Minimum ist 117 g. Kein Drama, aber systematisch: die Fruehstuecke bringen 6-25 g, die Leucin-Schwelle ab 50 verlangt 25-35 g pro Mahlzeit. Ein Skyr oder ein Whey-Shake am Vormittag schliesst es.",
-   "Supplements: der Mittags-Slot (2x Omega-3) stand letzte Woche 2 von 7 Tagen, der Abend-Slot 3 von 7. Der Morgen-Slot laeuft mit 5 von 7. Ohne den Mittags-Slot kommst du auf 600 statt 1.200 mg EPA+DHA — der halbe Effekt.",
-   "Offene Frage statt Vorwurf: das Wochenkonto 'Kette & Sehnen' zeigt fuer die Vorwoche 0 Tipps. Waren Wadenheber, Hip Thrust und Co. in der Muckibude mit drin (dann ist die Karte nur Buchhaltung und wir passen sie an), oder sind sie separat liegengeblieben? Kurz ins Tagebuch sagen, dann weiss ich, ob ich sie ueberhaupt noch einplanen muss."
-  ]
- },
- "trends": {
-  "kommentar": "HRV-Linie ab 22.06 = reine Oura-Nacht-HRV (rMSSD, gegen Oura-API verifiziert). Garmins eigener 00:00-Wert liest methodenbedingt ~13 ms hoeher und wird bewusst NICHT mehr eingemischt — dadurch verschwindet die kuenstliche Klippe (fruehere Wochen zeigten Garmin, die letzte Oura). Oura-zu-Oura gelesen: Ende Juni Hoch ~34 ms, Mitte Juli auf ~25 ms gesunken (Reload nach Karwendel + Build-2-Ramp) — Readiness (83-92) & Schlaf (Oe 91) tragen. HRV-Absolutwerte sind zwischen Geraeten nicht vergleichbar; nur Oura-zu-Oura werten. RHR/Schlaf-Linien laufen wie gehabt (Garmin/gemischt) weiter. Ruhepuls: ebenfalls auf Oura umgestellt (Loader + Oura-Aera-Wochen), ABER Historie behalten — Garmin & Oura stimmen beim RHR auf ~1 bpm ueberein (keine Klippe), und die lange Linie zeigt den Fitness-Trend (Jahresanfang ~55 -> jetzt ~50 bpm). | 26.07.: Wochen-km rueckwirkend aus den TrainingPeaks-Workout-Exporten korrigiert (06.07: 10->16,4 · 13.07: 23,9->36,4 · 20.07: 11,3->36,1) — das Journal hatte Luecken, der TP-Export ist vollstaendig. | 30.07.: Woche 27.07 mit ~16,3 km als LAUFENDER Stand eingetragen (Intervalle 27.07 ~8,4 km — letztes Intervall GI-bedingt abgebrochen; Tempolauf 29.07 ~7,9 km), beides aus dem Journal geschaetzt, da der TrainingPeaks-Workout-Export noch vom 26.07 ist. Der Long Run 2:00 h am 02.08 fehlt noch — beim Sonntags-Export korrigieren. | 03.08.: Woche 27.07 aus dem TP-Export 'workouts 9' EXAKT auf 37,2 km korrigiert (Schaetzung war 40,3): Intervalle 27.07 10,01 km / 102 TSS · Tempolauf 29.07 7,58 km / 86 TSS · 'Spannung halten' 30.07 1,91 km · Laktat-Test 31.07 2,09 km · Long Run 01.08 15,56 km / 174 TSS. Wandern 02.08 (9,38 km) zaehlt bewusst NICHT als Lauf-km. Trotzdem hoechste Lauf-Woche seit dem Halbmarathon. Nebenbefund aus dem Export: sie schwimmt fast taeglich (Open Water 4-23 min) — das taucht in keiner Planung auf, ist aber echtes Cross-Training.",
-  "wochen": [
-   {
-    "woche": "2026-01-05",
-    "hrv": null,
-    "rhr": 55.1,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-01-12",
-    "hrv": null,
-    "rhr": 55.4,
-    "schlaf": 8.3
-   },
-   {
-    "woche": "2026-01-19",
-    "hrv": null,
-    "rhr": 55.4,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-01-26",
-    "hrv": null,
-    "rhr": 55.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-02-02",
-    "hrv": null,
-    "rhr": 55.6,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-02-09",
-    "hrv": null,
-    "rhr": 53.9,
-    "schlaf": 7.8
-   },
-   {
-    "woche": "2026-02-16",
-    "hrv": null,
-    "rhr": 54.7,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-02-23",
-    "hrv": null,
-    "rhr": 56.1,
-    "schlaf": 7.8
-   },
-   {
-    "woche": "2026-03-02",
-    "hrv": null,
-    "rhr": 58.3,
-    "schlaf": 7.5
-   },
-   {
-    "woche": "2026-03-09",
-    "hrv": null,
-    "rhr": 54.9,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-03-16",
-    "hrv": null,
-    "rhr": 55.1,
-    "schlaf": 8.3
-   },
-   {
-    "woche": "2026-03-23",
-    "hrv": null,
-    "rhr": 54.6,
-    "schlaf": 7.6
-   },
-   {
-    "woche": "2026-03-30",
-    "hrv": null,
-    "rhr": 53.6,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-04-06",
-    "hrv": null,
-    "rhr": 52.9,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-04-13",
-    "hrv": null,
-    "rhr": 54.2,
-    "schlaf": 6.2
-   },
-   {
-    "woche": "2026-04-20",
-    "hrv": null,
-    "rhr": 52.7,
-    "schlaf": 6.8
-   },
-   {
-    "woche": "2026-05-11",
-    "hrv": null,
-    "rhr": 53.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-05-18",
-    "hrv": null,
-    "rhr": 53.9,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-05-25",
-    "hrv": null,
-    "rhr": 52.6,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-06-01",
-    "hrv": null,
-    "rhr": 52.9,
-    "schlaf": 8.5
-   },
-   {
-    "woche": "2026-06-08",
-    "hrv": null,
-    "rhr": 54.0,
-    "schlaf": 7.7
-   },
-   {
-    "woche": "2026-06-15",
-    "hrv": null,
-    "rhr": 54.6,
-    "schlaf": 8.0
-   },
-   {
-    "woche": "2026-06-22",
-    "hrv": 28.2,
-    "rhr": 52.2,
-    "schlaf": 7.6
-   },
-   {
-    "woche": "2026-06-29",
-    "hrv": 34.2,
-    "rhr": 53.0,
-    "schlaf": 7.6
-   },
-   {
-    "woche": "2026-07-06",
-    "hrv": 30.6,
-    "rhr": 50.4,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-07-13",
-    "hrv": 25.2,
-    "rhr": 50.8,
-    "schlaf": 8.4
-   },
-   {
-    "woche": "2026-07-20",
-    "hrv": 23.0,
-    "rhr": 51.9,
-    "schlaf": 7.67
-   },
-   {
-    "woche": "2026-07-27",
-    "hrv": 23.0,
-    "rhr": 52.7,
-    "schlaf": 8.1
-   },
-   {
-    "woche": "2026-08-03",
-    "hrv": 29.5,
-    "rhr": 55.1,
-    "schlaf": 8.16
-   }
+  "beweise": [
+    {
+      "titel": "Der laengste Long Run des Blocks — und technisch der sauberste",
+      "text": "09.08.: 18,33 km in 2:20 h, Durchschnittspace 7:39/km bei Durchschnittspuls 136. Deine Leistungsdiagnostik vom 31.07. hat LT1 auf HF 139 bei 7:38/km gemessen. Du bist also exakt auf deiner aeroben Schwelle gelaufen, auf die Sekunde und einen Schlag darunter — ohne Uhr-Blick, ohne Vorgabe. Vor acht Wochen (14.06.) lag dieselbe Zone bei 9:30/km."
+    },
+    {
+      "titel": "Dein Ruhepuls ist diese Woche der niedrigste des ganzen Jahres",
+      "text": "10.-13.08.: 49, 46, 47, 47 bpm. Schnitt 47,3 gegen 55,1 in der Vorwoche und rund 55 zu Jahresbeginn. Dazu HRV 28-40 ms (gestern 40, der hoechste Einzelwert seit Wochen) und Readiness sieben Tage in Folge zwischen 86 und 92. Und das mitten in einer Peak-Woche mit drei 30-Grad-Tagen. Der Motor arbeitet gerade billiger als je zuvor in diesem Jahr."
+    },
+    {
+      "titel": "Der Darm haelt jetzt genau da, wo er im Halbmarathon aufgab",
+      "text": "Im HM am 05.07. war bei km 19 Schluss: Darmdruck, Gehpause. Am 09.08. hattest du nach zwei Stunden wieder Druck — und bist durchgelaufen, 18,33 km ohne einen einzigen Stopp, mit 4 Gels intus. Vier Laeufe in Folge mit Gels ohne Zwischenfall (23.07., 25.07., 01.08., 09.08.). Das Gut-Training funktioniert, und die Morgenroutine mit vollstaendiger Entleerung ist der Grund."
+    }
   ],
-  "kmWochen": [
-   {
-    "woche": "2026-04-27",
-    "km": 11.3
-   },
-   {
-    "woche": "2026-05-04",
-    "km": 11.7
-   },
-   {
-    "woche": "2026-05-11",
-    "km": 13.9
-   },
-   {
-    "woche": "2026-05-18",
-    "km": 26.4
-   },
-   {
-    "woche": "2026-05-25",
-    "km": 24.9
-   },
-   {
-    "woche": "2026-06-01",
-    "km": 33.6
-   },
-   {
-    "woche": "2026-06-08",
-    "km": 32.2
-   },
-   {
-    "woche": "2026-06-15",
-    "km": 30.1
-   },
-   {
-    "woche": "2026-06-22",
-    "km": 28.4
-   },
-   {
-    "woche": "2026-06-29",
-    "km": 38.4
-   },
-   {
-    "woche": "2026-07-06",
-    "km": 16.4
-   },
-   {
-    "woche": "2026-07-13",
-    "km": 36.4
-   },
-   {
-    "woche": "2026-07-20",
-    "km": 36.1
-   },
-   {
-    "woche": "2026-07-27",
-    "km": 37.2
-   },
-   {
-    "woche": "2026-08-03",
-    "km": 38.5
-   }
-  ]
- },
- "beweise": [
-  {
-   "titel": "Der laengste Long Run des Blocks — und technisch der sauberste",
-   "text": "09.08.: 18,33 km in 2:20 h, Durchschnittspace 7:39/km bei Durchschnittspuls 136. Deine Leistungsdiagnostik vom 31.07. hat LT1 auf HF 139 bei 7:38/km gemessen. Du bist also exakt auf deiner aeroben Schwelle gelaufen, auf die Sekunde und einen Schlag darunter — ohne Uhr-Blick, ohne Vorgabe. Vor acht Wochen (14.06.) lag dieselbe Zone bei 9:30/km."
+  "tagesplan": {
+    "2026-08-11": {
+      "hinweis": "Standardprogramm plus Kette-Konto. Der Lauf liegt MORGENS (29,7 Grad). Die Kette-Snacks sind NICHT in der Muckibude enthalten — sie muessen extra gemacht werden, und diese Woche haben sie Prioritaet. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Kette-Block: Hamstring + Beckenboden",
+          "duration": "11 min",
+          "trigger": "abends, mit Abstand zu den Intervallen",
+          "why": "Hamstring-Snack: Sliding Leg Curl 3x6 verkuerzte ROM, 3-4 s exzentrisch + Single Leg Deadlift 3x8 pro Seite. Davor 5 min Glute-Aktivierung (Regel KR-1) — nach einem Intervall-Tag ist exzentrische Hamstring-Arbeit sonst Krampf-Risiko. Danach Beckenboden 3 min. Abhaken in der Karte 'Kette & Sehnen'."
+        }
+      ]
+    },
+    "2026-08-12": {
+      "hinweis": "Kraft-Tag mit vollem Vormittag (Weekly 8:00, Podcasts 9-12, Physio 9:30). Muckibude 3 auf 12:30 nach der Physio — mit den zwei Snacks drumherum plan 70 min ein, nicht 45. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Kette-Block: Pogos (vor) + Achilles + Po (nach der Kraft)",
+          "duration": "21 min",
+          "trigger": "Pogos nach dem Warm-up, Achilles und Po im Anschluss an die Muckibude",
+          "why": "1. Pogos 3x20 auf frische Beine, VOR der Kraft. 2. Muckibude 3. 3. Achilles-Snack: Bent-Knee Calf Raise 3x10 mit 3 s exzentrisch + Wadenheber gestreckt 3x10 — erster schwerer Soleus-Reiz seit dem 31.07. 4. Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite. Wenn die Zeit nicht reicht, faellt der Po-Snack (steht Freitag nochmal), Pogos und Achilles nicht. Abhaken in der Karte 'Kette & Sehnen'."
+        }
+      ]
+    },
+    "2026-08-13": {
+      "hinweis": "08:00-08:15 Mammografie, Tempolauf danach ab 09:15 bei 30,7 Grad (Schatten, nach Gefuehl deckeln). Abends der Kette-Block. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Kette-Block: Hamstring + Beckenboden",
+          "duration": "11 min",
+          "trigger": "abends, mit Abstand zum Tempolauf",
+          "why": "Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8 pro Seite (48 h nach Dienstag, sauberer Abstand) + Beckenboden 3 min. Damit steht das Konto bei 8 von 12, den Rest holt der Freitag (Pogos + Achilles + Po an die Muckibude schnell). Abhaken in der Karte 'Kette & Sehnen'."
+        }
+      ]
+    },
+    "2026-08-14": {
+      "hinweis": "Kraft-Tag: 'Muckibude schnell' 9:30-10:30, danach ist ab 14 Uhr Ship Day + Weekly Check-in. Ganztags Estradiol Tag 1 (HRT-Pause vorbei). Das Wochenkonto 'Kette & Sehnen' steht bei 1 von 12 — heute ist der letzte Slot, Samstag und Sonntag bleiben frei. Realistisch gehen zwei Snacks: Achilles und Po. Pogos (0/2) und Hamstring (0/2) sind fuer diese Woche gestrichen, nicht vergessen — eine ganze Woche laesst sich nicht an einem Tag nachholen.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Kette-Block an die Kraft: Achilles + Po",
+          "duration": "12 min",
+          "trigger": "direkt im Anschluss an die Muckibude, solange du eh im Modus bist",
+          "why": "In dieser Reihenfolge: 1. Bent-Knee Calf Raise 3x10 mit 3 s runter + Wadenheber gestreckt 3x10 (Soleus — hoechste Prioritaet, Achilles-Historie, neural billig). 2. Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite. Der Single Leg Calf Raise in der Muckibude ersetzt den Soleus-Snack NICHT — er laeuft mit gestrecktem Knie, der Soleus braucht das gebeugte. Abhaken in der Karte 'Kette & Sehnen', dann steht die Woche bei 3 von 12."
+        }
+      ]
+    },
+    "2026-08-15": {
+      "hinweis": "Vortag Long Run. Das Standardprogramm passt heute genau: Mobility-Training ist die 17-min-Einheit der Coachin. Keine Kraft, keine Pogos, nichts Schweres — morgen stehen 2:30 h an. Sonst ist heute Vorbereitungstag: /essensplan, Einkauf, Glutamin abmessen, Gels zaehlen, low-residue essen. Beckenboden ist der einzige Kette-Snack, der heute Sinn ergibt (kostet die Beine nichts).",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Long-Run-Vorbereitung: Glutamin abmessen, 6 Gels + Elektrolyt-Tabs rauslegen",
+          "duration": "5 min",
+          "trigger": "abends, bevor du dich hinsetzt",
+          "why": "15 g L-Glutamin (3 Loeffel ESN) abgemessen neben die Schuhe. Zweimal in Folge ist das untergegangen — am 01.08. waren es 8 g in einem Glas, am 09.08. wieder nicht vollstaendig. Dazu 6 Squeezy Basic zaehlen (nicht 5) und die Elektrolyt-Tabs danebenlegen. Wecker 4:45."
+        },
+        {
+          "tier": "pflicht",
+          "name": "/essensplan laufen lassen",
+          "duration": "10 min",
+          "trigger": "Vormittag, vor dem Einkauf",
+          "why": "Plant So-Sa und schreibt die Einkaufsliste in den Essen-Tab. Der aktuelle Plan endet heute — ab morgen waere sonst nichts da, und morgen ist Long-Run-Tag."
+        },
+        {
+          "tier": "standard",
+          "name": "Beckenboden 3 min",
+          "duration": "3 min",
+          "trigger": "irgendwann heute",
+          "why": "Der einzige Kette-Snack, der am Vortag nichts kostet. Konto steht bei 0 von 3."
+        }
+      ]
+    },
+    "2026-08-16": {
+      "hinweis": "Long-Run-Tag, 2:30 h. 4:45 Wecker, 5:00 Glutamin, 6:45 Start, 9:15 zurueck — um 10:00 ist Schwimmen. Standardprogramm bleibt wie es ist: Pre-Run-Aktivierung, Long Run, lockere Wadenheber danach. Keine Kraft, keine Kette-Snacks, keine Pogos: 2:30 h bei Hitze sind genug.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "L-Glutamin 15 g in 400 ml Wasser",
+          "duration": "2 min",
+          "trigger": "5:00 Uhr, direkt beim Aufstehen — 105 min vor dem Start",
+          "why": "Steht seit gestern abgemessen neben den Schuhen. Dritter Anlauf, diesmal die volle Dosis. Danach Kaffee und um 5:15 Fruehstueck (2 Semmeln mit Marmelade + Banane)."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Post-Run-Protein 30-40 g",
+          "duration": "5 min",
+          "trigger": "binnen 40 min nach dem Lauf — also VOR dem Schwimmen um 10:00",
+          "why": "Nach 2:30 h bei Hitze faellt der Appetit ab und das Schwimmen schiebt es sonst auf 11:30. Shake steht bereit, dann rein ins Wasser."
+        }
+      ]
+    }
   },
-  {
-   "titel": "Der Darm haelt jetzt genau da, wo er im Halbmarathon aufgab",
-   "text": "Im HM am 05.07. war bei km 19 Schluss: Darmdruck, Gehpause. Am 09.08. hattest du nach zwei Stunden wieder Druck — und bist durchgelaufen, 18,33 km ohne einen einzigen Stopp, mit 4 Gels intus. Vier Laeufe in Folge mit Gels ohne Zwischenfall (23.07., 25.07., 01.08., 09.08.). Das Gut-Training funktioniert, und die Morgenroutine mit vollstaendiger Entleerung ist der Grund."
+  "essensplan": {
+    "2026-08-11": {
+      "tagestyp": "intervall",
+      "typLabel": "Intervall-Tag",
+      "einheit": "Intervalle 75 min",
+      "rev": 1,
+      "hinweis": "Lauf um 6:45 — Pre-Run schon um 6:00, nur eine kleine Portion. Abends 18:00 Kette-Block (Hamstring + Beckenboden), 19:00 Zoom. Der Abend wird knapp: Snack um 16:30 nicht auslassen.",
+      "ziel": {
+        "p": 140,
+        "kh": 365
+      },
+      "mahlzeiten": [
+        {
+          "id": "2026-08-11-m1",
+          "slot": "pre_run",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🌅 6:00 vor dem Lauf",
+          "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+          "zutaten": "Toastbrot, Marmelade, Banane",
+          "p": 6,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-11-m2",
+          "slot": "post_belastung",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🍳 8:15 binnen 40 min",
+          "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
+          "zutaten": "Eier, Brot, Skyr, Banane",
+          "p": 32,
+          "kh": 60,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-11-m3",
+          "slot": "mittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "☀️ Mittag",
+          "name": "Linsen-Feta-Salat mit Rucola und Brot",
+          "zutaten": "Linsen (Dose), Feta, Rucola, Tomate, Gurke, Olivenöl, 2 Scheiben Vollkornbrot — nichts kochen",
+          "p": 32,
+          "kh": 55,
+          "tags": [
+            "huelsenfruechte",
+            "kreuzbluetler"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-11-m4",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🍚 16:30 Snack",
+          "name": "250 g Milchreis mit Zimt",
+          "zutaten": "Milchreis, Zimt",
+          "p": 9,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-11-m5",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥣 Später Snack",
+          "name": "Skyr mit Haferflocken und Beeren",
+          "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
+          "p": 25,
+          "kh": 50,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-11-m6",
+          "slot": "abend",
+          "snack": false,
+          "familie": true,
+          "zeitLabel": "🌙 Abend — Familie",
+          "name": "Lachs in Sahne-Dill-Sauce + Kartoffeln + Salat",
+          "zutaten": "Lachsfilet, Sahne, Dill, Kartoffeln, Blattsalat — doppelte Portion Kartoffeln kochen, die Reste sind morgen dein Mittag",
+          "p": 35,
+          "kh": 85,
+          "tags": [
+            "fetter_fisch"
+          ],
+          "rezept": null,
+          "fuerDich": "doppelte Portion Kartoffeln — nach Intervallen ist die große Beilage genau richtig. Gibt es was ganz anderes: Hauptsache Beilage doppelt."
+        }
+      ]
+    },
+    "2026-08-12": {
+      "tagestyp": "kraft",
+      "typLabel": "Kraft-Tag",
+      "einheit": "Kraft 45 min (Muckibude 3) + Kette-Block",
+      "rev": 1,
+      "hinweis": "Vormittag voll (Weekly 8:00, Podcasts 9-12, Physio 9:30). Der 10:45-Anker ist das Pre-Fuel für die Kraft um 12:30 — nicht überspringen, Kraft nicht nüchtern.",
+      "ziel": {
+        "p": 138,
+        "kh": 365
+      },
+      "mahlzeiten": [
+        {
+          "id": "2026-08-12-m1",
+          "slot": "fruehstueck",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🌅 7:15 Frühstück",
+          "name": "Overnight Oats",
+          "zutaten": "60 g Haferflocken, Skyr, Milch, Beeren, Nüsse — abends vorher ansetzen",
+          "p": 30,
+          "kh": 55,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-12-m2",
+          "slot": "vormittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥨 10:45 vor der Kraft",
+          "name": "Brot mit Marmelade + 1 Banane",
+          "zutaten": "Brot, Marmelade, Banane",
+          "p": 7,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-12-m3",
+          "slot": "post_belastung",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🥤 14:00 binnen 40 min nach der Kraft",
+          "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+          "zutaten": "Whey, Milch, Banane",
+          "p": 22,
+          "kh": 30,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-12-m4",
+          "slot": "mittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "☀️ 14:30 Mittag",
+          "name": "Mediterrane Hüttenkäse-Bowl + 2 Scheiben Brot",
+          "zutaten": "250 g Hüttenkäse, Tomate, Gurke, Oliven, Olivenöl, Vollkornbrot — nichts kochen",
+          "p": 38,
+          "kh": 85,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-12-m5",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥨 Snack",
+          "name": "Vollkornbrot mit Mandelmus + 1 Banane",
+          "zutaten": "Vollkornbrot, Mandelmus, Banane",
+          "p": 10,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-12-m6",
+          "slot": "abend",
+          "snack": false,
+          "familie": true,
+          "zeitLabel": "🌙 Abend — Familie",
+          "name": "Käsespätzle mit Rosenkohl",
+          "zutaten": "Spätzle, Bergkäse, Zwiebeln, Rosenkohl",
+          "p": 30,
+          "kh": 95,
+          "tags": [
+            "kreuzbluetler",
+            "fermentiertes"
+          ],
+          "rezept": null,
+          "fuerDich": "große Portion Spätzle, und den Rosenkohl nicht weglassen — das ist dein Kreuzblütler des Tages (Leber-Quote)."
+        }
+      ]
+    },
+    "2026-08-13": {
+      "tagestyp": "intervall",
+      "typLabel": "Tempo-Tag",
+      "einheit": "Tempolauf 55 min",
+      "rev": 1,
+      "hinweis": "Mammografie 8:00 — die braucht keine Nüchternheit, also VOR dem Termin frühstücken. Lauf danach ab 9:15 bei 30,7 Grad. Post-Run bewusst kalt (Smoothie Bowl), bei Hitze fällt der Appetit sonst weg. Abends 18:00 Kette-Block.",
+      "ziel": {
+        "p": 140,
+        "kh": 365
+      },
+      "mahlzeiten": [
+        {
+          "id": "2026-08-13-m1",
+          "slot": "pre_run",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🌅 7:00 vor dem Termin",
+          "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+          "zutaten": "Toastbrot, Marmelade, Banane",
+          "p": 6,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-13-m2",
+          "slot": "post_belastung",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🥤 10:45 binnen 40 min",
+          "name": "Recovery Smoothie Bowl",
+          "zutaten": "Skyr, Beeren, Banane, Whey, Haferflocken — kalt, geht bei Hitze runter",
+          "p": 35,
+          "kh": 40,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-13-m3",
+          "slot": "mittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "☀️ Mittag",
+          "name": "Protein-Sandwich mit Rucola + 1 Banane",
+          "zutaten": "Vollkornbrot, Hüttenkäse oder Putenbrust, Rucola, Tomate, Banane — nichts kochen",
+          "p": 26,
+          "kh": 80,
+          "tags": [
+            "fermentiertes",
+            "kreuzbluetler"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-13-m4",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🍚 Snack",
+          "name": "250 g Milchreis mit Zimt",
+          "zutaten": "Milchreis, Zimt",
+          "p": 9,
+          "kh": 55,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-13-m5",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥣 Später Snack",
+          "name": "Skyr mit Haferflocken und Beeren",
+          "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
+          "p": 25,
+          "kh": 50,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-13-m6",
+          "slot": "abend",
+          "snack": false,
+          "familie": true,
+          "zeitLabel": "🌙 Abend — Familie",
+          "name": "Kichererbsen-Hähnchen in Kokos-Curry + Reis",
+          "zutaten": "Hähnchenbrust, Kichererbsen, Kokosmilch, Currypaste, Reis",
+          "p": 40,
+          "kh": 80,
+          "tags": [
+            "huelsenfruechte"
+          ],
+          "rezept": null,
+          "fuerDich": "doppelte Portion Reis. Wenn es am Ende ohne Hähnchen bleibt: danach 1 Skyr, sonst fehlen dir 25 g Protein."
+        }
+      ]
+    },
+    "2026-08-14": {
+      "tagestyp": "kraft",
+      "typLabel": "Kraft-Tag",
+      "einheit": "Kraft 45 min (Muckibude schnell) + Kette-Block",
+      "rev": 1,
+      "hinweis": "Letzter voller Tag vor dem Vortag-Modus. Morgen wird low-residue — heute also nochmal Ballaststoffe und Kohl, danach zwei Tage nicht mehr.",
+      "ziel": {
+        "p": 138,
+        "kh": 365
+      },
+      "mahlzeiten": [
+        {
+          "id": "2026-08-14-m1",
+          "slot": "fruehstueck",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🌅 Frühstück",
+          "name": "Protein-Porridge",
+          "zutaten": "60 g Haferflocken, 25 g Whey, Milch, Beeren, Zimt",
+          "p": 30,
+          "kh": 60,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-14-m2",
+          "slot": "vormittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥨 vor der Kraft",
+          "name": "3 Scheiben Brot mit Marmelade + 1 Banane",
+          "zutaten": "Brot, Marmelade, Banane",
+          "p": 9,
+          "kh": 75,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-14-m3",
+          "slot": "post_belastung",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "🥤 binnen 40 min nach der Kraft",
+          "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+          "zutaten": "Whey, Milch, Banane",
+          "p": 22,
+          "kh": 30,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-14-m4",
+          "slot": "mittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "☀️ Mittag",
+          "name": "Edamame-Bowl mit Reis",
+          "zutaten": "Edamame (TK), Reis, Gurke, Avocado, Sesam, Sojasauce — Reis vom Vortag oder schnell gekocht",
+          "p": 26,
+          "kh": 65,
+          "tags": [
+            "huelsenfruechte"
+          ],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-14-m5",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "🥨 Snack",
+          "name": "Reiswaffeln mit Erdnussmus + 1 Banane",
+          "zutaten": "Reiswaffeln, Erdnussmus, Banane",
+          "p": 10,
+          "kh": 45,
+          "tags": [],
+          "rezept": null
+        },
+        {
+          "id": "2026-08-14-m6",
+          "slot": "abend",
+          "snack": false,
+          "familie": true,
+          "zeitLabel": "🌙 Abend — Familie",
+          "name": "Ofenlachs in Sahne-Dill + Brokkoli + Süßkartoffel-Wedges",
+          "zutaten": "Lachsfilet, Sahne, Dill, Brokkoli, Süßkartoffeln",
+          "p": 38,
+          "kh": 90,
+          "tags": [
+            "fetter_fisch",
+            "kreuzbluetler"
+          ],
+          "rezept": null,
+          "fuerDich": "große Portion Süßkartoffel — ab morgen fängt das Auffüllen für den Long Run an, und Brokkoli ist heute zum letzten Mal drin (morgen low-residue)."
+        }
+      ]
+    },
+    "2026-08-15": {
+      "tagestyp": "vortag_longrun",
+      "typLabel": "Vortag Long Run — low-residue",
+      "einheit": "Mobi 17 min — Vortag Long Run 2:30",
+      "rev": 1,
+      "hinweis": "HEUTE zählt der Abend ausnahmsweise wirklich: morgen 2:30 Long Run. Alles weiß und mild — kein Kohl, keine Hülsenfrüchte, kein Rohkost-Salat, keine Vollkornprodukte. Um 18:30 ist Schluss mit Essen. Und: L-Glutamin 15 g für morgen ABMESSEN und neben die Schuhe stellen (zweimal in Folge vergessen).",
+      "ziel": {
+        "p": 137,
+        "kh": 380
+      },
+      "mahlzeiten": [
+        {
+          "id": "2026-08-15-m1",
+          "slot": "fruehstueck",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "08:00",
+          "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+          "zutaten": "Eier, Semmeln, Butter, Marmelade",
+          "p": 20,
+          "kh": 65,
+          "tags": [],
+          "rezept": null,
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m2",
+          "slot": "vormittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "10:30",
+          "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
+          "zutaten": "Mozzarella, Tomate, Semmel, Olivenöl",
+          "p": 22,
+          "kh": 30,
+          "tags": [],
+          "rezept": null,
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m3",
+          "slot": "mittag",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "12:30",
+          "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
+          "zutaten": "Hähnchenbrust, Kokosmilch, Sahne, weißer Reis — doppelte Portion Reis kochen",
+          "p": 38,
+          "kh": 65,
+          "tags": [],
+          "rezept": null,
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m4",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "15:00",
+          "name": "250 g Milchreis mit Zimt",
+          "zutaten": "Milchreis, Zimt",
+          "p": 9,
+          "kh": 55,
+          "tags": [],
+          "rezept": null,
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m5",
+          "slot": "nachmittag",
+          "snack": true,
+          "familie": false,
+          "zeitLabel": "16:30",
+          "name": "1 Semmel mit Marmelade + 1 Banane",
+          "zutaten": "Semmel, Marmelade, Banane",
+          "p": 5,
+          "kh": 55,
+          "tags": [],
+          "rezept": null,
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m6",
+          "slot": "abend",
+          "snack": false,
+          "familie": true,
+          "zeitLabel": "🌙 18:00 ⚠️ Abend — Familie",
+          "name": "Tagliatelle in Sahne-Parmesan-Sauce",
+          "zutaten": "Tagliatelle (100 g trocken), Sahne, Parmesan — 15 Minuten, familientauglich",
+          "p": 25,
+          "kh": 80,
+          "tags": [],
+          "rezept": null,
+          "fuerDich": "der einzige Abend der Woche, an dem der Vorschlag wirklich zählt. Weißes Mehl und Sahne sind heute richtig — kein Salat, kein Kohl, keine Hülsenfrüchte dazu. Um 18:30 ist Schluss.",
+          "low_residue": true
+        },
+        {
+          "id": "2026-08-15-m7",
+          "slot": "spaet",
+          "snack": false,
+          "familie": false,
+          "zeitLabel": "19:15",
+          "name": "150 g Hüttenkäse mit Weißbrot",
+          "zutaten": "Hüttenkäse, Weißbrot",
+          "p": 18,
+          "kh": 30,
+          "tags": [
+            "fermentiertes"
+          ],
+          "rezept": null,
+          "low_residue": true
+        }
+      ]
+    }
   },
-  {
-   "titel": "Die kompletteste Woche des Blocks — Laufen UND Kraft, und die Erholung hat es getragen",
-   "text": "03.-09.08.: drei Laeufe mit 38,5 km (hoechste Woche seit dem Halbmarathon) UND beide Muckibude-Sessions vollstaendig — Mittwoch 25 von 27 Saetzen, Freitag 27 von 27, alle 16 Uebungen. Dazu taeglich Schwimmen und 6,6 km Wandern. Und der Koerper hat mitgemacht: HRV im Wochenschnitt 29,5 ms gegen 23,0 in der Vorwoche, plus 28 Prozent. Schlaf 8,16 h, Readiness heute 90. Volumen hoch, Erholung hoch — das ist der Zustand, den man in einem Peak-Block haben will."
+  "essenAlternativen": {
+    "snacks": [
+      {
+        "id": "snack-mandelmus",
+        "name": "Vollkornbrot mit Mandelmus + Banane",
+        "p": 10,
+        "kh": 55,
+        "low_residue": false
+      },
+      {
+        "id": "snack-porridge",
+        "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
+        "p": 12,
+        "kh": 45,
+        "low_residue": false
+      },
+      {
+        "id": "snack-skyr",
+        "name": "Skyr mit Haferflocken und Beeren",
+        "p": 25,
+        "kh": 50,
+        "low_residue": false
+      },
+      {
+        "id": "snack-avocado",
+        "name": "Vollkornbrot mit Avocado und Tomate",
+        "p": 10,
+        "kh": 50,
+        "low_residue": false
+      },
+      {
+        "id": "snack-quinoa-skyr",
+        "name": "Quinoa-Bowl mit Skyr und Beeren",
+        "p": 30,
+        "kh": 50,
+        "low_residue": false
+      },
+      {
+        "id": "snack-reiswaffeln",
+        "name": "Reiswaffeln mit Erdnussmus + Banane",
+        "p": 10,
+        "kh": 45,
+        "low_residue": true
+      },
+      {
+        "id": "snack-marmelade",
+        "name": "Brot mit Marmelade + Banane",
+        "p": 7,
+        "kh": 55,
+        "low_residue": true
+      }
+    ],
+    "slots": {
+      "fruehstueck": [
+        {
+          "id": "ruhetag-m1",
+          "name": "Skyr-Beeren-Schüssel",
+          "p": 30,
+          "kh": 50,
+          "low_residue": false,
+          "zutaten": "200 g Skyr · 40 g Haferflocken · 150 g Beeren · 30 g Walnüsse · Zimt",
+          "rezept": "5 Min: Skyr mit Haferflocken verrühren, Beeren und Walnüsse obendrauf, Zimt drüber."
+        },
+        {
+          "id": "kraft-m1",
+          "name": "Overnight Oats",
+          "p": 30,
+          "kh": 55,
+          "low_residue": false,
+          "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+          "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf."
+        },
+        {
+          "id": "vortag_longrun-m1",
+          "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+          "p": 20,
+          "kh": 65,
+          "low_residue": true,
+          "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
+          "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade."
+        },
+        {
+          "id": "tag_nach_longrun-m1",
+          "name": "Protein-Pancakes",
+          "p": 33,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "50 g Haferflocken gemahlen · 2 Eier · 100 g Quark · Banane · Beeren obendrauf",
+          "rezept": "15 Min: Haferflocken im Mixer mahlen, mit Eiern, Quark und Banane zum Teig mixen. Kleine Pancakes in beschichteter Pfanne 2-3 Min pro Seite. Skyr und Beeren obendrauf."
+        },
+        {
+          "id": "alt-hafer-milchfrei",
+          "name": "Milchfreie Protein-Haferflocken",
+          "p": 37,
+          "kh": 65,
+          "low_residue": false,
+          "zutaten": "80 g Haferflocken · 300 ml Wasser oder Hafer-/Mandeldrink · 30 g Proteinpulver · 150 g Beeren · 20 g Kürbiskerne · 1 EL Leinsamen · Zimt",
+          "rezept": "7 Min. Proteinpulver erst einrühren, wenn der Brei abgekühlt ist (klumpt sonst). ~200 mg Kalzium weniger als Skyr-Variante — mittags/abends nachlegen (Bergkäse, Parmesan, Sesam, Grünkohl)."
+        },
+        {
+          "id": "alt-power-fruehstueck",
+          "name": "Mediterranes Power-Frühstück",
+          "p": 24,
+          "kh": 40,
+          "low_residue": false,
+          "zutaten": "2 Eier Rührei · 2 Scheiben Vollkornbrot · Tomate · Gurke · Rucola · Olivenöl · Kürbiskerne",
+          "rezept": "10 Min. Coachin-Rezept — herzhafte Frühstücks-Alternative. Carb-leichter als die Oats-Frühstücke: Banane dazu, wenn ein Trainingstag ist."
+        }
+      ],
+      "mittag": [
+        {
+          "id": "ruhetag-m3",
+          "name": "Putenhack-Bowl asiatisch + 70 g Reis",
+          "p": 34,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "120 g Putenhack · 250 g Brokkoli · Sojasauce, Ingwer, Sesamöl, Limette · Sesam · 70 g Reis",
+          "rezept": "25 Min: Putenhack scharf anbraten, Brokkoli dazu, mit Sojasauce, frischem Ingwer, Sesamöl und Limette ablöschen, Sesam drüber. Reis untermischen."
+        },
+        {
+          "id": "intervall-m4",
+          "name": "Hähnchen-Nudeln in Sahne-Parmesan mit Spinat (100 g Nudeln)",
+          "p": 45,
+          "kh": 75,
+          "low_residue": false,
+          "zutaten": "150 g Hähnchenbrust · 200 g Blattspinat · 100 ml Sahne · 40 g Parmesan · Muskat, Zitronenabrieb · 100 g Nudeln",
+          "rezept": "20 Min: Hähnchen in Streifen anbraten, Spinat zusammenfallen lassen, Sahne + Parmesan einkochen, Muskat, Zitronenabrieb. Nudeln untermischen. Parmesan bringt ~350 mg Kalzium."
+        },
+        {
+          "id": "vo2max-m4",
+          "name": "Putenschnitzel + 400 g Süßkartoffel-Wedges + Kräuter-Sahne-Dip + Rucola",
+          "p": 40,
+          "kh": 85,
+          "low_residue": false,
+          "zutaten": "1 Putenschnitzel (~150 g) · 400 g Süßkartoffeln · 150 g Quark + 2 EL Sahne + Schnittlauch/Petersilie/Zitrone · 1 Handvoll Rucola",
+          "rezept": "30 Min (Ofen passiv): Süßkartoffeln in Spalten, mit Öl und Paprikapulver bei 200 °C ~25 Min rösten. Schnitzel salzen, in der Pfanne 3-4 Min pro Seite. Dip (2 Min): Quark mit Sahne, Kräutern, Zitrone, Salz verrühren."
+        },
+        {
+          "id": "kraft-m4",
+          "name": "Kichererbsen-Hähnchen in Kokos-Curry + 70 g Reis",
+          "p": 40,
+          "kh": 80,
+          "low_residue": false,
+          "zutaten": "150 g Hähnchen · 240 g Kichererbsen (1 Dose abgetropft) · 150 ml Kokosmilch · Kurkuma, Ingwer, Curry, Limette · Paprika/Zucchini · 70 g Reis",
+          "rezept": "20 Min: Hähnchen anbraten, Kichererbsen und Kokosmilch dazu, Gewürze, Gemüse mitgaren. Reis dazu."
+        },
+        {
+          "id": "vortag_longrun-m3",
+          "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
+          "p": 38,
+          "kh": 65,
+          "low_residue": true,
+          "zutaten": "150 g Hähnchen · 150 ml Kokosmilch + 50 ml Sahne · mildes Curry, Ingwer, Limette · geschälte Karotte · 80 g weißer Reis",
+          "rezept": "20 Min: Hähnchen anbraten, Kokosmilch + Sahne, mildes Curry, Ingwer, Limette, Karotte weich mitgaren. OHNE Zwiebel und Knoblauch (FODMAP) — Ingwer und Limette tragen den Geschmack."
+        },
+        {
+          "id": "longrun-m5",
+          "name": "Asiatische Hähnchen-Reispfanne + 80 g Reis",
+          "p": 38,
+          "kh": 65,
+          "low_residue": false,
+          "zutaten": "150 g Hähnchen · Paprika · Frühlingszwiebel · Erbsen · Sojasauce, Ingwer, Sesamöl, Limette · Sesam · 80 g Reis",
+          "rezept": "25 Min: Hähnchen in Streifen scharf anbraten, Gemüse dazu, mit Sojasauce, Ingwer, Sesamöl, Limette abschmecken, Sesam drüber. Nach dem Lauf sind Zwiebel und Knoblauch kein Thema mehr."
+        },
+        {
+          "id": "tag_nach_longrun-m3",
+          "name": "Hühnersuppe mit 80 g Suppennudeln",
+          "p": 35,
+          "kh": 75,
+          "low_residue": false,
+          "zutaten": "150 g Hähnchen (gern Reste) · 500 ml Hühnerbrühe · 80 g Suppennudeln · 1 Karotte · 1 Stück Lauch · 1 Stange Sellerie · Petersilie",
+          "rezept": "20 Min: Gemüse in Scheiben in der Brühe 10 Min köcheln, Nudeln und Hähnchen(-reste) die letzten 8 Min mitgaren, Petersilie. Doppelte Menge kochen = Abendessen oder Folgetag gesichert."
+        },
+        {
+          "id": "alt-quinoa-feta",
+          "name": "Mediterrane Quinoa-Bowl mit Feta",
+          "p": 30,
+          "kh": 75,
+          "low_residue": false,
+          "zutaten": "80 g Quinoa · 150 g Kichererbsen · 150 g Brokkoli · Cherrytomaten · Gurke · Rucola · 50 g Feta · Olivenöl-Zitronen-Dressing · Kurkuma",
+          "rezept": "20 Min: Quinoa kochen (doppelte Menge = Reste-Basis!), Brokkoli bissfest, alles mit Dressing vermengen. Coachin-Rezept, Feta statt Tofu."
+        },
+        {
+          "id": "alt-vk-pasta-linsen",
+          "name": "Vollkornpasta mit Spinat und Linsen",
+          "p": 32,
+          "kh": 85,
+          "low_residue": false,
+          "zutaten": "80 g Vollkornnudeln · 60 g rote Linsen · 200 g Blattspinat · Cherrytomaten · Knoblauch · Olivenöl · Parmesan",
+          "rezept": "20 Min: Nudeln und Linsen garen, Spinat mit Knoblauch und Tomaten anbraten, alles vermengen, Parmesan drüber. Coachin-Rezept. Ballaststoffreich — NICHT am Vortag von Long Run/Intensität."
+        },
+        {
+          "id": "alt-buddha-bowl",
+          "name": "Bunte Buddha Bowl",
+          "p": 28,
+          "kh": 75,
+          "low_residue": false,
+          "zutaten": "80 g Naturreis · 150 g Edamame · 100 g Rotkohl · Gurke · Karotte · ½ Avocado · Babyspinat · Sesam · Tahini-Zitronen-Dressing",
+          "rezept": "20 Min: Reis kochen (doppelt!), Gemüse schneiden, Tahini mit Zitrone verrühren. Coachin-Rezept — Rotkohl zählt als Kreuzblütler, Tahini bringt Kalzium."
+        },
+        {
+          "id": "alt-linsen-feta",
+          "name": "Linsen-Feta-Salat mit Brot",
+          "p": 30,
+          "kh": 55,
+          "low_residue": false,
+          "zutaten": "200 g vorgekochte Linsen (Dose/Sous-vide) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
+          "rezept": "5 Min, kein Herd: alles vermengen. Coachin-Rezept + Brot für die Carbs."
+        },
+        {
+          "id": "alt-hk-bowl",
+          "name": "Mediterrane Hüttenkäse-Bowl",
+          "p": 35,
+          "kh": 45,
+          "low_residue": false,
+          "zutaten": "250 g Hüttenkäse · 2 Scheiben Vollkornbrot · Cherrytomaten · Gurke · Rucola · Olivenöl · Kürbiskerne",
+          "rezept": "5 Min, kein Herd. Coachin-Rezept — vor Intervalltagen Weißbrot statt Vollkorn."
+        },
+        {
+          "id": "alt-sandwich",
+          "name": "Protein-Sandwich",
+          "p": 25,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "3 Scheiben Vollkornbrot · 150 g Hüttenkäse · ½ Avocado · Tomate · Kresse · Pfeffer",
+          "rezept": "5 Min, kein Herd. Coachin-Rezept."
+        }
+      ],
+      "abend": [
+        {
+          "id": "ruhetag-m5",
+          "name": "Lachs in Sahne-Dill-Sauce + 350 g Kartoffeln + Feldsalat",
+          "p": 35,
+          "kh": 70,
+          "low_residue": false,
+          "zutaten": "150 g Lachs · 100 ml Sahne · Dill, Senf, Zitrone · 350 g Kartoffeln · Feldsalat mit Sesam",
+          "rezept": "20 Min: Lachs braten. Sahne mit Dill, 1 TL Senf und Zitrone einkochen. Dazu Salzkartoffeln und Feldsalat mit Sesam (~130 mg Kalzium)."
+        },
+        {
+          "id": "intervall-m6",
+          "name": "Linsen-Kokos-Curry + 70 g Reis",
+          "p": 25,
+          "kh": 90,
+          "low_residue": false,
+          "zutaten": "80 g rote Linsen · 200 ml Kokosmilch light · 200 g Tomaten · Ingwer, Kurkuma, Kreuzkümmel, Curry · Spinat oder Karotte · 70 g Reis",
+          "rezept": "25 Min: Linsen in Kokosmilch und Tomaten mit Gewürzen köcheln, Spinat oder Karotte dazu."
+        },
+        {
+          "id": "vo2max-m6",
+          "name": "Steak + 400 g Ofenkartoffeln + Kräuterquark",
+          "p": 42,
+          "kh": 85,
+          "low_residue": false,
+          "zutaten": "1 Steak (~180 g) · 400 g Kartoffeln · 150 g Quark mit Kräutern",
+          "rezept": "35 Min (Ofen passiv): Kartoffeln halbiert mit Öl und Salz bei 200 °C 30-35 Min. Steak trocken tupfen, in sehr heißer Pfanne 2-3 Min pro Seite, salzen, 5 Min ruhen lassen. Kräuterquark verrühren. Das eine rote Fleisch der Woche."
+        },
+        {
+          "id": "kraft-m6",
+          "name": "Käsespätzle mit Rosenkohl",
+          "p": 30,
+          "kh": 95,
+          "low_residue": false,
+          "zutaten": "130 g Spätzle · 60 g Bergkäse gerieben · 100 g Hüttenkäse · Röstzwiebeln · 200 g Rosenkohl",
+          "rezept": "25 Min: Rosenkohl halbieren, in der Pfanne mit Öl 10-12 Min rösten (ruhig braun werden lassen), salzen. Spätzle kochen, abgießen, heiß mit dem geriebenen Bergkäse mischen bis er zieht, Hüttenkäse unterheben, Röstzwiebeln drüber."
+        },
+        {
+          "id": "vortag_longrun-m6",
+          "name": "Tagliatelle in Sahne-Parmesan-Sauce (100 g trocken)",
+          "p": 25,
+          "kh": 80,
+          "low_residue": true,
+          "zutaten": "100 g Tagliatelle · 100 ml Sahne · 50 g Parmesan · Muskat, Pfeffer · optional Schinkenwürfel",
+          "rezept": "15 Min: Sahne mit Parmesan einkochen, Muskat, Pfeffer. Kein Salat dazu. Bis 18:30 gegessen!"
+        },
+        {
+          "id": "longrun-m7",
+          "name": "Lachs in Sahne-Dill-Sauce + 400 g Kartoffeln",
+          "p": 35,
+          "kh": 85,
+          "low_residue": false,
+          "zutaten": "150 g Lachs · 100 ml Sahne · Dill, Senf, Zitrone · 400 g Kartoffeln",
+          "rezept": "20 Min: Lachs braten. Sahne mit Dill, Senf und Zitrone einkochen. Dazu Salzkartoffeln."
+        },
+        {
+          "id": "tag_nach_longrun-m5",
+          "name": "Ofenlachs in Sahne-Dill + 200 g Grünkohl + 400 g Süßkartoffel",
+          "p": 38,
+          "kh": 90,
+          "low_residue": false,
+          "zutaten": "150 g Lachs · Sahne-Dill-Sauce · 200 g Grünkohl · 400 g Süßkartoffel · Tahin über den Kohl",
+          "rezept": "25 Min (Ofen passiv): Lachs und Süßkartoffelspalten aufs Blech, 200 °C ~20 Min. Grünkohl mit Öl in der Pfanne zusammenfallen lassen, salzen, Tahin drüber. Sahne-Dill-Sauce wie beim Lachs-Klassiker (Sahne + Dill + Senf + Zitrone einkochen)."
+        },
+        {
+          "id": "alt-ofengemuese",
+          "name": "Ofengemüse mit Kräuterquark",
+          "p": 33,
+          "kh": 50,
+          "low_residue": false,
+          "zutaten": "300 g Kartoffeln · 200 g Brokkoli · 1 Paprika · 1 Zucchini · 250 g Quark oder Skyr · Kräuter · Olivenöl · Kürbiskerne",
+          "rezept": "30 Min (davon 25 Ofen = passiv): Gemüse mit Olivenöl rösten, Quark mit Kräutern verrühren. Coachin-Rezept — Blech doppelt belegen, Reste kalt oder aufgewärmt am Folgetag."
+        },
+        {
+          "id": "alt-edamame-bowl",
+          "name": "Edamame-Bowl mit Reis",
+          "p": 26,
+          "kh": 65,
+          "low_residue": false,
+          "zutaten": "200 g Edamame (vorgegart/TK) · 70 g Reis (oder Reste-Reis vom Vortag) · Gurke · Paprika · Karotte · Babyspinat · ½ Avocado · Sesam · Sojasauce",
+          "rezept": "5-10 Min: mit Reste-Reis kein Herd nötig. Coachin-Rezept + Reis für die Carbs — leichtes Abendessen."
+        }
+      ],
+      "post_belastung": [
+        {
+          "id": "intervall-m2",
+          "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
+          "p": 32,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "2 Eier · 1 Scheibe Brot · 150 g Skyr · ½ Banane",
+          "rezept": "5 Min: 2 Eier verquirlen, in etwas Butter stocken lassen, salzen. Dazu Brot und Skyr mit ½ Banane."
+        },
+        {
+          "id": "vo2max-m2",
+          "name": "Protein-Porridge",
+          "p": 30,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "50 g Haferflocken in 250 ml Milch · 100 g Magerquark · Banane · Mandelmus",
+          "rezept": "7 Min: Haferflocken in der Milch köcheln, vom Herd nehmen, Quark einrühren (sonst klumpt es), Banane in Scheiben und 1 TL Mandelmus obendrauf."
+        },
+        {
+          "id": "kraft-m2",
+          "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+          "p": 22,
+          "kh": 30,
+          "low_residue": true,
+          "zutaten": "25 g Whey · 300 ml Milch · 1 Banane"
+        },
+        {
+          "id": "longrun-m3",
+          "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
+          "p": 30,
+          "kh": 60,
+          "low_residue": false,
+          "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
+          "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt."
+        },
+        {
+          "id": "alt-smoothie-bowl",
+          "name": "Recovery Smoothie Bowl",
+          "p": 35,
+          "kh": 40,
+          "low_residue": false,
+          "zutaten": "200 g Skyr · 150 g TK-Beeren · ½ Banane · 1 Handvoll Spinat · 25 g Proteinpulver · 1 EL Leinsamen · Kürbiskerne",
+          "rezept": "5 Min mixen. Coachin-Rezept — Alternative fürs Post-Belastungs-Fenster."
+        }
+      ]
+    }
+  },
+  "einkauf": {
+    "2026-08-11": {
+      "erstellt": "2026-08-10",
+      "items": [
+        {
+          "id": "lachs",
+          "name": "Lachsfilet",
+          "menge": "4 Stück (2× Abendessen für die Familie)",
+          "kategorie": "Fleisch & Fisch"
+        },
+        {
+          "id": "haehnchenbrust",
+          "name": "Hähnchenbrust",
+          "menge": "ca. 800 g (Do Curry + Sa Kokos-Sahne)",
+          "kategorie": "Fleisch & Fisch"
+        },
+        {
+          "id": "putenbrust",
+          "name": "Putenbrust-Aufschnitt",
+          "menge": "1 Packung",
+          "kategorie": "Fleisch & Fisch"
+        },
+        {
+          "id": "skyr",
+          "name": "Skyr",
+          "menge": "ca. 1,2 kg (Di, Do 2×, Mi Overnight Oats)",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "huettenkaese",
+          "name": "Hüttenkäse",
+          "menge": "ca. 600 g (Mi Bowl, Do Sandwich, Sa spät)",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "mozzarella",
+          "name": "Mozzarella",
+          "menge": "1× 125 g",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "feta",
+          "name": "Feta",
+          "menge": "1 Packung",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "sahne",
+          "name": "Sahne",
+          "menge": "3 Becher",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "milch",
+          "name": "Milch",
+          "menge": "2 l (Whey-Shakes, Porridge, Milchreis)",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "parmesan",
+          "name": "Parmesan",
+          "menge": "1 Stück",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "bergkaese",
+          "name": "Bergkäse (für Spätzle)",
+          "menge": "200 g",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "quark",
+          "name": "Milchreis (fertig oder Milchreis-Reis)",
+          "menge": "4 Portionen à 250 g",
+          "kategorie": "Milchprodukte"
+        },
+        {
+          "id": "beeren",
+          "name": "Beeren (TK oder frisch)",
+          "menge": "ca. 800 g",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "bananen",
+          "name": "Bananen",
+          "menge": "10 Stück",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "rucola",
+          "name": "Rucola",
+          "menge": "2 Packungen (Di Salat, Do Sandwich)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "rosenkohl",
+          "name": "Rosenkohl",
+          "menge": "500 g (Mi)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "brokkoli",
+          "name": "Brokkoli",
+          "menge": "1 Kopf (Fr) — letzter Kohl vor dem Long Run",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "suesskartoffel",
+          "name": "Süßkartoffeln",
+          "menge": "ca. 800 g (Fr)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "kartoffeln",
+          "name": "Kartoffeln",
+          "menge": "ca. 1,5 kg (Di, doppelte Portion)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "tomaten",
+          "name": "Tomaten",
+          "menge": "1 kg",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "gurke",
+          "name": "Gurke",
+          "menge": "2 Stück",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "avocado",
+          "name": "Avocado",
+          "menge": "1 Stück (Fr Bowl)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "blattsalat",
+          "name": "Blattsalat",
+          "menge": "1 Kopf (Di)",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "dill",
+          "name": "Dill",
+          "menge": "2 Bund",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "edamame",
+          "name": "Edamame (TK)",
+          "menge": "1 Packung",
+          "kategorie": "Obst & Gemüse"
+        },
+        {
+          "id": "linsen",
+          "name": "Linsen (Dose)",
+          "menge": "1 Dose (Di)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "kichererbsen",
+          "name": "Kichererbsen (Dose)",
+          "menge": "1 Dose (Do)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "eier",
+          "name": "Eier",
+          "menge": "6 Stück (Di 2, Sa 2 + Reserve)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "semmeln",
+          "name": "Semmeln / Weißbrot",
+          "menge": "6 Stück — für Samstag (low-residue!)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "toastbrot",
+          "name": "Toastbrot",
+          "menge": "1 Packung",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "vollkornbrot",
+          "name": "Vollkornbrot",
+          "menge": "1 Laib",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "tagliatelle",
+          "name": "Tagliatelle",
+          "menge": "1 Packung — Samstagabend",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "spaetzle",
+          "name": "Spätzle",
+          "menge": "1 Packung (Mi)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "reis",
+          "name": "Reis (weiß)",
+          "menge": "—",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "haferflocken",
+          "name": "Haferflocken",
+          "menge": "—",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "whey",
+          "name": "Whey-Protein",
+          "menge": "— (Bestand prüfen, 2 Shakes)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "mandelmus",
+          "name": "Mandelmus",
+          "menge": "—",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "erdnussmus",
+          "name": "Erdnussmus",
+          "menge": "—",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "reiswaffeln",
+          "name": "Reiswaffeln",
+          "menge": "1 Packung",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "marmelade",
+          "name": "Marmelade",
+          "menge": "— (kein Honig!)",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "kokosmilch",
+          "name": "Kokosmilch",
+          "menge": "2 Dosen",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "oliven",
+          "name": "Oliven",
+          "menge": "1 Glas",
+          "kategorie": "Vorrat"
+        },
+        {
+          "id": "glutamin",
+          "name": "L-Glutamin — Bestand für Sonntag prüfen",
+          "menge": "15 g für den Long Run",
+          "kategorie": "Vorrat"
+        }
+      ]
+    }
   }
- ],
- "tagesplan": {
-  "2026-08-03": {
-   "hinweis": "Blutentnahme 8:00 nuechtern. Kein Lauf heute. Vor der Abnahme 1-2 Glaeser WASSER (erlaubt und sinnvoll), keine Supplements. Ab 12:15 der Kette-Nachholblock aus dem Wochenkonto — die Abnahme ist dann durch.",
-   "nur": [
-    "sa-mobility",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Vor der Abnahme: 1-2 Glaeser stilles Wasser",
-     "duration": "2 min",
-     "trigger": "vor 08:00",
-     "why": "Nuechtern heisst ohne Essen, nicht ohne Wasser. Dehydriert sind Haemoglobin, Haematokrit und Ferritin falsch hoch — und Ferritin ist einer der Zielwerte. Gestern standen nur 1.200 ml im Tracker bei 3 h Wandern."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Dem Arzt sagen: taeglich 3-5 g Kreatin",
-     "duration": "1 min",
-     "trigger": "bei der Abnahme",
-     "why": "Kreatin hebt das Serum-Kreatinin unabhaengig von der Nierenfunktion. Ohne den Hinweis wird ein erhoehter Wert als Nierenschwaeche fehlgedeutet. Auch erwaehnen: Laktat-Test Fr, Long Run Sa frueh, So 3 h gewandert."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Kette-Nachholblock aus dem Wochenkonto",
-     "duration": "~45 min",
-     "trigger": "ab 12:15",
-     "why": "Reihenfolge: 5 min Glute-Aktivierung, dann Achilles-Snack (hoechste Prioritaet), Po-Snack, Hamstring-Snack. Abnahme ist durch, Long Run zwei Tage her — besserer Moment kommt diese Woche nicht."
-    },
-    {
-     "tier": "standard",
-     "name": "Fruehstueck direkt nach der Abnahme",
-     "duration": "—",
-     "trigger": "ab 09:00",
-     "why": "30-40 g Protein + Carbs, du bist dann 13 h ohne Essen. Und die Morgen-Supplements nachholen — D3+K2 und Omega-3 brauchen ohnehin Fett."
-    }
-   ]
-  },
-  "2026-08-04": {
-   "hinweis": "Intervalle 1:35 bei 34,9 Grad Tageshoch — Start 6:15, sonst wird aus einer moderaten Einheit eine harte. Der Kalender ist frei, es gibt keinen Grund fuer spaeter.",
-   "nur": [
-    "di-aktivierung",
-    "di-intervall",
-    "di-atem",
-    "di-wade",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Vollstaendige Darmentleerung vor dem Start",
-     "duration": "—",
-     "trigger": "zwischen Aufstehen und Losgehen",
-     "why": "Regel GI-1. Deine Bilanz ist eindeutig: Morgenlaeufe mit Entleerung problemfrei (03.07., 16.07., 25.07., 01.08.), Spaetstarts ohne kaputt (21.06., 14.07., 27.07.). Also frueh genug aufstehen, nicht hetzen."
-    },
-    {
-     "tier": "standard",
-     "name": "Achilles links beobachten — flach laufen",
-     "duration": "—",
-     "trigger": "waehrend des Laufs",
-     "why": "Am 01.08 links an den Huegeln gespuert, in den neuen Hoka Bondi. Heute bewusst flache Strecke: kommt das Ziehen auch eben wieder, liegt es am Schuh und nicht am Profil. Bei >=3/10 abbrechen und melden."
-    },
-    {
-     "tier": "standard",
-     "name": "Gel-Plan: 1 Squeezy bei Min 40-45",
-     "duration": "—",
-     "trigger": "waehrend des Laufs",
-     "why": "150-250 ml REINES Wasser dazu, zweites Gel gegen Min 80 wenn es passt. Elektrolytflasche mit VOLLER Tab strikt getrennt nebenher. Nie mischen."
-    }
-   ]
-  },
-  "2026-08-05": {
-   "hinweis": "Kraft-Tag, Block 2 startet. Muckibude 3 mit EIGENEN Rep-Vorgaben (im TP stehen keine — deshalb waren es am 28.07 nur 30 min). Vorgaben stehen im Kraft-Plyo-Plan. Bester Slot 6:45-7:45 vor dem Weekly, sonst ab 12:00.",
-   "nur": [
-    "mi-kraft",
-    "mi-schwimmen",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Glute-Aktivierung 5 min VOR der Session",
-     "duration": "5 min",
-     "trigger": "zuerst",
-     "why": "Regel KR-1: deine Hamstrings krampfen bei Sliding Leg Curl und Glute Bridge, weil der Po nicht feuert und die Beinrueckseite uebernimmt. Clams + Glute Bridge + Monster Walks."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Rep-Vorgaben aus dem Kraft-Plyo-Plan setzen",
-     "duration": "—",
-     "trigger": "waehrend der Session",
-     "why": "Hip Thrust 4×8 schwer (RPE 7-8, +2,5 kg sobald RPE <=7) · Bent-Knee Soleus 3×10 mit 3 s runter · Wadenheber gestreckt 3×10 · Sliding Leg Curl 3×8. Ab 30.08 keine neuen Uebungen mehr, ab 07.09 nur noch Erhalt — das Aufbaufenster ist jetzt."
-    },
-    {
-     "tier": "standard",
-     "name": "Block 2: Pogos 3×20 + einbeinige Mini-Hops 2×8/Seite",
-     "duration": "5 min",
-     "trigger": "nach dem Warm-up, auf frische Beine",
-     "why": "Block 2 startet am 03.08. Pogos 3×20 sind ab jetzt Standard, einbeinige Mini-Hops kommen neu dazu. Deckel bleibt ~100 Bodenkontakte pro Session. Knie oder Achilles >=3/10 → heute nicht."
-    },
-    {
-     "tier": "bonus",
-     "name": "Radtraining",
-     "duration": "1 min · 1 TSS",
-     "trigger": "wann es passt",
-     "why": "Steht so im TrainingPeaks-Plan. Symbolisch, aber es ist eingetragen."
-    }
-   ]
-  },
-  "2026-08-06": {
-   "hinweis": "VO2max Ballerei 6:15-7:15 (bleibt am Donnerstag). AUSSERDEM: letzter Tag Estradiol + Progesteron (Tag 26), ab morgen eine Woche Pause. Ab morgen laeuft der Selbsttest zur Morgen-Muedigkeit — Fruehstueck NICHT mehr aendern, sonst ist die Pausenwoche nicht auswertbar.",
-   "nur": [
-    "di-aktivierung",
-    "di-intervall",
-    "di-atem",
-    "di-wade",
-    "daily-meditation",
-    "daily-wallsit",
-    "daily-balance",
-    "daily-ankle",
-    "daily-birddog",
-    "daily-supp-morgen",
-    "daily-supp-tag",
-    "daily-supp-abend"
-   ],
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Ab morgen: Morgen-Muedigkeit taeglich notieren",
-     "duration": "1 min",
-     "trigger": "jeden Morgen 30-60 min nach dem Fruehstueck",
-     "why": "HRT-Pause 07.-13.08 = natuerliches Experiment. Frage: Ist die Muedigkeit nach dem Fruehstueck in der Pausenwoche weg? Wenn ja, liegt es am abendlichen Progesteron (First-Pass zu Allopregnanolon, GABA-A, Sedierung) und nicht am Essen. Einfach 0-10 ins Tagebuch, mehr braucht es nicht. WICHTIG: Fruehstueck ab morgen NICHT weiter veraendern, sonst sind zwei Variablen gleichzeitig offen."
-    },
-    {
-     "tier": "standard",
-     "name": "Letzter Tag Estradiol + Progesteron (Tag 26)",
-     "duration": "—",
-     "trigger": "abends",
-     "why": "Danach eine Woche Pause. Erste lange Einheit ohne Estradiol ist der Long Run am Sonntag — Waermeregulation und Erholung koennen abweichen, das gehoert ins Tagebuch."
-    }
-   ]
-  },
-  "2026-08-11": {
-   "hinweis": "Standardprogramm plus Kette-Konto. Der Lauf liegt MORGENS (29,7 Grad). Die Kette-Snacks sind NICHT in der Muckibude enthalten — sie muessen extra gemacht werden, und diese Woche haben sie Prioritaet. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Kette-Block: Hamstring + Beckenboden",
-     "duration": "11 min",
-     "trigger": "abends, mit Abstand zu den Intervallen",
-     "why": "Hamstring-Snack: Sliding Leg Curl 3x6 verkuerzte ROM, 3-4 s exzentrisch + Single Leg Deadlift 3x8 pro Seite. Davor 5 min Glute-Aktivierung (Regel KR-1) — nach einem Intervall-Tag ist exzentrische Hamstring-Arbeit sonst Krampf-Risiko. Danach Beckenboden 3 min. Abhaken in der Karte 'Kette & Sehnen'."
-    }
-   ]
-  },
-  "2026-08-12": {
-   "hinweis": "Kraft-Tag mit vollem Vormittag (Weekly 8:00, Podcasts 9-12, Physio 9:30). Muckibude 3 auf 12:30 nach der Physio — mit den zwei Snacks drumherum plan 70 min ein, nicht 45. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Kette-Block: Pogos (vor) + Achilles + Po (nach der Kraft)",
-     "duration": "21 min",
-     "trigger": "Pogos nach dem Warm-up, Achilles und Po im Anschluss an die Muckibude",
-     "why": "1. Pogos 3x20 auf frische Beine, VOR der Kraft. 2. Muckibude 3. 3. Achilles-Snack: Bent-Knee Calf Raise 3x10 mit 3 s exzentrisch + Wadenheber gestreckt 3x10 — erster schwerer Soleus-Reiz seit dem 31.07. 4. Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite. Wenn die Zeit nicht reicht, faellt der Po-Snack (steht Freitag nochmal), Pogos und Achilles nicht. Abhaken in der Karte 'Kette & Sehnen'."
-    }
-   ]
-  },
-  "2026-08-13": {
-   "hinweis": "08:00-08:15 Mammografie, Tempolauf danach ab 09:15 bei 30,7 Grad (Schatten, nach Gefuehl deckeln). Abends der Kette-Block. Wochenplan Kette & Sehnen (12 von 12, Sa+So bewusst frei): Mo Po + Beckenboden · Di Hamstring + Beckenboden · Mi Pogos + Achilles + Po (an die Kraft) · Do Hamstring + Beckenboden · Fr Pogos + Achilles + Po (an die Kraft). Achilles und Pogos liegen auf den beiden Kraft-Tagen, Hamstring Di/Do mit 48 h Abstand, Po Mo/Mi/Fr. Samstag und Sonntag bleiben frei — Vortag und Long Run werden nicht angetastet.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Kette-Block: Hamstring + Beckenboden",
-     "duration": "11 min",
-     "trigger": "abends, mit Abstand zum Tempolauf",
-     "why": "Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8 pro Seite (48 h nach Dienstag, sauberer Abstand) + Beckenboden 3 min. Damit steht das Konto bei 8 von 12, den Rest holt der Freitag (Pogos + Achilles + Po an die Muckibude schnell). Abhaken in der Karte 'Kette & Sehnen'."
-    }
-   ]
-  }
- },
- "essensplan": {
-  "2026-08-11": {
-   "tagestyp": "intervall",
-   "typLabel": "Intervall-Tag",
-   "einheit": "Intervalle 75 min",
-   "rev": 1,
-   "hinweis": "Lauf um 6:45 — Pre-Run schon um 6:00, nur eine kleine Portion. Abends 18:00 Kette-Block (Hamstring + Beckenboden), 19:00 Zoom. Der Abend wird knapp: Snack um 16:30 nicht auslassen.",
-   "ziel": {
-    "p": 140,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-11-m1",
-     "slot": "pre_run",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 6:00 vor dem Lauf",
-     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
-     "zutaten": "Toastbrot, Marmelade, Banane",
-     "p": 6,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m2",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🍳 8:15 binnen 40 min",
-     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
-     "zutaten": "Eier, Brot, Skyr, Banane",
-     "p": 32,
-     "kh": 60,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m3",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Linsen-Feta-Salat mit Rucola und Brot",
-     "zutaten": "Linsen (Dose), Feta, Rucola, Tomate, Gurke, Olivenöl, 2 Scheiben Vollkornbrot — nichts kochen",
-     "p": 32,
-     "kh": 55,
-     "tags": [
-      "huelsenfruechte",
-      "kreuzbluetler"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m4",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🍚 16:30 Snack",
-     "name": "250 g Milchreis mit Zimt",
-     "zutaten": "Milchreis, Zimt",
-     "p": 9,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥣 Später Snack",
-     "name": "Skyr mit Haferflocken und Beeren",
-     "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
-     "p": 25,
-     "kh": 50,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Lachs in Sahne-Dill-Sauce + Kartoffeln + Salat",
-     "zutaten": "Lachsfilet, Sahne, Dill, Kartoffeln, Blattsalat — doppelte Portion Kartoffeln kochen, die Reste sind morgen dein Mittag",
-     "p": 35,
-     "kh": 85,
-     "tags": [
-      "fetter_fisch"
-     ],
-     "rezept": null,
-     "fuerDich": "doppelte Portion Kartoffeln — nach Intervallen ist die große Beilage genau richtig. Gibt es was ganz anderes: Hauptsache Beilage doppelt."
-    }
-   ]
-  },
-  "2026-08-12": {
-   "tagestyp": "kraft",
-   "typLabel": "Kraft-Tag",
-   "einheit": "Kraft 45 min (Muckibude 3) + Kette-Block",
-   "rev": 1,
-   "hinweis": "Vormittag voll (Weekly 8:00, Podcasts 9-12, Physio 9:30). Der 10:45-Anker ist das Pre-Fuel für die Kraft um 12:30 — nicht überspringen, Kraft nicht nüchtern.",
-   "ziel": {
-    "p": 138,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-12-m1",
-     "slot": "fruehstueck",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 7:15 Frühstück",
-     "name": "Overnight Oats",
-     "zutaten": "60 g Haferflocken, Skyr, Milch, Beeren, Nüsse — abends vorher ansetzen",
-     "p": 30,
-     "kh": 55,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m2",
-     "slot": "vormittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 10:45 vor der Kraft",
-     "name": "Brot mit Marmelade + 1 Banane",
-     "zutaten": "Brot, Marmelade, Banane",
-     "p": 7,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m3",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 14:00 binnen 40 min nach der Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "Whey, Milch, Banane",
-     "p": 22,
-     "kh": 30,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m4",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ 14:30 Mittag",
-     "name": "Mediterrane Hüttenkäse-Bowl + 2 Scheiben Brot",
-     "zutaten": "250 g Hüttenkäse, Tomate, Gurke, Oliven, Olivenöl, Vollkornbrot — nichts kochen",
-     "p": 38,
-     "kh": 85,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 Snack",
-     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
-     "zutaten": "Vollkornbrot, Mandelmus, Banane",
-     "p": 10,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Käsespätzle mit Rosenkohl",
-     "zutaten": "Spätzle, Bergkäse, Zwiebeln, Rosenkohl",
-     "p": 30,
-     "kh": 95,
-     "tags": [
-      "kreuzbluetler",
-      "fermentiertes"
-     ],
-     "rezept": null,
-     "fuerDich": "große Portion Spätzle, und den Rosenkohl nicht weglassen — das ist dein Kreuzblütler des Tages (Leber-Quote)."
-    }
-   ]
-  },
-  "2026-08-13": {
-   "tagestyp": "intervall",
-   "typLabel": "Tempo-Tag",
-   "einheit": "Tempolauf 55 min",
-   "rev": 1,
-   "hinweis": "Mammografie 8:00 — die braucht keine Nüchternheit, also VOR dem Termin frühstücken. Lauf danach ab 9:15 bei 30,7 Grad. Post-Run bewusst kalt (Smoothie Bowl), bei Hitze fällt der Appetit sonst weg. Abends 18:00 Kette-Block.",
-   "ziel": {
-    "p": 140,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-13-m1",
-     "slot": "pre_run",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 7:00 vor dem Termin",
-     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
-     "zutaten": "Toastbrot, Marmelade, Banane",
-     "p": 6,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m2",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 10:45 binnen 40 min",
-     "name": "Recovery Smoothie Bowl",
-     "zutaten": "Skyr, Beeren, Banane, Whey, Haferflocken — kalt, geht bei Hitze runter",
-     "p": 35,
-     "kh": 40,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m3",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Protein-Sandwich mit Rucola + 1 Banane",
-     "zutaten": "Vollkornbrot, Hüttenkäse oder Putenbrust, Rucola, Tomate, Banane — nichts kochen",
-     "p": 26,
-     "kh": 80,
-     "tags": [
-      "fermentiertes",
-      "kreuzbluetler"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m4",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🍚 Snack",
-     "name": "250 g Milchreis mit Zimt",
-     "zutaten": "Milchreis, Zimt",
-     "p": 9,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥣 Später Snack",
-     "name": "Skyr mit Haferflocken und Beeren",
-     "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
-     "p": 25,
-     "kh": 50,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Kichererbsen-Hähnchen in Kokos-Curry + Reis",
-     "zutaten": "Hähnchenbrust, Kichererbsen, Kokosmilch, Currypaste, Reis",
-     "p": 40,
-     "kh": 80,
-     "tags": [
-      "huelsenfruechte"
-     ],
-     "rezept": null,
-     "fuerDich": "doppelte Portion Reis. Wenn es am Ende ohne Hähnchen bleibt: danach 1 Skyr, sonst fehlen dir 25 g Protein."
-    }
-   ]
-  },
-  "2026-08-14": {
-   "tagestyp": "kraft",
-   "typLabel": "Kraft-Tag",
-   "einheit": "Kraft 45 min (Muckibude schnell) + Kette-Block",
-   "rev": 1,
-   "hinweis": "Letzter voller Tag vor dem Vortag-Modus. Morgen wird low-residue — heute also nochmal Ballaststoffe und Kohl, danach zwei Tage nicht mehr.",
-   "ziel": {
-    "p": 138,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-14-m1",
-     "slot": "fruehstueck",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 Frühstück",
-     "name": "Protein-Porridge",
-     "zutaten": "60 g Haferflocken, 25 g Whey, Milch, Beeren, Zimt",
-     "p": 30,
-     "kh": 60,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m2",
-     "slot": "vormittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 vor der Kraft",
-     "name": "3 Scheiben Brot mit Marmelade + 1 Banane",
-     "zutaten": "Brot, Marmelade, Banane",
-     "p": 9,
-     "kh": 75,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m3",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 binnen 40 min nach der Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "Whey, Milch, Banane",
-     "p": 22,
-     "kh": 30,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m4",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Edamame-Bowl mit Reis",
-     "zutaten": "Edamame (TK), Reis, Gurke, Avocado, Sesam, Sojasauce — Reis vom Vortag oder schnell gekocht",
-     "p": 26,
-     "kh": 65,
-     "tags": [
-      "huelsenfruechte"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 Snack",
-     "name": "Reiswaffeln mit Erdnussmus + 1 Banane",
-     "zutaten": "Reiswaffeln, Erdnussmus, Banane",
-     "p": 10,
-     "kh": 45,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Ofenlachs in Sahne-Dill + Brokkoli + Süßkartoffel-Wedges",
-     "zutaten": "Lachsfilet, Sahne, Dill, Brokkoli, Süßkartoffeln",
-     "p": 38,
-     "kh": 90,
-     "tags": [
-      "fetter_fisch",
-      "kreuzbluetler"
-     ],
-     "rezept": null,
-     "fuerDich": "große Portion Süßkartoffel — ab morgen fängt das Auffüllen für den Long Run an, und Brokkoli ist heute zum letzten Mal drin (morgen low-residue)."
-    }
-   ]
-  },
-  "2026-08-15": {
-   "tagestyp": "vortag_longrun",
-   "typLabel": "Vortag Long Run — low-residue",
-   "einheit": "Mobi 17 min — Vortag Long Run 2:30",
-   "rev": 1,
-   "hinweis": "HEUTE zählt der Abend ausnahmsweise wirklich: morgen 2:30 Long Run. Alles weiß und mild — kein Kohl, keine Hülsenfrüchte, kein Rohkost-Salat, keine Vollkornprodukte. Um 18:30 ist Schluss mit Essen. Und: L-Glutamin 15 g für morgen ABMESSEN und neben die Schuhe stellen (zweimal in Folge vergessen).",
-   "ziel": {
-    "p": 137,
-    "kh": 380
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-15-m1",
-     "slot": "fruehstueck",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "08:00",
-     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
-     "zutaten": "Eier, Semmeln, Butter, Marmelade",
-     "p": 20,
-     "kh": 65,
-     "tags": [],
-     "rezept": null,
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m2",
-     "slot": "vormittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "10:30",
-     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
-     "zutaten": "Mozzarella, Tomate, Semmel, Olivenöl",
-     "p": 22,
-     "kh": 30,
-     "tags": [],
-     "rezept": null,
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m3",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "12:30",
-     "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
-     "zutaten": "Hähnchenbrust, Kokosmilch, Sahne, weißer Reis — doppelte Portion Reis kochen",
-     "p": 38,
-     "kh": 65,
-     "tags": [],
-     "rezept": null,
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m4",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "15:00",
-     "name": "250 g Milchreis mit Zimt",
-     "zutaten": "Milchreis, Zimt",
-     "p": 9,
-     "kh": 55,
-     "tags": [],
-     "rezept": null,
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "16:30",
-     "name": "1 Semmel mit Marmelade + 1 Banane",
-     "zutaten": "Semmel, Marmelade, Banane",
-     "p": 5,
-     "kh": 55,
-     "tags": [],
-     "rezept": null,
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 18:00 ⚠️ Abend — Familie",
-     "name": "Tagliatelle in Sahne-Parmesan-Sauce",
-     "zutaten": "Tagliatelle (100 g trocken), Sahne, Parmesan — 15 Minuten, familientauglich",
-     "p": 25,
-     "kh": 80,
-     "tags": [],
-     "rezept": null,
-     "fuerDich": "der einzige Abend der Woche, an dem der Vorschlag wirklich zählt. Weißes Mehl und Sahne sind heute richtig — kein Salat, kein Kohl, keine Hülsenfrüchte dazu. Um 18:30 ist Schluss.",
-     "low_residue": true
-    },
-    {
-     "id": "2026-08-15-m7",
-     "slot": "spaet",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "19:15",
-     "name": "150 g Hüttenkäse mit Weißbrot",
-     "zutaten": "Hüttenkäse, Weißbrot",
-     "p": 18,
-     "kh": 30,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null,
-     "low_residue": true
-    }
-   ]
-  }
- },
- "essenAlternativen": {
-  "snacks": [
-   {
-    "id": "snack-mandelmus",
-    "name": "Vollkornbrot mit Mandelmus + Banane",
-    "p": 10,
-    "kh": 55,
-    "low_residue": false
-   },
-   {
-    "id": "snack-porridge",
-    "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
-    "p": 12,
-    "kh": 45,
-    "low_residue": false
-   },
-   {
-    "id": "snack-skyr",
-    "name": "Skyr mit Haferflocken und Beeren",
-    "p": 25,
-    "kh": 50,
-    "low_residue": false
-   },
-   {
-    "id": "snack-avocado",
-    "name": "Vollkornbrot mit Avocado und Tomate",
-    "p": 10,
-    "kh": 50,
-    "low_residue": false
-   },
-   {
-    "id": "snack-quinoa-skyr",
-    "name": "Quinoa-Bowl mit Skyr und Beeren",
-    "p": 30,
-    "kh": 50,
-    "low_residue": false
-   },
-   {
-    "id": "snack-reiswaffeln",
-    "name": "Reiswaffeln mit Erdnussmus + Banane",
-    "p": 10,
-    "kh": 45,
-    "low_residue": true
-   },
-   {
-    "id": "snack-marmelade",
-    "name": "Brot mit Marmelade + Banane",
-    "p": 7,
-    "kh": 55,
-    "low_residue": true
-   }
-  ],
-  "slots": {
-   "fruehstueck": [
-    {
-     "id": "ruhetag-m1",
-     "name": "Skyr-Beeren-Schüssel",
-     "p": 30,
-     "kh": 50,
-     "low_residue": false,
-     "zutaten": "200 g Skyr · 40 g Haferflocken · 150 g Beeren · 30 g Walnüsse · Zimt",
-     "rezept": "5 Min: Skyr mit Haferflocken verrühren, Beeren und Walnüsse obendrauf, Zimt drüber."
-    },
-    {
-     "id": "kraft-m1",
-     "name": "Overnight Oats",
-     "p": 30,
-     "kh": 55,
-     "low_residue": false,
-     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
-     "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf."
-    },
-    {
-     "id": "vortag_longrun-m1",
-     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
-     "p": 20,
-     "kh": 65,
-     "low_residue": true,
-     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
-     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade."
-    },
-    {
-     "id": "tag_nach_longrun-m1",
-     "name": "Protein-Pancakes",
-     "p": 33,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "50 g Haferflocken gemahlen · 2 Eier · 100 g Quark · Banane · Beeren obendrauf",
-     "rezept": "15 Min: Haferflocken im Mixer mahlen, mit Eiern, Quark und Banane zum Teig mixen. Kleine Pancakes in beschichteter Pfanne 2-3 Min pro Seite. Skyr und Beeren obendrauf."
-    },
-    {
-     "id": "alt-hafer-milchfrei",
-     "name": "Milchfreie Protein-Haferflocken",
-     "p": 37,
-     "kh": 65,
-     "low_residue": false,
-     "zutaten": "80 g Haferflocken · 300 ml Wasser oder Hafer-/Mandeldrink · 30 g Proteinpulver · 150 g Beeren · 20 g Kürbiskerne · 1 EL Leinsamen · Zimt",
-     "rezept": "7 Min. Proteinpulver erst einrühren, wenn der Brei abgekühlt ist (klumpt sonst). ~200 mg Kalzium weniger als Skyr-Variante — mittags/abends nachlegen (Bergkäse, Parmesan, Sesam, Grünkohl)."
-    },
-    {
-     "id": "alt-power-fruehstueck",
-     "name": "Mediterranes Power-Frühstück",
-     "p": 24,
-     "kh": 40,
-     "low_residue": false,
-     "zutaten": "2 Eier Rührei · 2 Scheiben Vollkornbrot · Tomate · Gurke · Rucola · Olivenöl · Kürbiskerne",
-     "rezept": "10 Min. Coachin-Rezept — herzhafte Frühstücks-Alternative. Carb-leichter als die Oats-Frühstücke: Banane dazu, wenn ein Trainingstag ist."
-    }
-   ],
-   "mittag": [
-    {
-     "id": "ruhetag-m3",
-     "name": "Putenhack-Bowl asiatisch + 70 g Reis",
-     "p": 34,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "120 g Putenhack · 250 g Brokkoli · Sojasauce, Ingwer, Sesamöl, Limette · Sesam · 70 g Reis",
-     "rezept": "25 Min: Putenhack scharf anbraten, Brokkoli dazu, mit Sojasauce, frischem Ingwer, Sesamöl und Limette ablöschen, Sesam drüber. Reis untermischen."
-    },
-    {
-     "id": "intervall-m4",
-     "name": "Hähnchen-Nudeln in Sahne-Parmesan mit Spinat (100 g Nudeln)",
-     "p": 45,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "150 g Hähnchenbrust · 200 g Blattspinat · 100 ml Sahne · 40 g Parmesan · Muskat, Zitronenabrieb · 100 g Nudeln",
-     "rezept": "20 Min: Hähnchen in Streifen anbraten, Spinat zusammenfallen lassen, Sahne + Parmesan einkochen, Muskat, Zitronenabrieb. Nudeln untermischen. Parmesan bringt ~350 mg Kalzium."
-    },
-    {
-     "id": "vo2max-m4",
-     "name": "Putenschnitzel + 400 g Süßkartoffel-Wedges + Kräuter-Sahne-Dip + Rucola",
-     "p": 40,
-     "kh": 85,
-     "low_residue": false,
-     "zutaten": "1 Putenschnitzel (~150 g) · 400 g Süßkartoffeln · 150 g Quark + 2 EL Sahne + Schnittlauch/Petersilie/Zitrone · 1 Handvoll Rucola",
-     "rezept": "30 Min (Ofen passiv): Süßkartoffeln in Spalten, mit Öl und Paprikapulver bei 200 °C ~25 Min rösten. Schnitzel salzen, in der Pfanne 3-4 Min pro Seite. Dip (2 Min): Quark mit Sahne, Kräutern, Zitrone, Salz verrühren."
-    },
-    {
-     "id": "kraft-m4",
-     "name": "Kichererbsen-Hähnchen in Kokos-Curry + 70 g Reis",
-     "p": 40,
-     "kh": 80,
-     "low_residue": false,
-     "zutaten": "150 g Hähnchen · 240 g Kichererbsen (1 Dose abgetropft) · 150 ml Kokosmilch · Kurkuma, Ingwer, Curry, Limette · Paprika/Zucchini · 70 g Reis",
-     "rezept": "20 Min: Hähnchen anbraten, Kichererbsen und Kokosmilch dazu, Gewürze, Gemüse mitgaren. Reis dazu."
-    },
-    {
-     "id": "vortag_longrun-m3",
-     "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
-     "p": 38,
-     "kh": 65,
-     "low_residue": true,
-     "zutaten": "150 g Hähnchen · 150 ml Kokosmilch + 50 ml Sahne · mildes Curry, Ingwer, Limette · geschälte Karotte · 80 g weißer Reis",
-     "rezept": "20 Min: Hähnchen anbraten, Kokosmilch + Sahne, mildes Curry, Ingwer, Limette, Karotte weich mitgaren. OHNE Zwiebel und Knoblauch (FODMAP) — Ingwer und Limette tragen den Geschmack."
-    },
-    {
-     "id": "longrun-m5",
-     "name": "Asiatische Hähnchen-Reispfanne + 80 g Reis",
-     "p": 38,
-     "kh": 65,
-     "low_residue": false,
-     "zutaten": "150 g Hähnchen · Paprika · Frühlingszwiebel · Erbsen · Sojasauce, Ingwer, Sesamöl, Limette · Sesam · 80 g Reis",
-     "rezept": "25 Min: Hähnchen in Streifen scharf anbraten, Gemüse dazu, mit Sojasauce, Ingwer, Sesamöl, Limette abschmecken, Sesam drüber. Nach dem Lauf sind Zwiebel und Knoblauch kein Thema mehr."
-    },
-    {
-     "id": "tag_nach_longrun-m3",
-     "name": "Hühnersuppe mit 80 g Suppennudeln",
-     "p": 35,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "150 g Hähnchen (gern Reste) · 500 ml Hühnerbrühe · 80 g Suppennudeln · 1 Karotte · 1 Stück Lauch · 1 Stange Sellerie · Petersilie",
-     "rezept": "20 Min: Gemüse in Scheiben in der Brühe 10 Min köcheln, Nudeln und Hähnchen(-reste) die letzten 8 Min mitgaren, Petersilie. Doppelte Menge kochen = Abendessen oder Folgetag gesichert."
-    },
-    {
-     "id": "alt-quinoa-feta",
-     "name": "Mediterrane Quinoa-Bowl mit Feta",
-     "p": 30,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "80 g Quinoa · 150 g Kichererbsen · 150 g Brokkoli · Cherrytomaten · Gurke · Rucola · 50 g Feta · Olivenöl-Zitronen-Dressing · Kurkuma",
-     "rezept": "20 Min: Quinoa kochen (doppelte Menge = Reste-Basis!), Brokkoli bissfest, alles mit Dressing vermengen. Coachin-Rezept, Feta statt Tofu."
-    },
-    {
-     "id": "alt-vk-pasta-linsen",
-     "name": "Vollkornpasta mit Spinat und Linsen",
-     "p": 32,
-     "kh": 85,
-     "low_residue": false,
-     "zutaten": "80 g Vollkornnudeln · 60 g rote Linsen · 200 g Blattspinat · Cherrytomaten · Knoblauch · Olivenöl · Parmesan",
-     "rezept": "20 Min: Nudeln und Linsen garen, Spinat mit Knoblauch und Tomaten anbraten, alles vermengen, Parmesan drüber. Coachin-Rezept. Ballaststoffreich — NICHT am Vortag von Long Run/Intensität."
-    },
-    {
-     "id": "alt-buddha-bowl",
-     "name": "Bunte Buddha Bowl",
-     "p": 28,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "80 g Naturreis · 150 g Edamame · 100 g Rotkohl · Gurke · Karotte · ½ Avocado · Babyspinat · Sesam · Tahini-Zitronen-Dressing",
-     "rezept": "20 Min: Reis kochen (doppelt!), Gemüse schneiden, Tahini mit Zitrone verrühren. Coachin-Rezept — Rotkohl zählt als Kreuzblütler, Tahini bringt Kalzium."
-    },
-    {
-     "id": "alt-linsen-feta",
-     "name": "Linsen-Feta-Salat mit Brot",
-     "p": 30,
-     "kh": 55,
-     "low_residue": false,
-     "zutaten": "200 g vorgekochte Linsen (Dose/Sous-vide) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
-     "rezept": "5 Min, kein Herd: alles vermengen. Coachin-Rezept + Brot für die Carbs."
-    },
-    {
-     "id": "alt-hk-bowl",
-     "name": "Mediterrane Hüttenkäse-Bowl",
-     "p": 35,
-     "kh": 45,
-     "low_residue": false,
-     "zutaten": "250 g Hüttenkäse · 2 Scheiben Vollkornbrot · Cherrytomaten · Gurke · Rucola · Olivenöl · Kürbiskerne",
-     "rezept": "5 Min, kein Herd. Coachin-Rezept — vor Intervalltagen Weißbrot statt Vollkorn."
-    },
-    {
-     "id": "alt-sandwich",
-     "name": "Protein-Sandwich",
-     "p": 25,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "3 Scheiben Vollkornbrot · 150 g Hüttenkäse · ½ Avocado · Tomate · Kresse · Pfeffer",
-     "rezept": "5 Min, kein Herd. Coachin-Rezept."
-    }
-   ],
-   "abend": [
-    {
-     "id": "ruhetag-m5",
-     "name": "Lachs in Sahne-Dill-Sauce + 350 g Kartoffeln + Feldsalat",
-     "p": 35,
-     "kh": 70,
-     "low_residue": false,
-     "zutaten": "150 g Lachs · 100 ml Sahne · Dill, Senf, Zitrone · 350 g Kartoffeln · Feldsalat mit Sesam",
-     "rezept": "20 Min: Lachs braten. Sahne mit Dill, 1 TL Senf und Zitrone einkochen. Dazu Salzkartoffeln und Feldsalat mit Sesam (~130 mg Kalzium)."
-    },
-    {
-     "id": "intervall-m6",
-     "name": "Linsen-Kokos-Curry + 70 g Reis",
-     "p": 25,
-     "kh": 90,
-     "low_residue": false,
-     "zutaten": "80 g rote Linsen · 200 ml Kokosmilch light · 200 g Tomaten · Ingwer, Kurkuma, Kreuzkümmel, Curry · Spinat oder Karotte · 70 g Reis",
-     "rezept": "25 Min: Linsen in Kokosmilch und Tomaten mit Gewürzen köcheln, Spinat oder Karotte dazu."
-    },
-    {
-     "id": "vo2max-m6",
-     "name": "Steak + 400 g Ofenkartoffeln + Kräuterquark",
-     "p": 42,
-     "kh": 85,
-     "low_residue": false,
-     "zutaten": "1 Steak (~180 g) · 400 g Kartoffeln · 150 g Quark mit Kräutern",
-     "rezept": "35 Min (Ofen passiv): Kartoffeln halbiert mit Öl und Salz bei 200 °C 30-35 Min. Steak trocken tupfen, in sehr heißer Pfanne 2-3 Min pro Seite, salzen, 5 Min ruhen lassen. Kräuterquark verrühren. Das eine rote Fleisch der Woche."
-    },
-    {
-     "id": "kraft-m6",
-     "name": "Käsespätzle mit Rosenkohl",
-     "p": 30,
-     "kh": 95,
-     "low_residue": false,
-     "zutaten": "130 g Spätzle · 60 g Bergkäse gerieben · 100 g Hüttenkäse · Röstzwiebeln · 200 g Rosenkohl",
-     "rezept": "25 Min: Rosenkohl halbieren, in der Pfanne mit Öl 10-12 Min rösten (ruhig braun werden lassen), salzen. Spätzle kochen, abgießen, heiß mit dem geriebenen Bergkäse mischen bis er zieht, Hüttenkäse unterheben, Röstzwiebeln drüber."
-    },
-    {
-     "id": "vortag_longrun-m6",
-     "name": "Tagliatelle in Sahne-Parmesan-Sauce (100 g trocken)",
-     "p": 25,
-     "kh": 80,
-     "low_residue": true,
-     "zutaten": "100 g Tagliatelle · 100 ml Sahne · 50 g Parmesan · Muskat, Pfeffer · optional Schinkenwürfel",
-     "rezept": "15 Min: Sahne mit Parmesan einkochen, Muskat, Pfeffer. Kein Salat dazu. Bis 18:30 gegessen!"
-    },
-    {
-     "id": "longrun-m7",
-     "name": "Lachs in Sahne-Dill-Sauce + 400 g Kartoffeln",
-     "p": 35,
-     "kh": 85,
-     "low_residue": false,
-     "zutaten": "150 g Lachs · 100 ml Sahne · Dill, Senf, Zitrone · 400 g Kartoffeln",
-     "rezept": "20 Min: Lachs braten. Sahne mit Dill, Senf und Zitrone einkochen. Dazu Salzkartoffeln."
-    },
-    {
-     "id": "tag_nach_longrun-m5",
-     "name": "Ofenlachs in Sahne-Dill + 200 g Grünkohl + 400 g Süßkartoffel",
-     "p": 38,
-     "kh": 90,
-     "low_residue": false,
-     "zutaten": "150 g Lachs · Sahne-Dill-Sauce · 200 g Grünkohl · 400 g Süßkartoffel · Tahin über den Kohl",
-     "rezept": "25 Min (Ofen passiv): Lachs und Süßkartoffelspalten aufs Blech, 200 °C ~20 Min. Grünkohl mit Öl in der Pfanne zusammenfallen lassen, salzen, Tahin drüber. Sahne-Dill-Sauce wie beim Lachs-Klassiker (Sahne + Dill + Senf + Zitrone einkochen)."
-    },
-    {
-     "id": "alt-ofengemuese",
-     "name": "Ofengemüse mit Kräuterquark",
-     "p": 33,
-     "kh": 50,
-     "low_residue": false,
-     "zutaten": "300 g Kartoffeln · 200 g Brokkoli · 1 Paprika · 1 Zucchini · 250 g Quark oder Skyr · Kräuter · Olivenöl · Kürbiskerne",
-     "rezept": "30 Min (davon 25 Ofen = passiv): Gemüse mit Olivenöl rösten, Quark mit Kräutern verrühren. Coachin-Rezept — Blech doppelt belegen, Reste kalt oder aufgewärmt am Folgetag."
-    },
-    {
-     "id": "alt-edamame-bowl",
-     "name": "Edamame-Bowl mit Reis",
-     "p": 26,
-     "kh": 65,
-     "low_residue": false,
-     "zutaten": "200 g Edamame (vorgegart/TK) · 70 g Reis (oder Reste-Reis vom Vortag) · Gurke · Paprika · Karotte · Babyspinat · ½ Avocado · Sesam · Sojasauce",
-     "rezept": "5-10 Min: mit Reste-Reis kein Herd nötig. Coachin-Rezept + Reis für die Carbs — leichtes Abendessen."
-    }
-   ],
-   "post_belastung": [
-    {
-     "id": "intervall-m2",
-     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
-     "p": 32,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "2 Eier · 1 Scheibe Brot · 150 g Skyr · ½ Banane",
-     "rezept": "5 Min: 2 Eier verquirlen, in etwas Butter stocken lassen, salzen. Dazu Brot und Skyr mit ½ Banane."
-    },
-    {
-     "id": "vo2max-m2",
-     "name": "Protein-Porridge",
-     "p": 30,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "50 g Haferflocken in 250 ml Milch · 100 g Magerquark · Banane · Mandelmus",
-     "rezept": "7 Min: Haferflocken in der Milch köcheln, vom Herd nehmen, Quark einrühren (sonst klumpt es), Banane in Scheiben und 1 TL Mandelmus obendrauf."
-    },
-    {
-     "id": "kraft-m2",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "p": 22,
-     "kh": 30,
-     "low_residue": true,
-     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane"
-    },
-    {
-     "id": "longrun-m3",
-     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
-     "p": 30,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
-     "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt."
-    },
-    {
-     "id": "alt-smoothie-bowl",
-     "name": "Recovery Smoothie Bowl",
-     "p": 35,
-     "kh": 40,
-     "low_residue": false,
-     "zutaten": "200 g Skyr · 150 g TK-Beeren · ½ Banane · 1 Handvoll Spinat · 25 g Proteinpulver · 1 EL Leinsamen · Kürbiskerne",
-     "rezept": "5 Min mixen. Coachin-Rezept — Alternative fürs Post-Belastungs-Fenster."
-    }
-   ]
-  }
- },
- "einkauf": {
-  "2026-08-11": {
-   "erstellt": "2026-08-10",
-   "items": [
-    {
-     "id": "lachs",
-     "name": "Lachsfilet",
-     "menge": "4 Stück (2× Abendessen für die Familie)",
-     "kategorie": "Fleisch & Fisch"
-    },
-    {
-     "id": "haehnchenbrust",
-     "name": "Hähnchenbrust",
-     "menge": "ca. 800 g (Do Curry + Sa Kokos-Sahne)",
-     "kategorie": "Fleisch & Fisch"
-    },
-    {
-     "id": "putenbrust",
-     "name": "Putenbrust-Aufschnitt",
-     "menge": "1 Packung",
-     "kategorie": "Fleisch & Fisch"
-    },
-    {
-     "id": "skyr",
-     "name": "Skyr",
-     "menge": "ca. 1,2 kg (Di, Do 2×, Mi Overnight Oats)",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "huettenkaese",
-     "name": "Hüttenkäse",
-     "menge": "ca. 600 g (Mi Bowl, Do Sandwich, Sa spät)",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "mozzarella",
-     "name": "Mozzarella",
-     "menge": "1× 125 g",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "feta",
-     "name": "Feta",
-     "menge": "1 Packung",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "sahne",
-     "name": "Sahne",
-     "menge": "3 Becher",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "milch",
-     "name": "Milch",
-     "menge": "2 l (Whey-Shakes, Porridge, Milchreis)",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "parmesan",
-     "name": "Parmesan",
-     "menge": "1 Stück",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "bergkaese",
-     "name": "Bergkäse (für Spätzle)",
-     "menge": "200 g",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "quark",
-     "name": "Milchreis (fertig oder Milchreis-Reis)",
-     "menge": "4 Portionen à 250 g",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "beeren",
-     "name": "Beeren (TK oder frisch)",
-     "menge": "ca. 800 g",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "bananen",
-     "name": "Bananen",
-     "menge": "10 Stück",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "rucola",
-     "name": "Rucola",
-     "menge": "2 Packungen (Di Salat, Do Sandwich)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "rosenkohl",
-     "name": "Rosenkohl",
-     "menge": "500 g (Mi)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "brokkoli",
-     "name": "Brokkoli",
-     "menge": "1 Kopf (Fr) — letzter Kohl vor dem Long Run",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "suesskartoffel",
-     "name": "Süßkartoffeln",
-     "menge": "ca. 800 g (Fr)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "kartoffeln",
-     "name": "Kartoffeln",
-     "menge": "ca. 1,5 kg (Di, doppelte Portion)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "tomaten",
-     "name": "Tomaten",
-     "menge": "1 kg",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "gurke",
-     "name": "Gurke",
-     "menge": "2 Stück",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "avocado",
-     "name": "Avocado",
-     "menge": "1 Stück (Fr Bowl)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "blattsalat",
-     "name": "Blattsalat",
-     "menge": "1 Kopf (Di)",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "dill",
-     "name": "Dill",
-     "menge": "2 Bund",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "edamame",
-     "name": "Edamame (TK)",
-     "menge": "1 Packung",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "linsen",
-     "name": "Linsen (Dose)",
-     "menge": "1 Dose (Di)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "kichererbsen",
-     "name": "Kichererbsen (Dose)",
-     "menge": "1 Dose (Do)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "eier",
-     "name": "Eier",
-     "menge": "6 Stück (Di 2, Sa 2 + Reserve)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "semmeln",
-     "name": "Semmeln / Weißbrot",
-     "menge": "6 Stück — für Samstag (low-residue!)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "toastbrot",
-     "name": "Toastbrot",
-     "menge": "1 Packung",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "vollkornbrot",
-     "name": "Vollkornbrot",
-     "menge": "1 Laib",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "tagliatelle",
-     "name": "Tagliatelle",
-     "menge": "1 Packung — Samstagabend",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "spaetzle",
-     "name": "Spätzle",
-     "menge": "1 Packung (Mi)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "reis",
-     "name": "Reis (weiß)",
-     "menge": "—",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "haferflocken",
-     "name": "Haferflocken",
-     "menge": "—",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "whey",
-     "name": "Whey-Protein",
-     "menge": "— (Bestand prüfen, 2 Shakes)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "mandelmus",
-     "name": "Mandelmus",
-     "menge": "—",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "erdnussmus",
-     "name": "Erdnussmus",
-     "menge": "—",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "reiswaffeln",
-     "name": "Reiswaffeln",
-     "menge": "1 Packung",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "marmelade",
-     "name": "Marmelade",
-     "menge": "— (kein Honig!)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "kokosmilch",
-     "name": "Kokosmilch",
-     "menge": "2 Dosen",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "oliven",
-     "name": "Oliven",
-     "menge": "1 Glas",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "glutamin",
-     "name": "L-Glutamin — Bestand für Sonntag prüfen",
-     "menge": "15 g für den Long Run",
-     "kategorie": "Vorrat"
-    }
-   ]
-  }
- }
 }
