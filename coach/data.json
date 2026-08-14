@@ -2,7 +2,7 @@
   "generated": "2026-08-13T15:20:00+02:00",
   "datenstand": {
     "wearables": "2026-08-13",
-    "kommentar": "Oura frisch bis 13.08. (Abruf 13.08. 15:0x). Laufende Woche 10.-13.08.: HRV 28 / 33 / 29 / 40 ms (Schnitt 32,5, Vorwoche 29,5), Ruhepuls 49 / 46 / 47 / 47 (Schnitt 47,3 — deutlich unter dem Vorwochenschnitt von 55,1), Schlaf 9,00 / 7,33 / 7,95 / 7,03 h (Schnitt 7,83), Readiness 91 / 89 / 90 / 90. Achilles-Morgencheck und Akku an allen erfassten Tagen 'ok' bzw. 'gut'. TrainingPeaks-CSV-Export steht weiter auf dem Stand vom 09.08. — der Sonntags-Export ist am 16.08. faellig, dann sind die Lauf-km der Woche 10.-16.08. auswertbar (aktuell fehlen Di-Intervalle und Do-Tempolauf in kmWochen). App-Erfassung: Di 11.08. und Mi 12.08. komplett leer (kein Morgencheck, kein Trinken, kein Teller) — Erfassungsluecke, KEIN Beleg fuer ausgefallenes Training (Regel DQ-1). Wetter Herrsching: Fr 32,2 / Sa 33,7 / So 31,4 Grad, Sonntag 89 % Regenwahrscheinlichkeit. LABOR-NACHTRAG 13.08.: B12 564 und Folsaeure 5 aus der Probe vom 03.08. nachgeliefert (Einheiten muendlich, nicht am Befund verifiziert — pg/ml bzw. ng/ml angenommen). KRAFT: Muckibude 3 am Mi 12.08. hat stattgefunden, von Steffi bestaetigt — die Erfassungsluecke betraf nur die App, nicht das Training."
+    "kommentar": "Oura frisch bis 13.08. (Abruf 13.08. 15:0x). Laufende Woche 10.-13.08.: HRV 28 / 33 / 29 / 40 ms (Schnitt 32,5, Vorwoche 29,5), Ruhepuls 49 / 46 / 47 / 47 (Schnitt 47,3 — deutlich unter dem Vorwochenschnitt von 55,1), Schlaf 9,00 / 7,33 / 7,95 / 7,03 h (Schnitt 7,83), Readiness 91 / 89 / 90 / 90. Achilles-Morgencheck und Akku an allen erfassten Tagen 'ok' bzw. 'gut'. TrainingPeaks-CSV-Export steht weiter auf dem Stand vom 09.08. — der Sonntags-Export ist am 16.08. faellig, dann sind die Lauf-km der Woche 10.-16.08. auswertbar (aktuell fehlen Di-Intervalle und Do-Tempolauf in kmWochen). App-Erfassung: Di 11.08. und Mi 12.08. komplett leer (kein Morgencheck, kein Trinken, kein Teller) — Erfassungsluecke, KEIN Beleg fuer ausgefallenes Training (Regel DQ-1). Wetter Herrsching: Fr 32,2 / Sa 33,7 / So 31,4 Grad, Sonntag 89 % Regenwahrscheinlichkeit. LABOR-NACHTRAG 13.08.: B12 564 und Folsaeure 5 aus der Probe vom 03.08. nachgeliefert (Einheiten muendlich, nicht am Befund verifiziert — pg/ml bzw. ng/ml angenommen). KRAFT: Muckibude 3 am Mi 12.08. hat stattgefunden, von Steffi bestaetigt — die Erfassungsluecke betraf nur die App, nicht das Training. LABORTHEMA GESCHLOSSEN (Steffi 13.08.2026): bis naechstes Jahr kein Bluttest — Laborwerte nicht mehr in Briefings thematisieren."
   },
   "hydration": {
     "2026-08-11": {
@@ -128,7 +128,7 @@
         "Fix, eine Sache: 500-ml-Flasche steht auf dem Schreibtisch, bevor du den Rechner aufmachst. Sechs Fuellungen bis 20 Uhr sind die 3.300.",
         "Vor der Kraft: 3 Scheiben Brot mit Marmelade + Banane (75 g KH). Nicht nuechtern in 27 Saetze.",
         "Gestern standen 89 g Protein und 198 g Carbs auf der Uhr, Ziel war 140/365 — und der Milchreis, der die Luecke geschlossen haette, blieb liegen. Heute faengt das Auffuellen fuer Sonntag an: die zwei Snacks im Plan sind keine Deko.",
-        "B12 und Folsaeure sind da: B12 564 (mittig normal, Mangel ausgeschlossen), Folsaeure 5 (niedrig-normal). Heisst: dein MCV kommt WEDER von B12 NOCH von Folat — offen bleibt die Schilddruese. Und es heisst: der methylierte B-Komplex startet Montag. Die Sperre 'erst nach der Blutabnahme' ist mit dem 03.08. weg, und ab 13.09. gilt vor Berlin keine-Experimente. Montag, nicht Sonntag — der Long Run kriegt keine neue Variable."
+        "B12 und Folsaeure sind da und damit ist das Laborkapitel fuer dieses Jahr zu — deine Entscheidung, und sie ist vertretbar: volle Sport-Freigabe, GGT entwarnt, Blutbild seit vier Monaten stabil. Was bleibt, ist eine einzige praktische Folge: der methylierte B-Komplex startet Montag. Folsaeure 5 und Homocystein 10,2 sind die Indikation, ab 13.09. gilt vor Berlin keine-Experimente. Montag, nicht Sonntag — der Long Run kriegt keine neue Variable."
       ],
       "warnung": "Wochenkonto Kette & Sehnen steht bei 1 von 12 — nur der Achilles-Snack vom Montag. Die Muckibude am Mittwoch hat stattgefunden, das ist geklaert; es fehlen die Snacks, nicht die Sessions. Heute ist der letzte Slot der Woche, Samstag und Sonntag bleiben bewusst frei. Ich streiche dir Pogos (0/2) und Hamstring (0/2) fuer diese Woche explizit — eine Woche laesst sich nicht an einem Tag nachholen, das waere Verletzungsrisiko und kein Aufholen. Achilles und Po haben Prioritaet, mehr nicht.",
       "coachSays": "Zwei Uebungen an die Kraft, eine Flasche auf den Schreibtisch. Sonntag entscheidet sich heute und morgen, nicht am Sonntag."
@@ -195,17 +195,17 @@
         "Trinken — nach 2:30 h bei 31 Grad ist der Tank am Montag noch nicht wieder voll"
       ],
       "bonus": [
-        "In der Praxis anrufen: sind TSH/fT3/fT4 aus der Probe vom 03.08. noch nachforderbar? Die B12-Nachforderung hat funktioniert, das koennte auch klappen.",
-        "TrainingPeaks-Screenshot der neuen Woche schicken, damit Essensplan und Briefings stimmen"
+        "TrainingPeaks-Screenshot der neuen Woche schicken, damit Essensplan und Briefings stimmen",
+        "Faszienrolle oder Beine hochlegen — was sich nach 2:30 h besser anfuehlt"
       ],
       "fueling": [
-        "Der B-Komplex ist kein Experiment ins Blaue: deine Folsaeure liegt bei 5 (unteres Viertel des Normbereichs) und dein Homocystein lag im April bei 10,2 — Optimum waere 6-8. Genau da greift methyliertes Folat.",
-        "Warum heute und nicht spaeter: ab dem 13.09. gilt vor Berlin die Keine-Experimente-Regel. Du hast jetzt vier Wochen, um zu sehen, ob du es vertraegst.",
-        "Warum nicht gestern: an einem 2:30-Long-Run-Tag faengt man nichts Neues an.",
-        "Nach dem langen Sonntag gilt der Montag als Auffuell-Tag, nicht als Sparttag. Protein 117-146 g, Carbs nicht unter 220 g."
+        "Der B-Komplex ist kein Experiment ins Blaue: deine Folsaeure lag bei 5 (unteres Viertel des Normbereichs) und dein Homocystein im April bei 10,2 — Optimum waere 6-8. Genau da greift methyliertes Folat.",
+        "Ohne Retest gibt es keine Laborkontrolle des Effekts. Das ist okay: die Dosis ist risikoarm, die Indikation steht, und gemessen wird ab jetzt an Energie und Befinden statt an Zahlen.",
+        "Warum heute und nicht spaeter: ab dem 13.09. gilt vor Berlin die Keine-Experimente-Regel. Vier Wochen Testfenster, das reicht.",
+        "Nach dem langen Sonntag ist der Montag ein Auffuell-Tag, kein Spartag. Protein 117-146 g, Carbs nicht unter 220 g."
       ],
       "warnung": "B-Vitamine koennen am Anfang auf den Magen gehen. Nimm sie zum Essen, nicht nuechtern — und wenn der Darm reagiert, sag es mir, dann schieben wir den Start oder wechseln die Marke. Bei dir ist der Darm die empfindliche Stelle, das wissen wir.",
-      "coachSays": "Eine Kapsel, ein Anruf, sonst Ruhe. Der Sonntag war die Arbeit."
+      "coachSays": "Eine Kapsel, sonst Ruhe. Der Sonntag war die Arbeit."
     }
   },
   "woche": {
@@ -217,7 +217,7 @@
       "Wochenkonto Kette & Sehnen 1 von 12 — nur der Achilles-Snack vom Montag. Die Kraft-Sessions selbst sind gelaufen (Muckibude 3 am Mi 12.08. von Steffi bestaetigt), es fehlen die Snacks drumherum. Fuer diese Woche realistisch erreichbar sind noch 4 von 12: Freitag Achilles + Po an die Kraft, Samstag Beckenboden. Pogos (0/2) und Hamstring (0/2) werden explizit gestrichen statt stillschweigend verschoben. Fuer naechste Woche gehoeren Pogos und Hamstring auf feste Slots (Di und Fr), sonst wiederholt sich das.",
       "Protein liegt weiter im Schnitt um 100-110 g gegen ein Minimum von 117 g. Der Hebel ist unveraendert der Vormittag: die Fruehstuecke bringen 6-25 g, die Leucin-Schwelle ab 50 verlangt 25-35 g pro Mahlzeit. Ein Skyr oder Whey-Shake bis 11 Uhr schliesst es.",
       "Was laeuft: Erholung. Readiness sieben Tage in Folge zwischen 86 und 92, HRV 28-40 ms (gestern 40 — der hoechste Einzelwert seit Wochen), Schlaf im Schnitt 7,8 h, Achilles-Morgencheck durchgehend 'ok'. In einer Peak-Woche mit 30-Grad-Tagen ist das nicht selbstverstaendlich.",
-      "LABOR 13.08.: Die Nachforderung ist da — B12 564 (mittig normal) und Folsaeure 5 (niedrig-normal). Damit ist die Makrozytose WEDER durch B12 noch durch Folat erklaert; RDW 13,2 sprach ohnehin dagegen. Offen bleiben Schilddruese (TSH/fT3/fT4, zum dritten Mal nicht gemessen) und Sport-Makrozytose (Retikulozyten, nie gemessen). Konkrete Folge: der methylierte B-Komplex startet Montag 17.08. — Folsaeure 5 + Homocystein 10,2 sind die Indikation, die Blutabnahme-Sperre ist weg, und ab 13.09. gilt vor Berlin keine-Experimente."
+      "LABOR 13.08.: B12 564 und Folsaeure 5 sind nachgeliefert — B12-Mangel ausgeschlossen, Folsaeure niedrig-normal. Steffi hat entschieden: bis naechstes Jahr kein Bluttest mehr. Damit ist das Thema zu und gehoert nicht mehr in Briefings. Einzige praktische Folge: methylierter B-Komplex ab Montag 17.08."
     ]
   },
   "trends": {
