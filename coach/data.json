@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T12:10:00+02:00",
+  "generated": "2026-08-17T12:40:00+02:00",
   "datenstand": {
     "wearables": "2026-08-17",
     "kommentar": "TrainingPeaks-Export 'workouts 11.csv' am 17.08. importiert — deckt 09.-16.08. vollstaendig ab. Oura frisch bis 17.08. WOCHE 10.-16.08. (Oura): HRV-Schnitt 32,1 ms (Vorwoche 29,5), Ruhepuls 48,0 (55,1 — niedrigster Wochenwert des Jahres), Schlaf 8,01 h, Readiness 88-93. HEUTE 17.08.: HRV 26, Ruhepuls 51, Readiness 86, Schlaf 8,84 h — erwartbare Quittung fuer 2:30 h am Sonntag, kein Warnsignal. LAUF-WOCHE 38,1 km: Di Intervalle 10,38 km / 1:15 / Ø-HF 147 (Steffi: 'dummerweise in der Mittagshitze gelaufen') · Do Tempolauf 7,94 km / 0:55 / Ø-HF 143, max 170 · So LONG RUN 19,82 km / 2:30:08 / Ø-Pace 7:34 / Ø-HF 141, max 148 / TSS 214 / RPE 4 / Feeling 5, kein GI-Kommentar. Dazu 25,9 km Rad (Sa) und taeglich Open Water Swimming. HF-max 170 am 13.08. liegt 4 Schlaege ueber der Labor-HFmax 166 — Einzelwert, Belastungs-EKG war sauber, KEIN Warnsignal. Der Long Run lag mit 7:34/km minimal ueber LT1 (7:38 bei HF 139), 50 min davon in Z3 — bei RPE 4 unkritisch, aber naechstes Mal ans langsame Ende (7:45-8:00). APP-DATEN: Sync mit coach-state heute technisch blockiert (Permission), letzter gelesener Stand 13.08. — Trinken/Teller/Wochenkonto fuer 14.-17.08. NICHT bewertbar, keine Schluesse daraus ziehen. TP-PLAN der Woche 17.-23.08. fehlt: der gelieferte Screenshot war ein Standbild aus einem AI-Agent-Workshop-Video."
@@ -30,16 +30,16 @@
       "grund": "Basis 2.455 + Long Run 2:30 (+1.500) + 31,4 Grad (+1.000) - 400 Kaffee-Abzug = 4.555, auf den Deckel 4.000 begrenzt. Davon ~1.000 ml waehrend des Laufs."
     },
     "2026-08-18": {
-      "ziel_ml": 2800,
-      "grund": "Basis 2.455 (33 ml x 74,4 kg) + angenommene Intervalle 75 min (+750) + 20,5 Grad (kein Hitzezuschlag) - 400 Kaffee-Abzug = 2.805, gerundet 2.800"
+      "ziel_ml": 2900,
+      "grund": "Basis 2.455 (33 ml x 74,4 kg) + Intervalle 1:20 (+800) + 20,5 Grad (kein Hitzezuschlag) - 400 Kaffee-Abzug = 2.855, gerundet 2.900"
     },
     "2026-08-19": {
-      "ziel_ml": 2800,
-      "grund": "Basis 2.455 + angenommene Kraft 45 min (halb gezaehlt, +225) + 26,4 Grad (+500) - 400 Kaffee-Abzug = 2.780, gerundet 2.800"
+      "ziel_ml": 3600,
+      "grund": "Basis 2.455 + Kraft 45 min (halb, +225) + Rad 1:20 (+800) + 26,4 Grad (+500) - 400 Kaffee-Abzug = 3.580, gerundet 3.600 — Doppeltag, deshalb der hoechste Wert der Woche"
     },
     "2026-08-20": {
       "ziel_ml": 2600,
-      "grund": "Basis 2.455 + angenommener Tempolauf 55 min (+550) + 23,4 Grad (kein Hitzezuschlag) - 400 Kaffee-Abzug = 2.605, gerundet 2.600"
+      "grund": "Basis 2.455 + Tempolauf 55 min (+550) + 23,4 Grad (kein Hitzezuschlag) - 400 Kaffee-Abzug = 2.605, gerundet 2.600"
     }
   },
   "briefings": {
@@ -221,58 +221,58 @@
     },
     "2026-08-18": {
       "headline": "Der Sommer hat aufgehoert — 20 Grad statt 32. Der beste Intervall-Dienstag seit Wochen.",
-      "kalender": "Frei. Kein einziger Termin. ⚠️ Der TP-Screenshot dieser Woche fehlt noch — der geschickte Screenshot war ein Standbild aus einem AI-Agent-Workshop-Video. Die Einheit unten ist die ANNAHME aus dem Muster der letzten drei Wochen (Di Intervalle · Mi Kraft · Do Tempolauf · Fr Kraft · So Long Run). Sobald der richtige Screenshot da ist, korrigiere ich Briefing und Kalender.",
-      "einheit": "Annahme: Intervalle ~75 min. Slot morgens, 8:00-9:15 — aber heute nicht wegen Hitze, sondern aus Gewohnheit und wegen Regel GI-1 (Darm vollstaendig leer vor dem Start). 20,5 Grad Tagesmaximum: die PC-1-Ausnahme greift diese Woche NICHT, du kannst die Pace-Vorgabe voll ausschoepfen. Letzte Woche bist du dieselbe Einheit in der Mittagshitze gelaufen — deine Worte: 'dummerweise', 'war echt anstrengend', HF-Schnitt 147. Das war die Temperatur, nicht deine Form.",
+      "kalender": "Frei. Kein einziger Termin. TP-Plan der Woche liegt vor (Screenshot 17.08.).",
+      "einheit": "Intervalle 1:20 / 118 TSS — 5 min laenger als von mir angenommen. Coachin: 'Whoooooohoooo du schaffst das Steffi!' Danach After Run Yoga 11 min, das hat sie dir extra rausgesucht. Slot morgens 8:00-9:20, Regel GI-1 (Darm leer vor dem Start). 20,5 Grad: die Hitzeausnahme faellt nach vier Wochen mit 30+ Grad endlich weg, der Pace-Korridor ist wieder voll nutzbar. Letzte Woche bist du dieselbe Einheit in der Mittagshitze gelaufen — deine Worte 'dummerweise', Ø-HF 147. Das war die Temperatur, nicht deine Form.",
       "minimum": [
-        "Intervalle morgens, Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand davor",
-        "Kollagen + Vitamin C 30-60 min VOR dem Lauf trinken, nicht irgendwann am Morgen — das Timing ist bei Kollagen der ganze Wirkmechanismus",
+        "Intervalle 1:20 morgens — Pre-Run-Aktivierung 3 min + 3x30 s Zehenstand davor",
+        "After Run Yoga 11 min direkt danach, solange du eh in Klamotten bist",
+        "Kollagen + Vitamin C 30-60 min VOR dem Lauf — bei Kollagen ist das Timing der ganze Wirkmechanismus",
         "B-Komplex zum Fruehstueck (Tag 2), zum Essen und nicht nuechtern",
-        "Post-Run 30-40 g Protein binnen 40 min",
-        "Trinken 2.800 ml"
+        "Post-Run 30-40 g Protein binnen 40 min · Trinken 2.900 ml"
       ],
       "bonus": [
         "Achilles-Snack: Bent-Knee Calf Raise 3x10 (3 s runter) + Wadenheber gestreckt 3x10 — erster Kette-Tipp der neuen Woche",
         "Richtigen TP-Screenshot schicken, dann stimmen Kalender und Essensplan wieder"
       ],
       "fueling": [
-        "Intervalle sind Gel-Uebung unter Intensitaet — das renn-naheste Gut-Training, das du hast. 1 Squeezy BASIC bei Minute 40-45 mit 200 ml reinem Wasser.",
+        "Intervalle sind Gel-Uebung unter Intensitaet — das renn-naheste Gut-Training, das du hast. Bei 1:20 h: 1 Squeezy BASIC bei Minute 40-45 mit 200 ml reinem Wasser.",
         "Kein Nuechterntraining: 40-60 g Carbs 60-90 min vorher (2 Scheiben Toast mit Marmelade + Banane reichen).",
         "Elektrolytflasche mit VOLLER Tab nebenher, getrennt von den Gels — und leer trinken (Regel FL-1). Bei 20 Grad faellt der Trinkreiz weg, das Natrium brauchst du trotzdem.",
         "Regel FL-2 heute bewusst ueben: 2 Schlucke IM schnellen Abschnitt, auch wenn es stoert. Am 16.07. ging genau das nicht ('zu anstrengend') — im Rennen brauchst du es.",
-        "Deine Carb-Frage von heute: 60 g/h ist Ziel UND Deckel, nicht Sprungbrett. Squeezy ist fruktosefrei, und ohne Fruktose ist der Glukose-Transporter bei ~60 g/h gesaettigt — mehr Gels erhoehen dann nur, was unresorbiert im Darm liegt. Die Rampe steht im Fueling-Plan: Sonntag 50 g/h, Generalprobe 30.08. auf 60."
+        "Deine Carb-Frage: 60 g/h ist Ziel UND Deckel, nicht Sprungbrett — Squeezy ist fruktosefrei, und ohne Fruktose saettigt der Glukose-Transporter bei ~60 g/h. Sonntag stehen 2:40 h an, Rampe auf 50 g/h = 6-7 Gels. Plus der Koffein-Test. Details habe ich in den Fueling-Plan geschrieben."
       ],
       "warnung": "Heute HRV 26 ms und Ruhepuls 51 — der niedrigste HRV-Wert und der hoechste Puls der letzten zwei Wochen. Das ist die Rechnung fuer 2:30 h am Sonntag und voellig normal (Schlaf 8:50 h, Readiness 86, alles im gruenen Bereich). Aber: keine Extrahaerte oben drauf, und wenn sich der erste Intervall bleischwer anfuehlt, nimm einen raus statt ihn durchzupruegeln.",
       "coachSays": "20 Grad, keine Termine, frische Beine ab Intervall zwei. Ausreden gibt es heute keine."
     },
     "2026-08-19": {
-      "headline": "Kraft-Tag. Und der erste Test, ob die Glute-Bridge-Fixes greifen.",
-      "kalender": "8:00-8:30 Claude Code Weekly (Zoom). Danach frei. ⚠️ Der TP-Screenshot dieser Woche fehlt noch — der geschickte Screenshot war ein Standbild aus einem AI-Agent-Workshop-Video. Die Einheit unten ist die ANNAHME aus dem Muster der letzten drei Wochen (Di Intervalle · Mi Kraft · Do Tempolauf · Fr Kraft · So Long Run). Sobald der richtige Screenshot da ist, korrigiere ich Briefing und Kalender.",
-      "einheit": "Annahme: Muckibude, kein Lauf. Slot 9:30-10:30, direkt nach dem Weekly, solange die Beine frisch sind. 26,4 Grad — drinnen egal. ACHTUNG bei der Plyo-Buchhaltung: 'Muckibude schnell' enthaelt TRX Single Leg Squat Jump UND DB Jump Squat, das sind echte Bodenkontakte. Keine zusaetzlichen Pogos an so einem Tag.",
+      "headline": "Doppeltag: Muckibude 3 am Morgen, 80 min Rad am Nachmittag.",
+      "kalender": "8:00-8:30 Claude Code Weekly (Zoom). Sonst frei. TP-Plan der Woche liegt vor (Screenshot 17.08.).",
+      "einheit": "Zwei Einheiten, nicht eine — das hatte ich falsch. 'Muckibude 3': 27 Saetze / 16 Uebungen (Reverse Lunge, Body Weight Bulgarian Split Squat, High Plank Shoulder Tap und 13 weitere), Slot 9:00-9:45 direkt nach dem Weekly, solange die Beine frisch sind. PLUS Cycling 1:20 / 53 TSS — das legst du in den Nachmittag, mit Abstand zur Kraft. Das Rad ist neu im Plan: bis letzte Woche hast du spontan gefahren, jetzt steht es drin (Mi und Sa). Locker halten, es ist Ergaenzung, kein zweiter harter Reiz.",
       "minimum": [
-        "Muckibude 9:30-10:30",
-        "Single Leg Glute Bridge LINKS mit den neuen Fixes: Ferse 5-10 cm naeher an den Po, Becken VOR dem Hochdruecken nach hinten kippen, Druck ueber die Ferse, nicht auf Hoehe gehen",
-        "Davor 30-60 s Frog Pump 1x20 als Glute-Priming (Fusssohlen aneinander, Knie auf) — das ist die neue Uebung, Deadline fuer Neues ist der 30.08.",
-        "Kollagen + Vitamin C 30-60 min VOR der Kraft",
-        "Post-Kraft 30-40 g Protein binnen 40 min · Trinken 2.800 ml"
+        "Muckibude 3 ab 9:00 — nach dem Weekly, vor allem anderen",
+        "Cycling 1:20 nachmittags, locker (Orientierung: letzte Woche Ø-HF 97, genau richtig)",
+        "Kollagen + Vitamin C 30-60 min VOR der Kraft, nicht vor dem Rad",
+        "Post-Kraft 30-40 g Protein binnen 40 min",
+        "Trinken 3.600 ml — hoechstes Ziel der Woche, wegen Doppeltag plus 26,4 Grad"
       ],
       "bonus": [
-        "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite",
-        "Ins Tagebuch: ob der Hamstring links mit Ferse-naeher-dran und Frog-Pump-Priming ruhig geblieben ist. Das ist die einzige Info, die ich brauche, um zu wissen, ob wir richtig liegen."
+        "Po-Snack an die Kraft: Hip Thrust 4x8 schwer + Side Plank 2x30 s pro Seite",
+        "Beckenboden 3 min"
       ],
       "fueling": [
-        "Kein Gel, keine Sportnahrung — Kraft braucht kein In-Session-Fueling.",
-        "Aber nicht nuechtern in 27 Saetze: 60-75 g Carbs vorher (3 Scheiben Brot mit Marmelade + Banane).",
+        "Zwei Einheiten heissen zwei Fuel-Fenster. Vor der Kraft 60-75 g Carbs (3 Scheiben Brot mit Marmelade + Banane), nicht nuechtern in 27 Saetze.",
+        "Vor dem Rad nochmal 40-50 g Carbs. 80 min sind kein Nebenbei — bei 53 TSS bringt das Rad mehr Last als ein lockerer Halbstuender.",
+        "Im Rad kein Gel noetig (Zone 1-2), aber Elektrolytflasche mit voller Tab mitnehmen — bei 26 Grad auf dem Rad merkst du den Verlust weniger als beim Laufen und trinkst deshalb zu wenig.",
         "Post-Kraft ist das Proteinfenster ernst: 30-40 g binnen 40 min. Whey-Shake mit Milch und Banane deckt Protein und Carbs in einem.",
-        "Kollagen zaehlt NICHT zum Proteinziel — kaum Leucin, kein Tryptophan. Die 117-146 g/Tag muessen ohne die 10 g aus dem Kaffee stehen.",
-        "An Kraft-Tagen bleiben die Carbs oft liegen, weil kein Lauf sie 'rechtfertigt'. Falsch: das Muskelsignal braucht Energie. Ruhetag-Minimum sind 220 g."
+        "Kollagen zaehlt NICHT zum Proteinziel — kaum Leucin, kein Tryptophan. Die 117-146 g/Tag muessen ohne die 10 g aus dem Kaffee stehen."
       ],
-      "warnung": "Der linke Hamstring ist das Thema, nicht die Last. Wenn er trotz Ferse-naeher und Priming krampft, brich die Uebung ab und mach stattdessen Bridge March (beidbeinig hoch, einen Fuss loesen, 3 s halten). Durchkrampfen bringt nichts — die Ansteuerung lernt dabei genau das Falsche.",
-      "coachSays": "Zwei Zentimeter Ferse und zwanzig Frog Pumps. Wenn das reicht, haben wir ein monatelanges Problem mit einer Kleinigkeit gelaest."
+      "warnung": "Korrektur von gestern: der Single Leg Glute Bridge mit dem linken Hamstring-Krampf steckt in 'Muckibude SCHNELL' und die kommt am FREITAG, nicht heute. 'Muckibude 3' ist die andere Session. Frog-Pump-Priming und die Ferse-Fixes also am Freitag ansetzen — heute nichts Neues probieren.",
+      "coachSays": "Kraft am Morgen, Rad am Nachmittag, 3,6 Liter dazwischen. Das ist der volumenreichste Tag der Woche und er sieht harmloser aus als er ist."
     },
     "2026-08-20": {
       "headline": "Tempolauf bei 23 Grad — und abends Kaminkehrer und Leonies Geburtstag.",
-      "kalender": "Ganztags Kaminkehrer (irgendwann kommt er) + Leonie Geburtstag. 17:00-18:00 'Claude Code for Beginners'. ⚠️ Der TP-Screenshot dieser Woche fehlt noch — der geschickte Screenshot war ein Standbild aus einem AI-Agent-Workshop-Video. Die Einheit unten ist die ANNAHME aus dem Muster der letzten drei Wochen (Di Intervalle · Mi Kraft · Do Tempolauf · Fr Kraft · So Long Run). Sobald der richtige Screenshot da ist, korrigiere ich Briefing und Kalender.",
-      "einheit": "Annahme: Tempolauf ~55 min. Morgens laufen — nicht wegen Hitze (23,4 Grad sind harmlos), sondern weil der Nachmittag mit Kaminkehrer, Geburtstag und dem 17-Uhr-Termin zerfaellt und Abendlaeufe bei dir das GI-Risiko sind (Regel GI-2). Slot 8:00-9:00.",
+      "kalender": "Ganztags Kaminkehrer + Leonie Geburtstag. 17:00-18:00 'Claude Code for Beginners'. TP-Plan der Woche liegt vor (Screenshot 17.08.).",
+      "einheit": "Tempolauf 0:55 / 79 TSS. Coachin: 'Bitte gut verpflegen!' Morgens laufen, Slot 8:00-9:00 — nicht wegen der Temperatur (23,4 Grad sind harmlos), sondern weil der Nachmittag mit Kaminkehrer, Geburtstag und dem 17-Uhr-Termin zerfaellt und Abendlaeufe bei dir das GI-Risiko sind (Regel GI-2). 95 % Regenwahrscheinlichkeit: Jacke, kein Grund zu warten.",
       "minimum": [
         "Tempolauf morgens, vor dem Tag",
         "1 Squeezy BASIC bei Min 30-35 mit 200 ml Wasser — Gel unter Intensitaet ueben",
@@ -281,12 +281,12 @@
       ],
       "bonus": [
         "Hamstring-Snack abends: Sliding Leg Curl 3x6 verkuerzte ROM + Single Leg Deadlift 3x8 pro Seite",
-        "Fuer Sonntag vorbereiten: Koffein-Gel besorgen und die mg-Angabe checken — der Test steht am 23.08. im Fueling-Plan",
-        "Glutamin fuer Sonntag schon jetzt abmessen, dann ist es Samstag erledigt"
+        "Koffein-Gel fuer Sonntag besorgen und die mg-Angabe checken",
+        "7 Squeezy BASIC fuer Sonntag zaehlen — bei 2:40 h und 50 g/h brauchst du 6-7, nicht 4"
       ],
       "fueling": [
         "Kein Nuechterntraining bei Tempo. 40-60 g Carbs 60-90 min vorher.",
-        "Sonntag wird der Koffein-Test: EIN Koffein-Gel um die 2-h-Marke, egal wie viel drin ist. Wirksam sind 1,5-3 mg/kg = bei dir 110-220 mg; ein Gel liegt je nach Marke bei 25-100 mg, das ist als Erstdosis genau richtig konservativ.",
+        "Sonntag ist Koffein-Test: GENAU EIN Koffein-Gel um die 2-h-Marke, egal wie viel drin ist. Wirksam sind 1,5-3 mg/kg = bei dir 110-220 mg; ein Gel liegt je nach Marke bei 25-100 mg, als Erstdosis genau richtig konservativ.",
         "Nur EINE neue Variable am Sonntag: deshalb Koffein JA, Carb-Rate nur auf 50 g/h (nicht 60) und Rote Bete NICHT.",
         "Rote-Bete-Shots habe ich dir durchgerechnet: echter Mechanismus, aber die Evidenz stammt aus 5-30-min-Zeitfahren, der Effekt schrumpft bei Trainierten, und konzentrierte Shots sind bei deinem Darm kein Nullereignis. Kleinster Hebel von allen drei Ideen — nach Berlin, nicht davor.",
         "Ballaststoffe heute normal, ab Samstag runter (Vortag-Modus)."
@@ -297,9 +297,9 @@
   },
   "woche": {
     "start": "2026-08-17",
-    "fokus": "Peak, Block 2, Woche 3. ⚠️ Der TP-Plan dieser Woche fehlt noch — der geschickte Screenshot war ein Standbild aus einem AI-Agent-Workshop-Video, kein Trainingsplan. Briefings laufen auf der Annahme des Muster der letzten drei Wochen: Di Intervalle · Mi Kraft · Do Tempolauf · Fr Kraft · So Long Run. Ausgangslage ist stark: die Woche 10.-16.08. brachte 38,1 Lauf-km mit dem laengsten Long Run des Blocks (19,82 km / 2:30), dazu 25,9 km Rad und taeglich Schwimmen — und die Erholungswerte sind mitgewachsen statt eingebrochen (HRV-Schnitt 32,1 ms gegen 29,5 in der Vorwoche, Ruhepuls 48,0 gegen 55,1, Schlaf 8,0 h). Das Wetter kippt: 20-26 Grad statt 30-34, damit faellt die Hitze-Ausnahme diese Woche weg. Neu im Stack: B-Komplex ab heute, Kollagen+Vitamin C seit dem 16.08. Naechster Sonntag ist der Koffein-Gel-Test.",
+    "fokus": "Peak, Block 2, Woche 3 (TP-Screenshot 17.08. liegt vor). Mo 17.08 Mobi 17 min + Schwimmen, erledigt · Di 18.08 Intervalle 1:20 / 118 TSS + After Run Yoga · Mi 19.08 DOPPELTAG Muckibude 3 (27 Saetze / 16 Uebungen) + Cycling 1:20 · Do 20.08 Tempolauf 0:55 / 79 TSS · Fr 21.08 Muckibude schnell (27 Saetze / 18 Uebungen — hier steckt der Glute Bridge) · Sa 22.08 Mobi 17 min + Cycling 1:20 · So 23.08 LONG RUN 2:40 / 256 TSS, wieder der laengste des Blocks. NEU: zwei Radeinheiten sind jetzt fest im Plan (Mi + Sa, je 1:20 / 53 TSS) statt spontan. Ausgangslage stark: die Woche 10.-16.08. brachte 38,1 Lauf-km mit Long Run 19,82 km / 2:30, und die Erholung ist mitgewachsen statt eingebrochen (HRV 32,1 ms gegen 29,5, Ruhepuls 48,0 gegen 55,1, Schlaf 8,0 h). Das Wetter kippt auf 20-26 Grad — die Hitzeausnahme faellt nach vier Wochen weg. Neu im Stack: B-Komplex ab heute, Kollagen + Vitamin C seit 16.08. Sonntag ist Koffein-Test.",
     "luecken": [
-      "DIE Luecke der Woche: die Carb-Rampe im Long Run liegt zurueck. Am 09.08. waren es 4 Gels auf 2:20 h = 36 g/h, geplant waren 45. Fuer den 16.08. gibt es gar keine Zahl — im TP-Export steht kein Athletenkommentar. Das Ziel ist 60 g/h in Berlin, und das ist gleichzeitig die physiologische Obergrenze bei fruktosefreien Gels (Glukose-Transporter saettigt bei ~60 g/h). Neue Rampe: 23.08. auf 50 g/h, Generalprobe 30.08. auf 60 = Rennrate, danach nur halten. Konkret Sonntag bei 2:30 h: 6 Squeezy BASIC statt 4-5.",
+      "DIE Luecke der Woche: die Carb-Rampe im Long Run liegt zurueck. Am 09.08. waren 4 Gels auf 2:20 h = 36 g/h, geplant waren 45. Fuer den 16.08. gibt es keine Zahl (kein Athletenkommentar im Export) — bitte nachtragen. Sonntag stehen 2:40 h an: Ziel 50 g/h = 133 g = 6-7 Squeezy BASIC. Berlin-Ziel sind 60 g/h, und das ist gleichzeitig die physiologische Obergrenze fruktosefreier Gels (Glukose-Transporter saettigt bei ~60 g/h). Rampe max. +10 g/h pro Long Run: 23.08. auf 50, Generalprobe 30.08. auf 60 = Rennrate, danach nur halten.",
       "Die eigentliche Baustelle ist aber nicht die g/h-Zahl, sondern die LOGISTIK fuer 5,5 h. 330 g Carbs sind 16 Squeezy-Gels — das traegt und schluckt niemand. Die Loesung steht im Fueling-Plan (Softflask mit Drink Mix + 6-8 Einzelgels) und muss in der Generalprobe am 30.08. einmal komplett durchgespielt werden. Danach ist es zu spaet: ab 13.09. gilt vor Berlin nichts Neues mehr.",
       "App-Daten nicht lesbar: der Sync mit dem Coach-State-Repo war heute technisch blockiert, der letzte gelesene Stand ist vom 13.08. Fuer Trinken, Teller und das Wochenkonto 'Kette & Sehnen' habe ich vom 14.-17.08. also keine Zahlen und bewerte sie bewusst nicht. Das Training selbst ist vollstaendig — der TrainingPeaks-Export deckt die Woche komplett ab.",
       "Was laeuft, und zwar auffaellig gut: Erholung. Ruhepuls im Wochenschnitt 48,0 bpm — der niedrigste Wert des Jahres (Jahresanfang ~55). Readiness sieben Tage zwischen 88 und 93, Schlaf 8,0 h im Schnitt, Achilles-Morgencheck durchgehend 'ok'. Bei gleichzeitig 38 km und dem laengsten Long Run des Blocks. Das ist genau der Zustand, den man im Peak will."
@@ -665,21 +665,21 @@
       ]
     },
     "2026-08-19": {
-      "hinweis": "Kraft-Tag (Annahme — TP-Screenshot der Woche fehlt noch). 8:00 Claude Code Weekly, Muckibude danach ab 9:30. Standardprogramm gilt vollstaendig. Neu heute: Frog-Pump-Priming vor dem Single Leg Glute Bridge — der Versuch, den Hamstring-Krampf links ueber die Glute-Ansteuerung zu loesen statt ueber Durchhalten. Keine zusaetzlichen Pogos: 'Muckibude schnell' bringt mit TRX Single Leg Squat Jump und DB Jump Squat eigene Bodenkontakte mit, das reicht fuer den Plyo-Deckel.",
+      "hinweis": "DOPPELTAG (TP-Plan 17.08.): 'Muckibude 3' 27 Saetze / 16 Uebungen ab 9:00 nach dem Weekly, PLUS Cycling 1:20 / 53 TSS am Nachmittag. Standardprogramm gilt vollstaendig. Korrektur zu gestern: der Single Leg Glute Bridge steckt in 'Muckibude SCHNELL' = Freitag. Frog-Pump-Priming und die Ferse-Fixes kommen deshalb am Freitag, nicht heute.",
       "extra": [
         {
           "tier": "pflicht",
-          "name": "Frog Pump 1x20 als Glute-Priming",
-          "duration": "1 min",
-          "trigger": "direkt VOR dem Single Leg Glute Bridge",
-          "why": "Rueckenlage, Fusssohlen aneinander, Knie nach aussen, Becken heben. In dieser Position kann der Hamstring die Hueftstreckung kaum uebernehmen — es feuert fast nur der Gluteus. Genau die Ansteuerung, die links fehlt (HUBER 09.04.: links 444 mm² Schwankungsflaeche gegen 251 rechts). Danach der Glute Bridge mit Ferse 5-10 cm naeher am Po und Becken vor dem Hochdruecken nach hinten gekippt. Krampft es trotzdem: abbrechen, Bridge March stattdessen. NEUE UEBUNG — Einfuehrungsfenster laeuft bis 30.08."
+          "name": "Cycling 1:20 locker",
+          "duration": "80 min",
+          "trigger": "Nachmittag, mit Abstand zur Kraft",
+          "why": "Steht neu im TP-Plan (Mi + Sa je 1:20 / 53 TSS) — bis letzte Woche bist du spontan gefahren. Locker halten, Orientierung Ø-HF unter 110 (letzte Woche 97). Das Rad ist aerobe Ergaenzung ohne Aufprall, kein zweiter harter Reiz. Elektrolytflasche mit voller Tab mit."
         },
         {
           "tier": "standard",
           "name": "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s/Seite",
           "duration": "8 min",
           "trigger": "an die Muckibude dran",
-          "why": "Der Hip Thrust hat ueber die Bank deutlich besseren Glute-Hebel als die Bodenbruecke — er ist die strukturelle Antwort auf denselben Befund. Abhaken in der Karte 'Kette & Sehnen'."
+          "why": "Der Hip Thrust hat ueber die Bank deutlich besseren Glute-Hebel als die Bodenbruecke — die strukturelle Antwort auf den linken Hamstring-Krampf, unabhaengig davon, an welchem Tag der Glute Bridge steht. Abhaken in der Karte 'Kette & Sehnen'."
         }
       ]
     },
@@ -711,6 +711,25 @@
           "duration": "5 min",
           "trigger": "irgendwann heute",
           "why": "Der Koffein-Test steht am Sonntag 23.08. im Fueling-Plan. Wirksam sind 1,5-3 mg/kg = bei dir 110-220 mg; ein Gel hat je nach Marke 25-100 mg. Beim ersten Test genau EINS, egal wie viel drin ist. Und Glutamin fuer Sonntag gleich mit abmessen."
+        }
+      ]
+    },
+    "2026-08-21": {
+      "hinweis": "Kraft-Tag 'Muckibude schnell' (27 Saetze / 18 Uebungen). HIER steckt der Single Leg Glute Bridge — heute wird getestet, ob Frog-Pump-Priming und die Ferse-Fixes den linken Hamstring-Krampf loesen. Standardprogramm gilt vollstaendig. KEINE zusaetzlichen Pogos: diese Session bringt mit TRX Single Leg Squat Jump und DB Jump Squat eigene Bodenkontakte mit, das reicht fuer den Plyo-Deckel.",
+      "extra": [
+        {
+          "tier": "pflicht",
+          "name": "Frog Pump 1x20 als Glute-Priming",
+          "duration": "1 min",
+          "trigger": "direkt VOR dem Single Leg Glute Bridge",
+          "why": "Rueckenlage, Fusssohlen aneinander, Knie nach aussen, Becken heben. In dieser Position kann der Hamstring die Hueftstreckung kaum uebernehmen — es feuert fast nur der Gluteus. Genau die Ansteuerung, die links fehlt (HUBER 09.04.: links 444 mm² Schwankungsflaeche gegen 251 rechts). Danach der Glute Bridge mit Ferse 5-10 cm naeher am Po, Becken VOR dem Hochdruecken nach hinten kippen, Druck ueber die Ferse, nicht auf Hoehe gehen. Krampft es trotzdem: abbrechen, Bridge March stattdessen (beidbeinig hoch, einen Fuss loesen, 3 s halten). NEUE UEBUNG — Einfuehrungsfenster laeuft bis 30.08."
+        },
+        {
+          "tier": "pflicht",
+          "name": "Achilles-Snack: Bent-Knee Calf Raise + Wadenheber gestreckt",
+          "duration": "6 min",
+          "trigger": "an die Kraft dran",
+          "why": "Je 3x10, beim Bent-Knee 3 s runter. Der Single Leg Calf Raise in dieser Session ersetzt ihn NICHT — der laeuft mit gestrecktem Knie, der Soleus braucht das gebeugte. Soll 2x/Woche, hoechste Prioritaet im Konto."
         }
       ]
     }
