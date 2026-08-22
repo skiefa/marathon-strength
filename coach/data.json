@@ -193,25 +193,26 @@
    "coachSays": "Erst laufen, dann Kaminkehrer. In der Reihenfolge geht beides auf."
   },
   "2026-08-23": {
-   "headline": "Der laengste Lauf des Blocks — und der einzige Job heute heisst: langsam bleiben.",
+   "headline": "Der längste Lauf des Blocks — mit der besten Startzeit, die du seit Wochen hattest.",
    "kalender": "Sonntag komplett frei. Kein Termin, keine Ausrede, kein Grund, spaet zu starten.",
-   "einheit": "Long Run 2:40 / 256 TSS, 'Zone 2 no SchnickSchnack'. Start 6:45-7:00. 20,2 Grad, 0 % Regen — ideale Bedingungen. PACE 7:45-8:00/km, HF <= 140. Am 16.08. bist du 7:35 gelaufen, minimal ueber LT1, 50 min davon in Zone 3 — heute bewusst 10-20 s/km langsamer. Erwarteter Energieumsatz laut Garmin-Konstante (68 kcal/km): rund 1.430 kcal.",
+   "einheit": "Long Run 2:40 / 256 TSS, 'Zone 2 no SchnickSchnack'. Start 10:00, zurück gegen 12:45. 20,2 Grad, 0 % Regen — unkritisch, kein Hitzedeckel nötig. PACE 7:45-8:00/km, HF <= 140. Am 16.08. bist du 7:35 gelaufen, minimal über LT1, 50 min davon in Zone 3 — heute bewusst 10-20 s/km langsamer. Erwarteter Energieumsatz laut Garmin-Konstante (68 kcal/km): rund 1.430 kcal.",
    "minimum": [
-    "5:00 aufstehen, L-Glutamin 15 g in 400 ml Wasser — heute nicht vergessen, am 16.08. hat es gewirkt (null Darmprobleme bei 5 Gels).",
-    "Fruehstueck 5:15: 2 Semmeln/Toast mit Marmelade + Banane, ~80 g KH. Nicht nuechtern loslaufen.",
-    "Erste 20 Minuten auf die Uhr schauen, nicht auf die Beine. Wenn du unter 7:45 bist, bist du zu schnell — Regel RD-1.",
-    "Binnen 40 min nach dem Lauf 30-40 g Protein. Nicht verschieben, nicht 'spaeter beim Mittagessen'."
+    "7:00 Kaffee und dann Ruhe für die Toilette. Der 10:00-Start ist genau dafür da — am 09.08. warst du 3× vor dem Lauf, und der lief problemlos.",
+    "8:00 richtiges Frühstück: 4 Scheiben Toast mit Marmelade + Banane, ~90 g KH. Bei diesem Start ist das kein Snack mehr, sondern eine Mahlzeit.",
+    "8:15 L-Glutamin 15 g in 400 ml Wasser — 105 min vorher. Am 16.08. genommen = null Darmprobleme bei 5 Gels.",
+    "Erste 20 Minuten auf die Uhr schauen, nicht auf die Beine. Unter 7:45 bist du zu schnell (Regel RD-1).",
+    "Binnen 40 min nach dem Lauf 30-40 g Protein, also bis ~13:20."
    ],
    "bonus": [
     "Hornhaut am rechten Ballen abtragen (Hornhautfeile/Bimsstein) — die Blase entsteht AN ihrem Rand, das ist die Ursache. Steht seit dem 13.08. in deinem Tagebuch.",
     "Kurzes Nachmittagsschwimmen wie letzten Sonntag — lockert und kostet nichts."
    ],
    "fueling": [
-    "IM LAUF 50 g/h = ~133 g gesamt: Gel-Dispenser 150 ml Basic Formula (~91 g) + ~66 ml aus dem Koffein-Dispenser (~40 g KH und ~66 mg Koffein). Rampe: 09.08. 34 g/h -> 16.08. 40 g/h -> heute 50.",
-    "KOFFEIN-TEST: ~66 mg ist die Vertraeglichkeitsdosis, nicht die Wirkdosis. Es geht heute NUR um den Darm. Das ist die einzige neue Variable — sonst nichts Neues.",
+    "IM LAUF 50 g/h = ~133 g: Gel-Dispenser 150 ml Basic Formula (~91 g) + ~66 ml aus dem Koffein-Dispenser (~40 g KH und ~66 mg Koffein). Rampe: 09.08. 34 g/h -> 16.08. 40 g/h -> heute 50.",
+    "KOFFEIN-TEST: ~66 mg ist die Vertraeglichkeitsdosis, nicht die Wirkdosis. Es geht heute NUR um den Darm. Einzige neue Variable — sonst nichts Neues.",
     "Wasser: 150-250 ml zu jeder Gel-Portion, Elektrolytflasche getrennt und LEER trinken. Getracktes Tagesziel 3.700 ml, in-run kommt obendrauf.",
-    "GESAMTBILD, die eine Luecke der Woche: Protein im Schnitt 94 g gegen ein Minimum von 117 — sechs von sieben Tagen darunter, am 18.08. nur 74 g bei 146 TSS. Fix ab heute: der Post-Run-Shake (25 g) und abends eine echte Proteinportion (Putenschnitzel wie am 16.08. = 40 g). Das sind zwei Handgriffe, keine Umstellung.",
-    "Trinken lag die Woche im Schnitt bei 1.986 ml gegen Ziele um 2.400-3.400 — der 20.08. mit 1.300 ml war der Tag, an dem die Motivation kippte. Flasche an den Schreibtisch."
+    "Gestern Pizza um 20:00 — bei 10:00-Start sind das 13 Stunden Abstand, mehr als die 18:30-Regel bei Fruehstart gibt. Kein Grund zur Sorge, aber wenn morgens doch Druck da ist: die ersten 20 Minuten extra langsam.",
+    "GESAMTBILD, die eine Luecke der Woche: Protein im Schnitt 94 g gegen ein Minimum von 117 — sechs von sieben Tagen darunter, am 18.08. nur 74 g bei 146 TSS. Fix: Post-Run-Shake (25 g) und abends eine echte Proteinportion. Zwei Handgriffe, keine Umstellung."
    ],
    "warnung": "Deine HRV faellt seit Dienstag durch: 35 -> 31 -> 27 -> 23 -> 22, Ruhepuls von 48 auf 53, Readiness 83 = niedrigster Wert der Woche. Grund ist kein Raetsel: die Intervalle am Di kosteten 146 TSS statt 118 (+24 %), der Tempolauf am Do 101 statt 79 (+28 %) — du bist zweimal ueber die Vorgabe gelaufen, bei gleichzeitig zu wenig Protein. Schlaf und Koerpertemperatur sind unauffaellig, also Ermuedung, nicht Infekt. Der Lauf findet statt — aber am langsamen Ende. HARTES GATE: wenn das Halskitzeln von Donnerstag wieder da ist oder du dich nach 90 min schwer fuehlst, brichst du bei 2:10-2:20 ab. Das ist keine Schwaeche, das ist die Vorgabe.",
    "coachSays": "Du hast diese Woche zweimal schneller trainiert als geplant und dafuer 13 ms HRV bezahlt. Heute gibt es nichts zu gewinnen ausser Zeit auf den Beinen — lauf so langsam, dass es sich fast peinlich anfuehlt."
@@ -660,13 +661,20 @@
    ]
   },
   "2026-08-23": {
-   "hinweis": "Long-Run-Tag, 2:40 h — der laengste des Blocks. Standardprogramm bleibt: Pre-Run-Aktivierung, Long Run, lockere Wadenheber danach. KEINE Kraft, KEINE Pogos, keine schweren Kette-Snacks. Pace 7:45-8:00/km, HF <= 140 — bewusst langsamer als letzten Sonntag.",
+   "hinweis": "Long-Run-Tag, 2:40 h — der laengste des Blocks. START 10:00, kein Fruehaufstehen noetig. Standardprogramm bleibt: Pre-Run-Aktivierung, Long Run, lockere Wadenheber danach. KEINE Kraft, KEINE Pogos, keine schweren Kette-Snacks. Pace 7:45-8:00/km, HF <= 140 — bewusst langsamer als letzten Sonntag.",
    "extra": [
+    {
+     "tier": "pflicht",
+     "name": "7:00 Kaffee + Zeit fuer die Toilette",
+     "duration": "45 min Ruhe",
+     "trigger": "direkt nach dem Aufstehen",
+     "why": "Der 10:00-Start ist der einzige Vorteil, den du diese Woche geschenkt bekommst — nutz ihn fuer eine vollstaendige Darmentleerung. Regel GI-1: jeder Lauf mit leerem Darm war problemfrei, jeder Hetz-Start ging schief. Gestern gab es Pizza, das macht den Punkt heute wichtiger als sonst."
+    },
     {
      "tier": "pflicht",
      "name": "L-Glutamin 15 g in 400 ml Wasser",
      "duration": "2 min",
-     "trigger": "5:00 Uhr, ~105 min vor dem Start",
+     "trigger": "8:15 Uhr, ~105 min vor dem Start",
      "why": "Am 16.08. genommen = null Darmprobleme bei 5 Gels. Am 09.08. vergessen = Druck ab 2 h. Abends vorher abmessen und neben die Schuhe stellen."
     },
     {
@@ -680,7 +688,7 @@
      "tier": "pflicht",
      "name": "Post-Run-Protein 30-40 g",
      "duration": "5 min",
-     "trigger": "binnen 40 min nach dem Lauf",
+     "trigger": "binnen 40 min nach dem Lauf, also bis ~13:20",
      "why": "Protein liegt diese Woche im Schnitt bei 94 g gegen ein Minimum von 117. Nach 2:40 h faellt der Appetit ab — deshalb sofort, nicht beim Mittagessen."
     }
    ]
@@ -816,11 +824,11 @@
   "2026-08-23": {
    "tagestyp": "longrun",
    "typLabel": "Long-Run-Tag",
-   "rev": 1,
-   "hinweis": "Start 6:45. Der große Post-Run-Teller ist bewusst auf zwei Termine gesplittet — nach 2:40 h kommt der Appetit verzögert. Der Kaffee morgens ist funktional (Darmentleerung vor dem Start). Mittags heute NICHT kochen, das Abendessen ist das eine Kochgericht.",
+   "rev": 2,
+   "hinweis": "Start 10:00 — das ist die entspannteste Long-Run-Zeit seit Langem: kein Wecker um 4:45, volle Ruhe für die Darmentleerung (Regel GI-1), und das Frühstück darf zum ersten Mal eine richtige Mahlzeit sein statt einer Notration. Nutz das. Mittags heute NICHT kochen, das Abendessen ist das eine Kochgericht.",
    "ziel": {
     "p": 146,
-    "kh": 450
+    "kh": 480
    },
    "mahlzeiten": [
     {
@@ -828,13 +836,13 @@
      "slot": "pre_run",
      "snack": false,
      "familie": false,
-     "zeitLabel": "90–120 min vorher",
-     "name": "2 Scheiben Toast mit Marmelade + Hafer-Latte + 15 g L-Glutamin",
-     "zutaten": "2 Scheiben Toast · Marmelade · Latte macchiato mit Hafermilch · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
-     "p": 6,
-     "kh": 50,
+     "zeitLabel": "08:00 — 2 h vorher",
+     "name": "4 Scheiben Toast mit Marmelade + Banane + Hafer-Latte + 15 g L-Glutamin",
+     "zutaten": "4 Scheiben Toast · Marmelade · 1 Banane · Latte macchiato mit Hafermilch · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "p": 10,
+     "kh": 90,
      "tags": [],
-     "rezept": null,
+     "rezept": "Der 10:00-Start erlaubt ein ECHTES Frühstück: ~90 g KH zwei Stunden vorher statt 55 g im Halbschlaf. Reihenfolge: 7:00 Kaffee und Ruhe für die Toilette, 8:00 essen, 8:15 Glutamin.",
      "low_residue": true
     },
     {
@@ -856,7 +864,7 @@
      "slot": "post_belastung",
      "snack": false,
      "familie": false,
-     "zeitLabel": "🍳 binnen 40 min",
+     "zeitLabel": "🍳 binnen 40 min (~13:15)",
      "name": "200 g Skyr mit Banane + 2 Scheiben Toast mit Käse",
      "zutaten": "200 g Skyr · Banane · 2 Scheiben Toast · Käse",
      "p": 32,
@@ -872,7 +880,7 @@
      "slot": "vormittag",
      "snack": false,
      "familie": false,
-     "zeitLabel": "~1 h später",
+     "zeitLabel": "~14:30",
      "name": "2 Eier Rührei + 2 Scheiben Toast mit Marmelade",
      "zutaten": "2 Eier · 2 Scheiben Toast · Marmelade",
      "p": 20,
@@ -886,7 +894,7 @@
      "slot": "mittag",
      "snack": false,
      "familie": false,
-     "zeitLabel": "☀️ Mittag",
+     "zeitLabel": "☀️ später Mittag ~15:30",
      "name": "Linsen-Feta-Salat mit Brot",
      "zutaten": "200 g vorgekochte Linsen (Dose) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
      "p": 30,
@@ -902,7 +910,7 @@
      "slot": "nachmittag",
      "snack": false,
      "familie": false,
-     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "zeitLabel": "🧀 ~17:30",
      "name": "Mozzarella oder Hüttenkäse mit Brot",
      "zutaten": "Mozzarella oder Hüttenkäse · Brot",
      "p": 20,
@@ -1559,9 +1567,9 @@
   "2026-08-22": {
    "tagestyp": "vortag_longrun",
    "typLabel": "Vortag Long Run — low-residue",
-   "rev": 2,
+   "rev": 3,
    "einheit": "Mobi 17 min + Cycling 1:20",
-   "hinweis": "⚠️ VORTAG DES LÄNGSTEN LAUFS (2:40). Auf die echten Mahlzeiten umgestellt: mittags Spaghetti Bolognese, abends Pizza auswärts. Beides passt — Pizza ist Weißmehl und damit heute genau richtig. DIE LÜCKE LIEGT AM NACHMITTAG: Frühstück + Bolognese + Pizza ergeben nur ~305 g KH von 440. Die zwei Nachmittags-Anker sind heute keine Snacks, sie sind das halbe Carb-Loading. FRÜH ESSEN GEHEN — je näher an 18:00, desto besser läufst du morgen. Kein Salat vorweg, keine Rohkost, keine weitere Dattel.",
+   "hinweis": "⚠️ VORTAG DES LÄNGSTEN LAUFS (2:40) — aber der Lauf startet erst um 10:00, und das entspannt alles. Pizza um 20:00, fertig gegen 21:00, sind ~13 Stunden bis zum Start. Zum Vergleich: die 18:30-Regel gibt bei einem 6:45-Start nur 12:15. Du hast also MEHR Abstand als sonst — die Uhrzeit ist heute kein Problem, die Auswahl schon. DIE ECHTE LÜCKE LIEGT AM NACHMITTAG: Frühstück + Bolognese + Pizza sind nur ~308 g KH von 440, und zwischen 12:30 und 20:00 liegen siebeneinhalb Stunden. Die zwei Nachmittags-Anker sind heute kein Snack, sie sind das halbe Carb-Loading. Keine Rohkost, kein Salat vorweg, keine weitere Dattel.",
    "ziel": {
     "p": 137,
     "kh": 440
@@ -1630,13 +1638,13 @@
      "slot": "abend",
      "snack": false,
      "familie": true,
-     "zeitLabel": "🍕 Abend — Pizza auswärts, so früh wie möglich",
+     "zeitLabel": "🍕 20:00 — Pizza auswärts",
      "name": "Pizza Margherita oder Prosciutto, ganze Pizza",
      "zutaten": "Dünner Boden · Tomate · Mozzarella · optional Schinken · Rand mitessen",
      "p": 35,
      "kh": 100,
      "tags": [],
-     "rezept": "Pizza am Vortag ist völlig okay — Weißmehl ist heute genau richtig. Es geht nur um die Auswahl.",
+     "rezept": "Pizza am Vortag ist völlig okay — Weißmehl ist heute genau richtig, und 13 Stunden vor dem Start ist reichlich Abstand. Es geht nur um die Auswahl, nicht um die Uhrzeit.",
      "low_residue": true,
      "fuerDich": "Margherita oder Prosciutto. NICHT: Salami/Peperoni (Fettbombe, bremst die Magenentleerung), Vier Käse, Thunfisch mit Zwiebeln, Rucola-Berge, scharfe Sachen. Kein Salat vorweg, kein Eis mit Sahne danach. Ganze Pizza inklusive Rand — der Rand ist reines Carb. Und: früh gehen."
     }
