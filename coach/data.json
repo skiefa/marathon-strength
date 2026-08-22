@@ -824,10 +824,10 @@
   "2026-08-23": {
    "tagestyp": "longrun",
    "typLabel": "Long-Run-Tag",
-   "rev": 2,
-   "hinweis": "Start 6:45. Der große Post-Run-Teller ist bewusst auf zwei Termine gesplittet — nach 2:40 h kommt der Appetit verzögert. Der Kaffee morgens ist funktional (Darmentleerung vor dem Start). Mittags heute NICHT kochen, das Abendessen ist das eine Kochgericht.",
+   "rev": 3,
+   "hinweis": "Start 10:00. UMGEBAUT 22.08. nach Steffis Rückmeldung, dass die Menge nicht essbar ist: sechs statt sieben Gelegenheiten, und ein Teil der Kohlenhydrate läuft jetzt FLÜSSIG. Von den 480 g kommen 131 g aus den Gels und ~55 g aus einem Trinkcarb — bleiben ~295 g vom Teller, verteilt auf vier Mahlzeiten. PRIORITÄT, falls der Appetit nach dem Lauf wegbleibt (das ist Physiologie, kein Versagen): 1. Pre-Run-Frühstück · 2. Gels im Lauf · 3. Protein binnen 40 min danach. Alles andere ist Auffüllen, und Auffüllen darf man trinken.",
    "ziel": {
-    "p": 146,
+    "p": 134,
     "kh": 480
    },
    "mahlzeiten": [
@@ -836,13 +836,13 @@
      "slot": "pre_run",
      "snack": false,
      "familie": false,
-     "zeitLabel": "90–120 min vorher",
-     "name": "2 Scheiben Toast mit Marmelade + Hafer-Latte + 15 g L-Glutamin",
-     "zutaten": "2 Scheiben Toast · Marmelade · Latte macchiato mit Hafermilch · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
-     "p": 6,
-     "kh": 50,
+     "zeitLabel": "08:00 — 2 h vorher",
+     "name": "4 Scheiben Toast mit Marmelade + Banane + Hafer-Latte + 15 g L-Glutamin",
+     "zutaten": "4 Scheiben Toast · Marmelade · 1 Banane · Latte macchiato mit Hafermilch · 15 g L-Glutamin in ~400 ml Wasser",
+     "p": 10,
+     "kh": 90,
      "tags": [],
-     "rezept": null,
+     "rezept": "Reihenfolge: 7:00 Kaffee und Ruhe für die Toilette, 8:00 essen, 8:15 Glutamin. Das ist die eine Mahlzeit des Tages, die nicht verhandelbar ist.",
      "low_residue": true
     },
     {
@@ -850,13 +850,13 @@
      "slot": "im_lauf",
      "snack": false,
      "familie": false,
-     "zeitLabel": "🏃 im Lauf",
-     "name": "Gel-Dispenser 150 ml + Koffein-Dispenser ~66 ml = 50 g/h",
-     "zutaten": "150 ml Squeezy Basic Formula (~91 g KH) · ~66 ml Koffein-Dispenser (~40 g KH + ~66 mg Koffein) · je 150–250 ml Wasser · Elektrolytflasche getrennt und leer trinken",
+     "zeitLabel": "🏃 10:00–12:45",
+     "name": "Gel-Dispenser + Koffein-Dispenser, 6 Portionen",
+     "zutaten": "150 ml Basic Formula (~91 g) · ~66 ml Koffein-Dispenser (~40 g + 66 mg Koffein) · je 200 ml Wasser · 4 Salzkapseln",
      "p": 0,
-     "kh": 133,
+     "kh": 131,
      "tags": [],
-     "rezept": "Rampe: 09.08. 34 g/h → 16.08. 40 g/h → heute 50 g/h. Der Koffein-Anteil ist der Test der Woche — die einzige neue Variable, sonst nichts Neues.",
+     "rezept": "10:40 · 11:05 · 11:30 Basic · 11:55 · 12:15 Koffein · 12:35 Basic. Salzkapseln 10:25 · 10:55 · 11:25 · 11:50.",
      "low_residue": true
     },
     {
@@ -864,37 +864,23 @@
      "slot": "post_belastung",
      "snack": false,
      "familie": false,
-     "zeitLabel": "🍳 binnen 40 min",
-     "name": "200 g Skyr mit Banane + 2 Scheiben Toast mit Käse",
-     "zutaten": "200 g Skyr · Banane · 2 Scheiben Toast · Käse",
-     "p": 32,
-     "kh": 55,
+     "zeitLabel": "🥤 13:00 — binnen 40 min",
+     "name": "Recovery-Shake 400 ml + 200 g Skyr mit Banane",
+     "zutaten": "25–30 g Whey in 400 ml Hafermilch · 200 g Skyr · 1 Banane",
+     "p": 45,
+     "kh": 65,
      "tags": [
       "fermentiertes"
      ],
-     "rezept": "3 Min: Skyr mit Banane in Scheiben, Toast mit Käse. Direkt nach dem Duschen essen — das Fenster zählt. Diese Woche lag dein Protein bei 94 g im Schnitt, das hier ist der billigste Fix.",
+     "rezept": "FLÜSSIG statt fest, weil nach 2:40 h der Appetit verzögert kommt. Der Shake geht runter, wenn ein Teller nicht geht. Das ist die zweitwichtigste Mahlzeit des Tages — 45 g Protein direkt ins Fenster.",
      "low_residue": false
     },
     {
      "id": "2026-08-23-m4",
-     "slot": "vormittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "~1 h später",
-     "name": "2 Eier Rührei + 2 Scheiben Toast mit Marmelade",
-     "zutaten": "2 Eier · 2 Scheiben Toast · Marmelade",
-     "p": 20,
-     "kh": 50,
-     "tags": [],
-     "rezept": null,
-     "low_residue": false
-    },
-    {
-     "id": "2026-08-23-m5",
      "slot": "mittag",
      "snack": false,
      "familie": false,
-     "zeitLabel": "☀️ Mittag",
+     "zeitLabel": "☀️ ~14:30",
      "name": "Linsen-Feta-Salat mit Brot",
      "zutaten": "200 g vorgekochte Linsen (Dose) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
      "p": 30,
@@ -902,29 +888,29 @@
      "tags": [
       "huelsenfruechte"
      ],
-     "rezept": "5 Min, kein Herd — heute wird nur abends gekocht.",
+     "rezept": "5 Min, kein Herd. Wenn der Appetit fehlt: halbe Portion, und den Rest über das Trinkcarb um 17:00 holen.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-23-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥤 ~17:00 — FLÜSSIGE CARBS",
+     "name": "Trinkcarb nach Wahl (~55 g KH)",
+     "zutaten": "Variante A: 500 ml Reisdrink · Variante B: Squeezy Energy Drink Basic Pro nach Etikett · Variante C: 55 g Maltodextrin in 500 ml Wasser oder Saftschorle",
+     "p": 3,
+     "kh": 55,
+     "tags": [],
+     "rezept": "ERSETZT den festen Nachmittags-Snack. Alle drei Varianten sind FRUKTOSEFREI. Reisdrink hat 10–12 g KH je 100 ml, schmeckt nach fast nichts und geht auch bei null Appetit. Maltodextrin ist die billigste Variante und komplett geschmacksneutral. Orangensaft NICHT als Hauptquelle — dazu unten mehr.",
      "low_residue": false
     },
     {
      "id": "2026-08-23-m6",
-     "slot": "nachmittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🧀 Zwischenmahlzeit",
-     "name": "Mozzarella oder Hüttenkäse mit Brot",
-     "zutaten": "Mozzarella oder Hüttenkäse · Brot",
-     "p": 20,
-     "kh": 35,
-     "tags": [],
-     "rezept": null,
-     "low_residue": false
-    },
-    {
-     "id": "2026-08-23-m7",
      "slot": "abend",
      "snack": false,
      "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
+     "zeitLabel": "🌙 ~19:00 — Familie",
      "name": "Lachs in Sahne-Dill-Sauce + Kartoffeln + Brokkoli",
      "zutaten": "150 g Lachs pro Person · 100 ml Sahne · Dill, Senf, Zitrone · Kartoffeln · 200 g Brokkoli",
      "p": 35,
@@ -935,7 +921,7 @@
      ],
      "rezept": "20 Min: Lachs braten. Sahne mit Dill, 1 TL Senf und Zitrone einkochen. Salzkartoffeln und Brokkoli dazu.",
      "low_residue": false,
-     "fuerDich": "Doppelte Portion Kartoffeln — nach 2:40 h wird Glykogen aufgefüllt, nicht gespart. Und nimm dir vom Brokkoli ordentlich."
+     "fuerDich": "Doppelte Portion Kartoffeln. Wenn du abends nicht mehr kannst: lieber den Fisch essen und die Kartoffeln durch ein zweites Trinkcarb ersetzen — Glykogen ist nach 2:40 h wichtiger als ein voller Teller."
     }
    ],
    "einheit": "Long Run 2:40 / 256 TSS"
@@ -1595,7 +1581,7 @@
   "2026-08-22": {
    "tagestyp": "vortag_longrun",
    "typLabel": "Vortag Long Run — low-residue",
-   "rev": 3,
+   "rev": 4,
    "einheit": "Mobi 17 min + Cycling 1:20",
    "hinweis": "⚠️ VORTAG DES LÄNGSTEN LAUFS (2:40) — aber der Lauf startet erst um 10:00, und das entspannt alles. Pizza um 20:00, fertig gegen 21:00, sind ~13 Stunden bis zum Start. Zum Vergleich: die 18:30-Regel gibt bei einem 6:45-Start nur 12:15. Du hast also MEHR Abstand als sonst — die Uhrzeit ist heute kein Problem, die Auswahl schon. DIE ECHTE LÜCKE LIEGT AM NACHMITTAG: Frühstück + Bolognese + Pizza sind nur ~308 g KH von 440, und zwischen 12:30 und 20:00 liegen siebeneinhalb Stunden. Die zwei Nachmittags-Anker sind heute kein Snack, sie sind das halbe Carb-Loading. Keine Rohkost, kein Salat vorweg, keine weitere Dattel.",
    "ziel": {
@@ -1658,7 +1644,7 @@
      "p": 8,
      "kh": 75,
      "tags": [],
-     "rezept": "8 Min: Grieß in die kochende Hafermilch einrühren, 3 Min quellen lassen. STATT Milchreis — Fertig-Milchreis ist Kuhmilch, und die vertägst du nicht gut; ausgerechnet heute willst du deinen Darm nicht testen. Die Knabber-Brezeln bringen Salz, das du morgen brauchst. Ohne diese Mahlzeit fehlen dir 75 g KH, die die Pizza nicht mehr aufholt.",
+     "rezept": "8 Min: Grieß in die kochende Hafermilch einrühren, 3 Min quellen lassen. STATT Milchreis — Fertig-Milchreis ist Kuhmilch, und die vertägst du nicht gut; ausgerechnet heute willst du deinen Darm nicht testen. Die Knabber-Brezeln bringen Salz, das du morgen brauchst. Ohne diese Mahlzeit fehlen dir 75 g KH, die die Pizza nicht mehr aufholt. WENN DU NICHT MEHR KANNST: ersetz den Grießbrei durch 500 ml Reisdrink oder 55 g Maltodextrin in Wasser — beides fruktosefrei, ~55 g KH, geht auch ohne Appetit. Die Knabber-Brezeln trotzdem essen, die bringen das Salz.",
      "low_residue": true
     },
     {
@@ -2523,6 +2509,24 @@
    "name": "Medjool-Dattel",
    "p": 0,
    "kh": 18
+  },
+  {
+   "id": "energydrink",
+   "name": "Squeezy Energy Drink",
+   "p": 0,
+   "kh": 32
+  },
+  {
+   "id": "malto",
+   "name": "Maltodextrin 50 g",
+   "p": 0,
+   "kh": 48
+  },
+  {
+   "id": "reisdrink",
+   "name": "Reisdrink 500 ml",
+   "p": 3,
+   "kh": 55
   },
   {
    "id": "nudeln",
