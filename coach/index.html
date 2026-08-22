@@ -1195,13 +1195,22 @@ function applySwapAlt(dk,id,altId){
   S.mahlzeiten[dk][id] = {s:'ersetzt', ersatz:{altId:alt.id, name:alt.name, p:alt.p||0, kh:alt.kh||0}, name:(m?m.name:''), ts:new Date().toISOString()};
   swapFor = null; save(); render();
 }
-function applySwapText(dk,id){
+/* Freitext-Ersatz. BUGFIX 22.08.2026: vorher zaehlte ein Freitext-Ersatz IMMER 0 P / 0 KH —
+   der Balken bewegte sich nicht und es sah aus, als waere der Eintrag verschwunden. Jetzt koennen
+   P/KH mitgegeben werden (optional), und "wie geplant" uebernimmt die Werte der Plan-Mahlzeit. */
+function applySwapText(dk,id,modus){
   const el = document.getElementById('swap-text');
-  const t = el && el.value.trim();
-  if(!t) return;
+  const t = (el && el.value.trim()) || '';
   const m = planMeal(dk,id);
+  let p = parseInt((document.getElementById('swap-p')||{}).value||'',10);
+  let kh = parseInt((document.getElementById('swap-kh')||{}).value||'',10);
+  if(modus==='wiegeplant'){ p = m? (m.p||0) : 0; kh = m? (m.kh||0) : 0; }
+  if(!t && !(p>=0) && !(kh>=0)) return;
+  const ersatz = {text: t || (m? m.name : 'anders gegessen')};
+  if(Number.isFinite(p)) ersatz.p = p;
+  if(Number.isFinite(kh)) ersatz.kh = kh;
   S.mahlzeiten[dk] = S.mahlzeiten[dk]||{};
-  S.mahlzeiten[dk][id] = {s:'ersetzt', ersatz:{text:t}, name:(m?m.name:''), ts:new Date().toISOString()};
+  S.mahlzeiten[dk][id] = {s:'ersetzt', ersatz, name:(m?m.name:''), ts:new Date().toISOString()};
   swapFor = null; save(); render();
 }
 function ankerMahlzeiten(plan){ return (plan.mahlzeiten||[]).filter(m=>!m.familie); }
@@ -1301,7 +1310,7 @@ function renderMahlzeit(dk,m){
     const e = st.ersatz||{};
     const alt = e.altId? findAlt(e.altId) : null;
     body = `<div class="tn">${esc(m.zeitLabel||'')} ${esc(e.name||e.text||'')}</div>
-      <div class="td">${alt&&alt.zutaten? esc(alt.zutaten)+' · ':''}${e.p!=null&&(e.p||e.kh)? `<b>${e.p||0} P / ${e.kh||0} KH</b> · `:''}statt: ${esc(m.name)}${e.text? ' · der Coach rechnet das abends ein':''}${alt&&alt.rezept? rezeptHint:''}</div>`;
+      <div class="td">${alt&&alt.zutaten? esc(alt.zutaten)+' · ':''}${(e.p!=null||e.kh!=null)? `<b>${e.p||0} P / ${e.kh||0} KH</b> · `:''}statt: ${esc(m.name)}${(e.text && e.p==null && e.kh==null)? ' · <b style="color:var(--warn,#b8860b)">zählt noch 0 — tipp ⇄ und trag P/KH ein</b>':''}${alt&&alt.rezept? rezeptHint:''}</div>`;
     if(alt && alt.rezept) body += `<div class="twhy">${esc(alt.rezept)}</div>`;
   }
   if(m.rezept && !ers) body += `<div class="twhy">${esc(m.rezept)}</div>`;
@@ -1317,11 +1326,18 @@ function renderMahlzeit(dk,m){
       <div class="small" style="margin-bottom:6px"><b>Tauschen gegen:</b></div>
       ${alts.map(a=>`<button class="feelbtn" style="display:block;width:100%;text-align:left;margin:5px 0" onclick="applySwapAlt('${dk}','${m.id}','${a.id}')">${esc(a.name)} <span class="small">· ${a.p||0} P / ${a.kh||0} KH</span></button>`).join('') || '<div class="small">Keine passenden Alternativen für diesen Slot.</div>'}
       <div class="small" style="margin:10px 0 4px"><b>Oder sag mir, was du stattdessen isst:</b></div>
-      <input type="text" id="swap-text" placeholder="z. B. Reste von gestern, großer griechischer Salat …">
+      <input type="text" id="swap-text" placeholder="z. B. Reste von gestern, kleinere Portion …" value="${esc((st.ersatz&&st.ersatz.text)||'')}">
+      <div class="frow" style="margin-top:6px;gap:6px;align-items:center">
+        <span class="small" style="flex:1 1 auto">Wie viel ungefähr?</span>
+        <input type="number" id="swap-p" placeholder="P" style="flex:0 0 56px;width:56px;min-width:0" inputmode="numeric">
+        <input type="number" id="swap-kh" placeholder="KH" style="flex:0 0 56px;width:56px;min-width:0" inputmode="numeric">
+      </div>
+      <div class="small" style="margin-top:5px;opacity:.75">Leer lassen ist okay — dann zählt es 0 und der Coach schätzt es abends. Ausgefüllt zählt es sofort im Balken.</div>
       <div class="frow" style="margin-top:8px">
         <button class="btn" style="margin:0" onclick="applySwapText('${dk}','${m.id}')">Übernehmen</button>
-        <button class="btn ghost" style="margin:0" onclick="swapFor=null;render()">Abbrechen</button>
+        <button class="btn ghost" style="margin:0" onclick="applySwapText('${dk}','${m.id}','wiegeplant')" title="Zählt mit ${m.p||0} P / ${m.kh||0} KH">≈ wie geplant (${m.p||0}/${m.kh||0})</button>
       </div>
+      <button class="btn ghost" style="margin:8px 0 0;width:100%" onclick="swapFor=null;render()">Abbrechen</button>
     </div>`;
   }
   return html;
