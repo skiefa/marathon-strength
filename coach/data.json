@@ -825,10 +825,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "90–120 min vorher",
-     "name": "1 Semmel mit Marmelade + Latte macchiato + 15 g L-Glutamin",
-     "zutaten": "1 Semmel · Marmelade · Latte macchiato · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
-     "p": 7,
-     "kh": 55,
+     "name": "2 Scheiben Toast mit Marmelade + Hafer-Latte + 15 g L-Glutamin",
+     "zutaten": "2 Scheiben Toast · Marmelade · Latte macchiato mit Hafermilch · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "p": 6,
+     "kh": 50,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -853,14 +853,14 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "🍳 binnen 40 min",
-     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
-     "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
-     "p": 30,
-     "kh": 60,
+     "name": "200 g Skyr mit Banane + 2 Scheiben Toast mit Käse",
+     "zutaten": "200 g Skyr · Banane · 2 Scheiben Toast · Käse",
+     "p": 32,
+     "kh": 55,
      "tags": [
       "fermentiertes"
      ],
-     "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt. Diese Woche lag dein Protein bei 94 g im Schnitt, das hier ist der billigste Fix.",
+     "rezept": "3 Min: Skyr mit Banane in Scheiben, Toast mit Käse. Direkt nach dem Duschen essen — das Fenster zählt. Diese Woche lag dein Protein bei 94 g im Schnitt, das hier ist der billigste Fix.",
      "low_residue": false
     },
     {
@@ -869,10 +869,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "~1 h später",
-     "name": "2 Eier Rührei + 1 Semmel",
-     "zutaten": "2 Eier · 1 Semmel",
+     "name": "2 Eier Rührei + 2 Scheiben Toast mit Marmelade",
+     "zutaten": "2 Eier · 2 Scheiben Toast · Marmelade",
      "p": 20,
-     "kh": 45,
+     "kh": 50,
      "tags": [],
      "rezept": null,
      "low_residue": false
@@ -1015,7 +1015,7 @@
      ],
      "rezept": "20 Min: Gemüse in Scheiben in der Brühe 10 Min köcheln, Nudeln und Hähnchen die letzten 8 Min mitgaren, Petersilie. DOPPELTE MENGE kochen — morgen Mittag ist damit erledigt.",
      "low_residue": false,
-     "fuerDich": "Doppelte Portion Suppennudeln und eine Semmel dazu. Rucola zählt als Kreuzblütler — nimm dir davon."
+     "fuerDich": "Doppelte Portion Suppennudeln und Toastbrot dazu. Rucola zählt als Kreuzblütler — nimm dir davon."
     }
    ],
    "einheit": "Mobi 17 min"
@@ -1038,8 +1038,8 @@
      "zeitLabel": "🌅 vor dem Lauf",
      "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
      "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
-     "p": 6,
-     "kh": 55,
+     "p": 5,
+     "kh": 52,
      "tags": [],
      "rezept": "60–90 min vor dem Start. ~55 g KH — das ist die Menge, die am 18.08. gefehlt hat.",
      "low_residue": true
@@ -1083,7 +1083,7 @@
      "familie": false,
      "zeitLabel": "☀️ Mittag",
      "name": "Reste: Hühnersuppe mit Suppennudeln",
-     "zutaten": "Zweite Portion von gestern · Semmel dazu",
+     "zutaten": "Zweite Portion von gestern · Toast dazu",
      "p": 35,
      "kh": 75,
      "tags": [],
@@ -1096,12 +1096,12 @@
      "snack": true,
      "familie": false,
      "zeitLabel": "🥣 Snack",
-     "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
-     "zutaten": "50 g Haferflocken · ~200 ml Milch · Beeren · ½ Banane · Zimt",
-     "p": 12,
-     "kh": 55,
+     "name": "Porridge-Snack (50 g Hafer, Hafermilch, Beeren)",
+     "zutaten": "50 g Haferflocken · ~200 ml Hafermilch · Beeren · ½ Banane · Zimt",
+     "p": 8,
+     "kh": 58,
      "tags": [],
-     "rezept": "5 Min: Haferflocken in ~200 ml Milch 3 Min köcheln, Beeren und ½ Banane rein, Zimt.",
+     "rezept": "5 Min: Haferflocken in ~200 ml Hafermilch 3 Min köcheln, Beeren und ½ Banane rein, Zimt.",
      "low_residue": false
     },
     {
@@ -1141,13 +1141,13 @@
      "familie": false,
      "zeitLabel": "🌅 Frühstück",
      "name": "Cornflakes-Skyr-Schüssel",
-     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · Handvoll Beeren · Schuss Milch · Zimt",
+     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · Handvoll Beeren · Schuss Hafermilch · Zimt",
      "p": 25,
      "kh": 70,
      "tags": [
       "fermentiertes"
      ],
-     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Milch. NEU — deine Cornflakes-Gewohnheit mit Skyr statt Hafermilch: +18 g Protein, kein Gramm KH weniger.",
+     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Hafermilch. NEU — deine Cornflakes-Gewohnheit mit Skyr statt Hafermilch: +18 g Protein, kein Gramm KH weniger.",
      "low_residue": false
     },
     {
@@ -1156,10 +1156,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "🥤 binnen 40 min nach Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
-     "p": 22,
-     "kh": 30,
+     "name": "Whey-Shake: 30 g Whey in 300 ml Hafermilch + 1 Banane",
+     "zutaten": "30 g Whey · 300 ml Hafermilch · 1 Banane",
+     "p": 24,
+     "kh": 32,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -1247,8 +1247,8 @@
      "zeitLabel": "🌅 vor dem Lauf",
      "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
      "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
-     "p": 6,
-     "kh": 55,
+     "p": 5,
+     "kh": 52,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -1353,9 +1353,9 @@
      "familie": false,
      "zeitLabel": "🌅 Frühstück",
      "name": "Overnight Oats",
-     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
-     "p": 30,
-     "kh": 55,
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Hafermilch · Chiasamen · Beeren · Walnüsse",
+     "p": 26,
+     "kh": 57,
      "tags": [
       "fermentiertes"
      ],
@@ -1368,10 +1368,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "🥤 binnen 40 min nach Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
-     "p": 22,
-     "kh": 30,
+     "name": "Whey-Shake: 30 g Whey in 300 ml Hafermilch + 1 Banane",
+     "zutaten": "30 g Whey · 300 ml Hafermilch · 1 Banane",
+     "p": 24,
+     "kh": 32,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -1454,12 +1454,12 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "08:00",
-     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
-     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
+     "name": "2 Eier Rührei + 4 Scheiben Toast mit Butter und Marmelade + Kaffee",
+     "zutaten": "2 Eier · 4 Scheiben Toast · Butter · Marmelade · Kaffee",
      "p": 20,
      "kh": 65,
      "tags": [],
-     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade.",
+     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu den Toast mit Butter und Marmelade.",
      "low_residue": true
     },
     {
@@ -1468,10 +1468,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "10:30",
-     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
-     "zutaten": "125 g Mozzarella · Tomate · 1 Semmel · Olivenöl",
+     "name": "125 g Mozzarella mit Tomate + 2 Scheiben Toast + Olivenöl",
+     "zutaten": "125 g Mozzarella · Tomate · 2 Scheiben Toast · Olivenöl",
      "p": 22,
-     "kh": 30,
+     "kh": 28,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -1510,10 +1510,10 @@
      "snack": false,
      "familie": false,
      "zeitLabel": "16:30",
-     "name": "1 Semmel mit Marmelade + 1 Banane",
-     "zutaten": "1 Semmel · Marmelade · 1 Banane",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
      "p": 5,
-     "kh": 55,
+     "kh": 52,
      "tags": [],
      "rezept": null,
      "low_residue": true
@@ -1565,9 +1565,9 @@
    },
    {
     "id": "snack-porridge",
-    "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
-    "p": 12,
-    "kh": 45,
+    "name": "Porridge-Snack (50 g Hafer, Hafermilch, Beeren)",
+    "p": 8,
+    "kh": 58,
     "low_residue": false,
     "hinweis": "Magnesium + Kalzium, warm"
    },
@@ -1837,29 +1837,29 @@
     {
      "id": "vo2max-m2",
      "name": "Protein-Porridge",
-     "p": 30,
-     "kh": 60,
+     "p": 24,
+     "kh": 62,
      "low_residue": false,
-     "zutaten": "50 g Haferflocken in 250 ml Milch · 100 g Magerquark · Banane · Mandelmus",
-     "rezept": "7 Min: Haferflocken in der Milch köcheln, vom Herd nehmen, Quark einrühren (sonst klumpt es), Banane in Scheiben und 1 TL Mandelmus obendrauf."
+     "zutaten": "50 g Haferflocken in 250 ml Hafermilch · 100 g Magerquark · Banane · Mandelmus",
+     "rezept": "7 Min: Haferflocken in der Hafermilch köcheln, vom Herd nehmen, Quark einrühren (sonst klumpt es), Banane in Scheiben und 1 TL Mandelmus obendrauf."
     },
     {
      "id": "kraft-m2",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "p": 22,
-     "kh": 30,
+     "name": "Whey-Shake: 30 g Whey in 300 ml Hafermilch + 1 Banane",
+     "p": 24,
+     "kh": 32,
      "low_residue": true,
-     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "zutaten": "30 g Whey · 300 ml Hafermilch · 1 Banane",
      "rezept": null
     },
     {
      "id": "longrun-m3",
-     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
-     "p": 30,
-     "kh": 60,
+     "name": "200 g Skyr mit Banane + 2 Scheiben Toast mit Käse",
+     "p": 32,
+     "kh": 55,
      "low_residue": false,
-     "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
-     "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt."
+     "zutaten": "200 g Skyr · Banane · 2 Scheiben Toast · Käse",
+     "rezept": "3 Min: Skyr mit Banane in Scheiben, Toast mit Käse. Direkt nach dem Duschen essen — das Fenster zählt."
     }
    ],
    "fruehstueck": [
@@ -1884,20 +1884,20 @@
     {
      "id": "kraft-m1",
      "name": "Overnight Oats",
-     "p": 30,
-     "kh": 55,
+     "p": 26,
+     "kh": 57,
      "low_residue": false,
-     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Hafermilch · Chiasamen · Beeren · Walnüsse",
      "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf."
     },
     {
      "id": "vortag_longrun-m1",
-     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+     "name": "2 Eier Rührei + 4 Scheiben Toast mit Butter und Marmelade + Kaffee",
      "p": 20,
      "kh": 65,
      "low_residue": true,
-     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
-     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade."
+     "zutaten": "2 Eier · 4 Scheiben Toast · Butter · Marmelade · Kaffee",
+     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu den Toast mit Butter und Marmelade."
     },
     {
      "id": "tag_nach_longrun-m1",
@@ -1923,8 +1923,8 @@
      "p": 25,
      "kh": 70,
      "low_residue": false,
-     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · 1 Handvoll Beeren · Schuss Milch oder Hafermilch · Zimt",
-     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Milch damit es nicht zu fest wird. AUFGENOMMEN 22.08.2026, weil Cornflakes mit Hafermilch in den Teller-Diktaten viermal in sieben Tagen auftauchten — dieselbe Schüssel mit Skyr statt Hafermilch bringt +18 g Protein ohne einen einzigen Gramm Kohlenhydrat weniger. Genau der Hebel gegen den Protein-Schnitt von 94 g."
+     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · 1 Handvoll Beeren · Schuss Hafermilch · Zimt",
+     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Hafermilch damit es nicht zu fest wird. AUFGENOMMEN 22.08.2026, weil Cornflakes mit Hafermilch in den Teller-Diktaten viermal in sieben Tagen auftauchten — dieselbe Schüssel mit Skyr statt Hafermilch bringt +18 g Protein ohne einen einzigen Gramm Kohlenhydrat weniger. Genau der Hebel gegen den Protein-Schnitt von 94 g."
     }
    ],
    "vormittag": [
@@ -1966,20 +1966,20 @@
     },
     {
      "id": "vortag_longrun-m2",
-     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
+     "name": "125 g Mozzarella mit Tomate + 2 Scheiben Toast + Olivenöl",
      "p": 22,
-     "kh": 30,
+     "kh": 28,
      "low_residue": true,
-     "zutaten": "125 g Mozzarella · Tomate · 1 Semmel · Olivenöl",
+     "zutaten": "125 g Mozzarella · Tomate · 2 Scheiben Toast · Olivenöl",
      "rezept": null
     },
     {
      "id": "longrun-m4",
-     "name": "2 Eier Rührei + 1 Semmel",
+     "name": "2 Eier Rührei + 2 Scheiben Toast mit Marmelade",
      "p": 20,
-     "kh": 45,
+     "kh": 50,
      "low_residue": false,
-     "zutaten": "2 Eier · 1 Semmel",
+     "zutaten": "2 Eier · 2 Scheiben Toast · Marmelade",
      "rezept": null
     },
     {
@@ -2004,12 +2004,12 @@
     },
     {
      "id": "intervall-m5",
-     "name": "Porridge-Snack: 50 g Haferflocken in Milch + Beeren + Banane",
-     "p": 12,
-     "kh": 55,
+     "name": "Porridge-Snack: 50 g Haferflocken in Hafermilch + Beeren + Banane",
+     "p": 8,
+     "kh": 58,
      "low_residue": false,
-     "zutaten": "50 g Haferflocken · Milch · Beeren · Banane",
-     "rezept": "5 Min: Haferflocken in ~200 ml Milch 3 Min köcheln, Beeren und ½ Banane rein, Zimt."
+     "zutaten": "50 g Haferflocken · Hafermilch · Beeren · Banane",
+     "rezept": "5 Min: Haferflocken in ~200 ml Hafermilch 3 Min köcheln, Beeren und ½ Banane rein, Zimt."
     },
     {
      "id": "vo2max-m5",
@@ -2022,11 +2022,11 @@
     },
     {
      "id": "vortag_longrun-m5",
-     "name": "1 Semmel mit Marmelade + 1 Banane",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
      "p": 5,
-     "kh": 55,
+     "kh": 52,
      "low_residue": true,
-     "zutaten": "1 Semmel · Marmelade · 1 Banane",
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
      "rezept": null
     },
     {
@@ -2043,19 +2043,19 @@
     {
      "id": "intervall-m1",
      "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
-     "p": 6,
-     "kh": 55,
+     "p": 5,
+     "kh": 52,
      "low_residue": true,
      "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
      "rezept": null
     },
     {
      "id": "longrun-m1",
-     "name": "1 Semmel mit Marmelade + Latte macchiato + 15 g L-Glutamin in ~400 ml Wasser",
-     "p": 7,
-     "kh": 55,
+     "name": "2 Scheiben Toast mit Marmelade + Hafer-Latte + 15 g L-Glutamin in ~400 ml Wasser",
+     "p": 6,
+     "kh": 50,
      "low_residue": true,
-     "zutaten": "1 Semmel · Marmelade · Latte macchiato · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "zutaten": "2 Scheiben Toast · Marmelade · Latte macchiato mit Hafermilch · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
      "rezept": null
     }
    ],
@@ -2113,9 +2113,9 @@
      "kategorie": "Milchprodukte"
     },
     {
-     "id": "milch",
-     "name": "Milch",
-     "menge": "3 l (Shakes, Porridge, Overnight Oats)",
+     "id": "hafermilch",
+     "name": "Hafermilch",
+     "menge": "4 l — ersetzt Kuhmilch in Shakes, Porridge, Overnight Oats und Milchkaffee (Verträglichkeit)",
      "kategorie": "Milchprodukte"
     },
     {
@@ -2251,15 +2251,9 @@
      "kategorie": "Vorrat"
     },
     {
-     "id": "semmeln",
-     "name": "Semmeln",
-     "menge": "ca. 10 (So 3, Mo 1, Di 1, Sa 4) — Samstag frisch holen",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "toast",
-     "name": "Toastbrot",
-     "menge": "1 Packung (Di + Do Pre-Run)",
+     "id": "toast_extra",
+     "name": "Toastbrot (Vorrat!)",
+     "menge": "3 Packungen — So 6 Scheiben, Di/Do je 2, Sa 8. Keine Semmeln, Steffi isst die nicht.",
      "kategorie": "Vorrat"
     },
     {
@@ -2343,7 +2337,7 @@
     {
      "id": "whey",
      "name": "Whey-Proteinpulver",
-     "menge": "Bestand prüfen — 2 Shakes diese Woche (Mi + Fr)",
+     "menge": "Bestand prüfen — 2 Shakes diese Woche à 30 g (mehr Whey, weil Hafermilch weniger Protein liefert)",
      "kategorie": "Vorrat"
     },
     {
@@ -2381,16 +2375,28 @@
  },
  "schnellEintrag": [
   {
+   "id": "toast",
+   "name": "Scheibe Toast",
+   "p": 2,
+   "kh": 13
+  },
+  {
+   "id": "knabberbrezel",
+   "name": "Knabber-Brezeln 50 g",
+   "p": 5,
+   "kh": 35
+  },
+  {
    "id": "brezel",
-   "name": "Brezel",
+   "name": "Backbrezel",
    "p": 8,
    "kh": 50
   },
   {
-   "id": "semmel",
-   "name": "Semmel",
-   "p": 5,
-   "kh": 30
+   "id": "dattel",
+   "name": "Medjool-Dattel",
+   "p": 0,
+   "kh": 18
   },
   {
    "id": "nudeln",
@@ -2419,8 +2425,8 @@
   {
    "id": "shake",
    "name": "Protein-Shake",
-   "p": 25,
-   "kh": 15
+   "p": 24,
+   "kh": 32
   },
   {
    "id": "cornflakes",
@@ -2441,16 +2447,10 @@
    "kh": 50
   },
   {
-   "id": "brot",
-   "name": "Scheibe Brot",
-   "p": 4,
-   "kh": 25
-  },
-  {
-   "id": "kaffee_milch",
-   "name": "Milchkaffee",
-   "p": 6,
-   "kh": 8
+   "id": "hafer_latte",
+   "name": "Hafer-Milchkaffee",
+   "p": 2,
+   "kh": 14
   }
  ]
 }

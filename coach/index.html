@@ -1404,6 +1404,7 @@ function renderEssen(){
     html += `<div class="card" style="margin-top:10px">
       <b style="font-size:15.5px">➕ Schnell-Eintrag</b>
       <div class="small" style="margin-top:5px">Was sonst noch dazukam — Brezel beim Bäcker, Kuchen im Büro. Antippen addiert.</div>
+      <div class="small" style="margin-top:6px;opacity:.7">Die kleinen Zahlen sind <b>Gramm Protein / Gramm Kohlenhydrate</b>. „8P/50" heißt also 8 g Protein und 50 g Kohlenhydrate.</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
         ${schnellBausteine().map(b=>`<button class="feelbtn" style="margin:0;flex:0 0 auto" onclick="addExtraBaustein('${dk}','${b.id}')">${esc(b.name)} <span class="small">${b.p? b.p+'P/':''}${b.kh}</span></button>`).join('')}
       </div>
