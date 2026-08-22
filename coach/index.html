@@ -428,8 +428,8 @@ function spruchFuer(dk){
 const KEY = 'coach-v2';
 let S = loadState();
 function loadState(){
-  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{},mahlzeiten:{},einkauf:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
-  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{},mahlzeiten:{},einkauf:{}}; }
+  try { return Object.assign({done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{},mahlzeiten:{},einkauf:{},essenExtra:{},familiePortion:{}}, JSON.parse(localStorage.getItem(KEY)||'{}')); }
+  catch(e){ return {done:{},skipped:{},feel:{},achilles:{},journal:[],regenMo:{},briefDone:{},extra:{},essen:{},trinken:{},wochenkonto:{},mahlzeiten:{},einkauf:{},essenExtra:{},familiePortion:{}}; }
 }
 function save(){ localStorage.setItem(KEY, JSON.stringify(S)); scheduleSync(); }
 
@@ -520,6 +520,14 @@ function mergeState(R){
     const haveT = new Set((S.trinken[dk]||[]).map(x=>x.ts));
     S.trinken[dk] = (S.trinken[dk]||[]).concat((R.trinken[dk]||[]).filter(x=>!haveT.has(x.ts)));
   }
+  // Schnell-Eintrag (Extras): Timestamp-Vereinigung wie beim Trink-Tracker.
+  R.essenExtra = R.essenExtra||{}; S.essenExtra = S.essenExtra||{};
+  for(const dk in R.essenExtra){
+    const haveX = new Set((S.essenExtra[dk]||[]).map(x=>x.ts));
+    S.essenExtra[dk] = (S.essenExtra[dk]||[]).concat((R.essenExtra[dk]||[]).filter(x=>!haveX.has(x.ts)));
+  }
+  // Portionsgröße des Familienessens: ein Wert pro Tag, lokal gewinnt.
+  S.familiePortion = Object.assign({}, R.familiePortion||{}, S.familiePortion||{});
   // Essensplan-Haken + Einkaufsliste: pro Tag/Woche pro ID, lokal gewinnt (wie done/skipped).
   // Status wird nie gelöscht, nur auf 0 gesetzt — sonst würde der Merge Gelöschtes wiederbeleben.
   ['mahlzeiten','einkauf'].forEach(k=>{ R[k]=R[k]||{}; S[k]=S[k]||{};
@@ -1198,11 +1206,51 @@ function applySwapText(dk,id){
 }
 function ankerMahlzeiten(plan){ return (plan.mahlzeiten||[]).filter(m=>!m.familie); }
 function familieMahlzeit(plan){ return (plan.mahlzeiten||[]).find(m=>m.familie) || null; }
+/* Portionsfaktoren fuer das Familienessen (22.08.2026).
+   Das Familienessen bleibt OHNE Soll und OHNE Checkbox — diese Knoepfe sind ein Angebot,
+   damit die Tageszahl auf dem Handy stimmt, kein Compliance-Instrument. Wird nichts getippt,
+   zaehlt der Abend 0 und der Coach schaetzt ihn abends aus dem Teller-Diktat (wie bisher). */
+const FAM_PORTION = {klein:0.6, normal:1.0, gross:1.4};
+const SCHNELL_FALLBACK = [
+  {id:'brezel',   name:'Brezel',        p:8,  kh:50},
+  {id:'semmel',   name:'Semmel',        p:5,  kh:30},
+  {id:'nudeln',   name:'Teller Nudeln', p:15, kh:90},
+  {id:'banane',   name:'Banane',        p:1,  kh:25},
+  {id:'skyr',     name:'Skyr',          p:25, kh:10},
+  {id:'shake',    name:'Protein-Shake', p:25, kh:15},
+  {id:'gel',      name:'Gel',           p:0,  kh:20},
+  {id:'kuchen',   name:'Stück Kuchen',  p:5,  kh:50}
+];
+function schnellBausteine(){ return (DATA.schnellEintrag && DATA.schnellEintrag.length)? DATA.schnellEintrag : SCHNELL_FALLBACK; }
+function famPortion(dk){ return (S.familiePortion||{})[dk] || null; }
+function setFamPortion(dk,size){
+  S.familiePortion = S.familiePortion||{};
+  S.familiePortion[dk] = (S.familiePortion[dk]===size)? null : size;   // nochmal tippen = wieder offen
+  save(); render();
+}
+function essenExtras(dk){ return (S.essenExtra||{})[dk] || []; }
+function addExtra(dk,b){
+  S.essenExtra = S.essenExtra||{}; S.essenExtra[dk] = S.essenExtra[dk]||[];
+  S.essenExtra[dk].push({ts:new Date().toISOString(), id:b.id, name:b.name, p:b.p||0, kh:b.kh||0});
+  save(); render();
+}
+function addExtraBaustein(dk,id){
+  const b = schnellBausteine().find(x=>x.id===id); if(!b) return;
+  addExtra(dk,b);
+}
+function addExtraFrei(dk){
+  const n = (document.getElementById('x-name')||{}).value || '';
+  const p = parseInt((document.getElementById('x-p')||{}).value||'0',10)||0;
+  const kh = parseInt((document.getElementById('x-kh')||{}).value||'0',10)||0;
+  if(!n.trim() && !p && !kh) return;
+  addExtra(dk,{id:'frei', name:n.trim()||'Extra', p, kh});
+}
+function delExtra(dk,i){ (S.essenExtra[dk]||[]).splice(i,1); save(); render(); }
+
 function essenIst(dk){
   const plan = essenPlanFor(dk); if(!plan) return null;
   let p=0, kh=0, offen=0, freitext=0;
-  // Nur Anker zaehlen — das Familienessen ist ein freier Slot ohne Soll (Steffi 10.08.2026:
-  // "wir essen in der Familie oft anders als im Plan"). Es wird abends aus dem Teller-Diktat geschaetzt.
+  // Anker = die Mahlzeiten, die Steffi allein steuert. Nur sie haben einen Soll-Status.
   const anker = ankerMahlzeiten(plan);
   for(const m of anker){
     const st = mealState(dk,m.id);
@@ -1211,7 +1259,19 @@ function essenIst(dk){
     else if(s==='ersetzt'){ const e = st.ersatz||{}; if(e.text) freitext++; p += e.p||0; kh += e.kh||0; }
     else if(s!=='weg') offen++;
   }
-  return {p, kh, offen, freitext, total:anker.length};
+  // Familienessen: zaehlt nur mit, wenn eine Portionsgroesse getippt wurde.
+  const fam = familieMahlzeit(plan), size = famPortion(dk);
+  let famP=0, famKh=0;
+  if(fam && size && FAM_PORTION[size]){
+    famP = Math.round((fam.p||0)*FAM_PORTION[size]);
+    famKh = Math.round((fam.kh||0)*FAM_PORTION[size]);
+  }
+  // Schnell-Eintrag: alles Spontane ausserhalb des Plans.
+  let xP=0, xKh=0;
+  for(const x of essenExtras(dk)){ xP += x.p||0; xKh += x.kh||0; }
+  return {p, kh, offen, freitext, total:anker.length,
+          famP, famKh, famSize:size, extraP:xP, extraKh:xKh, extraN:essenExtras(dk).length,
+          gesamtP: p+famP+xP, gesamtKh: kh+famKh+xKh};
 }
 function toggleEinkauf(wk,id){ S.einkauf[wk]=S.einkauf[wk]||{}; S.einkauf[wk][id]=!S.einkauf[wk][id]; save(); render(); }
 function focusTeller(){
@@ -1293,15 +1353,25 @@ function renderEssen(){
       return `<div class="zone"><div class="zl"><span>${label}</span><span><b>${istV}</b> / ${zielV} g</span></div>
         <div class="zbar"><div class="zfill ${cls}" style="width:${pct}%"></div></div></div>`;
     };
-    const restP = Math.max(0, (ziel.p||0) - ist.p), restKh = Math.max(0, (ziel.kh||0) - ist.kh);
+    const restP = Math.max(0, (ziel.p||0) - ist.gesamtP), restKh = Math.max(0, (ziel.kh||0) - ist.gesamtKh);
+    const teile = [`Anker ${ist.p}`];
+    if(fam) teile.push(ist.famSize? `Abend ${ist.famP}` : 'Abend –');
+    teile.push(`Extra ${ist.extraP}`);
+    const teileKh = [`Anker ${ist.kh}`];
+    if(fam) teileKh.push(ist.famSize? `Abend ${ist.famKh}` : 'Abend –');
+    teileKh.push(`Extra ${ist.extraKh}`);
     html += `<div class="card brief">
       <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
         <b style="font-size:16px">${esc(plan.typLabel||plan.tagestyp||'')}</b>
         <span class="small">${ist.total-ist.offen}/${ist.total} Anker</span>
       </div>
       ${plan.hinweis? `<div class="small" style="margin-top:5px">${esc(plan.hinweis)}</div>`:''}
-      <div style="margin-top:8px">${bar('Protein', ist.p, ziel.p||0)}${bar('Kohlenhydrate', ist.kh, ziel.kh||0)}</div>
-      <div class="small" style="margin-top:4px">Balken = <b>Anker</b> (${ist.p} P / ${ist.kh} KH).${fam? ` Bis zum Tagesziel fehlen noch ~${restP} P / ${restKh} KH — die holt das Abendessen.`:''}</div>
+      <div style="margin-top:8px">${bar('Protein', ist.gesamtP, ziel.p||0)}
+        <div class="small" style="margin:-4px 0 8px;opacity:.75">${teile.join(' · ')} g</div>
+        ${bar('Kohlenhydrate', ist.gesamtKh, ziel.kh||0)}
+        <div class="small" style="margin:-4px 0 2px;opacity:.75">${teileKh.join(' · ')} g</div></div>
+      ${(restP||restKh)? `<div class="small" style="margin-top:4px">Bis zum Tagesziel fehlen noch ~<b>${restP} P / ${restKh} KH</b>.</div>`:`<div class="small" style="margin-top:4px">Tagesziel erreicht. ✓</div>`}
+      ${(fam && !ist.famSize)? `<div class="small" style="margin-top:4px">Das Abendessen zählt erst mit, wenn du unten die Portionsgröße tippst — musst du nicht.</div>`:''}
       ${ist.freitext? `<div class="small" style="margin-top:4px">${ist.freitext} freie${ist.freitext===1?'r':''} Ersatz — zählt hier 0 g, der Coach rechnet ihn abends ein.</div>`:''}
       <div class="small" style="margin-top:6px">Haken = gegessen wie geplant. ⇄ = tauschen. ✕ = fällt heute aus.</div>
     </div>`;
@@ -1317,9 +1387,35 @@ function renderEssen(){
         ${fam.zutaten? `<div class="td">${esc(fam.zutaten)}</div>`:''}
         ${fam.fuerDich? `<div class="twhy" style="display:block;margin-top:8px">Für dich: ${esc(fam.fuerDich)}</div>`:''}
         ${fam.rezept? `<div class="twhy" style="display:block;margin-top:6px">${esc(fam.rezept)}</div>`:''}
-        <button class="btn ghost" style="margin:12px 0 2px" onclick="focusTeller()">Diktieren, was es gab →</button>
+        <div class="small" style="margin-top:12px"><b>Wie viel war deine Portion?</b> Nur damit die Tageszahl oben stimmt — kein Soll.</div>
+        <div class="frow" style="margin-top:6px">
+          ${['klein','normal','gross'].map(sz=>{
+            const aktiv = ist.famSize===sz;
+            const lbl = sz==='gross'? 'groß' : sz;
+            const pv = Math.round((fam.p||0)*FAM_PORTION[sz]), kv = Math.round((fam.kh||0)*FAM_PORTION[sz]);
+            return `<button class="feelbtn${aktiv?' sel':''}" style="flex:1;margin:0${aktiv?';background:var(--teal);border-color:var(--teal);color:#fff':''}" onclick="setFamPortion('${dk}','${sz}')">${lbl}<br><span class="small" style="${aktiv?'color:#fff;opacity:.85':''}">${pv} P / ${kv} KH</span></button>`;
+          }).join('')}
+        </div>
+        <button class="btn ghost" style="margin:12px 0 2px" onclick="focusTeller()">Es gab was anderes → diktieren</button>
       </div>`;
     }
+    // --- Schnell-Eintrag: alles Spontane ausserhalb des Plans (22.08.2026) ---
+    const extras = essenExtras(dk);
+    html += `<div class="card" style="margin-top:10px">
+      <b style="font-size:15.5px">➕ Schnell-Eintrag</b>
+      <div class="small" style="margin-top:5px">Was sonst noch dazukam — Brezel beim Bäcker, Kuchen im Büro. Antippen addiert.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
+        ${schnellBausteine().map(b=>`<button class="feelbtn" style="margin:0;flex:0 0 auto" onclick="addExtraBaustein('${dk}','${b.id}')">${esc(b.name)} <span class="small">${b.p? b.p+'P/':''}${b.kh}</span></button>`).join('')}
+      </div>
+      <div class="frow" style="margin-top:10px;gap:6px;align-items:stretch">
+        <input type="text" id="x-name" placeholder="sonst was …" style="flex:1 1 auto;min-width:0">
+        <input type="number" id="x-p" placeholder="P" style="flex:0 0 56px;width:56px;min-width:0" inputmode="numeric">
+        <input type="number" id="x-kh" placeholder="KH" style="flex:0 0 56px;width:56px;min-width:0" inputmode="numeric">
+        <button class="btn" style="margin:0;flex:0 0 48px;width:48px;padding-left:0;padding-right:0" onclick="addExtraFrei('${dk}')">+</button>
+      </div>
+      ${extras.length? extras.map((x,i)=>`<div class="jentry" style="margin-top:6px"><div class="jh"><div class="small" style="flex:1">${esc(x.name)} · <b>${x.p||0} P / ${x.kh||0} KH</b></div><button class="del" onclick="delExtra('${dk}',${i})">löschen</button></div></div>`).join('')
+        : `<div class="small" style="margin-top:8px;opacity:.7">Heute noch nichts extra.</div>`}
+    </div>`;
   } else {
     const geplant = Object.keys(DATA.essensplan||{}).filter(k=>k>=todayKey()).sort();
     if(geplant.length){

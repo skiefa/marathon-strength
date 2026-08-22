@@ -2378,5 +2378,79 @@
     }
    ]
   }
- }
+ },
+ "schnellEintrag": [
+  {
+   "id": "brezel",
+   "name": "Brezel",
+   "p": 8,
+   "kh": 50
+  },
+  {
+   "id": "semmel",
+   "name": "Semmel",
+   "p": 5,
+   "kh": 30
+  },
+  {
+   "id": "nudeln",
+   "name": "Teller Nudeln",
+   "p": 15,
+   "kh": 90
+  },
+  {
+   "id": "reis",
+   "name": "Teller Reis",
+   "p": 8,
+   "kh": 75
+  },
+  {
+   "id": "banane",
+   "name": "Banane",
+   "p": 1,
+   "kh": 25
+  },
+  {
+   "id": "skyr",
+   "name": "Skyr 200 g",
+   "p": 25,
+   "kh": 10
+  },
+  {
+   "id": "shake",
+   "name": "Protein-Shake",
+   "p": 25,
+   "kh": 15
+  },
+  {
+   "id": "cornflakes",
+   "name": "Schüssel Cornflakes",
+   "p": 8,
+   "kh": 70
+  },
+  {
+   "id": "gel",
+   "name": "Gel",
+   "p": 0,
+   "kh": 20
+  },
+  {
+   "id": "kuchen",
+   "name": "Stück Kuchen",
+   "p": 5,
+   "kh": 50
+  },
+  {
+   "id": "brot",
+   "name": "Scheibe Brot",
+   "p": 4,
+   "kh": 25
+  },
+  {
+   "id": "kaffee_milch",
+   "name": "Milchkaffee",
+   "p": 6,
+   "kh": 8
+  }
+ ]
 }
