@@ -695,406 +695,6 @@
   }
  },
  "essensplan": {
-  "2026-08-11": {
-   "tagestyp": "intervall",
-   "typLabel": "Intervall-Tag",
-   "einheit": "Intervalle 75 min",
-   "rev": 1,
-   "hinweis": "Lauf um 6:45 — Pre-Run schon um 6:00, nur eine kleine Portion. Abends 18:00 Kette-Block (Hamstring + Beckenboden), 19:00 Zoom. Der Abend wird knapp: Snack um 16:30 nicht auslassen.",
-   "ziel": {
-    "p": 140,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-11-m1",
-     "slot": "pre_run",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 6:00 vor dem Lauf",
-     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
-     "zutaten": "Toastbrot, Marmelade, Banane",
-     "p": 6,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m2",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🍳 8:15 binnen 40 min",
-     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
-     "zutaten": "Eier, Brot, Skyr, Banane",
-     "p": 32,
-     "kh": 60,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m3",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Linsen-Feta-Salat mit Rucola und Brot",
-     "zutaten": "Linsen (Dose), Feta, Rucola, Tomate, Gurke, Olivenöl, 2 Scheiben Vollkornbrot — nichts kochen",
-     "p": 32,
-     "kh": 55,
-     "tags": [
-      "huelsenfruechte",
-      "kreuzbluetler"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m4",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🍚 16:30 Snack",
-     "name": "250 g Milchreis mit Zimt",
-     "zutaten": "Milchreis, Zimt",
-     "p": 9,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥣 Später Snack",
-     "name": "Skyr mit Haferflocken und Beeren",
-     "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
-     "p": 25,
-     "kh": 50,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-11-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Lachs in Sahne-Dill-Sauce + Kartoffeln + Salat",
-     "zutaten": "Lachsfilet, Sahne, Dill, Kartoffeln, Blattsalat — doppelte Portion Kartoffeln kochen, die Reste sind morgen dein Mittag",
-     "p": 35,
-     "kh": 85,
-     "tags": [
-      "fetter_fisch"
-     ],
-     "rezept": null,
-     "fuerDich": "doppelte Portion Kartoffeln — nach Intervallen ist die große Beilage genau richtig. Gibt es was ganz anderes: Hauptsache Beilage doppelt."
-    }
-   ]
-  },
-  "2026-08-12": {
-   "tagestyp": "kraft",
-   "typLabel": "Kraft-Tag",
-   "einheit": "Kraft 45 min (Muckibude 3) + Kette-Block",
-   "rev": 1,
-   "hinweis": "Vormittag voll (Weekly 8:00, Podcasts 9-12, Physio 9:30). Der 10:45-Anker ist das Pre-Fuel für die Kraft um 12:30 — nicht überspringen, Kraft nicht nüchtern.",
-   "ziel": {
-    "p": 138,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-12-m1",
-     "slot": "fruehstueck",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 7:15 Frühstück",
-     "name": "Overnight Oats",
-     "zutaten": "60 g Haferflocken, Skyr, Milch, Beeren, Nüsse — abends vorher ansetzen",
-     "p": 30,
-     "kh": 55,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m2",
-     "slot": "vormittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 10:45 vor der Kraft",
-     "name": "Brot mit Marmelade + 1 Banane",
-     "zutaten": "Brot, Marmelade, Banane",
-     "p": 7,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m3",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 14:00 binnen 40 min nach der Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "Whey, Milch, Banane",
-     "p": 22,
-     "kh": 30,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m4",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ 14:30 Mittag",
-     "name": "Mediterrane Hüttenkäse-Bowl + 2 Scheiben Brot",
-     "zutaten": "250 g Hüttenkäse, Tomate, Gurke, Oliven, Olivenöl, Vollkornbrot — nichts kochen",
-     "p": 38,
-     "kh": 85,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 Snack",
-     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
-     "zutaten": "Vollkornbrot, Mandelmus, Banane",
-     "p": 10,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-12-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Käsespätzle mit Rosenkohl",
-     "zutaten": "Spätzle, Bergkäse, Zwiebeln, Rosenkohl",
-     "p": 30,
-     "kh": 95,
-     "tags": [
-      "kreuzbluetler",
-      "fermentiertes"
-     ],
-     "rezept": null,
-     "fuerDich": "große Portion Spätzle, und den Rosenkohl nicht weglassen — das ist dein Kreuzblütler des Tages (Leber-Quote)."
-    }
-   ]
-  },
-  "2026-08-13": {
-   "tagestyp": "intervall",
-   "typLabel": "Tempo-Tag",
-   "einheit": "Tempolauf 55 min",
-   "rev": 1,
-   "hinweis": "Mammografie 8:00 — die braucht keine Nüchternheit, also VOR dem Termin frühstücken. Lauf danach ab 9:15 bei 30,7 Grad. Post-Run bewusst kalt (Smoothie Bowl), bei Hitze fällt der Appetit sonst weg. Abends 18:00 Kette-Block.",
-   "ziel": {
-    "p": 140,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-13-m1",
-     "slot": "pre_run",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 7:00 vor dem Termin",
-     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
-     "zutaten": "Toastbrot, Marmelade, Banane",
-     "p": 6,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m2",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 10:45 binnen 40 min",
-     "name": "Recovery Smoothie Bowl",
-     "zutaten": "Skyr, Beeren, Banane, Whey, Haferflocken — kalt, geht bei Hitze runter",
-     "p": 35,
-     "kh": 40,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m3",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Protein-Sandwich mit Rucola + 1 Banane",
-     "zutaten": "Vollkornbrot, Hüttenkäse oder Putenbrust, Rucola, Tomate, Banane — nichts kochen",
-     "p": 26,
-     "kh": 80,
-     "tags": [
-      "fermentiertes",
-      "kreuzbluetler"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m4",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🍚 Snack",
-     "name": "250 g Milchreis mit Zimt",
-     "zutaten": "Milchreis, Zimt",
-     "p": 9,
-     "kh": 55,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥣 Später Snack",
-     "name": "Skyr mit Haferflocken und Beeren",
-     "zutaten": "200 g Skyr, 30 g Haferflocken, Beeren",
-     "p": 25,
-     "kh": 50,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-13-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Kichererbsen-Hähnchen in Kokos-Curry + Reis",
-     "zutaten": "Hähnchenbrust, Kichererbsen, Kokosmilch, Currypaste, Reis",
-     "p": 40,
-     "kh": 80,
-     "tags": [
-      "huelsenfruechte"
-     ],
-     "rezept": null,
-     "fuerDich": "doppelte Portion Reis. Wenn es am Ende ohne Hähnchen bleibt: danach 1 Skyr, sonst fehlen dir 25 g Protein."
-    }
-   ]
-  },
-  "2026-08-14": {
-   "tagestyp": "kraft",
-   "typLabel": "Kraft-Tag",
-   "einheit": "Kraft 45 min (Muckibude schnell) + Kette-Block",
-   "rev": 1,
-   "hinweis": "Letzter voller Tag vor dem Vortag-Modus. Morgen wird low-residue — heute also nochmal Ballaststoffe und Kohl, danach zwei Tage nicht mehr.",
-   "ziel": {
-    "p": 138,
-    "kh": 365
-   },
-   "mahlzeiten": [
-    {
-     "id": "2026-08-14-m1",
-     "slot": "fruehstueck",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🌅 Frühstück",
-     "name": "Protein-Porridge",
-     "zutaten": "60 g Haferflocken, 25 g Whey, Milch, Beeren, Zimt",
-     "p": 30,
-     "kh": 60,
-     "tags": [
-      "fermentiertes"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m2",
-     "slot": "vormittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 vor der Kraft",
-     "name": "3 Scheiben Brot mit Marmelade + 1 Banane",
-     "zutaten": "Brot, Marmelade, Banane",
-     "p": 9,
-     "kh": 75,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m3",
-     "slot": "post_belastung",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "🥤 binnen 40 min nach der Kraft",
-     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
-     "zutaten": "Whey, Milch, Banane",
-     "p": 22,
-     "kh": 30,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m4",
-     "slot": "mittag",
-     "snack": false,
-     "familie": false,
-     "zeitLabel": "☀️ Mittag",
-     "name": "Edamame-Bowl mit Reis",
-     "zutaten": "Edamame (TK), Reis, Gurke, Avocado, Sesam, Sojasauce — Reis vom Vortag oder schnell gekocht",
-     "p": 26,
-     "kh": 65,
-     "tags": [
-      "huelsenfruechte"
-     ],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m5",
-     "slot": "nachmittag",
-     "snack": true,
-     "familie": false,
-     "zeitLabel": "🥨 Snack",
-     "name": "Reiswaffeln mit Erdnussmus + 1 Banane",
-     "zutaten": "Reiswaffeln, Erdnussmus, Banane",
-     "p": 10,
-     "kh": 45,
-     "tags": [],
-     "rezept": null
-    },
-    {
-     "id": "2026-08-14-m6",
-     "slot": "abend",
-     "snack": false,
-     "familie": true,
-     "zeitLabel": "🌙 Abend — Familie",
-     "name": "Ofenlachs in Sahne-Dill + Brokkoli + Süßkartoffel-Wedges",
-     "zutaten": "Lachsfilet, Sahne, Dill, Brokkoli, Süßkartoffeln",
-     "p": 38,
-     "kh": 90,
-     "tags": [
-      "fetter_fisch",
-      "kreuzbluetler"
-     ],
-     "rezept": null,
-     "fuerDich": "große Portion Süßkartoffel — ab morgen fängt das Auffüllen für den Long Run an, und Brokkoli ist heute zum letzten Mal drin (morgen low-residue)."
-    }
-   ]
-  },
   "2026-08-15": {
    "tagestyp": "vortag_longrun",
    "typLabel": "Vortag Long Run — low-residue",
@@ -1208,6 +808,749 @@
      "low_residue": true
     }
    ]
+  },
+  "2026-08-23": {
+   "tagestyp": "longrun",
+   "typLabel": "Long-Run-Tag",
+   "rev": 1,
+   "hinweis": "Start 6:45. Der große Post-Run-Teller ist bewusst auf zwei Termine gesplittet — nach 2:40 h kommt der Appetit verzögert. Der Kaffee morgens ist funktional (Darmentleerung vor dem Start). Mittags heute NICHT kochen, das Abendessen ist das eine Kochgericht.",
+   "ziel": {
+    "p": 146,
+    "kh": 450
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-23-m1",
+     "slot": "pre_run",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "90–120 min vorher",
+     "name": "1 Semmel mit Marmelade + Latte macchiato + 15 g L-Glutamin",
+     "zutaten": "1 Semmel · Marmelade · Latte macchiato · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "p": 7,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-23-m2",
+     "slot": "im_lauf",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🏃 im Lauf",
+     "name": "Gel-Dispenser 150 ml + Koffein-Dispenser ~66 ml = 50 g/h",
+     "zutaten": "150 ml Squeezy Basic Formula (~91 g KH) · ~66 ml Koffein-Dispenser (~40 g KH + ~66 mg Koffein) · je 150–250 ml Wasser · Elektrolytflasche getrennt und leer trinken",
+     "p": 0,
+     "kh": 133,
+     "tags": [],
+     "rezept": "Rampe: 09.08. 34 g/h → 16.08. 40 g/h → heute 50 g/h. Der Koffein-Anteil ist der Test der Woche — die einzige neue Variable, sonst nichts Neues.",
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-23-m3",
+     "slot": "post_belastung",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🍳 binnen 40 min",
+     "name": "200 g Skyr mit Banane + 1 Semmel mit Käse",
+     "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
+     "p": 30,
+     "kh": 60,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt. Diese Woche lag dein Protein bei 94 g im Schnitt, das hier ist der billigste Fix.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-23-m4",
+     "slot": "vormittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "~1 h später",
+     "name": "2 Eier Rührei + 1 Semmel",
+     "zutaten": "2 Eier · 1 Semmel",
+     "p": 20,
+     "kh": 45,
+     "tags": [],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-23-m5",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Linsen-Feta-Salat mit Brot",
+     "zutaten": "200 g vorgekochte Linsen (Dose) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
+     "p": 30,
+     "kh": 55,
+     "tags": [
+      "huelsenfruechte"
+     ],
+     "rezept": "5 Min, kein Herd — heute wird nur abends gekocht.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-23-m6",
+     "slot": "nachmittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "Mozzarella oder Hüttenkäse mit Brot",
+     "zutaten": "Mozzarella oder Hüttenkäse · Brot",
+     "p": 20,
+     "kh": 35,
+     "tags": [],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-23-m7",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Lachs in Sahne-Dill-Sauce + Kartoffeln + Brokkoli",
+     "zutaten": "150 g Lachs pro Person · 100 ml Sahne · Dill, Senf, Zitrone · Kartoffeln · 200 g Brokkoli",
+     "p": 35,
+     "kh": 85,
+     "tags": [
+      "fetter_fisch",
+      "kreuzbluetler"
+     ],
+     "rezept": "20 Min: Lachs braten. Sahne mit Dill, 1 TL Senf und Zitrone einkochen. Salzkartoffeln und Brokkoli dazu.",
+     "low_residue": false,
+     "fuerDich": "Doppelte Portion Kartoffeln — nach 2:40 h wird Glykogen aufgefüllt, nicht gespart. Und nimm dir vom Brokkoli ordentlich."
+    }
+   ],
+   "einheit": "Long Run 2:40 / 256 TSS"
+  },
+  "2026-08-24": {
+   "tagestyp": "tag_nach_longrun",
+   "typLabel": "Tag nach dem Long Run",
+   "rev": 1,
+   "hinweis": "Regeneration, nicht Diät. Der häufigste Fehler nach einem langen Lauf ist, am Folgetag zu wenig zu essen. Salz, Flüssigkeit und Protein in der Suppe — nach 2:40 h im Schweiß ist Natrium kein Feind. Heute die Suppe in DOPPELTER Menge kochen, sie ist morgen dein Mittagessen.",
+   "ziel": {
+    "p": 139,
+    "kh": 305
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-24-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🌅 Frühstück",
+     "name": "Protein-Pancakes",
+     "zutaten": "50 g Haferflocken gemahlen · 2 Eier · 100 g Quark · Banane · Beeren obendrauf",
+     "p": 33,
+     "kh": 60,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "15 Min: Haferflocken im Mixer mahlen, mit Eiern, Quark und Banane zum Teig mixen. Kleine Pancakes in beschichteter Pfanne 2–3 Min pro Seite. Skyr und Beeren obendrauf.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-24-m2",
+     "slot": "vormittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "125 g Mozzarella mit Tomate + 1 Scheibe Brot",
+     "zutaten": "125 g Mozzarella · Tomate · 1 Scheibe Brot",
+     "p": 24,
+     "kh": 25,
+     "tags": [],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-24-m3",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Protein-Sandwich",
+     "zutaten": "3 Scheiben Vollkornbrot · 150 g Hüttenkäse · ½ Avocado · Tomate · Kresse · Pfeffer",
+     "p": 25,
+     "kh": 60,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "5 Min, kein Herd. Das Kochgericht ist heute die Suppe am Abend.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-24-m4",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥣 Snack",
+     "name": "Skyr mit Haferflocken und Beeren",
+     "zutaten": "200 g Skyr · 40 g Haferflocken · Beeren",
+     "p": 25,
+     "kh": 50,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-24-m5",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Hühnersuppe mit Suppennudeln + Rucola-Salat",
+     "zutaten": "Hähnchen · Hühnerbrühe · Suppennudeln · Karotte · Lauch · Sellerie · Petersilie · Rucola-Salat dazu",
+     "p": 35,
+     "kh": 75,
+     "tags": [
+      "kreuzbluetler"
+     ],
+     "rezept": "20 Min: Gemüse in Scheiben in der Brühe 10 Min köcheln, Nudeln und Hähnchen die letzten 8 Min mitgaren, Petersilie. DOPPELTE MENGE kochen — morgen Mittag ist damit erledigt.",
+     "low_residue": false,
+     "fuerDich": "Doppelte Portion Suppennudeln und eine Semmel dazu. Rucola zählt als Kreuzblütler — nimm dir davon."
+    }
+   ],
+   "einheit": "Mobi 17 min"
+  },
+  "2026-08-25": {
+   "tagestyp": "intervall",
+   "typLabel": "Intervall-/Tempo-Tag",
+   "rev": 1,
+   "hinweis": "Morgens laufen (vor 9:00). Das Pre-Run-Frühstück ist Pflicht, nicht Kür — am 18.08. waren es 1 Pfirsich und 1 Dattel und der Lauf ist daran zerfallen. Mittags kein Herd: die Suppe von gestern.",
+   "ziel": {
+    "p": 140,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-25-m1",
+     "slot": "pre_run",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🌅 vor dem Lauf",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
+     "p": 6,
+     "kh": 55,
+     "tags": [],
+     "rezept": "60–90 min vor dem Start. ~55 g KH — das ist die Menge, die am 18.08. gefehlt hat.",
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-25-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🍳 binnen 40 min",
+     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
+     "zutaten": "2 Eier · 1 Scheibe Brot · 150 g Skyr · ½ Banane",
+     "p": 32,
+     "kh": 60,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "5 Min: 2 Eier verquirlen, in etwas Butter stocken lassen, salzen. Dazu Brot und Skyr mit ½ Banane.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-25-m3",
+     "slot": "vormittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "150 g Hüttenkäse mit Brot und Tomate",
+     "zutaten": "150 g Hüttenkäse · Brot · Tomate · Pfeffer",
+     "p": 20,
+     "kh": 30,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-25-m4",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Reste: Hühnersuppe mit Suppennudeln",
+     "zutaten": "Zweite Portion von gestern · Semmel dazu",
+     "p": 35,
+     "kh": 75,
+     "tags": [],
+     "rezept": "Aufwärmen, fertig. Kein Herd-Aufwand.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-25-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥣 Snack",
+     "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
+     "zutaten": "50 g Haferflocken · ~200 ml Milch · Beeren · ½ Banane · Zimt",
+     "p": 12,
+     "kh": 55,
+     "tags": [],
+     "rezept": "5 Min: Haferflocken in ~200 ml Milch 3 Min köcheln, Beeren und ½ Banane rein, Zimt.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-25-m6",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Linsen-Kokos-Curry mit Reis",
+     "zutaten": "80 g rote Linsen · 200 ml Kokosmilch light · 200 g Tomaten · Ingwer, Kurkuma, Kreuzkümmel, Curry · Spinat oder Karotte · Reis",
+     "p": 25,
+     "kh": 90,
+     "tags": [
+      "huelsenfruechte"
+     ],
+     "rezept": "25 Min: Linsen in Kokosmilch und Tomaten mit Gewürzen köcheln, Spinat oder Karotte dazu.",
+     "low_residue": false,
+     "fuerDich": "Doppelte Portion Reis. Wenn wenig Protein dabei war: 1 Skyr hinterher."
+    }
+   ],
+   "einheit": "Intervalle 1:25 / 127 TSS"
+  },
+  "2026-08-26": {
+   "tagestyp": "kraft",
+   "typLabel": "Kraft-Tag",
+   "rev": 1,
+   "hinweis": "Doppeltag: Kraft am Vormittag, Rad am Nachmittag. Der Whey-Shake binnen 40 min nach der Kraft ist der Anker, der zuletzt am häufigsten gefehlt hat. Abends Käsespätzle in DOPPELTER Menge — morgen Mittag ist damit erledigt.",
+   "ziel": {
+    "p": 138,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-26-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🌅 Frühstück",
+     "name": "Cornflakes-Skyr-Schüssel",
+     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · Handvoll Beeren · Schuss Milch · Zimt",
+     "p": 25,
+     "kh": 70,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Milch. NEU — deine Cornflakes-Gewohnheit mit Skyr statt Hafermilch: +18 g Protein, kein Gramm KH weniger.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-26-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🥤 binnen 40 min nach Kraft",
+     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "p": 22,
+     "kh": 30,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-26-m3",
+     "slot": "vormittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥨 Snack",
+     "name": "Brot mit Marmelade + 1 Banane",
+     "zutaten": "Brot · Marmelade · 1 Banane",
+     "p": 6,
+     "kh": 50,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-26-m4",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Mediterrane Hüttenkäse-Bowl",
+     "zutaten": "250 g Hüttenkäse · 2 Scheiben Vollkornbrot · Cherrytomaten · Gurke · Rucola · Olivenöl · Kürbiskerne",
+     "p": 35,
+     "kh": 45,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "5 Min, kein Herd.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-26-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥨 Snack",
+     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
+     "zutaten": "Vollkornbrot · Mandelmus · 1 Banane",
+     "p": 10,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-26-m6",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Käsespätzle mit Rosenkohl",
+     "zutaten": "130 g Spätzle p. P. · 60 g Bergkäse gerieben · 100 g Hüttenkäse · Röstzwiebeln · 200 g Rosenkohl",
+     "p": 30,
+     "kh": 95,
+     "tags": [
+      "kreuzbluetler",
+      "fermentiertes"
+     ],
+     "rezept": "25 Min: Rosenkohl halbieren, in der Pfanne mit Öl 10–12 Min rösten, salzen. Spätzle kochen, heiß mit Bergkäse mischen bis er zieht, Hüttenkäse unterheben, Röstzwiebeln drüber. DOPPELTE MENGE — morgen Mittag.",
+     "low_residue": false,
+     "fuerDich": "Doppelte Portion Spätzle — der Tag hatte Kraft UND 1:20 Rad."
+    }
+   ],
+   "einheit": "Muckibude 3 + Cycling 1:20"
+  },
+  "2026-08-27": {
+   "tagestyp": "intervall",
+   "typLabel": "Intervall-/Tempo-Tag",
+   "rev": 1,
+   "hinweis": "Morgens laufen. Ab heute Ballaststoffe langsam runterfahren — Sonntag ist Generalprobe, und die Vorbereitung beginnt drei Tage vorher, nicht am Samstagabend.",
+   "ziel": {
+    "p": 140,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-27-m1",
+     "slot": "pre_run",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🌅 vor dem Lauf",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
+     "p": 6,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-27-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🍳 binnen 40 min",
+     "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
+     "zutaten": "2 Eier · 1 Scheibe Brot · 150 g Skyr · ½ Banane",
+     "p": 32,
+     "kh": 60,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "5 Min. Das Post-Fenster ist 40 Minuten — nicht 'irgendwann beim Mittagessen'.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-27-m3",
+     "slot": "vormittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🧀 Zwischenmahlzeit",
+     "name": "150 g Hüttenkäse mit Brot und Tomate",
+     "zutaten": "150 g Hüttenkäse · Brot · Tomate · Pfeffer",
+     "p": 20,
+     "kh": 30,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-27-m4",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Reste: Käsespätzle mit Rosenkohl",
+     "zutaten": "Zweite Portion von gestern",
+     "p": 30,
+     "kh": 95,
+     "tags": [
+      "kreuzbluetler"
+     ],
+     "rezept": "Aufwärmen. Kein Herd-Aufwand, 95 g KH — der beste Reste-Mittag der Woche.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-27-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥨 Snack",
+     "name": "Reiswaffeln mit Erdnussmus + 1 Banane",
+     "zutaten": "Reiswaffeln · Erdnussmus · 1 Banane",
+     "p": 10,
+     "kh": 45,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-27-m6",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Ofenlachs in Sahne-Dill + Brokkoli + Süßkartoffel-Wedges",
+     "zutaten": "150 g Lachs p. P. · Sahne, Dill, Senf, Zitrone · 200 g Brokkoli · Süßkartoffeln",
+     "p": 38,
+     "kh": 90,
+     "tags": [
+      "fetter_fisch",
+      "kreuzbluetler"
+     ],
+     "rezept": "25 Min (Ofen passiv): Lachs und Süßkartoffelspalten aufs Blech, 200 °C ~20 Min. Brokkoli in der Pfanne. Sahne-Dill-Sauce einkochen.",
+     "low_residue": false,
+     "fuerDich": "Zweiter Fisch der Woche — der zählt. Doppelte Portion Süßkartoffeln."
+    }
+   ],
+   "einheit": "Tempolauf 0:55 / 79 TSS"
+  },
+  "2026-08-28": {
+   "tagestyp": "kraft",
+   "typLabel": "Kraft-Tag",
+   "rev": 1,
+   "hinweis": "Zwei Tage vor der Generalprobe: ab heute keine großen Rohkost-/Kohlportionen mehr, Vollkorn nur noch morgens. Kein neues Rezept mehr bis Sonntag — was jetzt kommt, ist Erprobtes.",
+   "ziel": {
+    "p": 138,
+    "kh": 365
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-28-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🌅 Frühstück",
+     "name": "Overnight Oats",
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+     "p": 30,
+     "kh": 55,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-28-m2",
+     "slot": "post_belastung",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "🥤 binnen 40 min nach Kraft",
+     "name": "Whey-Shake: 25 g Whey in 300 ml Milch + 1 Banane",
+     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "p": 22,
+     "kh": 30,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-28-m3",
+     "slot": "vormittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥨 Snack",
+     "name": "Brot mit Marmelade + 1 Banane",
+     "zutaten": "Brot · Marmelade · 1 Banane",
+     "p": 7,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-28-m4",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "☀️ Mittag",
+     "name": "Edamame-Bowl mit Reis",
+     "zutaten": "200 g Edamame (TK, vorgegart) · Reis · Gurke · Paprika · Karotte · ½ Avocado · Sesam · Sojasauce",
+     "p": 26,
+     "kh": 65,
+     "tags": [
+      "huelsenfruechte"
+     ],
+     "rezept": "5–10 Min, kein Herd wenn du Reis vom Vortag hast. Letzte Hülsenfrucht-Portion vor der Generalprobe — ab morgen ist Schluss damit.",
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-28-m5",
+     "slot": "nachmittag",
+     "snack": true,
+     "familie": false,
+     "zeitLabel": "🥨 Snack",
+     "name": "Vollkornbrot mit Avocado und Tomate",
+     "zutaten": "Vollkornbrot · ½ Avocado · Tomate · Salz, Pfeffer",
+     "p": 10,
+     "kh": 50,
+     "tags": [],
+     "rezept": null,
+     "low_residue": false
+    },
+    {
+     "id": "2026-08-28-m6",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "🌙 Abend — Familie",
+     "name": "Hähnchen-Nudeln in Sahne-Parmesan mit Spinat",
+     "zutaten": "150 g Hähnchenbrust p. P. · 200 g Blattspinat · 100 ml Sahne · 40 g Parmesan · Muskat, Zitronenabrieb · Nudeln",
+     "p": 45,
+     "kh": 75,
+     "tags": [],
+     "rezept": "20 Min: Hähnchen in Streifen anbraten, Spinat zusammenfallen lassen, Sahne + Parmesan einkochen, Muskat, Zitronenabrieb. Nudeln untermischen. Parmesan bringt ~350 mg Kalzium.",
+     "low_residue": false,
+     "fuerDich": "Doppelte Portion Nudeln. Milde Sauce, wenig Ballaststoffe — passt schon Richtung Sonntag."
+    }
+   ],
+   "einheit": "Muckibude schnell"
+  },
+  "2026-08-29": {
+   "tagestyp": "vortag_longrun",
+   "typLabel": "Vortag Long Run — low-residue",
+   "rev": 1,
+   "hinweis": "⚠️ VORTAG DER GENERALPROBE (2:50 h). Abendessen bis 18:30 — der wichtigste Punkt des Tages. Heute ist Weißmehl richtig, Vollkorn falsch. Kein Kohl, keine Hülsenfrüchte, kein Rohkostsalat, keine Zwiebel/Knoblauch. Abends 15 g L-Glutamin abmessen, Dispenser füllen, Gürtel anlegen und 2 min durchs Wohnzimmer laufen. Wenn 380 g KH nicht reichen: Reisdrink über den Nachmittag.",
+   "ziel": {
+    "p": 137,
+    "kh": 380
+   },
+   "mahlzeiten": [
+    {
+     "id": "2026-08-29-m1",
+     "slot": "fruehstueck",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "08:00",
+     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
+     "p": 20,
+     "kh": 65,
+     "tags": [],
+     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade.",
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-29-m2",
+     "slot": "vormittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "10:30",
+     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
+     "zutaten": "125 g Mozzarella · Tomate · 1 Semmel · Olivenöl",
+     "p": 22,
+     "kh": 30,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-29-m3",
+     "slot": "mittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "12:30",
+     "name": "Hähnchen in Kokos-Sahne-Sauce + 80 g weißer Reis",
+     "zutaten": "150 g Hähnchen · 150 ml Kokosmilch + 50 ml Sahne · mildes Curry, Ingwer, Limette · geschälte Karotte · 80 g weißer Reis",
+     "p": 38,
+     "kh": 65,
+     "tags": [],
+     "rezept": "20 Min: Hähnchen anbraten, Kokosmilch + Sahne, mildes Curry, Ingwer, Limette, Karotte weich mitgaren. OHNE Zwiebel und Knoblauch (FODMAP) — Ingwer und Limette tragen den Geschmack. Das Carb-Load-Mittag: doppelt kochen.",
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-29-m4",
+     "slot": "nachmittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "15:00",
+     "name": "250 g Milchreis mit Zimt",
+     "zutaten": "250 g Milchreis (Kühlregal) · Zimt",
+     "p": 9,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-29-m5",
+     "slot": "nachmittag",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "16:30",
+     "name": "1 Semmel mit Marmelade + 1 Banane",
+     "zutaten": "1 Semmel · Marmelade · 1 Banane",
+     "p": 5,
+     "kh": 55,
+     "tags": [],
+     "rezept": null,
+     "low_residue": true
+    },
+    {
+     "id": "2026-08-29-m6",
+     "slot": "abend",
+     "snack": false,
+     "familie": true,
+     "zeitLabel": "18:00 ⚠️ — Familie",
+     "name": "Tagliatelle in Sahne-Parmesan-Sauce",
+     "zutaten": "Tagliatelle · 100 ml Sahne · 50 g Parmesan · Muskat, Pfeffer · optional Schinkenwürfel",
+     "p": 25,
+     "kh": 80,
+     "tags": [],
+     "rezept": "15 Min: Sahne mit Parmesan einkochen, Muskat, Pfeffer. Kein Salat dazu. BIS 18:30 GEGESSEN — frühes Abendessen heißt morgens leerer Darm.",
+     "low_residue": true,
+     "fuerDich": "Doppelte Portion Nudeln, und heute wirklich um 18:00 an den Tisch. Kein Salat, kein Rohkost — morgen früh dankst du es dir."
+    },
+    {
+     "id": "2026-08-29-m7",
+     "slot": "spaet",
+     "snack": false,
+     "familie": false,
+     "zeitLabel": "19:15",
+     "name": "150 g Hüttenkäse mit Weißbrot",
+     "zutaten": "150 g Hüttenkäse · Weißbrot",
+     "p": 18,
+     "kh": 30,
+     "tags": [
+      "fermentiertes"
+     ],
+     "rezept": null,
+     "low_residue": true
+    }
+   ],
+   "einheit": "Mobi 17 min + Cycling 1:20"
   }
  },
  "essenAlternativen": {
@@ -1217,109 +1560,114 @@
     "name": "Vollkornbrot mit Mandelmus + Banane",
     "p": 10,
     "kh": 55,
-    "low_residue": false
+    "low_residue": false,
+    "hinweis": "Magnesium (Untergrenze!), gesunde Fette"
    },
    {
     "id": "snack-porridge",
     "name": "Porridge-Snack (50 g Hafer, Milch, Beeren)",
     "p": 12,
     "kh": 45,
-    "low_residue": false
+    "low_residue": false,
+    "hinweis": "Magnesium + Kalzium, warm"
    },
    {
     "id": "snack-skyr",
     "name": "Skyr mit Haferflocken und Beeren",
     "p": 25,
     "kh": 50,
-    "low_residue": false
+    "low_residue": false,
+    "hinweis": "Kalzium + Protein, wenn der Tag proteinarm läuft"
    },
    {
     "id": "snack-avocado",
     "name": "Vollkornbrot mit Avocado und Tomate",
     "p": 10,
     "kh": 50,
-    "low_residue": false
+    "low_residue": false,
+    "hinweis": "Coachin-Rezept, gesunde Fette"
    },
    {
     "id": "snack-quinoa-skyr",
     "name": "Quinoa-Bowl mit Skyr und Beeren",
     "p": 30,
     "kh": 50,
-    "low_residue": false
+    "low_residue": false,
+    "hinweis": "Coachin-Rezept — Apfel gegen Beeren getauscht, ohne Honig"
    },
    {
     "id": "snack-reiswaffeln",
     "name": "Reiswaffeln mit Erdnussmus + Banane",
     "p": 10,
     "kh": 45,
-    "low_residue": true
+    "low_residue": true,
+    "hinweis": "schnell, magenfreundlich"
    },
    {
     "id": "snack-marmelade",
     "name": "Brot mit Marmelade + Banane",
     "p": 7,
     "kh": 55,
-    "low_residue": true
+    "low_residue": true,
+    "hinweis": "ballaststoffarm — richtig am Vortag Long Run und vor Intensität"
    }
   ],
   "slots": {
-   "fruehstueck": [
+   "mittag": [
     {
-     "id": "ruhetag-m1",
-     "name": "Skyr-Beeren-Schüssel",
+     "id": "alt-quinoa-feta",
+     "name": "Mediterrane Quinoa-Bowl mit Feta",
      "p": 30,
-     "kh": 50,
+     "kh": 75,
      "low_residue": false,
-     "zutaten": "200 g Skyr · 40 g Haferflocken · 150 g Beeren · 30 g Walnüsse · Zimt",
-     "rezept": "5 Min: Skyr mit Haferflocken verrühren, Beeren und Walnüsse obendrauf, Zimt drüber."
+     "zutaten": "80 g Quinoa · 150 g Kichererbsen · 150 g Brokkoli · Cherrytomaten · Gurke · Rucola · 50 g Feta · Olivenöl-Zitronen-Dressing · Kurkuma",
+     "rezept": "20 Min: Quinoa kochen (doppelte Menge = Reste-Basis!), Brokkoli bissfest, alles mit Dressing vermengen. Coachin-Rezept, Feta statt Tofu."
     },
     {
-     "id": "kraft-m1",
-     "name": "Overnight Oats",
+     "id": "alt-vk-pasta-linsen",
+     "name": "Vollkornpasta mit Spinat und Linsen",
+     "p": 32,
+     "kh": 85,
+     "low_residue": false,
+     "zutaten": "80 g Vollkornnudeln · 60 g rote Linsen · 200 g Blattspinat · Cherrytomaten · Knoblauch · Olivenöl · Parmesan",
+     "rezept": "20 Min: Nudeln und Linsen garen, Spinat mit Knoblauch und Tomaten anbraten, alles vermengen, Parmesan drüber. Coachin-Rezept. Ballaststoffreich — NICHT am Vortag von Long Run/Intensität."
+    },
+    {
+     "id": "alt-buddha-bowl",
+     "name": "Bunte Buddha Bowl",
+     "p": 28,
+     "kh": 75,
+     "low_residue": false,
+     "zutaten": "80 g Naturreis · 150 g Edamame · 100 g Rotkohl · Gurke · Karotte · ½ Avocado · Babyspinat · Sesam · Tahini-Zitronen-Dressing",
+     "rezept": "20 Min: Reis kochen (doppelt!), Gemüse schneiden, Tahini mit Zitrone verrühren. Coachin-Rezept — Rotkohl zählt als Kreuzblütler, Tahini bringt Kalzium."
+    },
+    {
+     "id": "alt-linsen-feta",
+     "name": "Linsen-Feta-Salat mit Brot",
      "p": 30,
      "kh": 55,
      "low_residue": false,
-     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
-     "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf."
+     "zutaten": "200 g vorgekochte Linsen (Dose/Sous-vide) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
+     "rezept": "5 Min, kein Herd: alles vermengen. Coachin-Rezept + Brot für die Carbs."
     },
     {
-     "id": "vortag_longrun-m1",
-     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
-     "p": 20,
-     "kh": 65,
-     "low_residue": true,
-     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
-     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade."
+     "id": "alt-hk-bowl",
+     "name": "Mediterrane Hüttenkäse-Bowl",
+     "p": 35,
+     "kh": 45,
+     "low_residue": false,
+     "zutaten": "250 g Hüttenkäse · 2 Scheiben Vollkornbrot · Cherrytomaten · Gurke · Rucola · Olivenöl · Kürbiskerne",
+     "rezept": "5 Min, kein Herd. Coachin-Rezept — vor Intervalltagen Weißbrot statt Vollkorn."
     },
     {
-     "id": "tag_nach_longrun-m1",
-     "name": "Protein-Pancakes",
-     "p": 33,
+     "id": "alt-sandwich",
+     "name": "Protein-Sandwich",
+     "p": 25,
      "kh": 60,
      "low_residue": false,
-     "zutaten": "50 g Haferflocken gemahlen · 2 Eier · 100 g Quark · Banane · Beeren obendrauf",
-     "rezept": "15 Min: Haferflocken im Mixer mahlen, mit Eiern, Quark und Banane zum Teig mixen. Kleine Pancakes in beschichteter Pfanne 2-3 Min pro Seite. Skyr und Beeren obendrauf."
+     "zutaten": "3 Scheiben Vollkornbrot · 150 g Hüttenkäse · ½ Avocado · Tomate · Kresse · Pfeffer",
+     "rezept": "5 Min, kein Herd. Coachin-Rezept."
     },
-    {
-     "id": "alt-hafer-milchfrei",
-     "name": "Milchfreie Protein-Haferflocken",
-     "p": 37,
-     "kh": 65,
-     "low_residue": false,
-     "zutaten": "80 g Haferflocken · 300 ml Wasser oder Hafer-/Mandeldrink · 30 g Proteinpulver · 150 g Beeren · 20 g Kürbiskerne · 1 EL Leinsamen · Zimt",
-     "rezept": "7 Min. Proteinpulver erst einrühren, wenn der Brei abgekühlt ist (klumpt sonst). ~200 mg Kalzium weniger als Skyr-Variante — mittags/abends nachlegen (Bergkäse, Parmesan, Sesam, Grünkohl)."
-    },
-    {
-     "id": "alt-power-fruehstueck",
-     "name": "Mediterranes Power-Frühstück",
-     "p": 24,
-     "kh": 40,
-     "low_residue": false,
-     "zutaten": "2 Eier Rührei · 2 Scheiben Vollkornbrot · Tomate · Gurke · Rucola · Olivenöl · Kürbiskerne",
-     "rezept": "10 Min. Coachin-Rezept — herzhafte Frühstücks-Alternative. Carb-leichter als die Oats-Frühstücke: Banane dazu, wenn ein Trainingstag ist."
-    }
-   ],
-   "mittag": [
     {
      "id": "ruhetag-m3",
      "name": "Putenhack-Bowl asiatisch + 70 g Reis",
@@ -1382,63 +1730,27 @@
      "low_residue": false,
      "zutaten": "150 g Hähnchen (gern Reste) · 500 ml Hühnerbrühe · 80 g Suppennudeln · 1 Karotte · 1 Stück Lauch · 1 Stange Sellerie · Petersilie",
      "rezept": "20 Min: Gemüse in Scheiben in der Brühe 10 Min köcheln, Nudeln und Hähnchen(-reste) die letzten 8 Min mitgaren, Petersilie. Doppelte Menge kochen = Abendessen oder Folgetag gesichert."
-    },
-    {
-     "id": "alt-quinoa-feta",
-     "name": "Mediterrane Quinoa-Bowl mit Feta",
-     "p": 30,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "80 g Quinoa · 150 g Kichererbsen · 150 g Brokkoli · Cherrytomaten · Gurke · Rucola · 50 g Feta · Olivenöl-Zitronen-Dressing · Kurkuma",
-     "rezept": "20 Min: Quinoa kochen (doppelte Menge = Reste-Basis!), Brokkoli bissfest, alles mit Dressing vermengen. Coachin-Rezept, Feta statt Tofu."
-    },
-    {
-     "id": "alt-vk-pasta-linsen",
-     "name": "Vollkornpasta mit Spinat und Linsen",
-     "p": 32,
-     "kh": 85,
-     "low_residue": false,
-     "zutaten": "80 g Vollkornnudeln · 60 g rote Linsen · 200 g Blattspinat · Cherrytomaten · Knoblauch · Olivenöl · Parmesan",
-     "rezept": "20 Min: Nudeln und Linsen garen, Spinat mit Knoblauch und Tomaten anbraten, alles vermengen, Parmesan drüber. Coachin-Rezept. Ballaststoffreich — NICHT am Vortag von Long Run/Intensität."
-    },
-    {
-     "id": "alt-buddha-bowl",
-     "name": "Bunte Buddha Bowl",
-     "p": 28,
-     "kh": 75,
-     "low_residue": false,
-     "zutaten": "80 g Naturreis · 150 g Edamame · 100 g Rotkohl · Gurke · Karotte · ½ Avocado · Babyspinat · Sesam · Tahini-Zitronen-Dressing",
-     "rezept": "20 Min: Reis kochen (doppelt!), Gemüse schneiden, Tahini mit Zitrone verrühren. Coachin-Rezept — Rotkohl zählt als Kreuzblütler, Tahini bringt Kalzium."
-    },
-    {
-     "id": "alt-linsen-feta",
-     "name": "Linsen-Feta-Salat mit Brot",
-     "p": 30,
-     "kh": 55,
-     "low_residue": false,
-     "zutaten": "200 g vorgekochte Linsen (Dose/Sous-vide) · 80 g Feta · Cherrytomaten · Gurke · Petersilie · Olivenöl-Zitronen-Dressing · 1 Scheibe Brot",
-     "rezept": "5 Min, kein Herd: alles vermengen. Coachin-Rezept + Brot für die Carbs."
-    },
-    {
-     "id": "alt-hk-bowl",
-     "name": "Mediterrane Hüttenkäse-Bowl",
-     "p": 35,
-     "kh": 45,
-     "low_residue": false,
-     "zutaten": "250 g Hüttenkäse · 2 Scheiben Vollkornbrot · Cherrytomaten · Gurke · Rucola · Olivenöl · Kürbiskerne",
-     "rezept": "5 Min, kein Herd. Coachin-Rezept — vor Intervalltagen Weißbrot statt Vollkorn."
-    },
-    {
-     "id": "alt-sandwich",
-     "name": "Protein-Sandwich",
-     "p": 25,
-     "kh": 60,
-     "low_residue": false,
-     "zutaten": "3 Scheiben Vollkornbrot · 150 g Hüttenkäse · ½ Avocado · Tomate · Kresse · Pfeffer",
-     "rezept": "5 Min, kein Herd. Coachin-Rezept."
     }
    ],
    "abend": [
+    {
+     "id": "alt-ofengemuese",
+     "name": "Ofengemüse mit Kräuterquark",
+     "p": 33,
+     "kh": 50,
+     "low_residue": false,
+     "zutaten": "300 g Kartoffeln · 200 g Brokkoli · 1 Paprika · 1 Zucchini · 250 g Quark oder Skyr · Kräuter · Olivenöl · Kürbiskerne",
+     "rezept": "30 Min (davon 25 Ofen = passiv): Gemüse mit Olivenöl rösten, Quark mit Kräutern verrühren. Coachin-Rezept — Blech doppelt belegen, Reste kalt oder aufgewärmt am Folgetag."
+    },
+    {
+     "id": "alt-edamame-bowl",
+     "name": "Edamame-Bowl mit Reis",
+     "p": 26,
+     "kh": 65,
+     "low_residue": false,
+     "zutaten": "200 g Edamame (vorgegart/TK) · 70 g Reis (oder Reste-Reis vom Vortag) · Gurke · Paprika · Karotte · Babyspinat · ½ Avocado · Sesam · Sojasauce",
+     "rezept": "5-10 Min: mit Reste-Reis kein Herd nötig. Coachin-Rezept + Reis für die Carbs — leichtes Abendessen."
+    },
     {
      "id": "ruhetag-m5",
      "name": "Lachs in Sahne-Dill-Sauce + 350 g Kartoffeln + Feldsalat",
@@ -1501,27 +1813,18 @@
      "low_residue": false,
      "zutaten": "150 g Lachs · Sahne-Dill-Sauce · 200 g Grünkohl · 400 g Süßkartoffel · Tahin über den Kohl",
      "rezept": "25 Min (Ofen passiv): Lachs und Süßkartoffelspalten aufs Blech, 200 °C ~20 Min. Grünkohl mit Öl in der Pfanne zusammenfallen lassen, salzen, Tahin drüber. Sahne-Dill-Sauce wie beim Lachs-Klassiker (Sahne + Dill + Senf + Zitrone einkochen)."
-    },
-    {
-     "id": "alt-ofengemuese",
-     "name": "Ofengemüse mit Kräuterquark",
-     "p": 33,
-     "kh": 50,
-     "low_residue": false,
-     "zutaten": "300 g Kartoffeln · 200 g Brokkoli · 1 Paprika · 1 Zucchini · 250 g Quark oder Skyr · Kräuter · Olivenöl · Kürbiskerne",
-     "rezept": "30 Min (davon 25 Ofen = passiv): Gemüse mit Olivenöl rösten, Quark mit Kräutern verrühren. Coachin-Rezept — Blech doppelt belegen, Reste kalt oder aufgewärmt am Folgetag."
-    },
-    {
-     "id": "alt-edamame-bowl",
-     "name": "Edamame-Bowl mit Reis",
-     "p": 26,
-     "kh": 65,
-     "low_residue": false,
-     "zutaten": "200 g Edamame (vorgegart/TK) · 70 g Reis (oder Reste-Reis vom Vortag) · Gurke · Paprika · Karotte · Babyspinat · ½ Avocado · Sesam · Sojasauce",
-     "rezept": "5-10 Min: mit Reste-Reis kein Herd nötig. Coachin-Rezept + Reis für die Carbs — leichtes Abendessen."
     }
    ],
    "post_belastung": [
+    {
+     "id": "alt-smoothie-bowl",
+     "name": "Recovery Smoothie Bowl",
+     "p": 35,
+     "kh": 40,
+     "low_residue": false,
+     "zutaten": "200 g Skyr · 150 g TK-Beeren · ½ Banane · 1 Handvoll Spinat · 25 g Proteinpulver · 1 EL Leinsamen · Kürbiskerne",
+     "rezept": "5 Min mixen. Coachin-Rezept — Alternative fürs Post-Belastungs-Fenster."
+    },
     {
      "id": "intervall-m2",
      "name": "2 Eier Rührei + Brot + 150 g Skyr mit ½ Banane",
@@ -1546,7 +1849,8 @@
      "p": 22,
      "kh": 30,
      "low_residue": true,
-     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane"
+     "zutaten": "25 g Whey · 300 ml Milch · 1 Banane",
+     "rezept": null
     },
     {
      "id": "longrun-m3",
@@ -1556,141 +1860,352 @@
      "low_residue": false,
      "zutaten": "200 g Skyr · Banane · 1 Semmel · Käse",
      "rezept": "3 Min: Skyr mit Banane in Scheiben, Semmel mit Käse. Direkt nach dem Duschen essen — das Fenster zählt."
-    },
+    }
+   ],
+   "fruehstueck": [
     {
-     "id": "alt-smoothie-bowl",
-     "name": "Recovery Smoothie Bowl",
-     "p": 35,
+     "id": "alt-power-fruehstueck",
+     "name": "Mediterranes Power-Frühstück",
+     "p": 24,
      "kh": 40,
      "low_residue": false,
-     "zutaten": "200 g Skyr · 150 g TK-Beeren · ½ Banane · 1 Handvoll Spinat · 25 g Proteinpulver · 1 EL Leinsamen · Kürbiskerne",
-     "rezept": "5 Min mixen. Coachin-Rezept — Alternative fürs Post-Belastungs-Fenster."
+     "zutaten": "2 Eier Rührei · 2 Scheiben Vollkornbrot · Tomate · Gurke · Rucola · Olivenöl · Kürbiskerne",
+     "rezept": "10 Min. Coachin-Rezept — herzhafte Frühstücks-Alternative. Carb-leichter als die Oats-Frühstücke: Banane dazu, wenn ein Trainingstag ist."
+    },
+    {
+     "id": "ruhetag-m1",
+     "name": "Skyr-Beeren-Schüssel",
+     "p": 30,
+     "kh": 50,
+     "low_residue": false,
+     "zutaten": "200 g Skyr · 40 g Haferflocken · 150 g Beeren · 30 g Walnüsse · Zimt",
+     "rezept": "5 Min: Skyr mit Haferflocken verrühren, Beeren und Walnüsse obendrauf, Zimt drüber."
+    },
+    {
+     "id": "kraft-m1",
+     "name": "Overnight Oats",
+     "p": 30,
+     "kh": 55,
+     "low_residue": false,
+     "zutaten": "50 g Haferflocken · 200 g Skyr · 200 ml Milch · Chiasamen · Beeren · Walnüsse",
+     "rezept": "5 Min am Vorabend: alles in ein Glas rühren, über Nacht in den Kühlschrank. Morgens Beeren und Walnüsse drauf."
+    },
+    {
+     "id": "vortag_longrun-m1",
+     "name": "2 Eier Rührei + 2 Semmeln mit Butter und Marmelade + Kaffee",
+     "p": 20,
+     "kh": 65,
+     "low_residue": true,
+     "zutaten": "2 Eier · 2 Semmeln · Butter · Marmelade · Kaffee",
+     "rezept": "10 Min: 2 Eier Rührei in Butter, dazu die Semmeln mit Butter und Marmelade."
+    },
+    {
+     "id": "tag_nach_longrun-m1",
+     "name": "Protein-Pancakes",
+     "p": 33,
+     "kh": 60,
+     "low_residue": false,
+     "zutaten": "50 g Haferflocken gemahlen · 2 Eier · 100 g Quark · Banane · Beeren obendrauf",
+     "rezept": "15 Min: Haferflocken im Mixer mahlen, mit Eiern, Quark und Banane zum Teig mixen. Kleine Pancakes in beschichteter Pfanne 2-3 Min pro Seite. Skyr und Beeren obendrauf."
+    },
+    {
+     "id": "alt-hafer-milchfrei",
+     "name": "Milchfreie Protein-Haferflocken",
+     "p": 37,
+     "kh": 65,
+     "low_residue": false,
+     "zutaten": "80 g Haferflocken · 300 ml Wasser oder Hafer-/Mandeldrink · 30 g Proteinpulver · 150 g Beeren · 20 g Kürbiskerne · 1 EL Leinsamen · Zimt",
+     "rezept": "7 Min. Proteinpulver erst einrühren, wenn der Brei abgekühlt ist (klumpt sonst). ~200 mg Kalzium weniger als Skyr-Variante — mittags/abends nachlegen (Bergkäse, Parmesan, Sesam, Grünkohl)."
+    },
+    {
+     "id": "alt-cornflakes-skyr",
+     "name": "Cornflakes-Skyr-Schüssel",
+     "p": 25,
+     "kh": 70,
+     "low_residue": false,
+     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · 1 Handvoll Beeren · Schuss Milch oder Hafermilch · Zimt",
+     "rezept": "2 Min, kein Herd: Skyr in die Schüssel, Cornflakes drüber, Banane in Scheiben, Beeren, ein Schuss Milch damit es nicht zu fest wird. AUFGENOMMEN 22.08.2026, weil Cornflakes mit Hafermilch in den Teller-Diktaten viermal in sieben Tagen auftauchten — dieselbe Schüssel mit Skyr statt Hafermilch bringt +18 g Protein ohne einen einzigen Gramm Kohlenhydrat weniger. Genau der Hebel gegen den Protein-Schnitt von 94 g."
+    }
+   ],
+   "vormittag": [
+    {
+     "id": "ruhetag-m2",
+     "name": "125 g Mozzarella mit Tomate, Basilikum, Olivenöl + 1 Scheibe Brot",
+     "p": 22,
+     "kh": 20,
+     "low_residue": false,
+     "zutaten": "125 g Mozzarella · Tomate · Basilikum · Olivenöl · 1 Scheibe Brot",
+     "rezept": null
+    },
+    {
+     "id": "intervall-m3",
+     "name": "150 g Hüttenkäse mit Brot und Tomate",
+     "p": 20,
+     "kh": 30,
+     "low_residue": false,
+     "zutaten": "150 g Hüttenkäse · Brot · Tomate · Pfeffer",
+     "rezept": null
+    },
+    {
+     "id": "vo2max-m3",
+     "name": "100 g Mozzarella mit Tomate + 1 Scheibe Brot",
+     "p": 18,
+     "kh": 25,
+     "low_residue": false,
+     "zutaten": "100 g Mozzarella · Tomate · 1 Scheibe Brot",
+     "rezept": null
+    },
+    {
+     "id": "kraft-m3",
+     "name": "Brot mit Marmelade + 1 Banane",
+     "p": 6,
+     "kh": 50,
+     "low_residue": true,
+     "zutaten": "Brot · Marmelade · 1 Banane",
+     "rezept": null
+    },
+    {
+     "id": "vortag_longrun-m2",
+     "name": "125 g Mozzarella mit Tomate + 1 Semmel + Olivenöl",
+     "p": 22,
+     "kh": 30,
+     "low_residue": true,
+     "zutaten": "125 g Mozzarella · Tomate · 1 Semmel · Olivenöl",
+     "rezept": null
+    },
+    {
+     "id": "longrun-m4",
+     "name": "2 Eier Rührei + 1 Semmel",
+     "p": 20,
+     "kh": 45,
+     "low_residue": false,
+     "zutaten": "2 Eier · 1 Semmel",
+     "rezept": null
+    },
+    {
+     "id": "tag_nach_longrun-m2",
+     "name": "125 g Mozzarella mit Tomate + 1 Scheibe Brot",
+     "p": 24,
+     "kh": 25,
+     "low_residue": false,
+     "zutaten": "125 g Mozzarella · Tomate · 1 Scheibe Brot",
+     "rezept": null
+    }
+   ],
+   "nachmittag": [
+    {
+     "id": "ruhetag-m4",
+     "name": "Vollkornbrot mit Mandelmus + 1 Banane",
+     "p": 10,
+     "kh": 55,
+     "low_residue": false,
+     "zutaten": "Vollkornbrot · Mandelmus · 1 Banane",
+     "rezept": null
+    },
+    {
+     "id": "intervall-m5",
+     "name": "Porridge-Snack: 50 g Haferflocken in Milch + Beeren + Banane",
+     "p": 12,
+     "kh": 55,
+     "low_residue": false,
+     "zutaten": "50 g Haferflocken · Milch · Beeren · Banane",
+     "rezept": "5 Min: Haferflocken in ~200 ml Milch 3 Min köcheln, Beeren und ½ Banane rein, Zimt."
+    },
+    {
+     "id": "vo2max-m5",
+     "name": "250 g Milchreis mit Zimt",
+     "p": 9,
+     "kh": 55,
+     "low_residue": true,
+     "zutaten": "250 g Milchreis · Zimt",
+     "rezept": "0 Min: fertigen Milchreis (Kühlregal, 250-g-Becher) kalt oder kurz erwärmt, Zimt drüber. Selbst kochen lohnt nur in großer Menge."
+    },
+    {
+     "id": "vortag_longrun-m5",
+     "name": "1 Semmel mit Marmelade + 1 Banane",
+     "p": 5,
+     "kh": 55,
+     "low_residue": true,
+     "zutaten": "1 Semmel · Marmelade · 1 Banane",
+     "rezept": null
+    },
+    {
+     "id": "longrun-m6",
+     "name": "Mozzarella oder Hüttenkäse mit Brot",
+     "p": 20,
+     "kh": 35,
+     "low_residue": false,
+     "zutaten": "Mozzarella oder Hüttenkäse · Brot",
+     "rezept": null
+    }
+   ],
+   "pre_run": [
+    {
+     "id": "intervall-m1",
+     "name": "2 Scheiben Toast mit Marmelade + 1 Banane",
+     "p": 6,
+     "kh": 55,
+     "low_residue": true,
+     "zutaten": "2 Scheiben Toast · Marmelade · 1 Banane",
+     "rezept": null
+    },
+    {
+     "id": "longrun-m1",
+     "name": "1 Semmel mit Marmelade + Latte macchiato + 15 g L-Glutamin in ~400 ml Wasser",
+     "p": 7,
+     "kh": 55,
+     "low_residue": true,
+     "zutaten": "1 Semmel · Marmelade · Latte macchiato · 15 g L-Glutamin (ESN, 3 Löffel) in ~400 ml Wasser",
+     "rezept": null
+    }
+   ],
+   "spaet": [
+    {
+     "id": "vortag_longrun-m7",
+     "name": "150 g Hüttenkäse mit Weißbrot",
+     "p": 18,
+     "kh": 30,
+     "low_residue": true,
+     "zutaten": "150 g Hüttenkäse · Weißbrot",
+     "rezept": null
     }
    ]
   }
  },
  "einkauf": {
-  "2026-08-11": {
-   "erstellt": "2026-08-10",
+  "2026-08-23": {
+   "erstellt": "2026-08-22",
    "items": [
     {
      "id": "lachs",
      "name": "Lachsfilet",
-     "menge": "4 Stück (2× Abendessen für die Familie)",
+     "menge": "ca. 1,2 kg (2× Familienessen: So + Do)",
      "kategorie": "Fleisch & Fisch"
     },
     {
      "id": "haehnchenbrust",
      "name": "Hähnchenbrust",
-     "menge": "ca. 800 g (Do Curry + Sa Kokos-Sahne)",
-     "kategorie": "Fleisch & Fisch"
-    },
-    {
-     "id": "putenbrust",
-     "name": "Putenbrust-Aufschnitt",
-     "menge": "1 Packung",
+     "menge": "ca. 1,5 kg (Suppe Mo, Nudeln Fr, Curry Sa)",
      "kategorie": "Fleisch & Fisch"
     },
     {
      "id": "skyr",
      "name": "Skyr",
-     "menge": "ca. 1,2 kg (Di, Do 2×, Mi Overnight Oats)",
+     "menge": "ca. 1,6 kg (8× 200 g)",
      "kategorie": "Milchprodukte"
     },
     {
      "id": "huettenkaese",
      "name": "Hüttenkäse",
-     "menge": "ca. 600 g (Mi Bowl, Do Sandwich, Sa spät)",
+     "menge": "ca. 1,1 kg (Mi 250 g, Di/Do je 150 g, Sa 150 g, Mo 150 g, Mi abends 100 g)",
      "kategorie": "Milchprodukte"
     },
     {
      "id": "mozzarella",
      "name": "Mozzarella",
-     "menge": "1× 125 g",
+     "menge": "4 Kugeln (So, Mo, Sa + Reserve)",
      "kategorie": "Milchprodukte"
     },
     {
-     "id": "feta",
-     "name": "Feta",
-     "menge": "1 Packung",
-     "kategorie": "Milchprodukte"
-    },
-    {
-     "id": "sahne",
-     "name": "Sahne",
-     "menge": "3 Becher",
+     "id": "quark",
+     "name": "Magerquark",
+     "menge": "500 g (Pancakes Mo)",
      "kategorie": "Milchprodukte"
     },
     {
      "id": "milch",
      "name": "Milch",
-     "menge": "2 l (Whey-Shakes, Porridge, Milchreis)",
+     "menge": "3 l (Shakes, Porridge, Overnight Oats)",
+     "kategorie": "Milchprodukte"
+    },
+    {
+     "id": "sahne",
+     "name": "Sahne",
+     "menge": "5 Becher (So, Mi?, Do, Fr, Sa 2×)",
      "kategorie": "Milchprodukte"
     },
     {
      "id": "parmesan",
      "name": "Parmesan",
-     "menge": "1 Stück",
+     "menge": "ca. 150 g (Fr + Sa)",
      "kategorie": "Milchprodukte"
     },
     {
      "id": "bergkaese",
-     "name": "Bergkäse (für Spätzle)",
-     "menge": "200 g",
+     "name": "Bergkäse gerieben",
+     "menge": "ca. 150 g (Käsespätzle Mi, doppelte Menge)",
      "kategorie": "Milchprodukte"
     },
     {
-     "id": "quark",
-     "name": "Milchreis (fertig oder Milchreis-Reis)",
-     "menge": "4 Portionen à 250 g",
+     "id": "feta",
+     "name": "Feta",
+     "menge": "100 g (Linsen-Feta-Salat So)",
      "kategorie": "Milchprodukte"
     },
     {
-     "id": "beeren",
-     "name": "Beeren (TK oder frisch)",
-     "menge": "ca. 800 g",
-     "kategorie": "Obst & Gemüse"
+     "id": "eier",
+     "name": "Eier",
+     "menge": "12 Stück (Mo, Di, Do, Sa)",
+     "kategorie": "Milchprodukte"
     },
     {
-     "id": "bananen",
-     "name": "Bananen",
-     "menge": "10 Stück",
-     "kategorie": "Obst & Gemüse"
-    },
-    {
-     "id": "rucola",
-     "name": "Rucola",
-     "menge": "2 Packungen (Di Salat, Do Sandwich)",
+     "id": "brokkoli",
+     "name": "Brokkoli",
+     "menge": "3 Köpfe (So + Do)",
      "kategorie": "Obst & Gemüse"
     },
     {
      "id": "rosenkohl",
      "name": "Rosenkohl",
-     "menge": "500 g (Mi)",
+     "menge": "400 g (Mi, doppelte Menge)",
      "kategorie": "Obst & Gemüse"
     },
     {
-     "id": "brokkoli",
-     "name": "Brokkoli",
-     "menge": "1 Kopf (Fr) — letzter Kohl vor dem Long Run",
+     "id": "rucola",
+     "name": "Rucola",
+     "menge": "3 Packungen (Mo Salat, Mi Bowl)",
      "kategorie": "Obst & Gemüse"
     },
     {
-     "id": "suesskartoffel",
-     "name": "Süßkartoffeln",
-     "menge": "ca. 800 g (Fr)",
+     "id": "bananen",
+     "name": "Bananen",
+     "menge": "14 Stück — die Woche läuft auf Bananen",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "beeren",
+     "name": "Beeren (frisch oder TK)",
+     "menge": "1 kg",
      "kategorie": "Obst & Gemüse"
     },
     {
      "id": "kartoffeln",
      "name": "Kartoffeln",
-     "menge": "ca. 1,5 kg (Di, doppelte Portion)",
+     "menge": "2 kg (So Familienessen, doppelte Portion für dich)",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "suesskartoffeln",
+     "name": "Süßkartoffeln",
+     "menge": "1,5 kg (Do)",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "spinat",
+     "name": "Blattspinat",
+     "menge": "400 g (Di Curry, Fr Nudeln)",
+     "kategorie": "Obst & Gemüse"
+    },
+    {
+     "id": "suppengemuese",
+     "name": "Suppengemüse (Karotte, Lauch, Sellerie)",
+     "menge": "1 Bund + extra Karotten (Mo Suppe doppelt, Sa Curry)",
      "kategorie": "Obst & Gemüse"
     },
     {
      "id": "tomaten",
-     "name": "Tomaten",
-     "menge": "1 kg",
+     "name": "Tomaten + Cherrytomaten",
+     "menge": "1,5 kg",
      "kategorie": "Obst & Gemüse"
     },
     {
@@ -1702,133 +2217,163 @@
     {
      "id": "avocado",
      "name": "Avocado",
-     "menge": "1 Stück (Fr Bowl)",
+     "menge": "3 Stück (Mo Sandwich, Fr Bowl + Snack)",
      "kategorie": "Obst & Gemüse"
     },
     {
-     "id": "blattsalat",
-     "name": "Blattsalat",
-     "menge": "1 Kopf (Di)",
+     "id": "paprika",
+     "name": "Paprika",
+     "menge": "3 Stück",
      "kategorie": "Obst & Gemüse"
     },
     {
      "id": "dill",
-     "name": "Dill",
-     "menge": "2 Bund",
+     "name": "Dill + Petersilie",
+     "menge": "je 1 Bund",
      "kategorie": "Obst & Gemüse"
     },
     {
      "id": "edamame",
-     "name": "Edamame (TK)",
-     "menge": "1 Packung",
+     "name": "Edamame (TK, vorgegart)",
+     "menge": "200 g (Fr)",
      "kategorie": "Obst & Gemüse"
     },
     {
-     "id": "linsen",
-     "name": "Linsen (Dose)",
-     "menge": "1 Dose (Di)",
+     "id": "linsen_dose",
+     "name": "Linsen vorgekocht (Dose)",
+     "menge": "1 Dose (So Salat)",
      "kategorie": "Vorrat"
     },
     {
-     "id": "kichererbsen",
-     "name": "Kichererbsen (Dose)",
-     "menge": "1 Dose (Do)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "eier",
-     "name": "Eier",
-     "menge": "6 Stück (Di 2, Sa 2 + Reserve)",
+     "id": "rote_linsen",
+     "name": "Rote Linsen",
+     "menge": "100 g (Di Curry)",
      "kategorie": "Vorrat"
     },
     {
      "id": "semmeln",
-     "name": "Semmeln / Weißbrot",
-     "menge": "6 Stück — für Samstag (low-residue!)",
+     "name": "Semmeln",
+     "menge": "ca. 10 (So 3, Mo 1, Di 1, Sa 4) — Samstag frisch holen",
      "kategorie": "Vorrat"
     },
     {
-     "id": "toastbrot",
+     "id": "toast",
      "name": "Toastbrot",
-     "menge": "1 Packung",
+     "menge": "1 Packung (Di + Do Pre-Run)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "weissbrot",
+     "name": "Weißbrot",
+     "menge": "1 Laib (Sa, low-residue)",
      "kategorie": "Vorrat"
     },
     {
      "id": "vollkornbrot",
      "name": "Vollkornbrot",
-     "menge": "1 Laib",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "tagliatelle",
-     "name": "Tagliatelle",
-     "menge": "1 Packung — Samstagabend",
+     "menge": "1 Laib (Mo–Fr, ab Sa nicht mehr)",
      "kategorie": "Vorrat"
     },
     {
      "id": "spaetzle",
      "name": "Spätzle",
-     "menge": "1 Packung (Mi)",
+     "menge": "800 g (Mi, doppelte Menge)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "tagliatelle",
+     "name": "Tagliatelle",
+     "menge": "500 g (Sa)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "nudeln",
+     "name": "Nudeln + Suppennudeln",
+     "menge": "je 500 g (Fr + Mo doppelt)",
      "kategorie": "Vorrat"
     },
     {
      "id": "reis",
      "name": "Reis (weiß)",
-     "menge": "—",
+     "menge": "1 kg",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "cornflakes",
+     "name": "Cornflakes",
+     "menge": "1 Packung (Mi Frühstück — neu mit Skyr!)",
      "kategorie": "Vorrat"
     },
     {
      "id": "haferflocken",
      "name": "Haferflocken",
-     "menge": "—",
+     "menge": "1 kg",
      "kategorie": "Vorrat"
     },
     {
-     "id": "whey",
-     "name": "Whey-Protein",
-     "menge": "— (Bestand prüfen, 2 Shakes)",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "mandelmus",
-     "name": "Mandelmus",
-     "menge": "—",
-     "kategorie": "Vorrat"
-    },
-    {
-     "id": "erdnussmus",
-     "name": "Erdnussmus",
-     "menge": "—",
+     "id": "milchreis",
+     "name": "Milchreis Fertigbecher",
+     "menge": "2× 250 g (Sa)",
      "kategorie": "Vorrat"
     },
     {
      "id": "reiswaffeln",
      "name": "Reiswaffeln",
-     "menge": "1 Packung",
+     "menge": "1 Packung (Do Snack)",
      "kategorie": "Vorrat"
     },
     {
      "id": "marmelade",
      "name": "Marmelade",
-     "menge": "— (kein Honig!)",
+     "menge": "1 Glas — die Woche braucht viel",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "mandelmus",
+     "name": "Mandelmus + Erdnussmus",
+     "menge": "je 1 Glas",
      "kategorie": "Vorrat"
     },
     {
      "id": "kokosmilch",
-     "name": "Kokosmilch",
-     "menge": "2 Dosen",
+     "name": "Kokosmilch light",
+     "menge": "2 Dosen (Di + Sa)",
      "kategorie": "Vorrat"
     },
     {
-     "id": "oliven",
-     "name": "Oliven",
-     "menge": "1 Glas",
+     "id": "whey",
+     "name": "Whey-Proteinpulver",
+     "menge": "Bestand prüfen — 2 Shakes diese Woche (Mi + Fr)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "huehnerbruehe",
+     "name": "Hühnerbrühe",
+     "menge": "1 l (Mo, doppelte Menge)",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "walnuesse",
+     "name": "Walnüsse, Kürbiskerne, Sesam, Chiasamen",
+     "menge": "Bestand prüfen",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "roestzwiebeln",
+     "name": "Röstzwiebeln",
+     "menge": "1 Packung (Mi)",
      "kategorie": "Vorrat"
     },
     {
      "id": "glutamin",
-     "name": "L-Glutamin — Bestand für Sonntag prüfen",
-     "menge": "15 g für den Long Run",
+     "name": "L-Glutamin (ESN)",
+     "menge": "Bestand prüfen — So + Sa je 15 g",
+     "kategorie": "Vorrat"
+    },
+    {
+     "id": "gels",
+     "name": "Squeezy BASIC FORMULA + Koffein-Variante",
+     "menge": "Bestand für So (2:40) und So 30.08. (2:50) prüfen",
      "kategorie": "Vorrat"
     }
    ]
