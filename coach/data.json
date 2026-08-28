@@ -940,9 +940,9 @@
      "familie": false,
      "zeitLabel": "🌅 Frühstück",
      "name": "Cornflakes-Skyr-Schüssel",
-     "zutaten": "50 g Cornflakes · 200 g Skyr · 1 Banane · Handvoll Beeren · Schuss Hafermilch · Zimt",
-     "p": 25,
-     "kh": 70,
+     "zutaten": "50 g Cornflakes (= 40 g KH) · 200 g Skyr · 1 Banane · Handvoll Beeren · Schuss Hafermilch · Zimt",
+     "p": 27,
+     "kh": 82,
      "tags": [
       "fermentiertes"
      ],
