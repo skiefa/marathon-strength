@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-31T12:37:37",
+ "generated": "2026-08-31T12:40:52",
  "datenstand": {
   "wearables": "2026-08-31",
   "kommentar": "FRISCH: Oura bis 31.08. (Pull heute), Wetter Herrsching bis 03.09. (22-24 Grad, kein Hitzezuschlag noetig), TP-Screenshot der Woche 31.08.-06.09. ist eingelesen und steht in coach-plan.yaml. JOURNAL: 30.08. (Generalprobe) aus dem App-Backup nach journal/2026-08-30.md uebernommen - vollstaendiges Protokoll inkl. Renn-Morgen-Ablauf. ERNAEHRUNG 28.-30.08. nachgetragen: 28.08. 103 g P / 313 g KH, 29.08. 55 g P / 379 g KH (Carb-Load, von Steffi selbst gezaehlt), 30.08. am 31.08. muendlich nachgereicht und vollstaendig: 117 g P / 453 g KH (inkl. 120 g Gels) - der beste Long-Run-Tag des Blocks, beide Werte im Soll. NICHT VERFUEGBAR: kein Essensplan fuer die Woche 30.08.-05.09. (/essensplan lief Samstag nicht), keine TrainingPeaks-CSV seit dem 22.08., keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.)."
@@ -129,11 +129,11 @@
   "2026-09-01": {
    "headline": "Intervalle 1:30. Morgens. Und das erste Intervall ist zu langsam, nicht zu schnell.",
    "kalender": "Komplett frei. Kein einziger Termin. Es gibt heute keinen Grund fuer einen Mittagsstart.",
-   "einheit": "Intervalle 1:30 / 135 TSS + After Run Yoga 11 min. Fenster: 07:30-09:00. PACE FUEHRT, HF FOLGT: die ersten 2-3 min strikt nach Pace laufen (6:10-6:15/km), erst danach auf die HF schauen. Die Herzfrequenz hinkt der Belastung immer 2-3 min hinterher - sie KANN in Minute 1 nicht bei 151 sein, egal wie schnell du laeufst. Laut Labor gehoert 6:14/km zu HF 155, also mitten in dein Band 151-156. Du kommst dort an, nur eben ab Minute 3. 5:56/km ist dagegen schneller als deine 4-mmol-Pace und liegt konstruktionsbedingt UEBER dem Band.",
+   "einheit": "Intervalle 1:30 / 135 TSS + After Run Yoga 11 min, Start 09:00. NACH GEFUEHL LAUFEN, nicht nach der Zahl - die Uhr zeigt dir im strukturierten Workout nur die HF. Anker fuer die ersten 3 min: zuegig, aber du koenntest einen kurzen Satz sagen (RPE 7/10). Am Ende eines 10-min-Intervalls sollte sich anfuehlen, als haettest du noch zwei Minuten drangehaengt. Der EINE Fehler, den du vermeiden willst: schneller werden, WEIL die HF noch nicht oben ist. Genau das erzeugt den 5:56er-Start vom 18.08. Die Herzfrequenz hinkt der Belastung 2-3 min hinterher - sie kann in Minute 1 nicht bei 151 sein, egal wie schnell du laeufst. Sie kommt von allein.",
    "minimum": [
-    "Erste 2-3 min jedes Intervalls nach der Pace steuern, nicht nach der HF. Steht die HF nach 4 min immer noch unter 148, DANN ist es zu langsam - vorher nicht.",
+    "Erste 3 min nach Gefuehl (RPE 7/10, kurzer Satz noch moeglich). NICHT nachlegen, weil die HF noch niedrig ist.",
     "Morgens laufen. >= 3 h nach dem Fruehstueck, Darm vorher leer (Regel GI-1).",
-    "Vor dem Start 30-60 g KH - nicht 1 Pfirsich und 1 Dattel wie am 18.08.",
+    "Fruehstueck ist heute PRE-RUN: schnelle KH, wenig Protein, wenig Ballaststoffe. Bun mit Nutella und Banane ist genau richtig.",
     "1 Squeezy BASIC bei Min 40-45, dazu 200 ml Wasser. 3.000 ml ueber den Tag."
    ],
    "bonus": [
@@ -142,15 +142,16 @@
     "/essensplan fuer diese Woche nachholen, es gibt noch keinen."
    ],
    "fueling": [
-    "Der 30.08. ist nachgetragen und aendert das Bild: 117 g Protein und 453 g KH (inkl. 120 g aus 6 Gels). Beides im Soll - die Carbs zum ersten Mal INNERHALB des Long-Run-Bandes 450-600. Am 25.08. waren es 25 g Protein an einem 22-km-Tag. Das ist der Unterschied zwischen den beiden Laeufen.",
-    "Der eine Hebel, der noch fehlt: das Fruehstueck. Bun mit Nutella und Banane sind 8 g Protein bei 76 g KH. Ein Skyr dazu = +20 g, und der Tag landet bei 137 statt 117 - also im Zielkorridor 134-146 statt an der Untergrenze.",
-    "Heute Carb-Soll (lauf_kurz) 370-480 g. Reis funktioniert bei dir: 200 g gekocht = 56 g KH.",
-    "Post-Run-Shake binnen 40 min - hat am 30.08. geklappt, gleiche Routine heute.",
-    "Kreuzbluetler diese Woche 0 von 4. Ofengemuese mit Brokkoli statt ohne, das ist die billigste Loesung.",
+    "KORREKTUR zu gestern: Am Trainingsmorgen gehoert KEIN Protein ins Fruehstueck - das ist die Pre-Run-Mahlzeit, da gelten nur schnelle KH, wenig Fett, wenig Ballaststoffe. Die Protein-Regel beginnt NACH dem Lauf.",
+    "Post-Run: 30-40 g Protein binnen 40 min. Am 30.08. war der Shake bei 24 g - mach heute 35-40 g draus, das ist der Hebel an Lauftagen.",
+    "Tagesziel bleibt 134-146 g Protein, verteilt auf Shake + Mittag + Nachmittag + Abend. Ein Long-Run- oder Intervalltag hat den HOECHSTEN Proteinbedarf der Woche, nicht den niedrigsten.",
+    "Der 30.08. ist nachgetragen: 117 g Protein und 453 g KH (davon 120 aus 6 Gels) - beide im Soll, die Carbs zum ersten Mal INNERHALB des Long-Run-Bandes 450-600. Am 25.08. waren es 25 g Protein an einem 22-km-Tag.",
+    "Carb-Soll heute (lauf_kurz) 370-480 g. Reis funktioniert: 200 g gekocht = 56 g KH.",
+    "Kreuzbluetler diese Woche 0 von 4. Brokkoli ins Ofengemuese, billigste Loesung.",
     "Trinken der letzten 7 Tage: 1.729 ml Schnitt gegen Ziele von 2.400-3.400. Am 29. und 30.08. warst du bei 2.800 - ein Dienstag zaehlt genauso."
    ],
    "warnung": "Linke Achillessehne hat am Sonntag einmal gezwickt - erste Meldung seit Wochen, und der Soleus-Snack stand in drei Wochen zusammen bei 1 von 6. Heute nur Pogos (frische Beine), Soleus schwer kommt Mittwoch und Freitag. Bei Zwicken >= 3/10 waehrend der Intervalle: Plyo diese Woche komplett streichen.",
-   "coachSays": "Das erste Intervall entscheidet die ganze Einheit. Lauf nach der Uhr, nicht nach dem Puls - der kommt von allein."
+   "coachSays": "Lauf nach Gefuehl und lass die Zahl in Ruhe. Sie holt dich nach drei Minuten ein - du musst ihr nicht entgegenlaufen."
   },
   "2026-09-02": {
    "headline": "Doppeltag mit vollem Kalender - Kraft frueh, Rad spaeter.",
@@ -167,8 +168,9 @@
     "Beckenboden 3 min zwischen zwei Calls."
    ],
    "fueling": [
+    "Kraft-Tag ohne Lauf am Morgen - HEUTE ist das Fruehstueck der Protein-Hebel. Skyr oder Quark 200 g dazu = +20 g. An Lauftagen gilt das NICHT, da ist das Fruehstueck die Pre-Run-Mahlzeit (nur schnelle KH).",
     "Carb-Soll heute (kraft_only + Rad >45 min): oberes Ende, 340-370 g. Nicht 480 - ein Kraft-Tag ist kein Lauftag.",
-    "Protein 134-146 g, verteilt auf 4 Gelegenheiten a 30-35 g. Ein grosser Abendbolus ersetzt die Verteilung nicht, das ist mit 52 der Punkt.",
+    "Protein 134-146 g auf 4 Gelegenheiten a 30-35 g. Ein grosser Abendbolus ersetzt die Verteilung nicht, das ist mit 52 der Punkt.",
     "Vor der Kraft-Session etwas Kohlenhydrate - 27 Saetze nuechtern sind eine schlechte Idee.",
     "Zweiter fetter Fisch der Woche: heute oder Donnerstag, sonst wird es nichts."
    ],
@@ -190,8 +192,9 @@
     "Beckenboden 3 min."
    ],
    "fueling": [
+    "Fruehstueck ist PRE-RUN: schnelle KH, wenig Protein, wenig Ballaststoffe, mindestens 2 h vor dem Start. Nicht 8:30 essen und 11:15 loslaufen wie am 27.08.",
+    "Protein kommt NACH dem Lauf: 30-40 g binnen 40 min, dann Mittag, Nachmittag, Abend. Tagesziel 134-146 g.",
     "Carb-Soll (lauf_kurz): 370-480 g.",
-    "Fruehstueck mit KH mindestens 2 h vor dem Start - nicht 8:30 essen und 11:15 loslaufen.",
     "Coachin schreibt woertlich 'Bitte gut verpflegen!' unter diese Einheit. Sie meint es.",
     "Kreuzbluetler-Bilanz der Woche pruefen: Soll 4, bis Donnerstag sollten 2 stehen."
    ],
@@ -204,7 +207,7 @@
   "fokus": "LETZTE PEAK-WOCHE. Taper startet am 07.09. Di Intervalle 1:30 / 135 TSS, Mi Muckibude 3 + Rad 1:20, Do Tempolauf 55 min, Fr Muckibude schnell (letzte schwere Kraft vor dem Taper), Sa Mobi + Rad + Carb-Loading, So der laengste Lauf des ganzen Blocks: 3:00 h / 289 TSS. Kein Kraft-Tag am Montag. Ausgangslage ist gut: die Generalprobe am 30.08. lief 2:50 h komplett durch, HF 139, keinerlei Darmprobleme, Koffein-Gel erstmals vertragen, Elektrolytflasche zum ersten Mal leer getrunken. Zwei offene Dinge vor der Keine-Experimente-Grenze am 13.09.: die bestellten Zehensocken muessen am 06.09. im langen Lauf getestet werden, und die Gel-Rate muss von ~40 auf 50-55 g/h (groessere Schluecke - Steffis eigene Diagnose nach dem Hungergefuehl bei km 12).",
   "luecken": [
    "KETTE & SEHNEN ist die eine Luecke der Woche. Wochenkonto 24.-30.08.: Achilles 1 von 2, Po 0 von 3, Hamstring 0 von 2, Pogo 0 von 2, Beckenboden 0 von 3 - und die drei Wochen davor sahen genauso aus. Am 30.08. hat die linke Achillessehne im Long Run zum ersten Mal seit Wochen gezwickt, am 25.08. waren es die Waden unterhalb der Kniekehle. Das ist kein Buchhaltungsproblem mehr, das ist ein Symptom. PLAN DIESER WOCHE, realistisch: Di Pogos + Beckenboden, Mi Soleus schwer + Hip Thrust, Do Hamstring + Beckenboden, Fr Soleus schwer + Hip Thrust, Sa Beckenboden. GESTRICHEN und nicht verschoben: der dritte Hip Thrust (Sa ist Vortag des 3-h-Laufs) und der zweite Pogo-Termin (Fr bringt die Muckibude eigene Sprungkontakte mit). Ergebnis-Soll: Achilles 2/2, Po 2/3, Hamstring 2/2, Pogo 1/2, Beckenboden 3/3.",
-   "Protein: der 30.08. ist nachgetragen und liegt mit 117 g exakt am Minimum, bei 453 g KH - der beste Long-Run-Tag des Blocks und ein echter Fortschritt gegenueber dem 25.08. (25 g Protein an einem 22-km-Tag). Der 7-Tage-Schnitt steht damit bei ~80 g. Der Hebel ist immer derselbe: das Fruehstueck bringt 8-10 g Protein. Ein Skyr oder Quark dazu und die meisten Tage landen im Korridor 134-146.",
+   "Protein: der 30.08. ist nachgetragen und liegt mit 117 g am Minimum, bei 453 g KH - der beste Long-Run-Tag des Blocks (25.08. zum Vergleich: 25 g Protein an einem 22-km-Tag). 7-Tage-Schnitt ~80 g. WICHTIG zur Steuerung: an Lauftagen ist das Fruehstueck die Pre-Run-Mahlzeit und bleibt protein- und ballaststoffarm - der Hebel dort ist ein groesserer Post-Run-Shake (35-40 g statt 24) plus eine vierte Gelegenheit am Nachmittag. Nur an Kraft- und Ruhetagen (Mi, Fr, Mo, Sa) gehoert Skyr oder Quark ins Fruehstueck.",
    "Es gibt noch keinen Essensplan fuer diese Woche (/essensplan lief am Samstag nicht) und noch keine Einkaufsliste. Nachholen, sonst laeuft die Woche wieder auf Backware."
   ]
  },
