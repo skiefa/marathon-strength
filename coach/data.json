@@ -1,8 +1,8 @@
 {
- "generated": "2026-08-31T11:34:15",
+ "generated": "2026-08-31T12:37:37",
  "datenstand": {
   "wearables": "2026-08-31",
-  "kommentar": "FRISCH: Oura bis 31.08. (Pull heute), Wetter Herrsching bis 03.09. (22-24 Grad, kein Hitzezuschlag noetig), TP-Screenshot der Woche 31.08.-06.09. ist eingelesen und steht in coach-plan.yaml. JOURNAL: 30.08. (Generalprobe) aus dem App-Backup nach journal/2026-08-30.md uebernommen - vollstaendiges Protokoll inkl. Renn-Morgen-Ablauf. ERNAEHRUNG 28.-30.08. nachgetragen: 28.08. 103 g P / 313 g KH, 29.08. 55 g P / 379 g KH (Carb-Load, von Steffi selbst gezaehlt), 30.08. OHNE Teller-Diktat - der hoechstbelastete Tag des Blocks ist ernaehrungsseitig nicht erfasst. NICHT VERFUEGBAR: kein Essensplan fuer die Woche 30.08.-05.09. (/essensplan lief Samstag nicht), keine TrainingPeaks-CSV seit dem 22.08., keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.)."
+  "kommentar": "FRISCH: Oura bis 31.08. (Pull heute), Wetter Herrsching bis 03.09. (22-24 Grad, kein Hitzezuschlag noetig), TP-Screenshot der Woche 31.08.-06.09. ist eingelesen und steht in coach-plan.yaml. JOURNAL: 30.08. (Generalprobe) aus dem App-Backup nach journal/2026-08-30.md uebernommen - vollstaendiges Protokoll inkl. Renn-Morgen-Ablauf. ERNAEHRUNG 28.-30.08. nachgetragen: 28.08. 103 g P / 313 g KH, 29.08. 55 g P / 379 g KH (Carb-Load, von Steffi selbst gezaehlt), 30.08. am 31.08. muendlich nachgereicht und vollstaendig: 117 g P / 453 g KH (inkl. 120 g Gels) - der beste Long-Run-Tag des Blocks, beide Werte im Soll. NICHT VERFUEGBAR: kein Essensplan fuer die Woche 30.08.-05.09. (/essensplan lief Samstag nicht), keine TrainingPeaks-CSV seit dem 22.08., keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.)."
  },
  "hydration": {
   "2026-08-25": {
@@ -129,12 +129,12 @@
   "2026-09-01": {
    "headline": "Intervalle 1:30. Morgens. Und das erste Intervall ist zu langsam, nicht zu schnell.",
    "kalender": "Komplett frei. Kein einziger Termin. Es gibt heute keinen Grund fuer einen Mittagsstart.",
-   "einheit": "Intervalle 1:30 / 135 TSS + After Run Yoga 11 min. Fenster: 07:30-09:00. Ziel-Pace ALLE Intervalle gleichmaessig ~6:10-6:15/km bei HF 151-156. Am 18.08. bist du das erste mit 5:56 gelaufen und hast bis zum letzten 24 Sekunden verloren - Ergebnis 146 TSS statt 118 geplant. Zwei Wochen hintereinander lag die Ist-Last 24-28 % ueber der Vorgabe. Heute nicht.",
+   "einheit": "Intervalle 1:30 / 135 TSS + After Run Yoga 11 min. Fenster: 07:30-09:00. PACE FUEHRT, HF FOLGT: die ersten 2-3 min strikt nach Pace laufen (6:10-6:15/km), erst danach auf die HF schauen. Die Herzfrequenz hinkt der Belastung immer 2-3 min hinterher - sie KANN in Minute 1 nicht bei 151 sein, egal wie schnell du laeufst. Laut Labor gehoert 6:14/km zu HF 155, also mitten in dein Band 151-156. Du kommst dort an, nur eben ab Minute 3. 5:56/km ist dagegen schneller als deine 4-mmol-Pace und liegt konstruktionsbedingt UEBER dem Band.",
    "minimum": [
+    "Erste 2-3 min jedes Intervalls nach der Pace steuern, nicht nach der HF. Steht die HF nach 4 min immer noch unter 148, DANN ist es zu langsam - vorher nicht.",
     "Morgens laufen. >= 3 h nach dem Fruehstueck, Darm vorher leer (Regel GI-1).",
     "Vor dem Start 30-60 g KH - nicht 1 Pfirsich und 1 Dattel wie am 18.08.",
-    "1 Squeezy BASIC bei Min 40-45, dazu 200 ml Wasser.",
-    "3.000 ml trinken. 750-ml-Flasche an den Schreibtisch, viermal leer."
+    "1 Squeezy BASIC bei Min 40-45, dazu 200 ml Wasser. 3.000 ml ueber den Tag."
    ],
    "bonus": [
     "Pogos 3x20 vor dem Lauf, auf frische Beine (Kontowoche steht auf 0 von 2).",
@@ -142,14 +142,15 @@
     "/essensplan fuer diese Woche nachholen, es gibt noch keinen."
    ],
    "fueling": [
-    "Ist der letzten 7 Tage: Protein-Schnitt ~72 g gegen ein Minimum von 117 und einen Zielkorridor von 134-146. Der 28.08. zeigt mit 103 g, dass es geht - der 30.08. hat gar kein Diktat.",
-    "Konkret heute: Skyr 200 g zum Fruehstueck (+20 g P), Post-Run-Shake binnen 40 min (+25-30 g P), abends eine echte Proteinquelle. Das sind 3 Handgriffe fuer +75 g.",
-    "Carb-Soll heute (lauf_kurz): 370-480 g. Reis funktioniert bei dir - 200 g gekocht = 56 g KH, zweimal am Tag sind schon 112.",
-    "Kreuzbluetler: diese Woche 0 von 4 (Soll). Brokkoli zum Abendessen, das ist die billigste Loesung.",
-    "Trinken der letzten 7 Tage: 1.614 ml Schnitt gegen Ziele von 2.400-3.400. Am 29. und 30.08. warst du bei 2.800 - du kannst es, wenn ein Rennen dranhaengt. Ein Dienstag zaehlt genauso."
+    "Der 30.08. ist nachgetragen und aendert das Bild: 117 g Protein und 453 g KH (inkl. 120 g aus 6 Gels). Beides im Soll - die Carbs zum ersten Mal INNERHALB des Long-Run-Bandes 450-600. Am 25.08. waren es 25 g Protein an einem 22-km-Tag. Das ist der Unterschied zwischen den beiden Laeufen.",
+    "Der eine Hebel, der noch fehlt: das Fruehstueck. Bun mit Nutella und Banane sind 8 g Protein bei 76 g KH. Ein Skyr dazu = +20 g, und der Tag landet bei 137 statt 117 - also im Zielkorridor 134-146 statt an der Untergrenze.",
+    "Heute Carb-Soll (lauf_kurz) 370-480 g. Reis funktioniert bei dir: 200 g gekocht = 56 g KH.",
+    "Post-Run-Shake binnen 40 min - hat am 30.08. geklappt, gleiche Routine heute.",
+    "Kreuzbluetler diese Woche 0 von 4. Ofengemuese mit Brokkoli statt ohne, das ist die billigste Loesung.",
+    "Trinken der letzten 7 Tage: 1.729 ml Schnitt gegen Ziele von 2.400-3.400. Am 29. und 30.08. warst du bei 2.800 - ein Dienstag zaehlt genauso."
    ],
    "warnung": "Linke Achillessehne hat am Sonntag einmal gezwickt - erste Meldung seit Wochen, und der Soleus-Snack stand in drei Wochen zusammen bei 1 von 6. Heute nur Pogos (frische Beine), Soleus schwer kommt Mittwoch und Freitag. Bei Zwicken >= 3/10 waehrend der Intervalle: Plyo diese Woche komplett streichen.",
-   "coachSays": "Das erste Intervall entscheidet die ganze Einheit. Lauf es langsamer als es sich richtig anfuehlt."
+   "coachSays": "Das erste Intervall entscheidet die ganze Einheit. Lauf nach der Uhr, nicht nach dem Puls - der kommt von allein."
   },
   "2026-09-02": {
    "headline": "Doppeltag mit vollem Kalender - Kraft frueh, Rad spaeter.",
@@ -203,7 +204,7 @@
   "fokus": "LETZTE PEAK-WOCHE. Taper startet am 07.09. Di Intervalle 1:30 / 135 TSS, Mi Muckibude 3 + Rad 1:20, Do Tempolauf 55 min, Fr Muckibude schnell (letzte schwere Kraft vor dem Taper), Sa Mobi + Rad + Carb-Loading, So der laengste Lauf des ganzen Blocks: 3:00 h / 289 TSS. Kein Kraft-Tag am Montag. Ausgangslage ist gut: die Generalprobe am 30.08. lief 2:50 h komplett durch, HF 139, keinerlei Darmprobleme, Koffein-Gel erstmals vertragen, Elektrolytflasche zum ersten Mal leer getrunken. Zwei offene Dinge vor der Keine-Experimente-Grenze am 13.09.: die bestellten Zehensocken muessen am 06.09. im langen Lauf getestet werden, und die Gel-Rate muss von ~40 auf 50-55 g/h (groessere Schluecke - Steffis eigene Diagnose nach dem Hungergefuehl bei km 12).",
   "luecken": [
    "KETTE & SEHNEN ist die eine Luecke der Woche. Wochenkonto 24.-30.08.: Achilles 1 von 2, Po 0 von 3, Hamstring 0 von 2, Pogo 0 von 2, Beckenboden 0 von 3 - und die drei Wochen davor sahen genauso aus. Am 30.08. hat die linke Achillessehne im Long Run zum ersten Mal seit Wochen gezwickt, am 25.08. waren es die Waden unterhalb der Kniekehle. Das ist kein Buchhaltungsproblem mehr, das ist ein Symptom. PLAN DIESER WOCHE, realistisch: Di Pogos + Beckenboden, Mi Soleus schwer + Hip Thrust, Do Hamstring + Beckenboden, Fr Soleus schwer + Hip Thrust, Sa Beckenboden. GESTRICHEN und nicht verschoben: der dritte Hip Thrust (Sa ist Vortag des 3-h-Laufs) und der zweite Pogo-Termin (Fr bringt die Muckibude eigene Sprungkontakte mit). Ergebnis-Soll: Achilles 2/2, Po 2/3, Hamstring 2/2, Pogo 1/2, Beckenboden 3/3.",
-   "Mitlaufend: Protein-Schnitt der letzten 7 Tage ~72 g gegen ein Minimum von 117 und einen Zielkorridor von 134-146. Der 28.08. mit 103 g zeigt, dass es geht. Der 30.08. - der hoechstbelastete Tag des Blocks - hat gar kein Teller-Diktat.",
+   "Protein: der 30.08. ist nachgetragen und liegt mit 117 g exakt am Minimum, bei 453 g KH - der beste Long-Run-Tag des Blocks und ein echter Fortschritt gegenueber dem 25.08. (25 g Protein an einem 22-km-Tag). Der 7-Tage-Schnitt steht damit bei ~80 g. Der Hebel ist immer derselbe: das Fruehstueck bringt 8-10 g Protein. Ein Skyr oder Quark dazu und die meisten Tage landen im Korridor 134-146.",
    "Es gibt noch keinen Essensplan fuer diese Woche (/essensplan lief am Samstag nicht) und noch keine Einkaufsliste. Nachholen, sonst laeuft die Woche wieder auf Backware."
   ]
  },
@@ -478,8 +479,8 @@
    "text": "30.08.: 22,11 km in 2:50 h, Ø-Pace 7:42, Ø-HF 139 (= exakt deine gemessene LT1). Sechs Gels, ein Koffein-Gel in den letzten 20 Minuten, 500 ml Elektrolyt komplett leer, eine Pipi-Pause nach 5 km und danach nichts mehr. Am 23.08. war bei 2:17 h Schluss. Eine Woche spaeter 33 Minuten laenger, ohne einen einzigen GI-Zwischenfall. Das ist der laengste saubere Lauf dieses Marathonblocks."
   },
   {
-   "titel": "Du hast deinen Carb-Load-Tag selbst gezaehlt: 379 g",
-   "text": "29.08. - Burger Bun 39, Cornflakes 40, Banane 27, Pfirsich 8, 200 g Reis 56, Rote Bete 7, Energy Drink 46, Banane 27, Burger Bun 39, Haribo 19, Reis 56, Rote Bete 7. Am 22.08. lag derselbe Tag bei 263 g und du hast ihn nicht gezaehlt. Das Ziel sind 440-520, du bist 60 g drunter - aber die Faehigkeit, das im Kopf mitzufuehren, ist das, was in Berlin am Vortag den Unterschied macht. Und du hast selbst gemerkt, was funktioniert: 'Reis scheint gut zu funktionieren.'"
+   "titel": "Am 25.08. 25 g Protein. Am 30.08. 117 g - und 453 g Kohlenhydrate.",
+   "text": "Beides waren lange Laeufe. Am 25.08. (22 km mit Schwellenblock) kamen 25 g Protein und 332 g KH zusammen, kein Post-Run-Protein, 800 ml getrunken. Am 30.08. (2:50 h Generalprobe): 117 g Protein auf vier Gelegenheiten verteilt, 453 g KH inklusive 120 g aus den Gels - zum ersten Mal INNERHALB des Long-Run-Solls von 450-600 - Protein-Shake direkt nach dem Lauf, 2.800 ml getrunken. Der Lauf danach war 33 Minuten laenger und komplett GI-frei. Fueling und Ergebnis haengen zusammen, und du hast beide Seiten selbst geliefert."
   },
   {
    "titel": "Trinken: 800 ml am 25.08., 2.800 ml am 29. und 30.08.",
