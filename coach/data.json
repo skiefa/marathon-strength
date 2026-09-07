@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-07T13:52:17",
+ "generated": "2026-09-07T20:41:54",
  "datenstand": {
   "wearables": "2026-09-07",
-  "kommentar": "FRISCH: Oura bis 07.09. (Pull heute) - Achtung, 05. und 06.09. ohne HRV/RHR, der Ring hat nur Minuten aufgezeichnet. Wetter Herrsching bis 10.09. (07.09. 28,2 / 08.09. 31,4 / 09.09. 21,5 / 10.09. 16,4 Grad). TP-Screenshot der Woche 07.-13.09. eingelesen und in coach-plan.yaml. NEU AM 07.09.: Garmin-/TP-Workout-Export bis 06.09. eingelesen (workouts 13.csv) - daraus die Journal-Eintraege 01.-06.09. rekonstruiert (journal/2026-09-01 bis -06.md), inkl. des Long Runs 06.09. mit 23,28 km / 3:00 h / HF 133. ERNAEHRUNG 01.-06.09.: Fluessigkeit exakt aus dem Trink-Tracker (1.800 / 700 / 1.800 / 1.400 / 1.400 / 3.800 ml), Protein und Carbs bewusst als 'unbekannt' und NICHT als Null gelogged - Steffi hat am 07.09. gesagt, sie hat die Sachen gemacht und nur nichts eingetragen. NICHT VERFUEGBAR: kein Essensplan fuer die Woche 06.-12.09. (/essensplan lief am 05.09. nicht), keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.), In-Run-Fueling des 06.09. undokumentiert."
+  "kommentar": "FRISCH: Oura bis 07.09. (Pull heute) - 05. und 06.09. ohne HRV/RHR, der Ring hat nur Minuten aufgezeichnet. Wetter Herrsching bis 10.09. (07.09. 28,2 / 08.09. 31,4 / 09.09. 21,5 / 10.09. 16,4 Grad). TP-Screenshot der Woche 07.-13.09. eingelesen und in coach-plan.yaml. NEU AM 07.09.: Garmin-/TP-Workout-Export bis 06.09. eingelesen (workouts 13.csv) - daraus die Journal-Eintraege 01.-06.09. rekonstruiert. VOLLSTAENDIGES LONG-RUN-PROTOKOLL vom 06.09. aus dem App-Tagebuch uebernommen (journal/2026-09-06.md): Renn-Morgen-Ablauf, 5 Gels = 35 g/h, Koffein-Gel als Nr. 4 und salziges Tomaten-Gel als Nr. 5 beide gut vertragen, Zehensocken erfolgreich getestet, Renn-Outfit steht. ERNAEHRUNG 01.-06.09.: Fluessigkeit exakt aus dem Trink-Tracker (1.800 / 700 / 1.800 / 1.400 / 1.400 / 3.800 ml), Protein und Carbs am Teller bewusst als 'unbekannt' und NICHT als Null gelogged - Steffi hat gesagt, sie hat die Sachen gemacht und nur nichts eingetragen; In-Run-Carbs des 06.09. sind dagegen exakt (105 g). OFFEN: kein Essensplan fuer die Woche 06.-12.09. (/essensplan lief am 05.09. nicht), keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.), und die Frage nach den 3 Magnesium am 05.09. - seit 31.08. gilt nur noch die Morgendosis."
  },
  "hydration": {
   "2026-08-31": {
@@ -144,7 +144,8 @@
    ],
    "bonus": [
     "Yoga aus dem TP-Plan",
-    "Beckenboden 3 min"
+    "Beckenboden 3 min",
+    "Gels fuer Mittwoch und fuer den 13.09. zaehlen: fuer 3:15 h brauchst du 8-9 Stueck, nicht 5"
    ],
    "fueling": [
     "Kein Lauf heute - Soll ist kraft_only: 300-370 g KH, Protein 134-146 g",
@@ -172,12 +173,12 @@
    ],
    "fueling": [
     "Vorher: 60-80 g KH, wenig Protein/Fett/Ballaststoffe. Dein Bun mit Nutella + Banane ist genau richtig gebaut - heute KEIN Skyr dazu",
-    "Waehrend: Gel Squeezy Basic bei Min 40-45, zweites bei Min 80-85. Je 200 ml reines Wasser dazu, NIE ins Elektrolyt mischen",
-    "Elektrolytflasche 500 ml mit voller Tab, nebenher leer trinken - 500-700 mg Natrium",
-    "Danach: 30-40 g Protein binnen 40 min. Der Post-Run-Shake mit 35-40 g statt 24 g",
+    "GEL NACH UHR, NICHT NACH GEFUEHL: bei Min 40 und bei Min 80, je 200 ml reines Wasser. Am 06.09. hast du selbst geschrieben, dass du vor jedem Gel leichten Hunger hattest - genau das heisst, der Abstand war zu gross",
+    "Elektrolytflasche 500 ml mit voller Tab getrennt daneben, leer trinken (500-700 mg Natrium). Nie ins Gel-Wasser mischen",
+    "Danach: 30-40 g Protein binnen 40 min - Shake mit 35-40 g, nicht 24 g",
     "Tagesziel lauf_kurz: 370-480 g KH, 134-146 g Protein, 3.200 ml Fluessigkeit"
    ],
-   "warnung": "Diese Einheit hat dich dreimal in Folge mehr gekostet als geplant: 18.08. +24 %, 20.08. +28 %, 01.09. +17 %. Immer dasselbe Muster - erstes Intervall zu schnell, dann faellt die Pace monoton ab. Im Taper ist das teuer, weil die Erholung die eigentliche Arbeit ist. Lieber das erste zu langsam als das letzte zu langsam.",
+   "warnung": "Zwei Sachen. Erstens: diese Einheit hat dich dreimal in Folge mehr gekostet als geplant (18.08. +24 %, 20.08. +28 %, 01.09. +17 %) - immer, weil das erste Intervall zu schnell war. Zweitens, und das ist der Befund aus deinem Sonntags-Tagebuch: du hattest 5 Gels auf 3 Stunden, also 35 g/h. Am 30.08. waren es noch 42 g/h. Die Rate faellt, obwohl sie steigen soll. Heute ist der Trainingstag fuer die Uhr-Kadenz - Gel bei Min 40 und Min 80, egal ob du Hunger hast oder nicht.",
    "coachSays": "163 TSS sind genug. Du musst hier niemandem etwas beweisen - Berlin ist in 18 Tagen."
   },
   "2026-09-10": {
@@ -206,11 +207,11 @@
  },
  "woche": {
   "start": "2026-09-07",
-  "fokus": "ERSTE TAPER-WOCHE - aber der Plan der Coachin tapert das Volumen NOCH NICHT: Mi Intervalle 1:50 h / 163 TSS und So Long Run 3:15 h / 228 TSS liegen beide UEBER der Vorwoche. Sichtbar getapert wird erst ab dem 14.09. Was ab heute trotzdem gilt, ist die Kraft-Taper-Regel: Gewicht bleibt, 2 Saetze statt 3, letzte schwere Einheit ~14.09., Kraft wird nie gestrichen. Ausgangslage ist stark: der Long Run am 06.09. lief 3:00 h bei Oe-HF 133 - sechs Schlaege tiefer als eine Woche zuvor bei gleicher Pace. Zwei Termine mit Deadline: /essensplan fuer die Rennwoche laeuft Samstag 12.09. vormittags, und am 13.09. faellt die Keine-Experimente-Grenze - die Zehensocken muessen bis dahin im langen Lauf getestet sein, sonst laufen sie in Berlin nicht mit.",
+  "fokus": "ERSTE TAPER-WOCHE - aber der Plan der Coachin tapert das Volumen NOCH NICHT: Mi Intervalle 1:50 h / 163 TSS und So Long Run 3:15 h / 228 TSS liegen beide UEBER der Vorwoche. Sichtbar getapert wird erst ab dem 14.09. Was ab heute trotzdem gilt, ist die Kraft-Taper-Regel: Gewicht bleibt, 2 Saetze statt 3, letzte schwere Einheit ~14.09., Kraft wird nie gestrichen. Ausgangslage ist stark: der Long Run am 06.09. lief 3:00 h bei Oe-HF 133 - sechs Schlaege tiefer als eine Woche zuvor bei gleicher Pace. UND DAS RENN-OUTFIT STEHT: Zehensocken mit Blasenpuder und Leukotape am verletzten Zeh getestet, keine neuen Blasen, kein Rucksack sondern Sport-BH mit Taschen. Damit ist die Ausruestungsfrage vor der Keine-Experimente-Grenze am 13.09. erledigt. Was bleibt, ist eine einzige offene Baustelle: die Carb-Rate im Lauf. Samstag 12.09. vormittags laeuft /essensplan fuer die Rennwoche.",
   "luecken": [
-   "Fluessigkeit: 7-Tage-Schnitt 1.817 ml gegen Tagesziele von 2.500-3.300. Der 02.09. stand bei 700 ml. Einzige Ausnahme war der 06.09. mit 3.800 ml - und genau da lief der beste Long Run des Blocks.",
-   "Kette & Sehnen: letzte Kontowoche Achilles 1/2, Po 0/3, Hamstring 0/2, Beckenboden 1/3. Falls die Uebungen gemacht und nur nicht getippt wurden, ist es ein Log-Thema - dann bitte diese Woche mittippen, sonst steuert der Coach blind.",
-   "Teller-Diktate: 01.-06.09. nur ein einziger Eintrag (04.09.). Protein und Carbs der Woche sind damit nicht bewertbar - inklusive des Carb-Load-Tags am 05.09. vor dem 3-h-Lauf."
+   "Carb-Rate im Long Run: 06.09. waren es 5 Gels auf 3,0 h = 35 g/h. Am 30.08. noch 42 g/h. Plan sind 50-55 g/h. Die Rate faellt, obwohl sie steigen soll - und dein eigener Satz nennt den Grund: 'Always felt a slight hunger feeling just before it was time to take the next gel.' Der Abstand lag bei ~36 min, noetig sind 20-22 min. Am 13.09. also 8-9 Gels statt 5, nach Uhr.",
+   "Renn-Morgen zu lang und zu fluessig: 4 h zwischen Wecker und Start, davon 1,6 l in der letzten Stunde - 'felt a bit too full'. Dein eigener Kommentar: in Berlin ist die Zeit nicht da. Am 13.09. auf ~2,5 h proben, Fluessigkeit frueher platzieren statt weniger trinken.",
+   "Fluessigkeit im Alltag: 7-Tage-Schnitt 1.817 ml gegen Tagesziele von 2.500-3.300, der 02.09. stand bei 700 ml. Ausnahme war der 06.09. mit 3.800 ml - und genau da lief der beste Long Run des Blocks."
   ]
  },
  "trends": {
@@ -428,12 +429,12 @@
    "text": "06.09.: 23,28 km in exakt 3:00 h, Oe-Pace 7:44/km, Oe-HF 133. Am 30.08. dieselbe Pace (7:42) bei HF 139. Gleiches Tempo, 1,2 km mehr, 10 Minuten laenger - und sechs Schlaege weniger. Das ist keine Tagesform, das ist aerobe Anpassung. HF 133 liegt jetzt klar UNTER deiner labor-gemessenen LT1 von 139; am 30.08. lag sie exakt darauf. Und zum ersten Mal hast du die Vorgabe 'nicht schneller als 7:45-8:00' auch wirklich getroffen."
   },
   {
-   "titel": "3.800 ml an einem Tag - der beste Trink-Tag seit Beginn des Trackings",
-   "text": "06.09.: 3.800 ml in 9 Eintraegen. Der bisherige Rekord lag bei 2.800. Und es ist derselbe Tag, an dem der beste Long Run des Blocks stand. Das ist kein Zufall, das ist der Zusammenhang, um den es seit Wochen geht."
+   "titel": "Das Renn-Outfit steht - und der Zeh hat gehalten",
+   "text": "06.09.: Zehensocken zum ersten Mal ueber 3 Stunden, mit Blasenpuder und dem verletzten Zeh in Leukotape. Keine einzige neue Blase. Die alte Irritation kam leicht zurueck, aber 'nothing compared to last weekend'. Dazu Sport-BH mit Taschen und Hose fuer die Flaschen statt Rucksack, Wasserflasche unterwegs nachgefuellt - hat funktioniert. Deine eigene Bilanz: 'So at least the race outfit is settled now.' Sieben Tage vor der Experimente-Grenze ist das genau rechtzeitig."
   },
   {
-   "titel": "Die Long-Run-Rampe steht: 2:30 - 2:40 - 2:50 - 3:00",
-   "text": "16.08. 2:30 h. 23.08. Abbruch bei 2:17. 30.08. 2:50 h sauber durch. 06.09. 3:00 h sauber durch. Vier Wochen, jede Woche laenger, kein einziger GI-Zwischenfall seit dem 30.08. Am 13.09. kommen 3:15 h - das waere die fuenfte Steigerung in Folge und der laengste Lauf, den du je gelaufen bist."
+   "titel": "Du hast eine mentale Strategie gefunden, die messbar gewirkt hat",
+   "text": "Gegen Ende des 3-Stunden-Laufs hast du fremden Frauen Komplimente gemacht. Sie haben zurueckgelaechelt. Dein Satz dazu: 'It gave me plenty of happy hormones which took away completely the feeling of tired legs.' Das ist kein netter Nebeneffekt - das ist ein Werkzeug fuer km 30 bis 42 in Berlin, und du hast es unter Belastung getestet."
   }
  ],
  "tagesplan": {
