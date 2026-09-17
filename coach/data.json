@@ -1,221 +1,98 @@
 {
- "generated": "2026-09-07T20:41:54",
+ "generated": "2026-09-17T09:55:58",
  "datenstand": {
-  "wearables": "2026-09-07",
-  "kommentar": "FRISCH: Oura bis 07.09. (Pull heute) - 05. und 06.09. ohne HRV/RHR, der Ring hat nur Minuten aufgezeichnet. Wetter Herrsching bis 10.09. (07.09. 28,2 / 08.09. 31,4 / 09.09. 21,5 / 10.09. 16,4 Grad). TP-Screenshot der Woche 07.-13.09. eingelesen und in coach-plan.yaml. NEU AM 07.09.: Garmin-/TP-Workout-Export bis 06.09. eingelesen (workouts 13.csv) - daraus die Journal-Eintraege 01.-06.09. rekonstruiert. VOLLSTAENDIGES LONG-RUN-PROTOKOLL vom 06.09. aus dem App-Tagebuch uebernommen (journal/2026-09-06.md): Renn-Morgen-Ablauf, 5 Gels = 35 g/h, Koffein-Gel als Nr. 4 und salziges Tomaten-Gel als Nr. 5 beide gut vertragen, Zehensocken erfolgreich getestet, Renn-Outfit steht. ERNAEHRUNG 01.-06.09.: Fluessigkeit exakt aus dem Trink-Tracker (1.800 / 700 / 1.800 / 1.400 / 1.400 / 3.800 ml), Protein und Carbs am Teller bewusst als 'unbekannt' und NICHT als Null gelogged - Steffi hat gesagt, sie hat die Sachen gemacht und nur nichts eingetragen; In-Run-Carbs des 06.09. sind dagegen exakt (105 g). OFFEN: kein Essensplan fuer die Woche 06.-12.09. (/essensplan lief am 05.09. nicht), keine neue BIA seit 09.04. (Gewicht 74,4 kg Selbstauskunft 05.08.), und die Frage nach den 3 Magnesium am 05.09. - seit 31.08. gilt nur noch die Morgendosis."
+  "wearables": "2026-09-17",
+  "kommentar": "Oura + Garmin bis heute früh, TP-Plan bis zum Renntag eingelesen."
  },
  "hydration": {
-  "2026-08-31": {
-   "ziel_ml": 2400,
-   "grund": "Basis 2.400 - 400 Kaffee + 400 Rehydration nach 2:50 h = 2.400. Keine TP-Einheit hinterlegt (Screenshot der neuen Woche fehlt noch), 24 degC."
+  "2026-09-18": {
+   "ziel_ml": 2900,
+   "grund": "Basis 2.455 (33 ml × 74,4 kg) + Rad 80 min (+800) − 400 Kaffee, 20 °C"
   },
-  "2026-09-01": {
+  "2026-09-19": {
    "ziel_ml": 3000,
-   "grund": "Basis 2.455 (33 ml x 74,4 kg) + Intervalle 1:30 (+900) + 22 Grad (kein Hitzezuschlag) - 400 Kaffee-Abzug = 2.955, gerundet 3.000"
+   "grund": "Basis 2.455 + Rad 80 min (+800) + Mobi (+170) − 400, 22 °C"
   },
-  "2026-09-02": {
-   "ziel_ml": 3100,
-   "grund": "Basis 2.455 + Kraft 45 min halb (+225) + Rad 1:20 (+800) + 23 Grad - 400 Kaffee-Abzug = 3.080, gerundet 3.100"
-  },
-  "2026-09-03": {
-   "ziel_ml": 2600,
-   "grund": "Basis 2.455 + Tempolauf 55 min (+550) + 24 Grad - 400 Kaffee-Abzug = 2.605, gerundet 2.600"
-  },
-  "2026-09-08": {
-   "ziel_ml": 3300,
-   "grund": "Basis 2.455 (33 ml x 74,4 kg) + Muckibude 3, 45 min Kraft zaehlt halb (+225) + 31,4 Grad Tagesmaximum (+1.000) - 400 Kaffee-Abzug = 3.300 ml. Heissester Tag der Woche."
-  },
-  "2026-09-09": {
-   "ziel_ml": 3200,
-   "grund": "Basis 2.455 + Intervalle 1:50 h (+1.100) - 400 Kaffee-Abzug = 3.200 ml. 21,5 Grad, kein Hitzezuschlag. Davon 500 ml als Elektrolytflasche im Lauf."
-  },
-  "2026-09-10": {
-   "ziel_ml": 2300,
-   "grund": "Basis 2.455 + Muckibude schnell, 45 min Kraft zaehlt halb (+225) - 400 Kaffee-Abzug = 2.300 ml. 16,4 Grad, kein Zuschlag."
+  "2026-09-20": {
+   "ziel_ml": 3400,
+   "grund": "Basis 2.455 + Long Run 2:15 (+1.350) − 400, 22,5 °C"
   }
  },
  "briefings": {
-  "2026-08-31": {
-   "headline": "Tag danach: auffuellen, Magnesium neu starten.",
-   "kalender": "Frei. Ferien laufen bis 15.09.",
-   "einheit": "Kein Laufreiz. Spaziergang oder lockeres Rad, wenn die Beine danach sind. Der TP-Plan der neuen Woche liegt noch nicht vor — Screenshot schicken, dann kommt die Einheit ins Briefing.",
+  "2026-09-18": {
+   "headline": "Rad statt Tempolauf. Die Füße gewinnen.",
+   "kalender": "08:00 Vibe Coding Tribe (abgesagt). Sonst frei.",
+   "einheit": "Rad 1:20 locker, HF unter 120 — vormittags. Der Tempolauf fällt weg, das ist richtig: 10 Tage vor Berlin heilt eine Fußsohle schneller als eine Schwelle sich verschiebt.",
    "minimum": [
-    "300-400 g KH. Der haeufigste Fehler ist, am Tag nach dem Long Run zu sparen.",
-    "2.400 ml trinken.",
-    "Magnesium-Neustart: Bisglycinat 200 mg, nur morgens, zum Essen. Abenddosis bleibt gestrichen."
+    "Rad 80 min, flach, HF < 120",
+    "Fußsohle links: 5 min Ball rollen, dann Wadenheber isometrisch 3×20 s",
+    "2.900 ml trinken"
    ],
    "bonus": [
-    "TP-Screenshot der Woche 31.08.-06.09. schicken.",
-    "Beckenboden 3 min — neue Kontowoche, billigster Start."
-   ],
-   "fueling": [
-    "Fruehstueck mit 25-35 g Protein, nicht nur Haferflocken mit Hafermilch (die kosten 4-6 g Protein gegenueber Kuhmilch). Skyr oder Quark dazu = +18 g ohne KH-Verlust.",
-    "Vier Proteingelegenheiten ueber den Tag statt einem Abendbolus. Ziel 134-146 g.",
-    "Ballaststoffe duerfen wieder hoch: Kreuzbluetler-Portion einbauen (Soll 4/Woche, aktuell 1 — Brokkoli am 27.08.).",
-    "Zweiter fetter Fisch der Woche steht noch aus (Soll 2, bisher nur Lachs am 27.08.)."
-   ],
-   "warnung": "Wie sich die Beine 24 h nach 2:50 h anfuehlen, ist die eigentliche Information der Generalprobe — nicht die Zeit von gestern. Wenn heute alles schwer ist, gehoert das ins Journal, weil es die Berlin-Prognose praeziser macht.",
-   "coachSays": "Essen, trinken, Magnesium neu starten. In der Reihenfolge."
-  },
-  "2026-09-01": {
-   "headline": "Intervalle 1:30. Morgens. Und das erste Intervall ist zu langsam, nicht zu schnell.",
-   "kalender": "Komplett frei. Kein einziger Termin. Es gibt heute keinen Grund fuer einen Mittagsstart.",
-   "einheit": "Intervalle 1:30 / 135 TSS + After Run Yoga 11 min, Start 09:00. NACH GEFUEHL LAUFEN, nicht nach der Zahl - die Uhr zeigt dir im strukturierten Workout nur die HF. Anker fuer die ersten 3 min: zuegig, aber du koenntest einen kurzen Satz sagen (RPE 7/10). Am Ende eines 10-min-Intervalls sollte sich anfuehlen, als haettest du noch zwei Minuten drangehaengt. Der EINE Fehler, den du vermeiden willst: schneller werden, WEIL die HF noch nicht oben ist. Genau das erzeugt den 5:56er-Start vom 18.08. Die Herzfrequenz hinkt der Belastung 2-3 min hinterher - sie kann in Minute 1 nicht bei 151 sein, egal wie schnell du laeufst. Sie kommt von allein.",
-   "minimum": [
-    "Erste 3 min nach Gefuehl (RPE 7/10, kurzer Satz noch moeglich). NICHT nachlegen, weil die HF noch niedrig ist.",
-    "Morgens laufen. >= 3 h nach dem Fruehstueck, Darm vorher leer (Regel GI-1).",
-    "Fruehstueck ist heute PRE-RUN: schnelle KH, wenig Protein, wenig Ballaststoffe. Bun mit Nutella und Banane ist genau richtig.",
-    "1 Squeezy BASIC bei Min 40-45, dazu 200 ml Wasser. 3.000 ml ueber den Tag."
-   ],
-   "bonus": [
-    "Pogos 3x20 vor dem Lauf, auf frische Beine (Kontowoche steht auf 0 von 2).",
-    "After Run Yoga 11 min - die Coachin hat es extra rausgesucht.",
-    "/essensplan fuer diese Woche nachholen, es gibt noch keinen."
-   ],
-   "fueling": [
-    "KORREKTUR zu gestern: Am Trainingsmorgen gehoert KEIN Protein ins Fruehstueck - das ist die Pre-Run-Mahlzeit, da gelten nur schnelle KH, wenig Fett, wenig Ballaststoffe. Die Protein-Regel beginnt NACH dem Lauf.",
-    "Post-Run: 30-40 g Protein binnen 40 min. Am 30.08. war der Shake bei 24 g - mach heute 35-40 g draus, das ist der Hebel an Lauftagen.",
-    "Tagesziel bleibt 134-146 g Protein, verteilt auf Shake + Mittag + Nachmittag + Abend. Ein Long-Run- oder Intervalltag hat den HOECHSTEN Proteinbedarf der Woche, nicht den niedrigsten.",
-    "Der 30.08. ist nachgetragen: 117 g Protein und 453 g KH (davon 120 aus 6 Gels) - beide im Soll, die Carbs zum ersten Mal INNERHALB des Long-Run-Bandes 450-600. Am 25.08. waren es 25 g Protein an einem 22-km-Tag.",
-    "Carb-Soll heute (lauf_kurz) 370-480 g. Reis funktioniert: 200 g gekocht = 56 g KH.",
-    "Kreuzbluetler diese Woche 0 von 4. Brokkoli ins Ofengemuese, billigste Loesung.",
-    "Trinken der letzten 7 Tage: 1.729 ml Schnitt gegen Ziele von 2.400-3.400. Am 29. und 30.08. warst du bei 2.800 - ein Dienstag zaehlt genauso."
-   ],
-   "warnung": "Linke Achillessehne hat am Sonntag einmal gezwickt - erste Meldung seit Wochen, und der Soleus-Snack stand in drei Wochen zusammen bei 1 von 6. Heute nur Pogos (frische Beine), Soleus schwer kommt Mittwoch und Freitag. Bei Zwicken >= 3/10 waehrend der Intervalle: Plyo diese Woche komplett streichen.",
-   "coachSays": "Lauf nach Gefuehl und lass die Zahl in Ruhe. Sie holt dich nach drei Minuten ein - du musst ihr nicht entgegenlaufen."
-  },
-  "2026-09-02": {
-   "headline": "Doppeltag mit vollem Kalender - Kraft frueh, Rad spaeter.",
-   "kalender": "08:00 Claude Code Weekly (30 min), 11:00 Steinbeis Konzeption, 16:00 Outdoor Facilitation. Drei Bloecke, zwei Luecken.",
-   "einheit": "Muckibude 3 (27 Saetze / 16 Uebungen) + Cycling 1:20 / 53 TSS. Kraft in die Luecke 09:00-10:15, Rad 13:00-14:30. Kein Lauf. Keine neuen Uebungen - die 4-Wochen-Regel vor Berlin laeuft seit 30.08.",
-   "minimum": [
-    "Kraft 09:00-10:15, direkt nach dem Weekly.",
-    "Soleus schwer (Bent-Knee Calf Raise 3x10, 3 s runter) + Wadenheber gestreckt 3x10 - Kontowoche 0 von 2, und die Achilles hat sich Sonntag gemeldet.",
-    "Hip Thrust 4x8 schwer + Side Plank 2x30 s/Seite - Kontowoche 0 von 3.",
-    "3.100 ml trinken."
-   ],
-   "bonus": [
-    "Rad 1:20 in der Mittagsluecke statt abends.",
-    "Beckenboden 3 min zwischen zwei Calls."
-   ],
-   "fueling": [
-    "Kraft-Tag ohne Lauf am Morgen - HEUTE ist das Fruehstueck der Protein-Hebel. Skyr oder Quark 200 g dazu = +20 g. An Lauftagen gilt das NICHT, da ist das Fruehstueck die Pre-Run-Mahlzeit (nur schnelle KH).",
-    "Carb-Soll heute (kraft_only + Rad >45 min): oberes Ende, 340-370 g. Nicht 480 - ein Kraft-Tag ist kein Lauftag.",
-    "Protein 134-146 g auf 4 Gelegenheiten a 30-35 g. Ein grosser Abendbolus ersetzt die Verteilung nicht, das ist mit 52 der Punkt.",
-    "Vor der Kraft-Session etwas Kohlenhydrate - 27 Saetze nuechtern sind eine schlechte Idee.",
-    "Zweiter fetter Fisch der Woche: heute oder Donnerstag, sonst wird es nichts."
-   ],
-   "warnung": "Zwischen 08:00 und 17:00 liegen drei Termine. Wenn der Tag kippt, ist die Kraft-Session heilig und das Rad faellt - nicht umgekehrt. Muskelmasse ist mit 52 das teurere Gut.",
-   "coachSays": "Zwei Luecken im Kalender, zwei Einheiten. Passt genau, wenn du nicht diskutierst."
-  },
-  "2026-09-03": {
-   "headline": "Tempolauf 55 min - frueh, und diesmal mit Fluessigkeit im Koerper.",
-   "kalender": "Steinbeiss Tech Coaching ganztags (als frei markiert), 16:20 Austausch mit Anastasia. Der Vormittag ist der einzige verlaessliche Slot.",
-   "einheit": "Tempolauf 0:55 / 79 TSS: 15 min einlaufen Z2, 30 min Schwelle bei HF 148-152 / ~6:15/km, 10 min auslaufen. Plus Breathing. Fenster 07:30-08:30. Am 20.08. kostete dieselbe Einheit 100,7 TSS statt 79, weil die 30 min mit 6:03 bei HF 154 gelaufen wurden - das ist Schwellenarbeit statt Tempo.",
-   "minimum": [
-    "Morgens laufen, nicht um 11:15.",
-    "500 ml Wasser VOR dem Start trinken - am 27.08. lagen bis zum Lauf nur ~600 ml Gesamtflussigkeit an.",
-    "1 Gel bei Min 20-25 (Hydrogel braucht kein Extra-Wasser), Elektrolytflasche getrennt.",
-    "30-40 g Protein binnen 40 min nach dem Lauf."
-   ],
-   "bonus": [
-    "Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8/Seite nach dem Lauf - Kontowoche 0 von 2.",
-    "Beckenboden 3 min."
-   ],
-   "fueling": [
-    "Fruehstueck ist PRE-RUN: schnelle KH, wenig Protein, wenig Ballaststoffe, mindestens 2 h vor dem Start. Nicht 8:30 essen und 11:15 loslaufen wie am 27.08.",
-    "Protein kommt NACH dem Lauf: 30-40 g binnen 40 min, dann Mittag, Nachmittag, Abend. Tagesziel 134-146 g.",
-    "Carb-Soll (lauf_kurz): 370-480 g.",
-    "Coachin schreibt woertlich 'Bitte gut verpflegen!' unter diese Einheit. Sie meint es.",
-    "Kreuzbluetler-Bilanz der Woche pruefen: Soll 4, bis Donnerstag sollten 2 stehen."
-   ],
-   "warnung": "Die 30 Schwellenminuten sind bei HF 148-152 richtig gelaufen, nicht bei 154-156. LT2 liegt laut Labor bei HF 151 - alles darueber ist eine andere Einheit als die geplante, und du hast diese Woche schon Intervalle im Bein.",
-   "coachSays": "79 TSS heisst 79 TSS. Nicht 100."
-  },
-  "2026-09-08": {
-   "headline": "Kraft-Dienstag bei 31 Grad - drinnen, kurz, schwer.",
-   "kalender": "Yoga + Muckibude 3 (27 Saetze / 16 Uebungen), kein Lauf. Erster Tag der Taper-Phase.",
-   "einheit": "Muckibude 3, aber nach Taper-Regel: GEWICHT BLEIBT, aus 3 Saetzen werden 2. Nicht leichter, sondern kuerzer. Frueh oder drinnen - 31,4 Grad Tagesmaximum, der heisseste Tag der Woche. Yoga danach oder abends.",
-   "minimum": [
-    "Muckibude 3 mit 2 statt 3 Saetzen, Gewichte unveraendert",
-    "3.300 ml trinken - Flasche an den Schreibtisch, das ist heute keine Nebensache",
-    "Soleus-Snack: Bent-Knee Calf Raise 3x10, 3 s runter + Wadenheber gestreckt 3x10",
-    "Magnesium Bisglycinat 200 mg morgens zum Essen"
-   ],
-   "bonus": [
-    "Yoga aus dem TP-Plan",
-    "Beckenboden 3 min",
-    "Gels fuer Mittwoch und fuer den 13.09. zaehlen: fuer 3:15 h brauchst du 8-9 Stueck, nicht 5"
-   ],
-   "fueling": [
-    "Kein Lauf heute - Soll ist kraft_only: 300-370 g KH, Protein 134-146 g",
-    "Kraft-Tag heisst: Skyr/Quark ins Fruehstueck gehoert HEUTE hin (an Lauftagen nicht). 200 g Skyr = +20 g Protein",
-    "Protein auf 4 Gelegenheiten a 25-35 g verteilen - ein Abendbolus zaehlt nicht doppelt",
-    "Nach der Kraft-Session 30-40 g Protein binnen 40 min",
-    "3.300 ml Wasser/Elektrolyt. Bei 31 Grad eine Elektrolyt-Tab in die erste Flasche, nicht nur pures Wasser"
-   ],
-   "warnung": "HRV steht heute bei 19 ms gegen eine Baseline von ~36, Readiness 76 - der tiefste Wert der Woche. Nach 3 h Zone 2 am Sonntag ist das erwartbar und kein Alarm. Aber: morgen kommen 1:50 h Intervalle mit 163 TSS. Wenn die HRV morgen frueh NICHT ueber 22 liegt, das erste Intervall bewusst 10 s/km langsamer anfangen.",
-   "coachSays": "Taper heisst nicht Urlaub. Es heisst: gleiche Last auf der Stange, ein Satz weniger."
-  },
-  "2026-09-09": {
-   "headline": "1:50 h Intervalle - die groesste Lauf-Einheit der Woche. Und du ziehst sie jedes Mal zu schnell an.",
-   "kalender": "Intervalle 1:50 h / 163 TSS + After Run Yoga 11 min. Coachin: 'Whoooooohoooo du schaffst das Steffi!'",
-   "einheit": "Morgens. 21,5 Grad und 100 % Regenwahrscheinlichkeit - Regenjacke statt Verschieben, kuehl ist fuer Intervalle das bessere Wetter. ALLE Intervalle gleichmaessig bei 6:10-6:15/km, HF 151-156.",
-   "minimum": [
-    "Intervalle morgens, erstes Intervall bewusst BREMSEN",
-    "2 Gels: Min 40-45 und Min 80-85, je mit 200 ml Wasser",
-    "Elektrolytflasche 500 ml getrennt daneben, leer trinken",
-    "Fruehstueck 60-80 g KH - kein Nuechterntraining bei 110 min"
-   ],
-   "bonus": [
-    "After Run Yoga 11 min",
-    "Hip-Thrust-Snack am Abend, wenn die Beine mitmachen"
-   ],
-   "fueling": [
-    "Vorher: 60-80 g KH, wenig Protein/Fett/Ballaststoffe. Dein Bun mit Nutella + Banane ist genau richtig gebaut - heute KEIN Skyr dazu",
-    "GEL NACH UHR, NICHT NACH GEFUEHL: bei Min 40 und bei Min 80, je 200 ml reines Wasser. Am 06.09. hast du selbst geschrieben, dass du vor jedem Gel leichten Hunger hattest - genau das heisst, der Abstand war zu gross",
-    "Elektrolytflasche 500 ml mit voller Tab getrennt daneben, leer trinken (500-700 mg Natrium). Nie ins Gel-Wasser mischen",
-    "Danach: 30-40 g Protein binnen 40 min - Shake mit 35-40 g, nicht 24 g",
-    "Tagesziel lauf_kurz: 370-480 g KH, 134-146 g Protein, 3.200 ml Fluessigkeit"
-   ],
-   "warnung": "Zwei Sachen. Erstens: diese Einheit hat dich dreimal in Folge mehr gekostet als geplant (18.08. +24 %, 20.08. +28 %, 01.09. +17 %) - immer, weil das erste Intervall zu schnell war. Zweitens, und das ist der Befund aus deinem Sonntags-Tagebuch: du hattest 5 Gels auf 3 Stunden, also 35 g/h. Am 30.08. waren es noch 42 g/h. Die Rate faellt, obwohl sie steigen soll. Heute ist der Trainingstag fuer die Uhr-Kadenz - Gel bei Min 40 und Min 80, egal ob du Hunger hast oder nicht.",
-   "coachSays": "163 TSS sind genug. Du musst hier niemandem etwas beweisen - Berlin ist in 18 Tagen."
-  },
-  "2026-09-10": {
-   "headline": "Muckibude schnell, 16 Grad, Beine von gestern. Zwei Saetze reichen.",
-   "kalender": "Breathing + Muckibude schnell (27 Saetze / 18 Uebungen), kein Lauf.",
-   "einheit": "Kraft mit 2 statt 3 Saetzen, Gewicht bleibt. Vor den ersten Verpflichtungen, solange die Beine frisch sind. 16,4 Grad - endlich kuehl.",
-   "minimum": [
-    "Muckibude schnell, 2 Saetze statt 3",
-    "Single Leg Calf Raise sauber und langsam, nicht auf Zeit - Tag nach den Intervallen",
-    "2.300 ml trinken",
-    "Hip-Thrust-Snack: 4x8 schwer + Side Plank 2x30 s/Seite"
-   ],
-   "bonus": [
-    "Sliding Leg Curl 3x6 + Single Leg Deadlift 3x8/Seite",
     "Beckenboden 3 min"
    ],
    "fueling": [
-    "kraft_only-Tag: 300-370 g KH, Protein 134-146 g",
-    "Skyr ins Fruehstueck (Kraft-Tag) - 200 g = 20 g Protein",
-    "Nach der Session 30-40 g Protein binnen 40 min",
-    "Kalzium aus der Nahrung im Blick behalten: 1.000-1.200 mg, Milchprodukte/Skyr/Sesam/Gruenkohl"
+    "Rad-Tag: 300–370 g KH, Protein 120–145 g",
+    "Vor dem Rad ein Frühstück, kein Gel nötig",
+    "Nach dem Rad 30 g Protein (Skyr 200 g + Semmel)"
    ],
-   "warnung": "Die Muckibude schnell enthaelt TRX Single Leg Squat Jump und DB Jump Squat - das sind echte Sprungkontakte und sie zaehlen auf den 100er-Deckel. Heute deshalb KEINE zusaetzlichen Pogos. Bei Achilles ab 3/10 die beiden Sprung-Uebungen streichen, der Rest bleibt drin.",
-   "coachSays": "Ab dem 13.09. wird nichts Neues mehr probiert. Was diese Woche nicht sitzt, sitzt in Berlin auch nicht."
+   "warnung": "Fußsohle links morgens, 2. Mal nach Intervallen. Kein Laufen, keine Sprünge, kein Pogo bis Sonntag. Wenn der Schmerz Samstag früh noch beim ersten Schritt da ist: Sonntag Long Run auf 90 min kürzen.",
+   "coachSays": "Deine Entscheidung fürs Rad war die richtige. Ich hätte sie dir sonst verordnet."
+  },
+  "2026-09-19": {
+   "headline": "Rad + Mobi. Vortag Long Run: Reis, kein Curry.",
+   "kalender": "US Tax (ganztags, transparent). Sonst frei.",
+   "einheit": "Rad 1:20 locker + Mobi 17 min, vormittags. Beine sollen morgen frisch sein.",
+   "minimum": [
+    "Rad 80 min HF < 120",
+    "Mobi 17 min (nicht dehnen, mobilisieren)",
+    "6 Gels + Koffein-Gel + Flaschen für Sonntag rauslegen",
+    "3.000 ml trinken"
+   ],
+   "bonus": [
+    "Wadenheber isometrisch 3×20 s, wenn die Sohle ruhig ist"
+   ],
+   "fueling": [
+    "Carb-Load 400–450 g: Reis, Nudeln, Brezeln, Saft",
+    "Ballaststoffe < 15 g, KEIN Curry (Lehre 06.09.)",
+    "Hauptmahlzeit mittags, 18:30 Schluss",
+    "Magnesium nur morgens 200 mg"
+   ],
+   "warnung": "Zeh rechts: heute neu tapen + Blasenpuder, Zehensocken bereitlegen. Fußsohle links beim ersten Schritt prüfen — das entscheidet über morgen.",
+   "coachSays": "Morgen ist die letzte Gelegenheit, den 20-Minuten-Gel-Takt zu üben. Nicht das Tempo."
+  },
+  "2026-09-20": {
+   "headline": "Letzter Long Run: 2:15, Gel alle 20 min nach Uhr.",
+   "kalender": "17:00 Volleyball Herrsching → morgens laufen, spätestens 9:00 Start.",
+   "einheit": "2:15 h Zone 2, Pace 7:45–8:00, HF ≤ 140. Renn-Morgen auf 2,5 h proben: Wecker → Start.",
+   "minimum": [
+    "Gel alle 20–22 min = 6 Gels, Koffein als Nr. 4",
+    "Elektrolytflasche 500 ml leer",
+    "Glutamin 15 g 90 min vorher, Flüssigkeit früh, nicht in der letzten Stunde",
+    "Danach 30–40 g Protein binnen 40 min"
+   ],
+   "bonus": [
+    "Zeh + Sohle nach dem Lauf 10 min kühlen"
+   ],
+   "fueling": [
+    "Long-Run-Tag 450–600 g KH gesamt, davon ~125 g im Lauf",
+    "Frühstück wie am 06.09.: Bun + Banane + Kaffee, 2,5 h vor Start",
+    "3.400 ml trinken"
+   ],
+   "warnung": "Fußsohle links: bei Schmerz > 3/10 ab km 5 → auf 90 min kürzen. Blase rechts: Tape wie am 06.09.",
+   "coachSays": "Am 13.09. hast du das Gel-Protokoll nicht diktiert. Heute bitte: Anzahl Gels, fertig. Das ist die einzige Zahl, die mich noch interessiert."
   }
  },
  "woche": {
-  "start": "2026-09-07",
-  "fokus": "ERSTE TAPER-WOCHE - aber der Plan der Coachin tapert das Volumen NOCH NICHT: Mi Intervalle 1:50 h / 163 TSS und So Long Run 3:15 h / 228 TSS liegen beide UEBER der Vorwoche. Sichtbar getapert wird erst ab dem 14.09. Was ab heute trotzdem gilt, ist die Kraft-Taper-Regel: Gewicht bleibt, 2 Saetze statt 3, letzte schwere Einheit ~14.09., Kraft wird nie gestrichen. Ausgangslage ist stark: der Long Run am 06.09. lief 3:00 h bei Oe-HF 133 - sechs Schlaege tiefer als eine Woche zuvor bei gleicher Pace. UND DAS RENN-OUTFIT STEHT: Zehensocken mit Blasenpuder und Leukotape am verletzten Zeh getestet, keine neuen Blasen, kein Rucksack sondern Sport-BH mit Taschen. Damit ist die Ausruestungsfrage vor der Keine-Experimente-Grenze am 13.09. erledigt. Was bleibt, ist eine einzige offene Baustelle: die Carb-Rate im Lauf. Samstag 12.09. vormittags laeuft /essensplan fuer die Rennwoche.",
+  "start": "2026-09-14",
+  "fokus": "Taper Woche 2. Volumen runter, Füße heilen lassen. Sonntag letzter Long Run 2:15 — einzige Aufgabe: Gel alle 20 min.",
   "luecken": [
-   "Carb-Rate im Long Run: 06.09. waren es 5 Gels auf 3,0 h = 35 g/h. Am 30.08. noch 42 g/h. Plan sind 50-55 g/h. Die Rate faellt, obwohl sie steigen soll - und dein eigener Satz nennt den Grund: 'Always felt a slight hunger feeling just before it was time to take the next gel.' Der Abstand lag bei ~36 min, noetig sind 20-22 min. Am 13.09. also 8-9 Gels statt 5, nach Uhr.",
-   "Renn-Morgen zu lang und zu fluessig: 4 h zwischen Wecker und Start, davon 1,6 l in der letzten Stunde - 'felt a bit too full'. Dein eigener Kommentar: in Berlin ist die Zeit nicht da. Am 13.09. auf ~2,5 h proben, Fluessigkeit frueher platzieren statt weniger trinken.",
-   "Fluessigkeit im Alltag: 7-Tage-Schnitt 1.817 ml gegen Tagesziele von 2.500-3.300, der 02.09. stand bei 700 ml. Ausnahme war der 06.09. mit 3.800 ml - und genau da lief der beste Long Run des Blocks."
+   "Gel-Takt: 06.09. waren es 35 g/h statt 55. Vom 13.09. fehlt die Zahl. Sonntag: 6 Gels, danach diktieren.",
+   "Kette & Sehnen: 0 Einträge seit 07.09. Im Taper okay — nur die Wadenheber (isometrisch) laufen weiter."
   ]
  },
  "trends": {
-  "kommentar": "ERHOLUNG 01.-07.09. (Oura): HRV 38 / 22 / 28 / 24 / - / - / 19 ms. Zwei Naechte (05. und 06.09.) hat der Ring nur Minuten aufgezeichnet, HRV fehlt dort. Der 01.09. mit 38 ms war der beste Einzelwert seit Wochen; heute steht 19 - der Tag NACH 3 h Zone 2, und damit erwartbar. Ruhepuls 53 heute gegen 47 am 01.09., Readiness 76 gegen 91, Schlaf 8:35 h bei Score 92. Der Schlaf ist stabil gut, das ist die Nachricht. Was zu beobachten ist: Ab jetzt gilt die Taper-Regel - HRV-Drops werden ernst genommen, nicht weggepusht. Wenn die HRV am Mittwochmorgen nicht ueber 22 liegt, gehen die Intervalle langsamer an. Die zweite Erklaerungsspur bleibt Fluessigkeit: 01.-05.09. lagen 700-1.800 ml an, am 06.09. dann 3.800 - und genau da war der Lauf am besten. Kein Beweis, aber ein Muster, das jetzt zum zweiten Mal auftaucht.",
+  "kommentar": "Der Taper wirkt: HRV diese Woche Ø 34 (Vorwoche 25), Ruhepuls 48,5 (bester Wert seit Juli), Readiness 85–89. Der Körper ist erholt — die schweren Beine vom 16.09. sind Taper-Müdigkeit, kein Formverlust.",
   "wochen": [
    {
     "woche": "2026-01-05",
@@ -402,6 +279,30 @@
     "hrv": 27.3,
     "rhr": 50.5,
     "schlaf": 8.33
+   },
+   {
+    "woche": "2026-08-24",
+    "hrv": 24.7,
+    "rhr": 51.6,
+    "schlaf": 7.71
+   },
+   {
+    "woche": "2026-08-31",
+    "hrv": 26.4,
+    "rhr": 50.6,
+    "schlaf": 8.16
+   },
+   {
+    "woche": "2026-09-07",
+    "hrv": 25.0,
+    "rhr": 50.5,
+    "schlaf": 8.35
+   },
+   {
+    "woche": "2026-09-14",
+    "hrv": 33.8,
+    "rhr": 48.5,
+    "schlaf": 7.82
    }
   ],
   "kmWochen": [
@@ -420,178 +321,94 @@
    {
     "woche": "2026-08-31",
     "km": 45.0
+   },
+   {
+    "woche": "2026-09-07",
+    "km": 47.5
+   },
+   {
+    "woche": "2026-09-14",
+    "km": 14.5
    }
   ]
  },
  "beweise": [
   {
-   "titel": "3 Stunden gelaufen - und der Puls war 6 Schlaege TIEFER als eine Woche vorher",
-   "text": "06.09.: 23,28 km in exakt 3:00 h, Oe-Pace 7:44/km, Oe-HF 133. Am 30.08. dieselbe Pace (7:42) bei HF 139. Gleiches Tempo, 1,2 km mehr, 10 Minuten laenger - und sechs Schlaege weniger. Das ist keine Tagesform, das ist aerobe Anpassung. HF 133 liegt jetzt klar UNTER deiner labor-gemessenen LT1 von 139; am 30.08. lag sie exakt darauf. Und zum ersten Mal hast du die Vorgabe 'nicht schneller als 7:45-8:00' auch wirklich getroffen."
+   "titel": "3:15 h bei HF 133 — Deckel gehalten",
+   "text": "13.09.: 23,6 km, Ø-HF 133, max 141. Längster Lauf der Vorbereitung, unter deiner LT1 von 139 geblieben."
   },
   {
-   "titel": "Das Renn-Outfit steht - und der Zeh hat gehalten",
-   "text": "06.09.: Zehensocken zum ersten Mal ueber 3 Stunden, mit Blasenpuder und dem verletzten Zeh in Leukotape. Keine einzige neue Blase. Die alte Irritation kam leicht zurueck, aber 'nothing compared to last weekend'. Dazu Sport-BH mit Taschen und Hose fuer die Flaschen statt Rucksack, Wasserflasche unterwegs nachgefuellt - hat funktioniert. Deine eigene Bilanz: 'So at least the race outfit is settled now.' Sieben Tage vor der Experimente-Grenze ist das genau rechtzeitig."
+   "titel": "Ruhepuls 45",
+   "text": "15.09.: RHR 45, HRV 41 — die besten Erholungswerte seit Beginn der Aufzeichnung. Der Taper kommt an."
   },
   {
-   "titel": "Du hast eine mentale Strategie gefunden, die messbar gewirkt hat",
-   "text": "Gegen Ende des 3-Stunden-Laufs hast du fremden Frauen Komplimente gemacht. Sie haben zurueckgelaechelt. Dein Satz dazu: 'It gave me plenty of happy hormones which took away completely the feeling of tired legs.' Das ist kein netter Nebeneffekt - das ist ein Werkzeug fuer km 30 bis 42 in Berlin, und du hast es unter Belastung getestet."
+   "titel": "Schwelle bei 6:04/km",
+   "text": "11.09.: 30 min Z4 mit Ø 6:04/km — müde, abends, voller Bauch. Im Juni lag dieselbe Einheit bei 7:10."
   }
  ],
  "tagesplan": {
-  "2026-08-31": {
-   "hinweis": "Tag nach der Generalprobe. Wiederauffuellen schlaegt Sparen: 300-400 g KH, kein 'ich hab ja gestern viel gegessen'. Kein Laufreiz, keine schwere Beinkraft. Neue Wochenkonto-Woche startet heute.",
+  "2026-09-18": {
+   "hinweis": "Taper, 9 Tage vor Berlin. Rad statt Tempolauf wegen Fußsohle links. Kein Kraft, keine Sprünge.",
    "nur": [
     "daily-meditation",
+    "daily-wallsit",
     "daily-balance",
-    "daily-ankle"
+    "daily-ankle",
+    "daily-birddog",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
    ],
    "extra": [
     {
      "tier": "pflicht",
-     "name": "Beckenboden 3 min",
-     "duration": "3 min",
-     "trigger": "irgendwann",
-     "why": "Neue Kontowoche, billigster Start. Soleus/Wadenheber und Hip Thrust erst ab Dienstag — 24 h nach 2:50 h keine schwere Beinkraft."
-    },
-    {
-     "tier": "activity",
-     "name": "Magnesium-Neustart: Bisglycinat 200 mg morgens",
-     "duration": "1 min",
-     "trigger": "zum Fruehstueck",
-     "why": "Eliminationstest 23.-28.08. ist positiv ausgefallen (Stuhl von duennfluessig auf fest). Wiedereinstieg NUR reines Bisglycinat, 200 mg, nur morgens, zum Essen — unter der EFSA-Grenze von 250 mg. Abenddosis bleibt gestrichen."
+     "name": "Fußsohle: Ball rollen 5 min + Wadenheber isometrisch 3×20 s",
+     "duration": "8 min",
+     "trigger": "nach dem Rad",
+     "why": "Sohle links schmerzt zum 2. Mal nach Intervallen. Isometrisch beruhigt die Plantarfaszie, ohne zu reizen."
     }
    ]
   },
-  "2026-09-01": {
-   "hinweis": "Intervalltag mit freiem Kalender - der Lauf gehoert in den Morgen. Neue Kontowoche Kette & Sehnen startet bei 0 von allem; heute nur Pogos (frische Beine), Soleus und Hip Thrust kommen Mi + Fr.",
+  "2026-09-19": {
+   "hinweis": "Vortag Long Run. Rad + Mobi, Beine sparen.",
+   "nur": [
+    "sa-rad",
+    "sa-mobility",
+    "sa-faszien",
+    "daily-meditation",
+    "daily-wallsit",
+    "daily-balance",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
    "extra": [
     {
      "tier": "pflicht",
-     "name": "Pogos 3x20 vor dem Einlaufen",
+     "name": "6 Gels + Koffein-Gel + Flaschen + Tape rauslegen",
      "duration": "5 min",
-     "trigger": "nach dem Warm-up, vor den Intervallen",
-     "why": "Wochenkonto pogo steht auf 0 von 2. Nur heute moeglich: Freitag bringt die Muckibude eigene Sprungkontakte mit (TRX Single Leg Squat Jump, DB Jump Squat), da waere der 100er-Deckel gesprengt. Abbruch bei jedem Achilles-Zwicken."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Beckenboden 3 min",
-     "duration": "3 min",
-     "trigger": "irgendwann",
-     "why": "Konto 0 von 3, kostet nichts und ist von jedem Tag aus erreichbar."
-    },
-    {
-     "tier": "activity",
-     "name": "Magnesium Bisglycinat 200 mg morgens",
-     "duration": "1 min",
-     "trigger": "zum Fruehstueck",
-     "why": "Zweiter Tag der neuen Dosierung nach dem positiven Eliminationstest. Nur morgens, zum Essen, Abenddosis bleibt gestrichen."
-    }
-   ]
-  },
-  "2026-09-02": {
-   "hinweis": "Drei Termine (08:00, 11:00, 16:00). Kraft in die Luecke 09:00-10:15, Rad 13:00-14:30. Kraft-Tag = die schweren Snacks der Kette gehoeren hierhin.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Soleus-Snack: Bent-Knee Calf Raise 3x10 (3 s runter) + Wadenheber gestreckt 3x10",
-     "duration": "8 min",
-     "trigger": "im Anschluss an die Kraft-Session",
-     "why": "Wochenkonto achilles 0 von 2, und in den drei Wochen davor zusammen 1 von 6. Am 30.08. hat die linke Achillessehne im Long Run gezwickt. Hoechste Prioritaet der Woche - abhaken im Wochenkonto, nicht doppelt fuehren."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Po-Snack: Hip Thrust 4x8 schwer + Side Plank 2x30 s/Seite",
-     "duration": "12 min",
-     "trigger": "in der Kraft-Session",
-     "why": "Wochenkonto po 0 von 3. Zweiter Durchgang Freitag, dritter faellt diese Woche aus - Samstag ist Vortag des 3-h-Long-Runs, da keine schwere Beinkraft."
-    }
-   ]
-  },
-  "2026-09-03": {
-   "hinweis": "Tempolauf am Vormittag, Termin erst 16:20. Nach dem Lauf der Hamstring-Snack - der ist neural billig und stoert die Freitags-Kraft nicht.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Hamstring-Snack: Sliding Leg Curl 3x6 (verkuerzte ROM) + Single Leg Deadlift 3x8/Seite",
-     "duration": "10 min",
-     "trigger": "nach dem Auslaufen",
-     "why": "Wochenkonto hamstring 0 von 2. Am 16.08. hast du den oberen Hamstring-Ansatz links deutlicher gespuert als rechts - die Seitenasymmetrie hoert nicht von allein auf."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Beckenboden 3 min",
-     "duration": "3 min",
      "trigger": "abends",
-     "why": "Konto-Soll 3x/Woche."
+     "why": "Sonntag ist die letzte Gel-Takt-Probe vor Berlin."
     }
    ]
   },
-  "2026-09-08": {
-   "hinweis": "Kraft-Dienstag im Taper: Gewicht bleibt, 2 Saetze statt 3. 31,4 Grad - drinnen oder frueh. Neue Kontowoche Kette & Sehnen startet heute bei 0 von allem.",
+  "2026-09-20": {
+   "hinweis": "Letzter Long Run 2:15. Morgens, wegen Volleyball 17:00.",
+   "nur": [
+    "so-aktivierung",
+    "so-longrun",
+    "daily-wallsit",
+    "daily-supp-morgen",
+    "daily-supp-tag",
+    "daily-supp-abend"
+   ],
    "extra": [
     {
      "tier": "pflicht",
-     "name": "Soleus-Snack: Bent-Knee Calf Raise 3x10 (3 s runter) + Wadenheber gestreckt 3x10",
-     "duration": "8 min",
-     "trigger": "direkt nach der Muckibude",
-     "why": "Wochenkonto 'achilles' steht auf 0 von 2, und letzte Woche waren es nur 1 von 2. Hoechste Prioritaet der Liste: Achilles-Historie, neural billig, geht auch nach harten Tagen. Ins Konto tippen, nicht hier abhaken."
-    },
-    {
-     "tier": "pflicht",
-     "name": "Beckenboden 3 min",
-     "duration": "3 min",
-     "trigger": "irgendwann",
-     "why": "Konto 0 von 3, kostet nichts, von jedem Tag aus erreichbar."
-    },
-    {
-     "tier": "activity",
-     "name": "Trinkflasche an den Schreibtisch - Ziel 3.300 ml",
-     "duration": "laufend",
-     "why": "31,4 Grad Tagesmaximum. Der 7-Tage-Schnitt liegt bei 1.817 ml gegen Ziele um 2.500-3.300 - das ist die groesste Luecke der Woche."
-    },
-    {
-     "tier": "activity",
-     "name": "Magnesium Bisglycinat 200 mg morgens zum Essen",
-     "duration": "1 min",
-     "why": "Seit 31.08. nur noch morgens, Abenddosis dauerhaft gestrichen."
-    }
-   ]
-  },
-  "2026-09-09": {
-   "hinweis": "Intervalltag, 1:50 h / 163 TSS - die groesste Lauf-Einheit der Woche. Morgens, mit Regenjacke. Keine Kraft, keine Pogos.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "2 Gels dabei (Min 40-45 und Min 80-85) + Elektrolytflasche 500 ml",
-     "duration": "2 min Vorbereitung",
-     "trigger": "am Abend vorher packen",
-     "why": "110 min Einheit = Fueling-Pflicht (>75 min, 30-60 g KH/h). Am Vorabend packen ist der einzige Weg, der bisher funktioniert hat."
-    },
-    {
-     "tier": "bonus",
-     "name": "Hip Thrust 4x8 schwer + Side Plank 2x30 s/Seite",
-     "duration": "12 min",
-     "trigger": "abends, nur wenn die Beine nicht schwer sind",
-     "why": "Konto 'po' 0 von 3 und letzte Woche ebenfalls 0 von 3. Wenn heute nicht, dann Donnerstag - dann aber sicher."
-    }
-   ]
-  },
-  "2026-09-10": {
-   "hinweis": "Kraft-Donnerstag im Taper: 2 Saetze statt 3, Gewicht bleibt. Die Muckibude schnell bringt eigene Sprungkontakte mit - keine zusaetzlichen Pogos.",
-   "extra": [
-    {
-     "tier": "pflicht",
-     "name": "Hip Thrust 4x8 schwer + Side Plank 2x30 s/Seite",
-     "duration": "12 min",
-     "trigger": "an die Muckibude anhaengen",
-     "why": "Konto 'po' steht auf 0 von 3, in der Vorwoche ebenfalls 0 von 3. Spaetestens heute - danach wird die Woche eng."
-    },
-    {
-     "tier": "bonus",
-     "name": "Sliding Leg Curl 3x6 verkuerzte ROM + Single Leg Deadlift 3x8/Seite",
-     "duration": "10 min",
-     "trigger": "nur wenn nach dem Hip Thrust noch Kraft da ist",
-     "why": "Konto 'hamstring' 0 von 2. Reihenfolge ist Absicht: Po vor Hamstring, wenn nicht beides passt."
+     "name": "Gel-Takt 20–22 min nach Uhr (6 Gels)",
+     "duration": "im Lauf",
+     "trigger": "Uhr-Alarm alle 20 min",
+     "why": "06.09.: 36 min Abstand = 35 g/h. Ziel 55 g/h."
     }
    ]
   }
