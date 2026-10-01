@@ -89,6 +89,7 @@ async function loadPlan(){
   if(!token()) return;
   try {
     const r = await fetch(API(PLAN_PATH), {headers:{...gh(), Accept:'application/vnd.github.raw+json'}, cache:'no-store'});
+    if(r.status === 401){ lsSet(LS.token, ''); render(); return; }   // Schlüssel gelöscht/abgelaufen → neu verbinden
     if(!r.ok) throw new Error(r.status===401 ? 'Token ungültig' : r.status===404 ? 'Noch kein Plan' : 'HTTP '+r.status);
     PLAN = cleanPlan(await r.json()); lsSet(LS.plan, PLAN); render();
   } catch(e){ syncErr = String(e.message||e); setSyncLabel(); }
@@ -287,6 +288,7 @@ function render(){
 
 function setupView(){
   return `<div class="card narrow"><p class="big">Einmal verbinden</p>
+    <p class="mut">Nimm den Schlüssel „Trainingsbuch“. Deine Einträge bleiben erhalten.</p>
     <p>Deine Trainingsdaten liegen privat bei GitHub. Füge hier einmal deinen Zugangsschlüssel ein (beginnt mit <span class="num">github_pat_</span>). Claude hat dir gezeigt, woher du ihn bekommst.</p>
     <label class="lbl" for="tok">Schlüssel</label><input type="password" id="tok" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="github_pat_…">
     <button class="btn primary" id="tokok">Verbinden</button></div>`;
