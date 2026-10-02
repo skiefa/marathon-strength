@@ -449,8 +449,8 @@ function viewKraft(){
         <div class="row"><b>${esc(u.name)}</b><span class="mut">${sg.last ? esc(sg.last) : `${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}`}</span></div>
         ${sg.last ? `<span style="font-weight:700">${esc(sg.text)}</span>` : ''}${u.hinweis ? `<span class="mut">${esc(u.hinweis)}</span>` : ''}
         ${infoHTML(u)}
-        <div class="sethead" style="grid-template-columns:22px ${kgU ? '1fr ' : ''}1fr 56px"><span></span>${kgU ? '<span>kg</span>' : ''}<span>${u.einheit === 's' ? 'Sekunden' : 'Wdh'}</span><span></span></div>
-        ${saetze.map((x, si) => `<div class="set" style="grid-template-columns:22px ${kgU ? '1fr ' : ''}1fr 56px"><span class="num mut">${si+1}</span>
+        <div class="sethead" style="grid-template-columns:16px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 46px"><span></span>${kgU ? '<span>kg</span>' : ''}<span>${u.einheit === 's' ? 'Sekunden' : 'Wdh'}</span><span></span></div>
+        ${saetze.map((x, si) => `<div class="set" style="grid-template-columns:16px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 46px"><span class="num mut">${si+1}</span>
           ${kgU ? `<div class="stp"><button data-st="${ui}|${si}|kg|-1" aria-label="weniger kg">−</button><input class="kgin" data-kg="${ui}|${si}" inputmode="decimal" value="${x.kg ? fmt(x.kg) : ''}" placeholder="kg" aria-label="Satz ${si+1} kg"><button data-st="${ui}|${si}|kg|1" aria-label="mehr kg">+</button></div>` : ''}
           <div class="stp"><button data-st="${ui}|${si}|wdh|-1" aria-label="weniger">−</button><span>${x.wdh}${u.einheit === 's' ? ' s' : ''}</span><button data-st="${ui}|${si}|wdh|1" aria-label="mehr">+</button></div>
           <button class="ok" data-ok="${ui}|${si}" aria-pressed="${!!x.ok}" aria-label="Satz erledigt">✓</button></div>`).join('')}
@@ -478,19 +478,30 @@ function startRest(sec){
 }
 
 /* ---------- TAGEBUCH ---------- */
+/* Tagebuch: mehrere Einträge pro Tag (S.tage[d].notizen = [{id,u,text}]); Energie/Stimmung einmal pro Tag */
+function migrateNotizen(){
+  let changed = false;
+  Object.entries(S.tage).forEach(([d, x]) => { const tb = x.tagebuch;
+    if(tb && tb.text){ (x.notizen = x.notizen || []).push({id:'alt-'+d, u:tb.u || now(), text:tb.text}); tb.text = ''; tb.u = now(); changed = true; } });
+  if(changed) save();
+}
+const zeit = u => new Date(u).toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'});
 function viewBuch(){
-  const t = TODAY(), b = day(t).tagebuch || {};
-  const past = Object.keys(S.tage).filter(d => d < t && S.tage[d].tagebuch && (S.tage[d].tagebuch.text || S.tage[d].tagebuch.energie)).sort().reverse().slice(0, 7);
+  migrateNotizen();
+  const t = TODAY(), b = day(t).tagebuch || {}, heute = (day(t).notizen || []).slice().sort((a,b) => a.u - b.u);
   const E = ['leer','müde','okay','gut','voll da'], M = ['mies','gedrückt','okay','gut','super'];
+  const past = Object.keys(S.tage).filter(d => d < t && (((S.tage[d].notizen || []).length) || (S.tage[d].tagebuch && S.tage[d].tagebuch.energie))).sort().reverse().slice(0, 7);
   return `<div class="stack narrow" style="margin:0 auto">
-    <span class="lbl">${esc(longDate(t))}</span>
-    <div class="card"><b>Energie</b><div class="scale">${E.map((w,i) => `<button data-mo="energie|${i+1}" aria-pressed="${b.energie === i+1}">${w}</button>`).join('')}</div>
-      <b>Stimmung</b><div class="scale">${M.map((w,i) => `<button data-mo="stimmung|${i+1}" aria-pressed="${b.stimmung === i+1}">${w}</button>`).join('')}</div>
-      <label for="tx"><b>Ein Satz</b> <span class="mut">(tippen oder diktieren)</span></label>
-      <textarea id="tx" placeholder="Wie war dein Tag? Zwickt etwas, schreib es einfach dazu.">${esc(b.text || '')}</textarea>
-      <button class="btn primary" id="txok">Speichern</button></div>
+    <div class="card"><span class="lbl">${esc(longDate(t))}</span>
+      <b>Energie</b><div class="scale">${E.map((w,i) => `<button data-mo="energie|${i+1}" aria-pressed="${b.energie === i+1}">${w}</button>`).join('')}</div>
+      <b>Stimmung</b><div class="scale">${M.map((w,i) => `<button data-mo="stimmung|${i+1}" aria-pressed="${b.stimmung === i+1}">${w}</button>`).join('')}</div></div>
+    <div class="card"><label for="tx" class="lbl">Neuer Eintrag <span class="mut" style="font-weight:400">(tippen oder diktieren)</span></label>
+      <textarea id="tx" placeholder="Wie geht's dir gerade? Zwickt etwas, schreib es einfach dazu."></textarea>
+      <button class="btn primary" id="txok">Speichern</button>
+      ${heute.length ? `<div class="notes">${heute.map(n => `<div class="note-item"><span class="lbl">${zeit(n.u)}</span><p>${esc(n.text)}</p><button class="btn small" data-ndel="${esc(n.id)}" aria-label="Eintrag löschen">✕</button></div>`).join('')}</div>` : ''}</div>
     ${(P().einsichten || []).length ? `<div class="card"><span class="lbl">Was mir aufgefallen ist</span>${P().einsichten.map(x => `<p><b>${esc(x.titel)}</b> ${esc(x.text || '')}</p>`).join('')}</div>` : ''}
-    ${past.length ? `<div class="card"><span class="lbl">Letzte Tage</span>${past.map(d => { const x = S.tage[d].tagebuch; return `<div><span class="lbl">${dayLabel(d)}</span> ${x.energie ? `<span class="mut">Energie ${E[x.energie-1]}${x.stimmung ? ', Stimmung '+M[x.stimmung-1] : ''}</span>` : ''}<p>${esc(x.text || '')}</p></div>`; }).join('')}</div>` : ''}
+    ${past.length ? `<div class="card"><span class="lbl">Letzte Tage</span>${past.map(d => { const x = S.tage[d], tb = x.tagebuch || {}, ns = (x.notizen || []).slice().sort((a,b) => a.u - b.u);
+        return `<div class="past"><b>${dayLabel(d)}</b> ${tb.energie ? `<span class="mut">Energie ${E[tb.energie-1]}${tb.stimmung ? ', Stimmung '+M[tb.stimmung-1] : ''}</span>` : ''}${ns.map(n => `<p><span class="mut">${zeit(n.u)}</span> ${esc(n.text)}</p>`).join('')}</div>`; }).join('')}</div>` : ''}
   </div>`;
 }
 
@@ -558,7 +569,8 @@ function bind(){
   document.querySelectorAll('[data-kdel]').forEach(b => b.onclick = () => { forget(b.dataset.kdel); save(); render(); });
   // Tagebuch
   document.querySelectorAll('[data-mo]').forEach(b => b.onclick = () => { const [k, v] = b.dataset.mo.split('|'); const tb = d.tagebuch = d.tagebuch || {}; tb[k] = +v; tb.u = now(); save(); render(); });
-  if($('#txok')) $('#txok').onclick = () => { const tb = d.tagebuch = d.tagebuch || {}; tb.text = $('#tx').value.trim(); tb.u = now(); save(); toast('Gespeichert'); };
+  if($('#txok')) $('#txok').onclick = () => { const txt = $('#tx').value.trim(); if(!txt) return; (d.notizen = d.notizen || []).push({id:uid(), u:now(), text:txt}); save(); render(); toast('Gespeichert'); };
+  document.querySelectorAll('[data-ndel]').forEach(b => b.onclick = () => { forget(b.dataset.ndel); save(); render(); });
 }
 
 

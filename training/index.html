@@ -21,7 +21,7 @@
    (Laufen pink, Kraft lila, Schwimmen aqua, Rad/Wandern lime, Mobility lemon, Schlaf pfirsich).
    Tönungen: Kür 14 % · geplant 38 % · erledigt 62 % · Karte 22 %. Schrift groß, Satzschreibung statt Versalien. */
 :root{
-  --bg:#ffffff; --surface:#ffffff; --ink:#221d1a; --muted:#4f4842; --line:#ebe7e2; --chip:#f4f2ef;
+  --bg:#f3f1ed; --surface:#ffffff; --ink:#221d1a; --muted:#4f4842; --line:#ebe7e2; --chip:#f4f2ef;
   --accent:#221d1a; --on-accent:#fffdfb;
   --c-lauf:#ff5a92; --c-kraft:#a874f0; --c-schwimmen:#35c7c0; --c-ausdauer:#a4d62a; --c-mobility:#ffd43b; --c-schlaf:#ff9670;
   --good:#2f8a4f; --warn:#c48a00; --bad:#c0392b; --gold:#b9850f;
@@ -31,7 +31,7 @@
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#1c1917; --surface:#1c1917; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29;
+  --bg:#141210; --surface:#221f1c; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29;
   --accent:#f4efe9; --on-accent:#1c1917;
   --c-lauf:#ff7aa8; --c-kraft:#bf98ff; --c-schwimmen:#5ad8d0; --c-ausdauer:#bde85a; --c-mobility:#ffe066; --c-schlaf:#ffad8f;
   --good:#6cc98a; --warn:#e8b730; --bad:#ff7a6b; --gold:#e8b730;
@@ -115,7 +115,10 @@ details[open] summary{margin-bottom:8px}
 /* Kraft */
 .set{display:grid;gap:6px;align-items:center}
 .stp{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg)}
-.stp button{border:0;background:transparent;color:var(--ink);width:44px;height:48px;font:700 1.5rem var(--body);cursor:pointer}
+.stp button{border:0;background:transparent;color:var(--ink);width:34px;height:48px;font:700 1.4rem var(--body);cursor:pointer;flex:none}
+.set{gap:5px}
+.stp{min-width:0}
+.stp span,.stp .kgin{min-width:3.2ch}
 .stp span{flex:1;text-align:center;font:700 1.05rem var(--mono)}
 .stp .kgin::placeholder{color:var(--muted)}
 .stp .kgin{flex:1;min-width:0;width:100%;border:0;background:transparent;text-align:center;font:700 1.05rem var(--mono);color:var(--ink);padding:0}
@@ -179,15 +182,23 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 .dash .wl .side,.dash .wl .main{grid-column:auto;grid-row:auto;position:static}
 @media (min-width:900px){.dash{grid-template-columns:1fr 1fr}.dash .dcol:last-child{grid-column:1 / -1}}
 @media (min-width:1280px){.app{max-width:1600px}.dash{grid-template-columns:1fr 1.2fr 1fr}.dash .dcol:last-child{grid-column:auto}}
+.notes{display:grid;gap:10px;margin-top:6px;border-top:1px solid var(--line);padding-top:12px}
+.note-item{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:start}
+.note-item .btn{padding:4px 8px}
+.past{display:grid;gap:4px;padding-block:6px}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:20}
 
-/* ===== Flach statt Kästen (Steffi 02.10.2026: „Candy Store“, „frame within a frame“) =====
-   Abschnitte trennen Abstand + Haarlinie, keine Kartenflächen; Farbe nur als Bedeutungsträger. */
-.card{background:none;border:0;border-radius:0;padding:18px 0;border-top:1px solid var(--line)}
-.stack > .card:first-child,.stack > .row + .card,.dcol > .dh + *,.side > .card:first-child{border-top:0}
-.card.hero{background:none;padding-top:6px}
+/* ===== Gruppierte Abschnitte wie iOS-Einstellungen (Steffi 02.10.2026) =====
+   Warmgrauer Grund, jeder Abschnitt ein weißer Block (Handy: randlos), dazwischen ein schmaler Graustreifen.
+   Keine Rahmen, keine Kästen in Kästen. Farbe nur als Bedeutung. */
+.stack{gap:10px}
+.card{background:var(--surface);border:0;border-radius:14px;padding:16px}
+.card .card{background:none;padding:0;border-radius:0}
+@media (max-width:899px){ .card{border-radius:0;margin-inline:-16px;padding:16px} }
+.card > .lbl:first-child,.card > .row:first-child .lbl:first-child{color:var(--ink);font-size:.95rem}
+.card.hero{padding-block:18px}
 .hero .big{font-size:1.6rem}
-.scard{background:none}
+.scard{background:var(--surface)}
 .scard > b{display:flex;align-items:center;gap:8px}
 .scard > b::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
 .tile{background:none;padding:0;border-radius:0}
@@ -201,10 +212,10 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 .wo-chart{padding:0;border-radius:0;background:none}
 .scale button,.stp,.ok,input[type=text],input[type=password],input[type=number],textarea,.kselect{border-radius:8px}
 @media (min-width:900px){
-  .nav{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 6px;margin-bottom:10px}
+  .nav{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 6px;margin-bottom:10px;background:none}
   .nav button{border-radius:6px}
-  .dash{gap:40px}
-  .wl{gap:40px}
+  .dash{gap:24px}
+  .wl{gap:16px}
 }
 </style>
 </head>
