@@ -21,21 +21,21 @@
    (Laufen pink, Kraft lila, Schwimmen aqua, Rad/Wandern lime, Mobility lemon, Schlaf pfirsich).
    Tönungen: Kür 14 % · geplant 38 % · erledigt 62 % · Karte 22 %. Schrift groß, Satzschreibung statt Versalien. */
 :root{
-  --bg:#f5f2ee; --surface:#fffdfb; --ink:#221d1a; --muted:#4f4842; --line:#e6e0d8; --chip:#efeae4;
+  --bg:#ffffff; --surface:#ffffff; --ink:#221d1a; --muted:#4f4842; --line:#ebe7e2; --chip:#f4f2ef;
   --accent:#221d1a; --on-accent:#fffdfb;
   --c-lauf:#ff5a92; --c-kraft:#a874f0; --c-schwimmen:#35c7c0; --c-ausdauer:#a4d62a; --c-mobility:#ffd43b; --c-schlaf:#ff9670;
   --good:#2f8a4f; --warn:#c48a00; --bad:#c0392b; --gold:#b9850f;
-  --t-plan:38%; --t-kuer:14%; --t-done:62%; --t-card:22%;
+  --t-plan:20%; --t-kuer:6%; --t-done:34%; --t-card:12%;
   --hint:#eaf3fc; --hint-line:#d3e5f7;
   --display:"Archivo",system-ui,sans-serif; --body:"Lexend",system-ui,sans-serif; --mono:"Lexend",system-ui,sans-serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#1c1917; --surface:#262220; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29;
+  --bg:#1c1917; --surface:#1c1917; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29;
   --accent:#f4efe9; --on-accent:#1c1917;
   --c-lauf:#ff7aa8; --c-kraft:#bf98ff; --c-schwimmen:#5ad8d0; --c-ausdauer:#bde85a; --c-mobility:#ffe066; --c-schlaf:#ffad8f;
   --good:#6cc98a; --warn:#e8b730; --bad:#ff7a6b; --gold:#e8b730;
-  --t-plan:30%; --t-kuer:12%; --t-done:45%; --t-card:22%; --hint:#1f2b36; --hint-line:#2c3d4d; color-scheme:dark}}
+  --t-plan:22%; --t-kuer:8%; --t-done:34%; --t-card:12%; --hint:#1f2b36; --hint-line:#2c3d4d; color-scheme:dark}}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
@@ -180,6 +180,32 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 @media (min-width:900px){.dash{grid-template-columns:1fr 1fr}.dash .dcol:last-child{grid-column:1 / -1}}
 @media (min-width:1280px){.app{max-width:1600px}.dash{grid-template-columns:1fr 1.2fr 1fr}.dash .dcol:last-child{grid-column:auto}}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:20}
+
+/* ===== Flach statt Kästen (Steffi 02.10.2026: „Candy Store“, „frame within a frame“) =====
+   Abschnitte trennen Abstand + Haarlinie, keine Kartenflächen; Farbe nur als Bedeutungsträger. */
+.card{background:none;border:0;border-radius:0;padding:18px 0;border-top:1px solid var(--line)}
+.stack > .card:first-child,.stack > .row + .card,.dcol > .dh + *,.side > .card:first-child{border-top:0}
+.card.hero{background:none;padding-top:6px}
+.hero .big{font-size:1.6rem}
+.scard{background:none}
+.scard > b{display:flex;align-items:center;gap:8px}
+.scard > b::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+.tile{background:none;padding:0;border-radius:0}
+.tile .bar{background:var(--chip);height:6px}
+.rings{gap:16px 20px}
+.btn{border-radius:8px;border-color:var(--line);background:var(--surface)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.ses{border-radius:8px;padding:10px 12px}
+.ses.kuer{border-width:1.5px}
+.note,.info,.wo-ziel{border:0;border-radius:8px}
+.wo-chart{padding:0;border-radius:0;background:none}
+.scale button,.stp,.ok,input[type=text],input[type=password],input[type=number],textarea,.kselect{border-radius:8px}
+@media (min-width:900px){
+  .nav{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 6px;margin-bottom:10px}
+  .nav button{border-radius:6px}
+  .dash{gap:40px}
+  .wl{gap:40px}
+}
 </style>
 </head>
 <body>

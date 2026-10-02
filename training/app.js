@@ -314,7 +314,7 @@ function woStats(s){
 }
 function workoutHTML(s){
   if(!(s.schritte||[]).length) return '';
-  const st = flatSteps(s.schritte), {sec, km, tss} = woStats(s), W = 600, H = 120;
+  const st = flatSteps(s.schritte), {sec, km, tss} = woStats(s), W = 600, H = 14 + Math.max(...st.map(zoneOf)) * 17 + 6;
   let x = 0, bars = '';
   st.forEach(y => { const w = secOf(y)/sec*W, z = zoneOf(y), h = 14 + z*17;
     bars += `<rect x="${x+0.5}" y="${H-h}" width="${Math.max(1, w-1)}" height="${h}" rx="3" fill="${woFill(z)}"/>`; x += w; });
