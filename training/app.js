@@ -274,15 +274,17 @@ function parseDiktat(text){
 const slug = s => s.toLowerCase().replace(/[äöüß]/g, c => ({'ä':'ae','ö':'oe','ü':'ue','ß':'ss'}[c])).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 /* ================= Views ================= */
-const TABS = [['heute','Heute'],['woche','Woche'],['kraft','Kraft'],['buch','Tagebuch'],['besser','Fortschritt']];
-let TAB = (DEV && new URLSearchParams(location.search).get('tab')) || lsGet(LS.tab, null) || (matchMedia('(min-width:900px)').matches ? 'woche' : 'heute');
+const TABS = [['dash','Übersicht'],['heute','Heute'],['woche','Woche'],['kraft','Kraft'],['buch','Tagebuch'],['besser','Fortschritt']];
+const WIDE = () => matchMedia('(min-width:900px)').matches;
+let TAB = (DEV && new URLSearchParams(location.search).get('tab')) || lsGet(LS.tab, null) || (WIDE() ? 'dash' : 'heute');
 let [selDay, selSes] = DEV && new URLSearchParams(location.search).get('sel') ? new URLSearchParams(location.search).get('sel').split('|') : [null, null]; let weekOff = DEV ? +(new URLSearchParams(location.search).get('w') || 0) : 0, kraftSel = null, restTimer = null;
 
 function render(){
-  $('#nav').innerHTML = TABS.map(([k,l]) => `<button data-tab="${k}" ${TAB===k ? 'aria-current="page"' : ''}>${l}</button>`).join('');
+  if(TAB === 'dash' && !WIDE()) TAB = 'heute';
+  $('#nav').innerHTML = TABS.filter(([k]) => k !== 'dash' || WIDE()).map(([k,l]) => `<button data-tab="${k}" ${TAB===k ? 'aria-current="page"' : ''}>${l}</button>`).join('');
   if(!token()){ $('#main').innerHTML = setupView(); bindSetup(); return; }
   if(!PLAN){ $('#main').innerHTML = `<div class="card narrow"><p class="big">Plan wird geladen …</p><p class="mut">Falls das so bleibt: Internet prüfen. Den ersten Plan legt Claude auf dem Mac an.</p></div>`; return; }
-  $('#main').innerHTML = ({heute:viewHeute, woche:viewWoche, kraft:viewKraft, buch:viewBuch, besser:viewBesser}[TAB])();
+  $('#main').innerHTML = ({dash:viewDash, heute:viewHeute, woche:viewWoche, kraft:viewKraft, buch:viewBuch, besser:viewBesser}[TAB])();
   bind();
 }
 
@@ -328,6 +330,14 @@ function workoutHTML(s){
     <svg class="wo-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Aufbau der Einheit">${bars}</svg>
     <ul class="wo-steps">${list}</ul></div>`;
 }
+
+/* ---------- ÜBERSICHT (nur große Bildschirme): Heute | Woche | Fortschritt ---------- */
+function viewDash(){
+  return `<div class="dash"><section class="dcol"><h2 class="dh">Heute</h2>${viewHeute()}</section>
+    <section class="dcol"><h2 class="dh">Woche</h2>${viewWoche()}</section>
+    <section class="dcol"><h2 class="dh">Fortschritt</h2>${viewBesser()}</section></div>`;
+}
+let _wide = WIDE(); addEventListener('resize', () => { if(WIDE() !== _wide){ _wide = WIDE(); render(); } });
 
 /* ---------- HEUTE ---------- */
 function viewHeute(){

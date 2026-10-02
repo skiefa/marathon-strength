@@ -150,7 +150,7 @@ details[open] summary{margin-bottom:8px}
 .wnav .btn{flex:none;min-width:44px}
 @media (min-width:900px){
   .app{padding-bottom:40px}
-  .nav{position:sticky;top:0;bottom:auto;border:1px solid var(--line);border-radius:14px;margin-bottom:16px;grid-template-columns:repeat(5,auto);justify-content:start;padding:5px;gap:4px}
+  .nav{position:sticky;top:0;bottom:auto;border:1px solid var(--line);border-radius:14px;margin-bottom:16px;grid-template-columns:repeat(6,auto);justify-content:start;padding:5px;gap:4px}
   .nav button{padding:9px 18px;border-radius:10px;font-size:1rem}
   .nav button[aria-current="page"]{background:var(--accent);color:var(--on-accent);box-shadow:none}
   .grid2{grid-template-columns:1.25fr 1fr}
@@ -171,6 +171,14 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 .wo-steps li{display:grid;grid-template-columns:14px 1fr;gap:10px;align-items:start}
 .wo-steps i{width:14px;height:14px;border-radius:4px;margin-top:4px}
 .wo-steps .rep{padding-left:24px}
+.dash{display:grid;gap:16px;align-items:start}
+.dcol{display:grid;gap:12px;align-content:start;min-width:0}
+.dh{font-size:1.25rem}
+.dash .narrow{max-width:none;margin:0}
+.dash .wl{grid-template-columns:1fr}
+.dash .wl .side,.dash .wl .main{grid-column:auto;grid-row:auto;position:static}
+@media (min-width:900px){.dash{grid-template-columns:1fr 1fr}.dash .dcol:last-child{grid-column:1 / -1}}
+@media (min-width:1280px){.app{max-width:1600px}.dash{grid-template-columns:1fr 1.2fr 1fr}.dash .dcol:last-child{grid-column:auto}}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:20}
 </style>
 </head>
