@@ -51,7 +51,7 @@ function cleanPlan(p){
     const fix = st => (st || []).forEach(x => { if(x.wiederhole){ x.wiederhole = N(x.wiederhole); fix(x.schritte); } else { x.art = ID(x.art); ['min','sek','zone'].forEach(k => { if(x[k] != null) x[k] = N(x[k]); }); if(x.hf) x.hf = x.hf.map(N); } });
     fix(s.schritte);
   }));
-  Object.values((p && p.erledigt) || {}).forEach(as => (as || []).forEach(a => { a.typ = ID(a.typ); a.id = ID(a.id); a.min = N(a.min); if(a.km != null) a.km = N(a.km); }));
+  Object.values((p && p.erledigt) || {}).forEach(as => (as || []).forEach(a => { a.typ = ID(a.typ); a.id = ID(a.id); a.min = N(a.min); if(a.km != null) a.km = N(a.km); ['hf','pace','hfMax','kad','hm'].forEach(k => { if(a[k] != null) a[k] = N(a[k]); }); if(a.serie){ a.serie.dt = N(a.serie.dt) || 30; ['hf','p'].forEach(k => a.serie[k] = (a.serie[k] || []).map(v => v == null ? null : N(v))); } }));
   (p && p.gymVorlage || []).forEach(u => { u.id = ID(u.id); u.saetze = N(u.saetze); u.wdh = N(u.wdh); u.einheit = ID(u.einheit); });
   Object.values((p && p.wochenSoll) || {}).forEach(w => Object.keys(w).forEach(k => w[k] = N(w[k])));
   return p;
@@ -373,6 +373,7 @@ function viewHeute(){
     ${akt.map(s => sessionCard(t, s)).join('')}
     ${ins ? `<div class="card ins"><span class="kick">Neu entdeckt</span><h2>${esc(ins.titel)}</h2>${ins.text ? `<p>${esc(ins.text)}</p>` : ''}<button class="more" data-goto="besser">Deine Geschichte →</button></div>` : ''}
     ${weekStrip(t)}
+    ${snackCard(t)}
     <div class="card">
       <div class="sh"><h3>Supplements</h3></div>
       ${suppListe().length ? `<div class="pills">${['morgen','abend'].map(z => suppListe().filter(x => x.zeit === z).length ? `<span class="plbl">${z === 'morgen' ? 'Morgens' : 'Abends'}</span>` + suppListe().filter(x => x.zeit === z).map(x => `<button class="pill" data-supp="${esc(x.id)}" aria-pressed="${!!(d.supp && d.supp[x.id])}">${esc(x.name)}</button>`).join('') : '').join('')}</div>` : `<div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
@@ -396,11 +397,13 @@ function weekStrip(t){
     <div class="wks">${cells}</div>
     <div class="wleg">${[...typen].map(x => `<span class="t-${esc(x)}"><i></i>${esc(TYPNAME[x] || x)}</span>`).join('')}<span class="hint"><i class="o"></i>geplant</span></div>
     ${offen.length ? `<p class="wnext"><span>Noch offen</span> ${offen.slice(0, 3).map(esc).join(' · ')}</p>` : pf ? `<p class="wnext">Alles für diese Woche erledigt.</p>` : ''}
-    <button class="linkbtn" id="mob">+ Mobility / Dehnen${(day(t).mobility||[]).length ? ` · heute ${day(t).mobility.length}×` : ''}</button>
+    ${snackWoche(wk)}
   </div>`;
 }
 function sessionCard(d, s){
+  if(s.typ === 'schwimmen') return swimCard(d, s);
   const done = isDone(d, s), chk = day(d).check || {}, hasSteps = (s.schritte||[]).length;
+  const ist = done ? sollIstHTML(d, s) : '';
   const more = hasSteps || (s.details||[]).length || (s.uebungen||[]).length;
   return `<div class="card scard t-${s.typ}">
     <div class="sess"><div class="edge"></div><div style="flex:1;min-width:0;display:grid;gap:4px">
@@ -409,7 +412,8 @@ function sessionCard(d, s){
       ${hasSteps ? miniBlocks(s) : ''}
       ${s.zweck ? `<p class="zw">${esc(s.zweck)}</p>` : s.ziel ? `<p class="zw">${esc(s.ziel)}</p>` : ''}
     </div></div>
-    ${more ? `<details><summary>Aufbau & Details</summary>
+    ${ist ? `<details open><summary>Soll / Ist</summary>${ist}</details>` : ''}
+    ${more && !ist ? `<details><summary>Aufbau & Details</summary>
       ${hasSteps ? workoutHTML(s) : ''}
       ${(s.uebungen||[]).length ? `<ul>${s.uebungen.map(u => `<li>${esc(u.name)} · ${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}</li>`).join('')}</ul>` : ''}
       ${(s.details||[]).length ? `<ul>${s.details.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
@@ -423,6 +427,99 @@ function miniBlocks(s){
   let x = 0, r = '';
   st.forEach(y => { const w = secOf(y)/sec*W, z = zoneOf(y), h = 10 + z*5; r += `<rect x="${x+0.5}" y="${H-h}" width="${Math.max(1.2, w-1)}" height="${h}" rx="2" fill="${woFill(z)}"/>`; x += w; });
   return `<svg class="mini" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${r}</svg>`;
+}
+
+/* ---------- SNACKS: Mobility, Breathwork, Meditation, Kette & Sehnen (Steffi 08.10.2026) ----------
+   S.tage[d].snacks = [{id,u,k}] · altes S.tage[d].mobility zählt als k:'mobility'. Liste änderbar über plan.snacks. */
+const SNACKS_STD = [{id:'mobility', name:'Mobility'}, {id:'atem', name:'Breathwork'}, {id:'meditation', name:'Meditation'},
+  {id:'achilles', name:'Achilles'}, {id:'po', name:'Po'}, {id:'hamstring', name:'Hamstring'}, {id:'beckenboden', name:'Beckenboden'}];
+const snackListe = () => { const l = P().snacks; return Array.isArray(l) && l.length ? l.filter(x => x && x.id && x.name) : SNACKS_STD; };
+function snacksOf(d){ const x = day(d); return [...(x.snacks || []), ...(x.mobility || []).map(m => ({...m, k:'mobility'}))]; }
+function snackCard(t){
+  const heute = snacksOf(t), n = k => heute.filter(x => x.k === k).length;
+  return `<div class="card">
+    <div class="sh"><h3>Snacks & Ruhe</h3>${heute.length ? `<button class="linkbtn" id="snundo">↶ letzten zurück</button>` : ''}</div>
+    <div class="pills">${snackListe().map(x => `<button class="pill snk" data-snack="${esc(x.id)}" aria-pressed="${n(x.id) > 0}">${esc(x.name)}${n(x.id) > 1 ? ` ${n(x.id)}×` : ''}</button>`).join('')}</div>
+  </div>`;
+}
+function snackWoche(wk){
+  const c = {}; for(let i = 0; i < 7; i++) snacksOf(addDays(wk, i)).forEach(x => c[x.k] = (c[x.k] || 0) + 1);
+  for(let i = 0; i < 7; i++) garminAll(addDays(wk, i)).forEach(a => { if(a.typ === 'atem' || a.typ === 'meditation') c[a.typ] = (c[a.typ] || 0) + 1; });
+  const parts = snackListe().filter(x => c[x.id]).map(x => `${c[x.id]}× ${x.name}`);
+  return parts.length ? `<p class="wnext"><span>Snacks</span> ${parts.map(esc).join(' · ')}</p>` : '';
+}
+
+/* ---------- SOLL / IST (wie TrainingPeaks) ----------
+   Erledigte Einheit: Plan gegen Garmin. Läufe mit Kurve (erledigt[].serie, 30-s-Punkte) → Puls pro Abschnitt gegen den HF-Bereich. */
+const pm = s => s ? `${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}` : '–';
+const toMin = z => { const m = /^(\d+):(\d+)/.exec(z || ''); return m ? +m[1]*60 + +m[2] : null; };
+function matchGarmin(d, s){
+  const t = RING_TYP[s.typ], c = garminDone(d).filter(a => s.typ === 'lauf' ? a.typ === 'lauf' : t === 'ausdauer' ? RING_TYP[a.typ] === 'ausdauer' : a.typ === s.typ);
+  if(c.length < 2) return c[0] || null;
+  const z = toMin(s.zeit); return z == null ? c[0] : c.slice().sort((a,b) => Math.abs(toMin(a.zeit)-z) - Math.abs(toMin(b.zeit)-z))[0];
+}
+function sollIstHTML(d, s){
+  if(s.typ === 'kraft' || s.typ === 'gym') return kraftIst(d, s);
+  const a = matchGarmin(d, s); if(!a) return '';
+  const plan = (s.schritte||[]).length ? woStats(s) : {sec:(s.dauer||0)*60, km:0};
+  const rows = [['Dauer', plan.sec ? Math.round(plan.sec/60)+' min' : '–', a.min+' min'], ['Distanz', plan.km ? '~'+fmt(Math.round(plan.km*10)/10)+' km' : '–', a.km ? fmt(a.km)+' km' : '–'],
+    ['Ø Puls', (() => { const m = flatSteps(s.schritte).filter(x => x.hf).sort((p,q) => secOf(q) - secOf(p))[0]; return m ? m.hf.join('–') : ''; })(), a.hf ? Math.round(a.hf)+'' : '–']];
+  if(a.pace) rows.push(['Tempo', '', pm(a.pace)+' /km']);
+  let abschn = '', chart = '', fazit = '';
+  const se = a.serie, st = flatSteps(s.schritte);
+  if(se && se.hf && se.hf.length && st.length){
+    // Abschnitte: Wiederholungen zusammenfassen
+    const grp = []; let t0 = 0;
+    (s.schritte).forEach(x => { if(x.wiederhole){ const sec = flatSteps([x]).reduce((q,y) => q + secOf(y), 0); grp.push({name:`${x.wiederhole}× ${ART[x.schritte[0].art] || x.schritte[0].art}`, t0, t1:t0+sec, hf:null}); t0 += sec; }
+      else { const sec = secOf(x); grp.push({name:`${ART[x.art] || x.art} ${x.min ? x.min+' min' : x.sek+' s'}`, t0, t1:t0+sec, hf:x.hf}); t0 += sec; } });
+    const at = (a0, a1) => se.hf.slice(Math.floor(a0/se.dt), Math.ceil(a1/se.dt)).filter(v => v);
+    let inZ = 0, tot = 0;
+    abschn = grp.map(g => { const v = at(g.t0, g.t1); if(!v.length) return `<tr><td>${esc(g.name)}</td><td>${g.hf ? g.hf.join('–') : ''}</td><td class="mut">nicht gelaufen</td></tr>`;
+      const avg = Math.round(v.reduce((q,y) => q+y, 0)/v.length);
+      let mark = '';
+      if(g.hf){ const ok = v.filter(y => y >= g.hf[0] && y <= g.hf[1]).length; inZ += ok; tot += v.length; mark = avg > g.hf[1] ? '↑' : avg < g.hf[0] ? '↓' : '✓'; }
+      return `<tr><td>${esc(g.name)}</td><td>${g.hf ? g.hf.join('–') : ''}</td><td><b>${avg}</b> <span class="mk">${mark}</span></td></tr>`; }).join('');
+    abschn = `<table class="si"><tr><th>Abschnitt</th><th>Soll</th><th>Ist</th></tr>${abschn}</table>`;
+    chart = istChart(se, grp, Math.max(t0, se.hf.length*se.dt));
+    if(tot) fazit = `${Math.round(inZ/tot*100)} % der Zeit im Zielbereich.`;
+  }
+  if(a.hf && a.pace && s.typ === 'lauf') fazit += ` ${(Math.round(a.hf*a.pace/60)).toLocaleString('de-DE')} Herzschläge pro km.`;
+  return `<div class="soll-ist">
+    ${fazit ? `<p class="fz">${esc(fazit.trim())}</p>` : ''}
+    <table class="si"><tr><th></th><th>Soll</th><th>Ist</th></tr>${rows.map(r => `<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td><b>${esc(r[2])}</b></td></tr>`).join('')}</table>
+    ${chart}${abschn}</div>`;
+}
+function istChart(se, grp, T){
+  const W = 340, H = 120, v = se.hf.filter(x => x), bands = grp.filter(g => g.hf).flatMap(g => g.hf);
+  const lo = Math.min(...v, ...bands) - 5, hi = Math.max(...v, ...bands) + 5, x = t => t/T*W, y = h => 6 + (hi-h)/(hi-lo)*(H-26);
+  let s = '';
+  grp.forEach(g => { if(g.hf) s += `<rect x="${x(g.t0)}" y="${y(g.hf[1])}" width="${Math.max(1, x(g.t1)-x(g.t0))}" height="${y(g.hf[0])-y(g.hf[1])}" fill="color-mix(in srgb,var(--c-kraft) 22%,var(--surface))"/>`; });
+  let path = '', pen = false;
+  se.hf.forEach((h, i) => { if(h){ path += `${pen ? 'L' : 'M'}${x(i*se.dt + se.dt/2).toFixed(1)},${y(h).toFixed(1)} `; pen = true; } else pen = false; });
+  s += `<path d="${path}" fill="none" stroke="var(--c-lauf)" stroke-width="2" stroke-linejoin="round"/>`;
+  s += `<text x="0" y="${H-4}">0</text><text x="${W}" y="${H-4}" text-anchor="end">${Math.round(T/60)} min</text>`;
+  return `<svg class="schart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Puls gegen Zielbereich">${s}</svg><p class="leg"><i style="background:color-mix(in srgb,var(--c-kraft) 30%,var(--surface))"></i>Zielbereich <i style="background:var(--c-lauf)"></i>dein Puls</p>`;
+}
+function kraftIst(d, s){
+  const logs = S.kraft.filter(k => k.datum === d && (k.saetze||[]).some(x => x.ok));
+  const rows = (s.uebungen || []).map(u => { const k = logs.find(k => k.uebung === u.id && (k.session === s.id || !k.session)) || logs.find(k => k.uebung === u.id);
+    const ok = k ? k.saetze.filter(x => x.ok) : [];
+    const ist = ok.length ? `${ok.length}×${ok.map(x => x.wdh).filter((v,i,a) => a.indexOf(v) === i).join('/')}${u.einheit === 's' ? ' s' : ''}${Math.max(...ok.map(x => x.kg || 0)) ? ' · ' + fmt(Math.max(...ok.map(x => x.kg || 0))) + ' kg' : ''}` : '–';
+    return `<tr><td>${esc(u.name)}</td><td>${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}</td><td><b>${ist}</b></td></tr>`; }).join('');
+  const extra = logs.filter(k => !(s.uebungen || []).some(u => u.id === k.uebung));
+  return `<div class="soll-ist"><table class="si"><tr><th>Übung</th><th>Soll</th><th>Ist</th></tr>${rows}</table>${extra.length ? `<p class="mut">Zusätzlich: ${extra.map(k => esc(k.name)).join(', ')}</p>` : ''}</div>`;
+}
+/* Schwimmen: Training macht die Trainerin → kein Plan, nur Ist + Tagebuch */
+function swimBody(d, s){
+  const a = matchGarmin(d, s), ns = (day(d).notizen || []).slice().sort((x,y) => x.u - y.u);
+  return `${a ? `<table class="si"><tr><td>Dauer</td><td><b>${a.min} min</b></td></tr>${a.km ? `<tr><td>Distanz</td><td><b>${fmt(a.km)} km</b></td></tr>` : ''}${a.hf ? `<tr><td>Ø Puls</td><td><b>${Math.round(a.hf)}</b></td></tr>` : ''}</table>` : `<p class="mut">Training mit deiner Trainerin.</p>`}
+    ${ns.length ? `<div class="notes">${ns.map(n => `<p><span class="mut">${zeit(n.u)}</span> ${esc(n.text)}</p>`).join('')}</div>` : ''}
+    <button class="btn" data-goto="buch">${ns.length ? 'Im Tagebuch ergänzen' : 'Im Tagebuch festhalten, was ihr gemacht habt'}</button>`;
+}
+function swimCard(d, s){
+  return `<div class="card scard t-schwimmen"><div class="sess"><div class="edge"></div><div style="flex:1;min-width:0;display:grid;gap:4px">
+    <span class="meta">${esc(s.zeit || '')}${s.dauer ? ' · '+s.dauer+' min' : ''} · ${s.pflicht === false ? 'Kür' : 'Pflicht'}${isDone(d, s) ? ' · <b class="okt">✓ erledigt</b>' : ''}</span>
+    <h2>${esc(s.titel)}</h2></div></div>${swimBody(d, s)}</div>`;
 }
 
 /* ---------- GESCHICHTE: Muster aus Garmin + Oura + Tagebuch, von Claude in plan.geschichte gepflegt ----------
@@ -478,6 +575,8 @@ function geschichteHTML(){
 /* Woche (Redesign 08.10.2026): Überblick zuerst. Datum über jedem Tag, Einheiten als ruhige Zeilen, Details klappen direkt
    unter der angetippten Einheit auf. Wochenbericht + Phase unten, Bericht nur für genau diese Woche (kein Vorwochen-Fallback). */
 function sesDetail(d, sel){
+  if(sel.typ === 'schwimmen') return `<div class="det">${swimBody(d, sel)}</div>`;
+  if(isDone(d, sel)){ const ist = sollIstHTML(d, sel); if(ist) return `<div class="det">${ist}</div>`; }
   return `<div class="det">${workoutHTML(sel)}${sel.ziel && !(sel.schritte||[]).length ? `<p>${esc(sel.ziel)}</p>` : ''}${sel.zweck && !(sel.schritte||[]).length ? `<div class="wo-ziel"><span class="lbl">Ziel</span><span>${esc(sel.zweck)}</span>${sel.zahltEin ? `<span class="mut">Zahlt ein auf: ${esc(sel.zahltEin)}</span>` : ''}</div>` : ''}${(sel.details||[]).length ? `<ul>${sel.details.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${(sel.uebungen||[]).length ? `<ul>${sel.uebungen.map(u => `<li>${esc(u.name)} · ${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}</li>`).join('')}</ul>` : ''}${sel.kurz ? `<div class="note"><b>Nur wenig Zeit?</b> ${esc(sel.kurz)}</div>` : ''}</div>`;
 }
 function viewWoche(){
@@ -622,6 +721,8 @@ function bind(){
   document.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { TAB = b.dataset.goto; lsSet(LS.tab, TAB); render(); scrollTo(0,0); });
   if($('#sm')) $('#sm').onchange = e => { (d.supp = d.supp || {}).morgen = e.target.checked ? now() : 0; save(); };
   if($('#sa')) $('#sa').onchange = e => { (d.supp = d.supp || {}).abend = e.target.checked ? now() : 0; save(); };
+  document.querySelectorAll('[data-snack]').forEach(b => b.onclick = () => { (d.snacks = d.snacks || []).push({id:uid(), u:now(), k:b.dataset.snack}); save(); render(); });
+  if($('#snundo')) $('#snundo').onclick = () => { const last = snacksOf(t).sort((a,b) => a.u - b.u).pop(); if(last){ forget(last.id); save(); render(); toast('Zurückgenommen'); } };
   if($('#mob')) $('#mob').onclick = () => { (d.mobility = d.mobility || []).push({id:uid(), u:now()}); save(); render(); toast('Mobility notiert'); };
   document.querySelectorAll('[data-chk]').forEach(b => b.onclick = () => { const [dd, id] = b.dataset.chk.split('|'); const c = day(dd).check = day(dd).check || {}; c[id] = c[id] ? 0 : now(); save(); render(); });
   document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { kraftSel = b.dataset.go; TAB = 'kraft'; lsSet(LS.tab, TAB); render(); scrollTo(0,0); });

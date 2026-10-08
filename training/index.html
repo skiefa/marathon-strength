@@ -337,6 +337,20 @@ details summary{color:var(--ink)}
 .wrow.extra{cursor:default}
 .wfrei,.wkurz{font-size:.92rem;color:var(--muted);padding:2px 0 2px 20px}
 .wday .det{border-top:0;padding:4px 0 10px 20px}
+
+/* Soll / Ist, Snacks (08.10.2026) */
+.soll-ist{display:grid;gap:10px}
+.fz{font-weight:700;font-size:1rem}
+.si{width:100%;border-collapse:collapse;font-size:.95rem}
+.si th{text-align:left;font-weight:500;font-size:.82rem;color:var(--muted);padding:0 6px 4px 0}
+.si td{padding:6px 6px 6px 0;border-top:1px solid var(--line);vertical-align:top}
+.si td:first-child{color:var(--muted)}
+.si .mk{color:var(--muted)}
+.leg{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.leg i{display:inline-block;width:14px;height:8px;border-radius:2px}
+.leg i + *{margin-right:8px}
+.snk[aria-pressed="true"]{background:color-mix(in srgb,var(--c-schwimmen) 14%,var(--surface));border-color:color-mix(in srgb,var(--c-schwimmen) 55%,var(--surface))}
+.scard .notes p{font-size:.95rem}
 </style>
 </head>
 <body>
@@ -347,6 +361,6 @@ details summary{color:var(--ink)}
 </div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js?v=20261008d"></script>
+<script src="app.js?v=20261008e"></script>
 </body>
 </html>
