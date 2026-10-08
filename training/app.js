@@ -143,7 +143,9 @@ addEventListener('visibilitychange', () => { if(document.visibilityState === 'vi
 const P = () => PLAN || {};
 const sessions = d => (P().tage && P().tage[d]) || [];
 const RING_TYP = {lauf:'lauf', kraft:'kraft', gym:'kraft', schwimmen:'ausdauer', rad:'ausdauer', wandern:'ausdauer', grundlage:'ausdauer', mobility:'mobility'};
-function garminDone(d){ return (P().erledigt && P().erledigt[d]) || []; }
+const MIN_EINHEIT = 10;   // See-Dips (3–5 min) und kurze Radwege sind keine Einheit (Steffi 08.10.2026)
+function garminAll(d){ return (P().erledigt && P().erledigt[d]) || []; }
+function garminDone(d){ return garminAll(d).filter(a => (a.min || 0) >= MIN_EINHEIT); }
 function isDone(d, s){
   if(day(d).check && day(d).check[s.id]) return true;
   if(S.kraft.some(k => k.datum === d && k.session === s.id)) return true;
@@ -214,7 +216,7 @@ function tempoChart(W, H){
   const M = ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
   let s = '';
   for(let v = lo; v <= hi; v += 20) s += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width=".7"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end" font-size="14" fill="var(--muted)" font-family="Lexend">${pm(v)}</text>`;
-  if(ziel) s += `<line x1="${L}" x2="${W-R}" y1="${y(ziel)}" y2="${y(ziel)}" stroke="var(--good)" stroke-dasharray="4 4"/><text x="${W-R}" y="${y(ziel)-5}" text-anchor="end" font-size="14" fill="var(--good)" font-family="Lexend">Ziel ${pm(ziel)}</text>`;
+  if(ziel) s += `<line x1="${L}" x2="${W-R}" y1="${y(ziel)}" y2="${y(ziel)}" stroke="var(--c-kraft)" stroke-dasharray="4 4"/><text x="${W-R}" y="${y(ziel)-5}" text-anchor="end" font-size="14" fill="var(--ink)" font-family="Lexend">Ziel ${pm(ziel)}</text>`;
   s += `<polyline fill="none" stroke="var(--c-lauf)" stroke-width="3" stroke-linejoin="round" points="${E.map((e,i)=>x(i)+','+y(e[1])).join(' ')}"/>`;
   E.forEach((e,i) => s += `<circle cx="${x(i)}" cy="${y(e[1])}" r="${i===n-1?6:3.5}" fill="var(--c-lauf)"/><text x="${x(i)}" y="${H-5}" text-anchor="middle" font-size="14" fill="var(--muted)" font-family="Lexend">${M[+e[0].slice(5,7)-1]}</text>`);
   s += `<text x="${L+2}" y="${T-3}" font-size="13.5" fill="var(--muted)" font-family="Lexend">oben = schneller</text>`;
@@ -349,8 +351,7 @@ function viewHeute(){
   const ampel = h ? h.ampel : null;
   const akt = ss.filter(s => s.typ !== 'frei'), frei = ss.find(s => s.typ === 'frei');
   const satz = h ? h.satz : akt.length ? `Heute: ${akt.map(s => s.titel).join(' und ')}.` : frei ? frei.titel + '.' : 'Heute ist frei.';
-  const warum = (h && h.warum) || (e ? [['Schlaf', e.schlaf_h ? hm(e.schlaf_h) : '–'], ['HRV', e.hrv ?? '–'], ['Ruhepuls', e.rhr ?? '–']] : null);
-  const gd = garminDone(t);
+  const warum = (h && h.warum) || (e ? [['Schlaf', e.schlaf_h ? hm(e.schlaf_h) : '–'], ['Erholung', e.hrv ? 'HRV ' + e.hrv : '–']] : null);
   const d = day(t), wasser = (d.wasser || []).reduce((a, x) => a + x.ml, 0);
   const wz = (P().wasserZiel || {})[t] || (P().wasserZiel || {}).standard || 2400;
   const ins = (P().einsichten || [])[0];
@@ -360,7 +361,6 @@ function viewHeute(){
       ${ampel ? `<div class="hx-st ${esc(ampel)}"><i></i>${esc(h.ampelText || '')}</div>` : ''}
       <h1 class="hx-satz">${esc(satz)}</h1>
       ${h && h.sub ? `<p class="hx-sub">${esc(h.sub)}</p>` : ''}
-      ${gd.length ? `<p class="hx-done">✓ ${gd.map(a => `${esc(a.name)} ${esc(a.zeit || '')}, ${a.min} min`).join(' · ')}</p>` : ''}
       ${warum ? `<div class="hx-why">${warum.map(([k,v]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>` : ''}
     </div>
     <div class="card">
@@ -374,26 +374,28 @@ function viewHeute(){
     ${ins ? `<div class="card ins"><span class="kick">Neu entdeckt</span><h2>${esc(ins.titel)}</h2>${ins.text ? `<p>${esc(ins.text)}</p>` : ''}<button class="more" data-goto="besser">Deine Geschichte →</button></div>` : ''}
     ${weekStrip(t)}
     <div class="card">
-      <div class="sh"><h3>Supplements</h3><span>antippen</span></div>
+      <div class="sh"><h3>Supplements</h3></div>
       ${suppListe().length ? `<div class="pills">${['morgen','abend'].map(z => suppListe().filter(x => x.zeit === z).length ? `<span class="plbl">${z === 'morgen' ? 'Morgens' : 'Abends'}</span>` + suppListe().filter(x => x.zeit === z).map(x => `<button class="pill" data-supp="${esc(x.id)}" aria-pressed="${!!(d.supp && d.supp[x.id])}">${esc(x.name)}</button>`).join('') : '').join('')}</div>` : `<div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
       <div class="chk"><input type="checkbox" id="sa" ${d.supp && d.supp.abend ? 'checked' : ''}><label for="sa">Abends: ${esc((P().supplements||{}).abend || 'Supplements')}</label></div>`}
     </div>
   </div>`;
 }
+const TYPNAME = {lauf:'Laufen', kraft:'Kraft', gym:'Kraft', schwimmen:'Schwimmen', rad:'Rad', wandern:'Wandern', grundlage:'Rad / Wandern', mobility:'Mobility'};
+/* Diese Woche (Startseite): Was ist geschafft, was steht noch an? Pflicht zählt, Kür ist Bonus. Keine Kategorien-Soll mehr. */
 function weekStrip(t){
-  const wk = monday(t), days = Array.from({length:7}, (_,i) => addDays(wk, i)); let plan = 0, done = 0;
+  const wk = monday(t), days = Array.from({length:7}, (_,i) => addDays(wk, i)); let pf = 0, pfDone = 0; const typen = new Set(), offen = [];
   const cells = days.map(d => { const ss = visibleSessions(d).filter(s => s.typ !== 'frei');
     const extra = garminDone(d).filter(a => !ss.some(s => isDone(d, s) && (RING_TYP[s.typ] === RING_TYP[a.typ] || s.typ === a.typ)));
-    plan += ss.length; done += ss.filter(s => isDone(d, s)).length;
+    ss.forEach(s => { typen.add(s.typ === 'gym' ? 'kraft' : s.typ); if(s.pflicht !== false){ pf++; if(isDone(d, s)) pfDone++; }
+      if(!isDone(d, s) && d >= t) offen.push(`${WD[new Date(d+'T12:00').getDay()]} ${s.titel}`); });
+    extra.forEach(a => typen.add(a.typ));
     const dots = ss.map(s => `<i class="t-${esc(s.typ)} ${isDone(d, s) ? 'f' : ''}"></i>`).join('') + extra.slice(0, 2).map(a => `<i class="t-${esc(a.typ)} f"></i>`).join('');
     return `<div class="${d === t ? 'today' : ''}"><b>${WD[new Date(d+'T12:00').getDay()]}</b><div class="dots">${dots}</div></div>`; }).join('');
-  const r = ringsFor(wk).filter(x => x[3] && x[0] !== 'Schlaf'), sl = ringsFor(wk).find(x => x[0] === 'Schlaf');
-  const ph = currentPhase();
   return `<div class="card">
-    <div class="sh"><h3>Diese Woche</h3><span>${vollWoche(t) ? 'volle Woche · nur Pflicht' : ph ? esc(ph.name) : ''}</span></div>
+    <div class="sh"><h3>Diese Woche</h3>${pf ? `<span><b class="pfz">${pfDone} von ${pf}</b> Pflicht geschafft${pfDone >= pf ? ' ✓' : ''}</span>` : ''}</div>
     <div class="wks">${cells}</div>
-    <div class="wsum"><span><b>${done} von ${plan}</b> geplant erledigt</span>${sl && sl[4] !== '–' ? `<span><b>${sl[4]}</b> Schlaf im Schnitt</span>` : ''}</div>
-    ${r.length ? `<div class="wcat">${r.map(([n,c,v,soll]) => `<span class="${v >= soll ? 'erf' : ''}"><i style="background:var(${c})"></i>${n} ${v}/${soll}</span>`).join('')}</div>` : ''}
+    <div class="wleg">${[...typen].map(x => `<span class="t-${esc(x)}"><i></i>${esc(TYPNAME[x] || x)}</span>`).join('')}<span class="hint"><i class="o"></i>geplant</span></div>
+    ${offen.length ? `<p class="wnext"><span>Noch offen</span> ${offen.slice(0, 3).map(esc).join(' · ')}</p>` : pf ? `<p class="wnext">Alles für diese Woche erledigt.</p>` : ''}
     <button class="linkbtn" id="mob">+ Mobility / Dehnen${(day(t).mobility||[]).length ? ` · heute ${day(t).mobility.length}×` : ''}</button>
   </div>`;
 }
@@ -473,34 +475,37 @@ function geschichteHTML(){
 }
 
 /* ---------- WOCHE / BERICHT ---------- */
+/* Woche (Redesign 08.10.2026): Überblick zuerst. Datum über jedem Tag, Einheiten als ruhige Zeilen, Details klappen direkt
+   unter der angetippten Einheit auf. Wochenbericht + Phase unten, Bericht nur für genau diese Woche (kein Vorwochen-Fallback). */
+function sesDetail(d, sel){
+  return `<div class="det">${workoutHTML(sel)}${sel.ziel && !(sel.schritte||[]).length ? `<p>${esc(sel.ziel)}</p>` : ''}${sel.zweck && !(sel.schritte||[]).length ? `<div class="wo-ziel"><span class="lbl">Ziel</span><span>${esc(sel.zweck)}</span>${sel.zahltEin ? `<span class="mut">Zahlt ein auf: ${esc(sel.zahltEin)}</span>` : ''}</div>` : ''}${(sel.details||[]).length ? `<ul>${sel.details.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${(sel.uebungen||[]).length ? `<ul>${sel.uebungen.map(u => `<li>${esc(u.name)} · ${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}</li>`).join('')}</ul>` : ''}${sel.kurz ? `<div class="note"><b>Nur wenig Zeit?</b> ${esc(sel.kurz)}</div>` : ''}</div>`;
+}
 function viewWoche(){
   const wk = addDays(monday(TODAY()), weekOff*7), t = TODAY();
-  const br = (P().bericht || {})[wk] || (weekOff === 0 ? (P().bericht || {})[addDays(wk,-7)] : null);
-  const f = P().fortschritt || {};
-  if(!selSes || selDay < wk || selDay > addDays(wk, 6)){
-    const n = nextSession(t);
-    if(n && n.d >= wk && n.d <= addDays(wk, 6)){ selDay = n.d; selSes = n.s.id; }
-    else { selSes = null; for(let i = 0; i < 7 && !selSes; i++){ const s = visibleSessions(addDays(wk, i)).find(s => s.typ !== 'frei'); if(s){ selDay = addDays(wk, i); selSes = s.id; } } }
-  }
+  const br = (P().bericht || {})[wk];
   const days = Array.from({length:7}, (_,i) => addDays(wk, i));
-  const sel = selDay && sessions(selDay).find(s => s.id === selSes);
-  return `<div class="wl">
-      <div class="stack side">
-        ${br ? `<div class="card"><span class="lbl">${esc(br.label || 'Wochenbericht')}</span><p class="big">${esc(br.titel)}</p><p>${esc(br.text)}</p>${phaseHTML()}</div>` : `<div class="card">${phaseHTML()}</div>`}
-      </div>
-      <div class="card main">
-        <div class="wnav"><button class="btn small" id="wprev" aria-label="Woche zurück">←</button><h2>${shortRange(wk)}</h2><button class="btn small" id="wnext" aria-label="Woche vor">→</button></div>
-        <div class="legend"><span class="t-lauf"><i></i>Laufen</span><span class="t-kraft"><i></i>Kraft</span><span class="t-schwimmen"><i></i>Schwimmen</span><span class="t-grundlage"><i></i>Rad / Wandern</span><span class="t-mobility"><i></i>Mobility</span></div>
-        <div class="row"><span class="mut">Gestrichelt = Kür</span><button class="btn small" id="voll" aria-pressed="${!!S.vollWoche[wk]}">Volle Woche</button></div>
-        ${S.vollWoche[wk] ? `<div class="note">Volle Woche: nur Pflicht. Alles Wichtige ist drin, nichts gilt als verpasst.</div>` : ''}
-        <div class="wk">${days.map(d => { const ss = visibleSessions(d);
-          const extra = garminDone(d).filter(a => !ss.some(s => s.typ !== 'frei' && isDone(d, s) && (RING_TYP[s.typ] === RING_TYP[a.typ] || s.typ === a.typ)));
-          const extraHTML = extra.map(a => `<div class="ses done t-${a.typ}">✓ ${esc(a.name)} <small>${a.min} min${a.km && a.typ !== 'schwimmen' ? ' · '+fmt(a.km)+' km' : ''}</small></div>`).join('');
-          return `<div class="wd ${d === t ? 'today' : ''}"><span class="d">${dayLabel(d)}</span><div style="display:grid;gap:5px">${extraHTML}${ss.length ? ss.filter(s => !(s.typ === 'frei' && extra.length)).map(s => s.typ === 'frei'
-            ? `<div class="frei-line">${esc(s.titel)}${s.zeit ? ` · ${esc(s.zeit)}` : ''}</div>`
-            : `<button class="ses t-${s.typ} ${s.pflicht === false ? 'kuer' : ''} ${isDone(d,s) ? 'done' : ''}" data-sel="${d}|${s.id}" aria-pressed="${selDay === d && selSes === s.id}"><span>${isDone(d,s) ? '✓ ' : ''}${esc(s.titel)} <small>${esc(s.zeit || '')}</small></span><span class="tag">${s.pflicht === false ? 'Kür' : 'Pflicht'}</span></button>`).join('') : extra.length ? '' : '<div class="frei-line">frei</div>'}</div></div>`; }).join('')}</div>
-        ${sel ? `<div class="det"><span class="lbl">${dayLabel(selDay)} · ${esc(sel.zeit || '')}${sel.dauer ? ' · '+sel.dauer+' min' : ''}</span><h3>${esc(sel.titel)}</h3>${sel.art ? `<span class="mut">${esc(sel.art)}</span>` : ''}${workoutHTML(sel)}${sel.ziel && !(sel.schritte||[]).length ? `<p>${esc(sel.ziel)}</p>` : ''}${sel.zweck && !(sel.schritte||[]).length ? `<div class="wo-ziel"><span class="lbl">Ziel</span><span>${esc(sel.zweck)}</span>${sel.zahltEin ? `<span class="mut">Zahlt ein auf: ${esc(sel.zahltEin)}</span>` : ''}</div>` : ''}<ul>${(sel.details||[]).map(x => `<li>${esc(x)}</li>`).join('')}</ul>${(sel.uebungen||[]).length ? `<ul>${sel.uebungen.map(u => `<li>${esc(u.name)} · ${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}</li>`).join('')}</ul>` : ''}${sel.kurz ? `<div class="note"><b>Nur wenig Zeit?</b> ${esc(sel.kurz)}</div>` : ''}</div>` : ''}
-      </div>
+  let pf = 0, pfDone = 0, done = 0, min = 0;
+  days.forEach(d => { visibleSessions(d).filter(s => s.typ !== 'frei').forEach(s => { if(s.pflicht !== false){ pf++; if(isDone(d, s)) pfDone++; } }); garminDone(d).forEach(a => { done++; min += a.min || 0; }); });
+  const list = days.map(d => { const ss = visibleSessions(d);
+    const extra = garminDone(d).filter(a => !ss.some(s => s.typ !== 'frei' && isDone(d, s) && (RING_TYP[s.typ] === RING_TYP[a.typ] || s.typ === a.typ)));
+    const kurz = garminAll(d).filter(a => (a.min || 0) < MIN_EINHEIT);
+    const rows = ss.filter(s => s.typ !== 'frei').map(s => { const dn = isDone(d, s), open = selDay === d && selSes === s.id;
+      return `<button class="wrow t-${s.typ} ${dn ? 'done' : ''}" data-sel="${d}|${s.id}" aria-expanded="${open}"><i></i><span class="wt">${esc(s.titel)}<small>${esc(s.zeit || '')}${s.dauer ? ' · '+s.dauer+' min' : ''}${s.pflicht === false ? ' · Kür' : ''}</small></span><span class="ws">${dn ? '✓' : ''}</span></button>${open ? sesDetail(d, s) : ''}`; }).join('');
+    const ex = extra.map(a => `<div class="wrow t-${a.typ} done extra"><i></i><span class="wt">${esc(a.name)}<small>${esc(a.zeit || '')} · ${a.min} min${a.km && a.typ !== 'schwimmen' ? ' · '+fmt(a.km)+' km' : ''} · ohne Plan</small></span><span class="ws">✓</span></div>`).join('');
+    const fr = ss.find(s => s.typ === 'frei');
+    const leer = !rows && !ex ? `<p class="wfrei">${fr ? esc(fr.titel) : 'frei'}</p>` : '';
+    return `<section class="wday ${d === t ? 'today' : ''} ${d < t ? 'past' : ''}"><h4>${d === t ? 'Heute · ' : ''}${dayLabel(d)}</h4>${rows}${ex}${leer}${kurz.length ? `<p class="wkurz">${kurz.map(a => `${esc(a.name)} ${a.min} min`).join(' · ')}</p>` : ''}</section>`; }).join('');
+  return `<div class="stack narrow" style="margin:0 auto">
+    <div class="card">
+      <div class="wnav"><button class="btn small" id="wprev" aria-label="Woche zurück">←</button><h2>${shortRange(wk)}</h2><button class="btn small" id="wnext" aria-label="Woche vor">→</button></div>
+      <div class="wkpi"><div><b>${pfDone}/${pf}</b><span>Pflicht</span></div><div><b>${done}</b><span>Einheiten</span></div><div><b>${hm(min/60).replace(' h','')}</b><span>Stunden</span></div></div>
+    </div>
+    <div class="card wlist">${list}
+      <div class="row" style="margin-top:6px"><span class="mut">Kür fällt in vollen Wochen weg.</span><button class="btn small" id="voll" aria-pressed="${!!S.vollWoche[wk]}">Volle Woche</button></div>
+      ${S.vollWoche[wk] ? `<div class="note">Volle Woche: nur Pflicht. Alles Wichtige ist drin, nichts gilt als verpasst.</div>` : ''}
+    </div>
+    ${br ? `<div class="card"><span class="kick">${esc(br.label || 'Wochenbericht')}</span><h2 style="font-size:1.2rem">${esc(br.titel)}</h2><p class="mut">${esc(br.text)}</p></div>` : ''}
+    ${(P().phasen || []).length ? `<div class="card"><span class="kick">Phase</span>${phaseHTML()}</div>` : ''}
   </div>`;
 }
 function liftsHTML(){
@@ -587,7 +592,6 @@ function viewBuch(){
       <textarea id="tx" placeholder="Wie geht's dir gerade? Zwickt etwas, schreib es einfach dazu."></textarea>
       <button class="btn primary" id="txok">Speichern</button>
       ${heute.length ? `<div class="notes">${heute.map(n => `<div class="note-item"><span class="lbl">${zeit(n.u)}</span><p>${esc(n.text)}</p><button class="btn small" data-ndel="${esc(n.id)}" aria-label="Eintrag löschen">✕</button></div>`).join('')}</div>` : ''}</div>
-    ${(P().einsichten || []).length ? `<div class="card"><span class="lbl">Was mir aufgefallen ist</span>${P().einsichten.map(x => `<p><b>${esc(x.titel)}</b> ${esc(x.text || '')}</p>`).join('')}</div>` : ''}
     ${past.length ? `<div class="card"><span class="lbl">Letzte Tage</span>${past.map(d => { const x = S.tage[d], tb = x.tagebuch || {}, ns = (x.notizen || []).slice().sort((a,b) => a.u - b.u);
         return `<div class="past"><b>${dayLabel(d)}</b> ${tb.energie ? `<span class="mut">Energie ${E[tb.energie-1]}${tb.stimmung ? ', Stimmung '+M[tb.stimmung-1] : ''}</span>` : ''}${ns.map(n => `<p><span class="mut">${zeit(n.u)}</span> ${esc(n.text)}</p>`).join('')}</div>`; }).join('')}</div>` : ''}
   </div>`;
@@ -625,7 +629,7 @@ function bind(){
   if($('#wprev')) $('#wprev').onclick = () => { weekOff--; render(); };
   if($('#wnext')) $('#wnext').onclick = () => { weekOff++; render(); };
   if($('#voll')) $('#voll').onclick = () => { const wk = addDays(monday(TODAY()), weekOff*7); S.vollWoche[wk] = !S.vollWoche[wk]; save(); render(); };
-  document.querySelectorAll('[data-sel]').forEach(b => b.onclick = () => { [selDay, selSes] = b.dataset.sel.split('|'); render(); });
+  document.querySelectorAll('[data-sel]').forEach(b => b.onclick = () => { const [dd, id] = b.dataset.sel.split('|'); if(selDay === dd && selSes === id){ selSes = null; } else { selDay = dd; selSes = id; } render(); });
   // Kraft
   if($('#ksel')) $('#ksel').onchange = e => { kraftSel = e.target.value; render(); };
   document.querySelectorAll('[data-st]').forEach(b => b.onclick = () => {

@@ -250,12 +250,12 @@ details summary{color:var(--ink)}
 .sh h3{font:700 1rem var(--body)}
 .sh span{font-size:.9rem;color:var(--muted)}
 /* Wasser */
-.wnum{font:800 2.5rem/1 var(--display)}
+.wnum{font:800 2.1rem/1 var(--display)}
 .wnum small{font:500 1rem var(--body);color:var(--muted);margin-left:6px}
 .wbar{height:10px;background:color-mix(in srgb,var(--c-schwimmen) 12%,var(--surface))}
 .wbar b{background:var(--c-schwimmen)}
 .wbtn{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.wbtn button{font:700 1.1rem var(--body);padding:17px 0;border-radius:12px;cursor:pointer;color:var(--ink);background:color-mix(in srgb,var(--c-schwimmen) 14%,var(--surface));border:1.5px solid color-mix(in srgb,var(--c-schwimmen) 55%,var(--surface))}
+.wbtn button{font:700 1rem var(--body);padding:11px 0;border-radius:12px;cursor:pointer;color:var(--ink);background:color-mix(in srgb,var(--c-schwimmen) 14%,var(--surface));border:1.5px solid color-mix(in srgb,var(--c-schwimmen) 55%,var(--surface))}
 .wbtn button:active{transform:scale(.97)}
 .linkbtn{background:none;border:0;padding:4px 0;font:500 .95rem var(--body);color:var(--muted);text-align:left;cursor:pointer;justify-self:start}
 /* Einheit */
@@ -296,7 +296,7 @@ details summary{color:var(--ink)}
 .story h2{font:800 1.35rem/1.15 var(--display)}
 .story p{color:var(--muted);font-size:.98rem}
 .story .tip{padding-top:10px;border-top:1px solid var(--line);color:var(--ink)}
-.sbig{font:900 3.6rem/.95 var(--display);letter-spacing:-.02em}
+.sbig{white-space:nowrap;font:900 2.6rem/1 var(--display);letter-spacing:-.02em}
 .sbig small{font:500 1rem var(--body);letter-spacing:0;color:var(--muted);margin-left:8px}
 .badge{display:inline-block;font:700 .72rem var(--body);letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));color:var(--ink);vertical-align:1px}
 .schart{width:100%;height:auto;display:block;margin-top:4px}
@@ -307,16 +307,46 @@ details summary{color:var(--ink)}
 .vh p{color:var(--ink);display:grid;grid-template-columns:22px 1fr;column-gap:4px}
 .vh p em{grid-column:2;font-style:normal;font-size:.85rem;color:var(--muted)}
 .vh p.ja span{color:var(--c-schwimmen);font-weight:700}
+
+/* Feinschliff 08.10.2026 (2) */
+.foot{text-align:center;margin:18px 0 0}
+.hx-why{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.hx-why b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh .pfz{color:var(--ink)}
+.wleg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;color:var(--muted)}
+.wleg i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px;vertical-align:1px}
+.wleg .hint i{background:none;border:1.5px solid var(--muted)}
+.wnext{font-size:.95rem;padding-top:10px;border-top:1px solid var(--line)}
+.wnext span{color:var(--muted);margin-right:4px}
+/* Woche */
+.wkpi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.wkpi b{display:block;font:800 1.6rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+.wkpi span{font-size:.85rem;color:var(--muted)}
+.wlist{gap:0}
+.wday{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.wday:first-child{padding-top:2px}
+.wday h4{margin:0 0 2px;font:700 .85rem var(--body);color:var(--muted)}
+.wday.today h4{color:var(--ink)}
+.wday.today{box-shadow:inset 3px 0 0 var(--c-lauf);padding-left:10px;margin-left:-16px;padding-left:13px}
+.wrow{display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;padding:6px 0;color:var(--ink);font:600 1rem/1.3 var(--body);cursor:pointer}
+.wrow i{width:10px;height:10px;border-radius:50%;border:2px solid var(--c)}
+.wrow.done i{background:var(--c)}
+.wrow small{display:block;font-weight:400;font-size:.85rem;color:var(--muted)}
+.wrow .ws{color:var(--muted);font-weight:700}
+.wrow[aria-expanded="true"] .wt{text-decoration:underline;text-decoration-color:var(--c);text-underline-offset:4px;text-decoration-thickness:2px}
+.wrow.extra{cursor:default}
+.wfrei,.wkurz{font-size:.92rem;color:var(--muted);padding:2px 0 2px 20px}
+.wday .det{border-top:0;padding:4px 0 10px 20px}
 </style>
 </head>
 <body>
 <div class="app">
-  <div class="head"><h1>Trainingsbuch</h1><span class="sync" id="sync"></span></div>
   <nav class="nav" id="nav" aria-label="Bereiche"></nav>
   <main id="main"></main>
+  <p class="foot"><span class="sync" id="sync"></span></p>
 </div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js?v=20261008c"></script>
+<script src="app.js?v=20261008d"></script>
 </body>
 </html>
