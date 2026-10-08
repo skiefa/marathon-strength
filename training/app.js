@@ -439,9 +439,18 @@ function snackCard(t){
   const heute = snacksOf(t), n = k => heute.filter(x => x.k === k).length;
   return `<div class="card">
     <div class="sh"><h3>Snacks & Ruhe</h3>${heute.length ? `<button class="linkbtn" id="snundo">↶ letzten zurück</button>` : ''}</div>
-    <div class="pills">${snackListe().map(x => `<button class="pill snk" data-snack="${esc(x.id)}" aria-pressed="${n(x.id) > 0}">${esc(x.name)}${n(x.id) > 1 ? ` ${n(x.id)}×` : ''}</button>`).join('')}</div>
+    ${snackGruppen(t, n)}
     ${snackListe().some(x => (x.anleitung || []).length) ? `<details><summary>Anleitungen</summary><div class="anls">${snackListe().filter(x => (x.anleitung || []).length).map(x => `<details class="anl"><summary>${esc(x.name)}${x.dauer ? ` <span class="mut">· ${esc(x.dauer)}</span>` : ''}</summary>${x.hinweis ? `<p class="mut">${esc(x.hinweis)}</p>` : ''}<ol>${x.anleitung.map(u => `<li><b>${esc(u.name)}</b>${u.dauer ? ` <span class="mut">· ${esc(u.dauer)}</span>` : ''}${u.wie ? `<p>${esc(u.wie)}</p>` : ''}${u.warum ? `<p class="mut">${esc(u.warum)}</p>` : ''}</li>`).join('')}</ol></details>`).join('')}</div></details>` : ''}
   </div>`;
+}
+/* Gruppen: rhythmus 'tag' (Haken = heute gemacht) oder 'woche' (Zähler gegen soll, Reset montags). Ohne rhythmus → wie bisher eine Liste. */
+function snackGruppen(t, n){
+  const L = snackListe(), wk = monday(t), wn = k => { let c = 0; for(let i = 0; i < 7; i++) c += snacksOf(addDays(wk, i)).filter(x => x.k === k).length; return c; };
+  const btn = x => { const w = x.rhythmus === 'woche', c = w ? wn(x.id) : n(x.id), voll = w && x.soll && c >= x.soll;
+    return `<button class="pill snk" data-snack="${esc(x.id)}" aria-pressed="${w ? !!voll : c > 0}">${esc(x.name)}${w && x.soll ? ` <span class="cnt">${c}/${x.soll}</span>` : w && c ? ` <span class="cnt">${c}×</span>` : !w && c > 1 ? ` ${c}×` : ''}</button>`; };
+  if(!L.some(x => x.rhythmus)) return `<div class="pills">${L.map(btn).join('')}</div>`;
+  const tag = L.filter(x => x.rhythmus === 'tag'), woche = L.filter(x => x.rhythmus !== 'tag');
+  return `<div class="pills">${tag.length ? `<span class="plbl">Täglich</span>${tag.map(btn).join('')}` : ''}${woche.length ? `<span class="plbl">Pro Woche</span>${woche.map(btn).join('')}` : ''}</div>`;
 }
 function snackWoche(wk){
   const c = {}; for(let i = 0; i < 7; i++) snacksOf(addDays(wk, i)).forEach(x => c[x.k] = (c[x.k] || 0) + 1);
