@@ -21,8 +21,8 @@
    (Laufen pink, Kraft lila, Schwimmen aqua, Rad/Wandern lime, Mobility lemon, Schlaf pfirsich).
    Tönungen: Kür 14 % · geplant 38 % · erledigt 62 % · Karte 22 %. Schrift groß, Satzschreibung statt Versalien. */
 :root{
-  --bg:#f3f1ed; --surface:#ffffff; --ink:#221d1a; --muted:#4f4842; --line:#ebe7e2; --chip:#f4f2ef;
-  --accent:#221d1a; --on-accent:#fffdfb;
+  --bg:#eeebe5; --surface:#ffffff; --ink:#141210; --muted:#5a534c; --line:#e2ddd5; --chip:#f4f1ec; --chip2:#e4dfd8; --hero:#141210; --hero-ink:#f4f1ec; --hero-mute:#cfc7bd; --hero-line:#2c2824; --hero-cell:#1d1a17;
+  --accent:#141210; --on-accent:#fffdfb;
   --c-lauf:#ff5a92; --c-kraft:#a874f0; --c-schwimmen:#35c7c0; --c-ausdauer:#a4d62a; --c-mobility:#ffd43b; --c-schlaf:#ff9670;
   --good:#2f8a4f; --warn:#c48a00; --bad:#c0392b; --gold:#b9850f;
   --t-plan:20%; --t-kuer:6%; --t-done:34%; --t-card:12%;
@@ -31,7 +31,7 @@
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#141210; --surface:#221f1c; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29;
+  --bg:#141210; --surface:#221f1c; --ink:#f4efe9; --muted:#c9c0b6; --line:#3b3531; --chip:#312c29; --chip2:#3b3531; --hero:#2b2622; --hero-ink:#f4efe9; --hero-mute:#cfc7bd; --hero-line:#3b3531; --hero-cell:#332d29;
   --accent:#f4efe9; --on-accent:#1c1917;
   --c-lauf:#ff7aa8; --c-kraft:#bf98ff; --c-schwimmen:#5ad8d0; --c-ausdauer:#bde85a; --c-mobility:#ffe066; --c-schlaf:#ffad8f;
   --good:#6cc98a; --warn:#e8b730; --bad:#ff7a6b; --gold:#e8b730;
@@ -217,6 +217,96 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   .dash{gap:24px}
   .wl{gap:16px}
 }
+
+/* ===== Neues Design 08.10.2026 =====
+   Klare Rangfolge: dunkler Kopf mit dem einen Satz, dann weiße Abschnitte auf warmem Grau (abgerundet, ohne Rahmen).
+   Highlightfarben NUR Pink (Laufen), Lila (Kraft/Körper/Knöpfe), Türkis (Wasser/Schwimmen). Kein Rot, kein Orange.
+   Knöpfe hell getönt, nie schwarz. */
+@media (max-width:899px){ .app{padding-inline:10px} .card{border-radius:16px;margin-inline:0} }
+.card{border-radius:16px}
+.btn.primary{background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));border:1.5px solid color-mix(in srgb,var(--c-kraft) 60%,var(--surface));color:var(--ink)}
+.btn[aria-pressed="true"]{background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));border-color:color-mix(in srgb,var(--c-kraft) 60%,var(--surface));color:var(--ink)}
+.scale button[aria-pressed="true"]{background:color-mix(in srgb,var(--c-kraft) 18%,var(--surface));border-color:color-mix(in srgb,var(--c-kraft) 60%,var(--surface));color:var(--ink)}
+.nav button[aria-current="page"]{color:var(--ink);box-shadow:inset 0 3px 0 var(--c-kraft)}
+@media (min-width:900px){ .nav button[aria-current="page"]{background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));color:var(--ink)} }
+details summary{color:var(--ink)}
+.kick{font:700 .78rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* Kopf */
+.hx{background:var(--hero);color:var(--hero-ink);border-radius:20px;padding:18px 18px 20px;display:grid;gap:10px}
+.hx .kick{color:var(--c-kraft)}
+.hx-top{font-size:.9rem;color:var(--hero-mute);font-weight:500}
+.hx-st{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;color:var(--c-schwimmen)}
+.hx-st i{width:10px;height:10px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px color-mix(in srgb,currentColor 22%,transparent)}
+.hx-st.gelb{color:var(--c-mobility)} .hx-st.rot{color:var(--c-lauf)}
+.hx-satz{font:800 1.75rem/1.1 var(--display);letter-spacing:-.01em;color:var(--hero-ink)}
+.hx-sub{color:var(--hero-mute);font-size:1rem}
+.hx-done{font-weight:700;font-size:.95rem;color:var(--c-schwimmen)}
+.hx-why{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:1px;background:var(--hero-line);border-radius:12px;overflow:hidden;margin-top:6px}
+.hx-why div{background:var(--hero-cell);padding:9px 12px;display:grid;gap:1px}
+.hx-why span{font-size:.8rem;color:var(--hero-mute)}
+.hx-why b{font:700 .98rem var(--display);color:var(--hero-ink)}
+/* Abschnittskopf */
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.sh h3{font:700 1rem var(--body)}
+.sh span{font-size:.9rem;color:var(--muted)}
+/* Wasser */
+.wnum{font:800 2.5rem/1 var(--display)}
+.wnum small{font:500 1rem var(--body);color:var(--muted);margin-left:6px}
+.wbar{height:10px;background:color-mix(in srgb,var(--c-schwimmen) 12%,var(--surface))}
+.wbar b{background:var(--c-schwimmen)}
+.wbtn{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.wbtn button{font:700 1.1rem var(--body);padding:17px 0;border-radius:12px;cursor:pointer;color:var(--ink);background:color-mix(in srgb,var(--c-schwimmen) 14%,var(--surface));border:1.5px solid color-mix(in srgb,var(--c-schwimmen) 55%,var(--surface))}
+.wbtn button:active{transform:scale(.97)}
+.linkbtn{background:none;border:0;padding:4px 0;font:500 .95rem var(--body);color:var(--muted);text-align:left;cursor:pointer;justify-self:start}
+/* Einheit */
+.sess{display:flex;gap:14px}
+.sess .edge{width:4px;border-radius:2px;background:var(--c);flex:none}
+.sess .meta{font-size:.9rem;color:var(--muted)}
+.sess .okt{color:var(--ink)}
+.sess h2{font:800 1.35rem/1.15 var(--display)}
+.sess .zw{color:var(--muted);font-size:.98rem}
+.mini{width:100%;height:40px;display:block;margin:6px 0 2px}
+.scard > b::before{display:none}
+/* Neu entdeckt */
+.card.ins{background:var(--hero);color:var(--hero-ink)}
+.ins .kick{color:var(--c-lauf)}
+.ins h2{font:800 1.4rem/1.12 var(--display);color:var(--hero-ink)}
+.ins p{color:var(--hero-mute);font-size:.98rem}
+.ins .more{justify-self:start;background:none;border:0;padding:2px 0;border-bottom:1.5px solid var(--c-lauf);color:var(--hero-ink);font:500 .98rem var(--body);cursor:pointer}
+/* Woche */
+.wks{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.wks > div{padding:8px 0 7px;border-radius:10px}
+.wks b{display:block;font-size:.88rem;margin-bottom:6px}
+.wks .today{background:color-mix(in srgb,var(--c-lauf) 13%,var(--surface));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c-lauf) 55%,var(--surface))}
+.dots{display:flex;justify-content:center;gap:3px;min-height:9px;flex-wrap:wrap}
+.dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--c);opacity:.75}
+.dots i.f{background:var(--c);opacity:1}
+.wsum{display:flex;flex-wrap:wrap;gap:6px 16px;padding-top:10px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+.wsum b{color:var(--ink);font-weight:700}
+.wcat{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem;color:var(--muted)}
+.wcat i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.wcat .erf{color:var(--ink);font-weight:700}
+/* Supplements */
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.plbl{width:100%;font-size:.88rem;color:var(--muted);margin-top:2px}
+.pill{font:500 1rem var(--body);padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.pill[aria-pressed="true"]{background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));border-color:color-mix(in srgb,var(--c-kraft) 60%,var(--surface))}
+.pill[aria-pressed="true"]::before{content:"✓ "}
+/* Geschichte */
+.story h2{font:800 1.35rem/1.15 var(--display)}
+.story p{color:var(--muted);font-size:.98rem}
+.story .tip{padding-top:10px;border-top:1px solid var(--line);color:var(--ink)}
+.sbig{font:900 3.6rem/.95 var(--display);letter-spacing:-.02em}
+.sbig small{font:500 1rem var(--body);letter-spacing:0;color:var(--muted);margin-left:8px}
+.badge{display:inline-block;font:700 .72rem var(--body);letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));color:var(--ink);vertical-align:1px}
+.schart{width:100%;height:auto;display:block;margin-top:4px}
+.schart text{font:400 11px var(--body);fill:var(--muted)}
+.schart text.hi{fill:var(--ink);font-weight:700}
+.schart text.in{fill:#fff;font-weight:700}
+.vh{display:grid;gap:6px}
+.vh p{color:var(--ink);display:grid;grid-template-columns:22px 1fr;column-gap:4px}
+.vh p em{grid-column:2;font-style:normal;font-size:.85rem;color:var(--muted)}
+.vh p.ja span{color:var(--c-schwimmen);font-weight:700}
 </style>
 </head>
 <body>
@@ -227,6 +317,6 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 </div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js?v=20261008b"></script>
+<script src="app.js?v=20261008c"></script>
 </body>
 </html>
