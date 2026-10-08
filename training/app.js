@@ -247,16 +247,25 @@ function spark(vals){
 /* ================= Kraft-Logik ================= */
 function history(uebung){ return S.kraft.filter(k => k.uebung === uebung && (k.saetze||[]).some(x => x.ok)).sort((a,b) => (a.datum+a.u) < (b.datum+b.u) ? -1 : 1); }
 function bestKg(uebung, excludeId){ let m = 0; S.kraft.forEach(k => { if(k.uebung === uebung && k.id !== excludeId) (k.saetze||[]).forEach(x => { if(x.ok && x.kg > m) m = x.kg; }); }); return m; }
+/* Vorschlag für heute = doppelte Progression (08.10.2026):
+   1) gleiches Gewicht, Wiederholungen +1 pro Einheit bis zum Ziel (u.wdh)
+   2) alle Sätze am Ziel geschafft → nächstes Mal Gewicht + step, Wiederholungen zurück auf Ziel − 2
+   Heim-Übungen (einheit 'wdh') tragen kg mit; dort ist die Hantel meist fix (8 kg) → Fortschritt über Wdh, dann Hinweis. */
+const kgStep = u => u.step || (u.einheit === 'kg' ? 2.5 : 1);
 function suggestion(u){
   const h = history(u.id).filter(k => k.datum !== TODAY()); const last = h[h.length-1];
-  if(!last) return {kg: u.startKg ?? 0, wdh: u.wdh, text: u.einheit === 'kg' ? (u.startKg ? `Erstes Mal: mit ${fmt(u.startKg)} kg starten, sollte sich wie 7 von 10 anfühlen.` : 'Erstes Mal: Gewicht wählen, das sich wie 7 von 10 anfühlt.') : 'Erstes Mal: sauber und kontrolliert.', last:null};
-  const ok = last.saetze.filter(x => x.ok);
-  const kg = Math.max(...ok.map(x => x.kg || 0));
-  const alle = ok.length >= u.saetze && ok.every(x => (x.wdh||0) >= u.wdh);
-  const lastTxt = `zuletzt ${u.einheit === 'kg' ? fmt(kg)+' kg × ' : ''}${ok.map(x => x.wdh).join('/')}${u.einheit === 's' ? ' s' : ''}`;
-  if(u.einheit !== 'kg') return {kg:0, wdh: alle ? u.wdh + (u.einheit === 's' ? 5 : 1) : u.wdh, text: alle ? 'Heute etwas länger/mehr.' : 'Heute das Gleiche, sauber.', last:lastTxt};
-  return alle ? {kg: kg + (u.step||2.5), wdh:u.wdh, text:`Heute ${fmt(kg + (u.step||2.5))} kg versuchen.`, last:lastTxt}
-              : {kg, wdh:u.wdh, text:`Heute bei ${fmt(kg)} kg bleiben und alle Wiederholungen schaffen.`, last:lastTxt};
+  if(!last) return {kg: u.startKg ?? 0, wdh: u.wdh, text: u.einheit === 's' ? 'Erstes Mal: sauber und kontrolliert.' : (u.startKg ? `Erstes Mal: mit ${fmt(u.startKg)} kg starten, letzter Satz wie 7 von 10.` : 'Erstes Mal: Gewicht wählen, bei dem der letzte Satz sich wie 7 von 10 anfühlt.'), last:null};
+  const ok = last.saetze.filter(x => x.ok), kg = Math.max(0, ...ok.map(x => x.kg || 0)), minW = Math.min(...ok.map(x => x.wdh || 0));
+  const alle = ok.length >= u.saetze && minW >= u.wdh;
+  const lastTxt = `zuletzt ${kg ? fmt(kg)+' kg × ' : ''}${ok.map(x => x.wdh).join('/')}${u.einheit === 's' ? ' s' : ''} (${dayLabel(last.datum)})`;
+  if(u.einheit === 's') return {kg:0, wdh: alle ? u.wdh + 5 : Math.max(minW, u.wdh), text: alle ? 'Heute 5 Sekunden länger.' : 'Heute das Ziel halten, sauber.', last:lastTxt};
+  if(u.einheit === 'kg'){
+    if(alle) return {kg: kg + kgStep(u), wdh: Math.max(1, u.wdh - 2), text:`Alles geschafft: heute ${fmt(kg + kgStep(u))} kg, dafür ${Math.max(1, u.wdh - 2)} Wdh.`, last:lastTxt};
+    return {kg, wdh: Math.min(u.wdh, minW + 1), text: minW + 1 >= u.wdh ? `Heute ${fmt(kg)} kg × ${u.wdh}, dann steigt das Gewicht.` : `Heute ${fmt(kg)} kg, eine Wdh mehr als letztes Mal.`, last:lastTxt};
+  }
+  // Heim: Gewicht übernehmen, Wiederholungen steigern
+  if(alle) return {kg, wdh: u.wdh + 2, text: `Zu leicht geworden: ${kg ? fmt(kg)+' kg × ' : ''}${u.wdh + 2} oder 3 s langsam runter. Schwerer geht im Gym.`, last:lastTxt};
+  return {kg, wdh: Math.min(u.wdh, minW + 1), text: `Heute ${kg ? fmt(kg)+' kg × ' : ''}${Math.min(u.wdh, minW + 1)}, sauber.`, last:lastTxt};
 }
 function entryFor(d, sid, u){
   let e = S.kraft.find(k => k.datum === d && k.session === sid && k.uebung === u.id);
@@ -672,7 +681,7 @@ function viewKraft(){
     </div>
     <div id="timer"></div>
     ${U.map((u, ui) => { const sg = suggestion(u), e = kraftEntry(t, cur, u); const saetze = e ? e.saetze : Array.from({length:u.saetze}, () => ({kg:sg.kg, wdh:sg.wdh, ok:false}));
-      const kgU = u.einheit === 'kg', unit = u.einheit === 's' ? ' s' : '', done = e && e.saetze.length && e.saetze.every(x => x.ok);
+      const kgU = u.einheit !== 's', unit = u.einheit === 's' ? ' s' : '', done = e && e.saetze.length && e.saetze.every(x => x.ok);
       if(done && !kraftOpen.has(ui)){ const mx = Math.max(...e.saetze.map(x => x.kg || 0));
         return `<button class="card exdone" data-kopen="${ui}"><span class="exn">✓</span><span><b>${esc(u.name)}</b><small>${e.saetze.length}×${[...new Set(e.saetze.map(x => x.wdh))].join('/')}${unit}${mx ? ' · ' + fmt(mx) + ' kg' : ''}${e.pr ? ' · Bestleistung!' : ''}</small></span><span class="mut">ändern</span></button>`; }
       const cols = `28px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 48px`;
@@ -779,7 +788,7 @@ function bind(){
   document.querySelectorAll('[data-kopen]').forEach(b => b.onclick = () => { const i = +b.dataset.kopen; kraftOpen.has(i) ? kraftOpen.delete(i) : kraftOpen.add(i); render(); });
   document.querySelectorAll('[data-st]').forEach(b => b.onclick = () => {
     const [ui, si, f, dir] = b.dataset.st.split('|'), cur = currentKraft(), u = cur.s.uebungen[+ui], e = entryFor(t, cur.s.id, u), x = e.saetze[+si];
-    if(f === 'kg') x.kg = Math.max(0, Math.round((x.kg + (+dir)*(u.step || 2.5))*100)/100);
+    if(f === 'kg') x.kg = Math.max(0, Math.round(((x.kg || 0) + (+dir)*kgStep(u))*100)/100);
     else x.wdh = Math.max(0, x.wdh + (+dir)*(u.einheit === 's' ? 5 : 1));
     // Folgesätze mitziehen, solange sie noch nicht abgehakt sind
     e.saetze.forEach((y, j) => { if(j > +si && !y.ok) y[f] = x[f]; });
@@ -794,7 +803,7 @@ function bind(){
     const [ui, si] = b.dataset.ok.split('|').map(Number), cur = currentKraft(), u = cur.s.uebungen[ui], e = entryFor(t, cur.s.id, u), x = e.saetze[si];
     x.ok = !x.ok; e.u = now();
     if(x.ok){
-      if(u.einheit === 'kg'){ const best = bestKg(u.id, e.id); if(best && x.kg > best && (!e.pr || x.kg > e.pr)){ e.pr = x.kg; toast('Neue Bestleistung!'); } }
+      if(u.einheit !== 's' && x.kg){ const best = bestKg(u.id, e.id); if(best && x.kg > best && (!e.pr || x.kg > e.pr)){ e.pr = x.kg; toast('Neue Bestleistung!'); } }
       startRest(u.pause || 90);
     }
     if(!cur.s.frei){ const c = day(t).check = day(t).check || {}; if(e.saetze.some(y => y.ok)) c[cur.s.id] = c[cur.s.id] || now(); }
