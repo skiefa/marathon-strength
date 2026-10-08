@@ -440,6 +440,7 @@ function snackCard(t){
   return `<div class="card">
     <div class="sh"><h3>Snacks & Ruhe</h3>${heute.length ? `<button class="linkbtn" id="snundo">↶ letzten zurück</button>` : ''}</div>
     <div class="pills">${snackListe().map(x => `<button class="pill snk" data-snack="${esc(x.id)}" aria-pressed="${n(x.id) > 0}">${esc(x.name)}${n(x.id) > 1 ? ` ${n(x.id)}×` : ''}</button>`).join('')}</div>
+    ${snackListe().some(x => (x.anleitung || []).length) ? `<details><summary>Anleitungen</summary><div class="anls">${snackListe().filter(x => (x.anleitung || []).length).map(x => `<details class="anl"><summary>${esc(x.name)}${x.dauer ? ` <span class="mut">· ${esc(x.dauer)}</span>` : ''}</summary>${x.hinweis ? `<p class="mut">${esc(x.hinweis)}</p>` : ''}<ol>${x.anleitung.map(u => `<li><b>${esc(u.name)}</b>${u.dauer ? ` <span class="mut">· ${esc(u.dauer)}</span>` : ''}${u.wie ? `<p>${esc(u.wie)}</p>` : ''}${u.warum ? `<p class="mut">${esc(u.warum)}</p>` : ''}</li>`).join('')}</ol></details>`).join('')}</div></details>` : ''}
   </div>`;
 }
 function snackWoche(wk){
@@ -566,6 +567,10 @@ function geschichteHTML(){
       <h2>${esc(x.titel)}</h2>${x.text ? `<p>${esc(x.text)}</p>` : ''}
       ${storyChart(x.chart)}
       ${x.tip ? `<p class="tip"><b>${esc(x.tip[0])}</b> ${esc(x.tip[1])}</p>` : ''}</div>`).join('')}
+    ${g.tests && (g.tests.items || []).length ? `<div class="card story"><span class="kick">Stark mit 80</span><h2>${esc(g.tests.titel || 'Deine Tests alle 3 Monate')}</h2>${g.tests.text ? `<p>${esc(g.tests.text)}</p>` : ''}
+      <table class="si"><tr><th>Test</th><th>Zuletzt</th><th>Ziel</th></tr>${g.tests.items.map(x => { const w = x.werte || [], l = w[w.length-1], v = w.length > 1 ? w[w.length-2] : null;
+        return `<tr><td>${esc(x.name)}</td><td><b>${l ? esc(l[1]) : '–'}</b>${v ? ` <span class="mut">(vorher ${esc(v[1])})</span>` : ''}</td><td>${esc(x.ziel || '')}</td></tr>`; }).join('')}</table>
+      ${g.tests.termin ? `<p class="tip"><b>Nächster Test:</b> ${esc(g.tests.termin)}</p>` : ''}</div>` : ''}
     ${(g.vorhersagen || []).length ? `<div class="card story"><span class="kick">Offene Vorhersagen</span><h2>Ich wette mit deinem Körper.</h2>
       <p>Jede Vorhersage wird aufgelöst, wenn die Daten da sind.</p>
       <div class="vh">${g.vorhersagen.map(v => `<p class="${esc(v.status || 'offen')}"><span>${V[v.status] || '◯'}</span>${esc(v.text)}<em>${v.status === 'ja' ? 'eingetroffen' : v.status === 'nein' ? 'nicht eingetroffen' : 'offen'}</em></p>`).join('')}</div></div>` : ''}`;
