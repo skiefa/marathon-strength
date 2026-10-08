@@ -11,11 +11,11 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.github.com; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="icon" type="image/png" href="icon-512.png">
-<title>Steffis Trainingsbuch</title>
+<title>Trainingsbuch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Lexend:wght@400;500;700&display=swap">
 <style>
-/* Steffis Trainingsbuch. Alle Daten liegen privat in skiefa/coach-state/training/ (plan.json = Coach, state.json = App).
+/* Trainingsbuch. Alle Daten liegen in einem privaten Repo (plan.json = Coach, state.json = App).
    Diese Datei enthält KEINE persönlichen Daten.
    Farben (Design-Review 01.10.2026): Neutrale sind warm, der Akzent ist Tinte, FARBE GEHÖRT NUR DEN TRAININGSARTEN
    (Laufen pink, Kraft lila, Schwimmen aqua, Rad/Wandern lime, Mobility lemon, Schlaf pfirsich).
@@ -188,7 +188,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 .past{display:grid;gap:4px;padding-block:6px}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:20}
 
-/* ===== Gruppierte Abschnitte wie iOS-Einstellungen (Steffi 02.10.2026) =====
+/* ===== Gruppierte Abschnitte wie iOS-Einstellungen (02.10.2026) =====
    Warmgrauer Grund, jeder Abschnitt ein weißer Block (Handy: randlos), dazwischen ein schmaler Graustreifen.
    Keine Rahmen, keine Kästen in Kästen. Farbe nur als Bedeutung. */
 .stack{gap:10px}
@@ -367,6 +367,6 @@ details summary{color:var(--ink)}
 </div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js?v=20261008g"></script>
+<script src="app.js?v=20261008h"></script>
 </body>
 </html>

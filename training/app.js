@@ -143,7 +143,7 @@ addEventListener('visibilitychange', () => { if(document.visibilityState === 'vi
 const P = () => PLAN || {};
 const sessions = d => (P().tage && P().tage[d]) || [];
 const RING_TYP = {lauf:'lauf', kraft:'kraft', gym:'kraft', schwimmen:'ausdauer', rad:'ausdauer', wandern:'ausdauer', grundlage:'ausdauer', mobility:'mobility'};
-const MIN_EINHEIT = 10;   // See-Dips (3–5 min) und kurze Radwege sind keine Einheit (Steffi 08.10.2026)
+const MIN_EINHEIT = 10;   // kurze Aktivitäten (unter 10 min) zählen nicht als Einheit
 function garminAll(d){ return (P().erledigt && P().erledigt[d]) || []; }
 function garminDone(d){ return garminAll(d).filter(a => (a.min || 0) >= MIN_EINHEIT); }
 function isDone(d, s){
@@ -302,7 +302,7 @@ function bindSetup(){ $('#tokok').onclick = () => { const t = $('#tok').value.tr
 /* ---------- WORKOUT-DIAGRAMM (wie TrainingPeaks) ----------
    s.schritte = [{art: aufwaermen|aktiv|pause|auslaufen|steigerung, min | sek, zone 1–5, hf:[von,bis], pace:"5:45", text}]
    oder {wiederhole: n, schritte:[…]}. Höhe = Intensität, Breite = Dauer. */
-const ZONE_IF = {0:.55, 1:.55, 2:.72, 3:.83, 4:.90, 5:1.0, 6:1.05};   // hrTSS-Faktoren laut training/trainingslehre.md §5 (0 = Gehen, 5 = Schwelle 148–153, 6 = darüber/Steigerung)
+const ZONE_IF = {0:.55, 1:.55, 2:.72, 3:.83, 4:.90, 5:1.0, 6:1.05};   // hrTSS-Faktoren laut training/trainingslehre.md §5 (0 = Gehen, 5 = Schwelle, 6 = darüber/Steigerung)
 const ZONE_PACE = {0:11.5, 1:8.8, 2:7.8, 3:7.1, 4:6.9, 5:6.6, 6:5.8}; // min/km, Schätzung aus der Leistungsdiagnostik (nur für die km-Angabe)
 const ART = {aufwaermen:'Aufwärmen', aktiv:'Aktiv', pause:'Erholung', auslaufen:'Auslaufen', steigerung:'Steigerung', locker:'Locker', gehen:'Gehen'};
 function flatSteps(ss){ const out = []; (ss||[]).forEach(x => { if(x.wiederhole){ for(let i = 0; i < x.wiederhole; i++) flatSteps(x.schritte).forEach(y => out.push({...y, rep:true})); } else out.push(x); }); return out; }
@@ -429,7 +429,7 @@ function miniBlocks(s){
   return `<svg class="mini" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${r}</svg>`;
 }
 
-/* ---------- SNACKS: Mobility, Breathwork, Meditation, Kette & Sehnen (Steffi 08.10.2026) ----------
+/* ---------- SNACKS: Mobility, Breathwork, Meditation, Kette & Sehnen ----------
    S.tage[d].snacks = [{id,u,k}] · altes S.tage[d].mobility zählt als k:'mobility'. Liste änderbar über plan.snacks. */
 const SNACKS_STD = [{id:'mobility', name:'Mobility'}, {id:'atem', name:'Breathwork'}, {id:'meditation', name:'Meditation'},
   {id:'achilles', name:'Achilles'}, {id:'po', name:'Po'}, {id:'hamstring', name:'Hamstring'}, {id:'beckenboden', name:'Beckenboden'}];
