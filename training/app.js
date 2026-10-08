@@ -577,8 +577,8 @@ function geschichteHTML(){
       ${storyChart(x.chart)}
       ${x.tip ? `<p class="tip"><b>${esc(x.tip[0])}</b> ${esc(x.tip[1])}</p>` : ''}</div>`).join('')}
     ${g.tests && (g.tests.items || []).length ? `<div class="card story"><span class="kick">Stark mit 80</span><h2>${esc(g.tests.titel || 'Deine Tests alle 3 Monate')}</h2>${g.tests.text ? `<p>${esc(g.tests.text)}</p>` : ''}
-      <table class="si"><tr><th>Test</th><th>Zuletzt</th><th>Ziel</th></tr>${g.tests.items.map(x => { const w = x.werte || [], l = w[w.length-1], v = w.length > 1 ? w[w.length-2] : null;
-        return `<tr><td>${esc(x.name)}</td><td><b>${l ? esc(l[1]) : '–'}</b>${v ? ` <span class="mut">(vorher ${esc(v[1])})</span>` : ''}</td><td>${esc(x.ziel || '')}</td></tr>`; }).join('')}</table>
+      <div class="tests">${g.tests.items.map(x => { const w = x.werte || [], l = w[w.length-1], v = w.length > 1 ? w[w.length-2] : null;
+        return `<div class="trow"><div><b>${esc(x.name)}</b>${x.ziel ? `<span>Ziel ${esc(x.ziel)}</span>` : ''}</div><div class="tv">${l ? esc(l[1]) : '–'}${v ? `<span>vorher ${esc(v[1])}</span>` : ''}</div></div>`; }).join('')}</div>
       ${g.tests.termin ? `<p class="tip"><b>Nächster Test:</b> ${esc(g.tests.termin)}</p>` : ''}</div>` : ''}
     ${(g.vorhersagen || []).length ? `<div class="card story"><span class="kick">Offene Vorhersagen</span><h2>Ich wette mit deinem Körper.</h2>
       <p>Jede Vorhersage wird aufgelöst, wenn die Daten da sind.</p>
@@ -597,8 +597,7 @@ function viewWoche(){
   const wk = addDays(monday(TODAY()), weekOff*7), t = TODAY();
   const br = (P().bericht || {})[wk];
   const days = Array.from({length:7}, (_,i) => addDays(wk, i));
-  let pf = 0, pfDone = 0, done = 0, min = 0;
-  days.forEach(d => { visibleSessions(d).filter(s => s.typ !== 'frei').forEach(s => { if(s.pflicht !== false){ pf++; if(isDone(d, s)) pfDone++; } }); garminDone(d).forEach(a => { done++; min += a.min || 0; }); });
+  const gd = (P().wochenGedanke || {})[wk];
   const list = days.map(d => { const ss = visibleSessions(d);
     const extra = garminDone(d).filter(a => !ss.some(s => s.typ !== 'frei' && isDone(d, s) && (RING_TYP[s.typ] === RING_TYP[a.typ] || s.typ === a.typ)));
     const kurz = garminAll(d).filter(a => (a.min || 0) < MIN_EINHEIT);
@@ -611,8 +610,8 @@ function viewWoche(){
   return `<div class="stack narrow" style="margin:0 auto">
     <div class="card">
       <div class="wnav"><button class="btn small" id="wprev" aria-label="Woche zurück">←</button><h2>${shortRange(wk)}</h2><button class="btn small" id="wnext" aria-label="Woche vor">→</button></div>
-      <div class="wkpi"><div><b>${pfDone}/${pf}</b><span>Pflicht</span></div><div><b>${done}</b><span>Einheiten</span></div><div><b>${hm(min/60).replace(' h','')}</b><span>Stunden</span></div></div>
     </div>
+    ${gd ? `<div class="card ins"><span class="kick">${esc(gd.kick || 'Gedanke der Woche')}</span><h2>${esc(gd.titel)}</h2>${gd.text ? `<p>${esc(gd.text)}</p>` : ''}</div>` : ''}
     <div class="card wlist">${list}
       <div class="row" style="margin-top:6px"><span class="mut">Kür fällt in vollen Wochen weg.</span><button class="btn small" id="voll" aria-pressed="${!!S.vollWoche[wk]}">Volle Woche</button></div>
       ${S.vollWoche[wk] ? `<div class="note">Volle Woche: nur Pflicht. Alles Wichtige ist drin, nichts gilt als verpasst.</div>` : ''}
