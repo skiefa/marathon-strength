@@ -359,14 +359,16 @@ function viewHeute(){
       ${gd.length ? `<p class="garmin">✓ ${gd.map(a => `${esc(a.name)} ${esc(a.zeit || '')}, ${a.min} min`).join(' · ')} <span class="mut" style="font-weight:400">(Garmin)</span></p>` : ''}
       ${warum ? `<details><summary>Warum?</summary><div class="kv">${warum.map(([k,v]) => `<span>${esc(k)}</span><span>${esc(v)}</span>`).join('')}</div></details>` : ''}
     </div>
+    <div class="card">
+      <div class="row"><span class="lbl">Wasser</span><span class="num"><b>${fmt(wasser/1000)}</b> / ${fmt(wz/1000)} l</span></div>
+      <div class="bar"><b style="width:${Math.min(100, wasser/wz*100)}%"></b></div>
+      <div class="btns">${[300,400,500].map(m => `<button class="btn" data-w="${m}" style="flex:1;padding:18px 0;font-size:1.05rem">+${m} ml</button>`).join('')}${(d.wasser||[]).length ? `<button class="btn small" id="wundo">↶</button>` : ''}</div>
+    </div>
     ${ss.filter(s => s.typ !== 'frei').map(s => sessionCard(t, s)).join('')}
     <div class="card"><div class="row"><span class="lbl">Diese Woche</span>${vollWoche(t) ? '<span class="lbl">volle Woche · nur Pflicht</span>' : ''}</div>${ringsHTML(monday(t))}
       <div class="btns"><button class="btn small" id="mob">+ Mobility / Dehnen</button><span class="mut" style="align-self:center">${(d.mobility||[]).length ? (d.mobility.length + '× heute') : ''}</span></div></div>
     ${nx ? `<div class="card"><div class="row"><span class="lbl">Nächste Einheit</span><span class="lbl">${dayLabel(nx.d)} · ${esc(nx.s.zeit || '')}</span></div><b>${esc(nx.s.titel)}</b>${nx.s.ziel ? `<span class="mut">${esc(nx.s.ziel)}</span>` : ''}</div>` : ''}
     <div class="card">
-      <div class="row"><span class="lbl">Wasser</span><span class="num"><b>${fmt(wasser/1000)}</b> / ${fmt(wz/1000)} l</span></div>
-      <div class="bar"><b style="width:${Math.min(100, wasser/wz*100)}%"></b></div>
-      <div class="btns">${[300,400,500].map(m => `<button class="btn" data-w="${m}">+${m} ml</button>`).join('')}${(d.wasser||[]).length ? `<button class="btn small" id="wundo">↶</button>` : ''}</div>
       <div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
       <div class="chk"><input type="checkbox" id="sa" ${d.supp && d.supp.abend ? 'checked' : ''}><label for="sa">Abends: ${esc((P().supplements||{}).abend || 'Supplements')}</label></div>
     </div>
