@@ -340,6 +340,7 @@ function viewDash(){
 let _wide = WIDE(); addEventListener('resize', () => { if(WIDE() !== _wide){ _wide = WIDE(); render(); } });
 
 /* ---------- HEUTE ---------- */
+function suppListe(){ const l = (P().supplements || {}).liste; return Array.isArray(l) ? l.filter(x => x && x.id && x.name) : []; }
 function viewHeute(){
   const t = TODAY(), h = (P().heute || {})[t], ss = visibleSessions(t), e = (P().erholung || {})[t], ph = currentPhase();
   const ampel = h ? h.ampel : null;
@@ -369,8 +370,8 @@ function viewHeute(){
       <div class="btns"><button class="btn small" id="mob">+ Mobility / Dehnen</button><span class="mut" style="align-self:center">${(d.mobility||[]).length ? (d.mobility.length + '× heute') : ''}</span></div></div>
     ${nx ? `<div class="card"><div class="row"><span class="lbl">Nächste Einheit</span><span class="lbl">${dayLabel(nx.d)} · ${esc(nx.s.zeit || '')}</span></div><b>${esc(nx.s.titel)}</b>${nx.s.ziel ? `<span class="mut">${esc(nx.s.ziel)}</span>` : ''}</div>` : ''}
     <div class="card">
-      <div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
-      <div class="chk"><input type="checkbox" id="sa" ${d.supp && d.supp.abend ? 'checked' : ''}><label for="sa">Abends: ${esc((P().supplements||{}).abend || 'Supplements')}</label></div>
+      ${suppListe().length ? ['morgen','abend'].map(z => suppListe().filter(x => x.zeit === z).length ? `<span class="lbl">${z === 'morgen' ? 'Morgens' : 'Abends'}</span>` + suppListe().filter(x => x.zeit === z).map(x => `<div class="chk"><input type="checkbox" data-supp="${esc(x.id)}" id="sp-${esc(x.id)}" ${d.supp && d.supp[x.id] ? 'checked' : ''}><label for="sp-${esc(x.id)}">${esc(x.name)}</label></div>`).join('') : '').join('') : `<div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
+      <div class="chk"><input type="checkbox" id="sa" ${d.supp && d.supp.abend ? 'checked' : ''}><label for="sa">Abends: ${esc((P().supplements||{}).abend || 'Supplements')}</label></div>`}
     </div>
   </div>`;
 }
@@ -527,6 +528,7 @@ function bind(){
   // Heute
   document.querySelectorAll('[data-w]').forEach(b => b.onclick = () => { (d.wasser = d.wasser || []).push({id:uid(), u:now(), ml:+b.dataset.w}); save(); render(); });
   if($('#wundo')) $('#wundo').onclick = () => { const last = d.wasser.slice().sort((a,b) => a.u - b.u).pop(); forget(last.id); save(); render(); };
+  document.querySelectorAll('[data-supp]').forEach(c => c.onchange = e => { (d.supp = d.supp || {})[c.dataset.supp] = e.target.checked ? now() : 0; save(); });
   if($('#sm')) $('#sm').onchange = e => { (d.supp = d.supp || {}).morgen = e.target.checked ? now() : 0; save(); };
   if($('#sa')) $('#sa').onchange = e => { (d.supp = d.supp || {}).abend = e.target.checked ? now() : 0; save(); };
   if($('#mob')) $('#mob').onclick = () => { (d.mobility = d.mobility || []).push({id:uid(), u:now()}); save(); render(); toast('Mobility notiert'); };
