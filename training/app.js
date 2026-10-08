@@ -637,37 +637,67 @@ function kraftOptions(){
   const g = P().gymVorlage; if(g && g.length) out.push({d:t, s:{id:'gym-'+t, titel:'Gym · Full Body', typ:'gym', uebungen:g, frei:true}});
   return out;
 }
+/* Kraft (Redesign 08.10.2026): dunkler Kopf mit Fortschritt, Einheiten als Chips statt Dropdown,
+   Übungskarten mit Nummer + Ziel-Chip + Vorschlag; fertige Übungen klappen zu einer Zeile zusammen. */
+let kraftOpen = new Set();
+function kraftEntry(t, cur, u){ return S.kraft.find(k => k.datum === t && k.session === cur.s.id && k.uebung === u.id); }
+function kraftFortschritt(cur){
+  let best = null;
+  cur.s.uebungen.forEach(u => { const h = history(u.id); if(h.length < 2) return;
+    const v = k => Math.max(...k.saetze.filter(x => x.ok).map(x => u.einheit === 'kg' ? (x.kg || 0) : (x.wdh || 0)));
+    const a = v(h[0]), b = v(h[h.length-1]); if(a > 0 && b > a){ const g = Math.round((b/a - 1)*100); if(!best || g > best.g) best = {g, u, a, b}; } });
+  if(!best) return null;
+  const e = best.u.einheit === 'kg' ? ' kg' : best.u.einheit === 's' ? ' s' : ' Wdh';
+  return `${best.u.name}: ${fmt(best.a)} → ${fmt(best.b)}${e} seit dem ersten Mal (+${best.g} %).`;
+}
 function viewKraft(){
   const opts = kraftOptions(), t = TODAY();
-  if(!kraftSel){ const o = opts.find(o => o.d === t && !o.s.frei) || opts.find(o => o.s.frei) || opts[0]; kraftSel = o ? o.d+'|'+o.s.id : null; }
+  if(!kraftSel){ const o = opts.find(o => o.d === t && !o.s.frei) || opts.find(o => o.d >= t && !o.s.frei) || opts.find(o => o.s.frei) || opts[0]; kraftSel = o ? o.d+'|'+o.s.id : null; }
   const cur = opts.find(o => o.d+'|'+o.s.id === kraftSel) || opts[0];
   const diktate = S.kraft.filter(k => k.datum === t && k.quelle === 'diktat');
+  const chips = `<div class="kchips">${opts.map(o => { const k = o.d+'|'+o.s.id, on = cur && k === cur.d+'|'+cur.s.id;
+    return `<button class="kchip ${on ? 'on' : ''}" data-ksel="${k}"><small>${o.s.frei ? 'jederzeit' : o.d === t ? 'heute' : dayLabel(o.d)}</small>${esc(o.s.titel)}</button>`; }).join('')}</div>`;
+  if(!cur) return `<div class="stack narrow" style="margin:0 auto">${chips}<div class="card"><p>Diese Woche steht keine Krafteinheit an.</p></div>${diktatCard(diktate)}</div>`;
+  const U = cur.s.uebungen, fertig = U.filter(u => { const e = kraftEntry(t, cur, u); return e && e.saetze.length && e.saetze.every(x => x.ok); }).length;
+  const erst = U.some(u => u.einheit === 'kg' && !suggestion(u).last), fs = kraftFortschritt(cur);
   return `<div class="stack narrow" style="margin:0 auto">
-    <label class="lbl" for="ksel">Training wählen</label>
-    <select id="ksel" class="kselect">${opts.map(o => `<option value="${o.d}|${o.s.id}" ${cur && o.d+'|'+o.s.id === cur.d+'|'+cur.s.id ? 'selected' : ''}>${o.s.frei ? esc(o.s.titel) : dayLabel(o.d)+' · '+esc(o.s.titel)}</option>`).join('')}</select>
+    ${chips}
+    <div class="hx">
+      <span class="kick">${cur.s.frei ? 'Gym' : cur.d === t ? 'Kraft heute' : 'Kraft · geplant ' + dayLabel(cur.d)}</span>
+      <h1 class="hx-satz">${esc(cur.s.titel)}</h1>
+      <p class="hx-sub">${[cur.s.art, cur.s.dauer ? cur.s.dauer + ' min' : '', cur.s.ziel].filter(Boolean).map(esc).join(' · ')}</p>
+      <div class="kprog"><div class="bar"><b style="width:${U.length ? fertig/U.length*100 : 0}%"></b></div><span><b>${fertig}</b> von ${U.length} Übungen</span></div>
+      ${fs ? `<p class="kfs">↗ ${esc(fs)}</p>` : erst ? `<p class="kfs">Erstes Mal: Gewicht so wählen, dass sich der letzte Satz wie 7 von 10 anfühlt.</p>` : cur.s.zweck ? `<p class="hx-sub">${esc(cur.s.zweck)}</p>` : ''}
+      ${cur.d !== t && !cur.s.frei ? `<p class="hx-sub">Einträge zählen für heute.</p>` : ''}
+    </div>
     <div id="timer"></div>
-    ${cur ? `<p class="big">${esc(cur.s.titel)}</p>${cur.d !== t && !cur.s.frei ? `<p class="mut">Geplant für ${dayLabel(cur.d)}. Einträge zählen für heute.</p>` : ''}
-    ${cur.s.uebungen.some(u => u.einheit === 'kg' && !suggestion(u).last) ? `<div class="note"><b>Erstes Mal?</b> Wähle Gewichte, die sich wie 7 von 10 anfühlen: 2–3 Wiederholungen wären noch drin.</div>` : ''}
-    ${cur.s.uebungen.map((u, ui) => { const sg = suggestion(u), e = S.kraft.find(k => k.datum === t && k.session === cur.s.id && k.uebung === u.id); const saetze = e ? e.saetze : Array.from({length:u.saetze}, () => ({kg:sg.kg, wdh:sg.wdh, ok:false}));
-      const kgU = u.einheit === 'kg';
-      return `<div class="card">
-        <div class="row"><b>${esc(u.name)}</b><span class="mut">${sg.last ? esc(sg.last) : `${u.saetze}×${u.wdh}${u.einheit === 's' ? ' s' : ''}`}</span></div>
-        ${sg.last ? `<span style="font-weight:700">${esc(sg.text)}</span>` : ''}${u.hinweis ? `<span class="mut">${esc(u.hinweis)}</span>` : ''}
+    ${U.map((u, ui) => { const sg = suggestion(u), e = kraftEntry(t, cur, u); const saetze = e ? e.saetze : Array.from({length:u.saetze}, () => ({kg:sg.kg, wdh:sg.wdh, ok:false}));
+      const kgU = u.einheit === 'kg', unit = u.einheit === 's' ? ' s' : '', done = e && e.saetze.length && e.saetze.every(x => x.ok);
+      if(done && !kraftOpen.has(ui)){ const mx = Math.max(...e.saetze.map(x => x.kg || 0));
+        return `<button class="card exdone" data-kopen="${ui}"><span class="exn">✓</span><span><b>${esc(u.name)}</b><small>${e.saetze.length}×${[...new Set(e.saetze.map(x => x.wdh))].join('/')}${unit}${mx ? ' · ' + fmt(mx) + ' kg' : ''}${e.pr ? ' · Bestleistung!' : ''}</small></span><span class="mut">ändern</span></button>`; }
+      const cols = `28px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 48px`;
+      return `<div class="card ex">
+        <div class="exh"><span class="exn">${ui+1}</span><div><b>${esc(u.name)}</b>${u.hinweis ? `<span class="mut">${esc(u.hinweis)}</span>` : ''}</div><span class="tgt">${u.saetze}×${u.wdh}${unit}</span></div>
+        ${sg.last ? `<div class="sg"><b>${esc(sg.text)}</b><span>${esc(sg.last)}</span></div>` : ''}
         ${infoHTML(u)}
-        <div class="sethead" style="grid-template-columns:16px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 46px"><span></span>${kgU ? '<span>kg</span>' : ''}<span>${u.einheit === 's' ? 'Sekunden' : 'Wdh'}</span><span></span></div>
-        ${saetze.map((x, si) => `<div class="set" style="grid-template-columns:16px ${kgU ? 'minmax(0,1.5fr) ' : ''}minmax(0,1fr) 46px"><span class="num mut">${si+1}</span>
+        <div class="sethead" style="grid-template-columns:${cols}"><span>Satz</span>${kgU ? '<span>kg</span>' : ''}<span>${u.einheit === 's' ? 'Sekunden' : 'Wdh'}</span><span></span></div>
+        ${saetze.map((x, si) => `<div class="set ${x.ok ? 'ok-row' : ''}" style="grid-template-columns:${cols}"><span class="sn">${si+1}</span>
           ${kgU ? `<div class="stp"><button data-st="${ui}|${si}|kg|-1" aria-label="weniger kg">−</button><input class="kgin" data-kg="${ui}|${si}" inputmode="decimal" value="${x.kg ? fmt(x.kg) : ''}" placeholder="kg" aria-label="Satz ${si+1} kg"><button data-st="${ui}|${si}|kg|1" aria-label="mehr kg">+</button></div>` : ''}
-          <div class="stp"><button data-st="${ui}|${si}|wdh|-1" aria-label="weniger">−</button><span>${x.wdh}${u.einheit === 's' ? ' s' : ''}</span><button data-st="${ui}|${si}|wdh|1" aria-label="mehr">+</button></div>
+          <div class="stp"><button data-st="${ui}|${si}|wdh|-1" aria-label="weniger">−</button><span>${x.wdh}${unit}</span><button data-st="${ui}|${si}|wdh|1" aria-label="mehr">+</button></div>
           <button class="ok" data-ok="${ui}|${si}" aria-pressed="${!!x.ok}" aria-label="Satz erledigt">✓</button></div>`).join('')}
         ${e && e.pr ? `<div class="pr">Neue Bestleistung: ${fmt(e.pr)} kg</div>` : ''}
-      </div>`; }).join('')}` : `<div class="card"><p>Diese Woche steht keine Krafteinheit an.</p></div>`}
-    <div class="card"><b>Noch was gemacht?</b>
-      <span class="mut">Einfach diktieren (Mikrofon auf der Tastatur), z. B. „3×12 Face Pulls mit 15 kg, 2×10 Bizeps mit 8 kg, 10 min Rudergerät“.</span>
+        ${done ? `<button class="linkbtn" data-kopen="${ui}">zuklappen</button>` : ''}
+      </div>`; }).join('')}
+    ${diktatCard(diktate)}
+  </div>`;
+}
+function diktatCard(diktate){
+  return `<div class="card"><div class="sh"><h3>Noch was gemacht?</h3></div>
+      <span class="mut">Einfach diktieren, z. B. „3×12 Face Pulls mit 15 kg, 10 min Rudergerät“.</span>
       <textarea id="dik" aria-label="Zusätzliche Übungen diktieren"></textarea>
       <button class="btn primary" id="dikok">Übernehmen</button>
       ${diktate.length ? `<span class="lbl">Heute zusätzlich</span>${diktate.map(k => `<div class="row"><b>${esc(k.name)}</b><span class="num">${k.min ? k.min+' min' : k.unklar ? 'ordne ich abends ein' : `${k.saetze.length}×${k.saetze[0].wdh}${k.saetze[0].kg ? ' · '+fmt(k.saetze[0].kg)+' kg' : ''}`} <button class="btn small" data-kdel="${k.id}" aria-label="entfernen">✕</button></span></div>`).join('')}` : ''}
-    </div>
-  </div>`;
+    </div>`;
 }
 function infoHTML(u){
   const i = (P().uebungsInfo || {})[u.id] || u.info; if(!i) return '';
@@ -745,7 +775,8 @@ function bind(){
   if($('#voll')) $('#voll').onclick = () => { const wk = addDays(monday(TODAY()), weekOff*7); S.vollWoche[wk] = !S.vollWoche[wk]; save(); render(); };
   document.querySelectorAll('[data-sel]').forEach(b => b.onclick = () => { const [dd, id] = b.dataset.sel.split('|'); if(selDay === dd && selSes === id){ selSes = null; } else { selDay = dd; selSes = id; } render(); });
   // Kraft
-  if($('#ksel')) $('#ksel').onchange = e => { kraftSel = e.target.value; render(); };
+  document.querySelectorAll('[data-ksel]').forEach(b => b.onclick = () => { kraftSel = b.dataset.ksel; kraftOpen = new Set(); render(); });
+  document.querySelectorAll('[data-kopen]').forEach(b => b.onclick = () => { const i = +b.dataset.kopen; kraftOpen.has(i) ? kraftOpen.delete(i) : kraftOpen.add(i); render(); });
   document.querySelectorAll('[data-st]').forEach(b => b.onclick = () => {
     const [ui, si, f, dir] = b.dataset.st.split('|'), cur = currentKraft(), u = cur.s.uebungen[+ui], e = entryFor(t, cur.s.id, u), x = e.saetze[+si];
     if(f === 'kg') x.kg = Math.max(0, Math.round((x.kg + (+dir)*(u.step || 2.5))*100)/100);

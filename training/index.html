@@ -378,6 +378,43 @@ details summary{color:var(--ink)}
 .trow b{display:block;font-weight:600}
 .trow span{display:block;font-size:.85rem;color:var(--muted)}
 .trow .tv{text-align:right;font-weight:700;white-space:nowrap}
+
+/* Kraft-Redesign 08.10.2026 */
+.kchips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;scrollbar-width:none}
+.kchips::-webkit-scrollbar{display:none}
+.kchip{flex:none;display:grid;text-align:left;gap:1px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:8px 12px;font:700 .95rem var(--body);cursor:pointer;max-width:220px}
+.kchip small{font-weight:500;font-size:.78rem;color:var(--muted)}
+.kchip.on{background:color-mix(in srgb,var(--c-kraft) 16%,var(--surface));border-color:color-mix(in srgb,var(--c-kraft) 60%,var(--surface))}
+.kprog{display:flex;align-items:center;gap:12px;margin-top:4px}
+.kprog .bar{background:var(--hero-line);height:8px}
+.kprog .bar b{background:var(--c-kraft)}
+.kprog span{color:var(--hero-mute);font-size:.9rem;white-space:nowrap}
+.kprog span b{color:var(--hero-ink)}
+.kfs{color:var(--c-kraft);font-weight:600;font-size:.95rem}
+.ex{gap:12px}
+.exh{display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:start}
+.exh b{display:block;font:800 1.1rem/1.2 var(--display)}
+.exh .mut{font-size:.9rem}
+.exn{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 .9rem var(--body);background:color-mix(in srgb,var(--c-kraft) 18%,var(--surface));color:var(--ink)}
+.tgt{font:700 .9rem var(--body);padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--c-kraft) 14%,var(--surface));white-space:nowrap}
+.sg{background:color-mix(in srgb,var(--c-kraft) 10%,var(--surface));border-radius:10px;padding:9px 12px;display:grid;gap:1px}
+.sg span{font-size:.85rem;color:var(--muted)}
+.sethead{font-weight:500;font-size:.8rem;text-align:center}
+.sethead span:first-child{text-align:left}
+.set{border-radius:10px;padding:2px 0}
+.set .sn{font-weight:700;color:var(--muted);text-align:center}
+.set.ok-row{background:color-mix(in srgb,var(--c-kraft) 9%,var(--surface))}
+.stp{background:var(--surface);border:1.5px solid var(--line);border-radius:10px}
+.stp button{height:44px}
+.ok{height:44px;border-radius:10px;border:1.5px solid var(--line);color:var(--muted)}
+.ok[aria-pressed="true"]{background:color-mix(in srgb,var(--c-kraft) 35%,var(--surface));border-color:color-mix(in srgb,var(--c-kraft) 70%,var(--surface));color:var(--ink)}
+.exdone{display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;cursor:pointer;color:var(--ink);font:inherit;background:color-mix(in srgb,var(--c-kraft) 14%,var(--surface))}
+.exdone .exn{background:color-mix(in srgb,var(--c-kraft) 45%,var(--surface))}
+.exdone b{display:block;font-weight:700}
+.exdone small{font-size:.88rem;color:var(--muted)}
+.exdone .mut{font-size:.85rem}
+.pr{background:color-mix(in srgb,var(--c-kraft) 30%,var(--surface));color:var(--ink)}
+.timer{background:var(--hero);color:var(--hero-ink)}
 </style>
 </head>
 <body>
@@ -388,6 +425,6 @@ details summary{color:var(--ink)}
 </div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js?v=20261008i"></script>
+<script src="app.js?v=20261008j"></script>
 </body>
 </html>
