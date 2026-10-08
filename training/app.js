@@ -348,7 +348,6 @@ function viewHeute(){
   const satz = h ? h.satz : akt.length ? `Heute: ${akt.map(s => s.titel).join(' und ')}.` : frei ? frei.titel + '.' : 'Heute ist frei.';
   const warum = (h && h.warum) || (e ? [['Schlaf', e.schlaf_h ? `${Math.floor(e.schlaf_h)}:${String(Math.round((e.schlaf_h%1)*60)).padStart(2,'0')} h` : '–'], ['Ruhepuls', e.rhr ?? '–'], ['HRV', e.hrv ?? '–'], ['Oura-Bereitschaft', e.readiness ?? '–']] : null);
   const gd = garminDone(t);
-  const nx = nextSession(addDays(t, 1));
   const d = day(t), wasser = (d.wasser || []).reduce((a, x) => a + x.ml, 0);
   const wz = (P().wasserZiel || {})[t] || (P().wasserZiel || {}).standard || 2400;
   return `<div class="stack narrow" style="margin:0 auto">
@@ -368,7 +367,6 @@ function viewHeute(){
     ${ss.filter(s => s.typ !== 'frei').map(s => sessionCard(t, s)).join('')}
     <div class="card"><div class="row"><span class="lbl">Diese Woche</span>${vollWoche(t) ? '<span class="lbl">volle Woche · nur Pflicht</span>' : ''}</div>${ringsHTML(monday(t))}
       <div class="btns"><button class="btn small" id="mob">+ Mobility / Dehnen</button><span class="mut" style="align-self:center">${(d.mobility||[]).length ? (d.mobility.length + '× heute') : ''}</span></div></div>
-    ${nx ? `<div class="card"><div class="row"><span class="lbl">Nächste Einheit</span><span class="lbl">${dayLabel(nx.d)} · ${esc(nx.s.zeit || '')}</span></div><b>${esc(nx.s.titel)}</b>${nx.s.ziel ? `<span class="mut">${esc(nx.s.ziel)}</span>` : ''}</div>` : ''}
     <div class="card">
       ${suppListe().length ? ['morgen','abend'].map(z => suppListe().filter(x => x.zeit === z).length ? `<span class="lbl">${z === 'morgen' ? 'Morgens' : 'Abends'}</span>` + suppListe().filter(x => x.zeit === z).map(x => `<div class="chk"><input type="checkbox" data-supp="${esc(x.id)}" id="sp-${esc(x.id)}" ${d.supp && d.supp[x.id] ? 'checked' : ''}><label for="sp-${esc(x.id)}">${esc(x.name)}</label></div>`).join('') : '').join('') : `<div class="chk"><input type="checkbox" id="sm" ${d.supp && d.supp.morgen ? 'checked' : ''}><label for="sm">Morgens: ${esc((P().supplements||{}).morgen || 'Supplements')}</label></div>
       <div class="chk"><input type="checkbox" id="sa" ${d.supp && d.supp.abend ? 'checked' : ''}><label for="sa">Abends: ${esc((P().supplements||{}).abend || 'Supplements')}</label></div>`}
