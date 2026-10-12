@@ -379,6 +379,7 @@ function viewHeute(){
       <div class="wbtn">${[300,400,500].map(m => `<button data-w="${m}">+${m}</button>`).join('')}</div>
       ${(d.wasser||[]).length ? `<button class="linkbtn" id="wundo">↶ letzten Eintrag zurück</button>` : ''}
     </div>
+    ${moodCard(t)}
     ${akt.map(s => sessionCard(t, s)).join('')}
     ${ins ? `<div class="card ins"><span class="kick">Neu entdeckt</span><h2>${esc(ins.titel)}</h2>${ins.text ? `<p>${esc(ins.text)}</p>` : ''}<button class="more" data-goto="besser">Deine Geschichte →</button></div>` : ''}
     ${weekStrip(t)}
@@ -730,21 +731,26 @@ function migrateNotizen(){
   if(changed) save();
 }
 const zeit = u => new Date(u).toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'});
+/* Energie/Stimmung: Startseite (unter Wasser) und Tagebuch zeigen dieselbe Karte, gleiche Daten (tage[d].tagebuch) */
+const ENERGIE = ['leer','müde','okay','gut','voll da'], STIMMUNG = ['mies','gedrückt','okay','gut','super'];
+function moodCard(t, kopf = '<div class="sh"><h3>Wie geht\'s dir?</h3></div>'){
+  const b = day(t).tagebuch || {};
+  return `<div class="card">${kopf}
+      <b>Energie</b><div class="scale">${ENERGIE.map((w,i) => `<button data-mo="energie|${i+1}" aria-pressed="${b.energie === i+1}">${w}</button>`).join('')}</div>
+      <b>Stimmung</b><div class="scale">${STIMMUNG.map((w,i) => `<button data-mo="stimmung|${i+1}" aria-pressed="${b.stimmung === i+1}">${w}</button>`).join('')}</div></div>`;
+}
 function viewBuch(){
   migrateNotizen();
-  const t = TODAY(), b = day(t).tagebuch || {}, heute = (day(t).notizen || []).slice().sort((a,b) => a.u - b.u);
-  const E = ['leer','müde','okay','gut','voll da'], M = ['mies','gedrückt','okay','gut','super'];
+  const t = TODAY(), heute = (day(t).notizen || []).slice().sort((a,b) => a.u - b.u);
   const past = Object.keys(S.tage).filter(d => d < t && (((S.tage[d].notizen || []).length) || (S.tage[d].tagebuch && S.tage[d].tagebuch.energie))).sort().reverse().slice(0, 7);
   return `<div class="stack narrow" style="margin:0 auto">
-    <div class="card"><span class="lbl">${esc(longDate(t))}</span>
-      <b>Energie</b><div class="scale">${E.map((w,i) => `<button data-mo="energie|${i+1}" aria-pressed="${b.energie === i+1}">${w}</button>`).join('')}</div>
-      <b>Stimmung</b><div class="scale">${M.map((w,i) => `<button data-mo="stimmung|${i+1}" aria-pressed="${b.stimmung === i+1}">${w}</button>`).join('')}</div></div>
+    ${moodCard(t, `<span class="lbl">${esc(longDate(t))}</span>`)}
     <div class="card"><label for="tx" class="lbl">Neuer Eintrag <span class="mut" style="font-weight:400">(tippen oder diktieren)</span></label>
       <textarea id="tx" placeholder="Wie geht's dir gerade? Zwickt etwas, schreib es einfach dazu."></textarea>
       <button class="btn primary" id="txok">Speichern</button>
       ${heute.length ? `<div class="notes">${heute.map(n => `<div class="note-item"><span class="lbl">${zeit(n.u)}</span><p>${esc(n.text)}</p><button class="btn small" data-ndel="${esc(n.id)}" aria-label="Eintrag löschen">✕</button></div>`).join('')}</div>` : ''}</div>
     ${past.length ? `<div class="card"><span class="lbl">Letzte Tage</span>${past.map(d => { const x = S.tage[d], tb = x.tagebuch || {}, ns = (x.notizen || []).slice().sort((a,b) => a.u - b.u);
-        return `<div class="past"><b>${dayLabel(d)}</b> ${tb.energie ? `<span class="mut">Energie ${E[tb.energie-1]}${tb.stimmung ? ', Stimmung '+M[tb.stimmung-1] : ''}</span>` : ''}${ns.map(n => `<p><span class="mut">${zeit(n.u)}</span> ${esc(n.text)}</p>`).join('')}</div>`; }).join('')}</div>` : ''}
+        return `<div class="past"><b>${dayLabel(d)}</b> ${tb.energie ? `<span class="mut">Energie ${ENERGIE[tb.energie-1]}${tb.stimmung ? ', Stimmung '+STIMMUNG[tb.stimmung-1] : ''}</span>` : ''}${ns.map(n => `<p><span class="mut">${zeit(n.u)}</span> ${esc(n.text)}</p>`).join('')}</div>`; }).join('')}</div>` : ''}
   </div>`;
 }
 
