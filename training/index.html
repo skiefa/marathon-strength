@@ -254,6 +254,12 @@ details summary{color:var(--ink)}
 .wnum small{font:500 1rem var(--body);color:var(--muted);margin-left:6px}
 .wbar{height:10px;background:color-mix(in srgb,var(--c-schwimmen) 12%,var(--surface))}
 .wbar b{background:var(--c-schwimmen)}
+.beine{display:grid;grid-template-columns:auto 1fr 1fr;gap:8px;align-items:center}
+.beine .plbl{width:auto;margin:0}
+.beine .bein{min-width:0;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:700 1rem var(--mono);padding:10px;text-align:center}
+.beine .bein::placeholder{font:400 .85rem var(--body);color:var(--muted)}
+.scale11{grid-template-columns:repeat(11,1fr);gap:3px}
+.scale11 button{padding:10px 0;font-size:.82rem}
 .wbtn{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .wbtn button{font:700 1rem var(--body);padding:11px 0;border-radius:12px;cursor:pointer;color:var(--ink);background:color-mix(in srgb,var(--c-schwimmen) 14%,var(--surface));border:1.5px solid color-mix(in srgb,var(--c-schwimmen) 55%,var(--surface))}
 .wbtn button:active{transform:scale(.97)}
