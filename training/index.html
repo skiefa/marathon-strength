@@ -360,6 +360,24 @@ details summary{color:var(--ink)}
 .anls{display:grid;gap:8px;margin-top:4px}
 .anl{border-top:1px solid var(--line);padding-top:8px}
 .anl summary{font-weight:700}
+
+.snrows{display:grid}
+.snr{display:flex;align-items:center;gap:12px;padding:12px 8px;border-top:1px solid var(--line);border-radius:12px}
+.snr:first-child{border-top:0}
+.snr.next{background:color-mix(in srgb,var(--c-kraft) 10%,var(--surface));border-top-color:transparent}
+.snr.done .snt{opacity:.55}
+.snt{display:grid;gap:2px;flex:1;min-width:0}
+.sna{font-size:.82rem;color:var(--muted)}
+.snt b{font:700 1.05rem var(--body)}
+.snx{font-size:.95rem}
+.snok{flex:none;width:52px;height:52px;border-radius:50%;border:2px solid var(--line);background:var(--chip);color:var(--muted);font:700 1.4rem var(--body);cursor:pointer}
+.snok[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.lstil{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:10px}
+.lstil h4{font:700 1rem var(--body);margin:0}
+.lstil ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.tend{display:inline-block;font-size:.78rem;padding:1px 7px;border-radius:999px;background:var(--chip);color:var(--ink);margin-left:4px}
+.tend.t-plus{background:color-mix(in srgb,var(--good) 22%,var(--surface))}
+.tend.t-minus{background:color-mix(in srgb,var(--warn) 24%,var(--surface))}
 .anl ol{margin:6px 0 0;padding-left:20px;display:grid;gap:10px}
 .anl li p{margin:2px 0 0;font-size:.95rem}
 .snk .cnt{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}

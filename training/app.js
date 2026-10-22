@@ -52,6 +52,7 @@ function cleanPlan(p){
     fix(s.schritte);
   }));
   Object.values((p && p.erledigt) || {}).forEach(as => (as || []).forEach(a => { a.typ = ID(a.typ); a.id = ID(a.id); a.min = N(a.min); if(a.km != null) a.km = N(a.km); ['hf','pace','hfMax','kad','hm'].forEach(k => { if(a[k] != null) a[k] = N(a[k]); }); if(a.serie){ a.serie.dt = N(a.serie.dt) || 30; ['hf','p'].forEach(k => a.serie[k] = (a.serie[k] || []).map(v => v == null ? null : N(v))); } }));
+  Object.values((p && p.snackPlan) || {}).forEach(rs => (rs || []).forEach(r => { r.id = ID(r.id); r.slot = ID(r.slot); }));
   (p && p.gymVorlage || []).forEach(u => { u.id = ID(u.id); u.saetze = N(u.saetze); u.wdh = N(u.wdh); u.einheit = ID(u.einheit); });
   Object.values((p && p.wochenSoll) || {}).forEach(w => Object.keys(w).forEach(k => w[k] = N(w[k])));
   return p;
@@ -446,12 +447,30 @@ const SNACKS_STD = [{id:'mobility', name:'Mobility'}, {id:'atem', name:'Breathwo
   {id:'achilles', name:'Achilles'}, {id:'po', name:'Po'}, {id:'hamstring', name:'Hamstring'}, {id:'beckenboden', name:'Beckenboden'}];
 const snackListe = () => { const l = P().snacks; return Array.isArray(l) && l.length ? l.filter(x => x && x.id && x.name) : SNACKS_STD; };
 function snacksOf(d){ const x = day(d); return [...(x.snacks || []), ...(x.mobility || []).map(m => ({...m, k:'mobility'}))]; }
+function snackAnleitungen(){
+  return snackListe().some(x => (x.anleitung || []).length) ? `<details><summary>Anleitungen</summary><div class="anls">${snackListe().filter(x => (x.anleitung || []).length).map(x => `<details class="anl"><summary>${esc(x.name)}${x.dauer ? ` <span class="mut">· ${esc(x.dauer)}</span>` : ''}</summary>${x.hinweis ? `<p class="mut">${esc(x.hinweis)}</p>` : ''}<ol>${x.anleitung.map(u => `<li><b>${esc(u.name)}</b>${u.dauer ? ` <span class="mut">· ${esc(u.dauer)}</span>` : ''}${u.wie ? `<p>${esc(u.wie)}</p>` : ''}${u.warum ? `<p class="mut">${esc(u.warum)}</p>` : ''}</li>`).join('')}</ol></details>`).join('')}</div></details>` : '';
+}
+/* Heute dran: plan.snackPlan[datum] = [{id, slot, zeit, anker, name, text, extra?, exp?}] — von Claude (scripts/snack-plan.py) zugeteilt, keine Auswahl.
+   Haken = S.tage[d].snacks-Eintrag {id,u,k,slot}; zählt für das Wochenkonto wie ein Tipp auf den Knopf. Fehlt snackPlan → alte Knopf-Liste. */
+const snackPlanTag = t => { const r = (P().snackPlan || {})[t]; return Array.isArray(r) && r.length ? r : null; };
+const snackErledigt = (t, r) => snacksOf(t).find(x => x.k === r.id && (!x.slot || x.slot === r.slot));
 function snackCard(t){
-  const heute = snacksOf(t), n = k => heute.filter(x => x.k === k).length;
-  return `<div class="card">
-    <div class="sh"><h3>Snacks & Ruhe</h3>${heute.length ? `<button class="linkbtn" id="snundo">↶ letzten zurück</button>` : ''}</div>
+  const heute = snacksOf(t), n = k => heute.filter(x => x.k === k).length, rows = snackPlanTag(t);
+  const undo = heute.length ? `<button class="linkbtn" id="snundo">↶ letzten zurück</button>` : '';
+  if(!rows) return `<div class="card">
+    <div class="sh"><h3>Snacks & Ruhe</h3>${undo}</div>
     ${snackGruppen(t, n)}
-    ${snackListe().some(x => (x.anleitung || []).length) ? `<details><summary>Anleitungen</summary><div class="anls">${snackListe().filter(x => (x.anleitung || []).length).map(x => `<details class="anl"><summary>${esc(x.name)}${x.dauer ? ` <span class="mut">· ${esc(x.dauer)}</span>` : ''}</summary>${x.hinweis ? `<p class="mut">${esc(x.hinweis)}</p>` : ''}<ol>${x.anleitung.map(u => `<li><b>${esc(u.name)}</b>${u.dauer ? ` <span class="mut">· ${esc(u.dauer)}</span>` : ''}${u.wie ? `<p>${esc(u.wie)}</p>` : ''}${u.warum ? `<p class="mut">${esc(u.warum)}</p>` : ''}</li>`).join('')}</ol></details>`).join('')}</div></details>` : ''}
+    ${snackAnleitungen()}
+  </div>`;
+  const done = rows.filter(r => snackErledigt(t, r)).length, next = rows.find(r => !snackErledigt(t, r));
+  return `<div class="card">
+    <div class="sh"><h3>Heute dran</h3><span><b class="pfz">${done} von ${rows.length}</b>${done >= rows.length ? ' ✓' : ''}</span></div>
+    <div class="snrows">${rows.map(r => { const ok = !!snackErledigt(t, r);
+      return `<div class="snr${ok ? ' done' : ''}${r === next ? ' next' : ''}">
+        <div class="snt"><span class="sna">${esc(r.zeit)} · ${esc(r.anker)}</span><b>${esc(r.name)}</b><span class="snx">${esc(r.text)}</span>${r.extra ? `<span class="snx mut">${esc(r.extra)}</span>` : ''}${r.exp === 'atem' ? `<span class="snx mut">Mini-Test: Heute mit Atmen direkt nach dem Training.</span>` : ''}</div>
+        <button class="snok" data-snplan="${esc(r.id)}|${esc(r.slot)}" aria-pressed="${ok}" aria-label="${esc(r.name)} ${ok ? 'zurücknehmen' : 'erledigt'}">✓</button></div>`; }).join('')}</div>
+    ${undo}
+    <details><summary>Weitere Snacks</summary>${snackGruppen(t, n)}${snackAnleitungen()}</details>
   </div>`;
 }
 /* Gruppen: rhythmus 'tag' (Haken = heute gemacht) oder 'woche' (Zähler gegen soll, Reset montags). Ohne rhythmus → wie bisher eine Liste. */
@@ -505,8 +524,14 @@ function sollIstHTML(d, s){
     if(tot) fazit = `${Math.round(inZ/tot*100)} % der Zeit im Zielbereich.`;
   }
   if(a.hf && a.pace && s.typ === 'lauf') fazit += ` ${(Math.round(a.hf*a.pace/60)).toLocaleString('de-DE')} Herzschläge pro km.`;
+  const fb = s.typ === 'lauf' ? (P().laufFeedback || {})[a.id] : null, TEND = {plus:'besser', minus:'schwächer', gleich:'wie immer', anders:'anders'};
+  const stil = fb ? `<div class="lstil"><h4>Dein Laufstil heute</h4>
+    <table class="si"><tr><th>Wert</th><th>Heute</th><th>Dein Schnitt</th></tr>${(fb.zahlen || []).map(z => `<tr><td>${esc(z[0])}</td><td><b>${esc(z[1])}</b></td><td class="mut">${esc(String(z[2]).replace('Dein Schnitt ', ''))} <span class="tend t-${esc(z[3])}">${TEND[z[3]] || ''}</span></td></tr>`).join('')}</table>
+    <p><b>Was das heißt</b></p><ul>${(fb.lernen || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    ${fb.naechstes ? `<div class="note"><b>Fürs nächste Mal:</b> ${esc(fb.naechstes)}</div>` : ''}
+    ${fb.vergleich ? `<p class="mut">Verglichen mit ${esc(fb.vergleich)}.</p>` : ''}</div>` : '';
   return `<div class="soll-ist">
-    ${fazit ? `<p class="fz">${esc(fazit.trim())}</p>` : ''}
+    ${fazit ? `<p class="fz">${esc(fazit.trim())}</p>` : ''}${stil}
     <table class="si"><tr><th></th><th>Soll</th><th>Ist</th></tr>${rows.map(r => `<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td><b>${esc(r[2])}</b></td></tr>`).join('')}</table>
     ${chart}${abschn}</div>`;
 }
@@ -795,6 +820,8 @@ function bind(){
   document.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { TAB = b.dataset.goto; lsSet(LS.tab, TAB); render(); scrollTo(0,0); });
   if($('#sm')) $('#sm').onchange = e => { (d.supp = d.supp || {}).morgen = e.target.checked ? now() : 0; save(); };
   if($('#sa')) $('#sa').onchange = e => { (d.supp = d.supp || {}).abend = e.target.checked ? now() : 0; save(); };
+  document.querySelectorAll('[data-snplan]').forEach(b => b.onclick = () => { const [id, slot] = b.dataset.snplan.split('|'), e = snackErledigt(t, {id, slot});
+    if(e) forget(e.id); else (d.snacks = d.snacks || []).push({id:uid(), u:now(), k:id, slot}); save(); render(); });
   document.querySelectorAll('[data-snack]').forEach(b => b.onclick = () => { (d.snacks = d.snacks || []).push({id:uid(), u:now(), k:b.dataset.snack}); save(); render(); });
   if($('#snundo')) $('#snundo').onclick = () => { const last = snacksOf(t).sort((a,b) => a.u - b.u).pop(); if(last){ forget(last.id); save(); render(); toast('Zurückgenommen'); } };
   if($('#mob')) $('#mob').onclick = () => { (d.mobility = d.mobility || []).push({id:uid(), u:now()}); save(); render(); toast('Mobility notiert'); };
