@@ -381,7 +381,6 @@ function viewHeute(){
       ${(d.wasser||[]).length ? `<button class="linkbtn" id="wundo">↶ letzten Eintrag zurück</button>` : ''}
     </div>
     ${moodCard(t)}
-    ${beineCard(t)}
     ${akt.map(s => sessionCard(t, s)).join('')}
     ${ins ? `<div class="card ins"><span class="kick">Neu entdeckt</span><h2>${esc(ins.titel)}</h2>${ins.text ? `<p>${esc(ins.text)}</p>` : ''}<button class="more" data-goto="besser">Deine Geschichte →</button></div>` : ''}
     ${weekStrip(t)}
@@ -765,14 +764,6 @@ function moodCard(t, kopf = '<div class="sh"><h3>Wie geht\'s dir?</h3></div>'){
       <b>Energie</b><div class="scale">${ENERGIE.map((w,i) => `<button data-mo="energie|${i+1}" aria-pressed="${b.energie === i+1}">${w}</button>`).join('')}</div>
       <b>Stimmung</b><div class="scale">${STIMMUNG.map((w,i) => `<button data-mo="stimmung|${i+1}" aria-pressed="${b.stimmung === i+1}">${w}</button>`).join('')}</div></div>`;
 }
-/* Beine (Sitzphasen-Experiment): Knöchelumfang morgens/abends + Schmerz, in tage[d].beine */
-function beineCard(t){
-  const b = day(t).beine || {}, cm = (z, s) => (b[z] && b[z][s]) ? fmt(b[z][s]) : '';
-  const zeile = (z, lbl) => `<span class="plbl">${lbl}</span>${['l','r'].map(s => `<input class="bein" data-bein="${z}|${s}" inputmode="decimal" value="${cm(z, s)}" placeholder="${s === 'l' ? 'links' : 'rechts'} cm" aria-label="${lbl} ${s === 'l' ? 'links' : 'rechts'} cm">`).join('')}`;
-  return `<div class="card"><div class="sh"><h3>Beine</h3><span>Knöchel, schmalste Stelle</span></div>
-      <div class="beine">${zeile('morgens', 'Morgens')}${zeile('abends', 'Abends')}</div>
-      <b>Beinschmerz abends</b><div class="scale scale11">${[...Array(11).keys()].map(i => `<button data-bs="${i}" aria-pressed="${b.schmerz === i}">${i}</button>`).join('')}</div></div>`;
-}
 function viewBuch(){
   migrateNotizen();
   const t = TODAY(), heute = (day(t).notizen || []).slice().sort((a,b) => a.u - b.u);
@@ -809,13 +800,6 @@ function bind(){
   // Heute
   document.querySelectorAll('[data-w]').forEach(b => b.onclick = () => { (d.wasser = d.wasser || []).push({id:uid(), u:now(), ml:+b.dataset.w}); save(); render(); });
   if($('#wundo')) $('#wundo').onclick = () => { const last = d.wasser.slice().sort((a,b) => a.u - b.u).pop(); forget(last.id); save(); render(); };
-  document.querySelectorAll('[data-bein]').forEach(inp => inp.onchange = () => {
-    const [z, s] = inp.dataset.bein.split('|'), v = parseFloat(inp.value.replace(',', '.'));
-    const be = d.beine = d.beine || {}, bz = be[z] = be[z] || {};
-    if(isNaN(v)) delete bz[s]; else bz[s] = v;
-    be.u = now(); save();
-  });
-  document.querySelectorAll('[data-bs]').forEach(b => b.onclick = () => { const be = d.beine = d.beine || {}; be.schmerz = +b.dataset.bs; be.u = now(); save(); render(); });
   document.querySelectorAll('[data-supp]').forEach(b => b.onclick = () => { const sp = d.supp = d.supp || {}; sp[b.dataset.supp] = sp[b.dataset.supp] ? 0 : now(); save(); render(); });
   document.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { TAB = b.dataset.goto; lsSet(LS.tab, TAB); render(); scrollTo(0,0); });
   if($('#sm')) $('#sm').onchange = e => { (d.supp = d.supp || {}).morgen = e.target.checked ? now() : 0; save(); };
